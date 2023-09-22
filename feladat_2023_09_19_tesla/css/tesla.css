@@ -85,3 +85,7 @@ a{
 a:hover{
     color: red;
 }
+
+b{
+    font-size: 1.5rem;
+}
