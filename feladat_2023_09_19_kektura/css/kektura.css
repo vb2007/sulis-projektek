@@ -60,3 +60,56 @@ h2{
 li{
     list-style-image: url("../img/kekturajelzes.png");
 }
+
+table{
+    margin-left: auto;
+    margin-right: auto;
+    width: 800px;
+}
+
+td{
+    padding: 20px;
+    align-items: center;
+    text-align: center;
+    vertical-align: middle;
+    border-bottom-color: rgb(255, 255, 255);
+    border-bottom-width: 3px;
+    border-bottom-style: inset;
+}
+
+thead{
+    background-color: rgba(230, 230, 250, 0.7);
+    font-style: italic;
+    font-size: 1.2rem;
+    color: rgba(1, 34, 50, 0.80);
+    /*a feladat nem írta hogy mekkorának kellene lennie a headernek, de a mintán nagyobb az alapnál...*/
+    height: 75px;
+}
+
+th{
+    border-bottom-style: double;
+    border-bottom-width: 5px;
+    border-bottom-color: white;
+}
+
+b{
+    font-size: 1.2rem;
+}
+
+img{
+    width: 75px;
+}
+
+a{
+    text-decoration: none;
+}
+
+a:visited{
+    color: #0b5c85;
+}
+
+#utolso_bekezdes{
+    text-align: right;
+    font-style: italic;
+    font-size: 0.8rem;
+}
