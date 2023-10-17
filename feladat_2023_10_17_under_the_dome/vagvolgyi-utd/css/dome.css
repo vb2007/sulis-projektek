@@ -1,3 +1,12 @@
+body{
+    background-color: black;
+    background-image: url("../img/bg.jpg");
+    background-size: cover;
+    background-position-x: center;
+    background-position-y: top;
+    font-family: 'Times New Roman', Times, serif;
+}
+
 .kep {
     box-shadow: #00000044 6px 6px 5px 2px;
     transition: .5s;
@@ -11,6 +20,35 @@
     margin-top:-20px;
 }
 
-.btn-primary {
-    color: #fff;
+.btn-primary, .btn {
+    background-color: #664a7a;
+    color: #ffffff;
+    border: none;
+}
+
+h1, h2{
+    color: #664a7a;
+}
+
+.kep{
+    border-radius: 1rem;
+    border-color: #664a7a;
+    border-width: 1px;
+    border-style: solid;
+}
+
+h1{
+    text-align: center;
+    border-bottom-color: #664a7a;
+    border-bottom-width: 1px;
+    border-bottom-style: dashed;
+}
+
+h2{
+    font-size: 1.2rem;
+}
+
+main{
+    background-color: rgba(255, 255, 255, 0.7);
+    min-width: 100vh;
 }
