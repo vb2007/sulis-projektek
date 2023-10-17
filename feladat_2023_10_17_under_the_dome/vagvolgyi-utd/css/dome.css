@@ -1,0 +1,16 @@
+.kep {
+    box-shadow: #00000044 6px 6px 5px 2px;
+    transition: .5s;
+}
+
+.kep:hover {
+    box-shadow: #00000044 3px 3px 5px 8px;
+}
+
+.cover {
+    margin-top:-20px;
+}
+
+.btn-primary {
+    color: #fff;
+}
