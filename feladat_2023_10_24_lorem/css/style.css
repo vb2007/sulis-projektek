@@ -1,0 +1,20 @@
+header{
+    height: 10rem;
+    background-image: url("https://picsum.photos/1000/125");
+    background-size: cover;
+    background-position: center;
+}
+
+body{
+    background-image: url("https://picsum.photos/1000/1000?blur");
+    background-size: cover;
+}
+
+main{
+    background-color: rgba(245, 222, 179, 0.8);
+}
+
+nav{
+    /*szorgalmi*/
+    position: fixed;
+}
