@@ -1,0 +1,22 @@
+.info{
+    background-color: rgb(250, 250, 210);
+    border-width: 2px;
+    border-style: solid;
+    border-color: rgb(105, 105, 105);
+    border-radius: 10px;
+}
+
+.lablec-szoveg{
+    color: black;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.lablec-szoveg:hover{
+    color: red;
+    font-style: italic;
+}
+
+p{
+    text-align: justify;
+}
