@@ -1,0 +1,34 @@
+body{
+    background-image: url("../img/bg.jpg");
+    scroll-behavior: auto;
+    background-color: #ffd51f;
+}
+
+.container{
+    background-color: rgba(255, 255, 255, 0.85);
+}
+
+h1{
+    text-align: center;
+    text-shadow: yellow 2px 2px;
+}
+
+h2{
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+p{
+    text-align: justify;
+    text-indent: 0.5cm;
+}
+
+.img-thumbnail{
+    box-shadow: 1px 1px 5px black;
+}
+
+img{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
