@@ -43,18 +43,18 @@ img{
     color: rgb(255, 255, 255);
 }
 
-h2:nth-of-type(1){
+.szereplo:nth-of-type(1) h2{
     color: #ff66ff;
 }
 
-h2:nth-of-type(2){
+.szereplo:nth-of-type(2) h2{
     color: #a6c148;
 }
 
-h2:nth-of-type(3){
+.szereplo:nth-of-type(3) h2{
     color: #009ddc;
 }
 
-h2:nth-of-type(4){
+.szereplo:nth-of-type(4) h2{
     color: #f05e2b;
 }
