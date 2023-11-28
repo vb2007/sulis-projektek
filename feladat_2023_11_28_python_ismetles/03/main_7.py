@@ -1,3 +1,4 @@
+#7. Feladat
 szam1 = int(input("Adj meg egy számot: "))
 szam2 = int(input("Mégegyet: "))
 szam3 = int(input("Mégeget: "))
