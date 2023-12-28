@@ -76,7 +76,7 @@ def checkForWinner():
         winner = "döntetlen"
     
     if winner:
-        decleareWinner(winner)
+        declareWinner(winner)
 
 # Kattintásokat kezelő függvény definiálása (sor && oszlop paraméterekkel)
 def handleClicks(row, col):
