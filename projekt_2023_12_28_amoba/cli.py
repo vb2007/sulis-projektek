@@ -15,8 +15,15 @@ class ttt:
 
     # Már meglévő tábla vertikális elválasztása vonalakkal 
     def printBoard(self):
+        print("╔═══╦═══╦═══╗")
+        i = 0
         for row in [self.board[i*3:(i+1)*3] for i in range(3)]:
-            print("| " + " | ".join(row) + " |")
+            print("║ " + " ║ ".join(row) + " ║")
+            i-=-1
+            if 3>i:
+                print("╠═══╬═══╬═══╣")
+            else:
+                print("╚═══╩═══╩═══╝")
 
     # Elérhető lépések csekkolása
     def availableMoves(self):
@@ -38,7 +45,7 @@ class ttt:
             if self.winner(square, letter):
                 self.currentWinner = letter
             return True
-        
+
         return False
 
     # Győzteskihirdetés
@@ -49,14 +56,14 @@ class ttt:
 
         if all([spot == letter for spot in row]):
             return True
-        
+
         # Győztes oszlopokat csekkol
         colIndex = square % 3
         column = [self.board[colIndex+i*3] for i in range(3)]
 
         if all([spot == letter for spot in column]):
             return True
-        
+
         # Győztes átlósakat (vagy mi a diagonal magyarul) csekkol
         if square % 2 == 0:
             # Első oszlop helyeinek megadása
@@ -69,7 +76,7 @@ class ttt:
             # Második oszlop helyeiben 3 azonos X vagy O csekkolása
             if all([spot == letter for spot in diagonal2]):
                 return True
-        
+
         # Ha nincs győztes hát nincs győztes :(
         return False
 
@@ -108,6 +115,7 @@ def play(game, playerX, playerO):
     # Kezdő játékos beállítása
     player = "X"
     # Amíg van üres mező, addig játék futtatása
+
     while game.emptySquares():
         if player == "O":
             square = playerO.getMove(game)
@@ -117,20 +125,21 @@ def play(game, playerX, playerO):
         # Ha lép egy játékos...
         if game.makeMove(square, player):
             # Kiírja hova lépett (a módosított táblával együtt)
-            print(f"{player} befoglalja a {square}. mezőt.")
+            print(f"{player} befoglalja a(z) {square+1}. mezőt.")
             game.printBoard()
             print("")
 
             # Ha vége a játéknak kilép a while-ból és a lenti if alapján győztest hirdet
             if game.currentWinner:
                 break
-            
+
             # Kezeli a játékosváltást
             if player == "X":
                 player = "O"
             else:
                 player ="X"
-    # Ha a nyertes player X vagy Y...
+
+    # Ha a nyertes player X vagy O...
     if game.currentWinner:
         # ...akkor kiírja melyik nyert
         print(f"Az {player} játékos nyert.")
@@ -140,6 +149,7 @@ def play(game, playerX, playerO):
         print("Az eredmény döntetlen!")
 
 # Majd a fő funkcióban futtatja az appot a megadott paraméterekkel
+
 if __name__ == "__main__":
     playerX = Player("X")
     playerO = Player("O")
