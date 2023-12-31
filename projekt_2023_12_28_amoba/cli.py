@@ -1,13 +1,11 @@
-"""
-Ha csalni akarunk:
+# Ha csalni akarunk:
 
-import subprocess
-subprocess.run(["pip", "install", "tictactoe-py"]) # A játékhoz szükséges library-t telepítjük
-from tictactoe import play_console_game
-play_console_game() # Elindítjuk a játékot
+# import subprocess
+# subprocess.run(["pip", "install", "tictactoe-py"]) # A játékhoz szükséges library-t telepítjük
+# from tictactoe import play_console_game
+# play_console_game() # Elindítjuk a játékot
 
----------
-"""
+# ---------
 
 class ttt:
     # Üres tábla létrehozása
