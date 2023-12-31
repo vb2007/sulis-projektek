@@ -57,15 +57,16 @@ class ttt:
         if all([spot == letter for spot in column]):
             return True
         
-        # Győztes átlósakat csekkol
+        # Győztes átlósakat (vagy mi a diagonal magyarul) csekkol
         if square % 2 == 0:
+            # Első oszlop helyeinek megadása
             diagonal1 = [self.board[i] for i in [0, 4, 8]]
-
+            # Első oszlop helyeiben 3 azonos X vagy O csekkolása
             if all([spot == letter for spot in diagonal1]):
                 return True
-            
+            # Második oszlop helyeinek megadása
             diagonal2 = [self.board[i] for i in [2, 4, 6]]
-
+            # Második oszlop helyeiben 3 azonos X vagy O csekkolása
             if all([spot == letter for spot in diagonal2]):
                 return True
         
