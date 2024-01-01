@@ -36,7 +36,7 @@ frame.grid_columnconfigure(0, weight=1)
 def createBoard():
     for i in range(3):
         for j in range(3):
-            button = Button(frame, text="", font=("Helvetica", 48), height=2, width=6, bg="#4c31e0", command=lambda row=i, col=j: handleClicks(row, col))
+            button = Button(frame, text="", font=("Helvetica", 48), height=3, width=6, bg="#4c31e0", command=lambda row=i, col=j: handleClicks(row, col))
             button.grid(row=i, column=j)
             button.grid_rowconfigure(i, weight=1)
             button.grid_columnconfigure(j, weight=1)
@@ -50,7 +50,7 @@ def declareWinner(winner):
         message = "A játék döntetlen."
     else:
         # Ha nem, akkor a függvény meghívásakor megadott winner paraméter értékéből meg lehet tudni a győztest
-        message = f"Az {winner}. játékos nyert."
+        message = f"Az {winner} játékos nyert."
     
     # Megjeleníti azt a párbeszédablakot, ami megkérdezi játszanak-e egy új menetet a játékosok
     answer = messagebox.askyesno("Játék vége.",message=f"Véget ért a játék: {message} Szeretnél új játékot indítani?")
@@ -128,7 +128,7 @@ def handleClicks(row, col):
 activePlayer = 1
 board = [[0, 0, 0], [0, 0, 0], [0, 0, 0]]
 
-# Ablak megjelnítése középen
+# Ablak középre igazítása
 center(window)
 # Ablak megjelenítése, program grafikus futtatása
 window.mainloop()
