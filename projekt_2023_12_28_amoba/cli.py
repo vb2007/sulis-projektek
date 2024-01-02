@@ -114,8 +114,8 @@ def play(game, playerX, playerO):
     game.printBoard()
     # Kezdő játékos beállítása
     player = "X"
-    # Amíg van üres mező, addig játék futtatása
 
+    # Amíg van üres mező, addig játék futtatása
     while game.emptySquares():
         if player == "O":
             square = playerO.getMove(game)
@@ -148,9 +148,30 @@ def play(game, playerX, playerO):
         # ...akkor a játék döntetlen
         print("Az eredmény döntetlen!")
 
-# Majd a fő funkcióban futtatja az appot a megadott paraméterekkel
+# Játék újraindításának lehetősége
+def replay():
+    replayGame = ""
+    # Amíg a válasz érvénytelen (nem igen vagy nem)...
+    while replayGame.lower() not in ["igen", "nem"]:
+        replayGame = input("Szeretnél új játékot indítani? (igen/nem): ")
 
+        if replayGame == "igen":
+            print("Új játék indítása...")
+            return True
+        elif replayGame == "nem":
+            print("Köszönöm a játékot, kilépés...")
+            return False
+        else:
+            print("Érvénytelen válasz.")
+
+# Majd a fő funkcióban futtatja az appot a megadott paraméterekkel
 if __name__ == "__main__":
-    playerX = Player("X")
-    playerO = Player("O")
-    play(ttt(), playerX, playerO)
+    # Amíg játszani akarnak ismétlődik
+    while True:
+        playerX = Player("X")
+        playerO = Player("O")
+        play(ttt(), playerX, playerO)
+
+        # Majd ha már elég volt kilép
+        if not replay():
+            break
