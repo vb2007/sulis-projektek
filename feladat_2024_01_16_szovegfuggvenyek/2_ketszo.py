@@ -7,6 +7,8 @@ if szo1 == szo2:
 
 #vizsgáld meg, hogy az első szó
 #...eleje a másik szóval kezdődik-e?
-if szo1[1] == szo2[:-1]:
+if szo1[0] == szo2[0]:
     print("Az első szó eleje a másik szó első betűjével kezdődik.")
-    
+#...vége a másik szóval kezdődik-e
+if szo2[-1] == szo2[-1]:
+    print("Az első szó vége a másik szó utolsó betűjével kezdődik.")
