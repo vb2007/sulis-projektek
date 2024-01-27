@@ -3,7 +3,7 @@ baratokSzama = int(input("Add meg a barátaid számát: "))
 # barátok neveinek bekérése
 baratokNevei = []
 for i in range(baratokSzama):
-    baratNeve = str(input(f"{i + 1}. barát neve: "))
+    baratNeve = str(input(f"{i + 1}. barát neve (pl. 'Vezetéknév Keresztnév' vagy 'Keresztnév'): "))
     baratokNevei.append(baratNeve)
 
 # ajándék összegek bekérése
@@ -29,31 +29,34 @@ legrovidebbNevHosszaIndex = baratNevekHossza.index(legrovidebbNevHossza)
 legrovidebbNev = baratokNevei[legrovidebbNevHosszaIndex]
 print(f"A legrövidebb név {legrovidebbNev}, amely {legrovidebbNevHossza} hosszú.")
 
-# hányszor van benne a keresztnév a listában
-keresztnevKereses = str(input("Adja meg a keresztnevet: "))
-keresztnevSzam = sum(1 for nev in baratokNevei if keresztnevKereses in nev)
-if keresztnevSzam > 0:
-    print(f"A keresett keresztnév {keresztnevSzam} alkalommal található a listában.")
+# hánszor van benne egy keresztnév a listában
+keresztnevKereses = input("Adja meg a keresett nevet (pl. 'Vezetéknév Keresztnév' vagy 'Keresztnév'): ")
+keresettKeresztnev = keresztnevKereses.split()[-1]
+
+keresztnevTalalasok = 0
+for nev in baratokNevei:
+    if keresettKeresztnev in nev:
+        keresztnevTalalasok += 1
+if keresztnevTalalasok > 0:
+    print(f"A keresett keresztnév {keresztnevTalalasok} alkalommal található a listában.")
 else:
     print("Nincs ilyen keresztnevű barát.")
 
-def keresztnev_kereses(keresett_nev, baratok_nevei):
-    keresett_keresztnev = keresett_nev.split()[-1]
-    keresztnev_talalasok = 0
+# hány nem teljes név van a listában
+csakKeresztnevek = []
+for i in baratokNevei:
+    if len(i.split()) == 1:
+        csakKeresztnevek.append(i)
+csakKeresztnevMennyiseg = len(csakKeresztnevek)
+print(f"Ennyi embernek szerepel csak a keresztneve a listában: {csakKeresztnevMennyiseg}")
 
-    for nev in baratok_nevei:
-        if keresett_keresztnev in nev:
-            keresztnev_talalasok += 1
+# átlagosan hány forintot szánnak egy barát ajándékára
+atlagAjandekAr = sum(baratokAjandekai)/len(baratokAjandekai)
+print(f"Az ajándékok átlag ára 2 tizedesjegyre kerekítve: {round(atlagAjandekAr, 2)} Ft.")
 
-    if keresztnev_talalasok > 0:
-        print(f"A keresett keresztnév {keresztnev_talalasok} alkalommal található a listában.")
-    else:
-        print("Nincs ilyen keresztnevű barát.")
-
-keresztnevKereses = input("Adja meg a keresett nevet (pl. 'veszélnév keresztnév' vagy 'keresztnév'): ")
-baratokNevei = ["Kovács Éva", "Tóth Peti", "Nagy Zsófi", "Varga Márton", "Horváth Anna"]
-
-keresztnev_kereses(keresztnevKereses, baratokNevei)
-
-atlagAjandekAr = round(baratokAjandekai, 2)
-print(f"Az ajándékok átlagára 2 tizedesjegyre kerekítve: {atlagAjandekAr}")
+# értékek kétszeresére növelése, listában tárolása, majd kiírása
+duplaErtek = [i * 2 for i in baratokAjandekai]
+i = 0
+while i < len(baratokNevei):
+    print(f"{baratokNevei[i]} {duplaErtek[i]} Ft értékben kap ajándékot.")
+    i += 1
