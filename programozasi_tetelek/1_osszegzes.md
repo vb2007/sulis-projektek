@@ -5,7 +5,7 @@
 lista =[1, 2, 5, 6, 7, 9]<br>
 osszeg := 0<br>
 CIKLUS lista minden elem –ére<br>
-    osszeg += elem<br>
+&nbsp;osszeg += elem<br>
 CIKLUS vége<br>
 KI: osszeg<br>
 
