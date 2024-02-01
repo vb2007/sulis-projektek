@@ -50,7 +50,7 @@ class ttt:
 
     # Győzteskihirdetés
     def winner(self, square, letter):
-        # Győzet sorokat csekkol
+        # Győztes sorokat csekkol
         rowIndex = square // 3
         row = self.board[rowIndex*3:(rowIndex+1)*3]
 
