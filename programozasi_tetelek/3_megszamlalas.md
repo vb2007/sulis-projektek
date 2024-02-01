@@ -16,7 +16,7 @@ lista = [1, 2, 5, 6, 7, 9]<br>
 darab = 0<br>
 for elem in lista:<br>
 &emsp;if elem%2 == 0:<br>
-darab += 1<br>
+&emsp;&emsp;darab += 1<br>
 print(darab)<br>
 
 # Index szerint
@@ -38,5 +38,5 @@ lista = [1, 2, 5, 6, 7, 9]<br>
 darab = 0<br>
 for index in range(len(lista)):<br>
 &emsp;if lista[index]%2 == 0:<br>
-darab += 1<br>
+&emsp;&emsp;darab += 1<br>
 print(darab)
