@@ -2,16 +2,16 @@
 <hr>
 
 ## Leíró nyelven:
-<p>lista =[1, 2, 5, 6, 7, 9]</p>
-<p>osszeg := 0</p>
-<p>CIKLUS lista minden elem –ére</p>
-<p>    osszeg += elem</p>
-<p>CIKLUS vége</p>
-<p>KI: osszeg</p>
+lista =[1, 2, 5, 6, 7, 9]<br>
+osszeg := 0<br>
+CIKLUS lista minden elem –ére<br>
+    osszeg += elem<br>
+CIKLUS vége<br>
+KI: osszeg<br>
 
 ## Példa kód:
-<p>lista = [1, 2, 5, 6, 7, 9]</p>
-<p>osszeg = 0</p>
+lista = [1, 2, 5, 6, 7, 9]
+osszeg = 0
 for elem in lista:
     osszeg += elem
 print(osszeg)
