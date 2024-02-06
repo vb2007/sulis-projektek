@@ -2,8 +2,8 @@
 
 def masodfokuFuggveny(a,b,c):
     diszkriminans = b**2 - 4 * a * c
-    x1 = (-b + diszkriminans) /  (2*a)
-    x2 = (-b - diszkriminans) /  (2*a)
+    x1 = (-b + diszkriminans) / (2*a)
+    x2 = (-b - diszkriminans) / (2*a)
 
     return x1, x2
 
