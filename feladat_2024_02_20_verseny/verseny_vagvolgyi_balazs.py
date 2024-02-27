@@ -65,10 +65,11 @@ for nev in nevek:
 #11. -- nem lehet megcsinálni, más feladatból lett átmásolva
 
 #12. az első olyan versenyző kiválasztása, akinek a neve legalább 17 karakterből áll
-for nev in nevek:
-    if len(nev) >= 17:
-        print(f"Az első olyan versenyző, aki legalább 17 karakterből áll: {nev}")
-        break
+i = 0
+while(i <= len(nevek)):
+        if len(nevek[i]) >= 17:
+            print(f"Az első olyan versenyző, aki legalább 17 karakterből áll: {nev}")
+        i += 1
 
 #print(nevekVisszafele)
 #print(vezeteknevek)
