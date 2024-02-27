@@ -14,7 +14,7 @@ for nev in nevek:
     if nev[0] == "K":
         print(nev, end=", ")
 
-#4. "hanyan" nevű eljárás, mej megmondja hány bizonyos keresztnevű diák van
+#4. "hanyan" nevű eljárás, megmegmondja hány bizonyos keresztnevű diák van
 def hanyan(keresztnev):
     szam = 0
     for nev in nevek:
