@@ -22,8 +22,11 @@ gyorshajtokSzama = len(gyorshajtok)
 print(f"{gyorshajtokSzama} gépjármű lépték túl az 50 km/h -s határt.")
 
 #5. Kiírja a gyorshajtók rendszámait vesszővel elválasztva.
-gyorshajtok = []
-for i in autok:
-    if int(i["sebesseg"]) > 50:
-        gyorshajtok.append(i["rendszam"])
-print(f"A gyorshajtók rendzsámai: {','.join([i for i in gyorshajtok])}")
+def gyorshajtas():
+    gyorshajtok = []
+    for i in autok:
+        if int(i["sebesseg"]) > 50:
+            gyorshajtok.append(i["rendszam"])
+    print(f"A gyorshajtók rendzsámai: {','.join([i for i in gyorshajtok])}")
+
+gyorshajtas()
