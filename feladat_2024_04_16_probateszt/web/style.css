@@ -1,0 +1,23 @@
+body {
+    background-color: #CBEDD5;
+}
+
+header {
+    background-size: cover;
+}
+
+.navbar li {
+}
+
+h2 {
+}
+
+.card img {
+    margin: auto;
+    max-height: 300px;
+    max-width: 300px;
+}
+
+.card {
+    background-color: #62B6B7;
+}
