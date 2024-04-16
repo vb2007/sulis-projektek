@@ -4,9 +4,25 @@ body {
 
 header {
     background-size: cover;
+    height: 350px;
+    background-image: url("img/header_bg.JPG");
+    background-position: center;
 }
 
 .navbar li {
+    font-size: 2rem;
+    letter-spacing: 1.5px;
+}
+
+#focim {
+    font-family: Arial, Helvetica, sans-serif;
+    color: #139A97;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.navbar .footer {
+    background-color: #97DECE;
 }
 
 h2 {
