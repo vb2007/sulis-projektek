@@ -26,6 +26,11 @@ header {
 }
 
 h2 {
+    padding: 10px;
+    background-color: #97DECE;
+    border-bottom-left-radius: 3px;
+    border-style: solid;
+    border-color: #139A97;
 }
 
 .card img {

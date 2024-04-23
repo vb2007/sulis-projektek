@@ -38,20 +38,20 @@
             <div class="col-12">
                 <h1 id="focim" class="my-3 text-center">Elterjedt RAID Fajták</h1>
                 <p>
-                    A RAID (angolul Redundant Array of Inexpensive Disks vagy Redundant
-                    Array of Independent Disks)
+                    A <b>RAID</b> (angolul <i>Redundant Array of Inexpensive Disks vagy Redundant
+                    Array of Independent Disks</i>)
                     tárolási technológia, mely segítségével az adatok elosztása vagy replikálása több fizikailag
-                    független merevlemezen, egy logikai lemez létrehozásával lehetséges. Minden RAID
+                    független merevlemezen, egy logikai lemez létrehozásával lehetséges. Minden <b>RAID</b>
                     szint alapjában
                     véve vagy az adatbiztonság növelését vagy az adatátviteli sebesség növelését szolgálja.
                 </p>
             </div>
-            <div class="mb-1">
+            <div class="mb-1 col-6 col-xxl-3">
                 <div class="card card-body">
-                    <table class="table border-dark table-sm">
+                    <table class="table table-striped border-dark table-sm table-">
                         <thead>
                             <tr>
-                                <th class="text-center">RAID Szintek Rövid Összehasonlítása</th>
+                                <th colspan="4" class="text-center">RAID Szintek Rövid Összehasonlítása</th>
                             </tr>
                             <tr>
                                 <th>RAID Szint</th>
@@ -83,28 +83,30 @@
                     </table>
                 </div>
             </div>
-            <div class="mb-1">
+            <div class="mb-1 col-6 col-xxl-3">
                 <div class="card">
                     <img src="img/RAID_1.png" class="card-img-top" alt="RAID 1" title="RAID 1">
                 </div>
             </div>
-            <div class="mb-1">
+            <div class="mb-1 col-6 col-xxl-3">
                 <div class="card">
                     <img src="img/RAID_5.png" class="card-img-top" alt="RAID 5" title="RAID 5">
                 </div>
             </div>
-            <div class="mb-1">
-                <!--Card-->
+            <div class="mb-1 col-6 col-xxl-3">
+                <div class="card">
+                    <img src="img/RAID_6.png" class="card-img-top" alt="RAID 6" title="RAID 6">
+                </div>
             </div>
         </section>
         <section class="row">
             <div class="col-12">
-                <h2 id="raid1">RAID 1</h2>
+                <h2 class="mt-3" id="raid1">RAID 1</h2>
             </div>
-            <div class="col-12">
-                <img src="img/RAID_1.png" alt="RAID 1">
+            <div class="col-12 col-sm-6">
+                <img src="img/RAID_1.png" class="img-fluid d-block mx-auto" alt="RAID 1">
             </div>
-            <div class="col-12">
+            <div class="col-12 col-sm-6">
                 <p>
                     A RAID 1 eljárás alapja az adatok tükrözése (disk mirroring), azaz az információk egyidejű tárolása
                     a
@@ -114,15 +116,15 @@
                     meghajtó meghibásodása esetén folytatódhat a működés. A RAID 1 önmagában nem használja a csíkokra
                     bontás módszerét.
                 </p>
-                <a class="mb-3" href="https://hu.wikipedia.org/wiki/RAID#RAID_1_(t%C3%BCkr%C3%B6z%C3%A9s)">További
+                <a class="mb-3 btn btn-info" target="_blank" href="https://hu.wikipedia.org/wiki/RAID#RAID_1_(t%C3%BCkr%C3%B6z%C3%A9s)">További
                     információ</a>
             </div>
         </section>
         <section class="row">
             <div class="col-12">
-                <h2 id="raid5">RAID 5</h2>
+                <h2 class="mt-3" id="raid5">RAID 5</h2>
             </div>
-            <div class="col-12">
+            <div class="col-12 col-sm-6">
                 <p>
                     A RAID 5 a paritás információt nem egy kitüntetett meghajtón, hanem „körbeforgó paritás” (rotating
                     parity) használatával, egyenletesen az összes meghajtón elosztva tárolja, kiküszöbölvén a
@@ -139,20 +141,20 @@
                     csökkenését eredményezheti, ezért ajánlott a hardveres megoldás, ahol a célhardver látja el ezeket a
                     feladatokat.
                 </p>
-                <a class="mb-3" href="https://hu.wikipedia.org/wiki/RAID#RAID_5">További információ</a>
+                <a class="mb-3 btn btn-info" target="_blank" href="https://hu.wikipedia.org/wiki/RAID#RAID_5">További információ</a>
             </div>
-            <div class="col-12">
-                <img src="img/RAID_5.png" alt="RAID 5">
+            <div class="col-12 col-sm-6">
+                <img src="img/RAID_5.png" class="img-fluid d-block mx-auto" alt="RAID 5">
             </div>
         </section>
         <section class="row">
             <div class="col-12">
-                <h2 id="raid6">RAID 6</h2>
+                <h2 class="mt-3" class="mt-3" id="raid6">RAID 6</h2>
             </div>
-            <div class="col-12">
-                <img src="img/RAID_6.png" alt="RAID 6">
+            <div class="col-12 col-sm-6">
+                <img src="img/RAID_6.png" class="img-fluid d-block mx-auto" alt="RAID 6">
             </div>
-            <div class="col-12">
+            <div class="col-12 col-sm-6">
                 <p>
                     A RAID 6 tekinthető a RAID 5 kibővítésének. Itt nemcsak soronként, hanem oszloponként is kiszámítják
                     a paritást. A módszer segítségével kétszeres meghajtómeghibásodás is kiküszöbölhetővé válik. A
@@ -165,7 +167,7 @@
                     Egy RAID 6 tömb legalább 4 elemből kell álljon, de az írási sebesség csökkenésének elkerülése
                     érdekében 6 elemnél kevesebb nem ajánlott.
                 </p>
-                <a class="mb-3" href="https://hu.wikipedia.org/wiki/RAID#RAID_6">További információ</a>
+                <a class="mb-3 btn btn-info" target="_blank" href="https://hu.wikipedia.org/wiki/RAID#RAID_6">További információ</a>
             </div>
         </section>
     </main>
@@ -175,7 +177,7 @@
                 <p class="text-center pt-3">Készítette: Vágvölgyi Balázs</p>
             </div>
             <div class="col-12">
-                <p class="text-center"><a href="https://hu.wikipedia.org/wiki/RAID">Forrás</a></p>
+                <p class="text-center"><a class="btn btn-info" target="_blank" href="https://hu.wikipedia.org/wiki/RAID">Forrás</a></p>
             </div>
         </div>
     </footer>
