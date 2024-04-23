@@ -4,9 +4,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
     <!-- CDN-ből importolom kivételesen, mert nem akarom visszatölteni az egész Bootstrap CSS-t GitHub-ra -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
     <title>Elterjedt RAID Fajták</title>
 </head>
 <body>
@@ -46,9 +46,9 @@
                     véve vagy az adatbiztonság növelését vagy az adatátviteli sebesség növelését szolgálja.
                 </p>
             </div>
-            <div class="mb-1 col-6 col-xxl-3">
+            <div class="mb-1 col-md-6 col-xxl-3">
                 <div class="card card-body">
-                    <table class="table table-striped border-dark table-sm table-">
+                    <table class="table table-striped border-dark">
                         <thead>
                             <tr>
                                 <th colspan="4" class="text-center">RAID Szintek Rövid Összehasonlítása</th>
@@ -83,17 +83,17 @@
                     </table>
                 </div>
             </div>
-            <div class="mb-1 col-6 col-xxl-3">
+            <div class="mb-1 col-md-6 col-xxl-3">
                 <div class="card">
-                    <img src="img/RAID_1.png" class="card-img-top" alt="RAID 1" title="RAID 1">
+                    <img src="img/RAID_1.png" id="raid1cardimg" class="card-img-top" alt="RAID 1" title="RAID 1">
                 </div>
             </div>
-            <div class="mb-1 col-6 col-xxl-3">
+            <div class="mb-1 col-md-6 col-xxl-3">
                 <div class="card">
                     <img src="img/RAID_5.png" class="card-img-top" alt="RAID 5" title="RAID 5">
                 </div>
             </div>
-            <div class="mb-1 col-6 col-xxl-3">
+            <div class="mb-1 col-md-6 col-xxl-3">
                 <div class="card">
                     <img src="img/RAID_6.png" class="card-img-top" alt="RAID 6" title="RAID 6">
                 </div>
@@ -103,10 +103,10 @@
             <div class="col-12">
                 <h2 class="mt-3" id="raid1">RAID 1</h2>
             </div>
-            <div class="col-12 col-sm-6">
+            <div class="col-12 col-sm-6 col-xxl-4">
                 <img src="img/RAID_1.png" class="img-fluid d-block mx-auto" alt="RAID 1">
             </div>
-            <div class="col-12 col-sm-6">
+            <div class="col-12 col-sm-6 col-xxl-8">
                 <p>
                     A RAID 1 eljárás alapja az adatok tükrözése (disk mirroring), azaz az információk egyidejű tárolása
                     a
@@ -124,7 +124,7 @@
             <div class="col-12">
                 <h2 class="mt-3" id="raid5">RAID 5</h2>
             </div>
-            <div class="col-12 col-sm-6">
+            <div class="col-12 col-sm-6 col-xxl-8">
                 <p>
                     A RAID 5 a paritás információt nem egy kitüntetett meghajtón, hanem „körbeforgó paritás” (rotating
                     parity) használatával, egyenletesen az összes meghajtón elosztva tárolja, kiküszöbölvén a
@@ -143,18 +143,18 @@
                 </p>
                 <a class="mb-3 btn btn-info" target="_blank" href="https://hu.wikipedia.org/wiki/RAID#RAID_5">További információ</a>
             </div>
-            <div class="col-12 col-sm-6">
+            <div class="col-12 col-sm-6 col-xxl-4">
                 <img src="img/RAID_5.png" class="img-fluid d-block mx-auto" alt="RAID 5">
             </div>
         </section>
         <section class="row">
             <div class="col-12">
-                <h2 class="mt-3" class="mt-3" id="raid6">RAID 6</h2>
+                <h2 class="mt-3" id="raid6">RAID 6</h2>
             </div>
-            <div class="col-12 col-sm-6">
+            <div class="col-12 col-sm-6 col-xxl-4">
                 <img src="img/RAID_6.png" class="img-fluid d-block mx-auto" alt="RAID 6">
             </div>
-            <div class="col-12 col-sm-6">
+            <div class="col-12 col-sm-6 col-xxl-8">
                 <p>
                     A RAID 6 tekinthető a RAID 5 kibővítésének. Itt nemcsak soronként, hanem oszloponként is kiszámítják
                     a paritást. A módszer segítségével kétszeres meghajtómeghibásodás is kiküszöbölhetővé válik. A

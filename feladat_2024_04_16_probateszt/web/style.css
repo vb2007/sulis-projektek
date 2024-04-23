@@ -21,22 +21,27 @@ header {
     text-transform: uppercase;
 }
 
-.navbar .footer {
+.navbar, footer {
     background-color: #97DECE;
 }
 
 h2 {
     padding: 10px;
     background-color: #97DECE;
-    border-bottom-left-radius: 3px;
-    border-style: solid;
-    border-color: #139A97;
+    border-bottom: 3px solid #139A97;
+    border-left: 3px solid #139A97;
 }
 
 .card img {
     margin: auto;
     max-height: 300px;
     max-width: 300px;
+}
+
+/* ez kell, különben szét lesz nyújtva az első raides kép... */
+#raid1cardimg {
+    max-height: 300px;
+    max-width: 200px;
 }
 
 .card {
