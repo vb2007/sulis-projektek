@@ -1,6 +1,6 @@
 tavak = []
 
-with open("alloviz.txt", "r") as f:
+with open("alloviz.txt", "r", encoding="utf-8") as f:
     next(f) #átugorja az első sort
     for i in f:
         to = i.strip().split("\t")
@@ -32,5 +32,5 @@ for i in tavak:
     if i["terulet"] >= 3 and i["terulet"] <= 10:
         kozepesTavak.append(i["nev"] + ";" + i["tipus"] + "\n")
 
-with open ("kozepes.txt", "w") as f:
+with open ("kozepes.txt", "w", encoding="utf-8") as f:
     f.writelines(kozepesTavak)
