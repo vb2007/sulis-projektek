@@ -1,0 +1,137 @@
+név;város;ország;magasság;emelet;épült
+10 Upper Bank Street;London;Anglia;151;32;2003
+25 Bank Street;London;Anglia;153;33;2003
+30 St Mary Axe;London;Anglia;179,8;41;2003
+40 Bank Street;London;Anglia;153;33;2003
+Aliye Parusa 2;Moszkva;Oroszország;175,6;48;2003
+Avaz Twist Tower;Szarajevó;Bosznia-Hercegovina;172;40;2007
+Avenue, 77 block 1;Moszkva;Oroszország;155;43;2008
+Avenue, 77 block 2;Moszkva;Oroszország;155;43;2008
+Beetham Tower;Manchester;Anglia;169;50;2006
+Broadgate Tower;London;Anglia;164,3;35;2007
+Centrum LIM;Varsó;Lengyelország;140;43;1989
+Citigroup Centre;London;Anglia;199,5;45;2001
+City of Capitals;Moszkva;Oroszország;256,9;65;2010
+City-Haus;Frankfurt;Németország;142;42;1974
+City-Hochohaus-Leipzig;Lipcse;Németország;142;36;1971
+CoC: Moscow Tower;Moszkva;Oroszország;301,6;76;2010
+Coeur Défense;Párizs;Franciaország;161;40;2001
+Colonia-Hochhaus;Köln;Németország;147;42;1972
+Commerzbank Tower;Frankfurt;Németország;258,7;56;1997
+DC Towers 1;Bécs;Ausztria;220;60;2014
+Deutsche Bank Twin Towers I;Frankfurt;Németország;155;40;1984
+Deutsche Bank Twin Towers II;Frankfurt;Németország;155;38;1984
+Dexia Tower;Brüsszel;Belgium;145;38;2006
+Dom v Sokolnyikah;Moszkva;Oroszország;146,9;43;2008
+Edelweiss;Moszkva;Oroszország;176;43;2003
+Eurasia;Moszkva;Oroszország;308,9;72;2014
+Europa Tower;Vilnius;Litvánia;148;33;2004
+Eurotower;Frankfurt;Németország;148;39;1977
+Federation Tower;Moszkva;Oroszország;242,4;62;2007
+Federation Tower: East Tower;Moszkva;Oroszország;373,7;95;2016
+Finance Tower;Brüsszel;Belgium;145;36;1984
+Frankfurter Büro Center;Frankfurt;Németország;142;40;1980
+Garibaldi Tower;Milánó;Olaszország;231;32;2012
+Gazprom;Moszkva;Oroszország;151;35;1994
+Gebouw Delftse Poort 1;Rotterdam;Hollandia;151;41;1992
+Gran Hotel Bali;Benidorm;Spanyolország;187;52;2002
+Guy's Tower;London;Anglia;142,6;34;1974
+Heron Tower;London;Anglia;230;46;2010
+Hochaus Uptown München;München;Németország;146;38;2004
+Hochhaus Neue Donau;Bécs;Ausztria;150;34;2001
+Hoftoren;Hága;Hollandia;142;30;2003
+Hotel Arts Barcelona;Barcelona;Spanyolország;154;44;1992
+Hotel Ukrajna;Moszkva;Oroszország;198;34;1955
+HSBC Tower;London;Anglia;199,5;45;2002
+InterContinental Warsaw;Varsó;Lengyelország;164;45;2003
+Isbank Tower 1;Isztambul;Törökország;181;52;2000
+IZD Tower;Bécs;Ausztria;140;37;2001
+Izmailovszkij blokk 1;Moszkva;Oroszország;140;37;2008
+Izmailovszkij blokk 2;Moszkva;Oroszország;140;37;2008
+Jen-Tower;Jéna;Németország;145;30;1973
+Kotyelnyicseszkaja;Moszkva;Oroszország;176;32;1952
+Köln Turm;Köln;Németország;148;43;2001
+Kudrinszkaja téri épület;Moszkva;Oroszország;160;22;1954
+Kultúra és Tudomány Palotája;Varsó;Lengyelország;231;43;1955
+Lomonoszov Egyetem;Moszkva;Oroszország;240;36;1953
+Maintower;Frankfurt;Németország;200;55;1999
+Mercury City Tower;Moszkva;Oroszország;338,8;75;2013
+Messeturm;Frankfurt;Németország;256,6;55;1990
+Metrocity Tower 1;Isztambul;Törökország;143;31;2000
+Metrocity Tower 2;Isztambul;Törökország;143;35;2000
+Metrocity Tower 3;Isztambul;Törökország;143;35;2000
+Metropol Istanbul;Isztambul;Törökország;280;59;2017
+Millennium Tower;Rotterdam;Hollandia;149;35;2000
+Millenniumi torony;Bécs;Ausztria;202;51;1999
+Montevideo;Rotterdam;Hollandia;140;43;2005
+Naberezhnaya Tower C;Moszkva;Oroszország;268,4;76;2007
+Neguri Gane;Benidorm;Spanyolország;145;40;2002
+OKO: South Tower;Moszkva;Oroszország;354,1;85;2015
+One Canada Square;London;Anglia;235,1;50;1991
+One Churchill Place;London;Anglia;156;32;2004
+Oroszország Külügyminisztériuma;Moszkva;Oroszország;172;27;1953
+Pan Peninsula;London;Anglia;147,39;48;2008
+Plaza Büro Center;Frankfurt;Németország;159;47;1976
+Polat Tower Residence;Isztambul;Törökország;153;40;2001
+Post Tower;Bonn;Németország;163;42;2002
+Rembrandt Tower;Amszterdam;Hollandia;150;36;1995
+Rondo 1-B;Varsó;Lengyelország;159;40;2006
+Sabanci Center;Isztambul;Törökország;158;39;1993
+Sabanci Center 2;Isztambul;Törökország;140;34;1993
+Sapphire of Istanbul;Isztambul;Törökország;261;54;2011
+Silver Tower;Frankfurt;Németország;166;32;1978
+Sisli Elit Residence;Isztambul;Törökország;140;35;2000
+Sisli Plaza;Isztambul;Törökország;170;46;2007
+Sky Tower;Wroclaw;Lengyelország;212;50;2012
+Skyland Istanbul 1;Isztambul;Törökország;293,1;65;2017
+Skyland Istanbul 2;Isztambul;Törökország;293,1;65;2017
+Skyper;Frankfurt;Németország;154;38;2004
+Sparrow Hills-Tower I;Moszkva;Oroszország;155;44;2004
+Sparrow Hills-Tower III;Moszkva;Oroszország;155;44;2004
+Sparrow Hills-Tower II;Moszkva;Oroszország;188,2;49;2004
+Sun Plaza;Isztambul;Törökország;147;38;2005
+Süzer Plaza Ritz-Carlton;Isztambul;Törökország;154;34;1998
+Swissotel Krasznije Holmi;Moszkva;Oroszország;162;35;2005
+TAT, Istanbul Tower 1;Isztambul;Törökország;143;34;2000
+TAT, Istanbul Tower 2;Isztambul;Törökország;143;34;2000
+Tekstilkent Plaza 1;Isztambul;Törökország;168;44;2000
+Tekstilkent Plaza 2;Isztambul;Törökország;168;44;2000
+The Shard;London;Anglia;309,6;87;2012
+Torre Agbar;Barcelona;Spanyolország;144,44;33;2004
+Torre Caja Madrid;Madrid;Spanyolország;250;45;2007
+Torre de Cristal;Madrid;Spanyolország;249,5;45;2007
+Torre de Madrid;Madrid;Spanyolország;142;37;1957
+Torre Espacio;Madrid;Spanyolország;224;57;2008
+Torre Mapfre;Barcelona;Spanyolország;154;40;1992
+Torre Picasso;Madrid;Spanyolország;156;43;1988
+Torre PwC;Madrid;Spanyolország;236;52;2008
+Torre Sacyr Vallehermoso;Madrid;Spanyolország;236;52;2007
+Tour Adria;Párizs;Franciaország;155;40;2002
+Tour Alicante;Párizs;Franciaország;167;37;1995
+Tour Areva;Párizs;Franciaország;184;44;1974
+Tour Ariane;Párizs;Franciaország;152;36;1975
+Tour Assur (AXA);Párizs;Franciaország;159;39;1974
+Tour CBX;Párizs;Franciaország;142;36;2005
+Tour Chassagne;Párizs;Franciaország;167;37;1995
+Tour de Bretagne;Nantes;Franciaország;144;32;1976
+Tour du Crédit Lyonnais;Lyon;Franciaország;165;42;1977
+Tour du Midi;Brüsszel;Belgium;150;38;1967
+Tour EDF;Párizs;Franciaország;165;41;2001
+Tour Egée;Párizs;Franciaország;155;40;1999
+Tour First;Párizs;Franciaország;231;50;2011
+Tour Gan;Párizs;Franciaország;179;44;1974
+Tour Granite;Párizs;Franciaország;183;36;2008
+Tour Montparnasse;Párizs;Franciaország;210;59;1972
+Tour Pleyel;Párizs;Franciaország;143;37;1972
+Tour T1;Párizs;Franciaország;185;36;2008
+Tour Total;Párizs;Franciaország;187;48;1985
+Tower 42;London;Anglia;183;43;1980
+Trianon;Frankfurt;Németország;186;45;1993
+Triumph - Palace;Moszkva;Oroszország;264,1;57;2005
+Turning Torso;Malmö;Svédország;190;57;2005
+Usce Tower;Belgrád;Szerbia;141,1;24;2004
+Warsaw Financial Center;Varsó;Lengyelország;144;35;1999
+Warsaw Trade Tower;Varsó;Lengyelország;208;43;1999
+West Tower;Liverpool;Anglia;140;40;2007
+Westendstrase 1;Frankfurt;Németország;208;53;1993
+Westpoint Tower;Tilburg;Hollandia;142;48;2004
