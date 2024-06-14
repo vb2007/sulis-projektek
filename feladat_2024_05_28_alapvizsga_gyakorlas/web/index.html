@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="hu">
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Nem akarok GitHub-ra pusholni egy komplett bootstrap css-t, ezért cdn-ből importálok... -->
+  <!-- <link rel="stylesheet" href="./bootstrap/bootstrap.min.css"> -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <link rel="stylesheet" href="./neu120.css">
+  <title>Neumann 120</title>
+</head>
+<body>
+  <!-- Header -->
+  <header></header>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="index.html">NEU120</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" href="#intro">Jelentősége</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#start">Kezdetek</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#results">Eredményei</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#memorial">Emlékezete</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <!-- Main section -->
+  <main class="container">
+    <section class="row">
+      <div class="col-12">
+        <h1 class="my-3 text-center" id="intro">
+          Neumann János
+        </h1>
+        <p>A mai napig szinte minden számítógép - az asztali gépektől az okostelefonokig - Neumann János által
+          lefektetett elveken alapul.</p>
+        <div class="jelentosege">
+          <h3>Aki megtervezte a modern világot</h3>
+          <p>
+            A 120 éve született <strong>Neumann János</strong> (külföldön: <em>John von Neumann</em>) páratlan zseni
+            volt, a huszadik század egyik legnagyobb matematikusa, aki segített megteremteni az a modern világot,
+            amelyben élünk. Az elektronikus számítógépek logikai tervezésében kiemelkedő érdemeket szerzett. Ennek
+            alapvető gondolatait Neumann-elvekként emlegetjük.</p>
+          <p>
+            Ő indította el a mesterséges intelligencia kezdeteit. Dolgozott az atombombán és vezette azt a csapatot,
+            amely az első számítógépes időjárás-előrejelzést készítette. Az 1950-es évek közepén felvetette, hogy a Föld
+            felmelegedése az emberek szén- és olajtüzelésének következménye, és figyelmeztetett, hogy a „kiterjedt
+            emberi beavatkozás” pusztítást okozhat a világ éghajlatában.</p>
+        </div>
+      </div>
+    </section>
+    <section class="row">
+      <div class="col-12">
+        <h2 class="text-center mt-5 mb-3" id="start">Kezdetek</h2>
+      </div>
+      <div class="col-6">
+        <p>
+          1903. december 28-án született Budapesten. A Neumann család ingergazdag szellemi légkört teremtett a gyermekek
+          számára, a beszélgetések nem kizárólag tudományról zajlottak, nem volt ritka a zenei, színházi vagy irodalmi
+          téma. A hazai szellemi elit prominens képviselői is tiszteletüket tették a családnál, például Ortvay Rudolf, a
+          budapesti tudományegyetem elméleti fizikai intézetének igazgatója és Fejér Lipót matematikaprofesszor.</p>
+        <p>János már korán kortársait jóval meghaladó képességekről tett tanúbizonyságot. Magyar anyanyelve, a francia
+          és a német nyelvek mellett tanulta a latint és az ógörögöt; emlékezőtehetsége szinte fotografikus volt, és
+          fejszámolásban is rendkívüli eredményeket mutatott fel. Ez utóbbi képessége felnőttkorában szinte védjegyévé
+          vált. Legenda járt arról, hogy a korai elektronikus számológépek számításait ő maga ellenőrizte fejben a
+          gépekével azonos sebességgel.
+        </p>
+      </div>
+      <div class="col-6">
+        <img src="images/gyerek.jpg" alt="Neumann kicsi korában">
+      </div>
+      <div class="col-md-4">
+        <img src="images/Von_Neumann_Architecture.png">
+      </div>
+      <div class="col-md-8">
+        <p>Az első elektronikusan működő számítógép, az ENIAC tapasztalatai alapján a számítógép építéséhez
+          nélkülözhetetlen alapelveket Neumann János dolgozta ki, aki gyorsabb, megbízhatóbb, egyszerűbb és könnyebben
+          kezelhető gépet szeretett volna készíteni. Az általunk ma Neumann-elveknek nevezett kritériumrendszert
+          elsőként az 1945-ben kiadott „First Draft of a Report on the Edvac” című művében publikálta: </p>
+
+          teljesen elektronikus működés
+          kettes számrendszer alkalmazása
+          belső memória használata
+          tárolt program elve (a számításokhoz szükséges adatokat és programutasításokat a gép a belső memóriában tárolja)
+          soros utasítás-végrehajtás (az utasítások végrehajtása időben egymás után történjen)
+          univerzális felhasználhatóság (a különböző feladatok programokkal legyenek megoldva, nem pedig erre a célra épített hardverrel)
+          szerkezet: öt funkcionális egység (aritmetikai egység, központi vezérlőegység, memóriák, bemeneti és kimeneti egységek)
+
+
+      </div>
+      <div class="col-12">
+        <h2 class="text-center mt-5 mb-3" id="results">Eredményei</h2>
+      </div>
+      <div class="col-md-6 my-2">
+        <div class="card  h-100">
+          <img src="images/Edvac.jpg" class="card-img-top" alt="EDVAC a Ballisztikai Kutatólaboratóriumban">
+          <div class="card-body">
+            <h5 class="card-title">EDVAC</h5>
+            <p class="card-text">Tanácsadóként szerepelt az EDVAC tervezésénél 1944-től, amelyet 1952-ben helyeztek
+              üzembe. Ennek a számítógépnek a tervezése során fejlesztette ki az elektronikus számítógépek belső
+              szervezésének elméletét (Neumann-elv), amelynek alapján készülnek a mai számítógépek is. </p>
+            <p>Neumann sohasem
+              engedte szabadalmaztatni az általa megalkotott elveket. Azt mondta, hogy a számítógép nem egy vagy több
+              emberé, hanem az egész emberiségé, nem egy ember találta ki, hanem matematikusok és mérnökök hada.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6 my-2">
+        <div class="card h-100">
+          <img src="images/manhattan.jpg" class="card-img-top" alt="Manhatten District válljelzés">
+          <div class="card-body">
+            <h5 class="card-title">Manhattan-terv</h5>
+            <p class="card-text">Neumann 1943-tól csatlakozott az akkor már Los Alamosban dolgozó tudóstársaihoz, és
+              kivette részét a Manhattan-projekt munkálataiból. Matematikusként végzett számításokat és oldotta meg azt
+              a problémát, hogy miként lehet a kritikus tömeget gyorsan elérni. </p>
+            <p>A gömb alakú lökéshullám létrehozása
+              volt a fő probléma, amelyre Neumann és Tuck találta meg a szellemes megoldást egy lencse alakú nagy erejű
+              robbanóanyag formájában. </p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6 my-2">
+        <div class="card h-100">
+          <img src="images/Theory_of_games.jpg" class="card-img-top" alt="A játékelméletet megalapozó mű">
+          <div class="card-body">
+            <h5 class="card-title">Játékelmélet</h5>
+            <p class="card-text">Neumann alapította meg a játékelméletet mint matematikai tudományágat. 1928-ban
+              bizonyította be a minimax-tételt. Megállapította, hogy amikor a játékosok minden egyes alkalommal ismerik
+              az összes addig megtett lépést, akkor mindkét játéknak van olyan stratégiája, amellyel minimálisra
+              csökkentheti a legnagyobb veszteségét. A minimax-tételt továbbfejlesztette és kiterjesztette a tökéletlen
+              információt tartalmazó és több játékossal működő játékokra is. </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="row">
+      <div class="col-12">
+        <h2 class="text-center mt-5 mb-3" id="memorial">Emlékezete</h2>
+      </div>
+      <div class="d-none d-lg-block col-lg-3">
+        <img src="images/NJIT_35.png" class="img-fluid" alt="Logó NJIT">
+      </div>
+      <div class="col-md-7 col-lg-5">
+        <p> Több szervezetet és oktatási intézményt neveztek el róla, iskolánk is Neumann János nevét őrzi. A Financial
+          Times 1999-ben az évszázad emberének nevezte. Róla nevezték el a (22824) von Neumann kisbolygót.</p>
+        <p> A Neumann János professzori címet a Budapesti Műszaki és Gazdaságtudományi Egyetem a Neumann János
+          Számítógép-tudományi Társasággal együtt alapította azon kimagasló, nemzetközi szinten is ismert és elismert
+          tudományos teljesítményt nyújtó hazai vagy külföldi egyetemi tanárok és kutatók elismerésére, akiknek
+          tudományos munkája kapcsolódik a Neumann János által elért eredményekhez, és kötődik a BME-hez. Idén Karikó
+          Katalin kapta ezt az elismerést.
+        </p>
+      </div>
+      <div class="col-md-5 col-lg-4">
+        <img src="images/Kariko.jpg" class="img-thumbnail" alt="Neumann professzor">
+      </div>
+    </section>
+    <div class="row">
+      <div class="col-12">
+        <!-- https://hu.wikipedia.org/wiki/Neumann_J%C3%A1nos -->
+        További információ:  Wikipedia
+      </div>
+    </div>
+  </main>
+  <!-- Footer -->
+  <footer class="container-fluid text-light">
+    <div class="row">
+      <div class="col-12">
+        <p class="pt-3 text-center">Készítette: Vágvölgyi Balázs</p>
+        <p class="text-center">BMSZC Neumann János Informatikai Technikum, 2023</p>
+      </div>
+    </div>
+  </footer>
+  <!-- Script import -->
+  <!-- Megint, nem akarom a egész Bootstrapet pusholni -->
+  <!-- <script src="bootstrap/bootstrap.bundle.min.js"></script> -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</body>
+</html>
