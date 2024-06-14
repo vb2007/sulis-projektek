@@ -1,0 +1,14 @@
+#kozepsodiv{
+    background-color: rgba(23, 162, 184, 0.3);
+}
+
+.szereplo-img{
+    border-radius: 20px;
+    /*drop-shadow(offset-x offset-y blur-radius color*/
+    box-shadow: 2px 2px 5px black;
+}
+
+th:first-child{
+    background-color: rgba(255, 255, 255, 0.15);
+    font-weight: bold;
+}

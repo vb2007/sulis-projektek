@@ -1,6 +1,0 @@
-ADA-123;Ford;60
-CAB-234;Suzuki;42
-DAD-432;Dacia;34
-IDE-112;Skoda;87
-OLD-867;Fiat;110
-EGO-323;Opel;51

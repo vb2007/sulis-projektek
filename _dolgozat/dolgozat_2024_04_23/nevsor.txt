@@ -1,0 +1,25 @@
+név;kor;nem
+Molnár Flóra;23.1;nő
+Nagy Nándor;18.7;férfi
+Molnár János;27.9;férfi
+Orbán Rebeka;30.9;nő
+Szilágyi Noémi;16.1;nő
+Nagy Gábor;16.8;férfi
+Kerekes István;18.3;férfi
+Barta Viktória;21.4;nő
+Kozma Benjámin;22.6;férfi
+Orosz Alex;23.8;férfi
+Rácz Tamara;28.4;nő
+Deák Balázs;19.9;férfi
+Major Ádám;21.6;férfi
+Tóth Zsolt;20.6;férfi
+Hegedüs Zsombor;14.7;férfi
+Oláh Ákos;23.8;férfi
+Takács Szabolcs;18.3;férfi
+Fehér Anna;30.6;nő
+Pintér Balázs;25.9;férfi
+Nagy Boglárka;23.8;nő
+Jónás Alex;19.8;férfi
+Nagy János;22.4;férfi
+Szabó Zoltán;18.2;férfi
+Rácz Liza;23.6;nő
