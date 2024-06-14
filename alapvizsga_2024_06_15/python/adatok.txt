@@ -1,0 +1,17 @@
+hajoNev;klubNev;pontszam
+Bajadér;OSE;183
+Banka;SZÁNTÓDI VE;557
+Blue Jay;IBM SE;150
+Honolulu Star;PIARISTA;557
+Admirális;VVEB;286
+Lucaszék;ÉVSC;275
+Tobago;SVSK;161
+Joystick;TVSK;146
+Köszönjük Emese;GESK;313
+Carina;AZÚR SE;557
+Gé.;TVSK;557
+Öreg;KEREKED;253
+Főszél;TVSK;117
+Re-Life;AVIS SE;231
+Vigasz;TVSK;557
+Fontos;BSF VK;285
