@@ -1,0 +1,68 @@
+body {
+    background-color: #2f460b;
+    margin: 0px;
+}
+
+header {
+    height: 600px;
+    background-image: url("../images/butterfly.webp");
+    background-position: center;
+    background-size: cover;
+}
+
+main {
+    width: 80%;
+    background-color: rgba(255, 255, 255, 0.7);
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 20px;
+    padding: 20px;
+    box-shadow: 2px 2px 10px rgb(0, 0, 0);
+}
+
+h1 {
+    color: #feb402;
+    font-size: 6rem;
+    padding: 20px;
+    margin-top: 0px;
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+h2 {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-variant: small-caps;
+    color: #15301f;
+    text-decoration: underline;
+    text-decoration-style: dotted;
+    text-decoration-thickness: 3px;
+    text-decoration-color: #15301f;
+    /* border-bottom-style: dotted;
+    border-bottom-width: 3px;
+    border-bottom-color: #15301f; */
+}
+
+p {
+    text-indent: 10px;
+    font-size: 1.1rem;
+}
+
+span {
+    font-style: italic;
+    letter-spacing: 1px;
+}
+
+li {
+    line-height: 2rem;
+}
+
+ul:first-child li {
+    list-style-image: url("../images/butterfly_icon.png");
+}
+
+ol li{
+    font-weight: bold;
+}
+
+ol ul li {
+    font-weight: normal;
+}
