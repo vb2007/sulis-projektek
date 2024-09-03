@@ -55,8 +55,8 @@ li {
     line-height: 2rem;
 }
 
-ul:first-child li {
-    list-style-image: url("../images/butterfly_icon.png");
+article > ul:nth-of-type(1) {
+    list-style-image: url("../images/butterfly_icon.png") !important;
 }
 
 ol li{
@@ -65,4 +65,22 @@ ol li{
 
 ol ul li {
     font-weight: normal;
+}
+
+img {
+    display: none;
+}
+
+@media only screen and (min-width: 700px) {
+    article:last-of-type {
+        position: relative;
+    }
+
+    article img {
+        display: block;
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        margin: 10px;
+    }
 }
