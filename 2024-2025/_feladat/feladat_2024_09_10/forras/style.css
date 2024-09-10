@@ -5,5 +5,12 @@ body {
 
 ol {
     width: 300px;
-    vertical-align: middle;
+    /* vertical-align: middle; */
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+ol > li {
+    list-style-type: none;
 }
