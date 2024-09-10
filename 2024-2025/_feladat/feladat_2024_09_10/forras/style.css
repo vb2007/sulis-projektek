@@ -27,6 +27,7 @@ ol > li {
 vonatkozzanak az előbbi beállítások! */
 ol > li * {
     font-size: initial;
+    font-variant: initial;
 }
 
 ol > li:nth-child(odd) {
@@ -60,19 +61,12 @@ ol > li:nth-child(3) > ul > li:last-child > ul > li > ul > li:nth-child(5) {
     background-color: lightcoral;
 }
 
+li {
+    position: relative;
+}
+
 div {
     display: none;
-    background-color: white;
-    border-width: 2px;
-    border-color: lightskyblue;
-    border-radius: 5px;
-    padding: 10px;
-    width: 300px;
-    height: 100px;
-    /* margin-left: auto;
-    margin-right: 0px; */
-    /* justify-content: right; */
-    text-align: right;
 }
 
 div:first-child {
@@ -81,4 +75,15 @@ div:first-child {
 
 li:hover > div {
     display: block;
+    position: absolute;
+    right: -310px;
+    top: 0;
+    background-color: white;
+    border-width: 2px;
+    border-color: lightskyblue;
+    border-style: solid;
+    border-radius: 5px;
+    padding: 10px;
+    width: 300px;
+    height: 100px;
 }
