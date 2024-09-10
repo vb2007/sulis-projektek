@@ -1,0 +1,9 @@
+body {
+    background-image: url("./images/butterfly_bg.jpg");
+    background-size: 500px;
+}
+
+ol {
+    width: 300px;
+    vertical-align: middle;
+}
