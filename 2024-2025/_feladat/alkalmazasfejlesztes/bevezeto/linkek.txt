@@ -1,0 +1,2 @@
+https://learn.microsoft.com/hu-hu/dotnet/core/introduction
+https://csharptutorial.hu/docs/hellovilag-hellocsharp/1-bevezetes/a-keretrendszer/

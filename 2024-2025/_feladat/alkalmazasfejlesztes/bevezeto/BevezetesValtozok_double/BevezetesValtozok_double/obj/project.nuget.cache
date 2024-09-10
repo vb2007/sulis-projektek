@@ -1,0 +1,13 @@
+{
+  "version": 2,
+  "dgSpecHash": "U5R+5uN9Gk4=",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Suli\\Desktop\\01_asztali_diakoknak\\BevezetesValtozok_double\\BevezetesValtozok_double\\BevezetesValtozok_double.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Suli\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\7.0.20\\microsoft.windowsdesktop.app.ref.7.0.20.nupkg.sha512",
+    "C:\\Users\\Suli\\.nuget\\packages\\microsoft.netcore.app.ref\\7.0.20\\microsoft.netcore.app.ref.7.0.20.nupkg.sha512",
+    "C:\\Users\\Suli\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\7.0.20\\microsoft.aspnetcore.app.ref.7.0.20.nupkg.sha512",
+    "C:\\Users\\Suli\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\7.0.20\\microsoft.netcore.app.host.win-x64.7.0.20.nupkg.sha512"
+  ],
+  "logs": []
+}
