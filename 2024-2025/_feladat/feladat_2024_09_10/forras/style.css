@@ -1,0 +1,93 @@
+body {
+    background-image: url("./images/butterfly_bg.jpg");
+    background-size: 500px;
+}
+
+ol {
+    width: 300px;
+    /* vertical-align: middle; */
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+ol > li {
+    list-style-type: none;
+    border-color: black;
+    border-width: 2px;
+    border-style: solid;
+    margin-bottom: 6px;
+    padding: 20px;
+    font-variant: small-caps;
+    font-weight: bold;
+    font-size: 25px;
+}
+
+/* Ügyeljen arra, hogy a felsorolás további szintjeinek listaelemeire  ne 
+vonatkozzanak az előbbi beállítások! */
+ol > li * {
+    font-size: initial;
+    font-variant: initial;
+}
+
+ol > li:nth-child(odd) {
+    background-color: #ddd5c7;
+}
+
+ol > li:nth-child(even) {
+    background-color: #cbd4e1;
+}
+
+ol > li > ul > li {
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+ol > li > ul > li * {
+    font-weight: initial;
+    letter-spacing: initial;
+}
+
+ol > li > ul > li > span {
+    font-style: italic;
+    color: brown;
+}
+
+ol > li:nth-child(3) > ul > li:first-child > ul > li:last-child {
+    background-color: lightskyblue;
+}
+
+ol > li:nth-child(3) > ul > li:last-child > ul > li > ul > li:nth-child(5) {
+    background-color: lightcoral;
+}
+
+li {
+    position: relative;
+}
+
+div {
+    display: none;
+}
+
+div:first-child {
+    height: 80px;
+}
+
+li:hover > div {
+    display: block;
+    position: absolute;
+    right: -310px;
+    top: 0;
+    background-color: white;
+    border-width: 2px;
+    border-color: lightskyblue;
+    border-style: solid;
+    border-radius: 5px;
+    padding: 10px;
+    width: 300px;
+    height: 100px;
+}
+
+ol > li:nth-child(3) > ul > li:last-child > ul > li > ul > li:nth-child(5) > div {
+    border-color: lightcoral;
+}
