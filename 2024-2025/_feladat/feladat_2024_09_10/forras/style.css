@@ -87,3 +87,7 @@ li:hover > div {
     width: 300px;
     height: 100px;
 }
+
+ol > li:nth-child(3) > ul > li:last-child > ul > li > ul > li:nth-child(5) > div {
+    border-color: lightcoral;
+}
