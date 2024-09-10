@@ -1,0 +1,14 @@
+C:\Users\Suli\Desktop\ValtozokTipusokMuveletek\ValtozokTipusokMuveletek\bin\Debug\net8.0\ValtozokTipusokMuveletek.exe
+C:\Users\Suli\Desktop\ValtozokTipusokMuveletek\ValtozokTipusokMuveletek\bin\Debug\net8.0\ValtozokTipusokMuveletek.deps.json
+C:\Users\Suli\Desktop\ValtozokTipusokMuveletek\ValtozokTipusokMuveletek\bin\Debug\net8.0\ValtozokTipusokMuveletek.runtimeconfig.json
+C:\Users\Suli\Desktop\ValtozokTipusokMuveletek\ValtozokTipusokMuveletek\bin\Debug\net8.0\ValtozokTipusokMuveletek.dll
+C:\Users\Suli\Desktop\ValtozokTipusokMuveletek\ValtozokTipusokMuveletek\bin\Debug\net8.0\ValtozokTipusokMuveletek.pdb
+C:\Users\Suli\Desktop\ValtozokTipusokMuveletek\ValtozokTipusokMuveletek\obj\Debug\net8.0\ValtozokTipusokMuveletek.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Suli\Desktop\ValtozokTipusokMuveletek\ValtozokTipusokMuveletek\obj\Debug\net8.0\ValtozokTipusokMuveletek.AssemblyInfoInputs.cache
+C:\Users\Suli\Desktop\ValtozokTipusokMuveletek\ValtozokTipusokMuveletek\obj\Debug\net8.0\ValtozokTipusokMuveletek.AssemblyInfo.cs
+C:\Users\Suli\Desktop\ValtozokTipusokMuveletek\ValtozokTipusokMuveletek\obj\Debug\net8.0\ValtozokTipusokMuveletek.csproj.CoreCompileInputs.cache
+C:\Users\Suli\Desktop\ValtozokTipusokMuveletek\ValtozokTipusokMuveletek\obj\Debug\net8.0\ValtozokTipusokMuveletek.dll
+C:\Users\Suli\Desktop\ValtozokTipusokMuveletek\ValtozokTipusokMuveletek\obj\Debug\net8.0\refint\ValtozokTipusokMuveletek.dll
+C:\Users\Suli\Desktop\ValtozokTipusokMuveletek\ValtozokTipusokMuveletek\obj\Debug\net8.0\ValtozokTipusokMuveletek.pdb
+C:\Users\Suli\Desktop\ValtozokTipusokMuveletek\ValtozokTipusokMuveletek\obj\Debug\net8.0\ValtozokTipusokMuveletek.genruntimeconfig.cache
+C:\Users\Suli\Desktop\ValtozokTipusokMuveletek\ValtozokTipusokMuveletek\obj\Debug\net8.0\ref\ValtozokTipusokMuveletek.dll
