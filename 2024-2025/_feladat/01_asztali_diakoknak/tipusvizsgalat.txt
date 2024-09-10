@@ -1,1 +1,0 @@
-Console.WriteLine($"byte:\t{typeof(byte)}\t{sizeof(byte)}\t{byte.MinValue}\t{byte.MaxValue}");
