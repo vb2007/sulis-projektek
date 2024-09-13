@@ -1,0 +1,14 @@
+C:\Users\Suli\Desktop\alkalm\feladat_2024_09_13\Szekvencia\Szekvencia\bin\Debug\net8.0\Szekvencia.exe
+C:\Users\Suli\Desktop\alkalm\feladat_2024_09_13\Szekvencia\Szekvencia\bin\Debug\net8.0\Szekvencia.deps.json
+C:\Users\Suli\Desktop\alkalm\feladat_2024_09_13\Szekvencia\Szekvencia\bin\Debug\net8.0\Szekvencia.runtimeconfig.json
+C:\Users\Suli\Desktop\alkalm\feladat_2024_09_13\Szekvencia\Szekvencia\bin\Debug\net8.0\Szekvencia.dll
+C:\Users\Suli\Desktop\alkalm\feladat_2024_09_13\Szekvencia\Szekvencia\bin\Debug\net8.0\Szekvencia.pdb
+C:\Users\Suli\Desktop\alkalm\feladat_2024_09_13\Szekvencia\Szekvencia\obj\Debug\net8.0\Szekvencia.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Suli\Desktop\alkalm\feladat_2024_09_13\Szekvencia\Szekvencia\obj\Debug\net8.0\Szekvencia.AssemblyInfoInputs.cache
+C:\Users\Suli\Desktop\alkalm\feladat_2024_09_13\Szekvencia\Szekvencia\obj\Debug\net8.0\Szekvencia.AssemblyInfo.cs
+C:\Users\Suli\Desktop\alkalm\feladat_2024_09_13\Szekvencia\Szekvencia\obj\Debug\net8.0\Szekvencia.csproj.CoreCompileInputs.cache
+C:\Users\Suli\Desktop\alkalm\feladat_2024_09_13\Szekvencia\Szekvencia\obj\Debug\net8.0\Szekvencia.dll
+C:\Users\Suli\Desktop\alkalm\feladat_2024_09_13\Szekvencia\Szekvencia\obj\Debug\net8.0\refint\Szekvencia.dll
+C:\Users\Suli\Desktop\alkalm\feladat_2024_09_13\Szekvencia\Szekvencia\obj\Debug\net8.0\Szekvencia.pdb
+C:\Users\Suli\Desktop\alkalm\feladat_2024_09_13\Szekvencia\Szekvencia\obj\Debug\net8.0\Szekvencia.genruntimeconfig.cache
+C:\Users\Suli\Desktop\alkalm\feladat_2024_09_13\Szekvencia\Szekvencia\obj\Debug\net8.0\ref\Szekvencia.dll
