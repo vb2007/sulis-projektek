@@ -35,17 +35,47 @@ FROM `tanulok`
 WHERE `magassag` < 180;
 
 -- 11. feladat
+SELECT *
+FROM `tanulok`
+WHERE `magassag` >= 185;
 
 -- 12. feladat
+SELECT *
+FROM `tanulok`
+WHERE `magassag` < 185;
 
 -- 13. feladat
+SELECT `vnev`, `knev`
+FROM `tanulok`
+WHERE `magassag` = 182;
 
 -- 14. feladat
+SELECT *
+FROM `tanulok`
+ORDER BY `atlag` DESC;
 
 -- 15. feladat
+SELECT `vnev`, `knev`, `szul_ido`
+FROM `tanulok`
+ORDER BY `szul_ido` DESC;
 
 -- 16. feladat
+SELECT `vnev`, `knev`, `szul_ido`
+FROM `tanulok`
+WHERE `szul_hely` = "Budapest"
+ORDER BY `szul_ido` DESC;
 
 -- 17. feladat
+SELECT *
+FROM `tanulok`
+WHERE `magassag` >= 160
+	AND `magassag` <= 170
+    AND `nagycsalados` = 1
+ORDER BY `szul_ido` DESC;
 
 -- 18. feladat
+SELECT *
+FROM `tanulok`
+WHERE `magassag` >= 185
+	AND `szul_hely` = "Miskolc"
+ORDER BY `szul_ido` DESC;
