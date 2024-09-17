@@ -41,7 +41,6 @@ ol > li * {
     font-weight: initial;
     font-size: initial;
     width: initial;
-    padding: initial;
     border-width: initial;
     border-style: initial;
     margin-right: initial;
@@ -166,6 +165,7 @@ ol > li > ul > li > ul > li > ul > li > ul > li:hover::after {
 }
 
 a {
+    text-decoration: none;
     color: #373485;
 }
 
@@ -182,7 +182,8 @@ a:active {
 }
 
 a::before {
-    background-image: url("./images/");
+    content-visibility: visible;
+    content: "🔗";
 }
 
 footer {
