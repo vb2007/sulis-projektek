@@ -65,3 +65,81 @@ ol > li:nth-child(even) {
 ol > li:nth-child(even):hover {
     background-color: #373485;
 }
+
+ol > li:nth-child(2) > ul > li:nth-child(1):hover::after {
+    background-image: url("./images/BMW-E28.jpg");
+    padding-bottom: 58.3%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    content: "";
+    border-width: 5px;
+    border-color: black;
+    border-style: solid;
+    position: relative;
+    display: block;
+}
+
+ol > li:nth-child(2) > ul > li:nth-child(2):hover::after {
+    background-image: url("./images/BMW-E34.jpg");
+    padding-bottom: 66.7%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    content: "";
+    border-width: 5px;
+    border-color: black;
+    border-style: solid;
+    position: relative;
+    display: block;
+}
+
+ol > li:nth-child(2) > ul > li:nth-child(3):hover::after {
+    background-image: url("./images/BMW-E39.jpg");
+    padding-bottom: 66%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    content: "";
+    border-width: 5px;
+    border-color: black;
+    border-style: solid;
+    position: relative;
+    display: block;
+}
+
+ol > li:nth-child(2) > ul > li:nth-child(4):hover::after {
+    background-image: url("./images/BMW-E60.jpg");
+    padding-bottom: 66.7%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    content: "";
+    border-width: 5px;
+    border-color: black;
+    border-style: solid;
+    position: relative;
+    display: block;
+}
+
+ol > li:nth-child(2) > ul > li:nth-child(5):hover::after {
+    background-image: url("./images/BMW-F10.jpg");
+    padding-bottom: 71.25%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    content: "";
+    border-width: 5px;
+    border-color: black;
+    border-style: solid;
+    position: relative;
+    display: block;
+}
+
+ol > li:nth-child(2) > ul > li:nth-child(6):hover::after {
+    background-image: url("./images/BMW-F90.jpg");
+    padding-bottom: 66.7%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    content: "";
+    border-width: 5px;
+    border-color: black;
+    border-style: solid;
+    position: relative;
+    display: block;
+}
