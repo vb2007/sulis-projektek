@@ -143,3 +143,20 @@ ol > li:nth-child(2) > ul > li:nth-child(6):hover::after {
     position: relative;
     display: block;
 }
+
+ol > li > ul > li > ul > li > ul > li > ul > li {
+    text-decoration: underline;
+}
+
+ol > li > ul > li > ul > li > ul > li > ul > li:hover::after {
+    background-image: url("./images/BMW-M5-Touring.jpg");
+    padding-bottom: 54.16%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    content: "";
+    border-width: 5px;
+    border-color: black;
+    border-style: solid;
+    position: relative;
+    display: block;
+}
