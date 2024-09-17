@@ -41,6 +41,7 @@ ol > li * {
     font-weight: initial;
     font-size: initial;
     width: initial;
+    /* padding: initial; */
     border-width: initial;
     border-style: initial;
     margin-right: initial;
