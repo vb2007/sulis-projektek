@@ -1,0 +1,25 @@
+body {
+    background-color: #161616;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #e6e6e7;
+    margin: 0px;
+}
+
+header {
+    background-image: url("./images/BMW_Header.jpg");
+    background-size: cover;
+    margin: 0px;
+    padding: 0px;
+    padding-bottom: 20.62%;
+    height: 0px;
+}
+
+h1 {
+    font-size: 4vw;
+    box-shadow: 2px 2px #c52b30;
+    font-family: Arial, Helvetica, sans-serif;
+    padding-top: 15%;
+    margin-left: 30%;
+    margin-top: 0px;
+}
+
