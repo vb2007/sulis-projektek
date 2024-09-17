@@ -52,18 +52,22 @@ ol > li * {
 
 ol > li:nth-child(odd) {
     background-color: #c52b3099;
+    border-color: #c52b30;
 }
 
 ol > li:nth-child(odd):hover {
     background-color: #c52b30;
+    border-color: #c52b3099;
 }
 
 ol > li:nth-child(even) {
     background-color: #37348599;
+    border-color: #373485;
 }
 
 ol > li:nth-child(even):hover {
     background-color: #373485;
+    border-color: #37348599;
 }
 
 ol > li:nth-child(2) > ul > li:nth-child(1):hover::after {
@@ -159,4 +163,35 @@ ol > li > ul > li > ul > li > ul > li > ul > li:hover::after {
     border-style: solid;
     position: relative;
     display: block;
+}
+
+a {
+    color: #373485;
+}
+
+a:visited {
+    color: #c52b30;
+}
+
+a:hover {
+    color: #33a0d1;
+}
+
+a:active {
+    color: #e6e6e7;
+}
+
+a::before {
+    background-image: url("./images/");
+}
+
+footer {
+    background-color: #000;
+    text-align: center;
+    width: 100%;
+    padding-left: 0px;
+    padding-right: 0px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    bottom: 0;
 }
