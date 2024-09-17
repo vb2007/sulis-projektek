@@ -16,7 +16,7 @@ header {
 
 h1 {
     font-size: 4vw;
-    box-shadow: 2px 2px #c52b30;
+    text-shadow: #c52b30, 2px 2px;
     font-family: Arial, Helvetica, sans-serif;
     padding-top: 15%;
     margin-left: 30%;
