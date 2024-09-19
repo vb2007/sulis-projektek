@@ -24,7 +24,7 @@ double b2 = int.Parse(Console.ReadLine()!);
 Console.WriteLine($"A két szám összege: {a2 + b2}");
 Console.WriteLine($"A két szám különbsége: {a2 - b2}");
 Console.WriteLine($"A két szám szorzata: {a2 * b2}");
-if (b2 == 0)
+if (b2 != 0)
 {
     Console.WriteLine($"A két szám hányadosa: {a2 / b2}");
 }
@@ -83,7 +83,7 @@ else
 }
 
 //6. Feladat
-Console.Write("Adj meg egy valós számot: ");
+Console.Write("Adj meg egy egész számot: ");
 int a6 = int.Parse(Console.ReadLine()!);
 
 if (a6 % 2 == 0)
@@ -122,11 +122,11 @@ if (a8 == 0)
 }
 else if (a8 > 0)
 {
-    Console.WriteLine("A szám előjele: -");
+    Console.WriteLine("A szám előjele: +");
 }
 else
 {
-    Console.WriteLine("A szám előjele: +");
+    Console.WriteLine("A szám előjele: -");
 }
 
 
@@ -159,7 +159,7 @@ else
 Console.Write("Adj meg egy évszámot: ");
 int year = int.Parse(Console.ReadLine()!);
 
-if (year % 4 == 0 && year % 100 != 0)
+if ((year % 4 == 0 && year % 100 != 0) || (year % 4 == 0 && year % 4 == 400))
 {
     Console.WriteLine("Ez egy szökőév!");
 }
@@ -177,10 +177,81 @@ int b11 = int.Parse(Console.ReadLine()!);
 Console.Write("Add meg a 3. számot: ");
 int c11 = int.Parse(Console.ReadLine()!);
 
+int max = Math.Max(a11, Math.Max(b11, c11));
+
+Console.WriteLine($"A legnagyobb szám: {max}");
+
 //12. Feladat
 Console.Write("Add meg a termék eredeti árát: ");
-int eredetiAr = int.Parse(Console.ReadLine()!);
+double eredetiAr = int.Parse(Console.ReadLine()!);
 
 Console.Write("Add meg a kedvezmény százalékát: ");
-int kedvezmenySzazaleka = int.Parse(Console.ReadLine()!);
+double kedvezmenySzazaleka = int.Parse(Console.ReadLine()!);
 
+Console.WriteLine($"Az akciós ár: {(kedvezmenySzazaleka / eredetiAr) * 100}");
+
+if (kedvezmenySzazaleka > 50)
+{
+    Console.WriteLine("Megéri megvenni az árut!");
+}
+
+//13. Feladat
+Console.Write("Add meg a víz hőmérsékletét: ");
+int homerseklet =  int.Parse(Console.ReadLine()!);
+
+if (homerseklet < 0)
+{
+    Console.WriteLine("A víz halmazállapota jég.");
+}
+else if (homerseklet > 0 && homerseklet < 100)
+{
+    Console.WriteLine("A víz halmazállapota folyékony.");
+}
+else
+{
+    Console.WriteLine("A víz halmazállapota gőz.");
+}
+
+//14. Feladat
+Console.Write("Add meg az 1. számot: ");
+int a14 = int.Parse(Console.ReadLine()!);
+Console.Write("Add meg a 2. számot: ");
+int b14 = int.Parse(Console.ReadLine()!);
+Console.Write("Add meg a 3. számot: ");
+int c14 = int.Parse(Console.ReadLine()!);
+
+int[] numbers = { a14, b14, c14 };
+Array.Sort(numbers);
+
+Console.WriteLine("A számok növekvő sorrendben: ");
+foreach (int number in numbers)
+{
+    Console.WriteLine(number);
+}
+
+//15. Feladat
+Console.Write("Add meg az egyik gén típusát (A, B, AB, 0): ");
+string gene1 = Console.ReadLine()!;
+Console.Write("Add meg a másik gén típusát (A, B, AB, 0): ");
+string gene2 = Console.ReadLine()!;
+
+if ((gene1 == "A" && gene2 == "A") || (gene1 == "A" && gene2 == "0") || (gene1 == "0" && gene2 == "A"))
+{
+    Console.WriteLine("A vércsoportod: A");
+}
+else if ((gene1 == "B" && gene2 == "B") || (gene1 == "B" && gene2 == "0") || (gene1 == "0" && gene2 == "B"))
+{
+    Console.WriteLine("A vércsoportod: B");
+}
+else if ((gene1 == "A" && gene2 == "B") || (gene1 == "B" && gene2 == "A"))
+{
+    Console.WriteLine("A vércsoportod: AB");
+}
+else if (gene1 == "0" && gene2 == "0")
+{
+    Console.WriteLine("A vércsoportod: 0");
+}
+else
+{
+    Console.WriteLine("Érvénytelen értéket/értékeket adtál meg.");
+}
