@@ -1,0 +1,199 @@
+body {
+    background-color: #161616;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #e6e6e7;
+    margin: 0px;
+}
+
+header {
+    background-image: url("./images/BMW_Header.jpg");
+    background-size: cover;
+    margin: 0px;
+    padding: 0px;
+    padding-bottom: 20.62%;
+    height: 0px;
+}
+
+h1 {
+    font-size: 4vw;
+    text-shadow: #c52b30, 2px 2px;
+    font-family: Arial, Helvetica, sans-serif;
+    padding-top: 15%;
+    margin-left: 30%;
+    margin-top: 0px;
+}
+
+ol > li {
+    list-style-type: none;
+    font-weight: bold;
+    font-size: 25px;
+    width: 70%;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    border-width: 5px;
+    border-style: solid;
+    padding: 10px;
+}
+
+ol > li * {
+    font-weight: initial;
+    font-size: initial;
+    width: initial;
+    /* padding: initial; */
+    border-width: initial;
+    border-style: initial;
+    margin-right: initial;
+    margin-left: 1%;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+ol > li:nth-child(odd) {
+    background-color: #c52b3099;
+    border-color: #c52b30;
+}
+
+ol > li:nth-child(odd):hover {
+    background-color: #c52b30;
+    border-color: #c52b3099;
+}
+
+ol > li:nth-child(even) {
+    background-color: #37348599;
+    border-color: #373485;
+}
+
+ol > li:nth-child(even):hover {
+    background-color: #373485;
+    border-color: #37348599;
+}
+
+ol > li:nth-child(2) > ul > li:nth-child(1):hover::after {
+    background-image: url("./images/BMW-E28.jpg");
+    padding-bottom: 58.3%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    content: "";
+    border-width: 5px;
+    border-color: black;
+    border-style: solid;
+    position: relative;
+    display: block;
+}
+
+ol > li:nth-child(2) > ul > li:nth-child(2):hover::after {
+    background-image: url("./images/BMW-E34.jpg");
+    padding-bottom: 66.7%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    content: "";
+    border-width: 5px;
+    border-color: black;
+    border-style: solid;
+    position: relative;
+    display: block;
+}
+
+ol > li:nth-child(2) > ul > li:nth-child(3):hover::after {
+    background-image: url("./images/BMW-E39.jpg");
+    padding-bottom: 66%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    content: "";
+    border-width: 5px;
+    border-color: black;
+    border-style: solid;
+    position: relative;
+    display: block;
+}
+
+ol > li:nth-child(2) > ul > li:nth-child(4):hover::after {
+    background-image: url("./images/BMW-E60.jpg");
+    padding-bottom: 66.7%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    content: "";
+    border-width: 5px;
+    border-color: black;
+    border-style: solid;
+    position: relative;
+    display: block;
+}
+
+ol > li:nth-child(2) > ul > li:nth-child(5):hover::after {
+    background-image: url("./images/BMW-F10.jpg");
+    padding-bottom: 71.25%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    content: "";
+    border-width: 5px;
+    border-color: black;
+    border-style: solid;
+    position: relative;
+    display: block;
+}
+
+ol > li:nth-child(2) > ul > li:nth-child(6):hover::after {
+    background-image: url("./images/BMW-F90.jpg");
+    padding-bottom: 66.7%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    content: "";
+    border-width: 5px;
+    border-color: black;
+    border-style: solid;
+    position: relative;
+    display: block;
+}
+
+ol > li > ul > li > ul > li > ul > li > ul > li {
+    text-decoration: underline;
+}
+
+ol > li > ul > li > ul > li > ul > li > ul > li:hover::after {
+    background-image: url("./images/BMW-M5-Touring.jpg");
+    padding-bottom: 54.16%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    content: "";
+    border-width: 5px;
+    border-color: black;
+    border-style: solid;
+    position: relative;
+    display: block;
+}
+
+a {
+    text-decoration: none;
+    color: #373485;
+}
+
+a:visited {
+    color: #c52b30;
+}
+
+a:hover {
+    color: #33a0d1;
+}
+
+a:active {
+    color: #e6e6e7;
+}
+
+a::before {
+    content-visibility: visible;
+    content: "🔗";
+}
+
+footer {
+    background-color: #000;
+    text-align: center;
+    width: 100%;
+    padding-left: 0px;
+    padding-right: 0px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    bottom: 0;
+}
