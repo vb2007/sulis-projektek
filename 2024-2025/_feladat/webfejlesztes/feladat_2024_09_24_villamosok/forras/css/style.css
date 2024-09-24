@@ -1,0 +1,41 @@
+footer {
+    padding-block: 20px;
+    background-color: var(--main-color);
+    color: white;
+    font-weight: bold;
+    p{
+        margin: 0;
+        text-align: center;
+    }
+    a {
+        color: white;
+        text-decoration: none;
+    }
+}
+
+/* Az alábbi formázásokat NE módosítsa, sajátját FŐLÉ írja! */
+
+@media screen and (min-width: 1280px) {
+    article {
+        &:not(#intro) {
+            display: grid;
+            grid-gap: 15px;
+            grid-template-columns: 80% auto;
+        }
+
+        &>div:first-child {
+            grid-column: 1;
+        }
+        
+        &>div:last-child {
+            grid-column: 2;
+            display: flex;
+            justify-items: center;
+            align-items: center;
+        }
+    }
+
+    video {
+        width: 50%;
+    }
+}
