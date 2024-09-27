@@ -16,8 +16,7 @@ FROM `autoskartya`
 WHERE `orszag` = "Japán"
 	AND `fogyasztas` <= 6
 	OR (`hengerurtartalom` <= 1400
-        AND `fogyasztas` < 7)
-ORDER BY `tipus` DESC;
+        AND `fogyasztas` < 7);
 
 -- 6. feladat
 SELECT `gyartmany`, `tipus`, `gyartasi_ev`
