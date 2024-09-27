@@ -1,8 +1,18 @@
 -- 3. feladat
+SELECT *
+FROM `projektorok`
 
 -- 4. feladat
+SELECT DISTINCT `nev`
+FROM `projektorok`
+WHERE `projektor` = 1
+ORDER BY `nev` ASC;
 
 -- 5. feladat
+SELECT `nev`, `elvitte`
+FROM `projektorok`
+WHERE `projektor` = 4
+ORDER BY `elvitte` DESC;
 
 -- 6. feladat
 
