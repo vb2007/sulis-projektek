@@ -15,10 +15,19 @@ WHERE `projektor` = 4
 ORDER BY `elvitte` DESC;
 
 -- 6. feladat
+SELECT DISTINCT `nev`, `terem`
+FROM `projektorok`
+WHERE `atalakito` = "HDMI->VGA";
 
 -- 7. feladat
+SELECT DISTINCT `nev`, `terem`
+FROM `projektorok`
+WHERE `hangszoro` = "Logi 5.1";
 
 -- 8. feladat
+SELECT DISTINCT `nev`
+FROM `projektorok`
+WHERE `terem` IS NULL;
 
 -- 9. feladat
 
