@@ -1,0 +1,29 @@
+.chris {
+    z-index: 1;
+    transform: translate(53vw, 15vw);
+}
+
+.lois {
+    z-index: 2;
+    transform: translate(40vw, 12vw);
+}
+
+.stewie {
+    z-index: 4;
+    transform: translate(53vw, 29vw);
+}
+
+.peter {
+    z-index: 6;
+    transform: translate(17vw, 10vw);
+}
+
+.meg {
+    z-index: 3;
+    transform: translate(63vw, 18vw);
+}
+
+.brian {
+    z-index: 5;
+    transform: translate(62vw, 28vw);
+}

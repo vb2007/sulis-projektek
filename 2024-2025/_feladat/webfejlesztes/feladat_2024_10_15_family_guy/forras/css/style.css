@@ -1,0 +1,130 @@
+
+
+/* A keyframeket a komment fölé írd, az alatta lévő formázásokhoz ne nyúlj! */
+
+:root {
+    --r: 1920 / 1080;
+}
+
+body {
+    height: 100vh;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: black;
+    font-family: Arial, Helvetica, sans-serif;
+    overflow: hidden;
+}
+
+.error {
+    display: none;
+    color: white;
+    font-weight: bold;
+    font-size: 5rem;
+}
+
+@media screen and (min-aspect-ratio: 1920/900) {
+    #content, .sidebar {
+        display: none;
+    }
+
+    .error {
+        display: block;
+    }
+}
+
+
+#content {
+    aspect-ratio: var(--r);
+    width: min(95%, min(1920px, 90vh*(var(--r))));
+    background-image: url('../images/bg-living-room.jpg');
+    background-size: cover;
+    background-position: center;
+    overflow: hidden;
+}
+
+.sidebar {
+    width: calc((100% - min(95%, min(1920px, 90vh*(var(--r))))) / 2);
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    z-index: 99;
+    background-color: #000;
+}
+
+.sidebar-left {
+    left: 0;
+}
+
+.sidebar-right {
+    right: 0;
+}
+
+.character {
+    position: absolute;
+    transform-origin: center;
+}
+
+.subtitle {
+    position: absolute;
+    bottom: 0;
+    left: calc((100% - min(95%, min(1920px, 90vh*(var(--r))))) / 2);
+    width: min(95%, min(1920px, 90vh*(var(--r))));
+    margin-bottom: 10px;
+    font-weight: bold;
+    font-size: 1.1rem;
+    text-align: center;
+    color: white;
+    opacity: 0;
+    
+    .peter-quote {
+        color: greenyellow;
+    }
+
+    .lois-quote {
+        color: plum;
+    }
+
+    .chris-quote {
+        color: tan;
+    }
+
+    .stewie-quote {
+        color: tomato;
+    }
+
+    .brian-quote {
+        color: rgb(from darkcyan 0 calc(g + 60) b);
+    }
+
+    .meg-quote {
+        color: rgb(from deeppink r 0 calc(b + 70));
+    }
+}
+
+a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    position: absolute;
+    margin-bottom: 5px;
+    margin-left: 5px;
+    margin-right: 5px;
+    z-index: 100;
+    &:hover {
+        text-decoration: underline;
+    }
+    &#previous {
+        bottom: 0;
+        left: 0;
+    }
+    &#next {
+        bottom: 0;
+        right: 0;
+    }
+}
+
+#content.bg-house {
+    background-image: url("../images/The_Griffin_House.webp");
+}
