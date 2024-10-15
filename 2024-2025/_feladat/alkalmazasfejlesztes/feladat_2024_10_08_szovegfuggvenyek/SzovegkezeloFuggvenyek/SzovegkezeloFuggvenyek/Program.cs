@@ -1,4 +1,4 @@
-﻿#region 1. Feladat
+#region 1. Feladat
 Console.WriteLine("Adj meg egy szöveget:");
 string szoveg1  = Console.ReadLine()!;
 
@@ -88,21 +88,46 @@ Console.WriteLine($"A szöveg felesleges szóközök nélkül: {szoveg3.Replace(
 Console.WriteLine($"A szöveg a végén lévő szóközök nélkül: {szoveg3.TrimEnd()}");
 
 //3. d
-string szoveg3NoWhitespaces = szoveg3.Replace(" ", "");
-string reversedString3NoWhitespaces = reversedString3.Replace(" ", "");
+string szoveg3NoWhitespaces = szoveg3.Replace(" ", "").ToLower();
+string reversedString3NoWhitespaces = reversedString3.Replace(" ", "").ToLower();
 
 if (szoveg3NoWhitespaces == reversedString3NoWhitespaces)
 {
     Console.WriteLine("A szó palindrom.");
 }
+else
+{
+    Console.WriteLine("A szó nem palindrom.");
+}
 #endregion
 
 #region 4. Feladat
-//4. a
 Console.WriteLine("Add meg a vezetékneved: ");
 string vezeteknev = Console.ReadLine()!;
 Console.WriteLine("Add meg a keresztneved: ");
 string keresztnev = Console.ReadLine()!;
 Console.Write("Ha van, add meg a 2. keresztneved: ");
 string masodikKeresztnev = Console.ReadLine()!;
+
+//4. a
+string azonosito = string.Empty;
+if (masodikKeresztnev == "")
+{
+    azonosito = (vezeteknev + "." + keresztnev).ToLower();
+}
+else
+{
+    azonosito = (vezeteknev + "." + keresztnev + "." + masodikKeresztnev).ToLower();
+}
+
+Console.WriteLine($"A diák azonosítója: {azonosito}");
+
+//4. b
+string jelszo = string.Empty;
+//4. b 1
+
+//4. b 2
+//4. b 3
+//4. b 4
+//4. b 5
 #endregion
