@@ -1,4 +1,14 @@
-
+@keyframes appear {
+    0% {
+        opacity: 0%;
+    }
+    10% {
+        opacity: 10%;
+    }
+    90% {
+        opacity: 90%;
+    }
+}
 
 /* A keyframeket a komment fölé írd, az alatta lévő formázásokhoz ne nyúlj! */
 
@@ -77,6 +87,11 @@ body {
     text-align: center;
     color: white;
     opacity: 0;
+
+    animation-name: appear;
+    animation-duration: 4s;
+    animation-timing-function: linear;
+    animation-delay: 1s;
     
     .peter-quote {
         color: greenyellow;
