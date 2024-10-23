@@ -36,6 +36,20 @@
     animation-fill-mode: forwards;
 }
 
+.subtitle:has(.lois-quote) {
+    animation-name: appear;
+    animation-duration: 4s;
+    animation-timing-function: linear;
+    animation-delay: 1s;
+}
+
+.subtitle:has(.peter-quote) {
+    animation-name: appear;
+    animation-duration: 5s;
+    animation-timing-function: linear;
+    animation-delay: 7s;
+}
+
 .chris {
     z-index: 1;
     transform: translate(53vw, 15vw);
