@@ -1,6 +1,25 @@
+@keyframes pulse {
+    100% {
+        transform: scale(1.05);
+    }
+}
+
 .lois {
     z-index: 2;
     transform: translate(40vw, 12vw);
+    animation-name: pulse;
+    animation-duration: 0.5s;
+    animation-timing-function: linear;
+    animation-delay: 2s;
+    animation-iteration-count: 10;
+    animation-fill-mode: backwards;
+}
+
+.subtitle:has(.lois-quote) {
+    animation-name: appear;
+    animation-duration: 6s;
+    animation-timing-function: linear;
+    animation-delay: 2s;
 }
 
 .peter {
