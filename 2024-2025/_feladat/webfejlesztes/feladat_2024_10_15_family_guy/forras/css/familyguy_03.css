@@ -1,6 +1,12 @@
 @keyframes pulse {
+    0% {
+        transform: translate(40vw, 12vw) scale(1);
+    }
+    50% {
+        transform: translate(40vw, 12vw) scale(1.05);
+    }
     100% {
-        transform: scale(1.05);
+        transform: translate(40vw, 12vw) scale(1);
     }
 }
 
