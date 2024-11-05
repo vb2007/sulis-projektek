@@ -6,7 +6,24 @@
     font-family: "Source Sans 3", sans-serif;
 }
 
+body {
+    display: flex;
+    flex-direction: column;
+    min-width: 100vh;
+    gap: 1rem;
+}
+
+main {
+    display: flex;
+    gap: 1rem;
+}
+
 nav {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
     background-color: #b02d27;
     height: 3rem;
     a {
@@ -19,6 +36,10 @@ nav {
             background-color: #274265;
         }
     }
+}
+
+nav a:last-of-type {
+    order: -1;
 }
 
 main {
