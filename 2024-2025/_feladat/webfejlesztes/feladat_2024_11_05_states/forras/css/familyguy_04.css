@@ -1,9 +1,0 @@
-.boat {
-    z-index: 2;
-    transform: translate(-120%, 15vw);
-}
-
-.explosion {
-    z-index: 3;
-    transform: translate(10vw, 4vw) scale(0);
-}

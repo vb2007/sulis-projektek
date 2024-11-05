@@ -1,130 +1,62 @@
+@import url('https://fonts.googleapis.com/css2?family=Black+Ops+One&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap');
 
-
-/* A keyframeket a komment fölé írd, az alatta lévő formázásokhoz ne nyúlj! */
-
-:root {
-    --r: 1920 / 1080;
-}
-
-body {
-    height: 100vh;
+* {
     margin: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background: black;
-    font-family: Arial, Helvetica, sans-serif;
-    overflow: hidden;
+    padding: 0;
+    font-family: "Source Sans 3", sans-serif;
 }
 
-.error {
-    display: none;
-    color: white;
-    font-weight: bold;
-    font-size: 5rem;
-}
-
-@media screen and (min-aspect-ratio: 1920/900) {
-    #content, .sidebar {
-        display: none;
-    }
-
-    .error {
-        display: block;
+nav {
+    background-color: #b02d27;
+    height: 3rem;
+    a {
+        padding: 0.2rem;
+        text-decoration: none;
+        color: white;
+        font-size: 1.2rem;
+        border-radius: 0.2rem;
+        &:hover {
+            background-color: #274265;
+        }
     }
 }
 
-
-#content {
-    aspect-ratio: var(--r);
-    width: min(95%, min(1920px, 90vh*(var(--r))));
-    background-image: url('../images/bg-living-room.jpg');
-    background-size: cover;
-    background-position: center;
-    overflow: hidden;
+main {
+    background-color: #e1e1e1;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0.5rem;
+    border-radius: 0.5rem;
 }
 
-.sidebar {
-    width: calc((100% - min(95%, min(1920px, 90vh*(var(--r))))) / 2);
-    height: 100vh;
-    position: absolute;
-    top: 0;
-    z-index: 99;
-    background-color: #000;
+#states {
+    padding: 0.5rem;
 }
 
-.sidebar-left {
-    left: 0;
+
+h3, th {
+    color: #274265;
 }
 
-.sidebar-right {
-    right: 0;
+table {
+    width: 100%;
+    border-collapse: collapse;
 }
 
-.character {
-    position: absolute;
-    transform-origin: center;
-}
-
-.subtitle {
-    position: absolute;
-    bottom: 0;
-    left: calc((100% - min(95%, min(1920px, 90vh*(var(--r))))) / 2);
-    width: min(95%, min(1920px, 90vh*(var(--r))));
-    margin-bottom: 10px;
-    font-weight: bold;
-    font-size: 1.1rem;
+th, td {
+    padding: 0.2rem;
     text-align: center;
-    color: white;
-    opacity: 0;
-    
-    .peter-quote {
-        color: greenyellow;
-    }
-
-    .lois-quote {
-        color: plum;
-    }
-
-    .chris-quote {
-        color: tan;
-    }
-
-    .stewie-quote {
-        color: tomato;
-    }
-
-    .brian-quote {
-        color: rgb(from darkcyan 0 calc(g + 60) b);
-    }
-
-    .meg-quote {
-        color: rgb(from deeppink r 0 calc(b + 70));
-    }
+    text-wrap: nowrap;
 }
 
-a {
-    color: white;
-    text-decoration: none;
-    font-weight: bold;
-    position: absolute;
-    margin-bottom: 5px;
-    margin-left: 5px;
-    margin-right: 5px;
-    z-index: 100;
-    &:hover {
-        text-decoration: underline;
-    }
-    &#previous {
-        bottom: 0;
-        left: 0;
-    }
-    &#next {
-        bottom: 0;
-        right: 0;
-    }
+.description {
+    text-align: justify;
 }
 
-#content.bg-house {
-    background-image: url("../images/The_Griffin_House.webp");
+footer {
+    padding: 1rem;
+    text-align: center;
+    background-color: #b02d27;
+    color: white;
 }
