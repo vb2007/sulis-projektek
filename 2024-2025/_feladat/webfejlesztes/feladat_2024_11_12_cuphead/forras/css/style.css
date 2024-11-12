@@ -1,0 +1,21 @@
+.levels-button {
+    background-color: rgb(from #ffcf10 r calc(g - 50) calc(b - 50));
+}
+
+table {
+    table-layout: auto;
+}
+
+.hide-cell {
+    display: none;
+}
+
+@media screen and (min-width: 640px) {
+    table {
+        table-layout: fixed;
+        
+    }
+    .hide-cell {
+        display: table-cell;
+    }
+}
