@@ -196,8 +196,81 @@ tr img {
 }
 
 tr img:hover {
-    width: 110%;
+    transform: scale(1.1);
     transition: 0.2s;
+}
+
+tr:last-of-type {
+    border-width: 3px;
+    border-style: solid;
+    border-color: #2c2c2c;
+}
+
+article:last-of-type h2 {
+    padding: 40px;
+}
+
+article:last-of-type div {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+    height: 40px;
+}
+
+footer {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    text-align: center;
+}
+
+footer a {
+    text-decoration: none;
+    font-weight: bold;
+    color: #db1b26;
+}
+ 
+main > img:first-of-type {
+    position: absolute;
+    width: 10vw;
+    max-width: 110px;
+    animation-name: shoot;
+    animation-duration: 15s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+@keyframes shoot {
+    0% {
+        transform: translate(0, 0) rotateY(0) rotateZ(10deg);
+    }
+    19% {
+        transform: translate(90vw, 10vh) rotateY(0deg) rotateZ(10deg);
+    }
+    20% {
+        transform: translate(90vw, 10vh) rotateY(180deg) rotateZ(5deg);
+    }
+    39% {
+        transform: translate(22vw, 15vh) rotateY(180deg) rotateZ(5deg);
+    }
+    40% {
+        transform: translate(22vw, 15vh) rotateY(0deg) rotateZ(-10deg);
+    }
+    59% {
+        transform: translate(65vw, 4vh) rotateY(0deg) rotateZ(-10deg);
+    }
+    60% {
+        transform: translate(65vw, 4vh) rotateY(180deg) rotateZ(10deg);
+    }
+    79% {
+        transform: translate(15vw, 12vh) rotateY(180deg) rotateZ(10deg);
+    }
+    80% {
+        transform: translate(15vw, 12vh) rotateY(180deg) rotateZ(-15deg);
+    }
+    99% {
+        transform: translate(0, 0) rotateY(180deg) rotateZ(-15deg);
+    }
 }
 
 .hide-cell {
