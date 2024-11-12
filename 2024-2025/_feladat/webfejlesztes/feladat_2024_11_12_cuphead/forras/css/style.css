@@ -132,17 +132,72 @@ article:nth-of-type(3) h2 {
     text-decoration: none;
 }
 
-.levels-button:hover, .selected {
+.levels-button:hover, .levels-button:hover.selected {
     background-color: #2c2c2c;
     color: #ece8e7;
 }
 
-.selected {
+.levels-button.selected {
     flex-grow: 3;
+}
+
+.levels-data {
+    border-width: 0.5rem;
+    border-style: solid;
+    border-color: #2c2c2c;
 }
 
 table {
     table-layout: auto;
+    width: 100%;
+    text-align: center;
+    caption-side: bottom;
+    padding-top: 0.2rem;
+    padding-bottom: 0.2rem;
+    font-style: italic;
+    border-collapse: collapse;
+    border-width: 3px;
+    border-style: solid;
+    border-color: #2c2c2c;
+    overflow: hidden;
+}
+
+thead {
+    background-color: #2c2c2c;
+    color: #ece8e7;
+}
+
+td, th {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    padding: 0.2rem;
+}
+
+td:first-of-type {
+    font-weight: bold;
+}
+
+td:nth-of-type(3) {
+    font-style: italic;
+}
+
+tr:nth-child(odd) {
+    background-color: rgb(from #ffcf10 r g 150);
+}
+
+tr:nth-child(even) {
+    background-color: rgb(from #ffcf10 r g 100);
+}
+
+tr img {
+    width: 100%;
+    max-width: 150px;
+    transition: 0.2s;
+}
+
+tr img:hover {
+    width: 110%;
+    transition: 0.2s;
 }
 
 .hide-cell {
