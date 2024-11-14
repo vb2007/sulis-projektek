@@ -1,10 +1,20 @@
 -- 3. feladat
+SELECT *
+FROM `magyarorszag`
+ORDER BY `nepesseg` DESC;
 
 -- 4. feladat
+SELECT DISTINCT `tipus`
+FROM `magyarorszag`
+ORDER BY `tipus` ASC;
 
 -- 5. feladat
+SELECT COUNT(`id`) AS `varosok_szama`
+FROM `magyarorszag`;
 
 -- 6. feladat
+SELECT COUNT(DISTINCT `tipus`) AS `tipus_db`
+FROM `magyarorszag`;
 
 -- 7. feladat
 
