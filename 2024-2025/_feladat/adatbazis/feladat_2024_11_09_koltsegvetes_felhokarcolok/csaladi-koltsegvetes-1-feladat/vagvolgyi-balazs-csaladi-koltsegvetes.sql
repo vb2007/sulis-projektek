@@ -11,10 +11,16 @@ SELECT SUM(`egysegar`) AS `osszkoltseg`
 FROM `kiadasok`;
 
 -- 6. feladat
+SELECT COUNT(`mennyiseg`) AS `vett_mennyiseg`
+FROM `kiadasok`;
 
 -- 7. feladat
+SELECT SUM(`mennyiseg`) AS `termekek_szama`
+FROM `kiadasok`;
 
 -- 8. feladat
+-- SELECT DISTINCT COUNT(`megnevezes`) AS `kulonbozo_darab`
+-- FROM `kiadasok`;
 
 -- 9. feladat
 
