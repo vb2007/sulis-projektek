@@ -42,6 +42,9 @@ FROM `kiadasok`
 WHERE `nev` = "Bence";
 
 -- 13. feladat
+SELECT COUNT(*) AS `bence_db`
+FROM `kiadasok`
+WHERE `nev` = "Bence";
 
 -- 14. feladat
 
