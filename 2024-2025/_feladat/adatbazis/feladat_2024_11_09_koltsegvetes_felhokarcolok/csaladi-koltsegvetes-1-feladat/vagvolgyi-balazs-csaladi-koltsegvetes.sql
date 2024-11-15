@@ -1,8 +1,14 @@
 -- 3. feladat
+SELECT *
+FROM `KIADASOK`;
 
 -- 4. feladat
+SELECT DISTINCT `kategoria`
+FROM `kiadasok`;
 
 -- 5. feladat
+SELECT SUM(`egysegar`) AS `osszkoltseg`
+FROM `kiadasok`;
 
 -- 6. feladat
 
