@@ -19,8 +19,8 @@ SELECT SUM(`mennyiseg`) AS `termekek_szama`
 FROM `kiadasok`;
 
 -- 8. feladat
--- SELECT DISTINCT COUNT(`megnevezes`) AS `kulonbozo_darab`
--- FROM `kiadasok`;
+SELECT COUNT(DISTINCT `megnevezes`) AS `kulonbozo_darab`
+FROM `kiadasok`;
 
 -- 9. feladat
 
