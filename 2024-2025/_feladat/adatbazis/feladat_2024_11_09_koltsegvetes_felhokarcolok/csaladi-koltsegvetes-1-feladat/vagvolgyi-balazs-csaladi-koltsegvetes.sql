@@ -23,6 +23,8 @@ SELECT COUNT(DISTINCT `megnevezes`) AS `kulonbozo_darab`
 FROM `kiadasok`;
 
 -- 9. feladat
+SELECT AVG(`egysegar`) AS `atlagos_egysegar`
+FROM `kiadasok`;
 
 -- 10. feladat
 SELECT `egysegar` AS `legolcsobb`
