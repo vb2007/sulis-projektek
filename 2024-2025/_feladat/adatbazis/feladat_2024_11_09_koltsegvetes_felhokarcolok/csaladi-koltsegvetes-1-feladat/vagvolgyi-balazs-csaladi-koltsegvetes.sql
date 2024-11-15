@@ -37,6 +37,9 @@ ORDER BY `egysegar` DESC
 LIMIT 1;
 
 -- 12. feladat
+SELECT `megnevezes`
+FROM `kiadasok`
+WHERE `nev` = "Bence";
 
 -- 13. feladat
 
