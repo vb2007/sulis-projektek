@@ -25,6 +25,10 @@ FROM `kiadasok`;
 -- 9. feladat
 
 -- 10. feladat
+SELECT `egysegar` AS `legolcsobb`
+FROM `kiadasok`
+ORDER BY `egysegar` ASC
+LIMIT 1;
 
 -- 11. feladat
 
