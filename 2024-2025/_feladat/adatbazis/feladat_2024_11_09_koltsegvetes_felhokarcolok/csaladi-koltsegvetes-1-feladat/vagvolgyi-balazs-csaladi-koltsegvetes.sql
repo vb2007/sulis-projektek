@@ -53,9 +53,23 @@ WHERE `nev` = "Emese"
 ORDER BY `fizetett` ASC;
 
 -- 15. feladat
+SELECT SUM(`egysegar`) AS `koltott`
+FROM `kiadasok`
+WHERE `nev` = "Emese";
 
 -- 16. feladat
+SELECT `megnevezes`, `kategoria`, `egysegar` AS `koltes`
+FROM `kiadasok`
+ORDER BY `koltes` DESC;
 
 -- 17. feladat
+SELECT `nev`, `megnevezes`
+FROM `kiadasok`
+ORDER BY `egysegar` DESC
+LIMIT 5;
 
 -- 18. feladat
+SELECT `nev`, `megnevezes`, `egysegar`
+FROM `kiadasok`
+ORDER BY `egysegar` DESC
+LIMIT 1;
