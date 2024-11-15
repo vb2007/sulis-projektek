@@ -47,6 +47,10 @@ FROM `kiadasok`
 WHERE `nev` = "Bence";
 
 -- 14. feladat
+SELECT `megnevezes`, `egysegar` AS `fizetett`
+FROM `kiadasok`
+WHERE `nev` = "Emese"
+ORDER BY `fizetett` ASC;
 
 -- 15. feladat
 
