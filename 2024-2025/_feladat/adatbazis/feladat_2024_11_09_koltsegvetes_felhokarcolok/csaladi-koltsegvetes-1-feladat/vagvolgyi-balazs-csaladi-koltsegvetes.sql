@@ -31,6 +31,10 @@ ORDER BY `egysegar` ASC
 LIMIT 1;
 
 -- 11. feladat
+SELECT `egysegar` AS `legdragabb`
+FROM `kiadasok`
+ORDER BY `egysegar` DESC
+LIMIT 1;
 
 -- 12. feladat
 
