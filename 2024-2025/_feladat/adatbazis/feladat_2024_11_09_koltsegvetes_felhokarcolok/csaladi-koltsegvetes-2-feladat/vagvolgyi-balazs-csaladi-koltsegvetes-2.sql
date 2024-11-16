@@ -5,7 +5,7 @@ GROUP BY `kategoria`
 ORDER BY `db` ASC;
 
 -- 4. feladat
-SELECT `nev`, SUM(`egysegar`) AS `koltes`
+SELECT `nev`, SUM(`egysegar` * `mennyiseg`) AS `koltes`
 FROM `kiadasok`
 GROUP BY `nev`
 ORDER BY `koltes` DESC;
@@ -29,13 +29,13 @@ GROUP BY `kategoria`
 ORDER BY `minimum_ar` ASC;
 
 -- 8. feladat
-SELECT `kategoria`, ROUND(AVG(`egysegar`), 1) AS `koltes`
+SELECT `kategoria`, ROUND(AVG(`egysegar` * `mennyiseg`), 1) AS `koltes`
 FROM `kiadasok`
 GROUP BY `kategoria`
 ORDER BY `kategoria` ASC;
 
 -- 9. feladat
-SELECT `kategoria`, `egysegar` AS `koltes`
+SELECT `kategoria`, `egysegar` * `mennyiseg` AS `koltes`
 FROM `kiadasok`
 ORDER BY `koltes` DESC
 LIMIT 1;
@@ -55,7 +55,7 @@ GROUP BY `nap`, `kategoria`
 ORDER BY `mennyiseg` DESC;
 
 -- 12. feladat
-SELECT `nev`, `kategoria`, SUM(`egysegar`) AS `koltes`
+SELECT `nev`, `kategoria`, SUM(`egysegar` * `mennyiseg`) AS `koltes`
 FROM `kiadasok`
 GROUP BY `nev`, `kategoria`;
 
