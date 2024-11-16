@@ -106,6 +106,12 @@ GROUP BY `megye`
 ORDER BY `megye` ASC;
 
 -- 22. feladat
+SELECT `megye`, ROUND(AVG(`nepesseg`), 0) AS `lakossag`
+FROM `magyarorszag`
+GROUP BY `megye`
+ORDER BY
+    `lakossag` DESC,
+    `megye` ASC;
 
 -- 23. feladat
 
