@@ -100,6 +100,10 @@ FROM `magyarorszag`
 WHERE `varos_cim_elnyerese` BETWEEN 2000 AND 2012;
 
 -- 21. feladat
+SELECT `megye`, SUM(`nepesseg`) AS `lakossag`
+FROM `magyarorszag`
+GROUP BY `megye`
+ORDER BY `megye` ASC;
 
 -- 22. feladat
 
