@@ -29,10 +29,24 @@ GROUP BY `kategoria`
 ORDER BY `minimum_ar` ASC;
 
 -- 8. feladat
+SELECT `kategoria`, ROUND(AVG(`egysegar`), 1) AS `koltes`
+FROM `kiadasok`
+GROUP BY `kategoria`
+ORDER BY `kategoria` ASC;
 
 -- 9. feladat
+SELECT `kategoria`, `egysegar` AS `koltes`
+FROM `kiadasok`
+ORDER BY `koltes` DESC
+LIMIT 1;
 
 -- 10. feladat
+SELECT `nev`,
+    MIN(`egysegar`) AS `legolcsobb_koltes`,
+    MAX(`egysegar`) AS `legdragabb_koltes`
+FROM `kiadasok`
+GROUP BY `nev`
+ORDER BY `nev` DESC;
 
 -- 11. feladat
 
@@ -43,4 +57,3 @@ ORDER BY `minimum_ar` ASC;
 -- 14. feladat
 
 -- 15. feladat
-
