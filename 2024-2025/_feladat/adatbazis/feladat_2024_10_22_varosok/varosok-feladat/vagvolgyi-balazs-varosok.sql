@@ -90,6 +90,9 @@ ORDER BY `nepsurusseg` DESC
 LIMIT 1;
 
 -- 19. feladat
+SELECT SUM(`nepesseg`) AS `lakossag`
+FROM `magyarorszag`
+WHERE `tipus` = "járásszékhely város";
 
 -- 20. feladat
 
