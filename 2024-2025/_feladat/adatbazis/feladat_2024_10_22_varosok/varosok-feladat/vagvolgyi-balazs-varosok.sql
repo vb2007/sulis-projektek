@@ -45,6 +45,10 @@ ORDER BY `ev` DESC
 LIMIT 1;
 
 -- 12. feladat
+SELECT `megye`, MAX(`varos_cim_elnyerese`) AS `ev`
+FROM `magyarorszag`
+GROUP BY `megye`
+ORDER BY `ev` DESC;
 
 -- 13. feladat
 
