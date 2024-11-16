@@ -7,14 +7,18 @@ ORDER BY `db` ASC;
 -- 4. feladat
 SELECT `nev`, SUM(`egysegar`) AS `koltes`
 FROM `kiadasok`
-GROUP BY `kategoria`
+GROUP BY `nev`
 ORDER BY `koltes` DESC;
 
 -- 5. feladat
+SELECT `nev`, SUM(`mennyiseg`) AS `db`
+FROM `kiadasok`
+GROUP BY `nev`
+ORDER BY `nev` DESC;
 
 -- 6. feladat
 SELECT `nev`, `kategoria`, SUM(`mennyiseg`) AS `db`
-FROM `koltsegvetes`
+FROM `kiadasok`
 GROUP BY `nev`, `kategoria`
 ORDER BY `nev` DESC;
 
