@@ -95,6 +95,9 @@ FROM `magyarorszag`
 WHERE `tipus` = "járásszékhely város";
 
 -- 20. feladat
+SELECT ROUND(SUM(`terulet`), 2) AS `osszterulet`
+FROM `magyarorszag`
+WHERE `varos_cim_elnyerese` BETWEEN 2000 AND 2012;
 
 -- 21. feladat
 
