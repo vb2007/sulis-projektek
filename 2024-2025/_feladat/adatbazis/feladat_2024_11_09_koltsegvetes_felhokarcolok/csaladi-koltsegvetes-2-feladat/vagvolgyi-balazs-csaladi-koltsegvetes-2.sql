@@ -23,6 +23,10 @@ GROUP BY `nev`, `kategoria`
 ORDER BY `nev` DESC;
 
 -- 7. feladat
+SELECT `kategoria`, MIN(`egysegar`) AS `minimum_ar`
+FROM `kiadasok`
+GROUP BY `kategoria`
+ORDER BY `minimum_ar` ASC;
 
 -- 8. feladat
 
