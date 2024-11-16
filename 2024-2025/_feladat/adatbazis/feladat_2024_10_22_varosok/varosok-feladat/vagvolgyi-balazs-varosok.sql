@@ -51,6 +51,12 @@ GROUP BY `megye`
 ORDER BY `ev` DESC;
 
 -- 13. feladat
+SELECT `nepesseg` AS `minimum_lakossag`
+FROM `magyarorszag`
+WHERE `tipus` = "város"
+GROUP BY `nev`
+ORDER BY `minimum_lakossag` ASC
+LIMIT 1;
 
 -- 14. feladat
 
