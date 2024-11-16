@@ -53,20 +53,41 @@ ORDER BY `ev` DESC;
 -- 13. feladat
 SELECT `nepesseg` AS `minimum_lakossag`
 FROM `magyarorszag`
-WHERE `tipus` = "város"
-GROUP BY `nev`
+-- WHERE `tipus` = "város"
 ORDER BY `minimum_lakossag` ASC
 LIMIT 1;
 
 -- 14. feladat
+SELECT `nepesseg` AS `maximum_lakossag`
+FROM `magyarorszag`
+-- WHERE `tipus` = "város" -- mivel: "Hányan laknak a legnagyobb népességű városban?"
+ORDER BY `maximum_lakossag` DESC
+LIMIT 1;
 
 -- 15. feladat
+SELECT `terulet` AS `maximum_terulet`
+FROM `magyarorszag`
+ORDER BY `maximum_terulet` DESC
+LIMIT 1;
 
 -- 16. feladat
+SELECT `nev`, `terulet`
+FROM `magyarorszag`
+ORDER BY `terulet` DESC
+LIMIT 3;
 
 -- 17. feladat
+SELECT `nev`, `terulet`
+FROM `magyarorszag`
+WHERE `megye` = "Somogy"
+ORDER BY `terulet` DESC
+LIMIT 3;
 
 -- 18. feladat
+SELECT `nev`, ROUND(`nepesseg` / `terulet`, 4) AS `nepsurusseg`
+FROM `magyarorszag`
+ORDER BY `nepsurusseg` DESC
+LIMIT 1;
 
 -- 19. feladat
 
