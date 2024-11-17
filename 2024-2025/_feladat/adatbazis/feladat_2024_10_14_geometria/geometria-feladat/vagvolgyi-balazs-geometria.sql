@@ -95,7 +95,6 @@ WHERE `szin` IN ("piros", "kék");
 -- 19. feladat
 SELECT
     `szin`,
-    `r`,
     CONCAT(ROUND((PI() * POWER(`r` * 10, 2)), 3), " mm") AS `terulet`
 FROM `korok`
 WHERE `szin` IN ("piros", "kék", "sárga")
