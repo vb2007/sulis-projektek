@@ -114,7 +114,20 @@ ORDER BY
     `megye` ASC;
 
 -- 23. feladat
+SELECT `jaras`, ROUND(AVG(`terulet`), 2) AS `atlag_terulet`
+FROM `magyarorszag`
+GROUP BY `jaras`
+ORDER BY `atlag_terulet` ASC;
 
 -- 24. feladat
+SELECT `nev`, CONCAT(`nepesseg`, " fő") AS `lakossag`
+FROM `magyarorszag`
+WHERE `tipus` = "megyei jogú város"
+ORDER BY CONCAT(`nepesseg`, " fő") DESC
+LIMIT 1;
 
 -- 25. feladat
+SELECT `jaras`, CONCAT(ROUND(AVG(`terulet`), 0), " négyzetméter") AS `terulet`
+FROM `magyarorszag`
+GROUP BY `jaras`
+ORDER BY ROUND(AVG(`terulet`), 0) DESC;
