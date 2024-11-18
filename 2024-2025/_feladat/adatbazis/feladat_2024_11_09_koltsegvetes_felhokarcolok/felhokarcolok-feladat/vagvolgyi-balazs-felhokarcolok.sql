@@ -79,6 +79,10 @@ GROUP BY `orszagkod`
 ORDER BY `db` DESC;
 
 -- 17. feladat
+SELECT `felhasznalas`, AVG(`emeletek`) AS `emeletek_atlagos_szama`
+FROM `felhokarcolok`
+GROUP BY `felhasznalas`
+ORDER BY `emeletek_atlagos_szama` ASC;
 
 -- 18. feladat
 
