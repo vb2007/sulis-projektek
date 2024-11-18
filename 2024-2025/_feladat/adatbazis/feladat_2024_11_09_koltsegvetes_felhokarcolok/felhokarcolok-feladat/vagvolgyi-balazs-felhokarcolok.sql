@@ -58,8 +58,14 @@ WHERE (`anyag` = "acél"
 ORDER BY `orszagkod`;
 
 -- 13. feladat
+SELECT MAX(`emeletek`) AS `legtobb_emelet`
+FROM `felhokarcolok`;
 
 -- 14. feladat
+SELECT
+    MIN(`befejezes_eve`) AS `elso`,
+    MAX(`befejezes_eve`) AS `utolso`
+FROM `felhokarcolok`;
 
 -- 15. feladat
 
