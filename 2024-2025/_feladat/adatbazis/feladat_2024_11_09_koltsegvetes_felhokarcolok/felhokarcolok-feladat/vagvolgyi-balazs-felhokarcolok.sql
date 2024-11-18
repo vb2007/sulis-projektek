@@ -68,8 +68,15 @@ SELECT
 FROM `felhokarcolok`;
 
 -- 15. feladat
+SELECT SUM(`magassag`) AS `ossz_magassag`
+FROM `felhokarcolok`
+WHERE `varos` = "Hong Kong";
 
 -- 16. feladat
+SELECT `orszagkod`, COUNT(*) AS `db`
+FROM `felhokarcolok`
+GROUP BY `orszagkod`
+ORDER BY `db` DESC;
 
 -- 17. feladat
 
