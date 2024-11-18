@@ -85,6 +85,10 @@ GROUP BY `felhasznalas`
 ORDER BY `emeletek_atlagos_szama` ASC;
 
 -- 18. feladat
+SELECT `orszagkod`, ROUND(AVG(2022 - `befejezes_eve`), 1) AS `atlag_kor`
+FROM `felhokarcolok`
+GROUP BY `orszagkod`
+ORDER BY `atlag_kor` ASC;
 
 -- 19. feladat
 
