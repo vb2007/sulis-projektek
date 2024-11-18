@@ -1,8 +1,17 @@
 -- 3. feladat
+SELECT *
+FROM `felhokarcolok`
+ORDER BY `magassag` DESC;
 
 -- 4. feladat
+SELECT *
+FROM `felhokarcolok`
+WHERE `varos` = "Chicago";
 
 -- 5. feladat
+SELECT `nev`, `emeletek`
+FROM `felhokarcolok`
+WHERE `felhasznalas` LIKE "%lakóépület%";
 
 -- 6. feladat
 
