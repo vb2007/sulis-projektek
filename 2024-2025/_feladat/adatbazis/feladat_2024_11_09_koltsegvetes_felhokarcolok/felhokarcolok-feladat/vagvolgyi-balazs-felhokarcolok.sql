@@ -91,6 +91,12 @@ GROUP BY `orszagkod`
 ORDER BY `atlag_kor` ASC;
 
 -- 19. feladat
+SELECT `anyag`, COUNT(*) AS `db`
+FROM `felhokarcolok`
+WHERE `befejezes_eve` BETWEEN 1900 AND 1999
+    AND `anyag` IS NOT NULL 
+GROUP BY `anyag`
+ORDER BY `anyag` DESC;
 
 -- 20. feladat
 
