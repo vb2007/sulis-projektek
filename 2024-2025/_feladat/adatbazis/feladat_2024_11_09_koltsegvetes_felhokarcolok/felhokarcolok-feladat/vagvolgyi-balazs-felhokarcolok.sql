@@ -23,8 +23,14 @@ SELECT COUNT(*) AS `db`
 FROM `felhokarcolok`;
 
 -- 8. feladat
+SELECT COUNT(*) AS `db`
+FROM `felhokarcolok`
+WHERE `orszagkod` = "US";
 
 -- 9. feladat
+SELECT COUNT(*) AS `db`
+FROM `felhokarcolok`
+WHERE `befejezes_eve` BETWEEN 1997 AND 2005;
 
 -- 10. feladat
 
