@@ -119,3 +119,7 @@ ORDER BY
     `atlag_magassag` ASC;
 
 -- 23. feladat
+SELECT `varos`, MAX(`magassag`) - MIN(`magassag`) AS `kulonbseg`
+FROM `felhokarcolok`
+GROUP BY `varos`
+ORDER BY `kulonbseg` DESC;
