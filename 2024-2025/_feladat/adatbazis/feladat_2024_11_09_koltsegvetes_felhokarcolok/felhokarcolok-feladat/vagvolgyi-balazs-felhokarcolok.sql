@@ -111,5 +111,11 @@ FROM `felhokarcolok`
 ORDER BY `egy_emelet_cm` DESC;
 
 -- 22. feladat
+SELECT `orszagkod`, `varos`, COUNT(*) AS `db`, ROUND(AVG(`magassag`), 2) AS `atlag_magassag`
+FROM `felhokarcolok`
+GROUP BY `orszagkod`, `varos`
+ORDER BY
+    `db` DESC,
+    `atlag_magassag` ASC;
 
 -- 23. feladat
