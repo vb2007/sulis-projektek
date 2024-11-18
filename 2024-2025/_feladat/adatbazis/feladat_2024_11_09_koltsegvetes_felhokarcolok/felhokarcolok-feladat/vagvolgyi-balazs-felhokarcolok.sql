@@ -106,6 +106,9 @@ ORDER BY AVG(`magassag`) DESC
 LIMIT 1;
 
 -- 21. feladat
+SELECT `nev`, `magassag`, `emeletek`, `magassag` / `emeletek` AS `egy_emelet_cm`
+FROM `felhokarcolok`
+ORDER BY `egy_emelet_cm` DESC;
 
 -- 22. feladat
 
