@@ -44,6 +44,18 @@ ORDER BY `magassag` DESC
 LIMIT 3;
 
 -- 12. feladat
+SELECT
+    `nev`,
+    `orszagkod`,
+    COALESCE(`varos`, "Ismeretlen") AS `varos_neve`,
+    `befejezes_eve`,
+    `anyag`
+FROM `felhokarcolok`
+WHERE (`anyag` = "acél"
+    OR `anyag` = "kompozit")
+    AND `orszagkod` IN ("CN", "RU", "MY")
+    AND `befejezes_eve` BETWEEN 1990 AND 1999
+ORDER BY `orszagkod`;
 
 -- 13. feladat
 
