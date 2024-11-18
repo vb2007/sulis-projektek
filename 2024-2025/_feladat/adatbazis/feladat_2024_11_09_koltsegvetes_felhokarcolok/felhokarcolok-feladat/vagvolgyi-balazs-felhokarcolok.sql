@@ -33,8 +33,15 @@ FROM `felhokarcolok`
 WHERE `befejezes_eve` BETWEEN 1997 AND 2005;
 
 -- 10. feladat
+SELECT ROUND(AVG(`emeletek`), 0) AS `atlagos_emelet`
+FROM `felhokarcolok`
+WHERE `nev` LIKE "%Tower%";
 
 -- 11. feladat
+SELECT `nev`, CONCAT(ROUND(`magassag`, 0), " m") AS `magassag_meterben`
+FROM `felhokarcolok`
+ORDER BY `magassag` DESC
+LIMIT 3;
 
 -- 12. feladat
 
