@@ -99,6 +99,11 @@ GROUP BY `anyag`
 ORDER BY `anyag` DESC;
 
 -- 20. feladat
+SELECT `varos`
+FROM `felhokarcolok`
+GROUP BY `varos`
+ORDER BY AVG(`magassag`) DESC
+LIMIT 1;
 
 -- 21. feladat
 
