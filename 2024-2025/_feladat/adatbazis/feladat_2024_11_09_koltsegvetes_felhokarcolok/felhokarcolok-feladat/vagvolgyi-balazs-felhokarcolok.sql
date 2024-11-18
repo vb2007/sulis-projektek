@@ -14,8 +14,13 @@ FROM `felhokarcolok`
 WHERE `felhasznalas` LIKE "%lakóépület%";
 
 -- 6. feladat
+SELECT `nev`
+FROM `felhokarcolok`
+WHERE `nev` LIKE "_1%";
 
 -- 7. feladat
+SELECT COUNT(*) AS `db`
+FROM `felhokarcolok`;
 
 -- 8. feladat
 
