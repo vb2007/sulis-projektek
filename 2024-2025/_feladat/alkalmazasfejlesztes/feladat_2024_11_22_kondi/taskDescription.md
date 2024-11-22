@@ -1,3 +1,5 @@
+# Kondi feladat
+
 A kondi.txt állományban rögzítettük a konditerembe járó sportolók néhány adatát: nevét, súlyát és magasságát, pontosvesszővel elválasztva.
 Olvassuk be az állomány adatait!
 
