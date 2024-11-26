@@ -5,3 +5,34 @@
     --accent-blue: #4a90e2;
     --text-color: #e0e0e0;
 }
+
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    transition: 0.3s ease-in-out;
+}
+
+body {
+    background-color: var(--dark-blue);
+    color: var(--text-color);
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: auto auto 1fr auto;
+    gap: 20px;
+    padding: 20px;
+    min-height: 100vh;
+}
+
+header {
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    justify-content: center;
+    align-content: center;
+    gap: 20px;
+}
