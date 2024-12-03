@@ -73,6 +73,10 @@ header div {
     gap: 5px;
 }
 
+.timetable > div div {
+    font-size: 1.6rem;
+}
+
 .tram2 {
     background-color: var(--tram2-color);
     color: var(--dark-text);
