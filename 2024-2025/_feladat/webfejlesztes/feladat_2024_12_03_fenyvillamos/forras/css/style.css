@@ -42,6 +42,25 @@ body {
     "wishes wishes lines";
 }
 
+header {
+    background-color: var(--bkk-color);
+    color: var(--light-text);
+    display: flex;
+    gap: 1rem;
+    padding: 1rem;
+}
+
+header img {
+    width: 100px;
+    height: auto;
+}
+
+header div {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
 .tram2 {
     background-color: var(--tram2-color);
     color: var(--dark-text);
