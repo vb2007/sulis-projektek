@@ -77,6 +77,14 @@ header div {
     font-size: 1.6rem;
 }
 
+.hun {
+    font-weight: bold;
+}
+
+.eng {
+    font-style: italic;
+}
+
 .tram2 {
     background-color: var(--tram2-color);
     color: var(--dark-text);
