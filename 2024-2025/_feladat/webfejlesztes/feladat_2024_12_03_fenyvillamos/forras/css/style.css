@@ -61,6 +61,18 @@ header div {
     gap: 1rem;
 }
 
+.timetable {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.timetable > div {
+    display: grid;
+    grid-template-columns: repeat(7, minmax(75px, 1fr));
+    gap: 5px;
+}
+
 .tram2 {
     background-color: var(--tram2-color);
     color: var(--dark-text);
