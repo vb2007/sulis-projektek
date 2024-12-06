@@ -1,0 +1,33 @@
+Alpesi karamell;4300
+Citrom;3700
+Csokoládé mousse;4500
+Danubius;3700
+Dió;4500
+Dobos;4500
+Eszterházy;4300
+Feketeerdő;4500
+Ferrero;5500
+Legényfogó torta;4100
+Lúdláb;4500
+Mákos guba;4500
+Málnás mascarpone;4800
+Marcipános csokoládé;5500
+Nándori;5500
+Pisztáciás málnás mascarpone;5500
+Oreo;5500
+Oroszkrém;4100
+Palermo;3700
+Puncs;3700
+Rákóczi túrós;3700
+Rigó Jancsi;3700
+Sacher;4100
+Sajttorta;5000
+Somlói;5200
+Sós karamella;4500
+Szedres csokoládé;4500
+Tejszínes gyümölcsös;4100
+Tiramisu;5000
+Trüffel;5100
+Túrókrém gyümölccsel;3700
+Vintage;5500
+Zalavári gesztenye;5000
