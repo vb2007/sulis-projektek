@@ -157,7 +157,11 @@ int[] evenSnaks = SortEvenSnacks();
 Console.WriteLine("Páros snackek: ");
 for (int i = 0; i < evenSnaks.Length; i++)
 {
-    Console.WriteLine(evenSnaks[i]);
+    if (evenSnaks[i] == 0)
+    {
+        break;
+    }
+    Console.WriteLine(evenSnaks[i]); 
 }
 
 //10. Feladat
@@ -203,5 +207,22 @@ void SortSnacksByDivisibility()
 
 SortSnacksByDivisibility();
 
-Console.WriteLine($"3-mal osztható snackek: {divisibleBy3}");
-Console.WriteLine($"3-mal nem osztható snackek: {notDivisibleBy3}");
+Console.WriteLine("3-mal osztható snackek: ");
+for (int i = 0; i < size; i++)
+{
+    if (divisibleBy3[i] == 0)
+    {
+        break;
+    }
+    Console.WriteLine(divisibleBy3[i]);
+}
+
+Console.WriteLine("3-mal nem osztható snackek: ");
+for (int i = 0; i < size; i++)
+{
+    if (notDivisibleBy3[i] == 0)
+    {
+        break;
+    }
+    Console.WriteLine(notDivisibleBy3[i]);
+}
