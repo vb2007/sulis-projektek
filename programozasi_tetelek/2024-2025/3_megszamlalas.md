@@ -3,11 +3,17 @@
 ## Leíró nyelven
 
 db := 0
+
 Ciklus i := 0-tól n-1-ig
+
 &emsp;Ha (T(v[i]))
+
 &emsp;&emsp;akkor
+
 &emsp;&emsp;&emsp;db:=db+1
+
 &emsp;Elágazás vége
+
 Ciklus vége
 
 ## Példa kód (C#)

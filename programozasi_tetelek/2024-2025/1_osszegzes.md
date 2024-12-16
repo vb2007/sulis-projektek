@@ -3,8 +3,11 @@
 ## Leíró nyelven
 
 ossz := 0
+
 Ciklus i := 0-tól n-1-ig
+
 &emsp;ossz := ossz + v[i]
+
 Ciklus vége
 
 ## Példa kód (C#)
