@@ -2,11 +2,11 @@
 
 ## Leíró nyelven
 
-i:=0
-Ciklus amíg nem T(v[i])
-&emsp;i:=i+1
-Ciklus vége
-sorsz:=i
+i:=0<br>
+Ciklus amíg nem T(v[i])<br>
+&emsp;i:=i+1<br>
+Ciklus vége<br>
+sorsz:=i<br>
 
 ## Példa kód (C#)
 

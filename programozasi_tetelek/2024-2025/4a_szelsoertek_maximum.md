@@ -2,15 +2,15 @@
 
 ## Leíró nyelven
 
-maxert := v[0]
-maxind := 0
-Ciklus i := 1-től n-1-ig
-&emsp;Ha (v[i] > maxert)
-&emsp;&emsp;akkor
-&emsp;&emsp;&emsp;maxert:=v[i]
-&emsp;&emsp;&emsp;maxind:=i
-&emsp;Elágazás vége
-Ciklus vége
+maxert := v[0]<br>
+maxind := 0<br>
+Ciklus i := 1-től n-1-ig<br>
+&emsp;Ha (v[i] > maxert)<br>
+&emsp;&emsp;akkor<br>
+&emsp;&emsp;&emsp;maxert:=v[i]<br>
+&emsp;&emsp;&emsp;maxind:=i<br>
+&emsp;Elágazás vége<br>
+Ciklus vége<br>
 
 ## Példa kód (C#)
 

@@ -2,11 +2,11 @@
 
 ## Leíró nyelven
 
-atl := 0
-Ciklus i := 0-tól n-1-ig
-&emsp;atl := atl + v[i]
-Ciklus vége
-atl:=atl
+atl := 0<br>
+Ciklus i := 0-tól n-1-ig<br>
+&emsp;atl := atl + v[i]<br>
+Ciklus vége<br>
+atl:=atl<br>
 
 ## Példa kód (C#)
 

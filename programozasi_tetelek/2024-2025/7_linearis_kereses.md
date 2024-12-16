@@ -2,17 +2,17 @@
 
 ## Leíró nyelven
 
-i:=-1
-sorsz:=-1
-van:=hamis
-Ciklus amíg (van és i<n-1)
-&emsp;i:=i+1
-&emsp;Ha (T(v[i]))
-&emsp;&emsp;akkor
-&emsp;&emsp;&emsp;van:=igaz
-&emsp;&emsp;&emsp;sorsz:=i
-&emsp;&emsp;Elágazás vége
-Ciklus vége
+i:=-1<br>
+sorsz:=-1<br>
+van:=hamis<br>
+Ciklus amíg (-van és i<n-1)<br>
+&emsp;i:=i+1<br>
+&emsp;Ha (T(v[i]))<br>
+&emsp;&emsp;akkor<br>
+&emsp;&emsp;&emsp;van:=igaz<br>
+&emsp;&emsp;&emsp;sorsz:=i<br>
+&emsp;&emsp;Elágazás vége<br>
+Ciklus vége<br>
 
 ## Példa kód (C#)
 
