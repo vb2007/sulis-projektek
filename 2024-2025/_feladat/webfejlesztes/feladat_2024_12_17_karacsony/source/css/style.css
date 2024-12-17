@@ -143,6 +143,29 @@ header h1, header h2 {
     background-image: url("../images/cupcake.png");
 }
 
+.gift {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 20px;
+}
+
+.gift > img {
+    display: flex;
+    width: 150px;
+    height: auto;
+    align-self: flex-end;
+}
+.gift > span {
+    display: flex;
+    align-self: center;
+    margin-right: 10px;
+    background-color: #d6001c;
+    padding: 5px;
+    color: #fff7ed;
+    font-variant: small-caps;
+    font-weight: bold;
+}
+
 footer {
     display: flex;
     flex-direction: column;
