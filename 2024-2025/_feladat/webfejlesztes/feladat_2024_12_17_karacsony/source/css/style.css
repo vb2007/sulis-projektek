@@ -72,6 +72,7 @@ header h1, header h2 {
 }
 
 .sweet-box {
+    position: relative;
     flex: 0 1 250px;
     border: 1px solid #ddd;
     border-radius: 8px;
@@ -81,21 +82,37 @@ header h1, header h2 {
     background-position: center;
     background-repeat: no-repeat;
     background-size: 500px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
 }
 
 .sweet-content {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 20px;
+    background-color: #fff7ed;
+    gap: 10px;
+    padding: 10px;
+    width: 100%;
+    border-radius: 4px;
+}
+
+.sweet-content p {
+    color: black;
+    font-weight: bold;
+    font-size: 1.1rem;
+    margin: 0;
 }
 
 .sweet-content a {
     text-decoration: none;
-    color: #007bff;
-    padding: 5px 10px;
-    border: 1px solid #007bff;
+    background-color: #d6001c;
+    color: #fff7ed;
+    padding: 5px 15px;
     border-radius: 4px;
+    display: inline-block;
+    margin-bottom: 5px;
 }
 
 .sweet-content a:hover {
