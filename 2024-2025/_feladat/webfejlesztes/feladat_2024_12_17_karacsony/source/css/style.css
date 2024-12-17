@@ -143,6 +143,30 @@ header h1, header h2 {
     background-image: url("../images/cupcake.png");
 }
 
+/* .overlap-images {
+    position: relative;
+    width: 50%;
+    height: auto;
+    margin: 2rem 0;
+}
+
+.overlap-images img {
+    width: 100%;
+    display: block;
+    height: auto;
+}
+
+.overlap-images img:first-child {
+    position: relative;
+    z-index: 1;
+}
+
+.overlap-images img:last-child {
+    position: relative;
+    margin-top: -50px;
+    z-index: 2;
+} */
+
 .gift {
     display: flex;
     justify-content: flex-end;
@@ -155,6 +179,7 @@ header h1, header h2 {
     height: auto;
     align-self: flex-end;
 }
+
 .gift > span {
     display: flex;
     align-self: center;
