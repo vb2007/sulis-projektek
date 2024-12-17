@@ -31,3 +31,51 @@ nav li {
     font-weight: bold;
     font-size: 1.4rem;
 }
+
+header, main {
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    background-image: url("../images/presents.png");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 400px;
+    width: auto;
+    padding-bottom: 10px;
+}
+
+header h1, header h2 {
+    color: #fff7ed;
+    text-align: center;
+    text-shadow: 2px 1px 10px black;
+    font-size: 220%;
+    font-variant: small-caps;
+}
+
+footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #fff7ed;
+    background-color: #d6001c;
+    text-align: center;
+    height: 60px;
+    width: 100%;
+    bottom: 0px;
+}
+
+footer p {
+    display: flex;
+    flex-direction: row;
+    gap: 25rem;
+    margin: 0;
+    align-items: center;
+}
