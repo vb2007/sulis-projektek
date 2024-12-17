@@ -60,6 +60,13 @@ header h1, header h2 {
     font-variant: small-caps;
 }
 
+.section-header {
+    font-variant: small-caps;
+    color: black;
+    font-weight: 700;
+    font-size: 25px;
+}
+
 .sweets-section {
     padding: 20px;
 }
