@@ -1,0 +1,33 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #fff7ed;
+    margin: 0;
+    padding: 0;
+}
+
+nav {
+    color: #fff7ed;
+    background-color: #d6001c;
+    background-image: url("../images/snowflakes.png");
+    background-repeat: repeat-x;
+    background-size: 100%;
+    padding: 1rem;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+nav li {
+    cursor: pointer;
+}
+
+#nav--title {
+    font-weight: bold;
+    font-size: 1.4rem;
+}
