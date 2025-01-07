@@ -1,3 +1,4 @@
+"use strict"
 //2. Feladat
 console.log("Hello world")
 
@@ -19,7 +20,7 @@ let a = 10
 let b = "10"
 
 console.log("A két változó értéke " + a == b ? "egyezik" : "nem egyezik")
-console.log("A két változó értéke és típusa " + a == b ? "egyezik" : "nem egyezik")
+console.log("A két változó értéke és típusa " + a === b ? "egyezik" : "nem egyezik")
 
 //7. Feladat
 console.log(a + b)
