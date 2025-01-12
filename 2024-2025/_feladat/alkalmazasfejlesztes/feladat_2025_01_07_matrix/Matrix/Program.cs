@@ -154,4 +154,138 @@ for (int i = 0; i < sorokSzama6; i++)
 #endregion
 
 #region 7. Feladat
+Console.WriteLine();
+Console.Write("Add meg a sorok számát: ");
+int sorokSzama7 = int.Parse(Console.ReadLine()!);
+Console.Write("Add meg az oszlopok számát: ");
+int oszlopokSzama7 = int.Parse(Console.ReadLine()!);
+
+int[,] matrix7 = new int[sorokSzama7, oszlopokSzama7];
+
+for (int i = 0; i < sorokSzama7; i++)
+{
+    for (int j = 0; j < oszlopokSzama7; j++)
+    {
+        matrix7[i, j] = rnd.Next(0, 101);
+    }
+}
+
+//a)
+Console.WriteLine("A mátrix elemei:");
+for (int i = 0; i < sorokSzama7; i++)
+{
+    for (int j = 0; j < oszlopokSzama7; j++)
+    {
+        Console.Write($"{matrix7[i, j],3} ");
+    }
+    Console.WriteLine();
+}
+
+//b)
+Console.WriteLine("A főátló elemei:");
+for (int i = 0; i < sorokSzama7; i++)
+{
+    for (int j = 0; j < oszlopokSzama7; j++)
+    {
+        if (i == j)
+        {
+            Console.Write($"{matrix7[i, j],3} ");
+        }
+        else
+        {
+            Console.Write("    ");
+        }
+    }
+    Console.WriteLine();
+}
+
+//c)
+Console.WriteLine("A mellékátló elemei:");
+for (int i = 0; i < sorokSzama7; i++)
+{
+    for (int j = 0; j < oszlopokSzama7; j++)
+    {
+        if (i + j == oszlopokSzama7 - 1)
+        {
+            Console.Write($"{matrix7[i, j],3} ");
+        }
+        else
+        {
+            Console.Write("    ");
+        }
+    }
+    Console.WriteLine();
+}
+
+//d)
+Console.WriteLine("A főátló feletti háromszög elemei:");
+for (int i = 0; i < sorokSzama7; i++)
+{
+    for (int j = 0; j < oszlopokSzama7; j++)
+    {
+        if (i < j)
+        {
+            Console.Write($"{matrix7[i, j],3} ");
+        }
+        else
+        {
+            Console.Write("    ");
+        }
+    }
+    Console.WriteLine();
+}
+
+//e)
+Console.WriteLine("A főátló alatti háromszög elemei:");
+for (int i = 0; i < sorokSzama7; i++)
+{
+    for (int j = 0; j < oszlopokSzama7; j++)
+    {
+        if (i > j)
+        {
+            Console.Write($"{matrix7[i, j],3} ");
+        }
+        else
+        {
+            Console.Write("    ");
+        }
+    }
+    Console.WriteLine();
+}
+
+//f)
+Console.WriteLine("A mellékátló feletti háromszög elemei:");
+for (int i = 0; i < sorokSzama7; i++)
+{
+    for (int j = 0; j < oszlopokSzama7; j++)
+    {
+        if (i + j < oszlopokSzama7 - 1)
+        {
+            Console.Write($"{matrix7[i, j],3} ");
+        }
+        else
+        {
+            Console.Write("    ");
+        }
+    }
+    Console.WriteLine();
+}
+
+//g)
+Console.WriteLine("A mellékátló alatti háromszög elemei:");
+for (int i = 0; i < sorokSzama7; i++)
+{
+    for (int j = 0; j < oszlopokSzama7; j++)
+    {
+        if (i + j > oszlopokSzama7 - 1)
+        {
+            Console.Write($"{matrix7[i, j],3} ");
+        }
+        else
+        {
+            Console.Write("    ");
+        }
+    }
+    Console.WriteLine();
+}
 #endregion
