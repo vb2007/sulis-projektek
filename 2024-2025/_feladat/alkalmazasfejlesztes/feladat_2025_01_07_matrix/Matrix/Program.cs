@@ -126,5 +126,32 @@ for (int i = 0; i < sorokSzama5; i++)
 #endregion
 
 #region 6. Feladat
+Console.WriteLine();
+Console.Write("Add meg a sorok számát: ");
+int sorokSzama6 = int.Parse(Console.ReadLine()!);
+Console.Write("Add meg az oszlopok számát: ");
+int oszlopokSzama6 = int.Parse(Console.ReadLine()!);
 
+int[,] matrix6 = new int[sorokSzama6, oszlopokSzama6];
+
+int matrix6index = 0;
+for (int i = 0; i < sorokSzama6; i++)
+{
+    for (int j = 0; j < oszlopokSzama6; j++)
+    {
+        matrix6[i, j] = matrix6index++;
+    }
+}
+
+for (int i = 0; i < sorokSzama6; i++)
+{
+    for (int j = 0; j < oszlopokSzama6; j++)
+    {
+        Console.Write($"{matrix6[i, j],3} ");
+    }
+    Console.WriteLine();
+}
+#endregion
+
+#region 7. Feladat
 #endregion
