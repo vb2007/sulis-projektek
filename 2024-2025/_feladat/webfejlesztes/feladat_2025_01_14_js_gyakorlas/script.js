@@ -103,3 +103,37 @@ function parosParatlan(tomb = []) {
 parosParatlan(tomb)
 
 //6. Feladat
+function hatvanyozas(tomb = []) {
+    let hatvany = [];
+
+    for (let i = 0; i < tomb.length; i++) {
+        hatvany.push(Math.pow(tomb[i], 2));
+    }
+
+    return hatvany;
+}
+
+console.log(`Számok hatványai: ${hatvanyozas(tomb)}`)
+
+//7. Feladat
+function kategorizalas(tomb = []) {
+    let alacsony = [];
+    let kozepes = [];
+    let magas = [];
+
+    for (let i = 0; i < tomb.length; i++) {
+        if (tomb[i] < 30) {
+            alacsony.push(tomb[i]);
+        } else if (tomb[i] >= 30 && tomb[i] <= 69) {
+            kozepes.push(tomb[i]);
+        } else {
+            magas.push(tomb[i]);
+        }
+    }
+
+    console.log(`Alacsony számok: ${alacsony}`);
+    console.log(`Közepes számok: ${kozepes}`);
+    console.log(`Magas számok: ${magas}`);
+}
+
+kategorizalas(tomb);
