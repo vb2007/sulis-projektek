@@ -28,10 +28,13 @@ function negyzetGyokok(tomb = []) {
 console.log(negyzetGyokok(tomb));
 
 //3. Feladat
-function getMinMax(tomb = [], tipus) {
+
+//prog tétellel:
+function getMinMax1(tomb = [], tipus) {
     let value;
     switch (tipus) {
         case "max":
+            value = Number.NEGATIVE_INFINITY;
             for (let i = 0; i < tomb.length; i++) {
                 if (tomb[i] > value) {
                     value = tomb[i];
@@ -39,6 +42,7 @@ function getMinMax(tomb = [], tipus) {
             }
             return `Legnagyobb szám: ${value}`;
         case "min":
+            value = Number.POSITIVE_INFINITY;
             for (let i = 0; i < tomb.length; i++) {
                 if (tomb[i] < value) {
                     value = tomb[i];
@@ -51,4 +55,51 @@ function getMinMax(tomb = [], tipus) {
     }
 }
 
+//min, max függvényekkel:
+function getMinMax2(numbers, tipus) {
+    if (tipus === "min") {
+        return Math.min(...numbers);
+    } else if (tipus === "max") {
+        return Math.max(...numbers);
+    } else {
+        console.error("Hibás típus paraméter.");
+    }
+}
 
+console.log(getMinMax1(tomb, "max"));
+console.log(getMinMax1(tomb, "min"));
+
+console.log(`Legnagyobb szám: ${getMinMax1(tomb, "max")}`);
+console.log(`Legkisebb szám: ${getMinMax1(tomb, "min")}`);
+
+//4. Feladat
+function atlagSzamitas(tomb = []) {
+    //for ciklus helyett
+    let sum = tomb.reduce((acc, num) => acc + num, 0);
+    let average = sum / tomb.length;
+    return Math.round(average);
+}
+
+console.log(`Átlag: ${atlagSzamitas(tomb)}`)
+
+//5. Feladat
+function parosParatlan(tomb = []) {
+    let paratlan = [];
+    let paros = [];
+
+    for (let i = 0; i < tomb.length; i++) {
+        if (tomb[i] % 2 === 0) {
+            paros.push(tomb[i])
+        }
+        else {
+            paratlan.push([tomb[i]])
+        }
+    }
+
+    console.log(`Páros számok: ${paros}`)
+    console.log(`Páratlan számok: ${paratlan}`)
+}
+
+parosParatlan(tomb)
+
+//6. Feladat
