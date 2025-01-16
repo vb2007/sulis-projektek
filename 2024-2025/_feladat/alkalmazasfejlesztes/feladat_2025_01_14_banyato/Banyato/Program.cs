@@ -87,4 +87,56 @@ foreach (var coord in maxDepthCoordinates)
 
 #region 5. Feladat
 Console.WriteLine("5. Feladat");
+
+int shorelineLength = 0;
+
+for (int i = 0; i < rowCount; i++)
+{
+    for (int j = 0; j < colCount; j++)
+    {
+        //teteje
+        if (i == 0 || depthData[i - 1, j] == 0)
+        {
+            shorelineLength++;
+        }
+        //alja
+        if (i == rowCount - 1 || depthData[i + 1, j] == 0)
+        {
+            shorelineLength++;
+        }
+        //bal oldal
+        if (j == 0 || depthData[i, j - 1] == 0)
+        {
+            shorelineLength++;
+        }
+        //jobb oldal
+        if (j == colCount - 1 || depthData[i, j + 1] == 0)
+        {
+            shorelineLength++;
+        }
+    }
+}
+
+Console.WriteLine($"A tó partvonala {shorelineLength} m hosszú");
+#endregion
+
+#region 6. Feladat
+Console.WriteLine("6. Feladat");
+
+Console.Write("A vizsgált szelvény oszlopának azonosítója=");
+int colId = int.Parse(Console.ReadLine()!) - 1;
+
+using (StreamWriter writer = new StreamWriter("diagram.txt"))
+{
+    for (int i = 0; i < rowCount; i++)
+    {
+        int depthInMeters = (int)Math.Round(depthData[i, colId] / 10.0);
+        writer.Write($"{i + 1:00} ");
+        for (int j = 0; j < depthInMeters; j++)
+        {
+            writer.Write("*");
+        }
+        writer.WriteLine();
+    }
+}
 #endregion
