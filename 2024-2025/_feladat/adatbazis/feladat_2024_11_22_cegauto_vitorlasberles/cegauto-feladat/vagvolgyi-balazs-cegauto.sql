@@ -38,6 +38,14 @@ FROM `munkatars`
 ORDER BY `munkatars`.`vnev`, `munkatars`.`knev`;
 
 -- 8. feladat
+SELECT
+    `munkatars`.`vnev`,
+    `munkatars`.`knev`,
+    `auto`.`rendszam`
+FROM `munkatars`
+    INNER JOIN `auto`
+        ON `munkatars`.`id` = `auto`.`munkatars_id`
+WHERE `auto`.`kor` <= 6;
 
 -- 9. feladat
 
