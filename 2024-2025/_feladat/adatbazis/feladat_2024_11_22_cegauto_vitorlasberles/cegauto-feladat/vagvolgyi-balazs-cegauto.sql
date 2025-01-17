@@ -23,8 +23,19 @@ GROUP BY
     `munkatars`.`nem`;
 
 -- 6. feladat
+SELECT `gyarto`, `tipus`, COUNT(*) AS `db`
+FROM `auto`
+GROUP BY `gyarto`, `tipus`;
 
 -- 7. feladat
+SELECT
+    `munkatars`.`vnev`,
+    `munkatars`.`knev`,
+    `auto`.`rendszam`
+FROM `munkatars`
+    INNER JOIN `auto`
+        ON `munkatars`.`id` = `auto`.`munkatars_id`
+ORDER BY `munkatars`.`vnev`, `munkatars`.`knev`;
 
 -- 8. feladat
 
