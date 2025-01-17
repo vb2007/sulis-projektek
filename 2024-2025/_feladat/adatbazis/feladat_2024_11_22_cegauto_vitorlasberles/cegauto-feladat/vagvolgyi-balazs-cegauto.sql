@@ -48,8 +48,20 @@ FROM `munkatars`
 WHERE `auto`.`kor` <= 6;
 
 -- 9. feladat
+SELECT `tipus`
+FROM `auto`
+WHERE `gyarto` = "Opel"
+GROUP BY `tipus`
+ORDER BY  `tipus` ASC;
 
 -- 10. feladat
+SELECT `vnev`, `knev`
+FROM `munkatars`
+    INNER JOIN `auto`
+        ON `munkatars`.`id` = `auto`.`munkatars_id`
+WHERE `munkatars`.`varos` = "Budapest"
+    AND `munkatars`.`nem` = "Férfi"
+    AND `auto`.`gyarto` = "Toyota";
 
 -- 11. feladat
 
