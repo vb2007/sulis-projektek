@@ -11,6 +11,9 @@ while (true) {
     if (a < b) {
         break;
     }
+    else {
+        alert("A felső határnak nagyobbnak kell lennie, mint az alsó határ!");
+    }
 }
 
 alert(`A létrehozott random float: ${randomFloat(a, b)}`);
