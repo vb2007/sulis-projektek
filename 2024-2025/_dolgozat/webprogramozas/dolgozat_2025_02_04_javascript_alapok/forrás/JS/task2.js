@@ -14,4 +14,4 @@ while (true) {
 
 let kedvezmenyesAr = (termekAra - termekAra * DISCOUNT);
 
-console.log(`${termekNeve} kedvezményes ára: ${Math.round(kedvezmenyesAr, 2)} forint`);
+console.log(`${termekNeve} kedvezményes ára: ${kedvezmenyesAr.toFixed(2)} forint`);
