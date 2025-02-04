@@ -13,7 +13,7 @@ do {
     temp = prompt("Adj meg egy számot.");
     lista.push(parseInt(temp));
 }
-while (!isNan(temp));
+while (!isNaN(temp));
 
 let szorzat = lista[0];
 for (let i = 1; i < lista.length; i++) {
@@ -36,4 +36,4 @@ else {
     median = szortirozott[kozepsoIndex];
 }
 
-console.log(`A számok mediánja: ${median}`);
+console.log(`A számok mediánja: ${median.toFixed(2)}`);
