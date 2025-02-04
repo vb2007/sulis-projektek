@@ -6,8 +6,6 @@ function sortArr(arr=[2, 5, 3, 7, 4]){
 // nézze meg mit ad vissza a meghívás: console.log(sortArr())
 //Innentől lefelé írjon
 
-console.log(sortArr());
-
 let lista = [];
 let temp;
 
@@ -17,25 +15,25 @@ do {
 }
 while (!isNan(temp));
 
-console.log(lista);
-
-let szorzat;
-console.log(lista.length);
-for (let i = 0; i < lista.length - 1; i++) {
-    if (i == 0) {
-        szorzat = lista[i] * lista[i + 1];
-    }
-    else {
-        szorzat = szorzat * lista[i + 1];
-    }
+let szorzat = lista[0];
+for (let i = 1; i < lista.length; i++) {
+    szorzat = szorzat * lista[i];
 }
 
 console.log(`A számok szorzata: ${szorzat}`);
 
 let szortirozott = sortArr(lista);
+let szortirozottLength = szortirozott.length;
 let median;
-if (szortirozott % 2 != 0) {
-    median = szortirozott[szortirozott.length / 2];
+
+if (szortirozottLength % 2 == 0) {
+    let felsoKozepIndex = szortirozottLength / 2;
+    let alsoKozepIndex = felsoKozepIndex -1;
+    median = (rendezett[felsoKozepIndex] + rendezett[alsoKozepIndex]) / 2
+}
+else {
+    let kozepsoIndex = Math.floor(szortirozottLength / 2);
+    median = szortirozott[kozepsoIndex];
 }
 
 console.log(`A számok mediánja: ${median}`);
