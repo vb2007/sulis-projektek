@@ -11,15 +11,11 @@ console.log(sortArr());
 let lista = [];
 let temp;
 
-while (true) {
+do {
     temp = prompt("Adj meg egy számot.");
-    if (isNaN(temp)) {
-        break;
-    }
-    else {
-        lista.push(parseInt(temp));
-    }
+    lista.push(parseInt(temp));
 }
+while (!isNan(temp));
 
 console.log(lista);
 
