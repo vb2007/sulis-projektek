@@ -5,7 +5,7 @@ let daysInWeek = ["hétfő", "kedd", "szerda", "csütörtök", "péntek", "szomb
 let index = prompt("Add meg egy nap sorszámát.");
 
 if (index < 1 || index > 7) {
-    alert("Érvénytelen nap.");
+    console.log("Érvénytelen nap.");
 }
 else {
     console.log(`A nap neve: ${daysInWeek[index - 1]}`);
