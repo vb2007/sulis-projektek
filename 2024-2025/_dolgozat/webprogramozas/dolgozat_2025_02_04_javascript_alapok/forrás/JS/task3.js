@@ -29,7 +29,7 @@ let median;
 if (szortirozottLength % 2 == 0) {
     let felsoKozepIndex = szortirozottLength / 2;
     let alsoKozepIndex = felsoKozepIndex -1;
-    median = (rendezett[felsoKozepIndex] + rendezett[alsoKozepIndex]) / 2;
+    median = (szortirozott[felsoKozepIndex] + szortirozott[alsoKozepIndex]) / 2;
 }
 else {
     let kozepsoIndex = Math.floor(szortirozottLength / 2);
