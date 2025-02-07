@@ -1,4 +1,7 @@
-@import url("https://backend.kdani.hu/feladatok/web11/telebusz/assets/fonts/FrutigerNext/stylesheet.css");
+/* backed up locally as "stylesheet.css" for archiving purposes */
+/* original source: */
+/* @import url("https://backend.kdani.hu/feladatok/web11/telebusz/assets/fonts/FrutigerNext/stylesheet.css"); */
+@import url("stylesheet.css");
 
 :root {
     --bkk-color: rgb(73 36 80);
