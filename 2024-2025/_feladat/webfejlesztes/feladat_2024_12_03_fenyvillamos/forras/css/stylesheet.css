@@ -1,0 +1,234 @@
+@font-face {
+    font-family: 'FrutigerNextLT';
+    src: url('FrutigerNextLT-Medium.eot');
+    src: local('FrutigerNextLT Medium'), local('FrutigerNextLT-Medium'),
+        url('FrutigerNextLT-Medium.eot?#iefix') format('embedded-opentype'),
+        url('FrutigerNextLT-Medium.woff2') format('woff2'),
+        url('FrutigerNextLT-Medium.woff') format('woff'),
+        url('FrutigerNextLT-Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'FrutigerNextLT';
+    src: url('FrutigerNextLT-RegularCond.eot');
+    src: local('FrutigerNextLT Regular Cond'), local('FrutigerNextLT-RegularCond'),
+        url('FrutigerNextLT-RegularCond.eot?#iefix') format('embedded-opentype'),
+        url('FrutigerNextLT-RegularCond.woff2') format('woff2'),
+        url('FrutigerNextLT-RegularCond.woff') format('woff'),
+        url('FrutigerNextLT-RegularCond.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'FrutigerNextLT';
+    src: url('FrutigerNextLT-MediumItalic.eot');
+    src: local('FrutigerNextLT Medium Italic'), local('FrutigerNextLT-MediumItalic'),
+        url('FrutigerNextLT-MediumItalic.eot?#iefix') format('embedded-opentype'),
+        url('FrutigerNextLT-MediumItalic.woff2') format('woff2'),
+        url('FrutigerNextLT-MediumItalic.woff') format('woff'),
+        url('FrutigerNextLT-MediumItalic.ttf') format('truetype');
+    font-weight: 500;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'FrutigerNextLT';
+    src: url('FrutigerNextLT-Light.eot');
+    src: local('FrutigerNextLT Light'), local('FrutigerNextLT-Light'),
+        url('FrutigerNextLT-Light.eot?#iefix') format('embedded-opentype'),
+        url('FrutigerNextLT-Light.woff2') format('woff2'),
+        url('FrutigerNextLT-Light.woff') format('woff'),
+        url('FrutigerNextLT-Light.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'FrutigerNextLT';
+    src: url('FrutigerNextLT-LightCond.eot');
+    src: local('FrutigerNextLT Light Cond'), local('FrutigerNextLT-LightCond'),
+        url('FrutigerNextLT-LightCond.eot?#iefix') format('embedded-opentype'),
+        url('FrutigerNextLT-LightCond.woff2') format('woff2'),
+        url('FrutigerNextLT-LightCond.woff') format('woff'),
+        url('FrutigerNextLT-LightCond.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'FrutigerNextLT';
+    src: url('FrutigerNextLT-BoldItalic.eot');
+    src: local('FrutigerNextLT Bold Italic'), local('FrutigerNextLT-BoldItalic'),
+        url('FrutigerNextLT-BoldItalic.eot?#iefix') format('embedded-opentype'),
+        url('FrutigerNextLT-BoldItalic.woff2') format('woff2'),
+        url('FrutigerNextLT-BoldItalic.woff') format('woff'),
+        url('FrutigerNextLT-BoldItalic.ttf') format('truetype');
+    font-weight: bold;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'FrutigerNextLT';
+    src: url('FrutigerNextLT-BlackCond.eot');
+    src: local('FrutigerNextLT Black Cond'), local('FrutigerNextLT-BlackCond'),
+        url('FrutigerNextLT-BlackCond.eot?#iefix') format('embedded-opentype'),
+        url('FrutigerNextLT-BlackCond.woff2') format('woff2'),
+        url('FrutigerNextLT-BlackCond.woff') format('woff'),
+        url('FrutigerNextLT-BlackCond.ttf') format('truetype');
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'FrutigerNextLT';
+    src: url('FrutigerNextLT-LightItalic.eot');
+    src: local('FrutigerNextLT Light Italic'), local('FrutigerNextLT-LightItalic'),
+        url('FrutigerNextLT-LightItalic.eot?#iefix') format('embedded-opentype'),
+        url('FrutigerNextLT-LightItalic.woff2') format('woff2'),
+        url('FrutigerNextLT-LightItalic.woff') format('woff'),
+        url('FrutigerNextLT-LightItalic.ttf') format('truetype');
+    font-weight: 300;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'FrutigerNextLT';
+    src: url('FrutigerNextLT-HeavyItalic.eot');
+    src: local('FrutigerNextLT Heavy Italic'), local('FrutigerNextLT-HeavyItalic'),
+        url('FrutigerNextLT-HeavyItalic.eot?#iefix') format('embedded-opentype'),
+        url('FrutigerNextLT-HeavyItalic.woff2') format('woff2'),
+        url('FrutigerNextLT-HeavyItalic.woff') format('woff'),
+        url('FrutigerNextLT-HeavyItalic.ttf') format('truetype');
+    font-weight: 900;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'FrutigerNextLT';
+    src: url('FrutigerNextLT-Regular.eot');
+    src: local('FrutigerNextLT Regular'), local('FrutigerNextLT-Regular'),
+        url('FrutigerNextLT-Regular.eot?#iefix') format('embedded-opentype'),
+        url('FrutigerNextLT-Regular.woff2') format('woff2'),
+        url('FrutigerNextLT-Regular.woff') format('woff'),
+        url('FrutigerNextLT-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'FrutigerNextLT';
+    src: url('FrutigerNextLT-BlackItalic.eot');
+    src: local('FrutigerNextLT Black Italic'), local('FrutigerNextLT-BlackItalic'),
+        url('FrutigerNextLT-BlackItalic.eot?#iefix') format('embedded-opentype'),
+        url('FrutigerNextLT-BlackItalic.woff2') format('woff2'),
+        url('FrutigerNextLT-BlackItalic.woff') format('woff'),
+        url('FrutigerNextLT-BlackItalic.ttf') format('truetype');
+    font-weight: 900;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'FrutigerNextLT';
+    src: url('FrutigerNextLT-RegularItalic.eot');
+    src: local('FrutigerNextLT Regular Italic'), local('FrutigerNextLT-RegularItalic'),
+        url('FrutigerNextLT-RegularItalic.eot?#iefix') format('embedded-opentype'),
+        url('FrutigerNextLT-RegularItalic.woff2') format('woff2'),
+        url('FrutigerNextLT-RegularItalic.woff') format('woff'),
+        url('FrutigerNextLT-RegularItalic.ttf') format('truetype');
+    font-weight: normal;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'FrutigerNextLT';
+    src: url('FrutigerNextLT-Bold.eot');
+    src: local('FrutigerNextLT Bold'), local('FrutigerNextLT-Bold'),
+        url('FrutigerNextLT-Bold.eot?#iefix') format('embedded-opentype'),
+        url('FrutigerNextLT-Bold.woff2') format('woff2'),
+        url('FrutigerNextLT-Bold.woff') format('woff'),
+        url('FrutigerNextLT-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'FrutigerNextLT';
+    src: url('FrutigerNextLT-HeavyCond.eot');
+    src: local('FrutigerNextLT Heavy Cond'), local('FrutigerNextLT-HeavyCond'),
+        url('FrutigerNextLT-HeavyCond.eot?#iefix') format('embedded-opentype'),
+        url('FrutigerNextLT-HeavyCond.woff2') format('woff2'),
+        url('FrutigerNextLT-HeavyCond.woff') format('woff'),
+        url('FrutigerNextLT-HeavyCond.ttf') format('truetype');
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'FrutigerNextLT';
+    src: url('FrutigerNextLT-Heavy.eot');
+    src: local('FrutigerNextLT Heavy'), local('FrutigerNextLT-Heavy'),
+        url('FrutigerNextLT-Heavy.eot?#iefix') format('embedded-opentype'),
+        url('FrutigerNextLT-Heavy.woff2') format('woff2'),
+        url('FrutigerNextLT-Heavy.woff') format('woff'),
+        url('FrutigerNextLT-Heavy.ttf') format('truetype');
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'FrutigerNextLT';
+    src: url('FrutigerNextLT-MediumCond.eot');
+    src: local('FrutigerNextLT Medium Cond'), local('FrutigerNextLT-MediumCond'),
+        url('FrutigerNextLT-MediumCond.eot?#iefix') format('embedded-opentype'),
+        url('FrutigerNextLT-MediumCond.woff2') format('woff2'),
+        url('FrutigerNextLT-MediumCond.woff') format('woff'),
+        url('FrutigerNextLT-MediumCond.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'FrutigerNextLT';
+    src: url('FrutigerNextLT-Black.eot');
+    src: local('FrutigerNextLT Black'), local('FrutigerNextLT-Black'),
+        url('FrutigerNextLT-Black.eot?#iefix') format('embedded-opentype'),
+        url('FrutigerNextLT-Black.woff2') format('woff2'),
+        url('FrutigerNextLT-Black.woff') format('woff'),
+        url('FrutigerNextLT-Black.ttf') format('truetype');
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'FrutigerNextLT';
+    src: url('FrutigerNextLT-BoldCond.eot');
+    src: local('FrutigerNextLT Bold Cond'), local('FrutigerNextLT-BoldCond'),
+        url('FrutigerNextLT-BoldCond.eot?#iefix') format('embedded-opentype'),
+        url('FrutigerNextLT-BoldCond.woff2') format('woff2'),
+        url('FrutigerNextLT-BoldCond.woff') format('woff'),
+        url('FrutigerNextLT-BoldCond.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
