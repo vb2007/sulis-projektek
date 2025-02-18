@@ -201,7 +201,7 @@ students.forEach(student => {
         const groupSpan = document.createElement("span");
         groupSpan.classList.add("p-1", "bg-sky-500", "text-white", "rounded-md");
         groupSpan.textContent = group;
-        studentGroups.appendChild(groupSpan);
+        studentGroups.append(groupSpan);
     });
 
     const table = document.createElement("table");
@@ -240,7 +240,7 @@ students.forEach(student => {
         td2.classList.add("p-1", "text-center");
 
         tr.append(td1, td2);
-        tbody.appendChild(tr);
+        tbody.append(tr);
 
         totalAverage += subject.average;
     });
@@ -259,7 +259,7 @@ students.forEach(student => {
     tdAverageValue.classList.add("p-1", "text-center");
 
     trAverage.append(tdAverageLabel, tdAverageValue);
-    tbody.appendChild(trAverage);
+    tbody.append(trAverage);
 
     table.append(thead, tbody);
 
@@ -269,7 +269,7 @@ students.forEach(student => {
     const averageSpan = document.createElement("span");
     averageSpan.textContent = totalAverage.toFixed(2);
     averageSpan.classList.add("font-bold");3
-    averageDiv.appendChild(averageSpan);
+    averageDiv.append(averageSpan);
 
     cardContainer.append(studentName, studentGroups, table, averageDiv);
     container.append(cardContainer);
