@@ -245,6 +245,8 @@ students.forEach(student => {
         totalAverage += subject.average;
     });
 
+    totalAverage /= student.subjects.length;
+    
     table.append(thead, tbody);
 
     const averageDiv = document.createElement("div");
