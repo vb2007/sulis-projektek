@@ -245,22 +245,6 @@ students.forEach(student => {
         totalAverage += subject.average;
     });
 
-    totalAverage /= student.subjects.length;
-
-    const trAverage = document.createElement("tr");
-    trAverage.classList.add("bg-sky-300");
-
-    const tdAverageLabel = document.createElement("td");
-    tdAverageLabel.textContent = "Átlag:";
-    tdAverageLabel.classList.add("p-1");
-
-    const tdAverageValue = document.createElement("td");
-    tdAverageValue.textContent = totalAverage.toFixed(2);
-    tdAverageValue.classList.add("p-1", "text-center");
-
-    trAverage.append(tdAverageLabel, tdAverageValue);
-    tbody.append(trAverage);
-
     table.append(thead, tbody);
 
     const averageDiv = document.createElement("div");
