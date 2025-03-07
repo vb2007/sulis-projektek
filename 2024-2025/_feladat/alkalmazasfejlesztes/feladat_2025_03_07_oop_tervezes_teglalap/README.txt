@@ -1,0 +1,1 @@
+Tervezési fájl a "feladat_2025_03_04_oop_tervezes_alapok" mappában.
