@@ -84,9 +84,30 @@ FROM `allatok`
 WHERE `tipus` = 'kutya';
 
 -- 15. feladat
+SELECT `menhelyek`.`nev` AS `menhely_nev`, COUNT(`allatok`.`id`) AS `allatok_szama`
+FROM `menhelyek`
+    JOIN `allatok`
+        ON `menhelyek`.`id` = `allatok`.`menhely_id`
+GROUP BY `menhelyek`.`nev`;
 
 -- 16. feladat
+SELECT
+    `menhelyek`.`nev` AS `menhely_nev`,
+    `allatok`.`tipus` AS `allat_tipus`,
+    COUNT(`allatok`.`id`) AS `allatok_szama`
+FROM `menhelyek`
+    JOIN `allatok`
+        ON `menhelyek`.`id` = `allatok`.`menhely_id`
+GROUP BY `menhelyek`.`nev`, `allatok`.`tipus`;
 
 -- 17. feladat
+SELECT COUNT(`allatok`.`id`) AS `kutyak_szama`
+FROM `allatok`
+    JOIN `menhelyek`
+        ON `allatok`.`menhely_id` = `menhelyek`.`id`
+WHERE
+    `menhelyek`.`nev` = "Noé állatotthon"
+    AND `allatok`.`tipus` = "kutya";
 
 -- 18. feladat
+DELETE FROM `allatok`;
