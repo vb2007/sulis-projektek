@@ -1,0 +1,5 @@
+A 10. és a 11. tanév folyamán is tanultuk a programozási tételeket, de a két év anyaga nem egységes, eltérések vannak.
+
+A logika a pszeudó kódban elvileg ugyan az.
+
+A 10.-es tételekben a példaprogramok Python programozási nyelvvel vannak megírva, míg a 11.-es tételekben C#-al.
