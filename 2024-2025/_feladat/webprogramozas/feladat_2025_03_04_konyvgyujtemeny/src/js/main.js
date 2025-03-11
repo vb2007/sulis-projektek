@@ -25,17 +25,62 @@ const header = document.getElementById("header");
 header.append(title);
 
 // Main
-const booksContainer = document.createElement("div");
-booksContainer.setAttribute("id" ,"book-container");
+const bookContainer = document.createElement("div");
+bookContainer.setAttribute("id" ,"book-container");
+bookContainer.classList.add("grid", "gap-6", "p-6", "max-w-4xl", "mx-auto", "grid-cols-1", "md:grid-cols-3");
 
 const main = document.getElementById("main");
+main.append(bookContainer);
 
 // Footer
-
+const madeBy = document.createElement("p");
+madeBy.textContent = "Készítette: Vágvölgyi Balázs";
+madeBy.classList.add("text-center", "p-4", "bg-gray-800", "text-gray-200");
 
 // Könyvek megjelenítése
 function renderBooks() {
-  
+  const bookContainer = document.getElementById("book-container");
+
+  books.forEach(book => {
+    const container = document.createElement("div");
+    container.classList.add("bg-gray-800", "p-4", "rounded", "shadow", "flex", "flex-col", "items-start");
+
+    const cover = document.createElement("img");
+    cover.setAttribute("src", `img/${book.image}`);
+    cover.setAttribute("alt", book.title);
+    cover.classList.add("w-full", "h-48", "object-cover", "rounded");
+
+    const text = document.createElement("div");
+    text.classList.add("flex", "flex-col");
+
+    const title = document.createElement("span");
+    title.textContent = book.title;
+    title.classList.add("text-lg", "font-semibold", "text-white");
+    if (book.read) {
+      title.classList.add("line-through");
+    }
+
+    const author = document.createElement("span");
+    author.textContent = book.author;
+    author.classList.add("text-gray-200");
+
+    const buttons = document.createElement("div");
+    buttons.classList.add("flex", "gap-2", "mt-2");
+
+    const readBtn = document.createElement("button");
+    readBtn.textContent = "Elolvasva";
+    readBtn.classList.add("bg-green-600", "text-white", "p-2", "rounded", "hover:bg-green-700", "transition");
+    readBtn.setAttribute("data-id", book.id);
+
+    const deleteBtn = document.createElement("button");
+    deleteBtn.textContent = "Törlés";
+    deleteBtn.classList.add("bg-red-600", "text-white", "p-2", "rounded", "hover:bg-red-700", "transition");
+    deleteBtn.setAttribute("data-id", book.id);
+
+    buttons.append(readBtn, deleteBtn);
+    container.append(cover, text, title, author, buttons);
+    bookContainer.append(container);
+  });
 }
 
 // Törlés
@@ -48,12 +93,7 @@ function toggleRead(id) {
 
 }
 
-
 renderBooks();
-
-
-
-
 
 //Ehhez ne nyúljon
 document.querySelectorAll('.bg-green-600').forEach(button => {
