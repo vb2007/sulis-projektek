@@ -17,10 +17,18 @@ const books = [
   document.body.className = 'bg-gray-900';
   
   // Header 
+  const title = document.createElement("h1");
+  title.textContent = "Könyvgyűjtemény";
+  title.classList.add("text-3xl", "font-bold", "text-center", "text-white", "p-4", "bg-gray-800");
 
+  const header = document.getElementById("header");
+  header.append(title);
   
   // Main
+  const booksContainer = document.createElement("div");
+  booksContainer.setAttribute("id" ,"book-container");
 
+  const main = document.getElementById("main");
   
   // Footer
   
