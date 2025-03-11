@@ -25,4 +25,6 @@ A mappák elnevezési sémája: **kategória_év_hónap_nap_(esetleges)cím**.
 
 A séma alól még kivételt képeznek az **ikt** almappák tartalmai.
 
-Ezeket **tanevElsoFelenekEve-tanevMasodikFelenekEve-ikt-projektSzama** séma alapján neveztem el. Pédlául a 2024-2025-ös tanév 2. IKT projektje az alábbi nevet kapta: *2024-25-ikt-2*
+Ezeket **tanevElsoFelenekEve-tanevMasodikFelenekEve-ikt-projektSzama** séma alapján neveztem el. Pédlául a 2024-2025-ös tanév 2. IKT projektje az alábbi nevet kapta: *2024-25-ikt-2*.
+
+Eredetileg GitHub-ot használtunk a csapatmunkára és saját repository-ban volt minden projekt. Később köteleztek minket az iskolai GitLab szerver használatára, így egy instabil, zárt szerveren maradnának a projektek, szóval ide is archiválom őket.
