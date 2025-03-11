@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- CDN-ből importolom kivételesen, mert nem akarom visszatölteni az egész Bootstrap CSS-t GitHub-ra -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <title>Elterjedt RAID Fajták</title>
+</head>
+<body>
+    <header></header>
+    <nav class="navbar navbar-expand-lg">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">VB</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#raid1">RAID 1</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#raid5">RAID 5</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#raid6">RAID 6</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <main class="container-fluid">
+        <section class="row">
+            <div class="col-12">
+                <h1 id="focim" class="my-3 text-center">Elterjedt RAID Fajták</h1>
+                <p>
+                    A <b>RAID</b> (angolul <i>Redundant Array of Inexpensive Disks vagy Redundant
+                    Array of Independent Disks</i>)
+                    tárolási technológia, mely segítségével az adatok elosztása vagy replikálása több fizikailag
+                    független merevlemezen, egy logikai lemez létrehozásával lehetséges. Minden <b>RAID</b>
+                    szint alapjában
+                    véve vagy az adatbiztonság növelését vagy az adatátviteli sebesség növelését szolgálja.
+                </p>
+            </div>
+            <div class="mb-1 col-md-6 col-xxl-3">
+                <div class="card card-body">
+                    <table class="table table-striped border-dark">
+                        <thead>
+                            <tr>
+                                <th colspan="4" class="text-center">RAID Szintek Rövid Összehasonlítása</th>
+                            </tr>
+                            <tr>
+                                <th>RAID Szint</th>
+                                <th>Szükséges lemezek száma</th>
+                                <th>Hiba tolerancia</th>
+                                <th>Kapacitás hatékonyság</th>
+                            </tr>
+                        </thead>
+                        <tbody class="table-group-divider">
+                            <tr>
+                                <th>RAID 1</th>
+                                <td>2</td>
+                                <td>n-1 lemez</td>
+                                <td>1/n</td>
+                            </tr>
+                            <tr>
+                                <th>RAID 5</th>
+                                <td>3</td>
+                                <td>1 lemez</td>
+                                <td>1-1/n</td>
+                            </tr>
+                            <tr>
+                                <th>RAID 6</th>
+                                <td>4</td>
+                                <td>2 lemez</td>
+                                <td>1-2/n</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="mb-1 col-md-6 col-xxl-3">
+                <div class="card">
+                    <img src="img/RAID_1.png" id="raid1cardimg" class="card-img-top" alt="RAID 1" title="RAID 1">
+                </div>
+            </div>
+            <div class="mb-1 col-md-6 col-xxl-3">
+                <div class="card">
+                    <img src="img/RAID_5.png" class="card-img-top" alt="RAID 5" title="RAID 5">
+                </div>
+            </div>
+            <div class="mb-1 col-md-6 col-xxl-3">
+                <div class="card">
+                    <img src="img/RAID_6.png" class="card-img-top" alt="RAID 6" title="RAID 6">
+                </div>
+            </div>
+        </section>
+        <section class="row">
+            <div class="col-12">
+                <h2 class="mt-3" id="raid1">RAID 1</h2>
+            </div>
+            <div class="col-12 col-sm-6 col-xxl-4">
+                <img src="img/RAID_1.png" class="img-fluid d-block mx-auto" alt="RAID 1">
+            </div>
+            <div class="col-12 col-sm-6 col-xxl-8">
+                <p>
+                    A RAID 1 eljárás alapja az adatok tükrözése (disk mirroring), azaz az információk egyidejű tárolása
+                    a
+                    tömb minden elemén. A kapott logikai lemez a tömb legkisebb elemével lesz egyenlő méretű. Az adatok
+                    olvasása párhuzamosan történik a diszkekről, felgyorsítván az olvasás sebességét; az írás normál
+                    sebességgel, párhuzamosan történik a meghajtókon. Az eljárás igen jó hibavédelmet biztosít, bármely
+                    meghajtó meghibásodása esetén folytatódhat a működés. A RAID 1 önmagában nem használja a csíkokra
+                    bontás módszerét.
+                </p>
+                <a class="mb-3 btn btn-info" target="_blank" href="https://hu.wikipedia.org/wiki/RAID#RAID_1_(t%C3%BCkr%C3%B6z%C3%A9s)">További
+                    információ</a>
+            </div>
+        </section>
+        <section class="row">
+            <div class="col-12">
+                <h2 class="mt-3" id="raid5">RAID 5</h2>
+            </div>
+            <div class="col-12 col-sm-6 col-xxl-8">
+                <p>
+                    A RAID 5 a paritás információt nem egy kitüntetett meghajtón, hanem „körbeforgó paritás” (rotating
+                    parity) használatával, egyenletesen az összes meghajtón elosztva tárolja, kiküszöbölvén a
+                    paritás-meghajtó jelentette szűk keresztmetszetet. Minimális meghajtószám: 3, de az írási sebesség
+                    csökkenésének elkerülése érdekében 4 elemnél kevesebb nem ajánlott. Mind az írási, mind az olvasási
+                    műveletek párhuzamosan végezhetőek. Egy meghajtó meghibásodása esetén az adatok sértetlenül
+                    visszaolvashatóak, a hibás meghajtó adatait a vezérlő a többi meghajtóról ki tudja számolni. A hibás
+                    meghajtót ajánlott azonnal
+                    cserélni, mert két meghajtó meghibásodása esetén az adatok elvesznek!
+                </p>
+                <p>
+                    Az írási sebességnél fontos figyelembe venni a paritás adatok előállítására szükséges számítási
+                    kapacitás igényt! Szoftveres megoldásnál ez jelentős processzorterhelést, illetve az írási sebesség
+                    csökkenését eredményezheti, ezért ajánlott a hardveres megoldás, ahol a célhardver látja el ezeket a
+                    feladatokat.
+                </p>
+                <a class="mb-3 btn btn-info" target="_blank" href="https://hu.wikipedia.org/wiki/RAID#RAID_5">További információ</a>
+            </div>
+            <div class="col-12 col-sm-6 col-xxl-4">
+                <img src="img/RAID_5.png" class="img-fluid d-block mx-auto" alt="RAID 5">
+            </div>
+        </section>
+        <section class="row">
+            <div class="col-12">
+                <h2 class="mt-3" id="raid6">RAID 6</h2>
+            </div>
+            <div class="col-12 col-sm-6 col-xxl-4">
+                <img src="img/RAID_6.png" class="img-fluid d-block mx-auto" alt="RAID 6">
+            </div>
+            <div class="col-12 col-sm-6 col-xxl-8">
+                <p>
+                    A RAID 6 tekinthető a RAID 5 kibővítésének. Itt nemcsak soronként, hanem oszloponként is kiszámítják
+                    a paritást. A módszer segítségével kétszeres meghajtómeghibásodás is kiküszöbölhetővé válik. A
+                    paritáscsíkokat itt is az egyes meghajtók között, egyenletesen elosztva tárolják, de ezek
+                    természetesen kétszer annyi helyet foglalnak el, mint a RAID 5 esetében, valamint még nagyobb az
+                    írási műveletek overheadje. Ennek ellenére, nagy elemszám esetén a RAID 6 lényegesen biztonságosabb
+                    alternatívája a RAID 5-nek, valamint arányaiban kevesebb tárkapacitás veszteséggel jár.
+                </p>
+                <p>
+                    Egy RAID 6 tömb legalább 4 elemből kell álljon, de az írási sebesség csökkenésének elkerülése
+                    érdekében 6 elemnél kevesebb nem ajánlott.
+                </p>
+                <a class="mb-3 btn btn-info" target="_blank" href="https://hu.wikipedia.org/wiki/RAID#RAID_6">További információ</a>
+            </div>
+        </section>
+    </main>
+    <footer class="container-fluid">
+        <div class="row">
+            <div class="col-12">
+                <p class="text-center pt-3">Készítette: Vágvölgyi Balázs</p>
+            </div>
+            <div class="col-12">
+                <p class="text-center"><a class="btn btn-info" target="_blank" href="https://hu.wikipedia.org/wiki/RAID">Forrás</a></p>
+            </div>
+        </div>
+    </footer>
+    <!-- <script src="bootstrap/bootstrap.bundle.min.js"></script> -->
+    <!-- És megint, CDN import... Nem akarok Bootstrapet GitHub-ra commitolni -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</body>
+</html>

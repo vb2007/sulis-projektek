@@ -1,0 +1,49 @@
+body {
+    background-color: #CBEDD5;
+}
+
+header {
+    background-size: cover;
+    height: 350px;
+    background-image: url("img/header_bg.JPG");
+    background-position: center;
+}
+
+.navbar li {
+    font-size: 2rem;
+    letter-spacing: 1.5px;
+}
+
+#focim {
+    font-family: Arial, Helvetica, sans-serif;
+    color: #139A97;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.navbar, footer {
+    background-color: #97DECE;
+}
+
+h2 {
+    padding: 10px;
+    background-color: #97DECE;
+    border-bottom: 3px solid #139A97;
+    border-left: 3px solid #139A97;
+}
+
+.card img {
+    margin: auto;
+    max-height: 300px;
+    max-width: 300px;
+}
+
+/* ez kell, különben szét lesz nyújtva az első raides kép... */
+#raid1cardimg {
+    max-height: 300px;
+    max-width: 200px;
+}
+
+.card {
+    background-color: #62B6B7;
+}

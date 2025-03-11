@@ -1,0 +1,31 @@
+Címek:
+Főcím
+Alcím
+Topik 1
+Topik 2
+Topik 3
+Topik 4
+
+
+Cards:
+Kép generátor
+Amennyiben fejlesztés közben szükségünk lenne bizonyos méretű képekre, akkor használhatjuk a Lorem Picsum oldalát.
+https://picsum.photos/
+Lorem Picsum
+
+Emmet dokumentáció
+Gyorsabb fejlesztés érdekében használjuk a beépített emmet parancsokat.
+https://docs.emmet.io/
+Emmet dokumentáció
+
+
+Navbar:
+Főcím
+Topik 1
+Topik 2
+Topik 3
+Topik 4
+
+
+Footer:
+Készítette: <Minta Péter>

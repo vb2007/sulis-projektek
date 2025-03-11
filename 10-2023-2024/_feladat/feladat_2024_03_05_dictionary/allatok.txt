@@ -1,0 +1,26 @@
+Gorilla - emlős
+Tigris - emlős
+Szalamandra - kétéltű
+Ló - emlős
+Hangya - rovar
+Sas - madár
+Teknős - hüllő
+Bálna - emlős
+Kígyó - hüllő
+Pillangó - rovar
+Puma - emlős
+Delfin - emlős
+Mocsári teknős - kétéltű
+Elefánt - emlős
+Zebra - emlős
+Pingvin - madár
+Hattyú - madár
+Krokodil - hüllő
+Vaddisznó - emlős
+Lepke - rovar
+Orángután - emlős
+Béka - kétéltű
+Gőte - kétéltű
+
+Zsiráf - emlős
+Capybara - emlős

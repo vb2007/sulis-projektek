@@ -1,0 +1,96 @@
+body {
+    font-size: 20px;
+    background-color: bisque;
+    color: black;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.navbar {
+    font-family: 'Times New Roman', Times, serif;
+    background-color: darkred;
+}
+
+.navbar-brand {
+    font-size: 30px;
+    color: white;
+}
+
+.nav-link {
+    color: white;
+}
+
+.border {
+    padding: 10px;
+}
+
+header {
+    background-image: url("../img/digital-marketing.jpeg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 700px;
+}
+
+h1 {
+    margin-bottom: 50px;
+    font-size: 35px;
+}
+
+h2 {
+    margin-bottom: 50px;
+    border-color: blue;
+    border-style: dotted;
+    border-width: 0px;
+    border-top-width: 3px;
+    border-left-width: 3px;
+    text-align: center;
+    font-size: 30px;
+}
+
+p {
+    text-align: justify;
+    text-indent: 2em;
+}
+
+p:nth-child(4) { /* így lesz a minta szerinti bekezdés kiemelve */
+    color: orange;
+    background-color: grey;
+    padding: 10px;
+}
+
+.instagram {
+    width: 100px;
+}
+
+.lapozos img {
+    display: flex;
+    max-width: 150px;
+}
+
+.card {
+    width: 18rem;
+}
+
+.card-img-top {
+    height: 200px;
+    padding-top: 10px;
+}
+
+footer {
+    background-color: black;
+}
+
+.footertext {
+    text-align: center;
+    color: white;
+}
+
+a {
+    text-decoration: none;
+    font-size: 20px;
+    color: white;
+}
+
+a:hover {
+    background-color: orange;
+    font-size: 35px;
+}

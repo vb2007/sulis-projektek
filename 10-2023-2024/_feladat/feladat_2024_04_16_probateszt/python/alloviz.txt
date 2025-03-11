@@ -1,0 +1,189 @@
+nev	tipus	terulet	vizgyujto
+Gyova-Mámai-Holt-Tisza	morotvató	1.33	35
+Délegyházi-tavak	bányató	3.38	3
+Öregállás III. tó	mesterséges	0.98	1
+Serházzugi-Holt-Tisza	morotvató	1.34	9
+Palotási-tározó	mesterséges	0.58	57
+Csongrádi-Bokrosi-Sós-tó	morotvató	1.21	6
+Csór-réti-víztározó	mesterséges	0.12	8
+Tunyogmatolcsi-tározó	mesterséges	1.93	1
+Tiszadobi-Holt-Tisza	morotvató	1.03	208
+Rakacai-víztározó	mesterséges	1.9	235
+Sárszentágotai-sóstó	szikes tó	0.52	3
+Csorbatelepi-tó	mesterséges	1.01	1
+Somogycsicsói-halastavak	mesterséges	0.51	39
+Peresi-holtágrendszer (Kecskészugi-, Templomzugi-, Bónomzugi-, Soczózugi-, Peresi-holtág)	morotvató	2.16	240
+Fehér-szíki-tározó	mesterséges	1.46	11
+Ladomány II. és III. számú halastó	mesterséges	1.05	82
+Hortobágyi-öregtavak	mesterséges	16.48	16
+Korcsánypusztai-halastavak	mesterséges	0.56	11
+X. tározó	mesterséges	1.39	1
+Bátai-holtág	morotvató	0.66	1
+Nagyigmándi-halastavak	mesterséges	0.62	116
+Mikei-halastórendszer	mesterséges	0.71	67
+Nagyfai-Holt-Tisza	morotvató	0.67	6
+Oláhréti-víztározó	mesterséges	0.57	2
+Biharugrai-halastavak	mesterséges	7.38	7
+Bogyiszlói-Holt-Duna	morotvató	0.5	16
+Palkonyai-halastavak	mesterséges	0.92	61
+Zámolyi-tározó	mesterséges	1.69	255
+Alcsi-Holt-Tisza	morotvató	1.62	115
+Tisza-tó	mesterséges	120.83	65779
+Pécsi-tó	mesterséges	0.79	32
+Gödöllői-halastavak	mesterséges	0.6	38
+Félhalmi-holtágrendszer (Félhalmi-, Danzugi-, Torzsási-holtág)	morotvató	0.73	57
+Vajdácskai hullámtéri holtágak	morotvató	0.78	90
+Kiskondai-halastavak	mesterséges	2.57	70
+Csele-halastó	mesterséges	0.6	77
+Cibakházi-Holt-Tisza	morotvató	2.56	72
+Kisteleki-Müller-szék	szikes tó	0.87	1
+Sárszentmihályi-tározó	mesterséges	1.03	1
+Lipóti-morotvató	morotvató	0.56	2
+Ráckevei-Soroksári-Dunaág	morotvató	15.58	832
+Szelidi-tó	morotvató	0.52	401
+Attala-Inámi-halastórendszer	mesterséges	1.74	109
+Kiskunhalasi Sós-tó	szikes tó	0.55	2
+Mátételki-tározó	mesterséges	0.83	188
+Madarász-tó	mesterséges	0.77	4
+Bába-szék	szikes tó	1.26	22
+Ártándi-kavicsbányató	bányató	0.94	1
+Tatai-Öreg-tó	mesterséges	2.07	23
+Iregszemcsei-Nagykónyi-tározók	mesterséges	1.21	70
+Nagyvadas-tó	szikes tó	1.35	5
+Boki-holtág	morotvató	0.65	5
+Tolnai-Déli-Holt-Duna	morotvató	1.34	109
+Ongai-kavicsbányatavak	bányató	0.56	1
+Délegyháza-I.	bányató	0.7	1
+Fertő-tó	szélvájta	75.41	1493
+Hegyeshalmi-kavicsbányató	bányató	0.77	1
+Csertői-halastó	mesterséges	1.16	165
+Ősze-szék	szikes tó	0.72	2
+Bácsbokodi-Felsőszentiváni-halastavak	mesterséges	0.66	114
+Pölöskei K-i tározó	mesterséges	1.24	1
+Mátrai Erőmű tavai	mesterséges	0.58	1
+Matyéri-tározó	mesterséges	0.69	3
+Rinyaszentkirályi-halastórendszer	mesterséges	0.64	49
+Mocsai-kavicsbánya-tavak	bányató	0.53	1
+Laskóvölgyi-víztározó	mesterséges	1.24	91
+Vasúti (Velence) kavicsbánya	bányató	1.64	92
+Maconkai-víztározó	mesterséges	0.58	1	
+Alpári-Holt-Tisza és Szikra-Holt-Tisza	morotvató	2.26	331
+Fegyverneki-Holt-Tisza	morotvató	1.41	125
+Köszörű-völgyi-víztározó	mesterséges	0.04	6
+Tamási Fürgedi- és Kecsegei-árkon lévő tavak	mesterséges	1.19	676
+Harangzugi-Holt-Körös	morotvató	0.53	386
+Kolon-tó	szélvájta	8.97	300
+Harangodi-tározó	mesterséges	1.38	210
+Riha-tó	morotvató	1.42	4
+Alsózsolcai I. kavicsbánya	bányató	0.9	1
+Balaton	tektonikus	594.26	5758
+Belső-Béda-holtág	morotvató	0.83	76
+Desedai-tározó	mesterséges	2.46	166
+Gyálai-Holt-Tisza	morotvató	1.64	622
+Tiszacsegei-Holt-Tisza	morotvató	0.88	99
+Csokonyavisontai-halastórendszer	mesterséges	0.68	35
+Kis-Balaton I. tározó	mesterséges	19.65	1861
+Bokodi-hűtőtó	mesterséges	1.75	118
+I-II-III. tó	mesterséges	1.71	2
+Kamarás-Duna	morotvató	0.64	1
+Nagykarácsonyi-halastó	mesterséges	1.1	182
+Császár-éri-halastavak	mesterséges	0.54	31
+Devecseri (Székpusztai)-tározó	mesterséges	0.56	64
+Grébeci-Holt-Duna	morotvató	0.53	1
+Kardoskúti Fehér-tó	szikes tó	1	13
+Szegedi Fehér-tó	szikes tó	14.48	16
+Értényi-halastavak	mesterséges	0.68	26
+Várpalotai bányasüllyedékes tavak	bányató	3.72	80
+Zab-szék	szikes tó	1.22	4
+Kecskeri-tározó	mesterséges	1.56	2
+Nagy-Széksóstó	szikes tó	0.98	217
+Varsádi-halastavak	mesterséges	1.95	4
+I. tó	mesterséges	0.98	1
+Körtvélyesi-Holt-Tisza	morotvató	0.58	1
+Vadkerti-tó (Nagy-Büdös-tó)	szikes tó	0.73	150
+Marcali-vízminőség-szabályozó-halastórendszer	mesterséges	4.03	243
+Külső-Béda	morotvató	0.67	15
+Kelemenszék	szikes tó	1.34	6
+Faddi-Holt-Duna	morotvató	2.48	210
+Nagy-Morotva	morotvató	0.92	1
+Somogyapáti-halastó	mesterséges	0.96	56
+Tiszaugi-Holt-Tisza	morotvató	0.62	17
+Lovászhetényi 1-2-3-4-5-11 számú halastavak	mesterséges	0.64	73
+Nagyszéki-tó	szikes tó	1	12
+Tripolisz	mesterséges	0.74	28
+Komra-völgyi-tározó	mesterséges	0.45	6
+Cserőközi-Holt-Tisza	morotvató	0.41	13
+Nyékládháza-kavicsbányák	bányató	4.76	5
+Szajoli-Holt-Tisza	morotvató	0.7	35
+Sándorfalvi-halastavak	mesterséges	5.82	7
+Mezőlaki-tőzegbánya-tavak	bányató	0.94	1
+Békéscsaba Téglagyári-tavak	bányató	1.14	1
+Szamossályi-tározó	mesterséges	0.57	8
+Péteri-tó	szikes tó	2.15	4
+Tiszatarjáni-Holt-Tisza	morotvató	0.69	32
+Kenézi-morotva	morotvató	0.52	1
+Tiszaluci-Holt-Tisza	morotvató	1.48	41
+Böddi-szék	szikes tó	6.68	16
+Adácsi-víztározó	mesterséges	0.52	1
+Pátkai-tározó	mesterséges	2.86	357
+II. Spicvald	mesterséges	1.22	1
+Kispodári-tározó	mesterséges	0.53	108
+Vidre-éri halastavak	mesterséges	0.74	2
+Buzsáki-halastavak	mesterséges	1.23	176
+Vajai-tározó	mesterséges	0.67	89
+Lupa-szigeti bányatavak	bányató	0.87	1
+Halásztelek-Túrtő-Harcsás-Holt-Körös	morotvató	1.29	48
+Fancsika-I. tározó	mesterséges	0.85	1
+Öregállás II. tó	mesterséges	1.33	1
+Kanyari-Holt-Tisza	morotvató	0.49	7
+Tiszakécskei-Holt-Tisza	morotvató	1.18	290
+Lábodi-halastórendszer	mesterséges	1.07	18
+Pusztaszeri-Büdös-szék	szikes tó	0.62	3
+Kis-Balaton II. tározó	mesterséges	51.51	2587
+Begécsi-halastavak	mesterséges	11.79	12
+Nagy-szik	szikes tó	0.73	1
+L-I. tározó	mesterséges	0.7	80
+Öregállás V. tó	mesterséges	0.77	1
+Szálkai-tározó	mesterséges	0.66	23
+Atkai-Holt-Tisza	morotvató	1.09	62
+Fehérvárcsurgói-tározó	mesterséges	1.44	266
+Alsómocsoládi-halastórendszer	mesterséges	1.47	79
+Markazi-víztározó	mesterséges	1.62	11
+Nagybaracskai-Holt-Duna	morotvató	0.82	26
+Bodrogközi hullámtéri holtágak	morotvató	1.85	210
+Leveleki-víztározó	mesterséges	1.64	177
+Rétközi-tó	mesterséges	3.39	6
+Hórvölgyi-víztározó	mesterséges	1.41	153
+Kakasszéki-tó	mesterséges	0.54	42
+Naszály-Grébicsi-halastavak	mesterséges	1.05	58
+Hasznosi-tározó	mesterséges	0.22	36
+Lázbérci-víztározó	mesterséges	0.71	213
+Nagybaráti-halastó	mesterséges	0.64	113
+Csaj-tó	mesterséges	9.65	53
+Egyeki-Holt-Tisza	morotvató	0.87	28
+Kistormási-halastavak	mesterséges	0.64	110
+György-éri-halastavak	mesterséges	0.99	5
+Csónakázó-tó	mesterséges	0.55	1
+K-XI tározó	mesterséges	1.55	2
+Merenyei-halastó	mesterséges	1.03	99
+Bokrosi-tó	mesterséges	1.14	1
+Nagy-nyomás	mesterséges	0.83	6
+Szabadszállási-Büdös-szék	szikes tó	0.51	11
+Harkai-tó	mesterséges	1.36	5
+Zalaszentmihályi-horgásztó	mesterséges	0.88	1
+Szamosmenti-tározó	mesterséges	1.43	5
+Péri-halastavak	mesterséges	0.79	99
+Gálosfai-horgásztavak	mesterséges	0.56	32
+Nagyréti-víztározó	mesterséges	2.17	3
+Cikolai-tavak	morotvató	0.91	221
+Tolnai-Északi-Holt-Duna	morotvató	1.56	94
+Hársasberki-halastó	mesterséges	2.42	111
+Velencei-tó	tektonikus	24.32	882
+Tamási Gonozdi-patakon lévő halastavak	mesterséges	1	76
+Hegyesdi-tározó	mesterséges	0.83	263
+Mesztegnyői-halastórendszer	mesterséges	0.63	41
+Kadia-Ó-Duna	morotvató	0.59	188
+Pötrétei-tőzegbányatavak	bányató	3.34	3
+Boldogasszonypusztai-tavak	mesterséges	1.17	49
+Szalkszentmártoni-kavicsbányatavak	bányató	0.54	1
+Szarvas-Békésszentandrási-holtágrendszer (Siratói- és Békésszentandrási-holtág)	morotvató	2.07	1132
