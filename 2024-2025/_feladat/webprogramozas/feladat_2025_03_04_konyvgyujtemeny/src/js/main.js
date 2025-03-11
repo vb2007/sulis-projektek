@@ -44,6 +44,7 @@ function renderBooks() {
   books.forEach(book => {
     const container = document.createElement("div");
     container.classList.add("bg-gray-800", "p-4", "rounded", "shadow", "flex", "flex-col", "items-start");
+    container.setAttribute("data-id", book.id);
 
     const cover = document.createElement("img");
     cover.setAttribute("src", `img/${book.image}`);
@@ -85,12 +86,28 @@ function renderBooks() {
 
 // Törlés
 function deleteBook(id) {
-
+  const bookContainer = document.getElementById("book-container");
+  const bookCard = bookContainer.querySelector(`[data-id="${id}"]`);
+  if (bookCard) {
+    bookContainer.removeChild(bookCard);
+  }
 }
 
 // Olvasva állapot jelölése
 function toggleRead(id) {
-
+  const bookContainer = document.getElementById("book-container");
+  const bookCard = bookContainer.querySelector(`[data-id='${id}']`);
+  if (bookCard) {
+    const title = bookCard.querySelector(".text-lg");
+    if (title) {
+      if (title.classList.contains("line-through")) {
+        title.classList.remove("line-through");
+      }
+      else {
+        title.classList.add("line-through");
+      }
+    }
+  }
 }
 
 renderBooks();
