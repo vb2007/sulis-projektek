@@ -29,34 +29,51 @@
             Console.WriteLine("8. Feladat:");
             Console.WriteLine($"Országok összterület:  {orszagok.Sum(x => (long)x.Terulet)}\nOrszágok összlakossága: {orszagok.Sum(x => (long)x.Lakossag)}");
 
+            Console.WriteLine("9. Feladat:");
+            Console.WriteLine($"Fővárosok átlagos távolsága Budapesstől: {orszagok.Average(x => x.Tavolsag)}");
+
             Console.WriteLine("10. Feladat:");
-            Console.WriteLine($"Legnagyobb területtel rendelkező ország: {orszagok.MaxBy(x => x.Terulet).Orszag}");
+            Console.WriteLine($"Legnagyobb területtel rendelkező ország: {orszagok.MaxBy(x => x.Terulet)?.Orszag ?? "N/A"}");
+
+            Console.WriteLine("11. Feladat:");
+            Console.WriteLine($"Legkevesebb lakosságú ország fővárosa: {orszagok.MinBy(x => x.Lakossag)?.Fovaros ?? "N/A"}");
+
+            Console.WriteLine("12. Feladat:");
+            Console.WriteLine($"Budapesstől legmesszebb elhelyezkedő főváros: {orszagok.MaxBy(x => x.Tavolsag)?.Fovaros ?? "N/A"}");
 
             Console.WriteLine("13. Feladat:");
             Console.WriteLine($"\"A\" betűvel kezdődő országok száma: {orszagok.Count(x => x.Orszag.StartsWith('A'))}");
 
-            Console.WriteLine("");
+            Console.WriteLine("14. Feladat:");
             Console.WriteLine("Adja meg egy főváros nevét: ");
             string beolvasottFovaros = Console.ReadLine()!;
 
             if (orszagok.Exists(x => x.Fovaros == beolvasottFovaros))
             {
-                Console.WriteLine(orszagok.Find(x => x.Fovaros == beolvasottFovaros).Info());
+                Console.WriteLine($"\"{beolvasottFovaros}\" főváros országának adatai:");
+                Orszagok? orszag = orszagok.Find(x => x.Fovaros == beolvasottFovaros);
+                if (orszag != null)
+                {
+                    Console.WriteLine(orszag.Info());
+                }
             }
             else
             {
-                Console.WriteLine("Nincs ilyen főváros");
+                Console.WriteLine($"Nincs \"{beolvasottFovaros}\" nevű főváros");
             }
 
-            Console.WriteLine("Mekkora területnél kisebbek: ");
+            Console.WriteLine("15. Feladat:");
+            Console.WriteLine("Adja meg a minimum területet: ");
             int beolvasottTerulet = int.Parse(Console.ReadLine()!);
 
+            Console.WriteLine($"\"{beolvasottTerulet}\" területnél kisebb területű országok:");
             foreach (var item in orszagok.Where(x => x.Terulet < beolvasottTerulet))
             {
                 Console.WriteLine(item.Orszag);
             }
 
-            int magyarorszagTerulete = 93000;
+            //16. Feladat
+            const int magyarorszagTerulete = 93000;
             List<Orszagok> kissebbMONal = orszagok.Where(x => x.Terulet < magyarorszagTerulete).ToList();
 
             StreamWriter sw = new StreamWriter("kisebbMO.txt");
