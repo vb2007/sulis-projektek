@@ -17,7 +17,13 @@
     }
     
     form:not([method=dialog]) {
-        
+        display: flex;
+        flex-direction: column;
+        gap: 0.8rem;
+        background-color: var(--form-bg);
+        margin-inline: 1rem;
+        padding: 1.5rem;
+        border-radius: 1rem;
     
         .input-field {
             display: flex;
@@ -38,6 +44,23 @@
         }
     }
     
+
+    button {
+        background-color: var(--submit-btn);
+        color: white;
+    }
+    
+    button:hover {
+        background-color: rgba(13, 110, 253, 0.9);
+    }
+
+    .tag {
+        background-color: var(--tag);
+        color: white;
+        font-size: 0.9rem;
+        padding: 0.3rem;
+        border-radius: 0.3rem;
+    }
 
     @media screen and (min-width: 750px) {
         form:not([method=dialog]) {
