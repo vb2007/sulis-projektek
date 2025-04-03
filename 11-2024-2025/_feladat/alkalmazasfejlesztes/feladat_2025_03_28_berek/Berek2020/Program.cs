@@ -11,7 +11,10 @@
             {
                 string[] darabolt = item.Split(';');
                 //0: Név, 1: Neme, 2: Részleg, 3: Belépés, 4: Bér
-                dolgozok.Add(new Dolgozo(darabolt[0], darabolt[1], darabolt[2], int.Parse(darabolt[3]), int.Parse(darabolt[4])));
+                if (int.TryParse(darabolt[3], out int belepes) && int.TryParse(darabolt[4], out int ber))
+                {
+                    dolgozok.Add(new Dolgozo(darabolt[0], darabolt[1], darabolt[2], belepes, ber));
+                }
             }
 
             //4. Feladat
