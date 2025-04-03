@@ -22,7 +22,7 @@
             Console.WriteLine($"5. Feladat: A dolgozók átlag 2020-as bére: {atlagBer:F1} e Ft");
 
             //6. Feladat
-            Console.Write("Kérem egy részleg nevét: ");
+            Console.Write("6. Feladat: Kérem egy részleg nevét: ");
             string dolgozoBemenet = Console.ReadLine()!;
 
             //7. Feladat
@@ -33,15 +33,15 @@
 
             if (legtobbetKereso == null)
             {
-                Console.WriteLine("A megadott részleg nem létezik a cégnél!");
+                Console.WriteLine("7. Feladat: A megadott részleg nem létezik a cégnél!");
             }
             else
             {
-                Console.WriteLine("A legtöbbet kereső dolgozó a megadott részlegen:");
-                Console.WriteLine($"Név: {legtobbetKereso.Nev}");
-                Console.WriteLine($"Neme: {legtobbetKereso.Nem}");
-                Console.WriteLine($"Belépés: {legtobbetKereso.Belepes}");
-                Console.WriteLine($"Bér: {legtobbetKereso.Ber} Ft");
+                Console.WriteLine("7. Feladat: A legtöbbet kereső dolgozó a megadott részlegen:");
+                Console.WriteLine($"\tNév: {legtobbetKereso.Nev}");
+                Console.WriteLine($"\tNeme: {legtobbetKereso.Nem}");
+                Console.WriteLine($"\tBelépés: {legtobbetKereso.Belepes}");
+                Console.WriteLine($"\tBér: {legtobbetKereso.Ber} Ft");
             }
 
             //8. Feladat
@@ -52,7 +52,7 @@
             Console.WriteLine("8. Feladat: Statisztika az egyes részlegeken dolgozók összesített számáról:");
             foreach (var reszleg in reszlegStatisztika)
             {
-                Console.WriteLine($"{reszleg.Reszleg}: {reszleg.Letszam} fő");
+                Console.WriteLine($"\t{reszleg.Reszleg} - {reszleg.Letszam} fő");
             }
         }
     }
