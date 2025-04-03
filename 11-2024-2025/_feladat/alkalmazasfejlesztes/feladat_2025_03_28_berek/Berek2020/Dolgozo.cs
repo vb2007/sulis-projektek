@@ -25,7 +25,7 @@
             get { return belepes; }
             set
             {
-                if (belepes > 1979)
+                if (value > 1970)
                 {
                     belepes = value;
                 }

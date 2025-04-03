@@ -15,7 +15,7 @@
             }
 
             //4. Feladat
-            Console.WriteLine($"4. Feladat: {dolgozok.Count} dolgozók adatai találhatók a forrásállományban.");
+            Console.WriteLine($"4. Feladat: {dolgozok.Count} dolgozó adatai találhatók a forrásállományban.");
 
             //5. Feladat
             double atlagBer = dolgozok.Average(x => x.Ber) / 1000.0;
