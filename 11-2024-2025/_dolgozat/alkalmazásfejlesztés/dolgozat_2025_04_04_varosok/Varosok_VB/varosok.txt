@@ -1,0 +1,349 @@
+Név;Vármegye;Népesség;Terület;Várossá nyilvánítás éve
+Aba;Fejér;4411;88,05;2013
+Abádszalók;Jász-Nagykun-Szolnok;4034;132,23;2005
+Abaújszántó;Borsod-Abaúj-Zemplén;2883;47,39;2004
+Abony;Pest;14214;127,97;1993
+Ács;Komárom-Esztergom;6950;103,84;2007
+Adony;Fejér;3963;61,05;2004
+Ajak;Szabolcs-Szatmár-Bereg;3482;24,76;2013
+Ajka;Veszprém;27593;95,05;1959
+Albertirsa;Pest;13060;73;2003
+Alsózsolca;Borsod-Abaúj-Zemplén;5614;26,02;2007
+Aszód;Pest;6223;16,2;1991
+Bábolna;Komárom-Esztergom;3850;33,55;2003
+Bácsalmás;Bács-Kiskun;6424;108,32;1986
+Badacsonytomaj;Veszprém;2026;32,71;2004
+Baja;Bács-Kiskun;34155;177,89;1885 előtt
+Baktalórántháza;Szabolcs-Szatmár-Bereg;3940;35,24;1993
+Balassagyarmat;Nógrád;14496;23,33;1923
+Balatonalmádi;Veszprém;9204;49,88;1989
+Balatonboglár;Somogy;5398;32,04;1991
+Balatonföldvár;Somogy;2207;15,32;1992
+Balatonfüred;Veszprém;12732;46,45;1971
+Balatonfűzfő;Veszprém;4469;9,25;2000
+Balatonkenese;Veszprém;2640;44,18;2009
+Balatonlelle;Somogy;5248;43,23;1991
+Balkány;Szabolcs-Szatmár-Bereg;6107;90;2004
+Balmazújváros;Hajdú-Bihar;17038;205,44;1989
+Barcs;Somogy;10129;122,9;1978
+Bátaszék;Tolna;6058;63,57;1995
+Bátonyterenye;Nógrád;11489;78,92;1989
+Battonya;Békés;5466;145,71;1989
+Békés;Békés;18173;127,23;1973
+Békéscsaba;Békés;58654;193,93;1918
+Bélapátfalva;Heves;2912;36,63;2004
+Beled;Győr-Moson-Sopron;2538;26,47;2009
+Berettyóújfalu;Hajdú-Bihar;14557;171,01;1978
+Berhida;Veszprém;5698;42,72;2004
+Besenyszög;Jász-Nagykun-Szolnok;3228;138,08;2013
+Biatorbágy;Pest;14449;44,12;2007
+Bicske;Fejér;11489;77,08;1986
+Biharkeresztes;Hajdú-Bihar;4121;49,26;1989
+Bodajk;Fejér;3973;28,98;2008
+Bóly;Baranya;3820;25,44;1997
+Bonyhád;Tolna;12706;72,14;1977
+Borsodnádasd;Borsod-Abaúj-Zemplén;3068;28,07;2001
+Budakalász;Pest;11361;15,17;2009
+Budakeszi;Pest;14874;37,1;2000
+Budaörs;Pest;29119;23,59;1986
+Budapest;Budapest;1750216;525,14;1885 előtt
+Bük;Vas;3806;20,86;2007
+Cegléd;Pest;35477;244,88;1885 előtt
+Celldömölk;Vas;10443;52,39;1978
+Cigánd;Borsod-Abaúj-Zemplén;3009;56,76;2004
+Csákvár;Fejér;5474;118,76;2013
+Csanádpalota;Csongrád-Csanád;2594;77,92;2009
+Csenger;Szabolcs-Szatmár-Bereg;4780;36,16;1989
+Csepreg;Vas;3302;49,54;1995
+Csongrád;Csongrád-Csanád;15949;173,89;1922
+Csorna;Győr-Moson-Sopron;9958;91,95;1971
+Csorvás;Békés;4582;90,18;2005
+Csurgó;Somogy;4636;59,42;1989
+Dabas;Pest;17427;165,99;1989
+Debrecen;Hajdú-Bihar;201112;461,66;1885 előtt
+Demecser;Szabolcs-Szatmár-Bereg;3959;37;2001
+Derecske;Hajdú-Bihar;8345;103,59;1991
+Dévaványa;Békés;7272;216,55;2000
+Devecser;Veszprém;4238;64,11;1997
+Diósd;Pest;11053;5,75;2013
+Dombóvár;Tolna;17924;78,48;1970
+Dombrád;Szabolcs-Szatmár-Bereg;3776;51,84;2000
+Dorog;Komárom-Esztergom;11420;11,54;1984
+Dunaföldvár;Tolna;8403;111,42;1989
+Dunaharaszti;Pest;23178;29,17;2000
+Dunakeszi;Pest;43863;31,06;1977
+Dunaújváros;Fejér;43310;52,67;1951
+Dunavarsány;Pest;8490;22,52;2004
+Dunavecse;Bács-Kiskun;3816;66,77;2004
+Edelény;Borsod-Abaúj-Zemplén;9349;56,82;1986
+Eger;Heves;51894;92,21;1885 előtt
+Elek;Békés;4472;54,91;1996
+Emőd;Borsod-Abaúj-Zemplén;4637;49,37;2001
+Encs;Borsod-Abaúj-Zemplén;6166;25,8;1984
+Enying;Fejér;6645;82,78;1992
+Ercsi;Fejér;7985;65,31;2000
+Érd;Pest;69431;63,31;1978
+Esztergom;Komárom-Esztergom;28165;100,09;1885 előtt
+Fegyvernek;Jász-Nagykun-Szolnok;6138;71,48;2013
+Fehérgyarmat;Szabolcs-Szatmár-Bereg;7823;52,46;1978
+Felsőzsolca;Borsod-Abaúj-Zemplén;6345;16,25;1997
+Fertőd;Győr-Moson-Sopron;3339;48,55;1995
+Fertőszentmiklós;Győr-Moson-Sopron;3921;39,38;2008
+Fonyód;Somogy;4784;53,55;1989
+Fót;Pest;20286;37,4;2004
+Füzesabony;Heves;7347;46,34;1989
+Füzesgyarmat;Békés;5439;127,34;2000
+Gárdony;Fejér;12085;63,53;1989
+Göd;Pest;20563;24,44;1999
+Gödöllő;Pest;32101;61,93;1966
+Gönc;Borsod-Abaúj-Zemplén;1898;37,27;2001
+Gyál;Pest;24195;24,93;1997
+Gyomaendrőd;Békés;12645;303,94;1989
+Gyömrő;Pest;19446;26,51;2001
+Gyöngyös;Heves;28929;55,31;1885 előtt
+Gyöngyöspata;Heves;2397;60,75;2013
+Gyönk;Tolna;1833;38,11;2009
+Győr;Győr-Moson-Sopron;133946;174,62;1885 előtt
+Gyula;Békés;28916;255,79;1885 előtt
+Hajdúböszörmény;Hajdú-Bihar;30117;370,74;1885 előtt
+Hajdúdorog;Hajdú-Bihar;8510;100,65;1989
+Hajdúhadház;Hajdú-Bihar;12795;87,82;1991
+Hajdúnánás;Hajdú-Bihar;16511;259,61;1885 előtt
+Hajdúsámson;Hajdú-Bihar;13340;69,47;2004
+Hajdúszoboszló;Hajdú-Bihar;24138;238,62;1885 előtt
+Hajós;Bács-Kiskun;2786;89,92;2008
+Halásztelek;Pest;11622;8,64;2008
+Harkány;Baranya;4832;25,69;1999
+Hatvan;Heves;20012;66,31;1945
+Herend;Veszprém;3346;19,56;1999
+Heves;Heves;10088;99,31;1984
+Hévíz;Zala;4462;8,3;1992
+Hódmezővásárhely;Csongrád-Csanád;43149;487,98;1885 előtt
+Ibrány;Szabolcs-Szatmár-Bereg;6546;60,41;1993
+Igal;Somogy;1359;36,06;2009
+Isaszeg;Pest;11513;54,84;2008
+Izsák;Bács-Kiskun;5515;113,76;1997
+Jánoshalma;Bács-Kiskun;8306;132,21;1989
+Jánosháza;Vas;2447;23,41;2013
+Jánossomorja;Győr-Moson-Sopron;6030;148,94;2004
+Jászapáti;Jász-Nagykun-Szolnok;8231;78,16;1989
+Jászárokszállás;Jász-Nagykun-Szolnok;7687;77,17;1991
+Jászberény;Jász-Nagykun-Szolnok;27028;221,35;1885 előtt
+Jászfényszaru;Jász-Nagykun-Szolnok;5954;76,16;1993
+Jászkisér;Jász-Nagykun-Szolnok;4972;130,11;2009
+Kaba;Hajdú-Bihar;5533;95,04;2003
+Kadarkút;Somogy;2385;39,74;2005
+Kalocsa;Bács-Kiskun;15085;53,18;1921
+Kaposvár;Somogy;60656;113,59;1885 előtt
+Kapuvár;Győr-Moson-Sopron;10184;96,05;1969
+Karcag;Jász-Nagykun-Szolnok;19180;368,63;1885 előtt
+Kazincbarcika;Borsod-Abaúj-Zemplén;25286;36,64;1954
+Kecel;Bács-Kiskun;8318;114,48;1993
+Kecskemét;Bács-Kiskun;110373;322,57;1885 előtt
+Kemecse;Szabolcs-Szatmár-Bereg;4699;38,94;2005
+Kenderes;Jász-Nagykun-Szolnok;4172;111,24;2004
+Kerekegyháza;Bács-Kiskun;6651;81,28;2001
+Kerepes;Pest;10309;24,25;2013
+Keszthely;Zala;19183;75,98;1954
+Kisbér;Komárom-Esztergom;5393;52,17;1986
+Kisköre;Heves;2771;68,42;2005
+Kiskőrös;Bács-Kiskun;13668;102,23;1973
+Kiskunfélegyháza;Bács-Kiskun;29138;256,3;1885 előtt
+Kiskunhalas;Bács-Kiskun;26797;227,58;1885 előtt
+Kiskunlacháza;Pest;9088;93,5;2021
+Kiskunmajsa;Bács-Kiskun;10969;222,27;1989
+Kistarcsa;Pest;13258;11,02;2005
+Kistelek;Csongrád-Csanád;7098;69,19;1989
+Kisújszállás;Jász-Nagykun-Szolnok;10711;205,27;1885 előtt
+Kisvárda;Szabolcs-Szatmár-Bereg;15671;35,9;1970
+Komádi;Hajdú-Bihar;4980;144,65;2001
+Komárom;Komárom-Esztergom;19600;69,91;1885 előtt
+Komló;Baranya;22465;46,55;1951
+Kondoros;Békés;4600;81,84;2013
+Kozármisleny;Baranya;6366;14,45;2007
+Körmend;Vas;10986;52,79;1978
+Körösladány;Békés;4289;123,79;2007
+Kőszeg;Vas;11966;54,66;1885 előtt
+Kunhegyes;Jász-Nagykun-Szolnok;7369;148,93;1989
+Kunszentmárton;Jász-Nagykun-Szolnok;7846;143,65;1986
+Kunszentmiklós;Bács-Kiskun;8279;172,11;1989
+Lábatlan;Komárom-Esztergom;4849;26,37;2004
+Lajosmizse;Bács-Kiskun;11461;164,66;1993
+Lébény;Győr-Moson-Sopron;3395;81,39;2013
+Lengyeltóti;Somogy;2867;39,57;1992
+Lenti;Zala;7283;73,79;1978
+Létavértes;Hajdú-Bihar;7128;116,61;1996
+Letenye;Zala;3898;41,74;1989
+Lőrinci;Heves;5511;23,53;1992
+Maglód;Pest;12552;22,38;2007
+Mágocs;Baranya;2191;42,54;2009
+Makó;Csongrád-Csanád;22367;229,23;1885 előtt
+Mándok;Szabolcs-Szatmár-Bereg;3913;28,91;2007
+Marcali;Somogy;11075;104,4;1977
+Máriapócs;Szabolcs-Szatmár-Bereg;2025;22,09;1993
+Martfű;Jász-Nagykun-Szolnok;6032;23,08;1989
+Martonvásár;Fejér;5746;31,25;2005
+Mátészalka;Szabolcs-Szatmár-Bereg;16152;41,4;1969
+Medgyesegyháza;Békés;3413;64,29;2009
+Mélykút;Bács-Kiskun;4696;123,47;2009
+Mezőberény;Békés;9800;118,53;1989
+Mezőcsát;Borsod-Abaúj-Zemplén;5676;103,09;1991
+Mezőhegyes;Békés;4852;155,44;1989
+Mezőkeresztes;Borsod-Abaúj-Zemplén;3519;74,26;2009
+Mezőkovácsháza;Békés;5734;62,59;1986
+Mezőkövesd;Borsod-Abaúj-Zemplén;16091;100,49;1973
+Mezőtúr;Jász-Nagykun-Szolnok;15935;289,72;1885 előtt
+Mindszent;Csongrád-Csanád;6302;59,35;1993
+Miskolc;Borsod-Abaúj-Zemplén;152901;236,67;1885 előtt
+Mohács;Baranya;17025;112,23;1924
+Monor;Pest;18418;46,79;1989
+Mór;Fejér;13904;108,61;1984
+Mórahalom;Csongrád-Csanád;6391;83,14;1989
+Mosonmagyaróvár;Győr-Moson-Sopron;34218;83,78;1921
+Nádudvar;Hajdú-Bihar;8450;225,91;1989
+Nagyatád;Somogy;9956;70,6;1971
+Nagybajom;Somogy;3372;108,06;2001
+Nagyecsed;Szabolcs-Szatmár-Bereg;6121;43,85;1997
+Nagyhalász;Szabolcs-Szatmár-Bereg;5476;44,3;1993
+Nagykálló;Szabolcs-Szatmár-Bereg;9168;68,52;1989
+Nagykanizsa;Zala;46049;148,4;1885 előtt
+Nagykáta;Pest;12303;81,61;1989
+Nagykőrös;Pest;23538;227,94;1885 előtt
+Nagymányok;Tolna;2150;10,68;2009
+Nagymaros;Pest;4968;34,37;1996
+Nyékládháza;Borsod-Abaúj-Zemplén;4886;24,67;2003
+Nyergesújfalu;Komárom-Esztergom;7343;39,63;1989
+Nyíradony;Hajdú-Bihar;7559;96,57;1992
+Nyírbátor;Szabolcs-Szatmár-Bereg;11587;66,74;1973
+Nyírbogát;Szabolcs-Szatmár-Bereg;3040;55,35;2021
+Nyíregyháza;Szabolcs-Szatmár-Bereg;116814;274,54;1885 előtt
+Nyírlugos;Szabolcs-Szatmár-Bereg;2529;58,39;2005
+Nyírmada;Szabolcs-Szatmár-Bereg;4768;38,8;2009
+Nyírtelek;Szabolcs-Szatmár-Bereg;6472;67,92;2005
+Ócsa;Pest;9543;81,66;2005
+Onga;Borsod-Abaúj-Zemplén;4882;31,49;2013
+Orosháza;Békés;26874;202,22;1946
+Oroszlány;Komárom-Esztergom;18187;75,86;1954
+Ózd;Borsod-Abaúj-Zemplén;31748;91,8;1949
+Őrbottyán;Pest;7676;27,38;2013
+Őriszentpéter;Vas;1144;33,56;2005
+Örkény;Pest;4938;36,44;2004
+Pacsa;Zala;1560;22,71;2009
+Paks;Tolna;18489;154,08;1978
+Pálháza;Borsod-Abaúj-Zemplén;1002;6,75;2005
+Pannonhalma;Győr-Moson-Sopron;4106;29,57;2000
+Pápa;Veszprém;30330;91,64;1885 előtt
+Pásztó;Nógrád;9114;72,6;1984
+Pécel;Pest;16537;43,63;1996
+Pécs;Baranya;141843;162,78;1885 előtt
+Pécsvárad;Baranya;3965;36,03;1993
+Pétervására;Heves;2028;33,87;1989
+Pilis;Pest;11816;47,35;2005
+Piliscsaba;Pest;8723;25,57;2013
+Pilisvörösvár;Pest;14444;24,3;1997
+Polgár;Hajdú-Bihar;7958;97,45;1993
+Polgárdi;Fejér;6908;72,16;1997
+Pomáz;Pest;17504;49,03;2000
+Pusztaszabolcs;Fejér;5840;51,67;2008
+Putnok;Borsod-Abaúj-Zemplén;6464;34,72;1989
+Püspökladány;Hajdú-Bihar;13834;186,94;1986
+Rácalmás;Fejér;4710;40,64;2009
+Ráckeve;Pest;10800;64,09;1989
+Rakamaz;Szabolcs-Szatmár-Bereg;4289;42,63;2000
+Rákóczifalva;Jász-Nagykun-Szolnok;5329;35,94;2009
+Répcelak;Vas;2640;13,82;2001
+Rétság;Nógrád;2684;19,81;1989
+Rudabánya;Borsod-Abaúj-Zemplén;2290;16,46;2008
+Sajóbábony;Borsod-Abaúj-Zemplén;2542;13,43;2009
+Sajószentpéter;Borsod-Abaúj-Zemplén;11133;34,85;1989
+Salgótarján;Nógrád;32982;97,97;1922
+Sándorfalva;Csongrád-Csanád;8176;55,77;2005
+Sárbogárd;Fejér;11787;189,33;1986
+Sarkad;Békés;9465;125,57;1989
+Sárospatak;Borsod-Abaúj-Zemplén;11387;139,09;1968
+Sárvár;Vas;15301;64,65;1968
+Sásd;Baranya;2964;14,88;1995
+Sátoraljaújhely;Borsod-Abaúj-Zemplén;13802;73,45;1899
+Sellye;Baranya;2405;25,18;1997
+Siklós;Baranya;8826;50,92;1977
+Simontornya;Tolna;3783;33,83;1995
+Siófok;Somogy;25822;124,66;1968
+Solt;Bács-Kiskun;6075;132,67;1997
+Soltvadkert;Bács-Kiskun;7175;108,86;1993
+Sopron;Győr-Moson-Sopron;63065;169,04;1885 előtt
+Sülysáp;Pest;8688;47,19;2013
+Sümeg;Veszprém;6004;64,14;1984
+Szabadszállás;Bács-Kiskun;6048;164,62;1995
+Szarvas;Békés;15440;161,57;1966
+Százhalombatta;Pest;17834;28,06;1970
+Szécsény;Nógrád;5554;45,67;1986
+Szeged;Csongrád-Csanád;160258;281;1885 előtt
+Szeghalom;Békés;8526;217,13;1984
+Székesfehérvár;Fejér;96529;170,89;1885 előtt
+Szekszárd;Tolna;31544;96,28;1905
+Szendrő;Borsod-Abaúj-Zemplén;4141;53,56;1996
+Szentendre;Pest;27271;43,82;1885 előtt
+Szentes;Csongrád-Csanád;26655;353,25;1885 előtt
+Szentgotthárd;Vas;8859;67,73;1983
+Szentlőrinc;Baranya;6124;27,81;1996
+Szerencs;Borsod-Abaúj-Zemplén;8543;36,68;1984
+Szigethalom;Pest;18024;9,12;2004
+Szigetszentmiklós;Pest;40105;45,65;1986
+Szigetvár;Baranya;10287;39,52;1966
+Szikszó;Borsod-Abaúj-Zemplén;5239;36,23;1989
+Szob;Pest;2527;17,97;2000
+Szolnok;Jász-Nagykun-Szolnok;70554;187,24;1885 előtt
+Szombathely;Vas;78591;97,5;1885 előtt
+Tab;Somogy;4218;25,86;1989
+Tamási;Tolna;7852;111,95;1984
+Tápiószele;Pest;5894;36,99;2009
+Tapolca;Veszprém;14861;63,45;1966
+Tát;Komárom-Esztergom;5325;12,06;2013
+Tata;Komárom-Esztergom;23465;78,14;1954
+Tatabánya;Komárom-Esztergom;66141;91,42;1947
+Téglás;Hajdú-Bihar;6251;38,33;1991
+Tét;Győr-Moson-Sopron;4238;56,36;2001
+Tiszacsege;Hajdú-Bihar;4520;136,4;2000
+Tiszaföldvár;Jász-Nagykun-Szolnok;10401;80,34;1993
+Tiszafüred;Jász-Nagykun-Szolnok;10604;162,19;1984
+Tiszakécske;Bács-Kiskun;12132;133,27;1986
+Tiszalök;Szabolcs-Szatmár-Bereg;5186;58,68;1992
+Tiszaújváros;Borsod-Abaúj-Zemplén;14912;46,04;1966
+Tiszavasvári;Szabolcs-Szatmár-Bereg;12313;128,55;1986
+Tokaj;Borsod-Abaúj-Zemplén;3924;28,2;1986
+Tolna;Tolna;10906;71,07;1989
+Tompa;Bács-Kiskun;4250;81,57;2004
+Tótkomlós;Békés;5552;125,05;1993
+Tököl;Pest;10331;38,49;2001
+Törökbálint;Pest;14189;29,41;2007
+Törökszentmiklós;Jász-Nagykun-Szolnok;19576;185,16;1952
+Tura;Pest;7706;55,92;2001
+Túrkeve;Jász-Nagykun-Szolnok;8054;236,52;1885 előtt
+Újfehértó;Szabolcs-Szatmár-Bereg;12264;140,93;1992
+Újhartyán;Pest;2738;22,44;2013
+Újkígyós;Békés;4884;54,92;2009
+Újszász;Jász-Nagykun-Szolnok;5889;58,2;1997
+Üllő;Pest;12522;48,1;2005
+Vác;Pest;33091;61,6;1885 előtt
+Vaja;Szabolcs-Szatmár-Bereg;3528;28,61;2009
+Vámospércs;Hajdú-Bihar;5205;58,19;2001
+Várpalota;Veszprém;19518;77,26;1951
+Vásárosnamény;Szabolcs-Szatmár-Bereg;8318;65,67;1978
+Vasvár;Vas;4151;55,1;1986
+Vecsés;Pest;21311;36,17;2001
+Velence;Fejér;6787;33,37;2004
+Vép;Vas;3281;32,89;2009
+Veresegyház;Pest;19827;28,68;1999
+Verpelét;Heves;3781;53,18;2013
+Veszprém;Veszprém;59119;126,92;1885 előtt
+Vésztő;Békés;6395;125,7;2001
+Villány;Baranya;2207;22,02;2000
+Visegrád;Pest;1841;33,27;2000
+Záhony;Szabolcs-Szatmár-Bereg;4315;6,94;1989
+Zalaegerszeg;Zala;56722;102,46;1885
+Zalakaros;Zala;2094;17,17;1997
+Zalalövő;Zala;2853;52,64;2000
+Zalaszentgrót;Zala;6113;74,65;1984
+Zamárdi;Somogy;2542;45,15;2008
+Zirc;Veszprém;6762;37,4;1984
+Zsámbék;Pest;5647;33,66;2009
