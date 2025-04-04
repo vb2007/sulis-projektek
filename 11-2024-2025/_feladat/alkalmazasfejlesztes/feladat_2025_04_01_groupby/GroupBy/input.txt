@@ -1,0 +1,13 @@
+11.b;András;közép;54
+11.b;Béla;közép;88
+11.a;Cili;közép;43
+11.a;Dani;emelt;95
+11.a;Edit;emelt;78
+11.c;József;emelt;69
+11.c;Ferenc;közép;53
+11.b;András;közép;62
+11.b;László;emelt;75
+11.a;Kristóf;emelt;98
+11.c;Virág;közép;96
+11.c;Sándor;emelt;97
+11.d;Ani;emelt;95
