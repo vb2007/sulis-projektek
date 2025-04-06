@@ -1,5 +1,8 @@
 "use strict";
 
+// Először azt hittem, hogy JS DOM-al kell megoldani a form készítést is...
+// A releváns kód az index.html fájlban található, a <form> elem alatt.
+
 // const main = document.querySelector("main");
 
 // const form = document.createElement("form");
@@ -125,9 +128,15 @@ function showError(message) {
     dialog.showModal();
 }
 
-document.querySelector("form").addEventListener("submit", (event) => {
-    event.preventDefault();
+//elntűnteti a dialogot, ha "OK" gombra nyom a felhasználó. alapból nem volt benne sem a leírásban, sem az alap kódban, de ezzel működik
+document.querySelector("dialog form").addEventListener("submit", () => {
+    const dialog = document.querySelector("dialog");
+    dialog.close();
+});
 
+document.querySelector("form button[type='submit']").addEventListener("click", function(event) {
+    event.preventDefault();
+    
     if (validateForm()) {
         const name = document.getElementById("name").value.trim();
         const quantity = parseInt(document.getElementById("quantity").value, 10);
@@ -136,9 +145,10 @@ document.querySelector("form").addEventListener("submit", (event) => {
         const status = document.querySelector('input[name="status"]:checked').value;
 
         const newItem = { name, qty: quantity, person, date, quality: status };
+        //habár nincs sok értelme, mivel frontendről nem tudunk hozzáférni a mentett fájlokhoz és módosítani őket, de a feladatban benne volt, hogy a JS fájlban tároljuk el az új bejegyzést
+        //ha frissül az oldal, az új bejegyzés így is el fog veszni
         items.push(newItem);
 
-        const tbody = document.querySelector("table tbody");
         const row = document.createElement("tr");
 
         const nameCell = document.createElement("td");
@@ -160,8 +170,9 @@ document.querySelector("form").addEventListener("submit", (event) => {
         qualityCell.textContent = newItem.quality;
 
         row.append(nameCell, qtyCell, personCell, dateCell, qualityCell);
-        tbody.append(row);
-
+        
+        document.querySelector("table tbody").append(row);
+        
         document.querySelector("form").reset();
         document.querySelector('input[name="status"][value="Közepes"]').checked = true;
     }
