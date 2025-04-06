@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="hu">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Leltár</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <script src="assets/js/data.js" defer></script>
+    <script src="assets/js/main.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <a href="#">Leltár</a>
+        </nav>
+    </header>
+
+    <dialog>
+        <p>Hibás adat!</p>
+        <form method="dialog">
+            <button autofocus>OK</button>
+        </form>
+    </dialog>
+    
+    <main>
+        <form>
+            <label for="name">Név:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="quantity">Darabszám:</label>
+            <input type="number" id="quantity" name="quantity" min="1" required>
+
+            <label for="person">Bejegyző:</label>
+            <select id="person" name="person" required>
+                <option value="" disabled selected>Válassza ki a személyt...</option>
+            </select>
+
+            <label for="date">Dátum:</label>
+            <input type="date" id="date" name="date" required>
+
+            <fieldset>
+                <legend>Állapot:</legend>
+                <label>
+                    <input type="radio" name="status" value="Nagyon rossz"> Nagyon rossz
+                </label>
+                <label>
+                    <input type="radio" name="status" value="Rossz"> Rossz
+                </label>
+                <label>
+                    <input type="radio" name="status" value="Közepes" checked> Közepes
+                </label>
+                <label>
+                    <input type="radio" name="status" value="Jó"> Jó
+                </label>
+                <label>
+                    <input type="radio" name="status" value="Nagyon jó"> Nagyon jó
+                </label>
+            </fieldset>
+
+            <button type="submit">Felvétel</button>
+        </form>
+
+        <div>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Megnevezés</th>
+                        <th>Darabszám</th>
+                        <th>Bejegyezte</th>
+                        <th>Dátum</th>
+                        <th>Állapot</th>
+                    </tr>
+                </thead>
+                <tbody>
+                </tbody>
+            </table>
+        </div>
+    </main>
+</body>
+
+</html>
