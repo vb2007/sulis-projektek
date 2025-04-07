@@ -23,9 +23,10 @@ registrationForm.addEventListener('submit', function(e) {
         
         alert('Sikeres regisztráció!');
         
-        if (usersTableContainer.innerHTML !== '') {
-            displayUsers();
-        }
+        //ki van kommentelve, hogy legyen értelme a refresh gombnak
+        // if (usersTableContainer.innerHTML !== '') {
+        //     displayUsers();
+        // }
     }
 });
 
