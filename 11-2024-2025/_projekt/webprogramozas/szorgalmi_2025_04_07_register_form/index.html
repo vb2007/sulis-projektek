@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Regisztrációs Oldal</title>
+    <link rel="stylesheet" href="asset/style.css">
+    <!-- JS importálás az oldal alján -->
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <h1>Regisztrációs Rendszer</h1>
+        <p>Felhasználói adatgyűjtő oldal</p>
+    </header>
+    <!-- Main -->
+    <main class="container">
+        <div class="form-container">
+            <h2>Új felhasználó regisztrálása</h2>
+            <form id="registrationForm">
+                <div class="form-group">
+                    <label for="email">Email cím *</label>
+                    <input type="email" id="email" name="email" required>
+                    <div id="emailError" class="error"></div>
+                </div>
+                <div class="form-group">
+                    <label for="password">Jelszó *</label>
+                    <input type="password" id="password" name="password" required>
+                    <div id="passwordError" class="error"></div>
+                </div>
+                <div class="form-group">
+                    <label for="name">Teljes név *</label>
+                    <input type="text" id="name" name="name" required>
+                    <div id="nameError" class="error"></div>
+                </div>
+                <div class="form-group">
+                    <label for="birthdate">Születési dátum *</label>
+                    <input type="date" id="birthdate" name="birthdate" required>
+                    <div id="birthdateError" class="error"></div>
+                </div>
+                <div class="form-group">
+                    <label for="group">Válaszd ki az osztályod *</label>
+                    <select id="group" name="group" required>
+                        <option value="">-- Válassz osztályt --</option>
+                        <optgroup label="Alsó tagozat">
+                            <option value="1A">1.A osztály</option>
+                            <option value="2A">2.A osztály</option>
+                            <option value="3A">3.A osztály</option>
+                            <option value="4A">4.A osztály</option>
+                        </optgroup>
+                        <optgroup label="Felső tagozat">
+                            <option value="5A">5.A osztály</option>
+                            <option value="6A">6.A osztály</option>
+                            <option value="7A">7.A osztály</option>
+                            <option value="8A">8.A osztály</option>
+                        </optgroup>
+                        <optgroup label="Gimnázium">
+                            <option value="9A">9.A osztály</option>
+                            <option value="10A">10.A osztály</option>
+                            <option value="11A">11.A osztály</option>
+                            <option value="12A">12.A osztály</option>
+                        </optgroup>
+                    </select>
+                    <div id="groupError" class="error"></div>
+                </div>
+                <button type="submit" id="submitBtn">Regisztráció</button>
+            </form>
+        </div>
+        <div class="results-container">
+            <h2>Regisztrált felhasználók</h2>
+            <div class="button-group">
+                <button id="showBtn">Felhasználók megjelenítése</button>
+                <button id="hideBtn">Felhasználók elrejtése</button>
+                <button id="refreshBtn">Adatok frissítése</button>
+            </div>
+            <div id="usersTableContainer"></div>
+        </div>
+    </main>
+    <!-- Footer -->
+    <footer>
+        <!-- &copy; = copyright ikon -->
+        <p>&copy; 2025 Regisztrációs Oldal - <i>Barna Goblinoknak</i> Tilos A Használat</p>
+    </footer>
+    <!-- JS Import -->
+    <script src="asset/main.js"></script>
+</body>
+</html>
