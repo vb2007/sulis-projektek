@@ -1,0 +1,101 @@
+Hegycsúcs neve;Hegység;Magasság
+Ágasvár;Mátra;789
+Bálvány;Bükk-vidék;956
+Büszkés-hegy;Bükk-vidék;952
+Cserepes-kő;Bükk-vidék;823
+Csikorgó;Bükk-vidék;778
+Csóványos;Börzsöny;938
+Darázs-hegy;Mátra;834
+Esztea-fő;Bükk-vidék;797
+Fekete-Sár-bérc;Bükk-vidék;930
+Felső-Borovnyák (2);Bükk-vidék;932
+Felső-Borovnyák (1);Bükk-vidék;945
+Fodor-hegy;Bükk-vidék;931
+Füstös-kő-bérc;Bükk-vidék;912
+Galya-tető;Mátra;964
+Galya-vár;Mátra;837
+Gergely-hegy;Zempléni-hegység;783
+Győr-hegy;Mátra;831
+Hangyás-bérc (1);Börzsöny;863
+Hangyás-bérc (2);Börzsöny;854
+Hármas-határ-hegy;Kőszegi-hegység;795
+Három-kő;Bükk-vidék;904
+Hegyes-kő;Bükk-vidék;792
+Hermanház-tető;Zempléni-hegység;884
+Hosszú-bérc;Bükk-vidék;820
+Huta-bérc;Bükk-vidék;920
+Írott-kő;Kőszegi-hegység;882
+Ispán-hegy;Bükk-vidék;912
+Istállós-kő;Bükk-vidék;958
+Kékes;Mátra;1014
+Kerek-hegy;Bükk-vidék;827
+Kerek-hegy;Bükk-vidék;790
+Kerek-réti-fő;Bükk-vidék;880
+Kis-Átal-kő;Mátra;787
+Kis-kő;Mátra;787
+Kis-kő-hát;Bükk-vidék;939
+Kis-Sár-bérc;Bükk-vidék;925
+Kis-Sas-kő;Mátra;830
+Kis-tanya;Bükk-vidék;916
+Kis-Virágos-hegy;Bükk-vidék;868
+Korom-bérc;Börzsöny;825
+Kőris-hegy;Bükk-vidék;944
+Kőrös-bérc;Bükk-vidék;956
+Köves-orom;Mátra;787
+Közép-bérc (1);Bükk-vidék;807
+Közép-bérc (2);Bükk-vidék;804
+Kukocsó-hegy;Bükk-vidék;941
+Kút-hegy;Mátra;878
+Küllő-hegy;Bükk-vidék;899
+Leány-hegy;Bükk-vidék;892
+Legyendi-galya;Mátra;936
+Magos-fa;Börzsöny;916
+Messzelátó;Bükk-vidék;855
+Mogyorós-orom;Mátra;838
+Muzsla;Mátra;806
+Nagy-Átal-kő;Mátra;823
+Nagy-Csipkés-tető;Bükk-vidék;869
+Nagy-Csipkés-tető (3);Bükk-vidék;843
+Nagy-Dél (1);Bükk-vidék;821
+Nagy-Dél (2);Bükk-vidék;799
+Nagy-Dél (3);Bükk-vidék;787
+Nagy-Hárs;Bükk-vidék;840
+Nagy-Hideg-hegy;Börzsöny;864
+Nagy-Inóc;Börzsöny;826
+Nagy-Kopasz;Bükk-vidék;903
+Nagy-kő-hát (1);Bükk-vidék;946
+Nagy-kő-hát (2);Bükk-vidék;936
+Nagy-Kőris;Bükk-vidék;822
+Nagy-Milic;Zempléni-hegység;895
+Nyárju-hegy (1);Bükk-vidék;889
+Nyárju-hegy (2);Bükk-vidék;885
+Nyesett-vár;Mátra;813
+Őr-kő (2);Bükk-vidék;855
+Őr-kő (1);Bükk-vidék;880
+Pes-kő;Bükk-vidék;857
+Péter hegyese;Mátra;960
+Pezsgő-kő;Mátra;971
+Piszkés-tető;Mátra;944
+Pogányvár;Börzsöny;823
+Remete-hegy;Zempléni-hegység;894
+Sándor-hegy;Bükk-vidék;870
+Sas-kő;Mátra;898
+Semmi-bérc;Bükk-vidék;906
+Som-tető;Mátra;783
+Szilvási-kő;Bükk-vidék;961
+Tányéros-töbör;Bükk-vidék;958
+Tar-kő;Bükk-vidék;950
+Teréz-hegy;Mátra;792
+Tót-hegyes;Mátra;814
+Tölgyes-bérc;Mátra;799
+Vadkert-tető;Mátra;834
+Vargai-Kurta-bérc (1);Bükk-vidék;821
+Vargai-Kurta-bérc (2);Bükk-vidék;819
+Varsa-tető;Börzsöny;871
+Veres-Sár-bérc;Bükk-vidék;912
+Virágos-sár (2);Bükk-vidék;950
+Virágos-Sár-hegy;Bükk-vidék;955
+Zsérci-Nagy-Dél (1);Bükk-vidék;879
+Zsérci-Nagy-Dél (2);Bükk-vidék;877
+Zsérci-Nagy-Dél (3);Bükk-vidék;859
+Zsérci-Nagy-Dél (4);Bükk-vidék;850
