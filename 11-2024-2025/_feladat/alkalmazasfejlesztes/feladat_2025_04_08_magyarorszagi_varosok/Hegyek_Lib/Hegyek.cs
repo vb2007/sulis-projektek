@@ -15,7 +15,11 @@
         public int HegyekSzama => hegyek.Count;
         public Hegy Legalacsonyabb => hegyek.MinBy(h => h.Magassag);
         public double AtlagMagassag => Math.Round(hegyek.Average(h => h.Magassag), 1);
-        public int HegysegbenHegycsucs(string hegysegNeve) => hegyek.Count(x => x.Hegyseg == hegysegNeve);
+        public int HegysegbenHegycsucsokSzama(string hegysegNeve) => hegyek.Count(x => x.Hegyseg == hegysegNeve);
+        public int HegysegNevebenSzoSzama(string szo) => hegyek.Count(x => x.Hegycsucs.Contains(szo, StringComparison.OrdinalIgnoreCase));
+
+        private List<string> HegysegekNevei => new List<string>(hegyek.Select(x => x.Hegyseg).Distinct().OrderBy(x => x).ToList());
+        public string HegysegekNeveiString => string.Join("; ", HegysegekNevei);
 
         public int ErteknelMagasabbakSzama(double magassag) => hegyek.Count(x => x.LabraValtas > magassag);
         public IEnumerable<Hegy> SorbaRendezett => hegyek.OrderByDescending(x => x.Magassag);

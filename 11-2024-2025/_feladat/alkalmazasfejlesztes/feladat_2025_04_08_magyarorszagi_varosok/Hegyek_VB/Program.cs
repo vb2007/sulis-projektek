@@ -15,7 +15,11 @@ namespace Hegyek_VB
 
             Console.WriteLine($"4. feladat: A hegycsúcsok átlagos magassága: {hegyek.AtlagMagassag} m");
 
-            Console.WriteLine($"5. feladat: A Mátrában {hegyek.HegysegbenHegycsucs("Mátra")} db hegycsúcs található.");
+            Console.WriteLine($"5. feladat: A Mátrában {hegyek.HegysegbenHegycsucsokSzama("Mátra")} db hegycsúcs található.");
+
+            Console.WriteLine($"6. feladat: {hegyek.HegysegNevebenSzoSzama("bérc")} hegycsúcs nevében szerepel a \"bérc\" szó.");
+
+            Console.WriteLine($"7. feladat: A hegységek nevei: {hegyek.HegysegekNeveiString}");
 
             Console.WriteLine($"8. feladat: A 3000 lábnál magasabb hegyek száma: {hegyek.ErteknelMagasabbakSzama(3000)} db");
 
@@ -26,7 +30,7 @@ namespace Hegyek_VB
             {
                 List<string> kigyujtott = new List<string>();
 
-                foreach (var item in hegyek.SorbaRendezett.Take(darabszam))
+                foreach (Hegy item in hegyek.SorbaRendezett.Take(darabszam))
                 {
                     kigyujtott.Add(item.ToString());
                 }

@@ -19,7 +19,7 @@
         public double LabraValtas => Magassag * 3.280839895;
         public override string ToString()
         {
-            return $"{Magassag} m - {Hegycsucs}: {Hegycsucs}";
+            return $"{Magassag} m - {Hegyseg}: {Hegycsucs}";
         }
     }
 }
