@@ -8,7 +8,7 @@ namespace Hegyek_VB
         {
             Hegyek hegyek = new(File.ReadLines("hegyekMo.txt").Skip(1));
 
-            Console.WriteLine($"2. feladat: {hegyek} db hegy adatai találhatók a fájlban.");
+            Console.WriteLine($"2. feladat: {hegyek.HegyekSzama} db hegy adatai találhatók a fájlban.");
 
             Hegy legalacsonyabb = hegyek.Legalacsonyabb;
             Console.WriteLine($"3. feladat: A legalacsonyabb hegy: {legalacsonyabb.Hegycsucs} ({legalacsonyabb.Hegyseg}), {legalacsonyabb.Magassag} m");
@@ -19,6 +19,7 @@ namespace Hegyek_VB
 
             Console.WriteLine($"8. feladat: A 3000 lábnál magasabb hegyek száma: {hegyek.ErteknelMagasabbakSzama(3000)} db");
 
+            //9. feladat
             Fajlbairas(3);
 
             void Fajlbairas(int darabszam)
