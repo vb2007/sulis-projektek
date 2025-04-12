@@ -11,4 +11,10 @@
     <ProjectReference Include="..\VB2018_VB_Lib\VB2018_VB_Lib.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <None Update="vb2018.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
 </Project>
