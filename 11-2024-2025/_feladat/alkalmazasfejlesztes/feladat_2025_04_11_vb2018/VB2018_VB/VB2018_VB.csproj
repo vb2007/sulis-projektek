@@ -7,4 +7,8 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\VB2018_VB_Lib\VB2018_VB_Lib.csproj" />
+  </ItemGroup>
+
 </Project>
