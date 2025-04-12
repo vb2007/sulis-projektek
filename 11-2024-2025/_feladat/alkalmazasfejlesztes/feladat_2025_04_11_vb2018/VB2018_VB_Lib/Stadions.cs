@@ -11,5 +11,9 @@
                 stadions.Add(new Stadion(item));
             }
         }
+
+        public int NumberOfStadions => stadions.Count;
+
+        public Stadion StadionWithLeastCapacity => stadions.MinBy(x => x.Capacity);
     }
 }
