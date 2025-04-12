@@ -3,8 +3,29 @@
     public class Stadion
     {
         public string City { get; init; }
+
         public string Name1 { get; init; }
-        public string Name2 { get; init; }
+
+        private string name2;
+        public string Name2
+        {
+            get
+            {
+                return name2;
+            }
+            set
+            {
+                if (value == "n.a.")
+                {
+                    name2 = String.Empty;
+                }
+                else
+                {
+                    name2 = value;
+                }
+            }
+        }
+
         public int Capacity { get; init; }
 
         public Stadion(string dataLines)
