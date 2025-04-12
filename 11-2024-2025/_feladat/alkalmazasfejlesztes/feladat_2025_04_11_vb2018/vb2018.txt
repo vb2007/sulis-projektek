@@ -1,0 +1,13 @@
+varos;nev1;nev2;ferohely
+Moszkva;Luzsnyiki Stadion;n.a.;78011
+Moszkva;Otkrityije Aréna;Szpartak Stadion;44190
+Szentpétervár;Kresztovszkij Stadion;Szentpétervári Stadion;64468
+Szocsi;Fist Olimpiai Stadion;Olimpiai Stadion;47659
+Szamara;Szamara Aréna;Koszmosz Aréna;41970
+Kazán;Kazán Aréna;n.a.;42873
+Rosztov-na-Donu;Rosztov Aréna;n.a.;43472
+Volgográd;Volgográd Aréna;n.a.;43713
+Nyizsnyij Novgorod;Nyizsnyij Novgorod Stadion;n.a.;43319
+Jekatyerinburg;Központi stadion;Jekatyerinburg Aréna;33061
+Szaranszk;Mordóvia Aréna;n.a.;41685
+Kalinyingrád;Kalinyingrád Stadion;n.a.;33973
