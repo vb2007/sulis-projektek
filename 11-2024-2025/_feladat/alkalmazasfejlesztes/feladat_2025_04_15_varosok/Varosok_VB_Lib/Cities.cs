@@ -28,11 +28,20 @@
 
         public City CityWithLargestPopulation => citiesList.MaxBy(x => x.Population);
 
-        //public bool IsThereSuchACountry(string country) =>
-        //    citiesList.Contains(x => x.Country);
+        public bool IsThereACityFromThatCountry(string country) =>
+            citiesList.Any(x => x.Country.Equals(country, StringComparison.OrdinalIgnoreCase));
 
-        public int NumberOfCitiesWithGivenPopulation(int millions) =>
-            citiesList.Count(x => x.Population >= millions * 1000000);
+        private List<string> CitiesFromThatCountry(string country) =>
+            citiesList
+                .Where(x => x.Country.Equals(country, StringComparison.OrdinalIgnoreCase))
+                .Select(x => x.Name)
+                .OrderBy(x => x)
+                .ToList();
+
+        public string CitiesFromThatCountryString(string country) => string.Join(';', CitiesFromThatCountry(country));
+
+        public int NumberOfCitiesWithGivenPopulation(int tousands) =>
+            citiesList.Count(x => x.Population >= tousands * 1000);
 
         public IEnumerable<City> MostPopulatedCities(int count) =>
             citiesList.OrderByDescending(x => x.Population).Take(count);

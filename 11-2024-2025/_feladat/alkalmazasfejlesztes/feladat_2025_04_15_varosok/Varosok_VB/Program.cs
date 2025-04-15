@@ -24,9 +24,14 @@ internal class Program
         City cityWithLargestPopulation = cities.CityWithLargestPopulation;
         Console.WriteLine($"5. feladat: A legnagyobb lakosságú város adatai:\n\tNév: {cityWithLargestPopulation.Name}\n\tOrszág: {cityWithLargestPopulation.Country}\n\tLakosság: {cityWithLargestPopulation.ThousandPeople} ezer fő");
 
-        Console.Write($"8. feladat: Adja meg legalább hány millió lakossal rendelkező városok számára kíváncsi: ");
-        int millions = int.Parse(Console.ReadLine()!);
-        Console.WriteLine($"\tA legalább {millions} millió lakossal rendelkező városok száma: {cities.NumberOfCitiesWithGivenPopulation(millions)} db");
+        Console.WriteLine($"6. feladat: {(cities.IsThereACityFromThatCountry("Magyarország") ? "Van" : "Nincs")} magyar város az adatok között");
+
+        //Kínai városok nevei
+        Console.WriteLine($"7. feladat: {cities.CitiesFromThatCountryString("Kína")}");
+
+        Console.Write($"8. feladat: Adja meg legalább hány ezer lakossal rendelkező városok számára kíváncsi: ");
+        int thousands = int.Parse(Console.ReadLine()!);
+        Console.WriteLine($"\tA legalább {thousands} ezer lakossal rendelkező városok száma: {cities.NumberOfCitiesWithGivenPopulation(thousands)} db");
 
         //10. feladat
         void WriteToFile(string fileName)
