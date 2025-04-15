@@ -1,0 +1,79 @@
+:root {
+    --blue: rgb(135 208 225);
+    --yellow: rgb(231 198 66);
+    --green: rgb(77 168 60);
+}
+
+/* Gyémánt emoji: 💎 */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+header {
+    background-image: url('../images/banner.png');
+    background-size: cover;
+    background-position: center;
+    height: 360px;
+}
+
+main {
+    width: 95%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0.5rem;
+    
+}
+
+h1, h2 {
+    font-family: Impact;
+    margin-top: 1rem;
+}
+
+h1 {
+    margin-bottom: 1rem;
+    font-size: 2rem;
+    text-align: center;
+}
+
+h2 {
+    margin-bottom: 0.5rem;
+}
+
+p {
+    text-align: justify;
+    line-height: 1.5;
+    margin-bottom: 0.5rem;
+}
+
+video {
+    width: 100%;
+    border-radius: 1rem;
+}
+
+#quote {
+    margin-bottom: 1rem;
+}
+
+#quote-card {
+    margin: 0 auto;
+}
+
+form {
+    max-width: 18rem;
+    margin-inline: auto;
+    margin-bottom: 1rem;
+}
+
+footer {
+    text-align: center;
+    padding: 2rem;
+    background-color: var(--yellow);
+}
+
+.hidden {
+    display: none;
+}
