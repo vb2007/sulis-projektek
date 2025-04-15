@@ -37,11 +37,18 @@
                 .Select(x => x.Name)
                 .OrderBy(x => x)
                 .ToList();
-
         public string CitiesFromThatCountryString(string country) => string.Join(';', CitiesFromThatCountry(country));
 
         public int NumberOfCitiesWithGivenPopulation(int tousands) =>
             citiesList.Count(x => x.Population >= tousands * 1000);
+
+        private List<string> Countries => 
+            citiesList
+                .Select(x => x.Country)
+                .Distinct()
+                .OrderBy(x => x)
+                .ToList();
+        public string CountriesString => string.Join(';', Countries);
 
         public IEnumerable<City> MostPopulatedCities(int count) =>
             citiesList.OrderByDescending(x => x.Population).Take(count);

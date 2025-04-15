@@ -6,10 +6,10 @@ internal class Program
     {
         Cities cities = new(File.ReadAllLines("varosok.csv").Skip(1));
 
-        foreach (City city in cities.List)
-        {
-            Console.WriteLine(city);
-        }
+        //foreach (City city in cities.List)
+        //{
+        //    Console.WriteLine(city);
+        //}
 
         Console.WriteLine($"2. feladat: Városok száma évenként:");
         foreach (var item in cities.NumberOfCitiesByYear)
@@ -32,6 +32,9 @@ internal class Program
         Console.Write($"8. feladat: Adja meg legalább hány ezer lakossal rendelkező városok számára kíváncsi: ");
         int thousands = int.Parse(Console.ReadLine()!);
         Console.WriteLine($"\tA legalább {thousands} ezer lakossal rendelkező városok száma: {cities.NumberOfCitiesWithGivenPopulation(thousands)} db");
+
+        //Országok nevei csak egyszer, abc sorrendben
+        Console.WriteLine($"9. feladat: {cities.CountriesString}");
 
         //10. feladat
         void WriteToFile(string fileName)
