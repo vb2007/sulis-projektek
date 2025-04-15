@@ -21,9 +21,9 @@ internal class Program
 
         Console.WriteLine($"4. feladat: Indiai nagyvárosok lakosságának összege: {cities.TotalPopulationByCountryName("India")} fő");
 
-        Console.Write($"8. feladat: Adja meg hány milliós városok számára kíváncsi: ");
+        Console.Write($"8. feladat: Adja meg legalább hány millió lakossal rendelkező városok számára kíváncsi: ");
         int millions = int.Parse(Console.ReadLine()!);
-        Console.WriteLine($"\tA legalább {millions} millió lakosú városok száma: {cities.NumberOfCitiesWithGivenPopulation(millions)} db");
+        Console.WriteLine($"\tA legalább {millions} millió lakossal rendelkező városok száma: {cities.NumberOfCitiesWithGivenPopulation(millions)} db");
 
         //10. feladat
         void WriteToFile(string fileName)
@@ -36,7 +36,7 @@ internal class Program
             }
 
             streamWriter.Close();
-            Console.WriteLine($"10. feladat: Adatok sikeresen kiírva a \"{fileName}\" fájlba.");
+            Console.WriteLine($"10. feladat: Adatok sikeresen kiírva a(z) \"{fileName}\" fájlba.");
         }
 
         WriteToFile("otlegnagyobb.txt");

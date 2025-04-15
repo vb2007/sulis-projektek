@@ -11,6 +11,7 @@
         public City(string line)
         {
             string[] splitted = line.Split(';');
+
             Name = splitted[0];
             Country = splitted[1];
             Population = double.Parse(splitted[2]);

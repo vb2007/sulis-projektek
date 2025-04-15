@@ -31,7 +31,7 @@
         //    citiesList.Contains(x => x.Country);
 
         public int NumberOfCitiesWithGivenPopulation(int millions) =>
-            citiesList.Count(x => x.Population >= millions);
+            citiesList.Count(x => x.Population >= millions * 1000000);
 
         public IEnumerable<City> MostPopulatedCities(int count) =>
             citiesList.OrderByDescending(x => x.Population).Take(count);
