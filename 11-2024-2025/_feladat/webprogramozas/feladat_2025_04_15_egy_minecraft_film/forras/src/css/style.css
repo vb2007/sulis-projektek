@@ -25,10 +25,10 @@ main {
     max-width: 1200px;
     margin: 0 auto;
     padding: 0.5rem;
-    background-color: rgba(from var(--blue) r g b / 0.4);
+    background-color: rgba(from var(--blue) r g b / 0.6);
 }
 
-#intro {
+#intro p {
     text-indent: 1rem;
     font-style: italic;
 }
@@ -138,9 +138,7 @@ button {
 
 button:hover {
     background-color: var(--yellow);
-    size: 1.05px;
-    rotate: 1deg;
-    transition: 0.3s linear;
+    transform: scale(1.05) rotate(1deg);
 }
 
 footer {
