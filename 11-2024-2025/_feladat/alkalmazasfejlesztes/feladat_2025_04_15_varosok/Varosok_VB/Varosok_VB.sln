@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.13.35931.197 d17.13
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Varosok_VB", "Varosok_VB.csproj", "{4455D21C-ACA1-46FD-A109-B344F4F6732B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Varosok_VB_Lib", "..\Varosok_VB_Lib\Varosok_VB_Lib.csproj", "{BFC51FD6-F81C-47EA-852C-73CA84AD184A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{4455D21C-ACA1-46FD-A109-B344F4F6732B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4455D21C-ACA1-46FD-A109-B344F4F6732B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4455D21C-ACA1-46FD-A109-B344F4F6732B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4455D21C-ACA1-46FD-A109-B344F4F6732B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BFC51FD6-F81C-47EA-852C-73CA84AD184A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BFC51FD6-F81C-47EA-852C-73CA84AD184A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BFC51FD6-F81C-47EA-852C-73CA84AD184A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BFC51FD6-F81C-47EA-852C-73CA84AD184A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {628B5762-2CE1-4C32-BA90-4F92ACA196CE}
+	EndGlobalSection
+EndGlobal
