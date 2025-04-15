@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Egy Minecraft Film</title>
+    <link rel="stylesheet" href="src/css/style.css">
+    <script src="src/js/main.js" defer></script>
+</head>
+<body>
+    <header>
+
+    </header>
+    <main>
+        <article id="intro">
+            <h1>Egy Minecraft Film</h1>
+            <p>Négy különc hirtelen egy titokzatos portálon keresztül egy furcsa, kockákból álló csodavilágba kerül, amely képzeletből táplálkozik. Ahhoz, hogy hazajussanak, meg kell tanulniuk uralni ezt a világot, miközben egy váratlanul felbukkanó, mesteremberrel együtt indulnak küldetésre.</p>
+        </article>
+        <article id="about">
+            <h2>A Filmről</h2>
+            <video autoplay loop>
+                <source src="./src/videos/trailer.mp4" type="video/mp4">
+            </video>
+            <p>Az Egy Minecraft Film egy 2025-ös amerikai fantasy-kaland-vígjáték, amelyet a Mojang Studios 2011-es Minecraft videojátéka alapján készített. A filmet Jared Hess rendezte, a forgatókönyvet Chris Bowman, Hubbel Palmer, Neil Widener, Gavin James és Chris Galletta írta, az eredeti történet Allison Schroeder, Bowman és Palmer munkája. A főbb szerepekben Jason Momoa, Jack Black, Danielle Brooks, Emma Myers és Sebastian Hansen láthatók. A filmben négy különc egy portálon keresztül egy kocka alakú világba kerül, és Steve segítségével kell visszajutniuk a valóságba.</p>
+            <p>A Minecraft-filmadaptáció tervei 2014-ben születtek meg, amikor a játék alkotója, Markus Persson bejelentette, hogy a Mojang tárgyalásokat folytat a Warner Bros. Pictures céggel a projekt megvalósításáról. A fejlesztés során a film több rendezőn, produceren és történetváltozaton is keresztülment. 2022-re a Legendary Entertainment is bekapcsolódott a munkába, és Hesse-t nevezték ki rendezőnek, miközben Momoa főszerepére is folytak az egyeztetések. A további szereplőválogatás 2023 májusától 2024 januárjáig zajlott. A fő forgatás még ugyanabban a hónapban kezdődött Új-Zélandon, és 2024 áprilisában fejeződött be. A film zenéjét Mark Mothersbaugh szerezte, a vizuális effekteket pedig a Sony Pictures Imageworks, a Wētā FX és a Digital Domain készítették.</p>
+            <p>Az Egy Minecraft Film világpremierjét 2025. március 30-án tartották Londonban, a Leicester Square-en található Empire moziban, és április 4-én mutatták be világszerte. A kritikusok vegyes értékeléseket adtak: dicsérték a szereplők alakítását, ugyanakkor megosztottak voltak a történet és a játékhoz való hűség kapcsán. A film eddig világszerte 351 millió dollárt hozott a 150 milliós költségvetés ellenében, így 2025 negyedik legnagyobb bevételt hozó filmje lett, és minden idők kilencedik legsikeresebb videojáték-adaptációja.</p>
+        </article>
+        <article id="cast">
+            <h2>Szereplők</h2>
+            <div class="grid">
+                <div>
+                    <img src="src/images/garret.png" alt="Garret">
+                    <h3>Jason Momoa</h3>
+                    <p>(Garrett)</p>
+                </div>
+                <div>
+                    <img src="src/images/steve.png" alt="Steve">
+                    <h3>Jack Black</h3>
+                    <p>(Steve)</p>
+                </div>
+                <div>
+                    <img src="src/images/henry.png" alt="Henry">
+                    <h3>Sebastian Hansen</h3>
+                    <p>(Henry)</p>
+                </div>
+                <div>
+                    <img src="src/images/natalie.png" alt="Natalie">
+                    <h3>Emma Myers</h3>
+                    <p>(Natalie)</p>
+                </div>
+                <div>
+                    <img src="src/images/dawn.png" alt="Dawn">
+                    <h3>Danielle Brooks</h3>
+                    <p>(Dawn)</p>
+                </div>
+                <div>
+                    <img src="src/images/marlene.png" alt="Marlene">
+                    <h3>Jennifer Coolidge</h3>
+                    <p>(Marlene)</p>
+                </div>
+            </div>
+        </article>
+        <article id="quote">
+            <h2>Idézet generátor</h2>
+            <form action="submit">
+                <label for="name">Neved</label>
+                <input type="text" id="name" name="name" maxlength="25" required>
+                <label for="language">Nyelv</label>
+                <select id="language" name="language">
+                    <option value="en">Angol</option>
+                    <option value="hu">Magyar</option>
+                </select>
+                <button type="submit">Generálás!</button>
+            </form>
+            <div id="quote-card" style="width: 18rem;" class="hidden">
+                <img src="" alt="">
+                <div id="quote-card-body"></div>
+            </div>
+        </article>
+        <article id="ticket-sales">
+            <h2>Jegyeladások</h2>
+            <p id="sum"></p>
+        </article>
+    </main>
+    <footer>
+        Készítette: Vágvölgyi Balázs
+    </footer>
+</body>
+</html>
