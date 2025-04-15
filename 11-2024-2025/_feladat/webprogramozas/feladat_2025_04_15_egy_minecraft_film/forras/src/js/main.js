@@ -51,3 +51,20 @@ const quotes = [
 const ticketsSold = [56, 34, 23, 45, 67, 89, 12, 34, 56, 78,];
 
 const selectableLanguages = ['en', 'hu'];
+
+const randomQuote = () => {
+    let randomIndex = Math.floor(Math.random() * quotes.length);
+    return quotes[randomIndex];
+}
+
+const displaySumOfTickets = (sum) => {
+    const sumElement = document.getElementById('sum');
+    sumElement.textContent = `Összesen eladott jegyek száma: ${sum}`;
+};
+
+let sum = 0;
+for (let i = 0; i < ticketsSold.length; i++) {
+    sum += ticketsSold[i];
+}
+
+displaySumOfTickets(sum);
