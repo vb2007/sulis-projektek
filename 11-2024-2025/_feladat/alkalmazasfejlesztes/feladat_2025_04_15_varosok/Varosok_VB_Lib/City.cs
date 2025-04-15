@@ -18,7 +18,7 @@
             Date = DateOnly.Parse(splitted[3]);
         }
 
-        public double ThousandPeople => Population * 1000;
+        public double ThousandPeople => Population / 1000;
 
         public override string ToString()
         {

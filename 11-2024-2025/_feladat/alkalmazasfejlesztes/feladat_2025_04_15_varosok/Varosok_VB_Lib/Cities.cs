@@ -8,7 +8,7 @@
         {
             foreach (var item in dataLines)
             {
-                citiesList.Add(new City(item));
+                citiesList.Add(new (item));
             }
         }
 
@@ -19,13 +19,14 @@
             .ToDictionary(x => x.Key, x => x.Count())
             .OrderBy(x => x.Key).ToDictionary();
 
-        public int NumberOfCities => List.Count();
+        public int NumberOfCities => citiesList.Count();
 
         public int TotalPopulationByCountryName(string countryName) =>
             (int)citiesList
                 .Where(x => x.Country.Equals(countryName, StringComparison.OrdinalIgnoreCase))
                 .Sum(x => x.Population);
 
+        public City CityWithLargestPopulation => citiesList.MaxBy(x => x.Population);
 
         //public bool IsThereSuchACountry(string country) =>
         //    citiesList.Contains(x => x.Country);
