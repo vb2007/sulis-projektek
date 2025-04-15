@@ -68,3 +68,41 @@ for (let i = 0; i < ticketsSold.length; i++) {
 }
 
 displaySumOfTickets(sum);
+
+const submitButton = document.querySelector("#quote button");
+
+submitButton.addEventListener("click", function(event) {
+    event.preventDefault();
+
+    const name = document.getElementById("name").value;
+    const selectedLanguage = document.getElementById("language").value;
+    
+    if (!selectableLanguages.includes(selectedLanguage)) {
+        alert("Hiba: A kiválasztott nyelv nem támogatott!");
+        return;
+    }
+
+    const quote = randomQuote();
+
+    const quoteCard = document.getElementById("quote-card");
+    quoteCard.classList.remove("hidden");
+
+    const quoteImg = document.querySelector("#quote-card img");
+    quoteImg.setAttribute("src", `./src/images/${quote.image}`);
+    quoteImg.setAttribute("alt", "Masszív aurával rendelkező fotográfia a bányabarkács filmből");
+
+    const quoteCardBody = document.getElementById("quote-card-body");
+    quoteCardBody.innerHTML = "";
+
+    const h3 = document.createElement("h3");
+    h3.style.textAlign = "center";
+    h3.textContent = name;
+
+    const p = document.createElement("p");
+
+    p.textContent = selectedLanguage === "en" ? quote.en : quote.hu;
+    p.style.textAlign = "center";
+    p.style.fontStyle = "italic";
+
+    quoteCardBody.append(h3, p);
+});
