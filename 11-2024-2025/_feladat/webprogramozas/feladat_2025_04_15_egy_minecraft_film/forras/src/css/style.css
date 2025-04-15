@@ -25,7 +25,62 @@ main {
     max-width: 1200px;
     margin: 0 auto;
     padding: 0.5rem;
-    
+    background-color: rgba(from var(--blue) r g b / 0.4);
+}
+
+#intro {
+    text-indent: 1rem;
+    font-style: italic;
+}
+
+.grid {
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: 1fr;
+}
+
+.grid h3, .grid p {
+    text-align: center;
+}
+
+.grid h3::after {
+    content: '💎';
+}
+
+.grid img {
+    width: 90%;
+    height: auto;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    filter: grayscale(50%);
+}
+
+.grid img:hover {
+    filter: grayscale(0%);
+}
+
+@media screen and (min-width: 600px) {
+    .grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media screen and (min-width: 900px) {
+    .grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    #about video {
+        width: 60%;
+        float: right;
+        margin-bottom: 0.5rem;
+        margin-left: 0.5rem;
+    }
+}
+
+#quote-card img {
+    width: 100%;
 }
 
 h1, h2 {
@@ -63,9 +118,29 @@ video {
 }
 
 form {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
     max-width: 18rem;
     margin-inline: auto;
     margin-bottom: 1rem;
+}
+
+button {
+    background-color: var(--green);
+    border: none;
+    padding: 0.3rem;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    box-shadow: 2px 2px 4px black;
+    transition: 0.3s linear;
+}
+
+button:hover {
+    background-color: var(--yellow);
+    size: 1.05px;
+    rotate: 1deg;
+    transition: 0.3s linear;
 }
 
 footer {
