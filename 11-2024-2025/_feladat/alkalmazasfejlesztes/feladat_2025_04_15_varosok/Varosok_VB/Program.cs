@@ -16,5 +16,29 @@ internal class Program
         {
             Console.WriteLine($"\t{item.Key} - {item.Value}");
         }
+
+        Console.WriteLine($"3. feladat: Városok száma: {cities.NumberOfCities} db");
+
+        Console.WriteLine($"4. feladat: Indiai nagyvárosok lakosságának összege: {cities.TotalPopulationByCountryName("India")} fő");
+
+        Console.Write($"8. feladat: Adja meg hány milliós városok számára kíváncsi: ");
+        int millions = int.Parse(Console.ReadLine()!);
+        Console.WriteLine($"\tA legalább {millions} millió lakosú városok száma: {cities.NumberOfCitiesWithGivenPopulation(millions)} db");
+
+        //10. feladat
+        void WriteToFile(string fileName)
+        {
+            StreamWriter streamWriter = new(fileName);
+
+            foreach (var item in cities.MostPopulatedCities(5))
+            {
+                streamWriter.WriteLine(item);
+            }
+
+            streamWriter.Close();
+            Console.WriteLine($"10. feladat: Adatok sikeresen kiírva a \"{fileName}\" fájlba.");
+        }
+
+        WriteToFile("otlegnagyobb.txt");
     }
 }

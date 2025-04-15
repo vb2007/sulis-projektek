@@ -18,5 +18,22 @@
             citiesList.GroupBy(x => x.Date.Year)
             .ToDictionary(x => x.Key, x => x.Count())
             .OrderBy(x => x.Key).ToDictionary();
+
+        public int NumberOfCities => List.Count();
+
+        public int TotalPopulationByCountryName(string countryName) =>
+            (int)citiesList
+                .Where(x => x.Country.Equals(countryName, StringComparison.OrdinalIgnoreCase))
+                .Sum(x => x.Population);
+
+
+        //public bool IsThereSuchACountry(string country) =>
+        //    citiesList.Contains(x => x.Country);
+
+        public int NumberOfCitiesWithGivenPopulation(int millions) =>
+            citiesList.Count(x => x.Population >= millions);
+
+        public IEnumerable<City> MostPopulatedCities(int count) =>
+            citiesList.OrderByDescending(x => x.Population).Take(count);
     }
 }
