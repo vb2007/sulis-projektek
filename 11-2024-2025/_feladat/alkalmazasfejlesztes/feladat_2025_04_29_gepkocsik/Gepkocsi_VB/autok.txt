@@ -1,0 +1,52 @@
+﻿rendszam;tnev;cim;gyartmany;tipus;hurtart
+AAR327;Balogh Gyula;2600 Vác Szent Imre u. 3.;Opel;Corsa;1100
+ABC153;Kiss Pál;1231 Budapest Szép u. 8.;Lada;Samara;1300
+ADG987;Szép István;6200 Kiskőrös Patak u. 9.;Renault;Meganne;1400
+AHK321;Czikk Imre;1062 Budapest Teréz krt.164.;Suzuki;Maruti;900
+BBD945;Sápi Aladár;8360 Keszthely Deák út 10.;Suzuki;Swift;1200
+BDY344;Kiss Margit;1203 Budapest Ady Endre út 106.;Opel;Omega;2000
+BFG912;Darab Béla;1213 Budapest Keleti u.14.;Trabant;601;800
+CGN349;Orosházy Tamás;1051 Budapest Semmelweis u. 5.;Fiat;Brava;1600
+CGU098;Rab Zsolt;1024 Budapest Csatár u. 8.;Mercedes;320SE;2000
+CNH875;Fáy Tibor;2030 Budaörs Csap u. 34.;Citroen;Saxo;1100
+DRT429;Láng András;1058 Budapest Petőfi Sándor u. 28.;Opel;Corsa;1100
+DTC239;Vass Gábor;1141 Budapest Fogarasi út 84.;Ford;Escort;1500
+EVK483;Kiss Attila;9023 Győr Bécsi u. 145.;Ford;Orion;1000
+EYU482;Kis László;2220 Vecsés Szív u. 65.;Suzuki;Swift;1300
+FAB793;Nagy Éva;2117 Isaszeg Fehérvári út. 124. III/2.;Lada;2107;1500
+GCK346;Som Attila;8229 Csopak Victor Hugo u.123.;Daewoo;Lanos;1400
+GRK854;Csorba Antal;1038 Budapest Flórián tér 16.;Lada;2105;1300
+GTD903;Somos Róbert;7400 Kaposvár Petőfi S. u.17.;Opel;Astra;1400
+HTF723;Kiss Magda;1058 Budapest Múzeum krt. 11.;VW;Polo Classic;1500
+IBC942;Sas Endre;7400 Kaposvár Vámház u. 46.;Lada;2107;1600
+IHK678;Hámori Barna;1064 Budapest Cirmos sétány 3. I.12.;Suzuki;Swift;1100
+JBF018;Gál Péter;1113 Budapest Boldizsár u. 45.;Mitsubishi;Pajero;2500
+JJY428;Gyáli Zoltán;1024 Budapest Törökvész u.13;Volvo;S40;2500
+KBI643;Gábor Sándor;8230 Balatonfüred Erzsébet tér 6.;Opel;Corsa;1100
+KDR231;Gál Jolán;1111 Budapest Hordó u. 39.;Mazda;323;1000
+KKY287;Szabó Dávid;1218 Budapest Szatmár u. 4.;Fiat;Cinquecento;800
+KPT658;Pipás Tamás;8000 Székesfehérvár Petőfi S. u. 42.;Toyota;Corolla;1400
+LGS125;Kiss Tamás;1058 Budapest Múzeum krt. 11.;Seat;Cordoba;1400
+LGT667;Gál Lóránt;7600 Pécs Völgy út 135.;Peugeot;405;1500
+LRP326;Szabó Dávid;1174 Budapest Vámház tér 4.;Suzuki;Baleno;1200
+MHJ439;Zsák Ernő;1158 Budapest Jókai út 34.;Lancia;Delta;1600
+MSH342;Nagy Ibolya;6800 Hódmezővásárhely Fő u.12.;Ford;Fiesta;1200
+NFG628;Kiss Katalin;1102 Budapest Kőrösi Cs. u. 5.;Honda;Civic;1300
+NTU467;Tokodi József;1047 Budapest Harangvirág u. 8.;Tavria;1200;1200
+OFR908;Kardos Ágnes;2000 Szentendre Állomás u. 8.;Suzuki;Sedan;1600
+OGG639;Nagy Károly;1075 Budapest Rákóczi út 7. IV/12.;Polski Fiat;500;800
+PDR278;Istenhegyi Károly;1202 Budapest Szent Imre tér 5.;Toyota;Corolla;1500
+PMM087;Bakó Sándor;1213 Budapest Sav u. 4.;Renault;Twingo;900
+QMM386;Elek Tivadar;1048 Budapest Vas Gereben u. 8.;Opel;Astra;1600
+RDB921;Kovács Barbara;1072 Budapest Dohány u. 37.;Opel;Astra;1300
+RRA497;Ákos Erzsébet;2000 Szentendre Megyeri út 67.;VW;Bogár;1300
+RRT153;Balogh Antónia;1073 Budapest Patak u. 9.;Lada;2105;1300
+SYE132;Kocsis Attila;1222 Budapest Háros u. 32.;Fiat;Punto;1100
+TAT375;Szlávik János;1136 Budapest visegrádi u. 78.;Ford;Fiesta;1100
+UEN231;Kovács Tamás;2475 Kápolnásnyék Árpád út 22.;Ford;Orion;1600
+VHT517;Joó Sándor;1027 Budapest Keleti Károly u. 49.;Peugeot;306;1500
+WRE425;Kovács István;4080 Debrecen Virág u. 7.;Audi;A6;2100
+XGT604;Németh Roland;1063 Budapest Munkácsy Mihály u.11.;BMW;625;2500
+YGT632;Tóth Árpád;1213 Budapest Fő tér 12.;Trabant;601;800
+ZHK122;Cipó Béla;2660 Balassagyarmat Sáfrány u. 21.;Suzuki;Swift;1300
+ZRT856;Márton András;2030 Budaörs Bogár u. 3;VW;Golf;1400
