@@ -28,7 +28,7 @@ namespace Gepkocsi_VB
             {
                 StreamWriter streamWriter = new(filename);
 
-                foreach (var item in vehicles.VehiclesByManufacturer(manufacturerInput))
+                foreach (Vehicle item in vehicles.VehiclesByManufacturer(manufacturerInput))
                 {
                     streamWriter.WriteLine(item.ToString());
                 }

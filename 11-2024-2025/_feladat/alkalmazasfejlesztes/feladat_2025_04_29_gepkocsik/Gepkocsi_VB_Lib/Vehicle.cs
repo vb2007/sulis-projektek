@@ -28,9 +28,9 @@
             if (Address.Contains("Budapest"))
             {
                 string districtNumberStr = Address.Split(' ')[0];
-                if (int.TryParse(districtNumberStr, out int kerulet))
+                if (int.TryParse(districtNumberStr, out int finalDistrictValue))
                 {
-                    return kerulet;
+                    return finalDistrictValue;
                 }
             }
             return -1;
