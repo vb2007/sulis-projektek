@@ -13,5 +13,12 @@
         }
 
         public IEnumerable<Vehicle> List => vehiclesList;
+
+        //3. Feladat
+        public int Count => vehiclesList.Count;
+
+        //5. Feladat
+        public int budapestCount => vehiclesList.Count(x => x.District() != -1);
+        public int ruralCount => vehiclesList.Count(x => x.District() == -1);
     }
 }

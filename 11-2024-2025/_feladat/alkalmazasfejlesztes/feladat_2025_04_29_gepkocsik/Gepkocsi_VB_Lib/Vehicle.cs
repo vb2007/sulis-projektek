@@ -21,5 +21,19 @@
             Model = splitted[4];
             CylinderCapacity = int.Parse(splitted[5]);
         }
+
+        //4. Feladat
+        public int District()
+        {
+            if (Address.Contains("Budapest"))
+            {
+                string districtNumberStr = Address.Split(' ')[0];
+                if (int.TryParse(districtNumberStr, out int kerulet))
+                {
+                    return kerulet;
+                }
+            }
+            return -1;
+        }
     }
 }
