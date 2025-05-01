@@ -35,5 +35,10 @@
             }
             return -1;
         }
+
+        public override string ToString()
+        {
+            return $"{LicensePlate};{OwnerName};{Address};{Manufacturer};{Model};{CylinderCapacity}";
+        }
     }
 }
