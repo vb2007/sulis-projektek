@@ -24,39 +24,26 @@ const becsiUt = [
     2850000, 3000000, 3350000, 2800000, 3000000, 3300000, 3300000, 2850000, 3300000, 2800000
 ];
 
+const stores = {
+    "budafoki": budafokiUt,
+    "kerepesi": kerepesiUt,
+    "thokoly": thokolyUt,
+    "becsi": becsiUt
+};
 
-const sum = (list) => {
-    // let sum;
-    // list.forEach(element => {
-    //     sum += element;
-    // });
+const storeNames = {
+    "budafoki": "Budafoki út",
+    "kerepesi": "Kerepesi út",
+    "thokoly": "Thököly út",
+    "becsi": "Bécsi út"
+};
 
-    return Math.sumPrecise(list);
-}
-
-const getValueFromListByIndex = (list, index) => {
-    return list[index];
-}
-
-const getListByStoreName = (storeName) => {
-    switch(storeName) {
-        case "budafokiUt":
-            return budafokiUt;
-        case "kerepesiUt":
-            return kerepesiUt;
-        case "thokolyUt":
-            return thokolyUt;
-        case "becsiUt":
-            return becsiUt;
-    }
-}
+const sum = (arr) => {
+    return arr.reduce((acc, curr) => acc + curr, 0);
+};
 
 const updateCard = (day, store) => {
-    const storeName = store + "Ut";
-    const storeList = getListByStoreName(storeName);
-    // console.log(storeList)
-    // console.log(getValueFromListByIndex(storeList, day))
-    // console.log(sum(storeList))
+    const storeList = stores[store];
 
     const card = document.getElementById("card");
     card.classList.toggle("hidden");
@@ -64,32 +51,30 @@ const updateCard = (day, store) => {
     card.style.marginLeft = "auto";
     card.style.marginRight = "auto";
 
-    const img = document.querySelector("#card img");
+    const img = card.querySelector("img");
     img.setAttribute("src", `./images/${store}.jpg`);
 
+    const details = document.getElementById("details");
+    details.innerHTML = "";
+
     const h3 = document.createElement("h3");
-    h3.textContent = store;
-    h3.style.marginBlock = "0.5rem";
+    h3.textContent = storeNames[store];
+    h3.style.marginBottom = "0.5rem";
 
     const dailyIncome = document.createElement("p");
-    dailyIncome.textContent = `Az áruház bevétele a(z) ${day}. napon: ${getValueFromListByIndex(storeList, day)} forint.`;
+    dailyIncome.textContent = `Az áruház bevétele a(z) ${day}. napon: ${storeList[day - 1]} forint.`;
 
     const monthlyIncome = document.createElement("p");
     monthlyIncome.textContent = `Az áruház bevétele az egész hónapban: ${sum(storeList)} forint.`;
 
-    const details = document.getElementById("details");
-    details.appendChild(h3, dailyIncome, monthlyIncome);
+    details.append(h3, dailyIncome, monthlyIncome);
 }
 
-const submitButton = document.querySelector("button");
-
-submitButton.addEventListener("click", submitBtnClick, false);
-
-function submitBtnClick(event) {
+document.querySelector("button").addEventListener("click", function(event) {
     event.preventDefault();
 
     const day = document.getElementById("day").value;
     const store = document.getElementById("store").value;
 
     updateCard(day, store);
-};
+});
