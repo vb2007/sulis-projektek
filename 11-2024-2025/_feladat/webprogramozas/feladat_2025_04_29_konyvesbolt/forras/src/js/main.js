@@ -49,6 +49,7 @@ const displayCard = (day, store) => {
     card.append(img);
 
     const cardBody = document.querySelector("#card-body");
+    cardBody.innerHTML = "";
 
     const h3 = document.createElement("h3");
     h3.textContent = store;
