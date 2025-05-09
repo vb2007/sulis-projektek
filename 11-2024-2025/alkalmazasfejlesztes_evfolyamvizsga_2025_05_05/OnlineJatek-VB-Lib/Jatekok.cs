@@ -25,7 +25,7 @@
             Math.Round(
                 DateTime.Now.Year -
                 jatekok
-                    .Average(x => double.Parse(x.MegjelenesIdeje.Year.ToString())),
+                    .Average(x => x.MegjelenesIdeje.Year),
             0);
 
         public Dictionary<string, int> MufajStatisztika() =>
