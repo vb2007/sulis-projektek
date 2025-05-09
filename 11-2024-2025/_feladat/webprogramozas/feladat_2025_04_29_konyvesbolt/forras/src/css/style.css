@@ -51,6 +51,40 @@ video {
     display: block;
 }
 
+.grid {
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: 1fr;
+}
+
+@media (min-width: 768px) {
+    .grid {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (min-width: 992px) {
+    .grid {
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+}
+
+.grid > div {
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+    background-color: #1a3528;
+}
+
+.grid > div > img {
+    width: 100%;
+    border-radius: 0.5rem;
+    filter: blur(5px);
+}
+
+.grid > div > img:hover {
+    filter: none;
+}
+
 input, select {
     border: 1px solid #1a3528;
     padding: 0.3rem;
