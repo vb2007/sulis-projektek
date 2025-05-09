@@ -17,10 +17,5 @@
             MegjelenesIdeje = DateOnly.Parse(darabolt[2]);
             AktivJatekosok = int.Parse(darabolt[3]);
         }
-
-        public override string ToString()
-        {
-            return $"{Mufaj}: ";
-        }
     }
 }
