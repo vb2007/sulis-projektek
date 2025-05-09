@@ -1,3 +1,5 @@
+"use strict";
+
 const belvaros = [
     345000, 289000, 310000, 275000, 320000, 295000, 340000, 360000, 280000, 300000,
     315000, 290000, 305000, 325000, 310000, 335000, 345000, 295000, 310000, 330000,
@@ -22,9 +24,50 @@ const margit = [
     285000, 300000, 335000, 280000, 300000, 330000, 330000, 285000, 330000, 280000
 ];
 
-const stores = [
-    'Belváros',
-    'Andrássy',
-    'Váci',
-    'Margit'
-];
+const stores = {
+    "Belváros": belvaros,
+    "Andrássy": andrassy,
+    "Váci": vaci,
+    "Margit": margit
+};
+
+const sum = (arr) => {
+    return arr.reduce((acc, curr) => acc + curr, 0);
+};
+
+const displayCard = (day, store) => {
+    const monthData = stores[store];
+
+    const card = document.getElementById("card");
+    card.classList.remove("hidden");
+    card.style.display = "block";
+    card.style.marginLeft = "auto";
+    card.style.marginRight = "auto";
+
+    const img = card.querySelector("img");
+    img.setAttribute("src", `src/images/${store}.jpg`);
+    card.append(img);
+
+    const cardBody = document.querySelector("#card-body");
+
+    const h3 = document.createElement("h3");
+    h3.textContent = store;
+    h3.style.marginBottom = "0.5rem";
+
+    const dailySales = document.createElement("p");
+    dailySales.textContent = `Napi forgalom: ${monthData[day - 1]} Ft`;
+
+    const monthlySales = document.createElement("p");
+    monthlySales.textContent = `Havi forgalom: ${sum(monthData)} Ft`;
+
+    cardBody.append(h3, dailySales, monthlySales);
+};
+
+document.querySelector("button").addEventListener("click", function(event) {
+    event.preventDefault();
+
+    const day = document.getElementById("day").value;
+    const store = document.getElementById("store").value;
+
+    displayCard(day, store);
+});
