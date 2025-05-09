@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.11.35208.52
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OnlineJatek-VB", "OnlineJatek-VB.csproj", "{878C0263-DE0B-4DA4-B4E1-A8D55038771E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OnlineJatek-VB-Lib", "..\OnlineJatek-VB-Lib\OnlineJatek-VB-Lib.csproj", "{49A0C85F-3F53-4EAD-AC00-7F8435D48F70}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{878C0263-DE0B-4DA4-B4E1-A8D55038771E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{878C0263-DE0B-4DA4-B4E1-A8D55038771E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{878C0263-DE0B-4DA4-B4E1-A8D55038771E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{878C0263-DE0B-4DA4-B4E1-A8D55038771E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{49A0C85F-3F53-4EAD-AC00-7F8435D48F70}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{49A0C85F-3F53-4EAD-AC00-7F8435D48F70}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{49A0C85F-3F53-4EAD-AC00-7F8435D48F70}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{49A0C85F-3F53-4EAD-AC00-7F8435D48F70}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {22B86118-C471-4E63-8A55-678C9BF0BD5E}
+	EndGlobalSection
+EndGlobal
