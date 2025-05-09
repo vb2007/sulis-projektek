@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="hu">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Áruházak</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/main.js" defer></script>
+</head>
+
+<body>
+    <header></header>
+    <main>
+        <section>
+            <h1>Áruházak</h1>
+            <p>Üzleteinkben vásárlóink számára minőségi termékeket kínálunk elérhető áron, barátságos kiszolgálással. Fontos, hogy mindenki gyorsan és kényelmesen intézhesse a bevásárlást, akár hétköznapi, akár különleges alkalomról van szó. Üzleteink könnyen megközelíthetők autóval és tömegközlekedéssel is, mivel célunk az, hogy mindenki számára elérhetővé tegyük a vásárlás élményét!</p>
+            <video autoplay loop>
+                <source src="./videos/shopping.mp4">
+            </video>
+        </section>
+        <section>
+            <h2>Áruházaink</h2>
+            <div id="stores">
+                <div>
+                    <img src="images/becsi.jpg" alt="Bécsi út">
+                    <h3>Bécsi út</h3>
+                </div>
+                <div>
+                    <img src="images/budafoki.jpg" alt="Budafoki út">
+                    <h3>Budafoki út</h3>
+                </div>
+                <div>
+                    <img src="images/kerepesi.jpg" alt="Kerepesi út">
+                    <h3>Kerepesi út</h3>
+                </div>
+                <div>
+                    <img src="images/thokoly.jpg" alt="Thököly út">
+                    <h3>Thököly út</h3>
+                </div>
+            </div>
+        </section>
+        <section>
+            <h2>Bevétel</h2>
+
+            <form>
+                <label for="day">Nap:</label>
+                <input type="number" id="day" name="day" min="1" max="30" required>
+                <label for="store">Áruház:</label>
+                <select name="store" id="store">
+                    <option value="">Kérem válasszon...</option>
+                    <option value="becsi">Bécsi út</option>
+                    <option value="budafoki">Budafoki út</option>
+                    <option value="kerepesi">Kerepesi út</option>
+                    <option value="thokoly">Thököly út</option>
+                </select>
+                <button type="submit">Eredmény</button>
+            </form>
+
+            <div id="card" class="hidden" style="background-color: #1d293d; margin-bottom: 1rem;">
+                <img src="">
+                <div id="details">
+
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        Készítette: Vágvölgyi Balázs
+    </footer>
+</body>
+
+</html>
