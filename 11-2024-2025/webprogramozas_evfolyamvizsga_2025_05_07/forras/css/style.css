@@ -36,25 +36,20 @@ h2 {
 
 #stores {
 	display: grid;
-	grid-template-columns: repeat(2, 2);
 	gap: 1rem;
+	grid-template-columns: 1fr;
 }
 
-@media (max-width: 768px) {
+@media (min-width: 768px) {
 	#stores {
-		grid-template-columns: repeat(1, 1);
+		grid-template-columns: 1fr 1fr;
 	}
 }
 
-@media (max-width: 992px) {
+@media (min-width: 992px) {
 	#stores {
-		grid-template-columns: repeat(4, 4);
+		grid-template-columns: 1fr 1fr 1fr 1fr;
 	}
-}
-
-#stores {
-	display: grid;
-	grid-template-columns: repeat();
 }
 
 #stores div {
