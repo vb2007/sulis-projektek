@@ -1,0 +1,90 @@
+cim;rendezo;szarmazas;kezdesEve;kategoria;evadok
+Farkasbőrben;Jeff Davis;amerikai;2011;fantasy;6
+Géniusz;Kenneth Biller, Noah Pink, Ron Howard;amerikai;2017;dráma;2
+Eltűntek;J.J. Abrams, Jack Bender, Stephen Williams;amerikai;2004;fantasy;6
+A bolygó kapitánya;Ted Turner, Barbara Pyle;amerikai;1990;rajzfilm;6
+A célszemély;Richard J. Lewis;amerikai;2011;bűnügyi;5
+A dadus; Randy Bennett, Jim Cox, Fran Drescher;amerikai;1993;vígjáték;6
+A farm, ahol élünk; Michael Landon, William F. Claxton, Maury Dexter;amerikai;1974;dráma;9
+A férfi fán terem;Jeffrey Melman, Rick Wallace;amerikai;2006;vígjáték;2
+A férjem védelmében; Charles McDougall, Scott Ellis, Daniel Minahan;amerikai;2009;dráma;7
+A Grace klinika;Adam Davidson, John David Coles, Mark Tinker;amerikai;2005;dráma;14
+A Guldenburgok öröksége;Gero Erhardt, Jürgen Goslar;német;1987;dráma;3
+A híd;Charlotte Sieling, Henrik Georgsson, Lisa Siwe;skandináv;2011;krimi;4
+A klinika;Alfred Vohrer, Hans-Jürgen Tögel;német;1985;dráma;7
+A kockásfülű nyúl;Richly Zsolt;magyar;1977;rajzfilm;2
+A nagy ho-ho-ho-horgász;Csukás István, Dargay Attila, Füzesi Zsuzsa;magyar;1982;rajzfilm;2
+A narancsvidék;Josh Schwartz;amerikai;2003;vígjáték;4
+A nevem Earl;Eyal Gordin, Marc Buckland, Michael Fresco;amerikai;2005;vígjáték;4
+A semmi közepén;Barnet Kellman, Ken Whittingham, Lee Shallat Chemel;amerikai;2009;vígjáték;9
+A médium;Aaron Lipstadt, Arliss Howard, Artie Mandelberg;amerikai;2005;bűnügyi;7
+A mentalista;Chris Long, David Barrett, David Nutter;amerikai;2008;bűnügyi;7
+A mi kis falunk;Kapitány Iván;magyar;2017;vígjáték;1
+A Simpson család;Bob Anderson, Neil Affleck;amerikai;1989;rajzfilm;30
+Alf;Burt Brinckerhoff, Gary Shimokawa, Nick Havinga;amerikai;1986;vígjáték;4
+Alias;J.J. Abrams, Jack Bender, Karen Gaviola;amerikai;2001;dráma;5
+Ally McBeal;Arlene Sanford, Bill D'Elia, Billy Dickson;amerikai;1997;vígjáték;5
+Avatar - Aang legendája;Dave Filoni;amerikai;2005;rajzfilm;3
+Avatar - Korra legendája;Joaquim Dos Santos, Ki Hyun Ryu;amerikai;2012;rajzfilm;4
+Az Angyal;John Llewellyn Moxey, John Gilling, Roger Moore;amerikai;1962;krimi;6
+Baywatch;Charles Braverman, Cliff Bole, David Hasselhoff;amerikai;1989;dráma;11
+Bír-lak;Howard Storm, Jeff Franklin, John Bowab;amerikai;1987;vígjáték;8
+Bostoni halottkémek;Allan Arkush, Andy Wolk, Curtis A. Schnell;amerikai;2001;krimi;6
+A szultána;Mert Baykal, Yagiz Alp Akaydin, Zeynep Gunay;török;2015;dráma;2
+A szupercsapat;Chuck Bowman, Craig R. Baxley, James Darren;amerikai;1983;kaland;5
+A zöld íjász;Eagle Egilsson, Guy Norman Bee, John Behring;amerikai;2012;krimi;7
+Carter ügynök;Christopher Markus, Stephen McFeely ;amerikai;2015;akció;2
+Castle;Bryan Spicer, John Terlesky, Rob Bowman;amerikai;2009;vígjáték;8
+Charlie angyalai;Allen Baron, Dennis Donnelly, George McCowan;amerikai;1976;krimi;5
+Charly, majom a családban;Dieter Kehler, Franz Josef Gottlieb, Helmut Förnbacher;német;1995;vígjáték;16
+Cheers;Andy Ackerman, Rick Beren;amerikai;1982;dráma;11
+Chuck;Robert Duncan McNeill;amerikai;2007;vígjáték;5
+Cleveland Show;Anthony Lioi;amerikai;2009;rajzfilm;4
+Cobra 11;Arend Aghte, Diethard Küster, Gabriele Heberling;német;1996;dráma;42
+Columbo;Richard Irving;amerikai;1971;krimi;13
+Csengetett, Mylord?;David Croft;amerikai;1988;vígjáték;4
+CSI - A helyszínelők;Charles Correll, Danny Cannon, Jefery Levy;amerikai;2000;krimi;16
+CSI - Miami Helyszínelők;Ann Donahue, Anthony E. Zuiker, Carol Mendelsohn;amerikai;2002;dráma;10
+CSI - New York-i helyszínelők;Deran Sarafian, Greg Yaitanes, Norberto Barba;amerikai;2004;dráma;9
+Csillagkapu Atlantisz;Brad Wright, Robert C. Cooper;amerikai;2004;dráma;5
+Csodabogarak (Aprónép);Hélene Girard, Thomas Szabo;francia;2006;animációs;6
+Daktari;Andrew Marton, Dick Moder, Don McDougall;amerikai;1966;kaland;4
+Dallas;Barry Crane, Dwight Adair;amerikai;1978;dráma;14
+Dallas 2012;Michael M. Robin;amerikai;2012;dráma;3
+Dawson és a haverok;Allan Arkush, Michael Fields, Lou Antonio;amerikai;1998;dráma;6
+Derrick;Alfred Weidenmann, Helmut Ashley, Horst Tappert;német;1974;krimi;25
+Dexter;Marcos Siega, Michael Cuesta, Robert Lieberman;amerikai;2006;krimi;8
+Dexter laboratóriuma;Genndy Tartakovsky;amerikai;1996;rajzfilm;4
+Egy kapcsolat szabályai;Ted Wass;amerikai;2007;vígjáték;7
+Egy rém rendes család;Amanda Bearse, Brian Levant, Gerry Cohen;amerikai;1987;vígjáték;11
+Egynyári kaland;Dyga Zsombor;magyar;2015;vígjáték;3
+Egyről a kettőre;William Bickley, Richard Correll, Patrick Duffy;amerikai;1991;vígjáték;7
+Egyszer volt az ember;Albert Barillé;francia;1978;rajzfilm;1
+Egyszer volt, hol nem volt... a Föld;Albert Barillé;francia;2009;rajzfilm;1
+Egyszer volt... az élet;Albert Barillé;francia;1988;rajzfilm;1
+Elcserélt lányok;Steve Miner;amerikai;2011;dráma;5
+Életem értelmei;Andy Cadiff, Leonard R. Garner Jr.;amerikai;2001;vígjáték;5
+Elsüllyedt világok;Michel Gauthier;francia;1958;rajzfilm;2
+Eltűntnek nyilvánítva;Bill Duke, Holly Dale, John Fawcett;amerikai;2003;akció;3
+Éretlenek;Gárdos Péter, Kolos István, Szurdi Miklós;magyar;1995;vígjáték;2
+Esküdt ellenségek: Bűnös szándék;Christine Moore, Christopher Zalla, Constantine Makris;amerikai;2001;krimi;10
+Esmeralda;Beatriz Sheridan, Martha Luna;latin-amerikai;1997;szappanopera;1
+Esperanza;Sergio Jiménez;latin-amerikai;1999;szappanopera;1
+Everwood;Arlene Sanford, Arvin Brown, Danny Leiner;amerikai;2002;dráma;4
+Familia Kft.;Gát György, Rozgonyi Ádám, Szurdi Miklós;magyar;1991;vígjáték;5
+Family Guy;Andrew Gormley;amerikai;1999;vígjáték;16
+Fear the Walking Dead;Adam Davidson, Kari Skogland, Stefan Schwartz;amerikai;2015;dráma;4
+Fecsegő tipegők;Craig Bartlett, Howard E. Baker;amerikai;1990;vígjáték;10
+Felhőtlen Philadelphia;Glenn Howerton, Rob McElhenney ;amerikai;2005;vígjáték;14
+Férjek gyöngye;Henry Chan, Mark Cendrowski, Robert Berlinger;amerikai;1998;vígjáték;9
+Fiorella;Luis Pardo, Pedro Damián;mexikói;2014;szappanopera;1
+Flash - A Villám;David Nutter, Dermott Downs, Glen Winter;amerikai;2014;akció;4
+Futurama;David X. Cohen, Matt Groening ;amerikai;1999;rajzfilm;7
+Génrejtek;Martin Wood;amerikai;2008;dráma;4
+Glee - Sztárok leszünk!;Brad Falchuk, Elodie Keene, John Scott;amerikai;2009;vígjáték;6
+Gossip Girl - A Pletykafészek;J. Miller Tobin, Joe Lazarov, Mark Piznarski;amerikai;2007;dráma;6
+Gotham;Danny Cannon, Dermott Downs, T.J. Scott;amerikai;2014;akció;4
+Grimm;Allan Kroeker, Norberto Barba, Peter Werner;amerikai;2011;akció;6
+Gyilkos elmék;Charles Haid, Richard Shepard;amerikai;2005;bűnügyi;13
+Gyilkos sorok;Peter S. Fischer, Richard Levinson, William Link;amerikai;1984;krimi;12
+Gyilkos Számok;Bobby Roth, Davis Guggenheim, Jefery Levy;amerikai;2005;krimi;6
