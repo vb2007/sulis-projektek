@@ -10,16 +10,16 @@
         public string Kategoria { get; init; }
         public int Evadok { get; init; }
 
-        public Sorozat(string sor)
+        public Sorozat(string adatSor)
         {
-            string[] adatok = sor.Split(';');
+            string[] darabolt = adatSor.Split(';');
 
-            Cim = adatok[0];
-            Rendezo = adatok[1];
-            Szarmazas = adatok[2];
-            KezdesEve = int.Parse(adatok[3]);
-            Kategoria = adatok[4];
-            Evadok = int.Parse(adatok[5]);
+            Cim = darabolt[0];
+            Rendezo = darabolt[1];
+            Szarmazas = darabolt[2];
+            KezdesEve = int.Parse(darabolt[3]);
+            Kategoria = darabolt[4];
+            Evadok = int.Parse(darabolt[5]);
         }
     }
 }

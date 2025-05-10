@@ -5,6 +5,8 @@ VisualStudioVersion = 17.13.35931.197 d17.13
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sorozatok_VB", "Sorozatok_VB.csproj", "{BE1D18FE-C6E6-4C29-8294-7C9304A219F2}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sorozatok_VB_Lib", "..\Sorozatok_VB_Lib\Sorozatok_VB_Lib.csproj", "{C85464B3-77B6-4078-AB9E-C94CF7C75E5F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{BE1D18FE-C6E6-4C29-8294-7C9304A219F2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BE1D18FE-C6E6-4C29-8294-7C9304A219F2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BE1D18FE-C6E6-4C29-8294-7C9304A219F2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C85464B3-77B6-4078-AB9E-C94CF7C75E5F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C85464B3-77B6-4078-AB9E-C94CF7C75E5F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C85464B3-77B6-4078-AB9E-C94CF7C75E5F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C85464B3-77B6-4078-AB9E-C94CF7C75E5F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

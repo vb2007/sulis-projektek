@@ -11,5 +11,7 @@
                 sorozatok.Add(new(item));
             }
         }
+
+        public int SorozatokSzama => sorozatok.Count;
     }
 }
