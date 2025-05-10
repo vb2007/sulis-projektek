@@ -21,5 +21,18 @@
             Kategoria = darabolt[4];
             Evadok = int.Parse(darabolt[5]);
         }
+
+        public int RendezokSzama()
+        {
+            //if (string.IsNullOrWhiteSpace(Rendezo))
+            //    return 0;
+
+            return Rendezo.Split(',', StringSplitOptions.RemoveEmptyEntries | StringSplitOptions.TrimEntries).Length;
+        }
+
+        public override string ToString()
+        {
+            return $"{Cim};{Rendezo};{Szarmazas};{KezdesEve};{Kategoria};{Evadok}";
+        }
     }
 }
