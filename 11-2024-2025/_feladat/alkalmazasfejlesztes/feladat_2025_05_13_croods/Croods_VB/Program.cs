@@ -55,7 +55,7 @@ namespace Croods_VB
 
             //11.
             Console.WriteLine("11. feladat: A négy leghosszabb magyarországi barlang:");
-            foreach (Cave cave in caves.LongestCaves(4))
+            foreach (Cave cave in caves.LongestVisitedCaves(4))
             {
                 Console.WriteLine($"\t{cave.Name} ({cave.City}): {cave.Length} m");
             }
