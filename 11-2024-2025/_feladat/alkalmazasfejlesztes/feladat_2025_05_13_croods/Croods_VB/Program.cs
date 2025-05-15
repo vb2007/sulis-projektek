@@ -36,11 +36,11 @@ namespace Croods_VB
             else
             {
                 Console.Write($"Régies nevű barlangok száma: {caves.CavesWithOldNamesCount} db");
-                Console.WriteLine($"Régies nevű barlangok nevei: \n\t{caves.CavesWithOldNamesString}");
+                Console.WriteLine($"\nRégies nevű barlangok nevei: \n\t{caves.CavesWithOldNamesString}");
             }
 
             //8.
-            Console.WriteLine($"8. feladat: Az Égerszög-ön található barlangok átlagos hossza: {caves.AverageLengthByCity("Égerszög")} m");
+            Console.WriteLine($"8. feladat: Az Égerszög-ön található barlangok átlagos hossza: {caves.AverageLengthByCity(favouriteCave.City)} m");
 
             //9.
             Console.WriteLine("9. feladat:");
