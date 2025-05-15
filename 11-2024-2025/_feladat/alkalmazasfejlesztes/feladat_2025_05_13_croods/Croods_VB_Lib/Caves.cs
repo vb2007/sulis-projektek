@@ -1,6 +1,4 @@
-﻿using System.Collections.Immutable;
-
-namespace Croods_VB_Lib
+﻿namespace Croods_VB_Lib
 {
     public class Caves
     {

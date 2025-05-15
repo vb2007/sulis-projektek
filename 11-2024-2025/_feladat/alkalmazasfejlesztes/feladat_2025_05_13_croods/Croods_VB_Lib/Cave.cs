@@ -1,4 +1,6 @@
-﻿namespace Croods_VB_Lib
+﻿using System.Globalization;
+
+namespace Croods_VB_Lib
 {
     public class Cave
     {
@@ -13,10 +15,11 @@
         {
             string[] splitted = dataLine.Split(";");
 
+            //CultureInfo.InvariantCulture => "." és "," közötti külöbségeket kezeli le a host gép régiójától függetlenül
             Name = splitted[0];
-            Length = double.Parse(splitted[1]);
-            Depth = double.Parse(splitted[2]);
-            Height = double.Parse(splitted[3]);
+            Length = double.Parse(splitted[1], CultureInfo.InvariantCulture);
+            Depth = double.Parse(splitted[2], CultureInfo.InvariantCulture);
+            Height = double.Parse(splitted[3], CultureInfo.InvariantCulture);
             City = splitted[4];
             IsVisited = (splitted[5] == "i");
         }
