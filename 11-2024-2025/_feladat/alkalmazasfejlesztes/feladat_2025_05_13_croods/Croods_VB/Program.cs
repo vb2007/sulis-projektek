@@ -36,14 +36,37 @@ namespace Croods_VB
 
             //9.
             Console.WriteLine("9. feladat:");
-            try
+            ExportWithErrorHandling("javitott.csv", true);
+
+            //10.
+            Console.WriteLine("10. feladat: Egyes települések barlangjai:");
+            foreach (var line in caves.GetCavesByCity())
             {
-                caves.ExportCorrectedFile("javitott.csv");
-                Console.WriteLine("\tAdatok sikeresen kiírva a fájlba.");
+                Console.WriteLine($"{line}");
             }
-            catch (Exception ex)
+
+            //11.
+            Console.WriteLine("11. feladat: A négy leghosszabb magyarországi barlang:");
+            foreach (Cave cave in caves.LongestCaves(4))
             {
-                Console.WriteLine($"Hiba lépett fel a fájlbaírás során: {ex.Message}");
+                Console.WriteLine($"\t{cave.Name} ({cave.City}): {cave.Length} m");
+            }
+
+            //12.
+            Console.WriteLine("12. feladat:");
+            ExportWithErrorHandling("megnemjartuk.csv", false);
+
+            void ExportWithErrorHandling(string fileName, bool visited)
+            {
+                try
+                {
+                    caves.ExportFile(fileName, visited);
+                    Console.WriteLine($"\tAdatok sikeresen kiírva a(z) \"{fileName}\" fájlba.");
+                }
+                catch (Exception ex)
+                {
+                    Console.WriteLine($"Hiba lépett fel a fájlbaírás során: {ex.Message}");
+                }
             }
         }
     }

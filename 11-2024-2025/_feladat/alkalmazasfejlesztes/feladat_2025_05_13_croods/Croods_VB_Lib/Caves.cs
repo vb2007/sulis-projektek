@@ -46,20 +46,55 @@ namespace Croods_VB_Lib
                     .Average(x => x.Length),
                 0);
 
+        //9. + 12. feladat
         private IEnumerable<Cave> CavesInAbc =>
             caves
                 .OrderBy(x => x.Name)
                 .ToList();
-        public void ExportCorrectedFile(string fileName)
+        private IEnumerable<Cave> UnvisitedCavesDescendingByCityThenName =>
+            caves
+                .Where(x => !x.IsVisited)
+                .OrderByDescending(x => x.City)
+                    .ThenBy(x => x.Name);
+        public void ExportFile(string fileName, bool visited)
         {
             using StreamWriter sw = new(fileName);
 
-            sw.WriteLine("Név;Hossz;Mélység;Magasság a bejárathoz képest;Település neve;Jártak-e");
-
-            foreach (Cave cave in CavesInAbc)
+            if (visited)
             {
-                sw.WriteLine(cave.ToString() + $"{(cave.IsVisited ? "már jártunk itt" : "")}");
+                sw.WriteLine("Név;Hossz;Mélység;Magasság a bejárathoz képest;Település neve;Jártak-e");
+                foreach (Cave cave in CavesInAbc)
+                {
+                    sw.WriteLine(cave.ToString() + $"{(cave.IsVisited ? ";már jártunk itt" : "")}");
+                }
+                return;
+            }
+
+            sw.WriteLine("Település neve;Barlang neve");
+            foreach (var cave in UnvisitedCavesDescendingByCityThenName)
+            {
+                sw.WriteLine(cave.ToString());
             }
         }
+
+        public IEnumerable<string> GetCavesByCity()
+        {
+            var grouped = caves
+                .GroupBy(x => x.City)
+                .OrderBy(x => x.Key); //még név alapján is rendezve van
+
+            foreach (var group in grouped)
+            {
+                yield return $"{group.Key}: {group.Count()} darab";
+                string names = string.Join(", ", group.OrderBy(x => x.Name).Select(x => x.Name)); //itt is
+                yield return $"\t{names}";
+            }
+        }
+
+        public IEnumerable<Cave> LongestCaves(int numberOfCaves) =>
+            caves
+                .OrderByDescending(x => x.Length)
+                .Take(numberOfCaves)
+                .ToList();
     }
 }
