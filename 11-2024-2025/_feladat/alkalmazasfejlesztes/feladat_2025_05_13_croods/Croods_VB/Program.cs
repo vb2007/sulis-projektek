@@ -14,7 +14,7 @@ namespace Croods_VB
             Console.WriteLine($"\tNév: {favouriteCave.Name}");
             Console.WriteLine($"\tHossz: {favouriteCave.Length} m");
             Console.WriteLine($"\tMélység: {favouriteCave.Depth} m");
-            Console.WriteLine($"\tMagasság: {favouriteCave.Heigth} m");
+            Console.WriteLine($"\tMagasság: {favouriteCave.Height} m");
             Console.WriteLine($"\tTelepülés: {favouriteCave.City}");
 
             //4.
@@ -33,6 +33,18 @@ namespace Croods_VB
 
             //8.
             Console.WriteLine($"8. feladat: Az Égerszög-ön található barlangok átlagos hossza: {caves.AverageLengthByCity("Égerszög")} m");
+
+            //9.
+            Console.WriteLine("9. feladat:");
+            try
+            {
+                caves.ExportCorrectedFile("javitott.csv");
+                Console.WriteLine("\tAdatok sikeresen kiírva a fájlba.");
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Hiba lépett fel a fájlbaírás során: {ex.Message}");
+            }
         }
     }
 }

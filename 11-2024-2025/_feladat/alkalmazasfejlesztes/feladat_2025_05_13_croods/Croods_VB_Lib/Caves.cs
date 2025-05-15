@@ -46,11 +46,20 @@ namespace Croods_VB_Lib
                     .Average(x => x.Length),
                 0);
 
+        private IEnumerable<Cave> CavesInAbc =>
+            caves
+                .OrderBy(x => x.Name)
+                .ToList();
         public void ExportCorrectedFile(string fileName)
         {
             using StreamWriter sw = new(fileName);
 
             sw.WriteLine("Név;Hossz;Mélység;Magasság a bejárathoz képest;Település neve;Jártak-e");
+
+            foreach (Cave cave in CavesInAbc)
+            {
+                sw.WriteLine(cave.ToString() + $"{(cave.IsVisited ? "már jártunk itt" : "")}");
+            }
         }
     }
 }

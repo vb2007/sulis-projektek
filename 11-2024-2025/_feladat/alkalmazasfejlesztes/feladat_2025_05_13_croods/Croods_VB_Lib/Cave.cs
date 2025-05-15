@@ -5,7 +5,7 @@
         public string Name { get; init; }
         public double Length { get; init; }
         public double Depth { get; init; }
-        public double Heigth { get; init; }
+        public double Height { get; init; }
         public string City { get; init; }
         public bool IsVisited { get; init; }
 
@@ -16,7 +16,7 @@
             Name = splitted[0];
             Length = double.Parse(splitted[1]);
             Depth = double.Parse(splitted[2]);
-            Heigth = double.Parse(splitted[3]);
+            Height = double.Parse(splitted[3]);
             City = splitted[4];
             IsVisited = (splitted[5] == "i");
         }
@@ -27,7 +27,7 @@
 
         public override string ToString()
         {
-            return $"";
+            return $"{Name};{Length};{Depth};{Height};{City}";
         }
     }
 }
