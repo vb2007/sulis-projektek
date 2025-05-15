@@ -90,6 +90,7 @@
 
         public IEnumerable<Cave> LongestCaves(int numberOfCaves) =>
             caves
+                .Where(x => x.IsVisited)
                 .OrderByDescending(x => x.Length)
                 .Take(numberOfCaves)
                 .ToList();
