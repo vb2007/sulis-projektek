@@ -67,7 +67,7 @@
                 return;
             }
 
-            sw.WriteLine("Település neve;Barlang neve");
+            //sw.WriteLine("Település neve;Barlang neve");
             foreach (var cave in UnvisitedCavesDescendingByCityThenName)
             {
                 sw.WriteLine(cave.ToString());
