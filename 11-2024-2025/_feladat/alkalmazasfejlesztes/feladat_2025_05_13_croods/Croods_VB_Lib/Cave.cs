@@ -24,5 +24,10 @@
         private readonly List<string> OldNames = new List<string> { "lyuk", "zsomboly", "lik" };
         public bool HasOldName =>
             OldNames.Any(oldName => Name.ToLower().Contains(oldName));
+
+        public override string ToString()
+        {
+            return $"";
+        }
     }
 }

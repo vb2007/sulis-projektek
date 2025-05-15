@@ -1,4 +1,6 @@
-﻿namespace Croods_VB_Lib
+﻿using System.Collections.Immutable;
+
+namespace Croods_VB_Lib
 {
     public class Caves
     {
@@ -26,15 +28,29 @@
             caves
                 .MaxBy(x => x.Depth);
 
-        private List<string> CavesWithOldNames =>
+        private IEnumerable<string> CavesWithOldNames =>
             caves
                 .Where(x => x.HasOldName)
                 .Select(x => x.Name)
                 .OrderBy(x => x)
                 .Distinct()
                 .ToList();
-        public int CavesWithOldNamesCount => CavesWithOldNames.Count;
+        public int CavesWithOldNamesCount => CavesWithOldNames.Count();
         public string CavesWithOldNamesString =>
             string.Join("\n\t", CavesWithOldNames);
+
+        public int AverageLengthByCity(string city) =>
+            (int)Math.Round(
+                caves
+                    .Where(x => x.City == city)
+                    .Average(x => x.Length),
+                0);
+
+        public void ExportCorrectedFile(string fileName)
+        {
+            using StreamWriter sw = new(fileName);
+
+            sw.WriteLine("Név;Hossz;Mélység;Magasság a bejárathoz képest;Település neve;Jártak-e");
+        }
     }
 }
