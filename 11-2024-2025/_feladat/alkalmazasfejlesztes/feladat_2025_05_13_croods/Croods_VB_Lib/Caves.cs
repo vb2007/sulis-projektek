@@ -33,8 +33,7 @@ namespace Croods_VB_Lib
                 .Where(x => x.HasOldName)
                 .Select(x => x.Name)
                 .OrderBy(x => x)
-                .Distinct()
-                .ToList();
+                .Distinct();
         public int CavesWithOldNamesCount => CavesWithOldNames.Count();
         public string CavesWithOldNamesString =>
             string.Join("\n\t", CavesWithOldNames);
