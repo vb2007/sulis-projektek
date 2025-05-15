@@ -28,8 +28,16 @@ namespace Croods_VB
             Console.WriteLine($"\tTelepülés: {deepestCave.City}");
 
             //7.
-            Console.WriteLine($"7. feladat: Régies nevű barlangok száma: {caves.CavesWithOldNamesCount} db");
-            Console.WriteLine($"Régies nevű barlangok nevei: \n\t{caves.CavesWithOldNamesString}");
+            Console.Write("7. feladat: ");
+            if (caves.CavesWithOldNamesCount == 0)
+            {
+                Console.Write("Nincs régies barlangnév!");
+            }
+            else
+            {
+                Console.Write($"Régies nevű barlangok száma: {caves.CavesWithOldNamesCount} db");
+                Console.WriteLine($"Régies nevű barlangok nevei: \n\t{caves.CavesWithOldNamesString}");
+            }
 
             //8.
             Console.WriteLine($"8. feladat: Az Égerszög-ön található barlangok átlagos hossza: {caves.AverageLengthByCity("Égerszög")} m");
