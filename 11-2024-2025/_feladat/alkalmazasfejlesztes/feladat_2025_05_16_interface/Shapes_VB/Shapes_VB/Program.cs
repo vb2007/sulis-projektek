@@ -7,7 +7,7 @@ namespace Shapes_VB
         static void Main(string[] args)
         {
             Console.WriteLine("--- Shape Interface Demonstration ---");
-            Console.WriteLine("-----------------------------------");
+            Console.WriteLine("-------------------------------------");
             Console.WriteLine();
 
             try
@@ -93,7 +93,7 @@ namespace Shapes_VB
             }
 
             Console.WriteLine();
-            Console.WriteLine("-----------------------------------");
+            Console.WriteLine("-------------------------------------");
         }
     }
 }
