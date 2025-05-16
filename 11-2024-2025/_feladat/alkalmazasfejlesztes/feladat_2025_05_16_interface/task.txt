@@ -1,0 +1,5 @@
+Készíts a videó, pdf vagy txt (a tartalmuk megegyezik, a videó szövegét tartalmazza), és a példaprogram segítségével bemutatót, vázlatot az Interfészről.
+
+Használhatsz hozzá MI-t (pl: ChatGPT, notebooklm.google, ...)
+
+Készíts a példaprogram alapján egy egyszerű programot interfésszel! (pl: síkidomok, állatok...)
