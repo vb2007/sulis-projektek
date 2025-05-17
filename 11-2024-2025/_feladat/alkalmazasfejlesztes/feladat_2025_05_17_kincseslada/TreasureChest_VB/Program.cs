@@ -6,19 +6,24 @@ namespace TreasureChest_VB
     {
         static void Main(string[] args)
         {
-            TreasureFactory treasureFactory = new();
-            List<ITreasure> treasures = new();
-
-            for (int i = 0; i < 10; i++)
-            {
-                treasures.Add(treasureFactory.Create());
-            }
+            //10 kincset generál a paraméter alapján
+            TreasureFactory treasureFactory = new TreasureFactory(10);
 
             Console.WriteLine("A kincsesláda tartalma:");
-            foreach (var treasure in treasures)
+            foreach (var treasure in treasureFactory)
             {
                 Console.WriteLine($"\t{treasure.Description}");
             }
+
+            Console.WriteLine($"A kincsesláda értéke: {treasureFactory.TotalValue}");
+
+            Console.WriteLine("A kincsesláda tartalma, név szerinte csoportosítva:");
+            foreach (var kvp in treasureFactory.ContentByName)
+            {
+                Console.WriteLine($"\t{kvp.Key}: {kvp.Value} db");
+            }
+
+            Console.WriteLine();
         }
     }
 }

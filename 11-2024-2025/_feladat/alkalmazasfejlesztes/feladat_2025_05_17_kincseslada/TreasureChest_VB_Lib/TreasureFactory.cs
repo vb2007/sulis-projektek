@@ -1,10 +1,22 @@
-﻿namespace TreasureChest_VB_Lib
-{
-    public class TreasureFactory
-    {
-        public static readonly Random random = new();
+﻿using System.Collections;
 
-        public ITreasure Create()
+namespace TreasureChest_VB_Lib
+{
+    public class TreasureFactory : IEnumerable<ITreasure>
+    {
+        private readonly List<ITreasure> treasures = new();
+
+        private static readonly Random random = new();
+
+        public TreasureFactory(int numberOfTreasures)
+        {
+            for (int i = 0; i < numberOfTreasures; i++)
+            {
+                treasures.Add(Create());
+            }
+        }
+
+        private ITreasure Create()
         {
             int treasureType = random.Next(2);
 
@@ -22,5 +34,18 @@
                 return new Gem(gemType, gemSize);
             }
         }
+
+        public int TotalValue =>
+            treasures.Sum(x => x.Value);
+
+        public IDictionary<string, int> ContentByName =>
+            treasures
+            .GroupBy(x => x.Name)
+            .OrderBy(x => x.Key)
+            .ToDictionary(x => x.Key.ToLower(), x => x.Count());
+
+        //hogy a Program.cs-ben működjön a foreach
+        public IEnumerator<ITreasure> GetEnumerator() => treasures.GetEnumerator();
+        IEnumerator IEnumerable.GetEnumerator() => GetEnumerator();
     }
 }
