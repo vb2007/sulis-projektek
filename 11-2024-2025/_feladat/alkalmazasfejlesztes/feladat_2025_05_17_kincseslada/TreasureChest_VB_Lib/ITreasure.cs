@@ -2,9 +2,9 @@
 {
     public interface ITreasure
     {
-        string Name { get; init; }
-        string Description { get; init; }
-        string Type { get; init; }
-        int Value { get; init; }
+        string Name { get; }
+        string Description { get; }
+        string Type { get; }
+        int Value { get; }
     }
 }
