@@ -46,8 +46,7 @@
         //9. + 12. feladat
         private IEnumerable<Cave> CavesInAbc =>
             caves
-                .OrderBy(x => x.Name)
-                .ToList();
+                .OrderBy(x => x.Name);
         private IEnumerable<Cave> UnvisitedCavesDescendingByCityThenName =>
             caves
                 .Where(x => !x.IsVisited)
@@ -67,7 +66,7 @@
                 return;
             }
 
-            sw.WriteLine("Település neve;Barlang neve");
+            //sw.WriteLine("Település neve;Barlang neve");
             foreach (var cave in UnvisitedCavesDescendingByCityThenName)
             {
                 sw.WriteLine(cave.ToString());
@@ -90,9 +89,8 @@
 
         public IEnumerable<Cave> LongestVisitedCaves(int numberOfCaves) =>
             caves
-                .Where(x => x.IsVisited)
+                .Where(x => x.IsVisited) //a feladatban specifikálva van, de a példában hibásak az adatok
                 .OrderByDescending(x => x.Length)
-                .Take(numberOfCaves)
-                .ToList();
+                .Take(numberOfCaves);
     }
 }
