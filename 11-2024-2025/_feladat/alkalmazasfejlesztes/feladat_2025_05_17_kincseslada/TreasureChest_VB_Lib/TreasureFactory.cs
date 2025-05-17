@@ -40,9 +40,15 @@ namespace TreasureChest_VB_Lib
 
         public IDictionary<string, int> ContentByName =>
             treasures
-            .GroupBy(x => x.Name)
-            .OrderBy(x => x.Key)
-            .ToDictionary(x => x.Key.ToLower(), x => x.Count());
+                .GroupBy(x => x.Name)
+                .OrderBy(x => x.Key)
+                .ToDictionary(x => x.Key.ToLower(), x => x.Count());
+
+        public IDictionary<string, int> ContentByType =>
+            treasures
+                .GroupBy(x => x.Type)
+                .OrderBy(x => x.Key)
+                .ToDictionary(x => x.Key.ToLower(), x => x.Count());
 
         //hogy a Program.cs-ben működjön a foreach
         public IEnumerator<ITreasure> GetEnumerator() => treasures.GetEnumerator();

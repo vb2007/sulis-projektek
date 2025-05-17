@@ -6,7 +6,7 @@ namespace TreasureChest_VB
     {
         static void Main(string[] args)
         {
-            //10 kincset generál a paraméter alapján
+            //így 10 kincset generál a paraméter alapján
             TreasureFactory treasureFactory = new TreasureFactory(10);
 
             Console.WriteLine("A kincsesláda tartalma:");
@@ -18,12 +18,16 @@ namespace TreasureChest_VB
             Console.WriteLine($"A kincsesláda értéke: {treasureFactory.TotalValue}");
 
             Console.WriteLine("A kincsesláda tartalma, név szerinte csoportosítva:");
-            foreach (var kvp in treasureFactory.ContentByName)
+            foreach (var treasureDict in treasureFactory.ContentByName)
             {
-                Console.WriteLine($"\t{kvp.Key}: {kvp.Value} db");
+                Console.WriteLine($"\t{treasureDict.Key}: {treasureDict.Value} db");
             }
 
-            Console.WriteLine();
+            Console.WriteLine("A kincsesláda tartalma típus szerint csoportosítva:");
+            foreach (var treasureDict in treasureFactory.ContentByType)
+            {
+                Console.WriteLine($"\t{treasureDict.Key}: {treasureDict.Value} db");
+            }
         }
     }
 }
