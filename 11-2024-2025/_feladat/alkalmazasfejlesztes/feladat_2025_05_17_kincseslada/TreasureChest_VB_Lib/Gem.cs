@@ -10,9 +10,9 @@
 
         public Gem(int type, int size)
         {
-            // Type: 0 = Sapphire, 1 = Emerald, 2 = Diamond
-            // Size: 0 = Small, 1 = Medium, 2 = Large
-            string[] typeNames = { "Sapphire", "Emerald", "Diamond" };
+            // Type: 0 = Zafír, 1 = Smaragd, 2 = Gyémánt
+            // Size: 0 = Kicsi, 1 = Közepes, 2 = Nagy
+            string[] typeNames = { "zafír", "smaragd", "gyémánt" };
             int[] baseValues = { 500, 400, 1000 };
 
             Name = typeNames[type];
@@ -22,9 +22,9 @@
             int smallValue = baseValues[type];
             int multiplier = size switch
             {
-                0 => 1, // Small
-                1 => 4, // Medium
-                2 => 9, // Large
+                0 => 1, // Kicsi
+                1 => 4, // Közepes
+                2 => 9, // Nagy
                 _ => 1
             };
             Value = smallValue * multiplier;
