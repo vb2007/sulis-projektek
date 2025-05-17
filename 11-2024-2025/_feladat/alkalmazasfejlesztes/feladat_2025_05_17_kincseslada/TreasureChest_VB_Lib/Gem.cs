@@ -29,7 +29,7 @@
             };
             Value = smallValue * multiplier;
 
-            Description = $"{(size == 0 ? "kis" : size == 1 ? "közepes" : "nagy")} {Name.ToLower()} worth {Value}";
+            Description = $"Egy gyönyörű {(size == 0 ? "kis" : size == 1 ? "közepes" : "nagy")}méretű {Type}.";
         }
 
         public override string ToString()

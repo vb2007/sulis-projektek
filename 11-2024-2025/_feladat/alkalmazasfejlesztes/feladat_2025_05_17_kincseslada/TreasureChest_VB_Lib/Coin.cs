@@ -27,7 +27,7 @@
                     throw new ArgumentException("Érvénytelen érték. Használj 0, 1, vagy 2 számokat.");
             }
 
-            Description = $"Egy csillió {Type} érme";
+            Description = $"Egy csillió {Type}érme.";
         }
 
         public override string ToString()

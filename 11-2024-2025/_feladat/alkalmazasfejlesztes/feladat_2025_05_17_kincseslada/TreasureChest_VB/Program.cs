@@ -13,6 +13,12 @@ namespace TreasureChest_VB
             {
                 treasures.Add(treasureFactory.Create());
             }
+
+            Console.WriteLine("A kincsesláda tartalma:");
+            foreach (var treasure in treasures)
+            {
+                Console.WriteLine($"\t{treasure.Description}");
+            }
         }
     }
 }
