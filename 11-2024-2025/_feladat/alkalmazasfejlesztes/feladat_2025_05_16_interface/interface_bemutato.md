@@ -59,8 +59,8 @@ namespace Interface_PL // A példaprogram alapján
 4. Tagok definiálása:
 
 - Tulajdonságok: Csak az aláírást adjuk meg. Megadhatjuk, hogy legyen get (lekérdezhető) és/vagy set (beállítható) hozzáférője.
-    - A példánkban az `ITerulet` interfész egy Terulet nevű, double típusú, csak olvasható (csak get) tulajdonságot ír elő: `double Terulet { get; }`.
-    - Az interfész nem foglalkozik azzal, hogy a Terulet tulajdonság egy konkrét adatmezőből származik-e, vagy egy számított érték. Ezt az implementáló osztály dönti el. Az interfész csak azt követeli meg, hogy legyen egy ilyen lekérdezhető tulajdonság.
+  - A példánkban az `ITerulet` interfész egy Terulet nevű, double típusú, csak olvasható (csak get) tulajdonságot ír elő: `double Terulet { get; }`.
+  - Az interfész nem foglalkozik azzal, hogy a Terulet tulajdonság egy konkrét adatmezőből származik-e, vagy egy számított érték. Ezt az implementáló osztály dönti el. Az interfész csak azt követeli meg, hogy legyen egy ilyen lekérdezhető tulajdonság.
 
 - Metódusok: Csak a metódus-aláírást adjuk meg (visszatérési típus, név, paraméterek), a törzsét (implementációját) nem.
 
@@ -234,18 +234,18 @@ Bár nem közvetlenül az interfészekhez kapcsolódik, a példaprogram bemutatj
 A `RosszMeretException.cs`-ben definiálunk egy saját kivételt:
 
 ```cs
-// --- START OF FILE RosszMeretException.cs ---
-// ﻿namespace Interface_PL
-// {
-//     internal class RosszMeretException : Exception
-//     {
-//         public RosszMeretException(string mezo = null)
-//             : base($"A megadott {mezo} nem pozitív")
-//         {
-//         }
-//     }
-// }
-// --- END OF FILE RosszMeretException.cs ---
+namespace Interface_PL
+{
+    internal class RosszMeretException : Exception
+    {
+        public RosszMeretException(string mezo = null)
+            : base($"A megadott {mezo} nem pozitív")
+        {
+        }
+    }
+}
+
+//...
 
 namespace Interface_PL // A példaprogram alapján
 {
