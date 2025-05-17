@@ -6,7 +6,13 @@ namespace TreasureChest_VB
     {
         static void Main(string[] args)
         {
-            var treasures = new List<ITreasure>();
+            TreasureFactory treasureFactory = new();
+            List<ITreasure> treasures = new();
+
+            for (int i = 0; i < 10; i++)
+            {
+                treasures.Add(treasureFactory.Create());
+            }
         }
     }
 }
