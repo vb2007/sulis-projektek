@@ -1,0 +1,4 @@
+rap-hiphop        Rap / Hip-Hop
+electronic-experimental       Elektronikus / Kísérleti
+rock-alternative      Rock / Alternatív
+other     Egyéb / Vegyes
