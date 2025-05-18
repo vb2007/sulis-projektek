@@ -1,3 +1,4 @@
+<!-- "Csak a feladat megoldását töltse fel a Git repoba!" -->
 <!DOCTYPE html>
 <html lang="hu">
 <head>
@@ -36,11 +37,26 @@
                 <h3>Egyéb / Vegyes</h3>
                 <p>Vannak előadók, akiket nehéz egyetlen kategóriába sorolni. Halott Pénz zenéje a pop, a rap és az élő hangszerelés elegyéből születik, könnyen befogadható és érzelmes. Andrius Klimka valószínűleg folkos vagy indie stílusban alkot, míg az Alexandrov Kórus katonai, klasszikus vagy népi kórusműveiről ismert. Ez a kategória a sokszínűségről, a hagyomány és modernitás keveredéséről szól.</p>
             </article>
-            
+            <figure>
+                <video src="./src/videos/concert.mp4" autoplay muted loop></video>
+                <figcaption>Koncert!</figcaption>
+            </figure>
         </section>
         <section>
             <h2>Mi a te zenei stílusod?</h2>
-            
+            <form>
+                <label for="name">Név</label>
+                <input type="text" name="name" id="name" required maxlength="50" placeholder="Péter">
+                <label for="style">Stílus</label>
+                <select name="style" id="style" required>
+                    <option value="">Zenei stílus választása</option>
+                    <option value="rap-hiphop">Rap / Hip-Hop</option>
+                    <option value="electronic-experimental">Elektronikus / Kísérleti</option>
+                    <option value="rock-alternative">Rock / Alternatív</option>
+                    <option value="other">Egyéb / Vegyes</option>
+                </select>
+                <button type="submit">Lássuk!</button>
+            </form>
             <div id="card" class="hidden" style="max-width: 18rem;">
                 <h3></h3>
                 <div>
@@ -50,7 +66,7 @@
         </section>
     </main>
     <footer>
-        Készítette: Kurityák Dániel
+        Készítette: Vágvölgyi Balázs
     </footer>
 </body>
 </html>
