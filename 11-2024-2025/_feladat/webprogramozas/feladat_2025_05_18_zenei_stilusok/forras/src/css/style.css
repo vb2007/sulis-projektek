@@ -137,7 +137,7 @@ form {
 button {
     background-color: rgba(0, 212, 40, 0.2); /* leszarom max 1 pont a relatív színkezelés és valszeg ugyis ai generalt a feladat leiras is */
     border: none;
-    font-style: italic;
+    font-weight: bold;
     padding: 0.25rem;
     border-radius: 0.25rem;
 }
@@ -157,6 +157,14 @@ input, select {
     img {
         width: 100%;
         border-radius: 0.3rem;
+    }
+    ul {
+        margin-left: 0.5rem;
+        margin-right: 0.5rem;
+        list-style-image: url(../img/music.svg);
+    }
+    ul li:nth-child(even) {
+        color: rgb(from black r g 100); /* ott rohadjon meg a budos mocskos relativ szinkezeles */
     }
 }
 
