@@ -2,11 +2,11 @@
 {
     public class Mushroom : IPlant
     {
-        public string Name => "Mushroom";
+        public string Name => "Gomba";
         public string Description { get; set; }
         public string Type { get; set; }
         public int Value => 50;
-        public char Display => 'm';
+        public char Display => 'g';
         public bool Poisonous { get; set; }
 
         public Mushroom(string type)

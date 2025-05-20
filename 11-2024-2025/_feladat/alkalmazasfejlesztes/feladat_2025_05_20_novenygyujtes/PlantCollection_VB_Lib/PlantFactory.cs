@@ -5,9 +5,13 @@
         private readonly List<IPlant> plants = new();
         private static readonly Random random = new();
 
+        private List<string> floverTypes = new List<string> { "ff", "d" };
+        private List<string> herbTypes = new List<string> { "kamilla", "borsmenta", "citromfű" };
+        private List<string> mushroomTypes = new List<string> { "rókagomba", "döggomba", "csiperke" };
+
         public PlantFactory(int matrixSize)
         {
-            char[,] matrix = new char[matrixSize, matrixSize];
+            IPlant[,] matrix = new IPlant[matrixSize, matrixSize];
             for (int i = 0; i < matrixSize; i++)
             {
                 for (int j = 0; j < matrixSize; j++)
@@ -24,14 +28,11 @@
             switch (plantType)
             {
                 case 0:
-                    plants.Add(new Flover());
-                    break;
+                    return new Flover();
                 case 1:
-                    plants.Add(new Herb());
-                    break;
+                    return new Herb()
                 case 2:
-                    plants.Add(new Mushroom());
-                    break;
+                    return new Mushroom();
                 default:
                     throw new ArgumentOutOfRangeException(nameof(plantType), "Érvénytelen növénytípus.");
             }
