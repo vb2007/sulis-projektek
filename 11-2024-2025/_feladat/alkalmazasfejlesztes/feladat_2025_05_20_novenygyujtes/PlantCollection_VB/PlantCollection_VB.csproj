@@ -7,4 +7,8 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\PlantCollection_VB_Lib\PlantCollection_VB_Lib.csproj" />
+  </ItemGroup>
+
 </Project>
