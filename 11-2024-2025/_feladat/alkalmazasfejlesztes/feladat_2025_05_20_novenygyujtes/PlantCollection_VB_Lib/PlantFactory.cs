@@ -5,7 +5,7 @@
         private readonly List<IPlant> plants = new();
         private static readonly Random random = new();
 
-        private List<string> floverTypes = new List<string> { "ff", "d" };
+        private List<string> floverTypes = new List<string> { "tulipán", "rózsa", "hóvirág", "muskátli", "nárcisz" };
         private List<string> herbTypes = new List<string> { "kamilla", "borsmenta", "citromfű" };
         private List<string> mushroomTypes = new List<string> { "rókagomba", "döggomba", "csiperke" };
 
