@@ -23,16 +23,16 @@
 
         public IPlant Create()
         {
-            int plantType = random.Next(3); //3 types: 0, 1, 2
+            int plantType = random.Next(3); //3 types: 0: flover, 1: herb, 2: mushroom
 
             switch (plantType)
             {
                 case 0:
-                    return new Flover();
+                    return new Flover(floverTypes[random.Next(floverTypes.Count)]);
                 case 1:
-                    return new Herb()
+                    return new Herb(herbTypes[random.Next(herbTypes.Count)]);
                 case 2:
-                    return new Mushroom();
+                    return new Mushroom(mushroomTypes[random.Next(mushroomTypes.Count)]);
                 default:
                     throw new ArgumentOutOfRangeException(nameof(plantType), "Érvénytelen növénytípus.");
             }
