@@ -171,6 +171,10 @@ input {
 	background-color: rgb(from #ffb3ff r g b / 20%);
 }
 
+input[type="number"] {
+	width: 96%;
+}
+
 button {
 	width: 100%; /* nem írta a feladatleírás, de így fog kinézni úgy, mint a mintán */
 	transition: 0.3s;
@@ -178,5 +182,4 @@ button {
 
 button:hover {
 	background-color: #b965d1;
-	transition: 0.3s;
 }

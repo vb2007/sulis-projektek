@@ -35,23 +35,21 @@
         <section>
             <h2>Napi táplálék fogyasztás</h2>
             <form>
+                <label for="day">Nap:</label>
+                <input type="number" id="day" name="day" required min="1" max="30" />
                 <fieldset>
-                    <label for="day">Nap:</label>
-                    <input type="number" id="day" name="day" required minlength="1" maxlength="30" />
                     <legend>Cica:</legend>
-                    <div>
-                        <label for="hazi">Házi cica
-                            <input type="radio" id="hazi" name="cat" value="hazi" required />
-                        </label>
-                        <label for="mainecoon">Maine Goon cica
-                            <input type="radio" id="mainecoon" name="cat" value="mainecoon" required />
-                        </label>
-                        <label for="sziami">Sziámi cica
-                            <input type="radio" id="sziami" name="cat" value="sziami" required />
-                        </label>
-                    </div>
-                    <button type="submit">Eredmény</button>
+                    <label for="hazi">Házi cica
+                        <input type="radio" id="hazi" name="cat" value="hazi" required />
+                    </label>
+                    <label for="mainecoon">Maine Goon cica
+                        <input type="radio" id="mainecoon" name="cat" value="mainecoon" required />
+                    </label>
+                    <label for="sziami">Sziámi cica
+                        <input type="radio" id="sziami" name="cat" value="sziami" required />
+                    </label>
                 </fieldset>
+                <button type="submit">Eredmény</button>
             </form>
             <div id="card" class="hidden" style="background-color: #4a2659; margin-bottom: 1rem;">
                 <img src="">

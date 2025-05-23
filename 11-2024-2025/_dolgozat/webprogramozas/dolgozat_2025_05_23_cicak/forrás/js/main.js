@@ -45,7 +45,7 @@ const getDailyConsumption = (day, cat) => {
     return list[day - 1];
 }
 
-const min = (list) => {
+const minimum = (list) => {
     let minIndex = 0;
     let minValue = list[0];
 
@@ -73,6 +73,7 @@ const updateCard = (day, cat) => {
     details.innerHTML = "";
 
     const h3 = document.createElement("h3");
+    h3.style.marginBottom = "0.5rem";
     h3.textContent = getCatNameByValue(cat);
 
     const p1 = document.createElement("p");
@@ -80,10 +81,10 @@ const updateCard = (day, cat) => {
 
     const p2 = document.createElement("p");
     const minList = getListByCatValue(cat);
-    const minListIndex = min(minList);
+    const minListIndex = minimum(minList);
     p2.textContent = `A cica a legkevesebbet a(z) ${minListIndex + 1}. napon evett: ${minList[minListIndex]} gramm.`;
 
-    details.append(p1, p2);
+    details.append(h3, p1, p2);
 }
 
 document.querySelector("button").addEventListener("click", (event) => {
