@@ -1,0 +1,182 @@
+* {
+	margin: 0;
+	padding: 0;
+	color: white;
+	font-family: Verdana;
+}
+
+body {
+	background-color: #2d1b33;
+}
+
+header {
+	background-image: url("../images/header.jpg");
+	background-size: cover;
+	background-position: center;
+	height: 350px;
+	color: black;
+}
+
+main {
+	width: 95%;
+	max-width: 1320px;
+	margin-inline: auto;
+	padding: 1rem;
+	background-color: #3d2645;
+}
+
+h1 {
+	margin-bottom: 1rem;
+	text-align: center;
+	color: #f0b3ff;
+}
+
+h2 {
+	margin-bottom: 0.5rem;
+	color: #e199ff;
+}
+
+section {
+	margin-block: 1rem;
+}
+
+p {
+	margin-bottom: 0.5rem;
+	text-align: justify;
+	line-height: 1.5;
+	color: #f5d6ff;
+}
+
+video {
+	width: 95%;
+	max-width: 960px;
+	margin-inline: auto;
+	display: block;
+    border-radius: 0.5rem;
+}
+
+input {
+	border: 1px solid #6b4075;
+	padding: 0.3rem;
+	border-radius: 0.3rem;
+}
+
+fieldset {
+	border: 1px solid #6b4075;
+	border-radius: 0.3rem;
+	padding: 0.5rem;
+}
+
+legend {
+	color: #e199ff;
+	padding: 0 0.3rem;
+}
+
+fieldset label {
+	display: block;
+	margin: 0.3rem 0;
+}
+
+input[type="radio"] {
+	margin-right: 0.5rem;
+}
+
+option {
+	color: black;
+}
+
+button,
+input[type="submit"] {
+	background-color: #8b4599;
+	padding: 0.3rem;
+	border-radius: 0.3rem;
+	border: none;
+}
+
+#card {
+	max-width: 18rem;
+	border-radius: 0.3rem;
+	padding: 0.3rem;
+}
+
+#card img {
+	width: 100%;
+}
+
+.hidden {
+	display: none;
+}
+
+footer {
+	padding: 1rem;
+	text-align: center;
+	color: #e199ff;
+}
+
+#cats div{
+	transition: transform 0.3s ease-in-out;
+}
+
+#cats div:hover {
+	transform: scale(1.05);
+}
+
+input{
+	color: white;
+}
+
+#cats {
+	display: grid;
+	gap: 1rem;
+	grid-template-columns: 1fr;
+}
+
+@media screen and (min-width: 768px) {
+	#cats {
+		grid-template-columns: 1fr 1fr;
+	}
+}
+
+@media screen and (min-width: 992px) {
+    #cats {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}
+
+#cats div {
+	padding: 0.5rem;
+	border-radius: 0.5rem;
+	background-color: #4a2659;
+}
+
+#cats div:nth-of-type(2) {
+	color: #ffb3ff;
+}
+
+#cats img {
+	width: 100%;
+	border-radius: 0.5rem;
+}
+
+form {
+	display: flex;
+	flex-direction: column;
+	gap: 0.5rem;
+	margin-inline: auto;
+	margin-bottom: 1rem;
+	max-width: 18rem;
+}
+
+input {
+	background-color: rgb(from #ffb3ff r g b / 20%);
+}
+
+button {
+	width: 100%; /* nem írta a feladatleírás, de így fog kinézni úgy, mint a mintán */
+	transition: 0.3s;
+}
+
+button:hover {
+	background-color: #b965d1;
+	transition: 0.3s;
+}
