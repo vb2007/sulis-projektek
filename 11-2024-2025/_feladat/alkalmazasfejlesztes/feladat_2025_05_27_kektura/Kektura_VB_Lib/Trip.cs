@@ -22,6 +22,7 @@
             IsPostmarkPoint = splitted[5] == "i";
         }
 
-        public bool HianyosNev => 
+        public bool IncorrectName =>
+            IsPostmarkPoint && !EndPoint.ToLower().Contains("pecsetelohely");
     }
 }

@@ -22,6 +22,7 @@ namespace Kektura_VB
             Console.WriteLine($"\tTávolság: {shortestTrip.Length} km");
 
             //6. + 7. feladat
+            Console.WriteLine($"7. feladat: Hiányos állomásnevek:\n\t{trips.IncorrectNamesString}");
         }
     }
 }

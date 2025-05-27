@@ -18,5 +18,14 @@
 
         public Trip ShortestTrip => trips.MinBy(x => x.Length);
 
+        private List<string> IncorrectNames =>
+            trips
+                .Where(x => x.IncorrectName)
+                .Select(x => x.EndPoint)
+                .ToList();
+        public string IncorrectNamesString
+            => string.Join("\n\t", IncorrectNames);
+
+
     }
 }
