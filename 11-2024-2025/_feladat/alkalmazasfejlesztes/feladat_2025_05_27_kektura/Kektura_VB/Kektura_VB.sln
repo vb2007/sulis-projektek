@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.11.35208.52
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Kektura_VB", "Kektura_VB.csproj", "{86973744-487A-4776-92A3-A1F78A975203}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Kektura_VB_Lib", "..\Kektura_VB_Lib\Kektura_VB_Lib.csproj", "{D4EA004E-3D1F-45F1-9A16-7E0ECC572AD9}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{86973744-487A-4776-92A3-A1F78A975203}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{86973744-487A-4776-92A3-A1F78A975203}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{86973744-487A-4776-92A3-A1F78A975203}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{86973744-487A-4776-92A3-A1F78A975203}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D4EA004E-3D1F-45F1-9A16-7E0ECC572AD9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D4EA004E-3D1F-45F1-9A16-7E0ECC572AD9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D4EA004E-3D1F-45F1-9A16-7E0ECC572AD9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D4EA004E-3D1F-45F1-9A16-7E0ECC572AD9}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {F598E1AB-053B-4731-8804-F4CF0C5AE2EF}
+	EndGlobalSection
+EndGlobal
