@@ -1,4 +1,4 @@
-﻿namespace FifaVilagranglista_VB_Lib
+namespace FifaVilagranglista_VB_Lib
 {
     public class Teams
     {
@@ -31,7 +31,6 @@
             teams
                 .GroupBy(x => x.Difference)
                 .OrderBy(x => x.Key)
-                .Where(x => x.Key > 1)
                 .ToDictionary(x => x.Key, x => x.Count());
     }
 }
