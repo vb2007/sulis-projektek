@@ -30,7 +30,7 @@ namespace FifaVilagranglista_VB_Lib
         public IDictionary<int, int> DiffStats =>
             teams
                 .GroupBy(x => x.Difference)
-                .OrderBy(x => x.Key)
+                .Where(g => g.Count() > 1)
                 .ToDictionary(x => x.Key, x => x.Count());
     }
 }
