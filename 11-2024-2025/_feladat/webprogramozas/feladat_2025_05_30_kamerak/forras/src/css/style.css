@@ -1,0 +1,13 @@
+@import "tailwindcss";
+
+@layer base {
+	input:not([type="button"]), select {
+		&:is(&:not([type="radio"], [type="check"])) {
+			@apply h-6
+		}
+		@apply py-0.5 px-1 bg-emerald-50 rounded w-auto
+	}
+	button, input[type="submit"] {
+		@apply bg-emerald-700 text-white font-semibold py-1 px-2 rounded cursor-pointer md:col-start-2
+	}
+}
