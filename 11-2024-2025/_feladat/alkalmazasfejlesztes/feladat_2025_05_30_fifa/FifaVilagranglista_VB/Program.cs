@@ -1,4 +1,4 @@
-﻿using FifaVilagranglista_VB_Lib;
+using FifaVilagranglista_VB_Lib;
 
 namespace FifaVilagranglista_VB
 {
@@ -24,7 +24,7 @@ namespace FifaVilagranglista_VB
             Console.WriteLine($"7. feladat: Statisztika");
             foreach( var item in diffStats )
             {
-                Console.WriteLine($"{item.Key} helyet változott: {item.Value} csapat");
+                Console.WriteLine($"\t{item.Key} helyet változott: {item.Value} csapat");
             }
         }
     }
