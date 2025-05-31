@@ -24,8 +24,26 @@
                 .Select(x => x.EndPoint)
                 .ToList();
         public string IncorrectNamesString
-            => string.Join("\n\t", IncorrectNames);
+            => IncorrectNames.Count > 0
+                ? string.Join("\n\t", IncorrectNames)
+                : "Nincs hiányos állomásnév!";
 
+        public (string EndPoint, int Elevation) GetHighestEndPoint(int startElevation)
+        {
+            int currentElevation = startElevation;
+            int maxElevation = startElevation;
+            string maxEndPoint = trips[0].StartPoint;
 
+            foreach (var trip in trips)
+            {
+                currentElevation += trip.Increments - trip.Decrements;
+                if (currentElevation > maxElevation)
+                {
+                    maxElevation = currentElevation;
+                    maxEndPoint = trip.EndPoint;
+                }
+            }
+            return (maxEndPoint, maxElevation);
+        }
     }
 }
