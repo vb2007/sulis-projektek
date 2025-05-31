@@ -1,4 +1,6 @@
-﻿namespace Kektura_VB_Lib
+﻿using System.Globalization;
+
+namespace Kektura_VB_Lib
 {
     public class Trips
     {
@@ -34,7 +36,7 @@
             int maxElevation = startElevation;
             string maxEndPoint = trips[0].StartPoint;
 
-            foreach (var trip in trips)
+            foreach (Trip trip in trips)
             {
                 currentElevation += trip.Increments - trip.Decrements;
                 if (currentElevation > maxElevation)
@@ -44,6 +46,26 @@
                 }
             }
             return (maxEndPoint, maxElevation);
+        }
+
+        public void WriteToCsv(string filePath, int startElevation)
+        {
+            using StreamWriter writer = new(filePath, false, System.Text.Encoding.UTF8);
+            writer.WriteLine(startElevation);
+
+            foreach (Trip trip in trips)
+            {
+                string endPoint = trip.EndPoint;
+                if (trip.IsPostmarkPoint && !endPoint.Contains("pecsetelohely"))
+                {
+                    endPoint += " pecsetelohely";
+                }
+
+                //StartPoint;EndPoint;Length;Increments;Decrements;IsPostmarkPoint
+                writer.WriteLine(
+                    $"{trip.StartPoint};{endPoint};{trip.Length.ToString(CultureInfo.InvariantCulture)};{trip.Increments};{trip.Decrements};{(trip.IsPostmarkPoint ? 1 : 0)}"
+                );
+            }
         }
     }
 }

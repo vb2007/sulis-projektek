@@ -24,11 +24,15 @@ namespace Kektura_VB
             //6. + 7. feladat
             Console.WriteLine($"7. feladat: Hiányos állomásnevek:\n\t{trips.IncorrectNamesString}");
 
-            // 8. feladat
+            //8. feladat
             int startElevation = int.Parse(File.ReadLines("kektura.csv").First());
             var (highestEndPoint, highestElevation) = trips.GetHighestEndPoint(startElevation);
-            Console.WriteLine($"8. feladat: A legmagasabban fekvő végpont: {highestEndPoint}");
-            Console.WriteLine($"\tTengerszint feletti magassága: {highestElevation} m");
+            Console.WriteLine($"8. feladat: A túra legmagasabban fekvő végpontja:");
+            Console.WriteLine($"\tA végpont neve: {highestEndPoint}");
+            Console.WriteLine($"\tA végpont engerszint feletti magassága: {highestElevation} m");
+
+            //9. feladat
+            trips.WriteToCsv("kektura2.csv", startElevation);
         }
     }
 }
