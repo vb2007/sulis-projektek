@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.11.35208.52
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FifaVilagranglista_VB", "FifaVilagranglista_VB.csproj", "{6E524DD6-C081-4032-BFDC-FE7B879E7418}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FifaVilagranglista_VB_Lib", "..\FifaVilagranglista_VB_Lib\FifaVilagranglista_VB_Lib.csproj", "{BBEB5F3B-5280-4C69-9B17-41F84A51B821}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{6E524DD6-C081-4032-BFDC-FE7B879E7418}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6E524DD6-C081-4032-BFDC-FE7B879E7418}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6E524DD6-C081-4032-BFDC-FE7B879E7418}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6E524DD6-C081-4032-BFDC-FE7B879E7418}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BBEB5F3B-5280-4C69-9B17-41F84A51B821}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BBEB5F3B-5280-4C69-9B17-41F84A51B821}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BBEB5F3B-5280-4C69-9B17-41F84A51B821}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BBEB5F3B-5280-4C69-9B17-41F84A51B821}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {96133448-DC84-4237-8852-DC578D425588}
+	EndGlobalSection
+EndGlobal
