@@ -20,6 +20,14 @@ namespace Footgolf_VB
 
             //7. feladat
             competitors.WriteToFile("osszpontFF.txt");
+
+            //8. feladat
+            Dictionary<string, int> teamStats = competitors.GetTeamStatistics;
+            Console.WriteLine("8. feladat: Egyesület statisztika");
+            foreach (var team in teamStats)
+            {
+                Console.WriteLine($"\t{team.Key} - {team.Value} fő");
+            }
         }
     }
 }

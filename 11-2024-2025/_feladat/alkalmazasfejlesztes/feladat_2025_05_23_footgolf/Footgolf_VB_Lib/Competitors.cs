@@ -38,5 +38,12 @@
 
             File.WriteAllLines(fileName, lines);
         }
+
+        public Dictionary<string, int> GetTeamStatistics =>
+            competitors
+            .Where(c => c.Team != "n.a.")
+            .GroupBy(c => c.Team)
+            .Where(g => g.Count() > 2)
+            .ToDictionary(g => g.Key, g => g.Count());
     }
 }
