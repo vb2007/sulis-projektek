@@ -9,6 +9,17 @@ namespace Footgolf_VB
             Competitors competitors = new(File.ReadAllLines("fob2016.txt"));
 
             Console.WriteLine($"3. feladat: Versenyzők száma: {competitors.Count}");
+
+            Console.WriteLine($"4. feladat: A női versenyzők aránya: {competitors.FemaleRatioPercent}%");
+
+            Competitor femaleChampion = competitors.GetFemaleChampion;
+            Console.WriteLine($"6. feladat: A bajnok női versenyző");
+            Console.WriteLine($"\tNév: {femaleChampion.Name}");
+            Console.WriteLine($"\tEgyesület: {femaleChampion.Team}");
+            Console.WriteLine($"\tÖsszpont: {femaleChampion.TotalScore}");
+
+            //7. feladat
+            competitors.WriteToFile("osszpontFF.txt");
         }
     }
 }

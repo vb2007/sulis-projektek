@@ -9,14 +9,35 @@
 
         public Competitor(string dataLine)
         {
-            string[] splitted = dataLine.Split(';');
+            string[] split = dataLine.Split(';');
 
-            Name = splitted[0];
-            Category = splitted[1];
-            Team = splitted[2];
+            Name = split[0];
+            Category = split[1];
+            Team = split[2];
+            Points = new int[8];
+
             for (int i = 0; i < 8; i++)
             {
-                Points[i] = int.Parse(splitted[i + 2]);
+                Points[i] = int.Parse(split[i + 3]);
+            }
+        }
+
+        public int TotalScore
+        {
+            get
+            {
+                var sorted = Points.OrderBy(p => p).ToArray();
+                int[] dropped = { sorted[0], sorted[1] };
+                int sum = sorted.Skip(2).Sum();
+
+                //ha a kieső pontok bármelyike nem nulla, +10 pont jár érte
+                foreach (var d in dropped)
+                {
+                    if (d != 0)
+                        sum += 10;
+                }
+
+                return sum;
             }
         }
     }
