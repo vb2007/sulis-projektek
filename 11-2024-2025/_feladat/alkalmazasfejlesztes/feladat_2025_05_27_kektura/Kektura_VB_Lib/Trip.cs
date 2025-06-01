@@ -11,15 +11,15 @@
 
         public Trip(string dataLine)
         {
-            string[] splitted = dataLine.Split(';');
+            string[] split = dataLine.Split(';');
 
-            StartPoint = splitted[0];
-            EndPoint = splitted[1];
-            Length = double.Parse(splitted[2]);
-            Increments = int.Parse(splitted[3]);
-            Decrements = int.Parse(splitted[4]);
+            StartPoint = split[0];
+            EndPoint = split[1];
+            Length = double.Parse(split[2]);
+            Increments = int.Parse(split[3]);
+            Decrements = int.Parse(split[4]);
             //inline if, alapból bool-al tér vissza, tehát nem kell true / false értékeket megadni
-            IsPostmarkPoint = splitted[5] == "i";
+            IsPostmarkPoint = split[5] == "i";
         }
 
         public bool IncorrectName =>
