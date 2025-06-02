@@ -4,12 +4,8 @@
   --accent: #3bc9db;
   --light: #f8f9fa;
   --dark: #212529;
-  --success: #20c997;
-  --warning: #ffd43b;
-  --error: #e63946;
   
   --font-main: 'Segoe UI', system-ui, sans-serif;
-  --fs-sm: 0.875rem;
   --fs-md: 1rem;
   --fs-lg: 1.25rem;
   --fs-xl: 1.75rem;
@@ -23,9 +19,7 @@
   
   --trans-fast: 0.2s ease;
   --trans-med: 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-  --trans-slow: 0.5s cubic-bezier(0.65, 0, 0.35, 1);
   
-  --shadow-sm: 0 2px 5px rgba(0, 0, 0, 0.1);
   --shadow-md: 0 4px 10px rgba(0, 0, 0, 0.12);
   --shadow-lg: 0 10px 30px rgba(0, 0, 0, 0.15);
 }
