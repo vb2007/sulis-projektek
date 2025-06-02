@@ -182,7 +182,6 @@ article p {
   font-size: var(--fs-md);
 }
 
-/* Form styling */
 form {
   background-color: white;
   padding: var(--space-lg);
@@ -207,7 +206,7 @@ input, select {
   border: 2px solid #e9ecef;
   border-radius: 6px;
   font-size: var(--fs-md);
-  transition: all var(--trans-fast);
+  transition: all var(--trans-med);
 }
 
 input:focus, select:focus {
@@ -220,7 +219,6 @@ input:hover, select:hover {
   border-color: var(--accent);
 }
 
-/* Card styling */
 #card {
   background-color: white;
   border-radius: 12px;

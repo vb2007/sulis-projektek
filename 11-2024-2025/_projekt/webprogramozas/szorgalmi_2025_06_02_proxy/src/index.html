@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Proxy használat</title>
     <link rel="stylesheet" href="./asset/css/main.css">
-    <script src="./asset/js/mian.js"></script>
+    <script src="./asset/js/main.js"></script>
 </head>
 <body>
     <header></header>
@@ -44,6 +44,8 @@
                     <option value="max">Maximális napi használat</option>
                     <option value="min">Minimális napi használat</option>
                 </select>
+                <!-- ik a button lehet nem számít 3. input mezőnek, de több fölöslegesen elrontotta volna az összképet -->
+                <button type="button">Számítás</button>
             </form>
             <div id="card" class="hidden" style="max-width: 18rem;">
                 <h3></h3>
@@ -53,6 +55,7 @@
     </main>
     <footer>
         <p>Készítette: Vágvölgyi Proxymentes Balázs</p>
+        <p>Inspiráció: <a href="https://proxy.kdani.hu/" target="_blank">proxy.kdani.hu</a></p>
     </footer>
 </body>
 </html>
