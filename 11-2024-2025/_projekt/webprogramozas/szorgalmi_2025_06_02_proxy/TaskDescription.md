@@ -7,19 +7,19 @@ Készíts egy weboldalt. Használj minden idén tanult dolgot.
 Tehát amiket kell használni (Zárójelben a példa rá):
 
 - CSS:
-  - kombinált szelektor (div:nth-child(3) > p > strong),
-  - pszeudo osztályok (:nth-child; :hover),
-  - képernyő méret szerinti rendezés (@media),
-  - Grid vagy Flex,
-  - valamilyen animáció,
+  - kombinált szelektor (div:nth-child(3) > p > strong)
+  - pszeudo osztályok (:nth-child; :hover)
+  - képernyő méret szerinti rendezés (@media)
+  - Grid vagy Flex
+  - valamilyen animáció
 
 - HTML:
-  - Legyen form az oldalon, legalább 3 input mező (select is jó egynek),
-  - legyen pár dolog inline stílussal formázva,
+  - Legyen form az oldalon, legalább 3 input mező (select is jó egynek)
+  - legyen pár dolog inline stílussal formázva
 
 - JS:
   - DOM-ból kérj le dolgokat és hozz is létre dolgokat
-  - Legyen legalább 3 függvény amit létrehozol.
+  - Legyen legalább 3 függvény amit létrehozol
   - Használj ciklust
   - használj beépített függvényeket is
 
