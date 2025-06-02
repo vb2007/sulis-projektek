@@ -130,14 +130,16 @@ article {
   animation: slideUp 0.6s var(--trans-med) forwards;
 }
 
-article:nth-child(1) { animation-delay: 0.1s; }
-article:nth-child(2) { animation-delay: 0.3s; }
-article:nth-child(3) { animation-delay: 0.5s; }
-
-article:hover {
-  transform: translateY(-8px);
-  box-shadow: var(--shadow-lg);
+/* ez akkor számítana, ha több lapos lenne, vagy lefrissülne az oldal... */
+/* article:nth-child(1) {
+  animation-delay: 0.1s;
 }
+article:nth-child(2) {
+  animation-delay: 0.3s;
+}
+article:nth-child(3) {
+  animation-delay: 0.5s;
+} */
 
 article::before {
   content: '';
@@ -200,7 +202,7 @@ label {
   display: block;
 }
 
-input, select, button {
+input, select {
   width: 100%;
   padding: var(--space-sm) var(--space-md);
   border: 2px solid #e9ecef;
@@ -217,6 +219,28 @@ input:focus, select:focus {
 
 input:hover, select:hover, button:hover {
   border-color: var(--accent);
+}
+
+button {
+  background: linear-gradient(45deg, var(--primary), var(--accent));
+  color: white;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+  transition: all var(--trans-med);
+  box-shadow: 0 3px 8px rgba(67, 97, 238, 0.3);
+  border-radius: 6px;
+}
+
+button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 12px rgba(67, 97, 238, 0.5);
+  filter: brightness(1.1);
+}
+
+button:active {
+  transform: translateY(1px);
+  box-shadow: 0 2px 5px rgba(67, 97, 238, 0.4);
 }
 
 #card {
@@ -241,31 +265,48 @@ footer {
   padding: var(--space-lg);
   text-align: center;
   margin-top: var(--space-xl);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
 }
 
 footer p {
   position: relative;
-  display: inline-block;
   font-weight: bold;
   letter-spacing: 1px;
+  display: block;
+  margin: 0 auto;
 }
 
 footer p::after {
   content: '';
   position: absolute;
   bottom: -5px;
-  left: 0;
-  width: 100%;
+  left: 50%;
+  transform: translateX(-50%) scaleX(0);
+  width: 70%;
   height: 2px;
   background-color: white;
-  transform: scaleX(0);
   transition: transform var(--trans-med);
-  transform-origin: right;
+  transform-origin: center;
 }
 
 footer p:hover::after {
-  transform: scaleX(1);
-  transform-origin: left;
+  transform: translateX(-50%) scaleX(1);
+}
+
+/* Styling for footer link */
+footer a {
+  color: white;
+  text-decoration: none;
+  border-bottom: 1px dotted rgba(255, 255, 255, 0.5);
+  padding: 0 2px;
+  transition: all var(--trans-fast);
+}
+
+footer a:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+  border-bottom: 1px solid white;
 }
 
 @keyframes fadeIn {
