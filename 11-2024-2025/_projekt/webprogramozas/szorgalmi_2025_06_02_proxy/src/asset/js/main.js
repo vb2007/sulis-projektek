@@ -35,7 +35,12 @@ const renderCard = (day, calcType) => {
     cardDiv.append(dailyUsage, calculatedUsage);
 }
 
+const form = document.querySelector("form");
 document.querySelector("button").addEventListener("click", (event) => {
+    //visszahozza a html validációt (required, min, max, stb.)
+    if (!form.checkValidity()) {
+        return;
+    }
     event.preventDefault();
 
     const day = document.getElementById("day").value;
