@@ -6,7 +6,7 @@ const calculateUsage = (calcType) => {
             return usageData.reduce((sum, item) => sum + item.usage, 0);
         case "avg":
             const totalUsage = usageData.reduce((sum, item) => sum + item.usage, 0);
-            return totalUsage / usageData.length;
+            return Math.round(totalUsage / usageData.length * 100) / 100; //kerekítés 2 tizedesjegyre
         case "max":
             return Math.max(...usageData.map(item => item.usage));
         case "min":
@@ -16,23 +16,35 @@ const calculateUsage = (calcType) => {
     }
 }
 
+const formattedCalculationType = (calcType) => {
+    switch (calcType) {
+        case "sum":
+            return "Havi összesített használat: ";
+        case "avg":
+            return "Havi átlagos használat: ";
+        case "max":
+            return "Havi maximális használat: ";
+        case "min":
+            return "Havi minimális használat: ";
+        default:
+            throw new Error("Érvénytelen számítási típus");
+    }
+}
+
 const renderCard = (day, calcType) => {
     const card = document.getElementById("card");
     card.classList.remove("hidden");
 
     const h3 = card.querySelector("h3");
-    h3.textContent = `Usage Data for ${day}`;
+    h3.textContent = `Használat a(z) ${day}. napon: ${usageData[day - 1].usage} MB`;
 
     const cardDiv = card.querySelector("div");
     cardDiv.innerHTML = "";
 
-    const dailyUsage = document.createElement("p");
-    dailyUsage.textContent = usageData.find(item => item.date === day)?.usage || 0;
-
     const calculatedUsage = document.createElement("p");
-    calculatedUsage.textContent = `A ${calcType} érték: ${calculateUsage(calcType)}`;
+    calculatedUsage.textContent = `${formattedCalculationType(calcType)} ${calculateUsage(calcType)} MB`;
 
-    cardDiv.append(dailyUsage, calculatedUsage);
+    cardDiv.append(calculatedUsage);
 }
 
 const form = document.querySelector("form");
