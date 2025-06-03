@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proxy használat</title>
+    <link rel="icon" href="./asset/img/favicon.svg" type="image/x-icon">
+    <link rel="stylesheet" href="./asset/css/main.css">
+    <script type="module" src="./asset/js/main.js"></script>
+    <link rel="stylesheet" href="./asset/css/digitalis_kor_gyoztese.css">
+    <script src="./asset/js/digitalis_kor_gyoztese.js"></script>
+</head>
+<body>
+    <header></header>
+    <main>
+        <section>
+            <h1>Proxy használati statisztikák</h1>
+        </section>
+        <section>
+            <h2>Általános információk a proxyk-ról</h2>
+            <article>
+                <img src="./asset/img/security.png" alt="Bizonság" title="Bizonság">
+                <h3>Használatának előnyei</h3>
+                <p>A proxy szerverek használatával növelhető az internetes böngészés biztonsága és anonimitása. Segítségükkel elrejthetjük valódi IP-címünket, így védettebbek lehetünk a külső támadásokkal szemben, valamint megkerülhetjük a földrajzi korlátozásokat is.</p>
+            </article>
+            <article>
+                <img src="./asset/img/phone.png" alt="Telefon" title="Telefon">
+                <h3>Hogyan működik a proxy?</h3>
+                <p>A proxy szerver közvetítőként működik a felhasználó és az internet között. Amikor egy weboldalt szeretnénk elérni, a kérés először a proxyhoz fut be, amely továbbítja azt a céloldal felé, majd visszaküldi a választ a felhasználónak.</p>
+            </article>
+            <article>
+                <img src="./asset/img/server.jpg" alt="Szerverpark" title="Szerverpark">
+                <h3>A proxy szerverek típusai</h3>
+                <p>Többféle proxy létezik, például az átlátszó, az anonim és a fordított proxy. Mindegyik típus más-más célra használható, például tartalomszűrésre, gyorsítótárazásra vagy a belső hálózat védelmére.</p>
+            </article>
+        </section>
+        <section>
+            <h2>Specifikus használati statisztikák megtekintése</h2>
+            <form>
+                <div class="form-group">
+                    <label for="day">Nap:</label>
+                    <input type="number" name="day" id="day" required min="1" max="30" placeholder="14">
+                </div>
+                <div class="form-group">
+                    <label for="calcType">Kalkuláció típusa:</label>
+                    <select name="calcType" id="calcType">
+                    <option value="">Kalkulációs típus választása</option>
+                    <option value="sum">Összesített havi használat</option>
+                    <option value="avg">Átlagos havi használat</option>
+                    <option value="max">Maximális napi használat</option>
+                    <option value="min">Minimális napi használat</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>&nbsp;</label>
+                    <button type="submit">Számítás</button>
+                </div>
+                </form>
+            <div id="card" class="hidden">
+                <h3></h3>
+                <div></div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p><span class="creator-name">Készítette:</span> Vágvölgyi Proxymentes Balázs</p>
+        <p>Inspiráció: <a href="https://proxy.kdani.hu/" target="_blank">proxy.kdani.hu</a></p>
+    </footer>
+</body>
+</html>
