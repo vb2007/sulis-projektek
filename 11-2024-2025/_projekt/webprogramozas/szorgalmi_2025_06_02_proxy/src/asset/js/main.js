@@ -12,7 +12,7 @@ const calculateUsage = (calcType) => {
         case "min":
             return Math.min(...usageData.map(item => item.usage));
         default:
-            throw new Error("Invalid calculation type");
+            throw new Error("Érvénytelen számítási típus adva paraméterként");
     }
 }
 
@@ -27,7 +27,7 @@ const formattedCalculationType = (calcType) => {
         case "min":
             return "Napi minimális használat: ";
         default:
-            throw new Error("Érvénytelen számítási típus");
+            throw new Error("Érvénytelen számítási típus adva paraméterként");
     }
 }
 
