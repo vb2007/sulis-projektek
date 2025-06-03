@@ -1,10 +1,27 @@
-import { usageData } from "./data";
+import { usageData } from "./data.js";
+
+const calculateUsage = (calcType) => {
+    switch (calcType) {
+        case "sum":
+            return usageData.reduce((sum, item) => sum + item.usage, 0);
+        case "avg":
+            const totalUsage = usageData.reduce((sum, item) => sum + item.usage, 0);
+            return totalUsage / usageData.length;
+        case "max":
+            return Math.max(...usageData.map(item => item.usage));
+        case "min":
+            return Math.min(...usageData.map(item => item.usage));
+        default:
+            throw new Error("Invalid calculation type");
+    }
+}
 
 const renderCard = (day, calcType) => {
     const card = document.getElementById("card");
+    card.classList.remove("hidden");
 
     const h3 = card.querySelector("h3");
-
+    h3.textContent = `Usage Data for ${day}`;
 
     const cardDiv = card.querySelector("div");
     cardDiv.innerHTML = "";
@@ -13,17 +30,7 @@ const renderCard = (day, calcType) => {
     dailyUsage.textContent = usageData.find(item => item.date === day)?.usage || 0;
 
     const calculatedUsage = document.createElement("p");
-    if (calcType === "average") {
-        const totalUsage = usageData.reduce((sum, item) => sum + item.usage, 0);
-        const averageUsage = totalUsage / usageData.length;
-        calculatedUsage.textContent = `Average Usage: ${averageUsage.toFixed(2)}`;
-    } else if (calcType === "max") {
-        const maxUsage = Math.max(...usageData.map(item => item.usage));
-        calculatedUsage.textContent = `Max Usage: ${maxUsage}`;
-    } else if (calcType === "min") {
-        const minUsage = Math.min(...usageData.map(item => item.usage));
-        calculatedUsage.textContent = `Min Usage: ${minUsage}`;
-    }
+    calculatedUsage.textContent = `A ${calcType} érték: ${calculateUsage(calcType)}`;
 
     cardDiv.append(dailyUsage, calculatedUsage);
 }
