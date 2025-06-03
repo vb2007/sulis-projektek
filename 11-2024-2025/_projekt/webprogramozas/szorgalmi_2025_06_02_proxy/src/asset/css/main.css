@@ -21,7 +21,6 @@
   --trans-med: 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
   
   --shadow-md: 0 4px 10px rgba(0, 0, 0, 0.12);
-  --shadow-lg: 0 10px 30px rgba(0, 0, 0, 0.15);
 }
 
 * {
@@ -139,9 +138,9 @@ article {
   transition: transform var(--trans-med), box-shadow var(--trans-med);
   position: relative;
   overflow: hidden;
+  animation: slideUp 0.6s var(--trans-med) forwards;
   opacity: 0;
   transform: translateY(20px);
-  animation: slideUp 0.6s var(--trans-med) forwards;
 }
 
 /* ez akkor számítana, ha több lapos lenne, vagy lefrissülne az oldal... */
@@ -327,12 +326,11 @@ footer p:hover::after {
   transform: translateX(-50%) scaleX(1);
 }
 
-/* Styling for footer link */
 footer a {
   color: white;
   text-decoration: none;
   border-bottom: 1px dotted rgba(255, 255, 255, 0.5);
-  padding: 0 2px;
+  padding: 0 var(--space-xs);
   transition: all var(--trans-fast);
 }
 
