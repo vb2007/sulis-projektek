@@ -23,9 +23,9 @@ const formattedCalculationType = (calcType) => {
         case "avg":
             return "Havi átlagos használat: ";
         case "max":
-            return "Havi maximális használat: ";
+            return "Napi maximális használat: ";
         case "min":
-            return "Havi minimális használat: ";
+            return "Napi minimális használat: ";
         default:
             throw new Error("Érvénytelen számítási típus");
     }
