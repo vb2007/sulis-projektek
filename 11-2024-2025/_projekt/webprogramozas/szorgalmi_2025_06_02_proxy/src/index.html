@@ -35,20 +35,26 @@
         <section>
             <h2>Specifikus használati statisztikák megtekintése</h2>
             <form>
-                <label for="day">Nap:</label>
-                <input type="number" name="day" id="day" required min="1" max="30" placeholder="14">
-                <label for="calcType">Kalkuláció típusa:</label>
-                <select name="calcType" id="calcType">
+                <div class="form-group">
+                    <label for="day">Nap:</label>
+                    <input type="number" name="day" id="day" required min="1" max="30" placeholder="14">
+                </div>
+                <div class="form-group">
+                    <label for="calcType">Kalkuláció típusa:</label>
+                    <select name="calcType" id="calcType">
                     <option value="">Kalkulációs típus választása</option>
                     <option value="sum">Összesített havi használat</option>
                     <option value="avg">Átlagos havi használat</option>
                     <option value="max">Maximális napi használat</option>
                     <option value="min">Minimális napi használat</option>
-                </select>
-                <!-- ik a button lehet nem számít 3. input mezőnek, de több fölöslegesen elrontotta volna az összképet -->
-                <button type="submit">Számítás</button>
-            </form>
-            <div id="card" class="hidden" style="max-width: 18rem;">
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>&nbsp;</label> <!-- Placeholder label to align button -->
+                    <button type="submit">Számítás</button>
+                </div>
+                </form>
+            <div id="card" class="hidden">
                 <h3></h3>
                 <div></div>
             </div>

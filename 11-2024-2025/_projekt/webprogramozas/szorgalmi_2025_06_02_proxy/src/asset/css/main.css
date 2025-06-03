@@ -117,6 +117,20 @@ section:nth-of-type(2) h2 {
   grid-column: 1 / -1;
 }
 
+section:nth-of-type(3) {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas: 
+    "heading heading"
+    "form form";
+  gap: var(--space-lg);
+  position: relative;
+}
+
+section:nth-of-type(3) h2 {
+  grid-area: heading;
+}
+
 article {
   background-color: white;
   border-radius: 12px;
@@ -186,6 +200,7 @@ article p {
 }
 
 form {
+  grid-area: form;
   background-color: white;
   padding: var(--space-lg);
   border-radius: 12px;
@@ -193,23 +208,29 @@ form {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   gap: var(--space-md);
-  margin-bottom: var(--space-lg);
+  transition: all 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
+  z-index: 1;
+  width: 100%;
+  justify-self: stretch;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
 }
 
 label {
   font-weight: bold;
   color: var(--primary);
   margin-bottom: var(--space-xs);
-  display: block;
 }
 
-input, select {
+input, select, button {
   width: 100%;
   padding: var(--space-sm) var(--space-md);
-  border: 2px solid #e9ecef;
   border-radius: 6px;
   font-size: var(--fs-md);
-  transition: all var(--trans-med);
+  height: 2.75rem;
 }
 
 input:focus, select:focus {
@@ -245,19 +266,29 @@ button:active {
 }
 
 #card {
+  grid-area: card;
   background-color: white;
   border-radius: 12px;
   padding: var(--space-lg);
   box-shadow: var(--shadow-md);
-  transition: all var(--trans-med);
   border-left: 5px solid var(--accent);
-  margin-top: var(--space-lg);
+  transition: all 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  z-index: 2;
 }
 
 #card.hidden {
   opacity: 0;
-  transform: translateY(20px);
+  transform: translateX(50px);
   visibility: hidden;
+}
+
+section:nth-of-type(3):has(#card:not(.hidden)) {
+  grid-template-areas:
+    "heading heading"
+    "form card";
 }
 
 footer {
@@ -338,12 +369,18 @@ footer a:hover {
     --fs-xl: 1.5rem;
   }
 
-  section:nth-of-type(2) {
+  section:nth-of-type(3) {
     grid-template-columns: 1fr;
+    grid-template-areas:
+      "heading"
+      "form";
   }
-
-  form {
-    grid-template-columns: 1fr;
+  
+  section:nth-of-type(3):has(#card:not(.hidden)) {
+    grid-template-areas:
+      "heading"
+      "form"
+      "card";
   }
 }
 
