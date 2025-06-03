@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.14.36127.28
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dohanyboltok_VB", "Dohanyboltok_VB.csproj", "{9B25B059-8552-4BB3-9677-959D909869EB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dohanyboltok_VB_Lib", "..\Dohanyboltok_VB_Lib\Dohanyboltok_VB_Lib.csproj", "{33161EC0-A6A7-419E-ADE5-D5C72FF4626D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{9B25B059-8552-4BB3-9677-959D909869EB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9B25B059-8552-4BB3-9677-959D909869EB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9B25B059-8552-4BB3-9677-959D909869EB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9B25B059-8552-4BB3-9677-959D909869EB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{33161EC0-A6A7-419E-ADE5-D5C72FF4626D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{33161EC0-A6A7-419E-ADE5-D5C72FF4626D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{33161EC0-A6A7-419E-ADE5-D5C72FF4626D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{33161EC0-A6A7-419E-ADE5-D5C72FF4626D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {72976AB2-0D97-404C-9CD2-22BAEAA3F68E}
+	EndGlobalSection
+EndGlobal
