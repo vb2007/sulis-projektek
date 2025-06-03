@@ -131,7 +131,8 @@ article {
 }
 
 /* ez akkor számítana, ha több lapos lenne, vagy lefrissülne az oldal... */
-/* article:nth-child(1) {
+/* így csak egyszer, az oldal megnyitásakor látszódnak a fancy animációk */
+article:nth-child(1) {
   animation-delay: 0.1s;
 }
 article:nth-child(2) {
@@ -139,7 +140,7 @@ article:nth-child(2) {
 }
 article:nth-child(3) {
   animation-delay: 0.5s;
-} */
+}
 
 article::before {
   content: '';
