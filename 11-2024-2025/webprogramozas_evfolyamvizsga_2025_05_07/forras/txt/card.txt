@@ -1,0 +1,2 @@
+Az áruház bevétele a(z) X. napon: X forint.
+Az áruház bevétele az egész hónapban: X forint.

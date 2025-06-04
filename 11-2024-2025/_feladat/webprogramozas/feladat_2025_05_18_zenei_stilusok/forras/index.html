@@ -1,0 +1,72 @@
+<!-- "Csak a feladat megoldását töltse fel a Git repoba!" -->
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zenei Stílusok</title>
+    <link rel="stylesheet" href="src/css/style.css">
+    <script src="src/js/main.js" defer></script>
+</head>
+<body>
+    <header>
+    </header>
+    <main>
+        <section>
+            <h1>Zenei Stílusok</h1>
+        </section>
+        <section class="grid">
+            <h2>Néhány zenei stílus</h2>
+            <article>
+                <img src="src/img/rap-hiphop.jpg" alt="Rap / Hip-Hop">
+                <h3>Rap / Hip-Hop</h3>
+                <p>A rap és a hip-hop olyan műfajok, amelyek a ritmikus szövegmondásra, rímekre és történetmesélésre épülnek. Az 1970-es években indult az Egyesült Államokból, mára azonban globális jelenséggé vált. Az olyan előadók, mint Eminem, komplex rímszerkezeteikkel és személyes témáikkal emelték mainstream szintre a műfajt. A magyar szcénát Akkezdet Phiai, Krúbi és NKS határozzák meg, akik szókimondó szövegeikkel és társadalmi érzékenységükkel váltak ismertté. Cserihanna a fiatalabb generáció hangját képviseli, egyedi stílussal és friss energiával. Ez a kategória a szövegközpontúságot és az önkifejezést helyezi előtérbe.</p>
+            </article>
+            <article>
+                <img src="src/img/electronic-experimental.jpg" alt="Elektronikus / Kísérleti">
+                <h3>Elektronikus / Kísérleti</h3>
+                <p>Az elektronikus és kísérleti zene a hangzás határait feszegeti digitális eszközökkel, szokatlan struktúrákkal és technikai újításokkal. Keygen Church 8-bites hangzással és glitch esztétikával dolgozik. Fehér Krisztián atmoszférikus hangképeket alkot, gyakran organikus és elektronikus elemeket kombinálva. VØJ mozgóképszerű, trap- és EDM-hatású zenét készít. Ebben a műfajban a hangzáskísérlet, a hangulat és a technológiai kreativitás kerül előtérbe.</p>
+            </article>
+            <article>
+                <img src="src/img/rock-alternative.jpg" alt="Rock / Alternatív">
+                <h3>Rock / Alternatív</h3>
+                <p>A rock és az alternatív zene középpontjában az élő hangszeres játék, az érzelmes előadásmód és a lázadó attitűd áll. Gorillaz, a virtuális zenekar, az alternatív rockot hiphoppal, funkkal és vizuális művészettel ötvözi. Ronnie Radke, a Falling in Reverse frontembere, a poszt-hardcore, a punk és a rap határain mozog. Ez a kategória a dinamizmust, az energiát és a műfajok közötti kísérletezést képviseli.</p>
+            </article>
+            <article>
+                <img src="src/img/other.jpg" alt="Egyéb / Vegyes">
+                <h3>Egyéb / Vegyes</h3>
+                <p>Vannak előadók, akiket nehéz egyetlen kategóriába sorolni. Halott Pénz zenéje a pop, a rap és az élő hangszerelés elegyéből születik, könnyen befogadható és érzelmes. Andrius Klimka valószínűleg folkos vagy indie stílusban alkot, míg az Alexandrov Kórus katonai, klasszikus vagy népi kórusműveiről ismert. Ez a kategória a sokszínűségről, a hagyomány és modernitás keveredéséről szól.</p>
+            </article>
+            <figure>
+                <video src="./src/videos/concert.mp4" autoplay muted loop></video>
+                <figcaption>Koncert!</figcaption>
+            </figure>
+        </section>
+        <section>
+            <h2>Mi a te zenei stílusod?</h2>
+            <form>
+                <label for="name">Név</label>
+                <input type="text" name="name" id="name" required maxlength="50" placeholder="Péter">
+                <label for="style">Stílus</label>
+                <select name="style" id="style" required>
+                    <option value="">Zenei stílus választása</option>
+                    <option value="rap-hiphop">Rap / Hip-Hop</option>
+                    <option value="electronic-experimental">Elektronikus / Kísérleti</option>
+                    <option value="rock-alternative">Rock / Alternatív</option>
+                    <option value="other">Egyéb / Vegyes</option>
+                </select>
+                <button type="submit">Lássuk!</button>
+            </form>
+            <div id="card" class="hidden" style="max-width: 18rem;">
+                <h3></h3>
+                <div>
+
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        Készítette: Vágvölgyi Balázs
+    </footer>
+</body>
+</html>

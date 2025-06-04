@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="hu">
+
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>Kamerák</title>
+	<script type="module" src="/src/js/main.js" defer></script>
+</head>
+
+<body class="flex flex-col min-h-screen">
+	<header class="bg-emerald-800 p-2 text-white text-center">
+		<h1 class="text-4xl font-bold">Kamerák</h1>
+	</header>
+	<main class="bg-emerald-200 grow w-11/12 md:w-4/5 max-w-7xl self-center p-2">
+		<section class="mb-2">
+			<h2 class="text-2xl font-semibold mb-3">Új kamera hozzáadása</h2>
+			<form class="grid md:grid-cols-[auto_1fr] gap-x-2 gap-y-3 max-w-96 mx-auto">
+				<div class="grid grid-cols-subgrid md:col-span-2">
+					<label for="manufacturer" class="font-semibold">Gyártó:</label>
+					<select id="manufacturer" name="manufacturer" class="border border-gray-300 rounded p-1" required>
+						<option value="" disabled selected>Válassz...</option>
+						<option value="Canon">Canon</option>
+						<option value="Nikon">Nikon</option>
+						<option value="Sony">Sony</option>
+					</select>
+				</div>
+				<div class="grid grid-cols-subgrid md:col-span-2">
+					<label for="name" class="font-semibold">Név:</label>
+					<input type="text" id="name" name="name" class="border border-gray-300 rounded p-1" required maxlength="50">
+				</div>
+				<div class="md:col-span-2">
+					<fieldset class="grid md:grid-cols-3 gap-1 md:justify-items-center">
+						<legend class="font-semibold">Típus</legend>
+						<div>
+							<input type="radio" id="mirrorless" name="type" value="mirrorless" checked>
+							<label for="mirrorless">Tükör nélküli</label>
+						</div>
+						<div>
+							<input type="radio" id="dslr" name="type" value="dslr">
+							<label for="dslr">DSLR</label>
+						</div>
+						<div>
+							<input type="radio" id="compact" name="type" value="compact">
+							<label for="compact">Kompakt</label>
+						</div>
+					</fieldset>
+				</div>
+				<div class="grid grid-cols-subgrid md:col-span-2">
+					<label for="price" class="font-semibold">Ár:</label>
+					<input type="number" id="price" name="price" class="border border-gray-300 rounded p-1" required min="100000" max="5000000">
+				</div>
+				<div class="md:col-span-2">
+					<button type="submit" class="bg-blue-500 text-white font-semibold py-2 px-4 rounded">Létrehozás</button>
+				</div>
+			</form>
+		</section>
+		<section class="">
+			<h2 class="text-2xl font-bold mb-3">Felvett kamerák</h2>
+			<table class="w-full">
+				<thead class="bg-emerald-700 text-white">
+					<tr>
+						<th class="p-1">Gyártó</th>
+						<th class="p-1">Név</th>
+						<th class="p-1">Típus</th>
+						<th class="p-1">Ár</th>
+					</tr>
+				</thead>
+				<tbody></tbody>
+			</table>
+		</section>
+	</main>
+	<footer class="bg-emerald-800 p-2 text-white text-center">
+		<p class="font-semibold">11. Webprogramozás</p>
+	</footer>
+</body>
+
+</html>
