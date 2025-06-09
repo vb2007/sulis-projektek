@@ -75,7 +75,30 @@ A termékek sikeresen kiírva a 'products.txt' fájlba.
         Nikotintartalma: 16 mg
 ```
 
-`.txt` fájl tartalma:
+A `products.txt` fájl tartalma:
 
 ```txt
+Cigaretta: Pall Mall Gold, Ár: 1878 Ft
+Cigaretta: Marlboro Red, Ár: 1849 Ft
+Cigaretta: Marlboro Red, Ár: 1688 Ft
+Cigaretta: Pall Mall Gold, Ár: 1118 Ft
+Cigaretta: Marlboro Gold, Ár: 1725 Ft
+Cigaretta: Marlboro Gold, Ár: 2219 Ft
+Cigaretta: Marlboro Red, Ár: 2385 Ft
+Cigaretta: Marlboro Gold, Ár: 986 Ft
+Cigaretta: Marlboro Red, Ár: 1249 Ft
+
+Szivarka: Marlboro Leaf Beyond Blue, Ár: 2236 Ft
+Szivarka: Djarum Black Ruby, Ár: 1561 Ft
+Szivarka: Davidoff Demi Tasse, Ár: 1662 Ft
+Szivarka: Djarum Black Ruby, Ár: 1987 Ft
+Szivarka: Djarum Black Ruby, Ár: 1307 Ft
+Szivarka: Djarum Black Emerald, Ár: 2445 Ft
+Szivarka: Marlboro Leaf Beyond Blue, Ár: 2016 Ft
+Szivarka: Djarum Black Emerald, Ár: 701 Ft
+Szivarka: Davidoff Demi Tasse, Ár: 1024 Ft
+Szivarka: Amigos Mini Filter, Ár: 735 Ft
+Szivarka: Amigos Mini Filter, Ár: 1102 Ft
 ```
+
+Keszült Magyarország Kormánya Megízásából (ha már ennyi adót behúz a monopolizált dohányboltokon a mocskos fidesz).
