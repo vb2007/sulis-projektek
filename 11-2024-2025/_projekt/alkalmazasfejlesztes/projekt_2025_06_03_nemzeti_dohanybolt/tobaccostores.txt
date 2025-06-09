@@ -1,0 +1,31 @@
+Város;Utca;Havi Bevétel(Ft);Forgalom(ember/nap);Legnépszerűbb termék
+Budapest;Kossuth Lajos utca 1;1500000;250;Marlboro Gold
+Debrecen;Piac utca 55;1200000;200;Soproni Classic
+Szeged;Széchenyi tér 9;1100000;180;Pall Mall piros
+Pécs;Király utca 21;900000;150;LD kék
+Győr;Baross Gábor út 32;1000000;160;Philip Morris piros
+Miskolc;Széchenyi István út 2;850000;140;Multifilter
+Budapest;Váci utca 42;1800000;300;Camel sárga
+Székesfehérvár;Fő utca 14;950000;155;Bond street kék
+Nyíregyháza;Kossuth utca 11;750000;120;Davidoff Classic
+Kecskemét;Kossuth tér 3;800000;130;Marlboro vörös
+Szombathely;Fő tér 7;700000;110;L&M kék
+Szolnok;Kossuth Lajos út 15;650000;100;Fecske
+Tatabánya;Fő tér 10;600000;90;Sopiani zöld
+Kaposvár;Fő utca 18;550000;80;Pall Mall kék
+Érd;Kossuth utca 22;500000;70;LD piros
+Veszprém;Óvári Ferenc utca 5;450000;60;Philip Morris kék
+Békéscsaba;Andrássy út 25;400000;50;Multifilter fehér
+Zalaegerszeg;Kossuth utca 8;350000;40;Camel kék
+Sopron;Várkerület 5;300000;30;Bond street piros
+Budapest;Andrássy út 66;2000000;350;Marlboro Touch
+Debrecen;Csapó utca 28;1300000;220;Soproni Óarany
+Szeged;Mars tér 1;1200000;200;Pall Mall kék
+Pécs;Ferencesek utcája 6;1000000;170;LD vörös
+Győr;Árpád út 4;1100000;180;Philip Morris szürke
+Miskolc;Szent István tér 15;950000;155;Multifilter piros
+Budapest;Rákóczi út 90;1600000;270;Camel kék
+Székesfehérvár;Várkörút 2;1050000;175;Bond street fehér
+Nyíregyháza;Dózsa György út 33;850000;140;Davidoff Gold
+Budapest;Üllői út 82;1900000;320;Marlboro Crafted
+Kecskemét;Széchenyi tér 11;900000;150;Marlboro Blend 27

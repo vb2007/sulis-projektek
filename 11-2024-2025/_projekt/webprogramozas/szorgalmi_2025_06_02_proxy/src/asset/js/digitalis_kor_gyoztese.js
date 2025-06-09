@@ -2,9 +2,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const creatorElement = document.querySelector('.creator-name');
     if (!creatorElement) return;
 
-    creatorElement.addEventListener('click', zutyiPopup);
-
-    function zutyiPopup() {
+    const zutyiPopup = () => {
         const overlay = document.createElement('div');
         overlay.className = 'zutyi-overlay';
         
@@ -32,4 +30,6 @@ document.addEventListener('DOMContentLoaded', () => {
             }, 500);
         };
     }
+
+    creatorElement.addEventListener('click', zutyiPopup);
 });
