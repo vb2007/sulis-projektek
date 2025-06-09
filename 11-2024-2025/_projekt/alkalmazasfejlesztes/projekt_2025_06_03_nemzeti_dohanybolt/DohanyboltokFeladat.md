@@ -42,14 +42,37 @@ A forrásfájl neve `tobaccostores.txt`, mely a következő oszlopokat tartalmaz
 11. Hozzon létre egy `TobaccoFactory` osztályt, amelynek a konstruktora random **X** db dohányterméket generál tetszőleges adatok alapján.
 12. Az előbb elkészített konstruktor segítségével generáljon 20 dohányterméket.
 13. Írja ki a kozolra a legolcsóbb dohánytermék kategóriáját, nevét és árát.
-14. Írja ki fájlba a generált dohánytermékek kategóriáját, nevét és árát egy `products.txt` nevű fájlba. Először a `Cigarette`, később pedig a `Cigar` típusú termékeket írja ki. Minden termék új sorba kerüljön. A fájl formátuma legyen az alábbi:
+14. Írja ki fájlba a generált dohánytermékek kategóriáját, nevét és árát egy `products.txt` nevű fájlba. Először a `Cigarette`, később pedig a `Cigar` típusú termékeket írja ki. A kettő kategória között legyen egy üres sor. Minden termék új sorba kerüljön. A fájl formátuma legyen az alábbi:
     - `{Category}: {Name}, Ár: {Price} Ft`
+15. Írja ki a legtöbb nikotint tartalmazó cigaretta nevét és nikotintartalmát. Szüksége lesz rá ezután a feladat megoldása után.
 
 ## Minta
 
 Feladatok:
 
-```shell
+```txt
+5. feladat: Összesen 30 dohánybolt adatai vannak eltárolva.
+6. feladat: A dohányboltok összesített havi bevétele: 29200000 Ft
+7. feladat: A Budapesti dohányboltok utcáinak nevei és legnépszerűbb termékeik:
+        Kossuth Lajos utca 1 - Marlboro Gold
+        Váci utca 42 - Camel sárga
+        Andrássy út 66 - Marlboro Touch
+        Rákóczi út 90 - Camel kék
+        Üllői út 82 - Marlboro Crafted
+8. feladat: A legformalmasabb dohánybolt adatai:
+        Elhelyezkedése (város): Budapest
+        Elhelyezkedése (utca): Andrássy út 66
+        Havi bevétele: 2000000 Ft
+        Forgalma: 350 ember/nap
+        Legnépszerűbb terméke: Marlboro Touch
+13. feladat: A legolcsóbb dohánytermék adatai:
+        Kategória: Szivarka
+        Név: Djarum Black Emerald
+        Ár: 701 Ft
+A termékek sikeresen kiírva a 'products.txt' fájlba.
+15. feladat: Legtöbb nikotint tartalmazó cigaretta:
+        Neve: Marlboro Gold
+        Nikotintartalma: 16 mg
 ```
 
 `.txt` fájl tartalma:

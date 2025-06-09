@@ -32,10 +32,18 @@ namespace Dohanyboltok_VB
             TobaccoFactory tobaccoFactory = new(20);
 
             IProduct cheapestProduct = tobaccoFactory.CheapestProduct;
-            Console.WriteLine($"13. feladat: A legolcsóbb dohánytermék adatai:");
+            Console.WriteLine("13. feladat: A legolcsóbb dohánytermék adatai:");
             Console.WriteLine($"\tKategória: {cheapestProduct.Category}");
             Console.WriteLine($"\tNév: {cheapestProduct.Name}");
             Console.WriteLine($"\tÁr: {cheapestProduct.Price} Ft");
+
+            //14. feladat
+            tobaccoFactory.WriteToFile("products.txt");
+
+            Cigarette cigaretteWithMostNicotine = tobaccoFactory.CigaretteWithMostNicotine;
+            Console.WriteLine("15. feladat: Legtöbb nikotint tartalmazó cigaretta:");
+            Console.WriteLine($"\tNeve: {cigaretteWithMostNicotine.Name}");
+            Console.WriteLine($"\tNikotintartalma: {cigaretteWithMostNicotine.NicotineContent} mg");
         }
     }
 }

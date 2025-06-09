@@ -40,5 +40,38 @@
         public IProduct CheapestProduct =>
             products
                 .MinBy(x => x.Price);
+
+        public void WriteToFile(string fileName)
+        {
+            try
+            {
+                List<string> lines = new List<string>();
+
+                foreach (IProduct product in products.Where(x => x is Cigarette))
+                {
+                    lines.Add($"{product.Category}: {product.Name}, Ár: {product.Price} Ft");
+                }
+
+                lines.Add("");
+
+                foreach (IProduct product in products.Where(x => x is Cigar))
+                {
+                    lines.Add($"{product.Category}: {product.Name}, Ár: {product.Price} Ft");
+                }
+
+                File.WriteAllLines(fileName, lines);
+                Console.WriteLine($"A termékek sikeresen kiírva a '{fileName}' fájlba.");
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Hiba történt a fájl írása közben: {ex.Message}");
+                return;
+            }
+        }
+
+        public Cigarette CigaretteWithMostNicotine =>
+            products
+                .OfType<Cigarette>()
+                .MaxBy(x => x.NicotineContent);
     }
 }
