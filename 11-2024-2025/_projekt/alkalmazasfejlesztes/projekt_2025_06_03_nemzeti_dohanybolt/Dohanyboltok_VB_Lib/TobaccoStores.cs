@@ -13,5 +13,14 @@
         }
 
         public int Count => tobaccoStores.Count;
+
+        public int TotalMonthlyIncome =>
+            tobaccoStores
+                .Sum(x => x.MonthlyIncome);
+
+        public Dictionary<string, string> StreetsAndProductsByCityName(string cityName) =>
+            tobaccoStores
+                .Where(store => store.City.Equals(cityName, StringComparison.OrdinalIgnoreCase))
+                .ToDictionary(store => store.Street, store => store.MostPopularProduct);
     }
 }

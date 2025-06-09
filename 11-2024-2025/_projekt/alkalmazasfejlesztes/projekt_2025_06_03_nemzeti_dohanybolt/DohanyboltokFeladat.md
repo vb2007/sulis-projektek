@@ -31,6 +31,8 @@ A forrásfájl neve `tobaccostores.txt`, mely a következő oszlopokat tartalmaz
 5. Hozzon létre egy `Cigarette` és egy `Cigar` osztályt, amelyek implementálják az `IProduct` interfészt. A `Cigarette` osztály tartalmazzon egy `NicotineContent` változót (egész szám), míg a `Cigar` osztály tartalmazzon egy `Length` változót (szintén egész szám, cm-ben értetődő).
 6. Olvassa be a forrásfájlban található dohányboltok adatait a megfelelő osztály / osztályok segítségével.
 7. Írja ki a konzolra, hogy összesen hány dohánybolt adatai vannak eltárolva a forrásfájlban.
+8. Írja ki a legmagasabb havi bevétellel rendelkező dohánybolt adatait.
+9. Írja ki a Budapesti dohányboltok Utcáinak nevét. Az utcanevek mellé írja ki a boltban található legnépszerűbb termék nevét is.
 
 ### Minta
 
