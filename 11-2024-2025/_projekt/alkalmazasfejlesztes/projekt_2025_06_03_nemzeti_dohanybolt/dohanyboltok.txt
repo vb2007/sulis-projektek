@@ -1,4 +1,4 @@
-Város;Utca;Havi Bevétel(Ft);Forgalom(ember/nap);Legeladottabb termék
+Város;Utca;Havi Bevétel(Ft);Forgalom(ember/nap);Legnépszerűbb termék
 Budapest;Kossuth Lajos utca 1;1500000;250;Marlboro Gold
 Debrecen;Piac utca 55;1200000;200;Soproni Classic
 Szeged;Széchenyi tér 9;1100000;180;Pall Mall piros
