@@ -49,14 +49,14 @@
 
                 foreach (IProduct product in products.Where(x => x is Cigarette))
                 {
-                    lines.Add($"{product.Category}: {product.Name}, Ár: {product.Price} Ft");
+                    lines.Add(product.ToString());
                 }
 
                 lines.Add("");
 
                 foreach (IProduct product in products.Where(x => x is Cigar))
                 {
-                    lines.Add($"{product.Category}: {product.Name}, Ár: {product.Price} Ft");
+                    lines.Add(product.ToString());
                 }
 
                 File.WriteAllLines(fileName, lines);

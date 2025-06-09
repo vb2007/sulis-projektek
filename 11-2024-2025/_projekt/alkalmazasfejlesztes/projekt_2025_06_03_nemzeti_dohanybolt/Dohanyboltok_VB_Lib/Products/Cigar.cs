@@ -13,5 +13,7 @@
             Price = price;
             Length = length;
         }
+
+        public override string ToString() => $"{Category}: {Name}, Ár: {Price} Ft";
     }
 }

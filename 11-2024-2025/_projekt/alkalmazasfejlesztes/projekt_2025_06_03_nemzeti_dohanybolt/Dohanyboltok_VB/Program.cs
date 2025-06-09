@@ -37,7 +37,7 @@ namespace Dohanyboltok_VB
             Console.WriteLine($"\tNév: {cheapestProduct.Name}");
             Console.WriteLine($"\tÁr: {cheapestProduct.Price} Ft");
 
-            //14. feladat
+            Console.Write("14. feladat: ");
             tobaccoFactory.WriteToFile("products.txt");
 
             Cigarette cigaretteWithMostNicotine = tobaccoFactory.CigaretteWithMostNicotine;

@@ -13,5 +13,7 @@
             Price = price;
             NicotineContent = nicotineContent;
         }
+
+        public override string ToString() => $"{Category}: {Name}, Ár: {Price} Ft";
     }
 }
