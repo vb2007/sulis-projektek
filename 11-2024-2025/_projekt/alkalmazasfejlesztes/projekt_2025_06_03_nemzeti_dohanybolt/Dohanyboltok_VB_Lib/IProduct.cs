@@ -2,5 +2,8 @@
 {
     public interface IProduct
     {
+        string Name { get; }
+        int Price { get; }
+        string Category { get; }
     }
 }

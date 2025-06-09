@@ -1,6 +1,6 @@
 ﻿namespace Dohanyboltok_VB_Lib
 {
-    public class Shop
+    public class TobaccoStore
     {
 
     }
