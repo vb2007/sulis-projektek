@@ -5,5 +5,13 @@
         public string Name { get; init; }
         public int Price { get; init; }
         public string Category => "Cigar";
+        public int Length { get; init; } // cm-ben
+
+        public Cigar(string name, int price, int length)
+        {
+            Name = name;
+            Price = price;
+            Length = length;
+        }
     }
 }
