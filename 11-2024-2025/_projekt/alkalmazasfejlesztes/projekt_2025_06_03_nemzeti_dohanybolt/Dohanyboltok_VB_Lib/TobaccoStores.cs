@@ -20,7 +20,11 @@
 
         public Dictionary<string, string> StreetsAndProductsByCityName(string cityName) =>
             tobaccoStores
-                .Where(store => store.City.Equals(cityName, StringComparison.OrdinalIgnoreCase))
-                .ToDictionary(store => store.Street, store => store.MostPopularProduct);
+                .Where(x => x.City.Equals(cityName, StringComparison.OrdinalIgnoreCase))
+                .ToDictionary(x => x.Street, y => y.MostPopularProduct);
+
+        public TobaccoStore StoreWithMostTraffic =>
+            tobaccoStores
+                .MaxBy(x => x.Traffic);
     }
 }
