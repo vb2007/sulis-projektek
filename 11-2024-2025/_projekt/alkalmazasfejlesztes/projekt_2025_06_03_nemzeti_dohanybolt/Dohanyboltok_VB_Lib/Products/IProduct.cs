@@ -1,4 +1,4 @@
-﻿namespace Dohanyboltok_VB_Lib
+﻿namespace Dohanyboltok_VB_Lib.Products
 {
     public interface IProduct
     {

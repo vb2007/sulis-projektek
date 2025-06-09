@@ -7,6 +7,7 @@ A feladat megírása során:
 - Konzolra íráskor mindig írja ki a feladat sorszámát
 - Igyekezzen mindig a legmegfelelőbb osztályok, interfészek, változó típusok használatára
 - Az ékezetmentes kiírás is elfogadott
+- Ha szükséges, rendezze a fájlokat mappákba az átláthatóság érdekében
 
 ## Forrásfájl felépítése
 
@@ -29,8 +30,7 @@ A forrásfájl neve `tobaccostores.txt`, mely a következő oszlopokat tartalmaz
     - `Category`: **szöveg** - a termék kategóriája
 5. Hozzon létre egy `Cigarette` és egy `Cigar` osztályt, amelyek implementálják az `IProduct` interfészt. A `Cigarette` osztály tartalmazzon egy `NicotineContent` változót (egész szám), míg a `Cigar` osztály tartalmazzon egy `Length` változót (szintén egész szám, cm-ben értetődő).
 6. Olvassa be a forrásfájlban található dohányboltok adatait a megfelelő osztály / osztályok segítségével.
-
-
+7. Írja ki a konzolra, hogy összesen hány dohánybolt adatai vannak eltárolva a forrásfájlban.
 
 ### Minta
 
