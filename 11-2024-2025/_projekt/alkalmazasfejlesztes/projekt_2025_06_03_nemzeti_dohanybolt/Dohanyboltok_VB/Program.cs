@@ -1,4 +1,5 @@
 ﻿using Dohanyboltok_VB_Lib;
+using Dohanyboltok_VB_Lib.Products;
 
 namespace Dohanyboltok_VB
 {
@@ -26,6 +27,15 @@ namespace Dohanyboltok_VB
             Console.WriteLine($"\tHavi bevétele: {storeWithMostTraffic.MonthlyIncome} Ft");
             Console.WriteLine($"\tForgalma: {storeWithMostTraffic.Traffic} ember/nap");
             Console.WriteLine($"\tLegnépszerűbb terméke: {storeWithMostTraffic.MostPopularProduct}");
+
+            //12. feladat
+            TobaccoFactory tobaccoFactory = new(20);
+
+            IProduct cheapestProduct = tobaccoFactory.CheapestProduct;
+            Console.WriteLine($"13. feladat: A legolcsóbb dohánytermék adatai:");
+            Console.WriteLine($"\tKategória: {cheapestProduct.Category}");
+            Console.WriteLine($"\tNév: {cheapestProduct.Name}");
+            Console.WriteLine($"\tÁr: {cheapestProduct.Price} Ft");
         }
     }
 }

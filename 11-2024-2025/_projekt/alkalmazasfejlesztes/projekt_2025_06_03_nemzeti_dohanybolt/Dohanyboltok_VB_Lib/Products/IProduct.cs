@@ -5,5 +5,7 @@
         string Name { get; }
         int Price { get; }
         string Category { get; }
+
+        string ToString() => $"{Category}: {Name}, Ár: {Price} Ft";
     }
 }

@@ -41,7 +41,9 @@ A forrásfájl neve `tobaccostores.txt`, mely a következő oszlopokat tartalmaz
 10. Hozzon létre egy `Cigarette` és egy `Cigar` osztályt, amelyek implementálják az `IProduct` interfészt. A `Cigarette` osztály tartalmazzon egy `NicotineContent` változót (egész szám, mg-ban értetendő), míg a `Cigar` osztály tartalmazzon egy `Length` változót (szintén egész szám, cm-ben értetendő).
 11. Hozzon létre egy `TobaccoFactory` osztályt, amelynek a konstruktora random **X** db dohányterméket generál tetszőleges adatok alapján.
 12. Az előbb elkészített konstruktor segítségével generáljon 20 dohányterméket.
-13. Írja 
+13. Írja ki a kozolra a legolcsóbb dohánytermék kategóriáját, nevét és árát.
+14. Írja ki fájlba a generált dohánytermékek kategóriáját, nevét és árát egy `products.txt` nevű fájlba. Először a `Cigarette`, később pedig a `Cigar` típusú termékeket írja ki. Minden termék új sorba kerüljön. A fájl formátuma legyen az alábbi:
+    - `{Category}: {Name}, Ár: {Price} Ft`
 
 ## Minta
 

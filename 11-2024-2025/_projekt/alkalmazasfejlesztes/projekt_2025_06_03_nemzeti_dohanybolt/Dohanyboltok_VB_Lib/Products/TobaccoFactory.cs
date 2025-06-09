@@ -21,14 +21,14 @@
             int cigaretteOrCigar = rnd.Next(0, 2);
             int price = rnd.Next(700, 2501); // 700-2500 Ft
 
-            if (cigaretteOrCigar == 0) //cigarette
+            if (cigaretteOrCigar == 0) //cigaretta
             {
                 int nicotineContent = rnd.Next(0, 21); // 0-20 mg
                 string name = CigaretteNames[rnd.Next(CigaretteNames.Count)];
 
                 return new Cigarette(name, price, nicotineContent);
             }
-            else //cigar
+            else //szivarka
             {
                 int length = rnd.Next(5, 31); // 5-30 cm
                 string name = CigarNames[rnd.Next(CigarNames.Count)];
@@ -36,5 +36,9 @@
                 return new Cigar(name, price, length);
             }
         }
+
+        public IProduct CheapestProduct =>
+            products
+                .MinBy(x => x.Price);
     }
 }
