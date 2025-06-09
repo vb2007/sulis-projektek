@@ -2,7 +2,7 @@
 {
     public class TobaccoStores
     {
-        private readonly List<TobaccoStore> tobaccoStores = new();
+        private readonly List<TobaccoStore> tobaccoStores = new List<TobaccoStore>();
 
         public TobaccoStores(IEnumerable<string> dataLines)
         {
