@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Filmgyűjtemény</title>
+    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+    <script src="src/js/data.js" defer></script>
+    <script src="src/js/main.js" defer></script>
+</head>
+<body class="bg-purple-950 flex flex-col min-h-screen text-white">
+    <header class="bg-purple-700 p-3 text-center"></header>
+    <main class="grow bg-purple-900 md:w-4/5 mx-1 md:mx-auto p-3">
+        <section id="movies-container" class="grid md:grid-cols-2 xl:grid-cols-5 gap-2"></section>
+        <section id="stats">
+            <table class="w-full mt-3">
+                <thead>
+                    <tr>
+                        <th class="bg-purple-700 p-1">Tulajdonság</th>
+                        <th class="bg-purple-700 p-1">Érték</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="bg-purple-800 p-1 text-center">Átlagos hossz</td>
+                        <td class="bg-purple-800 p-1 text-center"></td>
+                    </tr>
+                    <tr>
+                        <td class="bg-purple-800 p-1 text-center">Átlagos értékelés</td>
+                        <td class="bg-purple-800 p-1 text-center"></td>
+                    </tr>
+                    <tr>
+                        <td class="bg-purple-800 p-1 text-center">Vígjáték filmek hossza</td>
+                        <td class="bg-purple-800 p-1 text-center"></td>
+                    </tr>
+                    <tr>
+                        <td class="bg-purple-800 p-1 text-center">Legjobb értékelésű film</td>
+                        <td class="bg-purple-800 p-1 text-center"></td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+    </main>
+    <footer class="bg-purple-700 p-3 text-center"></footer>
+</body>
+</html>
