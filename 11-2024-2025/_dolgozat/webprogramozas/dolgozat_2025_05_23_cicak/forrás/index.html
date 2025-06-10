@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cicák etetése</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/main.js" defer></script>
+</head>
+<body>
+    <header></header>
+    <main>
+        <section>
+            <h1>Cicák etetése</h1>
+            <p>Cica barátaink egészsége és boldogsága szempontjából kulcsfontosságú a megfelelő táplálás. Fontos, hogy minden cica megkapja a számára szükséges tápanyagokat, vitaminokat és ásványi anyagokat. A rendszeres etetési időpontok betartása segít kialakítani a napi rutint, ami biztonságérzetet ad kedvenceinknek. Figyeljünk arra, hogy mindig friss víz álljon rendelkezésükre!</p>
+            <video src="./video/cats.mp4" autoplay loop></video>
+        </section>
+        <section>
+            <h2>Cicák</h2>
+            <div id="cats">
+                <div>
+                    <img src="images/hazi.jpg" alt="Házi macska">
+                    <h3>Házi cica</h3>
+                </div>
+                <div>
+                    <img src="images/mainecoon.jpg" alt="Perzsa cica">
+                    <h3>Maine Coon (haha goon) cica</h3>
+                </div>
+                <div>
+                    <img src="images/sziami.jpg" alt="Sziámi cica">
+                    <h3>Sziámi cica</h3>
+                </div>
+            </div>
+        </section>
+        <section>
+            <h2>Napi táplálék fogyasztás</h2>
+            <form>
+                <label for="day">Nap:</label>
+                <input type="number" id="day" name="day" required min="1" max="30" />
+                <fieldset>
+                    <legend>Cica:</legend>
+                    <label for="hazi">Házi cica
+                        <input type="radio" id="hazi" name="cat" value="hazi" required />
+                    </label>
+                    <label for="mainecoon">Maine Goon cica
+                        <input type="radio" id="mainecoon" name="cat" value="mainecoon" required />
+                    </label>
+                    <label for="sziami">Sziámi cica
+                        <input type="radio" id="sziami" name="cat" value="sziami" required />
+                    </label>
+                </fieldset>
+                <button type="submit">Eredmény</button>
+            </form>
+            <div id="card" class="hidden" style="background-color: #4a2659; margin-bottom: 1rem;">
+                <img src="">
+                <div id="details"></div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        Készítette: Vágvölgyi Balázs
+    </footer>
+</body>
+</html>
