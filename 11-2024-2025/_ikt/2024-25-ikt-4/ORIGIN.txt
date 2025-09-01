@@ -1,0 +1,2 @@
+A projekt dokumentálása, verziókezelése egy zárt GitLab szerveren történt.
+Itt csak a végleges verzió van archiválva.

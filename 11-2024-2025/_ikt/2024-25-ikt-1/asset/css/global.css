@@ -1,0 +1,180 @@
+/* Font imports */
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(146, 93, 58, 0.63);
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    color: whitesmoke;
+}
+
+.navbar {
+    background: linear-gradient(rgba(146, 93, 58, 0.65), rgba(146, 93, 58, 0.001));
+}
+
+.navbar a {
+    color: rgb(255, 255, 255);
+}
+
+.dropdown-menu {
+    background-color: rgba(146, 93, 58, 0.68);
+    transition: 0.2s;
+}
+
+.dropdown-item:hover, .dropdown-menu li:hover {
+    background-color: rgba(146, 93, 58, 0.73);
+    transition: 0.2s;
+}
+
+h1 {
+    font-size: 3.5rem;
+    font-family: Inter, sans-serif;
+    text-shadow: 2px 2px 7px rgba(0, 0, 0, 0.63);
+}
+
+h2 {
+    font-size: 150%;
+    font-family: Inter, sans-serif;
+    font-weight: bolder;
+}
+
+h3 {
+    font-size: 120%;
+    font-family: Inter, sans-serif;
+}
+
+p {
+    font-family: Poppins, sans-serif;
+    font-size: 1.1em;
+    color: rgb(255, 255, 255);
+    text-align: justify;
+}
+
+li {
+    font-family: Inter, sans-serif;
+    font-size: 1.1em;
+    color: whitesmoke;
+}
+
+img {
+    box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.5);
+    border-radius: 3px;
+}
+
+.homepage-card {
+    box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.411);
+    border: none;
+    overflow: hidden;
+    position: relative;
+    height: 110%;
+    width: 100%;
+}
+
+.homepage-card.scaled {
+    position: relative;
+    z-index: 999; 
+    &.scaledBack {
+      z-index: 0;
+    }
+}
+
+.homepage-card.baseMotion {
+    transition: transform 0.23s;
+    &:hover {
+      transform: scale(1.05);
+    }
+}
+
+.card-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    filter: blur(1.9px);
+    z-index: 1;
+}
+
+.card-title {
+    font-family: Popins, sans-serif;
+    color: rgb(255, 255, 255);
+    font-size: 2.5em;
+    text-shadow: 3px 4px 4px rgb(0, 0, 0);
+}
+
+.card-body {
+    position: relative;
+    z-index: 2;
+    color: white;
+    padding: 20px;
+}
+
+.card-list {
+    margin-top: auto;
+    margin-bottom: auto;
+    list-style-type: none;
+    text-align: center;
+}
+
+.card-list-element a {
+    color: rgb(255, 255, 255);
+    transition: 0.2s;
+    text-shadow: 3px 4px 4px rgb(0, 0, 0);
+    text-decoration: none;
+    font-size: 2em;
+}
+
+.card-list-element a:hover {
+    color: rgb(226, 166, 109);
+    transition: 0.2s;
+}
+
+#card-eloetel {
+    background-image: url("../img/card-bg/eloetel.jpg");
+}
+
+#card-leves {
+    background-image: url("../img/card-bg/leves.jpeg");
+}
+
+#card-foetel {
+    background-image: url("../img/card-bg/foetel.jpg");
+}
+
+#card-edesseg {
+    background-image: url("../img/card-bg/edesseg.jpg");
+}
+
+.source-list {
+    list-style-type: disc;
+}
+
+.source-list li a {
+    font-family: Inter, sans-serif;
+    font-size: 1.1em;
+    color: rgb(255, 255, 255);
+    transition: 0.2s;
+}
+
+.source-list li a:hover {
+    color: rgb(134, 82, 32);
+    transition: 0.2s;
+}
+
+footer {
+    background: linear-gradient(rgba(146, 93, 58, 0.001), rgba(146, 93, 58, 0.65));
+    margin-top: auto;
+}
+
+footer div p {
+    text-align: center;
+}
