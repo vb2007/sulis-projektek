@@ -1,13 +1,21 @@
-# 2024-25-ikt-2
+# 2nd project of the 2024-25th school year, made for "IKT Teamwork" subject
 
-A 2024-es, 2025-ös (11.-es) tanév első IKT projektje.
+## Archived project
 
-Egy karácsonyhoz kapcsolódó weboldal több lappal és reszponzív dizájnnal.
+<ins> This is an archived school project. </ins>
 
-## Projektvezetés
+This project has been submitted and reviewed. It's not going to get any further updates. Public archive.
 
-Nem feltétlen azokat a dolgokat használtuk, amik a projektleírásban szerepeltek:
+The project's original **README**.md file can be viewed [HERE](./README.old.md).
 
-- *GitLab* helyett **GitHub**-ot használtunk
-- *Trello* helyett **GitHub projects-et és issue-kat** használtunk
-- Figma link: <https://www.figma.com/design/6Mc0P47R7MeJ821wcL2pCC/Weboldal?t=rVooXwm33Mj8gMC5-1>
+---
+
+# A 2024-25-ös tanév 2. IKT projektje
+
+## Archivált projekt
+
+<ins> Ez egy archivált iskolai projekt. </ins>
+
+Mivel már be lett adva és értékelésre került, nem fog módosulni. Publikus archívum.
+
+A projekt eredeti **README.md** fájlját [ITT](./README.old.md) lehet megtekinteni.
