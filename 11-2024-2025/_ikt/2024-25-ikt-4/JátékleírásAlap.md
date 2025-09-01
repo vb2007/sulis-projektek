@@ -18,7 +18,7 @@ Jelenleg egy típusú ellenséget tervezünk a játékba, az pedig a kisebbségi
 
 3 lehetséges interakció közül választhatsz, ha beléd köt egy ellenség:
 
-1.  Megtámadom: zsebkés nélkül (ököllel) a játékosnak 20% esélye van, hogy legyőzi az ellenséget. Zsebkéssel a támadás sikerességének esélye 75%-ra nő.
+1. Megtámadom: zsebkés nélkül (ököllel) a játékosnak 20% esélye van, hogy legyőzi az ellenséget. Zsebkéssel a támadás sikerességének esélye 75%-ra nő.
 2. Elfutok: 80% esélye van a játékosnak elfutáskor, hogy sikeresen meneküljön anélkül, hogy az ellenség utolérné.
 3. Beszólok neki: ezen opció választása gyakorlatilag öngyilkosság, mivel a beszólás után még 10 db ugyan olyan entitás fog spawnolni a játékos köré és onnan nincs menekvés, game over.
 
