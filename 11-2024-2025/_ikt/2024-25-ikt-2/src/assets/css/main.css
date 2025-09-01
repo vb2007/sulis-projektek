@@ -1,0 +1,187 @@
+body {
+    background-image: url("../img/bg.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    position: relative;
+    z-index: 1;
+    color: #333;
+}
+
+main {
+    flex: 1;
+    margin: 20px 12%;
+    position: relative;
+    z-index: 1;
+}
+
+img {
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    margin-bottom: 15px;
+    max-width: 100%;
+    height: auto;
+}
+
+.title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 30px auto 15px;
+    padding: 5px 10px;
+    background-color: rgba(219, 219, 219, 0.8);
+    border-radius: 15px;
+    max-width: 700px;
+}
+
+.title h1 {
+    text-align: center;
+    color: rgb(12, 65, 240);;
+    font-family: Poppins, sans-serif;
+}
+
+.preview--paragraph {
+    text-align: justify;
+    padding: 0 2%;
+    font-size: 1rem;
+    font-family: Parkinsans, sans-serif;
+}
+
+.preview--line {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    color: rgb(45, 104, 231);
+    width: 95%;
+    border: 3px solid rgb(26, 72, 170);
+    border-radius: 5px;
+}
+
+.welcome--container {
+    display: block;
+    margin-top: 25px;
+    margin-bottom: 5px;
+    background-color: rgba(219, 219, 219, 0.8);
+    border-radius: 15px;
+    padding: 10px 15px;
+    min-width: 100%;
+}
+
+.content--container {
+    margin-left: 0px;
+    margin-right: 0px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    background-color: rgba(219, 219, 219, 0.8);
+    border-radius: 15px;
+    padding: 20px 15px;
+    font-family: Parkinsans, sans-serif;
+    min-width: 100%;
+}
+
+.whitebox {
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    align-items: center;
+    background-color: rgba(219, 219, 219, 0.8);
+    border-radius: 15px;
+    padding: 5px;
+    margin: 2% 4%;
+    height: 145px;
+    display: block;
+    text-decoration: none;
+    color: inherit;
+}
+
+.whitebox:hover {
+    text-decoration: none;
+    color: inherit;
+    cursor: pointer;
+}
+
+.whitebox.scaled {
+    position: relative;
+    z-index: 999; 
+    &.scaledBack {
+      z-index: 0;
+    }
+}
+
+.whitebox.baseMotion {
+    transition: transform 0.4s, background-color 0.4s;
+    &:hover {
+        transform: scale(1.05);
+        background-color: rgba(9, 183, 252, 0.555);
+        transition: transform 0.4s, background-color 0.4s;
+        h3, p {
+            color: white;
+        }
+    }
+}
+
+.whitebox h3 {
+    padding-top: 5px;
+    font-family: Poppins, sans-serif;
+    text-align: center;
+    color: blue;
+    font-size: 28px;
+    transition: color 0.4s;
+}
+
+.whitebox p {
+    font-family: Parkinsans, sans-serif;
+    text-align: center;
+    padding-left: 2px;
+    padding-right: 2px;
+    margin-top: 4px;
+    font-size: 16px;
+    transition: color 0.4s;
+}
+
+.card--container {
+    margin-top: 40px;
+}
+
+/* Recipe page */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    font-size: 1rem;
+    font-family: 'Arial', sans-serif;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+table caption {
+    caption-side: top;
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+table thead {
+    background-color: #007bff;
+    color: white;
+}
+
+table th, table td {
+    padding: 12px 15px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+table tbody tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+table tbody tr:hover {
+    background-color: #e9f5ff;
+}
+
+table tbody td {
+    color: #333;
+}
