@@ -1,0 +1,54 @@
+body{
+	background-color: #737CA1;
+	color: navy;
+	margin-left: 25px;
+	margin-right: 25px;
+}
+
+#fejlec{
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	width: 90%;
+}
+
+#konyvjelzok{
+	list-style-type: none;
+}
+
+a{
+	color: navy;
+	text-decoration: none;
+}
+
+h1{
+	text-align: center;
+	font-style: oblique;
+}
+
+p{
+	text-align: justify;
+}
+
+table{
+	width: 60%;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+hr{
+	height: 1px;
+    background-color: navy;
+	color: navy;
+	width: 90%;
+}
+
+#vissza{
+	text-align: right;
+}
+
+#r2d2{
+	float: right;
+	width: 15%;
+	margin-bottom: 15px;
+}
