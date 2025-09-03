@@ -1,0 +1,25 @@
+body{
+    background-color: #d6ec95;
+}
+
+#nav, #footer{
+    background-color: #8aa932;
+}
+
+#banner{
+    height: 300px;
+    background-image: url('forras/img/coffeebean.jpg');
+    background-position: center;
+    background-size: cover;
+}
+
+section{
+    margin-left: auto;
+    margin-right: auto;
+}
+
+footer{
+    height: 50px;
+    text-align: center;
+    /*lábléc színe beállítva a nav-val együtt*/
+}

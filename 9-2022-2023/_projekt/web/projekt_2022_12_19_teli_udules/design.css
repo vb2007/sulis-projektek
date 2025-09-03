@@ -1,0 +1,127 @@
+body{
+    background-color: #84adff;
+}
+
+header{
+    font-size: 50px;
+    font-variant: small-caps;
+    color: #001a66;
+    text-align: center;
+}
+
+h3{
+    font-size: 40px;
+    color: #0011ff;    
+}
+
+h4{
+    font-size: 25px;
+}
+
+p{
+    font-size: 26px;
+    font-variant: normal;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    text-decoration: none;
+    margin-left: 10px;
+    margin-right: 10px;
+    text-align: justify;
+}
+
+img{
+    display: block;
+    margin-top: 8px;
+    margin-bottom: 8px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
+
+ul{
+    font-size: 26px;
+    list-style: circle;
+    margin-left: 20px;
+}
+
+hr{
+    height: 6px;
+    background-color: #84adff;
+    color: #84adff;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#fejlec{
+    display: block;
+    background-image: url("matra_2.jpg");
+    color: #0011ff;
+    text-align: center;
+    text-align-last: center;
+    font-size: 85px;
+    height: 200px;
+    margin-top: 0px;
+    margin-bottom: 10px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+nav{
+    display: block;
+    background-color: #8542f2;
+    float: left;
+    margin-right: 6%;
+}
+
+main{
+    display: block;
+    background-color: #6c93ff;
+    color: #000000;
+    width: 80%;
+    margin: 25px;
+    float: none;
+    margin-left: 9%;
+    margin-top: 5px;
+}
+
+aside{
+    float: right;
+}
+
+table {
+    width: 40%;
+    border: 2px ridge #001a66;
+    border-collapse: collapse;
+    border-spacing: 3px;
+    padding: 5px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+table th {
+    border: 2px ridge #001a66;
+    text-align: center;
+    padding: 5px;
+    background: #0011ff;
+    color: #ffffff;
+    
+}
+
+table td {
+    border: 2px ridge #001a66;
+    text-align: center;
+    padding: 5px;
+    background: #6c93ff;
+    color: #000000;
+    
+}
+
+footer{
+    display: block;
+    background-color: #ba8ffe;
+    color: #ffffff;
+    font-size: 2px;
+    float: none;
+    text-align: center;
+}

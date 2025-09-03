@@ -1,0 +1,81 @@
+body{
+    background-color: #613d19;
+}
+
+p, li{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: 30opx;
+    text-align: justify;
+    text-indent: 15px;
+}
+
+#header{
+    height: 450px;
+    background-image: url('forras/fox_bg.jpg');
+    text-align: center;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+#main{
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: rgba(216, 169, 81, 0.800);
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-right: 15px;
+    padding-left: 15px;
+}
+
+h1{
+    padding: 300px;
+    margin: 0px;
+    text-align: center;
+    color: tan;
+    font-size: 5rem;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    text-shadow: 3px 3px 5px black
+}
+
+h2{
+    font-variant: small-caps;
+}
+
+i{
+    color: RGB(63, 5, 3);
+}
+
+.keret{
+    border-style: double;
+    border-width: 5px;
+    color: #000000;
+}
+
+#kolyok{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 600px;
+}
+
+.labnyom{
+    width: 450px;
+    margin-right: 100px;
+    float: right;
+    position: relative;
+}
+
+#forras{
+    text-align: right;
+    size: 0.2rem;
+}
+
+a{
+    color: maroon;
+}

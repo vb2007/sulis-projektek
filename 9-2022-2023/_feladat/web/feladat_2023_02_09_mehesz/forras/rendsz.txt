@@ -1,0 +1,12 @@
+Rendszertani besorolás
+Ország: Állatok (Animalia)
+Törzs: Ízeltlábúak (Arthropoda)
+Altörzs: Hatlábúak (Hexapoda)
+Osztály: Rovarok (Insecta)
+Alosztály: Szárnyas rovarok (Pterygota)
+Alosztályág: Újszárnyúak (Neoptera)
+Öregrend: Fejlett szárnyas rovarok (Endopterygota)
+Rend: Hártyásszárnyúak (Hymenoptera)
+Alrend: Fullánkosdarázs-alkatúak (Apocrita)
+Alrendág: Fullánkosok (Aculeata)
+Öregcsalád: Méhalkatúak (Apoidea)

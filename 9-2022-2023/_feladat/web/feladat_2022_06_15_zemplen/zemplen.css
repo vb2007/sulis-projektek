@@ -1,0 +1,103 @@
+a{
+    color: blue;
+}
+
+a:visited{
+    color: blue;
+}
+
+a:hover{
+    color: green;
+    display: inline;
+}
+
+a:active{
+    color: red;
+    display: inline;
+}
+
+body {
+    background-color: #FEF3D8;
+    margin-left: 50px;
+    margin-right: 50px;
+}
+
+p, h1, h2, h3, hr{
+    color: #660000;
+}
+
+#hegyseg{
+	/* középre igazítás: */
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	/* */
+	width: 90%;
+	border-radius: 5px;
+}
+
+h1{
+	text-align: center;
+	font-family: cursiv;
+	font-style: italic;
+	font-stretch: extra-expanded;
+	font-weight: 800;
+	font-variant: small-caps;
+}
+
+h2{
+	text-align: left;
+	font-family: sans-serif;
+	font-style: oblique;
+	font-stretch: expanded;
+	font-weight: 700;
+	font-size: 16px;
+	line-height: 1.7em;
+	
+}
+
+p{
+	font-family: sans-serif;
+	text-align: justify;
+	text-indent: 0.5cm;
+}
+
+hr{
+	width: 90%;
+	height: 2px;
+	background-color: #660000;
+}
+
+ol{
+	list-style-type: upper-roman;
+	font-family: monospace;
+}
+
+#zemplen_termalturizmus{
+	text-align: left;
+	width: 25%;
+	height: 25%;
+	margin-bottom: 15px;
+	margin-right: 15px;
+}
+
+#pengoko_konfturizmus{
+	text-align: right;
+	width: 25%;
+	height: 25%;
+	margin-bottom: 15px;
+	margin-right: 15px;
+}
+
+#bakturizmus_borkostolas_varturizmus{
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	width: 35%;
+	height: 35%;
+}
+
+#kep_alatti_szoveg{
+	text-align: center;
+	font-family: monospace;
+}

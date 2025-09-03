@@ -1,0 +1,134 @@
+body{
+    background-image: url("bg.jpg");
+}
+
+#focim{
+    font-variant: small-caps;
+    width: 3px;
+    font-size: 300%;
+    color: rgb(75,44,9);
+    position: absolute;
+    margin-left: 700px;
+    margin-top: 300px;
+}
+
+#container{
+    box-shadow: 2px 2px 5px rgb(0, 0, 0);
+    width: 900px;
+    margin-left: 50px;
+    margin-right: 50px;
+    display: block;
+    background-color: #99c788;
+    padding: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+
+#banner{
+    height: 400px;
+    background-image: url("lajhar.png");
+    background-repeat: no-repeat;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+
+#lajhar{
+    float: right;
+    width: 400px;
+    margin: 3px;
+    background-color: green;
+    padding: 3px;
+}
+
+ul{
+    list-style-image: url("sloth.png");
+}
+
+p{
+    text-indent: 15px;
+    text-align: justify;
+}
+
+h2{
+    color: black;
+    opacity: 30%;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left: 10px;
+    margin-right: 10px;
+    text-indent: 0px;
+    text-align: left;
+}
+
+#h2{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-variant:inherit;
+    background-color: #ffffff;
+    text-indent: 0px;
+    text-align: left;
+}
+
+table {
+    border:0px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+table th {
+    border:1px solid #b3adad;
+    padding:5px;
+    background: #f0f0f0;
+    color: #313030;
+    opacity: 0%;
+}
+
+table td {
+    border:5px;
+    text-align:left;
+    padding:5px;
+    background: #ffffff;
+    color: #313030;
+}
+
+.sor1{
+    background-color: black;
+    opacity: 20%;
+}
+
+.sor2{
+    background-color: #00ffa2;
+    color: rgb(0, 0, 0);
+    opacity: 10%;
+}
+
+.tablaszoveg{
+    color: black;
+    opacity: 100%;
+}
+
+.oszlop1{
+    width: 20%;
+    font-weight: bold;
+}
+
+.oszlop2{
+    width: 50%;
+    font-style: oblique;
+    font-variant: small-caps;
+}
+
+a:link, a:visited{
+    color: green;
+    text-decoration: none;
+}
+
+a:hover{
+    color: orangered;
+    text-decoration: underline;
+}

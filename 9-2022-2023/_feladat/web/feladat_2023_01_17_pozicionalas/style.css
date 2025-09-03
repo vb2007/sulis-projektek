@@ -1,0 +1,45 @@
+#tartalom{
+	background-color: lightgrey;
+	width: 800px;
+	margin: auto;
+	position: relative;
+	height: 2000px;
+}
+
+article{
+	width: 100px; 
+	height: 100px;
+	border: 3px double black;
+}
+
+#elso{
+	background-color:red;
+	position: absolute;
+	right: 0;
+	bottom: 0;
+	z-index: 5;
+}
+
+#masodik{
+	background-color:green;
+	/* position: static; */
+	/* position: relative; */
+	position: absolute;
+	/* top: 20px;
+	left: 20px; */
+	top: 0;
+	right: 0;
+}
+
+#harmadik{
+	background-color:blue;
+	position: fixed;
+	left: 50px;
+	top: 50pc;
+}
+
+#hatodik{
+	background-color: yellow;
+	position: sticky;
+	top: 0;
+}

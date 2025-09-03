@@ -1,0 +1,76 @@
+@media only screen and (max-width: 1000px){
+    #tartalom{
+        width: 80%;
+    }
+    img{
+        width: 90%;
+    }
+}
+
+@media only screen and (max-width: 800px){
+    body{
+        max-width: 800px;
+    }
+    #tartalom{
+        width: 90%;
+    }
+}
+
+@media only screen and (max-width: 500px){
+    p, h1, a{
+        font-size: 0.8rem;
+    }
+    img{
+        display: none;
+        visibility: hidden;
+    }
+}
+
+body{
+    background-image: url('forras/mozaik.jpg');
+    background-repeat:repeat-y;
+    background-size: 60px;
+    background-color: #ffd9b3;
+}
+
+#tartalom{
+    width: 75%;
+    display: block;
+    float: none;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+h1{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+p, a{
+    text-align: justify;
+    text-indent: 15px;
+}
+
+#elsobekezdes{
+    font-weight: bold;
+    font-size: 1.1rem;
+    letter-spacing: 1px;
+}
+
+img{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    border: 3px;
+    border-style: double;
+    border-color: brown;
+    min-width: 300px;
+}
+
+a{
+    font-variant: small-caps;
+    color: darkred;
+    font-weight: bold;
+}
