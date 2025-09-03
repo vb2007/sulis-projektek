@@ -1,0 +1,99 @@
+a{
+    color: #2E8B57
+}
+
+body{
+    background-color: #7FFFD4;
+    color: #2E8B57;
+    font-family: sans-serif;
+    margin-left: 40px;
+    margin-right: 40px;
+}
+
+#fejleckep{
+    /* középre igazítás */
+    display: block;
+	margin-left: auto;
+	margin-right: auto;
+    /* */
+    width: 90%;
+}
+
+h1{
+    text-align: center;
+    font-family: cursive;
+    font-stretch: extra-expanded;
+    font-style: italic;
+    font-weight: 800;
+}
+
+h2{
+    text-align: left;
+    font-family: sans-serif;
+    font-style: oblique;
+    font-stretch: expanded;
+    font-variant: small-caps;
+    font-weight: 700;
+    /* nem tudom, hogy kéne beállítani az 16 pixel szorzatát, szóval csak megszoroztam számológéppel */
+    font-size: 27.2px;
+}
+
+p{
+    text-align: justify;
+    text-indent: 0.5cm;
+}
+
+hr{
+    height: 2px;
+    width: 90%;
+    background-color: #2E8B57;
+}
+
+ul{
+    font-style: monospace;
+    list-style-type: none;
+    font-weight: 700;
+    font-size: 150%;
+}
+
+table, caption, th, td{
+    text-align: center;
+    width: 50%;
+    border-width: 1px;
+    border-color: #2E8B57;
+    border-collapse: collapse;
+}
+
+#vitamin{
+    display: block;
+	margin-left: auto;
+	margin-right: auto;
+    margin-top: 30px;
+    width: 40%;
+    border-radius: 50%;
+}
+
+#tablazat_2_4{
+    text-align: right;
+    margin-left: 20px;
+    margin-bottom: 40px;
+}
+
+#tablazat_3{
+    text-align: left;
+    margin-right: 20px;
+    margin-bottom: 40px;
+}
+
+#cim{
+    font-family: sans-serif;
+    font-style: italic;
+    font-stretch: expanded;
+    font-weight: 700;
+    font-size: 1.2;
+	text-align: center;
+}
+
+#lapteteje{
+    text-align: right;
+}
