@@ -1,0 +1,104 @@
+body{
+    background-image: url('forras/lepesmez.jpg');
+    background-repeat: repeat-y;
+    background-color: #ffb;
+    margin-left: 140px;
+    margin-right: 20px;
+}
+
+.szoveg, p, .elsosor, td, tr, figcaption{
+    color: #840;
+    font-size: 120%;
+    text-align: justify;
+}
+
+h1{
+    text-align: center;
+}
+
+#elsoszoveg{
+    font-style: italic;
+    font-weight: bold;
+}
+
+#bee{
+    float: left;
+    margin-right: 20px;
+    margin-bottom: 20px;
+    margin-left: 0px;
+    margin-top: 0px;
+    background-image: url('forras/bee0.gif');
+    background-repeat: no-repeat;
+    min-height: 130px;
+    min-width: 130px;
+}
+
+#bee:hover{
+    background-image: url('forras/bee.gif');
+}
+
+a:visited, a:link{
+    color: #840;
+    font-style: oblique;
+}
+
+a:active{
+    color: red;
+}
+
+/*#mehesz{
+    margin-top: 0px;
+    margin-bottom: 20px;
+    margin-right: 20px;
+    margin-left: 0px;
+    border-radius: 12px;
+    width: 100%;
+    padding-left: 30px;
+    box-sizing: border-box;
+    height: 200px;
+    overflow: auto;
+}
+
+#miota{
+    border-style: dashed;
+    border-width: 1px;
+    border-color: black;
+    width: 250px;
+}*/
+
+.elsosor{
+    font-style: oblique;
+}
+
+td:hover{
+    background-color: silver;
+}
+
+#tudtad{
+    width: 450px;
+}
+
+#ul1{
+    list-style-image: url('forras/mez.jpg');
+}
+
+#rend, #tudtad{
+    margin-bottom: 20px;
+    margin-left: 20px;
+    margin-top: 0px;
+    margin-right: 0px;
+    padding-left: 10px;
+    padding-top: 0px;
+    padding-right: 10px;
+    padding-bottom: 10px;
+    min-height: 200px;
+    min-width: 200px;
+    float: left;
+}
+
+#bee, #rend, #tudtad{
+    border-width: 2px;
+    border-color: silver;
+    border-radius: 12px;
+    box-shadow: 4px;
+}

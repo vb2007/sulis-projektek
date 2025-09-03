@@ -1,0 +1,39 @@
+A-Pszeudó_osztály_feladatok
+/*A.1.-es feladat megoldása*/
+a:visited, a:link{
+    color: #840;
+    font-weight: bold;
+}
+/*A.2.-es feladat megoldása*/
+a:active{
+    color: red;
+}
+/*A.3.-as feladat megoldása*/
+#bee:hover{
+    background-image: url(bee.gif);
+}
+/*A.4.-es feladat megoldása*/
+p:first-child{
+    font-weight: bold;
+    font-style: italic;
+}
+
+B-1-2-3_feladatok_ÖNNÁLÓAN!
+B-3-9_feladatok
+#mehesz{
+    margin: 0px 20px 20px 0px;
+    border: solid 2px grey;
+    border-radius: 12px;
+    box-shadow: 4px 4px 6px grey;
+    float: left;
+
+    /*box-sizing: content-box;
+    width: 100%;
+    padding-left: 30px;*/
+}
+/*#miota{
+    border: dashed 1px black;
+    overflow: auto;
+    width: 250px;
+    height: 200px;
+}*/
