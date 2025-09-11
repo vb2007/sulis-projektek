@@ -8,6 +8,10 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\Hegyek_VB_Lib\Hegyek_VB_Lib.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
     <None Update="hegyekMo.txt">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
