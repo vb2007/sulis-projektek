@@ -2,7 +2,7 @@
 {
     public class Hegy
     {
-        public string HegycsucsNeve { get; set; }
+        public string Hegycsucs { get; set; }
         public string Hegyseg { get; set; }
         public int Magassag { get; set; }
 
@@ -10,9 +10,14 @@
         {
             string[] darabolt = adatSor.Split(';');
 
-            HegycsucsNeve = darabolt[0];
+            Hegycsucs = darabolt[0];
             Hegyseg = darabolt[1];
             Magassag = int.Parse(darabolt[2]);
         }
+
+        public double LabraValtas => Magassag * 3.280839895;
+
+        public string LegalacsonyabbHegyFormatum => $"{Hegycsucs} ({Hegyseg}), {Magassag} m";
+        public string FajlbairasFormatum => $"{Magassag} m - {Hegyseg}: {Hegycsucs}";
     }
 }
