@@ -3,8 +3,8 @@ namespace Szalag_VB_Lib
     public class Feldolgozo
     {
         private readonly List<Szallitas> _szallitasok = new();
-        public int SzalagHossz { get; }
-        public int Idoegyseg { get; }
+        private int SzalagHossz { get; }
+        private int Idoegyseg { get; }
 
         public Feldolgozo(IEnumerable<string> adatSorok)
         {
