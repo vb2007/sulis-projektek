@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Szalag_VB", "Szalag_VB\Szalag_VB.csproj", "{680AC6AD-D9DD-439B-93A2-81F32FB30938}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Szalag_VB_Lib", "Szalag_VB_Lib\Szalag_VB_Lib.csproj", "{D57C3816-2773-482D-9A31-3EB33352B407}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{680AC6AD-D9DD-439B-93A2-81F32FB30938}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{680AC6AD-D9DD-439B-93A2-81F32FB30938}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{680AC6AD-D9DD-439B-93A2-81F32FB30938}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{680AC6AD-D9DD-439B-93A2-81F32FB30938}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D57C3816-2773-482D-9A31-3EB33352B407}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D57C3816-2773-482D-9A31-3EB33352B407}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D57C3816-2773-482D-9A31-3EB33352B407}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D57C3816-2773-482D-9A31-3EB33352B407}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
