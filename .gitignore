@@ -1,4 +1,7 @@
-#For C# projects:
+#For C# projects
+#Visual Studio
 **/bin/
 **/obj/
 **/.vs/
+#Rider
+**/.idea/
