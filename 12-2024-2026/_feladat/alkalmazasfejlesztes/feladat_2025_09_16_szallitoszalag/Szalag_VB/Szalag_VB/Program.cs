@@ -16,25 +16,21 @@ namespace Szalag_VB
             int sorszamInput = int.Parse(Console.ReadLine() ?? "0");
             Szallitas? keresettSzallitas = szalagFeldolgozo.SzallitasKereseseSorszamAlapjan(sorszamInput);
             Console.WriteLine(keresettSzallitas?.KiirasiFormatum ?? "Nincs ilyen sorszámú szállítás.");
-            Console.WriteLine();
 
-            Console.WriteLine("3. feladat");
+            Console.WriteLine("\n3. feladat");
             Console.WriteLine($"A legnagyobb távolság: {szalagFeldolgozo.LegnagyobbTavolsag}");
             Console.WriteLine($"A maximális távolságú szállítások sorszáma: {szalagFeldolgozo.LegnagyobbTavolsaguSzallitasokSorszamaiString}");
-            Console.WriteLine();
             
-            Console.WriteLine("4. feladat");
+            Console.WriteLine("\n4. feladat");
             Console.WriteLine($"A kezdőpont előtt elhaladó rekeszek össztömege: {szalagFeldolgozo.KezdopontElottElhaladtOssztomeg}");
-            Console.WriteLine();
 
-            Console.WriteLine("5. feladat");
+            Console.WriteLine("\n5. feladat");
             Console.Write("Adja meg a kívánt időpontot! ");
             
             int idopontInput = int.Parse(Console.ReadLine() ?? "0");
             Console.WriteLine($"A szállított rekeszek halmaza: {szalagFeldolgozo.SzallitottRekeszekAdottIdopontbanString(idopontInput)}");
-            Console.WriteLine();
             
-            Console.WriteLine("6. feladat");
+            Console.WriteLine("\n6. feladat");
             Console.WriteLine(szalagFeldolgozo.TomegekFajlbaIrasa("tomeg.txt"));
         }
     }
