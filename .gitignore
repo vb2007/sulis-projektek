@@ -1,9 +1,12 @@
+#LibreOffice (opening PDF files)
+**.~lock.*
+
+
 #For C# projects
+
 #Visual Studio
 **/bin/
 **/obj/
 **/.vs/
 #Rider
 **/.idea/
-#LibreOffice (opening PDF files)
-**.~lock.*
