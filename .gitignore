@@ -5,3 +5,5 @@
 **/.vs/
 #Rider
 **/.idea/
+#LibreOffice (opening PDF files)
+**.~lock.*
