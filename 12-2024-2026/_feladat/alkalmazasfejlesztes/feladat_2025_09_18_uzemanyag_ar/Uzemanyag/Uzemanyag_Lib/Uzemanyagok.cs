@@ -12,8 +12,13 @@
             }
         }
 
+        //3. Feladat
         public int ValtozasokSzama => uzemanyagArak.Count;
+        //4. Feladat
         public int LegkisebbArKulonbseg => uzemanyagArak.Min(x => x.ArKulonbseg);
+        //5. Feladat
         public int LegkisebbArKulonbsegElofordulas => uzemanyagArak.Count(x => x.ArKulonbseg == LegkisebbArKulonbseg);
+        //6. Feladat
+        
     }
 }
