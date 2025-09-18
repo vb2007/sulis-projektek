@@ -45,13 +45,14 @@
             }
         }
 
+        //8. Feladat
         public void EvszamOlvasas(int minimumEv, int maximumEv)
         {
             int evInput = 0;
 
-            while (evInput > minimumEv && evInput < maximumEv)
+            while (evInput < minimumEv || evInput > maximumEv)
             {
-                Console.WriteLine($"8. feladat: Kérem adja meg az évszámot [{minimumEv}..{maximumEv}]: ");
+                Console.Write($"8. feladat: Kérem adja meg az évszámot [{minimumEv}..{maximumEv}]: ");
                 evInput = int.Parse(Console.ReadLine()!);
             }
         }

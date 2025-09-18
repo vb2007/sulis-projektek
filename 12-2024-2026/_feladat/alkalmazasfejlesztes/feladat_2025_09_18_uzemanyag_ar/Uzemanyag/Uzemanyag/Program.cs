@@ -19,7 +19,8 @@ namespace Uzemanyag
 
             Console.WriteLine($"7. feladat: {uzemanyagok.FajlbaIras("euro.txt")}");
             
-            
+            //8. Feladat
+            uzemanyagok.EvszamOlvasas(2011, 2016);
         }
     }
 }
