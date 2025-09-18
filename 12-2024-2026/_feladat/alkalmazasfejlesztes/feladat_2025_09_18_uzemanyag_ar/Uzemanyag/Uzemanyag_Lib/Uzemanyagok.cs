@@ -13,5 +13,6 @@
         }
 
         public int ValtozasokSzama => uzemanyagArak.Count;
+        public int LegkisebbArKulonbseg => uzemanyagArak.Min(x => x.ArKulonbseg);
     }
 }

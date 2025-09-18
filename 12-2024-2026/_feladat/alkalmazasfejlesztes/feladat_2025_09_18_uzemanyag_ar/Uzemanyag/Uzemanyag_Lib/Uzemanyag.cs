@@ -5,6 +5,7 @@
         public DateTime Valtozas { get; set; }
         public int BenzinAr { get; set; }
         public int GazolajAr { get; set; }
+        public int ArKulonbseg => Math.Abs(BenzinAr - GazolajAr);
 
         public Uzemanyag(string adatSor)
         {

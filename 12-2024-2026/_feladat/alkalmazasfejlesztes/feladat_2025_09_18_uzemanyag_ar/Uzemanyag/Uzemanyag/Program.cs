@@ -9,6 +9,8 @@ namespace Uzemanyag
             Uzemanyagok uzemanyagok = new Uzemanyagok(File.ReadAllLines("uzemanyag.txt"));
 
             Console.WriteLine($"3. feladat: Változások száma: {uzemanyagok.ValtozasokSzama}");
+
+            Console.WriteLine($"4. feladat: A legkisebb különbség: {uzemanyagok.LegkisebbArKulonbseg}");
         }
     }
 }
