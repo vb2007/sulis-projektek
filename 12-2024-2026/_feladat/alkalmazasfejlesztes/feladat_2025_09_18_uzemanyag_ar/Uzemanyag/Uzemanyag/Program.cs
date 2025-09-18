@@ -11,6 +11,8 @@ namespace Uzemanyag
             Console.WriteLine($"3. feladat: Változások száma: {uzemanyagok.ValtozasokSzama}");
 
             Console.WriteLine($"4. feladat: A legkisebb különbség: {uzemanyagok.LegkisebbArKulonbseg}");
+
+            Console.WriteLine($"5. feladat: A legkisebb különbség előfordulása: {uzemanyagok.LegkisebbArKulonbsegElofordulas}");
         }
     }
 }

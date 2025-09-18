@@ -6,7 +6,7 @@
 
         public Uzemanyagok(IEnumerable<string> sorok)
         {
-            foreach (var sor in sorok)
+            foreach (string sor in sorok)
             {
                 uzemanyagArak.Add(new Uzemanyag(sor));
             }
@@ -14,5 +14,6 @@
 
         public int ValtozasokSzama => uzemanyagArak.Count;
         public int LegkisebbArKulonbseg => uzemanyagArak.Min(x => x.ArKulonbseg);
+        public int LegkisebbArKulonbsegElofordulas => uzemanyagArak.Count(x => x.ArKulonbseg == LegkisebbArKulonbseg);
     }
 }
