@@ -1,4 +1,9 @@
+#LibreOffice (opening PDF files)
+**.~lock.*
+
+
 #For C# projects
+
 #Visual Studio
 **/bin/
 **/obj/
