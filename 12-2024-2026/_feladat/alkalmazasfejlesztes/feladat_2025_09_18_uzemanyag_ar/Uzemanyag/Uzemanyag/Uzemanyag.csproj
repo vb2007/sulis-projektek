@@ -11,4 +11,10 @@
     <ProjectReference Include="..\Uzemanyag_Lib\Uzemanyag_Lib.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <None Update="uzemanyag.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
 </Project>
