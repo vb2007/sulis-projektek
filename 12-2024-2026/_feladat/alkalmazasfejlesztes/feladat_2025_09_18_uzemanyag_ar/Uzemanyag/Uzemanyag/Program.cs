@@ -18,9 +18,12 @@ namespace Uzemanyag
             Console.WriteLine($"6. feladat: {(voltSzokonaponValtozas ? "Volt" : "Nem volt")} változás szökőnapon!");
 
             Console.WriteLine($"7. feladat: {uzemanyagok.FajlbaIras("euro.txt")}");
-            
+
             //8. Feladat
-            uzemanyagok.EvszamOlvasas(2011, 2016);
+            int bekertEv = uzemanyagok.EvszamOlvasas(2011, 2016);
+
+            //10. Feladat
+            Console.WriteLine($"10. feladat: {bekertEv} évben a leghosszabb időszak {uzemanyagok.LeghosszabbIdoszak(bekertEv)} nap volt.");
         }
     }
 }

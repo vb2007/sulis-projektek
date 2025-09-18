@@ -20,7 +20,7 @@
         public int LegkisebbArKulonbsegElofordulas => uzemanyagArak.Count(x => x.ArKulonbseg == LegkisebbArKulonbseg);
         //6. Feladat
         public bool VoltSzokonaponValtozas => uzemanyagArak.Any(x => (x.Valtozas.Year % 4 == 0 && (x.Valtozas.Month == 2 && x.Valtozas.Day == 24)));
-        
+
         //7. Feladat
         public string FajlbaIras(string fajlNev)
         {
@@ -46,15 +46,58 @@
         }
 
         //8. Feladat
-        public void EvszamOlvasas(int minimumEv, int maximumEv)
+        public int EvszamOlvasas(int minimumEv, int maximumEv)
         {
             int evInput = 0;
-
             while (evInput < minimumEv || evInput > maximumEv)
             {
                 Console.Write($"8. feladat: Kérem adja meg az évszámot [{minimumEv}..{maximumEv}]: ");
                 evInput = int.Parse(Console.ReadLine()!);
             }
+            return evInput;
+        }
+
+        //9. Feladat
+        private int NapokSzamaArvaltozasokKozott(DateTime elozo, DateTime aktualis)
+        {
+            int[] napokSzama = { 31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31 };
+
+            if (elozo.Year % 4 == 0)
+            {
+                napokSzama[1] = 29;
+            }
+
+            if (elozo.Month == aktualis.Month)
+            {
+                return aktualis.Day - elozo.Day;
+            }
+
+            return napokSzama[elozo.Month - 1] - elozo.Day + aktualis.Day;
+        }
+
+        //10. Feladat
+        public int LeghosszabbIdoszak(int evInput)
+        {
+            List<Uzemanyag> adottEviValtozasok = uzemanyagArak
+                .Where(x => x.Valtozas.Year == evInput)
+                .OrderBy(x => x.Valtozas)
+                .ToList();
+            
+            int maxNapok = 0;
+            for (int i = 1; i < adottEviValtozasok.Count; i++)
+            {
+                DateTime elozo = adottEviValtozasok[i - 1].Valtozas;
+                DateTime aktualis = adottEviValtozasok[i].Valtozas;
+
+                int napokSzama = NapokSzamaArvaltozasokKozott(elozo, aktualis);
+
+                if (napokSzama > maxNapok)
+                {
+                    maxNapok = napokSzama;
+                }
+            }
+
+            return maxNapok;
         }
     }
 }
