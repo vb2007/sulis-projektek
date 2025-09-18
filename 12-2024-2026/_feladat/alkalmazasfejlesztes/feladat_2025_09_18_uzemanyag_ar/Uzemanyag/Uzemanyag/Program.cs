@@ -16,6 +16,8 @@ namespace Uzemanyag
 
             bool voltSzokonaponValtozas = uzemanyagok.VoltSzokonaponValtozas;
             Console.WriteLine($"6. feladat: {(voltSzokonaponValtozas ? "Volt" : "Nem volt")} változás szökőnapon!");
+
+            Console.WriteLine($"7. feladat: {uzemanyagok.FajlbaIras("euro.txt")}");
         }
     }
 }
