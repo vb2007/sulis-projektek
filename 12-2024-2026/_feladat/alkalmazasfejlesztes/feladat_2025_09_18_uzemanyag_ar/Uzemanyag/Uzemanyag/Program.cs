@@ -13,6 +13,9 @@ namespace Uzemanyag
             Console.WriteLine($"4. feladat: A legkisebb különbség: {uzemanyagok.LegkisebbArKulonbseg}");
 
             Console.WriteLine($"5. feladat: A legkisebb különbség előfordulása: {uzemanyagok.LegkisebbArKulonbsegElofordulas}");
+
+            bool voltSzokonaponValtozas = uzemanyagok.VoltSzokonaponValtozas;
+            Console.WriteLine($"6. feladat: {(voltSzokonaponValtozas ? "Volt" : "Nem volt")} változás szökőnapon!");
         }
     }
 }

@@ -19,6 +19,8 @@
         //5. Feladat
         public int LegkisebbArKulonbsegElofordulas => uzemanyagArak.Count(x => x.ArKulonbseg == LegkisebbArKulonbseg);
         //6. Feladat
+        public bool VoltSzokonaponValtozas => uzemanyagArak.Any(x => (x.Valtozas.Year % 4 == 0 && (x.Valtozas.Month == 2 && x.Valtozas.Day == 24)));
+        //7. Feladat
         
     }
 }
