@@ -44,5 +44,16 @@
                 return $"Hiba történt a(z) {fajlNev} fájlba írás közben: {ex.Message}";
             }
         }
+
+        public void EvszamOlvasas(int minimumEv, int maximumEv)
+        {
+            int evInput = 0;
+
+            while (evInput > minimumEv && evInput < maximumEv)
+            {
+                Console.WriteLine($"8. feladat: Kérem adja meg az évszámot [{minimumEv}..{maximumEv}]: ");
+                evInput = int.Parse(Console.ReadLine()!);
+            }
+        }
     }
 }
