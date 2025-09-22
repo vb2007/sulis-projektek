@@ -10,3 +10,5 @@
 **/.vs/
 #Rider
 **/.idea/
+#Rider (unit tests with MSTest)
+**DotSettings.user
