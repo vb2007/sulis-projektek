@@ -67,4 +67,21 @@ public class UnitTest1
             Assert.Fail("Element not found!");
         }
     }
+    
+    [TestMethod]
+    public void TestWindows()
+    {
+        _webDriver.Navigate().GoToUrl("https://98.js.org/");
+        
+        var icon = _webDriver.FindElement(By.XPath("//*[@src=\"https://98.js.org/images/icons/minesweeper-32x32.png\"]/../.."));
+        icon.Click();
+        icon.Click();
+        
+        WebDriverWait wait = new WebDriverWait(_webDriver, new  TimeSpan(0, 0, 0, 1));
+        wait.PollingInterval = new TimeSpan(0, 0, 0, 0, 100);
+        wait.IgnoreExceptionTypes(typeof(NoSuchElementException));
+        wait.Until(x => x.FindElement(By.ClassName("window-title")));
+        Assert.AreEqual("Minesweeper", _webDriver.FindElement(By.ClassName("window-title")).Text);
+        _webDriver.GetScreenshot().SaveAsFile("/home/vb2007/code/sulis-projektek/12-2025-2026/_feladat/teszteles/feladat_2025_09_22_bevezeto/minesweeper.png");
+    }
 }
