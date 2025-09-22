@@ -33,7 +33,7 @@ public class UnitTest1
     public void TestMethod1()
     {
         _webDriver.Navigate().GoToUrl("https://duckduckgo.com");
-        Assert.AreEqual("DuckDuckGo - Privacy, simplified.",  _webDriver.Title);
+        Assert.AreEqual("DuckDuckGo - Protection. Privacy. Peace of mind.",  _webDriver.Title);
     }
 
     [TestMethod]
@@ -42,7 +42,9 @@ public class UnitTest1
         _webDriver.Navigate().GoToUrl("https://gitlab.neumann-bp.edu.hu/");
         _webDriver.FindElement(By.Id("ldapmain_username")).SendKeys("alma");
         _webDriver.FindElement(By.Id("ldapmain_password")).SendKeys("korte");
-        _webDriver.FindElement(By.XPath("//*[@data-qa-selector=\"sign_in_button\"]")).Click();
+        //a videó óta megváltozott a selector, frissítettem a kódot
+        //_webDriver.FindElement(By.XPath("//*[@data-qa-selector=\"sign_in_button\"]")).Click();
+        _webDriver.FindElement(By.XPath("//*[@data-testid=\"sign-in-button\"]")).Click();
         
         WebDriverWait wait = new WebDriverWait(_webDriver, new  TimeSpan(0, 0, 30));
         
@@ -51,7 +53,9 @@ public class UnitTest1
         
         try
         {
-            wait.Until(x => x.FindElement(By.CssSelector("div.layout-page")));
+            //itt is változott a selector, frissítettem a kódot
+            //wait.Until(x => x.FindElement(By.CssSelector("div.layout-page")));
+            wait.Until(x => x.FindElement(By.XPath("//*[@data-testid=\"flash-container\"]")));
         }
         catch (WebDriverTimeoutException)
         {
@@ -60,7 +64,7 @@ public class UnitTest1
 
         try
         {
-            Assert.IsNotNull(_webDriver.FindElement(By.CssSelector("div.layout-page")));
+            Assert.IsNotNull(_webDriver.FindElement(By.XPath("//*[@data-testid=\"flash-container\"]")));
         }
         catch (NoSuchElementException)
         {
@@ -73,6 +77,7 @@ public class UnitTest1
     {
         _webDriver.Navigate().GoToUrl("https://98.js.org/");
         
+        //failelni fog, mert nincs rendesen implementálva minden click funkció
         var icon = _webDriver.FindElement(By.XPath("//*[@src=\"https://98.js.org/images/icons/minesweeper-32x32.png\"]/../.."));
         icon.Click();
         icon.Click();
