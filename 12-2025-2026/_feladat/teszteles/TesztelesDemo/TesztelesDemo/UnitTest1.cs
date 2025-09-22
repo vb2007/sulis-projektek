@@ -39,6 +39,32 @@ public class UnitTest1
     [TestMethod]
     public void TestMethod2()
     {
+        _webDriver.Navigate().GoToUrl("https://gitlab.neumann-bp.edu.hu/");
+        _webDriver.FindElement(By.Id("ldapmain_username")).SendKeys("alma");
+        _webDriver.FindElement(By.Id("ldapmain_password")).SendKeys("korte");
+        _webDriver.FindElement(By.XPath("//*[@data-qa-selector=\"sign_in_button\"]")).Click();
         
+        WebDriverWait wait = new WebDriverWait(_webDriver, new  TimeSpan(0, 0, 30));
+        
+        wait.IgnoreExceptionTypes(typeof(NoSuchElementException));
+        wait.PollingInterval = new TimeSpan(0, 0, 0, 0, 100);
+        
+        try
+        {
+            wait.Until(x => x.FindElement(By.CssSelector("div.layout-page")));
+        }
+        catch (WebDriverTimeoutException)
+        {
+            Assert.Fail("Element not found!");
+        }
+
+        try
+        {
+            Assert.IsNotNull(_webDriver.FindElement(By.CssSelector("div.layout-page")));
+        }
+        catch (NoSuchElementException)
+        {
+            Assert.Fail("Element not found!");
+        }
     }
 }
