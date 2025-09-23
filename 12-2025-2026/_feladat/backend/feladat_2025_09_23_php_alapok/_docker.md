@@ -1,5 +1,11 @@
 # A PHP scriptek futtatása Docker konténerben
 
+0. Belépés a releváns mappába (ahol a `Dockerfile` is található) *(példa)*
+
+```bash
+cd home/vb2007/code/sulis-projektek/12-2025-2026/_feladat/backend/feladat_2025_09_23_php_alapok/src
+```
+
 1. Konténer buildelése
 
 ```bash
