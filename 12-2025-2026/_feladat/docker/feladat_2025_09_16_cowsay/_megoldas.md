@@ -20,6 +20,15 @@ f. Buildelje a Dockerfile-t, melynek neve legyen monogram/cowsay:ubuntu , ahol a
 
 g. Indítsa el a konténert és készítsen képernyőképet a sikeres működésről!
 
+**Dockerfile:**
+
+![1. Dockerfile](./img/1dockerfile.png)
+
+**Build & Run:**
+
+![1. Build & Run](./img/1buildrun1.png)
+
+![2. Build & Run](./img/1buildrun2.png)
 
 2. Az előző feladat alapján készítsen egy Dockerfile-t customcowsay.Dockerfile néven.
 
@@ -28,6 +37,16 @@ a. A felhasználó adhassa meg, mit mondjon a tehén! Amennyiben nem adja meg, �
 b. Buildelje a Dockerfile-t, melynek neve legyen monogram/customcowsay:ubuntu , ahol a monogram az Ön monogramja!
 
 c. Készítsen képernyőképet a konténer sikeres működésről!
+
+**Dockerfile:**
+
+![2. Dockerfile](./img/2dockerfile.png)
+
+**Build & Run:**
+
+![2. Build & Run](./img/2buildrun1.png)
+
+![2. Build & Run](./img/2buildrun2.png)
 
 3. Készítsen egy Dockerfile-t catsay.Dockerfile , ami a cowsay programot fogja lefuttatni úgy, hogy egy macska beszél!
 
@@ -41,7 +60,15 @@ d. Buildelje a Dockerfile-t, melynek neve legyen monogram/catsay:ubuntu , ahol a
 
 e. Készítsen képernyőképet a konténer sikeres működésről!
 
+**Dockerfile:**
 
+![3. Dockerfile](./img/3dockerfile.png)
+
+**Build & Run:**
+
+![3. Build & Run](./img/3buildrun1.png)
+
+![3. Build & Run](./img/3buildrun2.png)
 
 4. Az előző feladat alapján készítsen egy Dockerfile-t foxsay.Dockerfile néven, ami a cowsay programot fogja lefuttatni úgy, hogy egy róka beszél!
 
@@ -55,5 +82,15 @@ segítségével, hogy a fox.cow fájlú állat jelnjen meg.
 d. Buildelje a Dockerfile-t, melynek neve legyen monogram/foxsay:ubuntu , ahol a monogram az Ön mono-gramja!
 
 e. Készítsen képernyőképet a konténer sikeres működésről!
+
+**Dockerfile:**
+
+![4. Dockerfile](./img/4dockerfile.png)
+
+**Build & Run:**
+
+![4. Build & Run](./img/4buildrun1.png)
+
+![4. Build & Run](./img/4buildrun2.png)
 
 ## Feladatleírást készítette: Kurityák Dániel
