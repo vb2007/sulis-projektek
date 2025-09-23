@@ -1,6 +1,6 @@
 # Docker alapozó
 
-1. Feladat
+## 1. Feladat
 
 a. Futtassa az ls programot egy ubuntu:24.04 -es konténerben, hogy láthatóvá váljon az általa látott mappa tartalma.
 
@@ -18,7 +18,7 @@ d. Törölje az imént létrehozott containert!
 
 ![1d](./img/1d.png)
 
-2. Feladat: Nyancat
+## 2. Feladat: Nyancat
 
 a. Futtassa a bash programot egy ubuntu:20.04-es konténerben, interaktív módon !
 
@@ -40,7 +40,7 @@ e. Törölje az imént létrehozott containert!
 
 ![2e](./img/2e.png)
 
-3. Feladat: 2048
+## 3. Feladat: 2048
 
 a. Futtassa a bash programot egy ubuntu:20.04-es konténerben, interaktív módon !
 
@@ -64,7 +64,7 @@ e. Törölje az imént létrehozott containert!
 
 ![3e](./img/3e.png)
 
-4. Feladat: tree + lolcat
+## 4. Feladat: tree + lolcat
 
 a. Futtassa a bash programot egy ubuntu:20.04-es konténerben, interaktív módon!
 
