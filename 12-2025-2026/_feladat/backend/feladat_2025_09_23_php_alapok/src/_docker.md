@@ -9,7 +9,7 @@ docker build -t vb/php .
 2. Konténer futtatása
 
 ```bash
-docker run -it --rm -v $(pwd):/APP vb/php
+docker run -it --rm -v $(pwd):/app vb/php
 ```
 
 3. PHP script futtatása a konténeren belül
