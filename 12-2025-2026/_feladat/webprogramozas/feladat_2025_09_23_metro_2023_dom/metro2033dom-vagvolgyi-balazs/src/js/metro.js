@@ -17,6 +17,7 @@ const title = () => {
   span.textContent = title;
 
   p.append(span);
+
   return p;
 };
 
@@ -31,7 +32,7 @@ const episodes = () => {
     if (strongs.length > 0) {
       const txt = strongs[0].textContent.trim();
 
-      if ((txt = "Részek: ")) {
+      if (txt == "Részek: ") {
         episodes = listElements[i].getElementsByTagName("ul");
         break;
       }
