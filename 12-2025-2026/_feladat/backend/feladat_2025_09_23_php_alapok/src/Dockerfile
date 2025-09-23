@@ -4,4 +4,4 @@ WORKDIR /app
 
 RUN apk update && apk add --no-cache bash
 
-ENTRYPOINT [  "/bin/bash" ]
+ENTRYPOINT [ "/bin/bash" ]
