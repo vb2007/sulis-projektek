@@ -149,7 +149,16 @@ const visited = (event) => {
   element.stlye.cursor = "crosshair";
 };
 
+first();
+vdnh();
+
 const stations = stationsEl.children;
 for (let i = 0; i < stations.length; i++) {
   stations[i].addEventListener("click", visited);
 }
+
+coverEl.addEventListener("click", coverSwap);
+
+shortEl.append(title());
+shortEl.append(episodes());
+shortEl.append(pages());
