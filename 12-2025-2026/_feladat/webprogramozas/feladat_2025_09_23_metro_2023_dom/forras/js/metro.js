@@ -135,3 +135,21 @@ const coverSwap = () => {
     document.body.style.setProperty("--main-color", "#005f5f");
   }
 };
+
+const visited = (event) => {
+  const element = event.target;
+
+  const mainColor = getComputedStyle(document.body).getPropertyValue(
+    "--main-color",
+  );
+
+  element.style.backgroundColor = mainColor;
+  element.style.color = "#000";
+  element.style.borderStyle = "double";
+  element.stlye.cursor = "crosshair";
+};
+
+const stations = stationsEl.children;
+for (let i = 0; i < stations.length; i++) {
+  stations[i].addEventListener("click", visited);
+}
