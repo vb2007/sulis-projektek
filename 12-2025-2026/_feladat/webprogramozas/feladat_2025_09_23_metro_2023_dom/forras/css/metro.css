@@ -98,3 +98,20 @@ footer {
         padding: 1rem;
     }
 }
+
+#stations {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    list-style-position: inside;
+}
+
+#stations li {
+    padding: 0.4rem;
+    border: 3px solid;
+    border-radius: 0.2rem;
+}
+
+#stations a {
+    cursor: pointer;
+}
