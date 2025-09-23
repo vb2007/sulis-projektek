@@ -19,7 +19,18 @@ if (!is_numeric($temp)) {
     return;
 }
 
-if ($unit != "c" && $unit != "f") {
-    echo "Hibás mértékegység\n";
-    return;
+switch ($unit) {
+    case "c":
+    case "celsius":
+        $convertedTemp = $temp * 1.8 + 32;
+        echo "{$temp} celsius az {$convertedTemp} fahrenheit\n";
+        break;
+    case "f":
+    case "fahrenheit":
+        $convertedTemp = ($temp - 32) / 1.8;
+        echo "{$temp} fahrenheit az {$convertedTemp} celsius\n";
+        break;
+    default:
+        echo "Hibás mértékegység\n";
+        return;
 }
