@@ -2,6 +2,9 @@
 
 const headerEl = document.getElementById("header");
 const dataEl = document.getElementById("data");
+const shortEl = document.getElementById("short");
+const stationsEl = document.getElementById("stations");
+const coverEl = document.getElementById("cover");
 
 const title = () => {
   const h1 = headerEl.getElementsByTagName("h1")[0];
