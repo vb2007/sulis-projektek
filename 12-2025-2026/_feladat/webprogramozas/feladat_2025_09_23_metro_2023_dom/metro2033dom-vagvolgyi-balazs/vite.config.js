@@ -1,18 +1,18 @@
-import { defineConfig } from 'vite'
+import { defineConfig } from "vite";
 
 export default defineConfig({
-  root: './',
+  root: "./src",
   server: {
     port: 3000,
     open: true,
-    host: true
+    host: true,
   },
   build: {
-    outDir: 'dist',
+    outDir: "dist",
     rollupOptions: {
       input: {
-        main: './metro2033.html'
-      }
-    }
-  }
-})
+        main: "./metro2033.html",
+      },
+    },
+  },
+});
