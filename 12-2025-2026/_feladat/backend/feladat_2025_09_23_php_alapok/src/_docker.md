@@ -15,5 +15,5 @@ docker run -it --rm -v $(pwd):/APP vb/php
 3. PHP script futtatása a konténeren belül
 
 ```bash
-PHP 01.php "opcionális" "paraméterek"
+php 01.php "opcionális" "paraméterek"
 ```
