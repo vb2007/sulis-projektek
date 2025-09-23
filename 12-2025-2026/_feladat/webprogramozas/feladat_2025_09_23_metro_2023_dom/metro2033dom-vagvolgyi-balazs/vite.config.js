@@ -4,15 +4,13 @@ export default defineConfig({
   root: "./src",
   server: {
     port: 3000,
-    open: true,
+    open: "/metro2033.html",
     host: true,
   },
   build: {
-    outDir: "dist",
+    outDir: "../dist",
     rollupOptions: {
-      input: {
-        main: "./metro2033.html",
-      },
+      input: "./metro2033.html",
     },
   },
 });
