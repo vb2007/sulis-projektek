@@ -1,6 +1,8 @@
 #LibreOffice (opening PDF files)
 **.~lock.*
 
+#For web projects (mainly npm Vite package & others)
+node_modules/
 
 #For C# projects
 
