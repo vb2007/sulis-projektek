@@ -63,6 +63,11 @@ aside {
     font-size: 1rem;
 }
 
+aside span {
+    color: var(--main-color);
+    font-style: italic;
+}
+
 main {
     grid-area: main;
     background: #23272b;
@@ -117,4 +122,9 @@ footer {
 
 #stations a {
     cursor: pointer;
+}
+
+.first {
+    color: var(--main-color);
+    font-style: italic;
 }

@@ -129,14 +129,14 @@ const vdnh = () => {
 const coverSwap = () => {
   const img = coverEl.getAttribute("src");
 
-  if ((img = "2033.jpg")) {
+  if (img == "2033.jpg") {
     coverEl.setAttribute("src", "2033-new.jpg");
     coverEl.setAttribute("alt", "Metro 2033 új könyv borító");
-    document.body.style.setProperty("--main-color", "#1b1b1b");
+    document.body.style.setProperty("--main-color", "#ce322b");
   } else {
     coverEl.setAttribute("src", "2033.jpg");
     coverEl.setAttribute("alt", "Metro 2033 könyv borító");
-    document.body.style.setProperty("--main-color", "#005f5f");
+    document.body.style.setProperty("--main-color", "#ffcc00");
   }
 };
 
