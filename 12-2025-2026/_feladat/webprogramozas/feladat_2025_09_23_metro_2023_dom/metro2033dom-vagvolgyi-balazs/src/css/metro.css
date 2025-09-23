@@ -126,5 +126,5 @@ footer {
 
 .first {
     color: var(--main-color);
-    font-style: italic;
+    font-weight: bold;
 }
