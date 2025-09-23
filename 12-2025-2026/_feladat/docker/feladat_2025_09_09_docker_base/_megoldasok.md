@@ -20,82 +20,82 @@ d. Törölje az imént létrehozott containert!
 
 2. Feladat: Nyancat
 
-a. Futtassa a bash programot egy ubuntu -es konténerben, interaktív módon !
+a. Futtassa a bash programot egy ubuntu:20.04-es konténerben, interaktív módon !
 
-Képernyőkép:
+[2a](./img/2a.png)
 
 b. Frissítse a csomaglistát!
 
-c. Telepítse , majd futtassa a nyancat nevű programot!
+[2b](./img/2b.png)
 
-Képernyőkép:
+c. Telepítse, majd futtassa a nyancat nevű programot!
+
+[2c](./img/2c.png)
 
 d. Listázza ki az összes containert!
 
-Képernyőkép:
+[2d](./img/2d.png)
 
 e. Törölje az imént létrehozott containert!
 
-Képernyőkép:
+[2e](./img/2e.png)
 
 3. Feladat: 2048
 
-a. Futtassa a bash programot egy ubuntu -es konténerben, interaktív módon !
+a. Futtassa a bash programot egy ubuntu:20.04-es konténerben, interaktív módon !
 
-Képernyőkép:
+[3a](./img/3a.png)
 
 b. Frissítse a csomaglistát!
 
-c. Telepítse a 2048 nevű programot , majd futtassa a /usr/games/2048 fájlt !
+[3b](./img/3b.png)
 
-Képernyőkép:
+c. Telepítse a 2048 nevű programot, majd futtassa a /usr/games/2048 fájlt!
+
+[3c1](./img/3c1.png)
+
+[3c2](./img/3c2.png)
 
 d. Listázza ki az összes containert!
 
-Képernyőkép:
+[3d](./img/3d.png)
 
 e. Törölje az imént létrehozott containert!
 
-Képernyőkép: 4. Feladat: tree + lolcat
+[3e](./img/3e.png)
 
-a. Futtassa a bash programot egy ubuntu -es konténerben, interaktív módon !
+4. Feladat: tree + lolcat
 
-Képernyőkép:
+a. Futtassa a bash programot egy ubuntu:20.04-es konténerben, interaktív módon!
+
+[4a](./img/4a.png)
 
 b. Frissítse a csomaglistát!
 
-c. Telepítse a tree és ruby nevű programo ka t!
+[4b](./img/4b.png)
 
-Képernyőkép:
+c. Telepítse a tree és ruby nevű programo kat!
 
-d. Jelenítse meg az /etc mappa tartalmát a tree parancs f elhasználásával:
+[4c](./img/4c.png)
 
-tree /etc
+d. Jelenítse meg az /etc mappa tartalmát a tree parancs felhasználásával:
 
-Képernyőkép:
+[4d](./img/4d.png)
 
-A lolcat nem más, mint a ruby egy csomagja. Ruby csomagokat a gem install
-
-paranccsal lehet telepíteni.
+> [!NOTE]
+> A lolcat nem más, mint a ruby egy csomagja. Ruby csomagokat a gem install install paranccsal lehet telepíteni.
 
 e. Telep ítse a lolcat csomagot:
 
-gem install lolcat
+[4e](./img/4e.png)
 
-Képernyőkép:
+> [!NOTE]
+> A pipe jel „|”arra szolgál, hogy az egyik program kimenetét átadja a mások program bemenetének.
 
-A pipe jel „|”arra szolgál, hogy az egyik program kimenetét átadja a mások program
+f. Jelenítse meg az /etc mappa tartalmát a tree parancs felhasználásával, majd adja át a lolcat programnak:
 
-bemenetének.
-
-f. Jelenítse meg az /etc mappa tartalmát a tree parancs felhasználásával ,
-
-majd adja át a lolcat programnak:
-
-tree /etc | lolcat
-
-Képernyőkép:
+[4f](./img/4f.png)
 
 g. Törölje az imént létrehozott containert!
 
-Képernyőkép:
+[4g](./img/4g.png)
