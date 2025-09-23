@@ -11,7 +11,7 @@ const title = () => {
   const title = h1 ? h1.textContent : "Ismeretlen";
 
   const p = document.createElement("p");
-  p.textContent("Cím: ");
+  p.textContent = "Cím: ";
 
   const span = document.createElement("span");
   span.textContent = title;
@@ -32,7 +32,7 @@ const episodes = () => {
     if (strongs.length > 0) {
       const txt = strongs[0].textContent.trim();
 
-      if (txt == "Részek: ") {
+      if (txt == "Részek") {
         episodes = listElements[i].getElementsByTagName("ul");
         break;
       }
@@ -131,11 +131,11 @@ const coverSwap = () => {
 
   if (img == "2033.jpg") {
     coverEl.setAttribute("src", "2033-new.jpg");
-    coverEl.setAttribute("alt", "Metro 2033 új könyv borító");
+    coverEl.setAttribute("alt", "Metró 2033 könyv új borító");
     document.body.style.setProperty("--main-color", "#ce322b");
   } else {
     coverEl.setAttribute("src", "2033.jpg");
-    coverEl.setAttribute("alt", "Metro 2033 könyv borító");
+    coverEl.setAttribute("alt", "Metró 2033 könyv eredeti borító");
     document.body.style.setProperty("--main-color", "#ffcc00");
   }
 };
@@ -150,7 +150,7 @@ const visited = (event) => {
   element.style.backgroundColor = mainColor;
   element.style.color = "#000";
   element.style.borderStyle = "double";
-  element.stlye.cursor = "crosshair";
+  element.style.cursor = "crosshair";
 };
 
 first();
