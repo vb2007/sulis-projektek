@@ -1,6 +1,6 @@
 <?php
-$a = (float) $argv[1];
-$b = (float) $argv[2];
+$a = $argv[1];
+$b = $argv[2];
 $c = sqrt(pow($a, 2) + pow($b, 2));
 
 echo "aˆ2 + bˆ2 = cˆ2\n";
