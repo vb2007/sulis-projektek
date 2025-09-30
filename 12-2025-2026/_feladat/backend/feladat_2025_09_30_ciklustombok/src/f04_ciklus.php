@@ -4,14 +4,19 @@ $a = $argv[1];
 $b = $argv[2];
 
 if ($a > $b) {
-    while ($b > $a) {
-        echo "$b\n";
-        $b++;
+    $i = $a;
+    while ($i >= $b) {
+        if ($i % 2 != 0) {
+            echo "$i\n";
+        }
+        $i--;
     }
-}
-else {
-    while ($a < $b) {
-        echo "$a\n";
-        $a++;
+} else {
+    $i = $a;
+    while ($i <= $b) {
+        if ($i % 2 != 0) {
+            echo "$i\n";
+        }
+        $i++;
     }
 }
