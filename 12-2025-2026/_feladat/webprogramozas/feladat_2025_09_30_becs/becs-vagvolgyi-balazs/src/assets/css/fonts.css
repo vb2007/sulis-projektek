@@ -1,9 +1,9 @@
 @font-face {
-    font-family: 'Wiener Merlange';
-    src: url('../fonts/wiener_melange.woff');
+    font-family: "Wiener Merlange";
+    src: url("../fonts/wiener_melange.woff");
 }
 
 @font-face {
-    font-family: 'Lucida Sans Unicode';
-    src: url('../fonts/lucidasansunicode.woff');
+    font-family: "Lucida Sans Unicode";
+    src: url("../fonts/lucidasansunicode.woff");
 }
