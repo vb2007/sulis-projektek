@@ -1,5 +1,12 @@
 @import url("fonts.css");
 
+:root {
+    --wien-rot: #ea3323;
+    --wien-rot-text: white;
+    --morgenrot-leicht: #f7d0d2;
+    --morgenrot-leicht-text: black;
+}
+
 * {
     margin: 0;
     padding: 0;
