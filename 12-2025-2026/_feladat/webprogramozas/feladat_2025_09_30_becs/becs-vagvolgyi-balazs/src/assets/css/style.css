@@ -45,6 +45,19 @@ header {
     }
 }
 
+footer {
+    background-color: var(--wien-rot);
+    color: var(--wien-rot-text);
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    li {
+        list-style-position: inside;
+    }
+}
+
 main {
     width: 95%;
     max-width: 1300px;
