@@ -153,7 +153,7 @@ img {
     }
 }
 
-@media only screen and (min-width: 1024x) {
+@media only screen and (min-width: 1024px) {
     .grid-cols-2 {
         grid-template-columns: 1fr 1fr;
     }
