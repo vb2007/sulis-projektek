@@ -56,6 +56,13 @@ footer {
     li {
         list-style-position: inside;
     }
+
+    div {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 0.5rem 1rem;
+    }
 }
 
 main {
@@ -90,13 +97,14 @@ img {
     max-width: 100%;
 }
 
+.grid {
+    display: grid;
+    gap: 1rem;
+}
+
 .text-md {
     font-size: 1.75rem;
     font-weight: bold;
-}
-
-#facts {
-    margin-top: 0.5rem;
 }
 
 .bar-wrapper {
@@ -113,4 +121,8 @@ img {
 .figures-card {
     display: block;
     padding: 0.5rem;
+}
+
+#facts {
+    margin-top: 0.5rem;
 }
