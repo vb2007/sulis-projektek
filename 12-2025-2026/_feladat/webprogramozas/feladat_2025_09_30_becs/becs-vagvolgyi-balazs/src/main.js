@@ -14,10 +14,12 @@ passengers.textContent = `${Math.round(buses + ubahn + trams, 1) / 1000000} mill
 
 const createBar = (width, text) => {
   const barWrapper = document.createElement("div");
+  barWrapper.classList.add("bar-wrapper");
 
   const bar = document.createElement("div");
   bar.classList.add("bar");
-  bar.textContent = width;
+  bar.textContent = width + "%";
+  bar.style.width = width + "%";
 
   barWrapper.append(bar, text);
 
@@ -30,13 +32,15 @@ diagram.innerHTML = "";
 const splitterString = ": ";
 
 const walkingSplit = walking.split(splitterString);
-diagram.append(createBar(walkingSplit[0], walkingSplit[1]));
+diagram.append(createBar(parseInt(walkingSplit[0]), walkingSplit[1]));
 
 const publicTransitSplit = publicTransit.split(splitterString);
-diagram.append(createBar(publicTransitSplit[0], publicTransitSplit[1]));
+diagram.append(
+  createBar(parseInt(publicTransitSplit[0]), publicTransitSplit[1]),
+);
 
 const cyclingSplit = cycling.split(splitterString);
-diagram.append(createBar(cyclingSplit[0], cyclingSplit[1]));
+diagram.append(createBar(parseInt(cyclingSplit[0]), cyclingSplit[1]));
 
 const drivingSplit = driving.split(splitterString);
-diagram.append(createBar(drivingSplit[0], drivingSplit[1]));
+diagram.append(createBar(parseInt(drivingSplit[0]), drivingSplit[1]));
