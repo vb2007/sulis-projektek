@@ -60,6 +60,7 @@ footer {
     color: var(--wien-rot-text);
     padding: 1rem;
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
 
@@ -69,8 +70,8 @@ footer {
 
     div {
         display: flex;
+        flex-direction: column;
         align-items: center;
-        justify-content: center;
         padding: 0.5rem 1rem;
     }
 }
@@ -202,6 +203,14 @@ https://stackoverflow.com/questions/8720931/can-css-detect-the-number-of-childre
 }
 
 @media only screen and (min-width: 768px) {
+    footer {
+        flex-direction: row;
+
+        footer > div:not(:first-child) {
+            border: 2px solid;
+        }
+    }
+
     .grid-cols-2 {
         grid-template-columns: 1fr 1fr;
     }
