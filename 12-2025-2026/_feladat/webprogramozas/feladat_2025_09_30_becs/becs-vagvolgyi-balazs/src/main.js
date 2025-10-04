@@ -8,3 +8,6 @@ const walking = "32%: sétáló";
 const publicTransit = "32%: tömegközelekedő";
 const cycling = "10%: biciklista";
 const driving = "26%: autós";
+
+const passengers = document.getElementById("passengers");
+passengers.textContent = `${Math.round(buses + ubahn + trams, 1) / 1000000} millió`;
