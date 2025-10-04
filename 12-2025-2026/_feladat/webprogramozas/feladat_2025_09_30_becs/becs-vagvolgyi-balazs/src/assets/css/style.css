@@ -115,9 +115,9 @@ img {
 
 .card {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
     gap: 0.5rem;
-    grid-template-rows: subgrid;
+    grid-template-columns: subgrid;
     padding-bottom: 0.5rem;
     box-shadow: 0.1rem 0.1rem 0.5rem gray;
 }
@@ -140,7 +140,7 @@ https://stackoverflow.com/questions/8720931/can-css-detect-the-number-of-childre
 //végül más megoldás lett
 */
 .card:has(> :nth-child(4):nth-last-child(1)) {
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(4, 1fr);
 }
 
 .figures-card {
