@@ -11,13 +11,13 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    display: flex;
-    flex-direction: column;
-    min-height: 1vh;
 }
 
 body {
     font-family: "Lucida Sans Unicode", sans-serif;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }
 
 header {
@@ -38,11 +38,21 @@ header {
         top: 0;
         left: 0;
         z-index: -1;
+        opacity: 0.3;
     }
 
     p {
         font-weight: 600;
     }
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
 }
 
 footer {
@@ -139,34 +149,6 @@ img {
     grid-template-columns: 1fr;
 }
 
-@media only screen and (min-width: 768px) {
-    .grid-cols-2 {
-        grid-template-columns: 1fr 1fr;
-    }
-
-    .grid-cols-3 {
-        grid-template-columns: 1fr 1fr 1fr;
-    }
-
-    .grid-cols-4 {
-        grid-template-columns: 1fr 1fr;
-    }
-}
-
-@media only screen and (min-width: 1024px) {
-    .grid-cols-2 {
-        grid-template-columns: 1fr 1fr;
-    }
-
-    .grid-cols-3 {
-        grid-template-columns: 1fr 1fr 1fr;
-    }
-
-    .grid-cols-4 {
-        grid-template-columns: 1fr 1fr 1fr 1fr;
-    }
-}
-
 .card {
     display: grid;
     grid-template-rows: auto 1fr 1fr;
@@ -217,4 +199,32 @@ https://stackoverflow.com/questions/8720931/can-css-detect-the-number-of-childre
 
 #diagram {
     display: flex;
+}
+
+@media only screen and (min-width: 768px) {
+    .grid-cols-2 {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .grid-cols-3 {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    .grid-cols-4 {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media only screen and (min-width: 1024px) {
+    .grid-cols-2 {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .grid-cols-3 {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    .grid-cols-4 {
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
 }

@@ -27,7 +27,7 @@ const createBar = (width, text) => {
 const diagram = document.getElementById("diagram");
 diagram.innerHTML = "";
 
-const splitterString = "%: ";
+const splitterString = ": ";
 
 const walkingSplit = walking.split(splitterString);
 diagram.append(createBar(walkingSplit[0], walkingSplit[1]));
