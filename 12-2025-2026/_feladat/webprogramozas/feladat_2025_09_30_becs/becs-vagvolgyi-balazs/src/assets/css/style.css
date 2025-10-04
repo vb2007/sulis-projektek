@@ -182,7 +182,7 @@ https://stackoverflow.com/questions/8720931/can-css-detect-the-number-of-childre
 
 .transit-icons {
     display: flex;
-    flex-direction: column;
+    flex-wrap: wrap;
     gap: 0.25rem;
     padding: 0.25rem;
 }
@@ -195,11 +195,12 @@ https://stackoverflow.com/questions/8720931/can-css-detect-the-number-of-childre
 
 .bar-wrapper {
     display: flex;
-    flex-direction: column;
+    justify-content: space-between;
 }
 
 #diagram {
     display: flex;
+    justify-content: space-between;
 }
 
 @media only screen and (min-width: 768px) {
