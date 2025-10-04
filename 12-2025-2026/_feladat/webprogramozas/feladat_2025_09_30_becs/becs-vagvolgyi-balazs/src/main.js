@@ -10,7 +10,7 @@ const cycling = "10%: biciklista";
 const driving = "26%: autós";
 
 const passengers = document.getElementById("passengers");
-passengers.textContent = `${Math.round(buses + ubahn + trams, 1) / 1000000} millió`;
+passengers.textContent = `${((buses + ubahn + trams) / 1000000).toFixed(1)} millió`;
 
 const createBar = (width, text) => {
   const barWrapper = document.createElement("div");
