@@ -152,7 +152,7 @@ img {
 
 .card {
     display: grid;
-    grid-template-rows: auto 1fr 1fr;
+    grid-template-rows: auto auto 1fr;
     /* grid-template-rows: subgrid; */
     gap: 0.5rem;
     padding-bottom: 0.5rem;
@@ -166,7 +166,7 @@ img {
 
 .card img {
     width: 100%;
-    height: auto;
+    height: 100vh;
     max-height: 310px;
     object-fit: cover;
 }
