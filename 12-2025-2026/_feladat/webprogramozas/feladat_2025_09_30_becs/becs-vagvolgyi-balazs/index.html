@@ -1,0 +1,320 @@
+<!doctype html>
+<html lang="hu">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Látogass Bécsbe!</title>
+        <link rel="stylesheet" href="src/assets/css/style.css" />
+        <script src="src/main.js" defer></script>
+    </head>
+    <body>
+        <header>
+            <h1>Látogass Bécsbe!</h1>
+            <p>
+                Bécs Ausztria fővárosa, amely évszázadok óta kulturális és
+                történelmi központ. A város elegáns és modern, a császári
+                paloták, díszes múzeumok és templomok mellett pezsgő élet,
+                hangulatos piacok és modern épületek várnak rád. Bécsben mindig
+                találhatsz magadnak új élményeket: klasszikus zene a híres bécsi
+                operában, ezernyi élmény a Duna-parton vagy a Práterben!
+            </p>
+        </header>
+
+        <main>
+            <section>
+                <h2>Hogyan juthatsz Bécsbe?</h2>
+                <p>
+                    Budapestről óránként indul közvetlen vonatjárat a Keleti
+                    pályaudvarról Bécsbe. Az út körülbelül 2,5-3 órát vesz
+                    igénybe, és a vonatok kényelmesek, légkondicionáltak,
+                    sokszor még wifi is elérhető rajtuk. A vonatok érintik
+                    <strong>Wien Hauptbahnhof</strong>-ot (egyesek
+                    <em>Wien Meidling</em> állomást is), ahonnan az U1-es
+                    metróval, villamosokkal vagy busszokkal gyorsan tovább lehet
+                    utazni a város bármely pontjára.
+                </p>
+                <p>
+                    A távolsági busz szintén népszerű és gyakran olcsóbb
+                    lehetőség. A járatok a budapesti Népliget autóbuszállomásról
+                    indulnak, és 3-3,5 óra alatt érkeznek meg Bécsbe. A legtöbb
+                    busz <strong>Wien Erdberg</strong> megállónál teszi le az
+                    utasokat, ahonnan az U3-as metróval egyszerűen be lehet
+                    jutni a belvárosba.
+                </p>
+            </section>
+            <section>
+                <h2>Hogyan tudsz közlekedni Bécsben?</h2>
+                <p>
+                    Bécsben a legjobb választás a közösségiközlekedés! A metró
+                    (U-Bahn), a villamos (Straßenbahn) és a buszok szinte minden
+                    fontos helyet összekötnek, így a látnivalók gyorsan és
+                    kényelmesen elérhetők. A belvárosban gyakran elegendő pár
+                    megállót utazni, de akár gyalog is bejárhatod a történelmi
+                    központot.
+                </p>
+                <p>
+                    A jegyrendszer átlátható és turistabarát. Válthatsz
+                    vonaljegyet, de jobban megéri napijegyet, vagy akár 48-72
+                    órás jegyet vásárolnod, ha fontos, hogy korlátlanul
+                    utazhazhass a közösségiközlekedésen. Ne feledd, hogy a
+                    jegyedet mindig előre kell érvényesítened, és a
+                    metróállomásokon automata kapuk helyett
+                    becsületkassza-rendszer működik. A jegyek megvásárolhatók a
+                    Wiener Linien automatáiban, a Wien Mobil alkalmazásban, vagy
+                    a villamosok fedélzetén.
+                </p>
+                <p>
+                    Bécs a biciklizésre is ideális! A városban tele van
+                    kerékpárutakkal, bringát a közösségi kerékpár-rendszerrel is
+                    bérelhetsz.
+                </p>
+                <div class="grid grid-cols-2" id="facts">
+                    <div class="card figures-card">
+                        <h3>Utasok száma</h3>
+                        <p class="text-md" id="passengers">???</p>
+                        <p>a Wiener Linienel</p>
+                    </div>
+                    <div class="card figures-card">
+                        <h3>Modal split</h3>
+                        <div id="diagram">
+                            <span>Számolás...</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section>
+                <h2>Ezeket mindenképp nézd meg!</h2>
+                <div class="grid grid-cols-4">
+                    <div class="card">
+                        <img
+                            src="src/assets/images/schönbrunn.png"
+                            alt="Schönbrunn kastély"
+                        />
+                        <h3>Schönbrunn kastély</h3>
+                        <p>
+                            A Schönbrunn kastély nem csak Bécs, hanem Ausztria
+                            jelképe is. A kastélyt több mint másfél millió ember
+                            tekinti meg évente. Az épület helyén már a 15.
+                            század óta nemesi családtól nemesi családig
+                            vándorolt. Volt, amikor állatkertnek és
+                            vadászkastélynak szánták, és volt, amikor császári
+                            rezidencia lett. A kastély igazi kulturális
+                            központtá válására csak Mária Terézia uralkodása
+                            alatt került sor, aki amellett, hogy pompásan
+                            felújíttatta, az udvari élet középpontjává is tette.
+                        </p>
+                    </div>
+                    <div class="card">
+                        <img
+                            src="src/assets/images/belvedere.png"
+                            alt="Belvedere kastély"
+                        />
+                        <h3>Belvedere kastély</h3>
+                        <p>
+                            A Belvedere kastély egy pompázatos 18. századi
+                            műemlék, amit Savoyai Jenő herceg és Lukas von
+                            Hildebrandttal építtetett. A kastélyt 1714 és 1723
+                            között építették. Az épület Mária Terézia nyomán
+                            vált a művészeti kiállítások és élet fontos
+                            helyszínév, mivel ő helyezte ide a Habsburgok
+                            művészeti kollekcióját
+                        </p>
+                    </div>
+                    <div class="card">
+                        <img
+                            src="src/assets/images/stephansdom.png"
+                            alt="Szent István Székesegyház"
+                        />
+                        <h3>Szent István Székesegyház</h3>
+                        <p>
+                            A Szent István Székesegyház a római katolikus vallás
+                            és Bécs városának is az egyik jelképe Ausztriában. A
+                            hatalmas templom története egészen a 12 század
+                            közepéig visszanyúlik, amikor is IV. Lipót
+                            csereszerződést kötött, aminek nyomán megkezdődött a
+                            templom építése. A gótikus monstrum nem csak külsője
+                            miatt ejt majd ámulatba, hanem a belsőépítészeti
+                            megvalósítások miatt is.
+                        </p>
+                    </div>
+                    <div class="card">
+                        <img
+                            src="src/assets/images/prater.png"
+                            alt="Práter és az Óriáskerék"
+                        />
+                        <h3>Práter és az Óriáskerék</h3>
+                        <p>
+                            A bécsi Práter egyet jelent a bécsi Óriáskerékkel, a
+                            városi vidámparkkal és a hatalmas zöld területtel,
+                            ami az adrenalinra és a csendes kikapcsolódásra
+                            vágyók egyik legnépszerűbb pontja a városban. A
+                            Prátert gyakran tévesztik össze az óriáskerékkel,
+                            pedig a Práter alapból az egész területre értendő.
+                        </p>
+                    </div>
+                </div>
+            </section>
+            <section>
+                <h2>Ne csak a belvárost nézd meg!</h2>
+                <div class="grid grid-cols-3">
+                    <div class="card">
+                        <img
+                            src="src/assets/images/grinzing.png"
+                            alt="Grinzing"
+                        />
+                        <h3>Grinzing</h3>
+                        <p>
+                            Grinzing Bécs északi külvárosában található, és már
+                            a középkor óta híres borászatáról. A település
+                            szőlőültetvényei a Bécsi-erdő lankáin terülnek el,
+                            és évszázadok óta működnek itt úgynevezett
+                            „Heuriger”-ek, vagyis borozók, ahol a friss termést
+                            kínálják. Grinzing a 19. században vált igazán
+                            népszerűvé, amikor a bécsiek szívesen kirándultak
+                            ide a város zajától távol.
+                        </p>
+                    </div>
+                    <div class="card">
+                        <img
+                            src="src/assets/images/ottakring.png"
+                            alt="Ottakring"
+                        />
+                        <h3>Ottakring</h3>
+                        <p>
+                            Ottakring Bécs egyik jellegzetes külvárosi kerülete,
+                            amely sokáig önálló településként létezett, majd a
+                            19. század második felében csatolták a városhoz. A
+                            kerület iparosodása idején itt alakult meg az
+                            Ottakringer Sörfőzde (1837-ben), amely máig az egyik
+                            legismertebb osztrák sörmárka. A kerület
+                            soknemzetiségű lakossága és élénk piacai miatt
+                            kulturálisan is sokszínű.
+                        </p>
+                    </div>
+                    <div class="card">
+                        <img
+                            src="src/assets/images/kahlenberg.png"
+                            alt="Kahlenberg"
+                        />
+                        <h3>Kahlenberg</h3>
+                        <p>
+                            A Kahlenberg a Bécsi-erdő egyik magaslata, amely
+                            történelmi jelentőséget szerzett a 1683-as bécsi
+                            csata során: itt gyülekeztek azok a seregek, amelyek
+                            Sobieski János lengyel király vezetésével
+                            felszabadították a várost a török ostrom alól. A
+                            hely azóta zarándokhellyé vált, és a hegy tetején
+                            álló templomból csodás kilátás nyílik Bécsre és a
+                            Dunára.
+                        </p>
+                    </div>
+                </div>
+            </section>
+            <section>
+                <h2>Nézz körül Bécsen túl is!</h2>
+                <div class="grid grid-cols-3">
+                    <div class="card">
+                        <img
+                            src="src/assets/images/baden.png"
+                            alt="Baden bei Wien"
+                        />
+                        <h3>Baden bei Wien</h3>
+                        <p>
+                            Ez a fürdőváros már a római korban is ismert volt
+                            gyógyvizeiről. A 19. században a bécsi arisztokrácia
+                            kedvelt nyaralóhelyévé vált, és ma is híres
+                            termálfürdőiről, parkjairól és a kaszinójáról.
+                            Bécsből a Badner Bahn villamos-szerű gyorsvasút is
+                            közlekedik.
+                        </p>
+                        <div class="transit-icons">
+                            <img
+                                src="src/assets/images/badnerbahn.png"
+                                alt="Badner Bahn"
+                            />
+                            <img
+                                src="src/assets/images/sbahn.png"
+                                alt="S-Bahn"
+                            />
+                        </div>
+                    </div>
+                    <div class="card">
+                        <img
+                            src="src/assets/images/klosterneuburg.png"
+                            alt="Klosterneuburg"
+                        />
+                        <h3>Klosterneuburg</h3>
+                        <p>
+                            Bécstől északra található kolostorváros, amelynek
+                            legismertebb látnivalója a Klosterneuburgi apátság,
+                            egy 12. századi alapítású premontrei rendház. Az
+                            épületben gazdag művészeti gyűjtemény is található.
+                        </p>
+                        <div class="transit-icons">
+                            <img
+                                src="src/assets/images/sbahn.png"
+                                alt="S-Bahn"
+                            />
+                        </div>
+                    </div>
+                    <div class="card">
+                        <img
+                            src="src/assets/images/carnuntum.png"
+                            alt="Carnuntum"
+                        />
+                        <h3>Carnuntum</h3>
+                        <p>
+                            Ez az ókori római város romterülete Hainburg és
+                            Petronell község közelében található. A Kr. u. 1-4.
+                            században fontos katonai központ volt, ma pedig
+                            látogatható régészeti park, ahol rekonstruált római
+                            épületek mutatják be a korabeli életet.
+                        </p>
+                        <div class="transit-icons">
+                            <img
+                                src="src/assets/images/sbahn.png"
+                                alt="S-Bahn"
+                            />
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <footer>
+            <div>Készítette: Vágvölgyi Balázs</div>
+            <div>
+                <span>További oldalak</span>
+                <ul>
+                    <li>
+                        <a
+                            href="https://shop.oebbtickets.at/en/ticket"
+                            target="_blank"
+                            >Vasúti jegyvásárlás (ÖBB)</a
+                        >
+                    </li>
+                    <li>
+                        <a
+                            href="https://www.mavcsoport.hu/mav-szemelyszallitas/nemzetkozi-utazas/ausztria"
+                            target="_blank"
+                            >Ausztriába vonattal (MÁV)</a
+                        >
+                    </li>
+                    <li>
+                        <a
+                            href="https://www.wienerlinien.at/web/wl-en"
+                            target="_blank"
+                            >Városi tömegközlekedés (Wiener Linien)</a
+                        >
+                    </li>
+                    <li>
+                        <a
+                            href="https://www.wien.gv.at/english/"
+                            target="_blank"
+                            >Bécs város oldala</a
+                        >
+                    </li>
+                </ul>
+            </div>
+        </footer>
+    </body>
+</html>
