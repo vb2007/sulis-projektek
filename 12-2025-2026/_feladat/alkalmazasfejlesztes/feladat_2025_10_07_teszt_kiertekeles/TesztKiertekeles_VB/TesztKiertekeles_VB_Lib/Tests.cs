@@ -11,4 +11,7 @@ public class Tests
             tests.Add(new Test(line));
         }
     }
+    
+    //2. Feladat
+    public Test TestData(string studentName) => tests.Any(x => x.Name == studentName) ? tests.First(x => x.Name == studentName) : null!;
 }

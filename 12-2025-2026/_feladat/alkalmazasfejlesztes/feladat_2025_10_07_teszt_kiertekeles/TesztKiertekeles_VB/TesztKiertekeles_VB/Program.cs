@@ -8,6 +8,7 @@ internal class Program
     {
         Tests tests = null!;
         
+        //1. Feladat
         bool validInput = false;
         while (!validInput)
         {
@@ -24,5 +25,11 @@ internal class Program
                 tests = new Tests(File.ReadAllLines($"csoport{input}.csv").Skip(1));
             }
         }
+        
+        //2. Feladat
+        Console.Write("Adj meg egy nevet: ");
+        string studentNameInput = Console.ReadLine()!;
+        Test testData = tests.TestData(studentNameInput);
+        Console.WriteLine(testData == null! ? $"Nem volt \"{studentNameInput}\" nevű tanuló a csoportban, aki tesztet írt volna.": testData.ToString());
     }
 }

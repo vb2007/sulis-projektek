@@ -24,4 +24,10 @@ public class Test
         Score4 = int.TryParse(parts[4], out int score4) ? score4 : null;
         Score5 = int.TryParse(parts[5], out int score5) ? score5 : null;
     }
+
+    private int? ScoreSum => (Score1 != null! ? Score1 : 0) + (Score2 != null! ? Score2 : 0)  + (Score3 != null! ? Score3 : 0)  + (Score4 != null! ? Score4 : 0)  + (Score5 != null! ? Score5 : 0);
+    public override string ToString()
+    {
+        return $"1. Teszt: {(Score1 != null ? Score1 : "-")}\n2. Teszt: {(Score2 != null ? Score2 : "-")}\n3. Teszt: {(Score3 != null ? Score3 : "-")}\n4. Teszt: {(Score4 != null ? Score4 : "-")}\n5. Teszt: {(Score5 != null ? Score5 : "-")}\nÖsszpontszám: {(ScoreSum != 0 ? ScoreSum : "-")}\n";
+    }
 }
