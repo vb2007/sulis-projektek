@@ -29,7 +29,10 @@ internal class Program
         //2. Feladat
         Console.Write("Adj meg egy nevet: ");
         string studentNameInput = Console.ReadLine()!;
-        Test testData = tests.TestData(studentNameInput);
+        Test testData = tests.TestDataByStudentName(studentNameInput);
         Console.WriteLine(testData == null! ? $"Nem volt \"{studentNameInput}\" nevű tanuló a csoportban, aki tesztet írt volna.": testData.ToString());
+        
+        //3. Feladat
+        Console.WriteLine(tests.TaskDataString);
     }
 }
