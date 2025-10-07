@@ -12,6 +12,7 @@ if ($argc != 2) {
 $param = $argv[1];
 if ($param != "szamok" && $param != "egesz" && $param != "valos" && $param != "szoveg") {
     echo "A paraméter csak 'szamok', 'egesz', 'valos' vagy 'szoveg' lehet.\n";
+    return;
 }
 
 switch($param) {
