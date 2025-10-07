@@ -19,9 +19,12 @@ for ($i = 0; $i < count($szamok); $i++) {
 echo "\n";
 
 //5.
+$parosSzamok = [];
 foreach ($szamok as $i => $j) {
     if ($j % 2 == 00) {
-        echo $j . " ";
+        $parosSzamok[] = $j;
     }
 }
-echo "\n";
+echo implode(", ", $parosSzamok) . "\n";
+
+//6.
