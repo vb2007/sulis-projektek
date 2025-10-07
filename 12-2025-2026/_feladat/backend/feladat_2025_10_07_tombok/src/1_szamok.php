@@ -28,3 +28,18 @@ foreach ($szamok as $i => $j) {
 echo implode(", ", $parosSzamok) . "\n";
 
 //6.
+for ($i = count($szamok) - 1; $i >= 0; $i--) {
+    echo $szamok[$i];
+    if ($i > 0) {
+        echo ", ";
+    }
+}
+echo "\n";
+
+//7.
+echo "Számok összege: " . array_sum($szamok) . "\n";
+
+//8.
+$szurtSzamok = array_filter($szamok);
+$atlag = array_sum($szurtSzamok) / count($szurtSzamok);
+echo "Számok átlaga: $atlag\n";
