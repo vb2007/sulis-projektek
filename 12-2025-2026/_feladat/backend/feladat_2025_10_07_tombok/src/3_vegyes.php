@@ -10,6 +10,8 @@ if ($argc != 2) {
 
 //3.
 $param = $argv[1];
-if (!is_numeric($param) && !is_string($param)) {
+if ($param != "szamok" && $param != "egesz" && $param != "valos" && $param != "szoveg") {
     echo "A paraméter csak 'szamok', 'egesz', 'valos' vagy 'szoveg' lehet.\n";
 }
+
+//4.
