@@ -6,8 +6,11 @@ $szamok = [1, 5, 8, 17, 25, 34];
 echo count($szamok) . " elem található a tömbben.\n";
 
 //3.
-echo "Első szám: " . array_key_first($szamok) . "\n";
-echo "Utolsó szám: " . array_key_last($szamok) . "\n";
+$elsoKulcs = array_key_first($szamok);
+$utolsoKolcs = array_key_last($szamok);
+
+echo "Első szám: $elsoKulcs \n";
+echo "Utolsó szám: $utolsoKolcs \n";
 
 //4.
 for ($i = 0; $i < count($szamok); $i++) {
