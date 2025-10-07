@@ -12,10 +12,10 @@ public class Test
     public Test(string dataLine)
     {
         string[] parts = dataLine.Split(';');
-        foreach (string part in parts)
-        {
-            Console.WriteLine(part);
-        }
+        // foreach (string part in parts)
+        // {
+        //     Console.WriteLine(part);
+        // }
         
         Name = parts[0];
         Score1 = int.TryParse(parts[1], out int score1) ? score1 : null;
