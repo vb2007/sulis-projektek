@@ -2,6 +2,8 @@
 Microsoft Visual Studio Solution File, Format Version 12.00
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TesztKiertekeles_VB", "TesztKiertekeles_VB\TesztKiertekeles_VB.csproj", "{86FDC0F1-F582-4A11-9D18-276277B7A227}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TesztKiertekeles_VB_Lib", "TesztKiertekeles_VB_Lib\TesztKiertekeles_VB_Lib.csproj", "{5DAA124E-3D75-457C-A96F-021CB3385651}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -12,5 +14,9 @@ Global
 		{86FDC0F1-F582-4A11-9D18-276277B7A227}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{86FDC0F1-F582-4A11-9D18-276277B7A227}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{86FDC0F1-F582-4A11-9D18-276277B7A227}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5DAA124E-3D75-457C-A96F-021CB3385651}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5DAA124E-3D75-457C-A96F-021CB3385651}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5DAA124E-3D75-457C-A96F-021CB3385651}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5DAA124E-3D75-457C-A96F-021CB3385651}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
