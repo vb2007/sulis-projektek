@@ -9,8 +9,8 @@ echo count($szamok) . " elem található a tömbben.\n";
 $elsoKulcs = array_key_first($szamok);
 $utolsoKolcs = array_key_last($szamok);
 
-echo "Első szám: $elsoKulcs \n";
-echo "Utolsó szám: $utolsoKolcs \n";
+echo "Első szám: $szamok[$elsoKulcs]\n";
+echo "Utolsó szám: $szamok[$utolsoKolcs]\n";
 
 //4.
 for ($i = 0; $i < count($szamok); $i++) {
