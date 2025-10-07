@@ -52,4 +52,4 @@ echo array_sum($szamok) . "\n\n";
 echo "8. feladat\n";
 $szurtSzamok = array_filter($szamok);
 $atlag = array_sum($szurtSzamok) / count($szurtSzamok);
-echo "$atlag\n";
+echo round($atlag, 2) . "\n";

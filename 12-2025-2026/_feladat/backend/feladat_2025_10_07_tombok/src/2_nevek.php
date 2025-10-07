@@ -8,7 +8,7 @@ echo "Első: $nevek[0]\n\n";
 
 //3,
 $utolsoKolcs = array_key_last($nevek);
-echo "3 .feladat\n";
+echo "3. feladat\n";
 echo "Utolsó: $nevek[$utolsoKolcs]\n\n";
 
 //4.
