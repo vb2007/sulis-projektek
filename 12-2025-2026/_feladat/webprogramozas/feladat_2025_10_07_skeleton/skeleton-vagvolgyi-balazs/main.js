@@ -14,7 +14,11 @@ function task01(arr) {
  * úgy, hogy minden számra vedd az abszolút értékét és oszd el hárommal,
  * ezután az eredményt kerekítsd. Az így kapott tömb legyen a függvény visszatérési értéke.
  */
-function task02(arr) {}
+function task02(arr) {
+  //+ kerekítés 1 tizedesjegyre
+  return arr.map((num) => Math.round(Math.abs(num) / 3).toFixed(1));
+}
+
 /**
  * Keresd meg azt az utolsó elemet a paraméterként kapott tömbben,
  * amelyik hárommal és öttel is osztható.
