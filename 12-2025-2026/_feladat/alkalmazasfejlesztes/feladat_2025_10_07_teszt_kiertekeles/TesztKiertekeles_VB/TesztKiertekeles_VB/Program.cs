@@ -8,6 +8,7 @@ internal class Program
 {
     private static void Main(string[] args)
     {
+        string input = null!;
         Tests tests = null!;
         
         //1. Feladat
@@ -16,7 +17,7 @@ internal class Program
         {
             Console.Write("Adja meg hanyadik csoport eredményeire kíváncsi (1/2): ");
             
-            string input = Console.ReadLine()!;
+            input = Console.ReadLine()!;
             if (input != "1" && input != "2")
             {
                 Console.WriteLine("Nincs ilyen azónosítójú csoport.");
@@ -48,7 +49,6 @@ internal class Program
         Console.WriteLine(tests.TaskDataString);
         
         //4. Feladat
-        string groupId = studentNameInput;
-        Console.WriteLine(tests.WriteToFile($"szazalek{studentNameInput}.csv"));
+        Console.WriteLine(tests.WriteToFile($"szazalek{input}.csv"));
     }
 }
