@@ -15,8 +15,9 @@ function task01(arr) {
  * ezután az eredményt kerekítsd. Az így kapott tömb legyen a függvény visszatérési értéke.
  */
 function task02(arr) {
-  //+ kerekítés 1 tizedesjegyre
-  return arr.map((num) => Math.round(Math.abs(num) / 3).toFixed(1));
+  return arr.map((num) => Math.round(Math.abs(num) / 3));
+  //+ így lenne 1 tizedesjegyre fixen kerekítve
+  //return arr.map((num) => Math.round(Math.abs(num) / 3).toFixed(1));
 }
 
 /**
