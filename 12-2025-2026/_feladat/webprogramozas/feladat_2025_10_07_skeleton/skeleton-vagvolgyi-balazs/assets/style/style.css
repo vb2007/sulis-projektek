@@ -1,0 +1,45 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+main {
+    width: 75%;
+    margin-inline: auto;
+    padding-block: 4rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;  
+}
+
+h1{
+text-align: center;
+background-color: #56d;
+width:calc(100% + 1rem); 
+margin: -.5rem;
+padding-block: .5rem;
+color: white;
+}
+
+code {
+    display: inline-block;
+    white-space: normal;
+    max-width: 100%;
+    word-break: break-all;
+    word-wrap: break-word;
+}
+
+section{
+    border: 2px solid #56d;
+    border-radius: .5rem;
+    padding: .5rem;
+}
+
+.result{
+    font-family: 'Courier New', Courier, monospace;
+    background-color: red;
+    color: white;
+    padding: .25rem .5rem;
+    border-radius: .25rem;
+}
