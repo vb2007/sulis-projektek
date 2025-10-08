@@ -37,7 +37,7 @@ function task03(arr) {
  */
 function task04(arr) {
   //ha a feladat a valós indexet kéri és nem a szemmel olvashatót (akkor +1 lenne)
-  return arr.findIndex((num) => num.length == 5);
+  return arr.findIndex((num) => num.length === 5);
   //+ így adná vissza az értékét
   //const lengthIs5 = arr.filter((num) => num.length == 5);
   //return lengthIs5.length > 0 ? lengthIs5[0] : undefined;
