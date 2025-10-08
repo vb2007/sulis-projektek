@@ -23,7 +23,12 @@ function task02(arr) {
  * Keresd meg azt az utolsó elemet a paraméterként kapott tömbben,
  * amelyik hárommal és öttel is osztható.
  */
-function task03(arr) {}
+function task03(arr) {
+  const divisibleBy3And5 = arr.filter((num) => num % 3 == 0 && num % 5 == 0);
+  return divisibleBy3And5.length > 0
+    ? divisibleBy3And5[divisibleBy3And5.length - 1]
+    : undefined;
+}
 
 /**
  * A paraméterben megadott tömbből add vissza annak az elemnek az indexét,
