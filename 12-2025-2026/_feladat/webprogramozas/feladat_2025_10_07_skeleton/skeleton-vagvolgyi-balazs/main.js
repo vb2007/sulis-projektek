@@ -34,7 +34,11 @@ function task03(arr) {
  * A paraméterben megadott tömbből add vissza annak az elemnek az indexét,
  * amelyik pontosan 5 karakter hosszú. Ha több ilyen is van akkor az első előfordulást.
  */
-function task04(arr) {}
+function task04(arr) {
+  const lengthIs5 = arr.filter((num) => num.length == 5);
+  return lengthIs5.length > 0 ? lengthIs5[0] : undefined;
+}
+
 /**
  * A paraméterben megadott tömbből válogasd ki a pozitív páros számokat.
  */
