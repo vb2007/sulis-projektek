@@ -42,4 +42,6 @@ function task04(arr) {
 /**
  * A paraméterben megadott tömbből válogasd ki a pozitív páros számokat.
  */
-function task05(arr) {}
+function task05(arr) {
+  return arr.filter((num) => num > 0 && num % 2 == 0);
+}
