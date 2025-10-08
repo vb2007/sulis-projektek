@@ -30,9 +30,12 @@ internal class Program
         Console.Write("Adj meg egy nevet: ");
         string studentNameInput = Console.ReadLine()!;
         Test testData = tests.TestDataByStudentName(studentNameInput);
-        Console.WriteLine(testData == null! ? $"Nem volt \"{studentNameInput}\" nevű tanuló a csoportban, aki tesztet írt volna.": testData.ToString());
+        Console.WriteLine(testData == null! ? $"Nem volt \"{studentNameInput}\" nevű tanuló a csoportban, aki tesztet írt volna.": testData.ToString() + "\n");
         
         //3. Feladat
         Console.WriteLine(tests.TaskDataString);
+        
+        //4. Feladat
+        Console.WriteLine(tests.WriteToFile($"szazalek{studentNameInput}.csv"));
     }
 }

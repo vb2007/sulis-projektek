@@ -12,13 +12,11 @@ public class Tests
         }
     }
 
-    private static int testCount = tests.Count;
-
     //2. Feladat
     public Test TestDataByStudentName(string studentName) =>
         tests.Any(x => x.Name == studentName) ? tests.First(x => x.Name == studentName) : null!;
 
-    //3. feladat
+    //3. Feladat
     private int? Task1Count => tests.Count(x => x.Score1 != null);
     private int? Task2Count => tests.Count(x => x.Score2 != null);
     private int? Task3Count => tests.Count(x => x.Score3 != null);
@@ -67,4 +65,11 @@ public class Tests
         $"3. Feladat\nEnnyien oldották meg: {Task3Count}\nEnnyi az átlagos pontszám: {Task3Average:F2}\nEnnyi tanuló nem adott be semmit, de megírta a tesztet: {Task3NullCount}\n\n" +
         $"4. Feladat\nEnnyien oldották meg: {Task4Count}\nEnnyi az átlagos pontszám: {Task4Average:F2}\nEnnyi tanuló nem adott be semmit, de megírta a tesztet: {Task4NullCount}\n\n" +
         $"5. Feladat\nEnnyien oldották meg: {Task5Count}\nEnnyi az átlagos pontszám: {Task5Average:F2}\nEnnyi tanuló nem adott be semmit, de megírta a tesztet: {Task5NullCount}\n\n";
+    
+    //4. Feladat
+    public string WriteToFile(string fileName)
+    {
+        using StreamWriter writer = new(fileName, false, System.Text.Encoding.UTF8);
+        writer.WriteLine("sorszám;név;százalék;eredmény");
+    }
 }
