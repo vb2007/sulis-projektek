@@ -2,7 +2,7 @@ namespace TesztKiertekeles_VB_Lib;
 
 public class Tests
 {
-    private static readonly List<Test> tests = new();
+    private readonly List<Test> tests = new();
 
     public Tests(IEnumerable<string> lines)
     {
@@ -79,6 +79,10 @@ public class Tests
                 if ((tests[i].Name != null) && (tests[i].Score1 != null || tests[i].Score2 != null || tests[i].Score3 != null || tests[i].Score4 != null || tests[i].Score5 != null))
                 {
                     writer.WriteLine($"{i + 1};{tests[i].Name};{tests[i].ResultPercentage:F0}%;{tests[i].DidPassed}");
+                }
+                else if (tests[i].Name == null)
+                {
+                    writer.WriteLine($"{i + 1};;;");
                 }
             }
 

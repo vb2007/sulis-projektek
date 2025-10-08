@@ -48,6 +48,7 @@ internal class Program
         Console.WriteLine(tests.TaskDataString);
         
         //4. Feladat
+        string groupId = studentNameInput;
         Console.WriteLine(tests.WriteToFile($"szazalek{studentNameInput}.csv"));
     }
 }
