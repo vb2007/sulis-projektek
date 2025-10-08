@@ -62,9 +62,9 @@ public class Tests
             .Count(x => x.Score1 == null);
 
     public string TaskDataString =>
-        $"1. Teszt\nEnnyien oldották meg: {Task1Count}\nEnnyi az átlagos pontszám: {Task1Average:F2}\nEnnyi tanuló nem adott be semmit, de megírta a tesztet: {Task1NullCount}\n\n" +
-        $"2. Teszt\nEnnyien oldották meg: {Task2Count}\nEnnyi az átlagos pontszám: {Task2Average:F2}\nEnnyi tanuló nem adott be semmit, de megírta a tesztet: {Task2NullCount}\n\n" +
-        $"3. Teszt\nEnnyien oldották meg: {Task3Count}\nEnnyi az átlagos pontszám: {Task3Average:F2}\nEnnyi tanuló nem adott be semmit, de megírta a tesztet: {Task3NullCount}\n\n" +
-        $"4. Teszt\nEnnyien oldották meg: {Task4Count}\nEnnyi az átlagos pontszám: {Task4Average:F2}\nEnnyi tanuló nem adott be semmit, de megírta a tesztet: {Task4NullCount}\n\n" +
-        $"5. Teszt\nEnnyien oldották meg: {Task5Count}\nEnnyi az átlagos pontszám: {Task5Average:F2}\nEnnyi tanuló nem adott be semmit, de megírta a tesztet: {Task5NullCount}\n\n";
+        $"1. Feladat\nEnnyien oldották meg: {Task1Count}\nEnnyi az átlagos pontszám: {Task1Average:F2}\nEnnyi tanuló nem adott be semmit, de megírta a tesztet: {Task1NullCount}\n\n" +
+        $"2. Feladat\nEnnyien oldották meg: {Task2Count}\nEnnyi az átlagos pontszám: {Task2Average:F2}\nEnnyi tanuló nem adott be semmit, de megírta a tesztet: {Task2NullCount}\n\n" +
+        $"3. Feladat\nEnnyien oldották meg: {Task3Count}\nEnnyi az átlagos pontszám: {Task3Average:F2}\nEnnyi tanuló nem adott be semmit, de megírta a tesztet: {Task3NullCount}\n\n" +
+        $"4. Feladat\nEnnyien oldották meg: {Task4Count}\nEnnyi az átlagos pontszám: {Task4Average:F2}\nEnnyi tanuló nem adott be semmit, de megírta a tesztet: {Task4NullCount}\n\n" +
+        $"5. Feladat\nEnnyien oldották meg: {Task5Count}\nEnnyi az átlagos pontszám: {Task5Average:F2}\nEnnyi tanuló nem adott be semmit, de megírta a tesztet: {Task5NullCount}\n\n";
 }
