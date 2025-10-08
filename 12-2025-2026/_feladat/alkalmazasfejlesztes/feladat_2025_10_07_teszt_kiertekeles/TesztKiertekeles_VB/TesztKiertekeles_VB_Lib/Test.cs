@@ -2,12 +2,12 @@
 
 public class Test
 {
-    public string? Name { get; set; }
-    public int? Score1 { get; set; }
-    public int? Score2 { get; set; }
-    public int? Score3 { get; set; }
-    public int? Score4 { get; set; }
-    public int? Score5 { get; set; }
+    public string? Name { get; }
+    public int? Score1 { get; }
+    public int? Score2 { get; }
+    public int? Score3 { get; }
+    public int? Score4 { get; }
+    public int? Score5 { get; }
 
     public Test(string dataLine)
     {
@@ -25,6 +25,10 @@ public class Test
         Score5 = int.TryParse(parts[5], out int score5) ? score5 : null;
     }
 
+    //minden feladat 5 pont, 25 a max pontszám
+    public double? ResultPercentage => ((Score1 != null! ? Score1 : 0) + (Score2 != null! ? Score2 : 0) + (Score3 != null! ? Score3 : 0) + (Score4 != null! ? Score4 : 0) + (Score5 != null! ? Score5 : 0)) / 25.0 * 100;
+    public string DidPassed => ResultPercentage > 40 ? "sikeres" : "sikertelen";
+    
     private int? ScoreSum => (Score1 != null! ? Score1 : 0) + (Score2 != null! ? Score2 : 0)  + (Score3 != null! ? Score3 : 0)  + (Score4 != null! ? Score4 : 0)  + (Score5 != null! ? Score5 : 0);
     public override string ToString()
     {
