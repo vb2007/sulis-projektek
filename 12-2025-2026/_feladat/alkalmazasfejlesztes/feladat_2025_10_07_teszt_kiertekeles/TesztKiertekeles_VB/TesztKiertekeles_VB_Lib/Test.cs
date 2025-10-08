@@ -16,7 +16,7 @@ public class Test
         // {
         //     Console.WriteLine(part);
         // }
-        
+
         Name = parts[0] == "" ? null : parts[0];
         Score1 = int.TryParse(parts[1], out int score1) ? score1 : null;
         Score2 = int.TryParse(parts[2], out int score2) ? score2 : null;
@@ -28,10 +28,10 @@ public class Test
     //minden feladat 5 pont, 25 a max pontszám
     public double? ResultPercentage => ((Score1 != null! ? Score1 : 0) + (Score2 != null! ? Score2 : 0) + (Score3 != null! ? Score3 : 0) + (Score4 != null! ? Score4 : 0) + (Score5 != null! ? Score5 : 0)) / 25.0 * 100;
     public string DidPassed => ResultPercentage > 40 ? "sikeres" : "sikertelen";
-    
+
     private int? ScoreSum => (Score1 != null! ? Score1 : 0) + (Score2 != null! ? Score2 : 0)  + (Score3 != null! ? Score3 : 0)  + (Score4 != null! ? Score4 : 0)  + (Score5 != null! ? Score5 : 0);
     public override string ToString()
     {
-        return $"1. Teszt: {(Score1 != null ? Score1 : "-")}\n2. Teszt: {(Score2 != null ? Score2 : "-")}\n3. Teszt: {(Score3 != null ? Score3 : "-")}\n4. Teszt: {(Score4 != null ? Score4 : "-")}\n5. Teszt: {(Score5 != null ? Score5 : "-")}\nÖsszpontszám: {(ScoreSum != 0 ? ScoreSum : "-")}\n";
+        return $"1. Feladat: {(Score1 != null ? Score1 : "-")}\n2. Feladat: {(Score2 != null ? Score2 : "-")}\n3. Feladat: {(Score3 != null ? Score3 : "-")}\n4. Feladat: {(Score4 != null ? Score4 : "-")}\n5. Feladat: {(Score5 != null ? Score5 : "-")}\nÖsszpontszám: {(ScoreSum != 0 ? ScoreSum : "-")}\n";
     }
 }
