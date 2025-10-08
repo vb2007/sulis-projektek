@@ -1,4 +1,6 @@
-﻿namespace TesztKiertekeles_VB;
+﻿using System.Diagnostics;
+
+namespace TesztKiertekeles_VB;
 
 using TesztKiertekeles_VB_Lib;
 
@@ -24,6 +26,16 @@ internal class Program
                 validInput = true;
                 tests = new Tests(File.ReadAllLines($"csoport{input}.csv").Skip(1));
             }
+        }
+
+        if (!tests.WasTheTestWritten)
+        {
+            Console.WriteLine("A fájl létezik, de a csoport még nem írta meg a tesztet.");
+            return;
+        }
+        else
+        {
+            Console.WriteLine($"{tests.Count} tanuló volt tervezve a tesztre, ebből {tests.AbsenceCount} nem írta meg a tesztet.");
         }
         
         //2. Feladat

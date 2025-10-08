@@ -12,6 +12,11 @@ public class Tests
         }
     }
 
+    //1. Feladat
+    public int Count => tests.Count;
+    public int AbsenceCount => tests.Count(x => x.Name == null);
+    public bool WasTheTestWritten => Count > 0;
+    
     //2. Feladat
     public Test TestDataByStudentName(string studentName) =>
         tests.Any(x => x.Name == studentName) ? tests.First(x => x.Name == studentName) : null!;

@@ -17,7 +17,7 @@ public class Test
         //     Console.WriteLine(part);
         // }
         
-        Name = parts[0];
+        Name = parts[0] == "" ? null : parts[0];
         Score1 = int.TryParse(parts[1], out int score1) ? score1 : null;
         Score2 = int.TryParse(parts[2], out int score2) ? score2 : null;
         Score3 = int.TryParse(parts[3], out int score3) ? score3 : null;
