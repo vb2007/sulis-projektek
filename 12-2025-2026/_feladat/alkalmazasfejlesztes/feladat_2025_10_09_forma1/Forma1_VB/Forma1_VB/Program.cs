@@ -6,6 +6,7 @@ class Program
     static void Main(string[] args)
     {
         Races races = new Races(File.ReadAllLines("eredmenyek.csv").Skip(1));
+<<<<<<< HEAD
         
         //2. Feladat
         Console.WriteLine("2. feladat: Hill Vezetéknevűek:");
@@ -14,5 +15,7 @@ class Program
         {
             Console.WriteLine($"\t{racer.Name} ({racer.Nationality}) {racer.BirthDate?.ToString(Race.HungarianCulture)}");
         }
+=======
+>>>>>>> a0f6fc580f675a912b086685228a477035cd613b
     }
 }

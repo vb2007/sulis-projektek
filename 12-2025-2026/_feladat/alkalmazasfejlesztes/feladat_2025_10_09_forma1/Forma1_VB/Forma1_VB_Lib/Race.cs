@@ -26,7 +26,11 @@ public class Race
         RaceCountry = splitData[1];
         Name = splitData[2];
         Gender = char.Parse(splitData[3]);
+<<<<<<< HEAD
         BirthDate = !string.IsNullOrEmpty(splitData[4]) ? DateOnly.Parse(splitData[4], HungarianCulture) : null;
+=======
+        BirthDate = !string.IsNullOrEmpty(splitData[4]) ? DateOnly.Parse(splitData[4]) : null;
+>>>>>>> a0f6fc580f675a912b086685228a477035cd613b
         Nationality = splitData[5];
         Position = !string.IsNullOrEmpty(splitData[6]) ? int.Parse(splitData[6]) : null;
         Error = !string.IsNullOrEmpty(splitData[7]) ? splitData[7] : null;
