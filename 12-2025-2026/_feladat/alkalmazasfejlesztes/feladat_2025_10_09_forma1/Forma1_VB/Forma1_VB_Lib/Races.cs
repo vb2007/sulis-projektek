@@ -12,5 +12,9 @@ public class Races
           }
      }
 
-     public IEnumerable<Race> RacersByName(string name) => _races.FindAll(x => x.Name.Contains(name)).DistinctBy(x => x.Name).OrderBy(x => x.BirthDate);
+     public IEnumerable<Race> RacersByName(string name) =>
+          _races
+               .FindAll(x => x.Name.Contains(name))
+               .DistinctBy(x => x.Name)
+               .OrderBy(x => x.BirthDate);
 }
