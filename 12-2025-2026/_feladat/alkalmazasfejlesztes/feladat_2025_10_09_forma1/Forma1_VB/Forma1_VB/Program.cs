@@ -5,6 +5,14 @@ class Program
 {
     static void Main(string[] args)
     {
-        Console.WriteLine("Hello, World!");
+        Races races = new Races(File.ReadAllLines("eredmenyek.csv").Skip(1));
+        
+        //2. Feladat
+        Console.WriteLine("2. feladat: Hill Vezetéknevűek:");
+        IEnumerable<Race> hillRacers = races.RacersByName(" Hill");
+        foreach (var racer in hillRacers)
+        {
+            Console.WriteLine($"\t{racer.Name} ({racer.Nationality}) {racer.BirthDate?.ToString(Race.HungarianCulture)}");
+        }
     }
 }

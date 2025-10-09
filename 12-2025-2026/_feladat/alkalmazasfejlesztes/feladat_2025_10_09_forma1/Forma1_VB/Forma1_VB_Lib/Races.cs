@@ -11,4 +11,6 @@ public class Races
                _races.Add(new Race(race));
           }
      }
+
+     public IEnumerable<Race> RacersByName(string name) => _races.FindAll(x => x.Name.Contains(name)).DistinctBy(x => x.Name);
 }
