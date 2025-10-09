@@ -24,4 +24,12 @@ public class Races
                .Select(x => x.Name)
                .Distinct()
                .OrderBy(x => x);
+
+     public int? RacerAgeByNameOnFirstRace(string name) => 
+          _races
+               .Where(x => x.Name.Contains(name) && x.BirthDate.HasValue)
+               .OrderBy(x => x.Date)
+               .FirstOrDefault()?.BirthDate?.Year is not null and var year
+                    ? DateOnly.FromDateTime(DateTime.Now).Year - year 
+                    : null;
 }
