@@ -5,6 +5,6 @@ class Program
 {
     static void Main(string[] args)
     {
-        Console.WriteLine("Hello, World!");
+        Races races = new Races(File.ReadAllLines("eredmenyek.csv").Skip(1));
     }
 }
