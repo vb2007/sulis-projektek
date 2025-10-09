@@ -17,4 +17,11 @@ public class Races
                .FindAll(x => x.Name.Contains(name))
                .DistinctBy(x => x.Name)
                .OrderBy(x => x.BirthDate);
+
+     public IEnumerable<string> RaceWinners =>
+          _races
+               .FindAll(x => x.Position == 1)
+               .Select(x => x.Name)
+               .Distinct()
+               .OrderBy(x => x);
 }

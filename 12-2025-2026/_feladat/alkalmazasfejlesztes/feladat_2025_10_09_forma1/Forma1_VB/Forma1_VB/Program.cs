@@ -14,5 +14,13 @@ class Program
         {
             Console.WriteLine($"\t{racer.Name} ({racer.Nationality}) {racer.BirthDate?.ToString(Race.HungarianCulture)}");
         }
+        
+        //3. Feladat
+        Console.WriteLine("3. feladat: futamgyőztesek:");
+        IEnumerable<string> raceWinners = races.RaceWinners;
+        foreach (var racerName in raceWinners)
+        {
+            Console.WriteLine($"\t{racerName}");
+        }
     }
 }
