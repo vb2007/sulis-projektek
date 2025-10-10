@@ -1,6 +1,4 @@
-﻿using System.Diagnostics;
-
-namespace TesztKiertekeles_VB;
+﻿namespace TesztKiertekeles_VB;
 
 using TesztKiertekeles_VB_Lib;
 
@@ -34,10 +32,8 @@ internal class Program
             Console.WriteLine("A fájl létezik, de a csoport még nem írta meg a tesztet.");
             return;
         }
-        else
-        {
-            Console.WriteLine($"{tests.Count} tanuló volt tervezve a tesztre, ebből {tests.AbsenceCount} nem írta meg a tesztet.");
-        }
+
+        Console.WriteLine($"{tests.Count} tanuló volt tervezve a tesztre, ebből {tests.AbsenceCount} nem írta meg a tesztet.");
         
         //2. Feladat
         Console.Write("Adj meg egy nevet: ");
