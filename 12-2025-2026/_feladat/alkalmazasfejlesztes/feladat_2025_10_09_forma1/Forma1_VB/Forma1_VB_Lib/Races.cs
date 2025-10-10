@@ -32,4 +32,14 @@ public class Races
                .FirstOrDefault() is var firstRace && firstRace?.BirthDate?.Year is not null and var birthYear
                     ? firstRace.Date.Year - birthYear
                     : null;
+
+     public IDictionary<string, int> MostCommonErrorsByCarType(string carType) =>
+          _races
+               .Where(x => x.CarType == carType && !string.IsNullOrEmpty(x.Error))
+               .GroupBy(x => x.Error)
+               .Select(x => new { Error = x.Key!, Count = x.Count() })
+               .OrderByDescending(x => x.Count)
+               .Take(3)
+               .ToDictionary(x => x.Error, x => x.Count);
+
 }

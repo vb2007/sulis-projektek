@@ -26,5 +26,14 @@ class Program
         //4. Feladat
         string name = "Juan-Manuel Fangio";
         Console.WriteLine($"4. feladat: {name} {races.RacerAgeByNameOnFirstRace(name)} éves volt az első versenyén");
+        
+        //5. Feladat
+        string carType = "Ferrari";
+        Console.WriteLine($"5. feladat: {carType}knál 3 leggyakoribb hiba:");
+        IDictionary<string, int> mostCommonErrorsByCarType = races.MostCommonErrorsByCarType(carType);
+        foreach (var error in mostCommonErrorsByCarType)
+        {
+            Console.WriteLine($"\t{error.Key}: {error.Value} eset");
+        }
     }
 }
