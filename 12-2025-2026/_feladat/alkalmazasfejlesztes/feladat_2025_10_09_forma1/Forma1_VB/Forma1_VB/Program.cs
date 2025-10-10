@@ -42,5 +42,8 @@ class Program
         //7. Feladat
         //Add meg, hogy mely országok kerültek a rendezők közé az első magyarországi nagydíjat követően!
         //passz, nem volt Magyarországi verseny a forrásfájlban, így nem tudom megoldani
+        
+        //8. Feladat
+        Console.WriteLine(races.WriteToFile("monaco.txt", "Monaco"));
     }
 }
