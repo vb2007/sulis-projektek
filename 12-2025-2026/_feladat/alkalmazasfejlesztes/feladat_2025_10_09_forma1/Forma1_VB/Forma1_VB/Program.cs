@@ -22,5 +22,9 @@ class Program
         {
             Console.WriteLine($"\t{racerName}");
         }
+        
+        //4. Feladat
+        string name = "Juan-Manuel Fangio";
+        Console.WriteLine($"4. feladat: {name} {races.RacerAgeByNameOnFirstRace(name)} éves volt az első versenyén");
     }
 }
