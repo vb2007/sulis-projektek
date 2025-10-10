@@ -42,4 +42,8 @@ public class Races
                .Take(3)
                .ToDictionary(x => x.Error, x => x.Count);
 
+     public int RacersWithoutTeam =>
+          _races
+               .GroupBy(x => x.Name)
+               .Count(group => group.All(race => string.IsNullOrEmpty(race.Team)));
 }

@@ -35,5 +35,8 @@ class Program
         {
             Console.WriteLine($"\t{error.Key}: {error.Value} eset");
         }
+        
+        //6. Feladat
+        Console.WriteLine($"{races.RacersWithoutTeam} olyan versenyző volt, akinek valamelyik versenyén nem volt csapata");
     }
 }
