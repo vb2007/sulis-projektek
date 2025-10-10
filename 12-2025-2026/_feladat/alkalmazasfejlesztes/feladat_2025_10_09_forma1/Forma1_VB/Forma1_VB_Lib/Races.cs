@@ -49,31 +49,42 @@ public class Races
                .GroupBy(x => x.Name)
                .Count(group => group.All(race => string.IsNullOrEmpty(race.Team)));
 
-     private IEnumerable<Race> Top6PositionsByRaceName(string raceCountry) =>
-          _races
-               .FindAll(x => x.RaceCountry == raceCountry)
-               .OrderBy(x => x.Position)
-               .Take(6);
+    private IEnumerable<IGrouping<int, Race>> Top6RacesByYear(string raceCountry) =>
+        _races
+                .Where(x => x.RaceCountry == raceCountry && x.Position.HasValue && x.Position <= 6)
+                .GroupBy(x => x.Date.Year)
+                .OrderBy(x => x.Key);
 
-     public string WriteToFile(string fileName, string raceCounty)
-     {
-          try
-          {
-               using StreamWriter sw = new StreamWriter(fileName, true, Encoding.UTF8);
-
-               IEnumerable<Race> top6Positions = Top6PositionsByRaceName(raceCounty);
-               int pos = 1;
-               foreach (var racer in top6Positions)
-               {
-                    sw.WriteLine($"{pos}. {racer.Name} ({racer.CarType})");
-                    pos++;
-               }
-
-               return $"A \"{raceCounty}\" versenyek adatai sikeresen kiírva a \"{fileName}\" fájlba.";
-          }
-          catch (Exception ex)
-          {
-               return $"Hiba történt a \"{fileName}\" fájlba írás közben.";
-          }
-     }
+    public string WriteToFile(string fileName, string raceCountry)
+    {
+         try
+         {
+              using StreamWriter sw = new StreamWriter(fileName, false, Encoding.UTF8);
+          
+              var racesByYear = Top6RacesByYear(raceCountry);
+              bool firstYear = true;
+          
+              foreach (var yearGroup in racesByYear)
+              {
+                   if (!firstYear)
+                        sw.WriteLine();
+               
+                   sw.WriteLine(yearGroup.Key);
+               
+                   foreach (var racer in yearGroup.OrderBy(x => x.Position))
+                   {
+                        string team = string.IsNullOrEmpty(racer.Team) ? null! : racer.Team;
+                        sw.WriteLine($"{racer.Position}. {racer.Name}{(team != null ? $" ({team})" : "")}");
+                   }
+               
+                   firstYear = false;
+              }
+          
+              return $"A \"{raceCountry}\" versenyek adatai sikeresen kiírva a \"{fileName}\" fájlba.";
+         }
+         catch (Exception ex)
+         {
+              return $"Hiba történt a \"{fileName}\" fájlba írás közben: {ex.Message}";
+         }
+    }
 }
