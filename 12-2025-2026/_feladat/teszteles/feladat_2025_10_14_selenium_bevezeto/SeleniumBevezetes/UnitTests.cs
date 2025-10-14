@@ -24,8 +24,8 @@ public class Tests
     }
 
     [Test]
-    public void Test1()
+    public void CheckTitle()
     {
-        Assert.Pass();
+        Assert.That("All products | Books to Scrape - Sandbox", Is.EqualTo(_webDriver.Title));
     }
 }
