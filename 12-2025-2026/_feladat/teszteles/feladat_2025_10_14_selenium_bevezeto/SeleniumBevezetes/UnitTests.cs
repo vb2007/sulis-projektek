@@ -21,15 +21,18 @@ public class Tests
     [TearDown]
     public void TearDown()
     {
-        _webDriver?.Quit();
-        _webDriver?.Dispose();
+        _webDriver.Quit();
+        _webDriver.Dispose();
     }
 
     [Test]
     [Description("Checks the page's title.")]
     public void CheckTitle()
     {
-        Assert.That("All products | Books to Scrape - Sandbox", Is.EqualTo(_webDriver.Title));
+        string expectedTitle = "All products | Books to Scrape - Sandbox";
+        //tibro videójában "hiba" volt:
+        //Assert.That(1, 2)-nél 1 az actual, 2 az expected
+        Assert.That(_webDriver.Title, Is.EqualTo(expectedTitle));
     }
 
     [Test]
@@ -66,6 +69,15 @@ public class Tests
     [Description("Checks the 'A Light in the Attic' book's price.")]
     public void CheckPrice()
     {
+        string expectedTitle = "A Light in the Attic";
+        string expectedPrice = "£51.77";
         
+        //a könyv elementeken nincsen semmilyen unique id, class, stb., csak a bennük lévő "a" elementeken egy "title="
+        //így sajnos nem lehet szimpla select methodot használni, xpath-el kell kiválasztani a parent elementet a title alapján
+        IWebElement bookContainerElement = _webDriver.FindElement(By.XPath($"//li[.//a[@title='{expectedTitle}']]"));
+        IWebElement bookPriceElement = bookContainerElement.FindElement(By.CssSelector("div.product_price p.price_color"));
+        string actualBookPrice = bookPriceElement.Text.Trim();
+        
+        Assert.That(actualBookPrice, Is.EqualTo(expectedPrice));
     }
 }
