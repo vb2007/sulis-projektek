@@ -1,6 +1,6 @@
 # Konténerizáció
 
-> ![WARN]
+> [!WARN]
 > A feladatok buildeléséhez, futtatásához szükséges az év elején buildelt `monogram/php` image!
 
 ## Parancsok a futtatáshoz (példák)
