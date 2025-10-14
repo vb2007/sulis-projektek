@@ -1,4 +1,4 @@
-FROM vb/f1
+FROM vb/php
 
 COPY . /app
 

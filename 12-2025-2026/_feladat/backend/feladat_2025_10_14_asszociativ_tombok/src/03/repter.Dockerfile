@@ -1,4 +1,4 @@
-FROM vb/repter
+FROM vb/php
 
 COPY . /app
 
