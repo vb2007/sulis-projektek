@@ -2,6 +2,8 @@
 
 public class Tests
 {
+    private readonly string baseUrl = "https://books.toscrape.com/";
+    
     [SetUp]
     public void Setup()
     {
