@@ -16,10 +16,14 @@ public class Tests
     public int Count => tests.Count;
     public int AbsenceCount => tests.Count(x => x.Name == null);
     public bool WasTheTestWritten => Count > 0;
-    
+
     //2. Feladat
-    public Test TestDataByStudentName(string studentName) =>
-        tests.Any(x => x.Name == studentName) ? tests.First(x => x.Name == studentName) : null!;
+    //public Test TestDataByStudentName(string studentName) =>
+    //    tests.Any(x => x.Name == studentName) ? tests.First(x => x.Name == studentName) : null!;
+
+    public Test this[string studentName] =>
+        tests
+            .Any(x => x.Name == studentName) ? tests.First(x => x.Name == studentName) : null!;
 
     //3. Feladat
     private int? Task1Count => tests.Count(x => x.Score1 != null);
@@ -27,7 +31,7 @@ public class Tests
     private int? Task3Count => tests.Count(x => x.Score3 != null);
     private int? Task4Count => tests.Count(x => x.Score4 != null);
     private int? Task5Count => tests.Count(x => x.Score5 != null);
-    
+
     private double? Task1Average => Task1Count > 0 ? (double)tests.Where(x => x.Score1 != null).Sum(x => x.Score1!.Value) / Task1Count : null;
     private double? Task2Average => Task2Count > 0 ? (double)tests.Where(x => x.Score2 != null).Sum(x => x.Score2!.Value) / Task2Count : null;
     private double? Task3Average => Task3Count > 0 ? (double)tests.Where(x => x.Score3 != null).Sum(x => x.Score3!.Value) / Task3Count : null;
@@ -65,7 +69,7 @@ public class Tests
         $"3. Feladat\nEnnyien oldották meg: {Task3Count}\nEnnyi az átlagos pontszám: {Task3Average:F2}\nEnnyi tanuló nem adott be semmit, de megírta a tesztet: {Task3NullCount}\n\n" +
         $"4. Feladat\nEnnyien oldották meg: {Task4Count}\nEnnyi az átlagos pontszám: {Task4Average:F2}\nEnnyi tanuló nem adott be semmit, de megírta a tesztet: {Task4NullCount}\n\n" +
         $"5. Feladat\nEnnyien oldották meg: {Task5Count}\nEnnyi az átlagos pontszám: {Task5Average:F2}\nEnnyi tanuló nem adott be semmit, de megírta a tesztet: {Task5NullCount}\n";
-    
+
     //4. Feladat
     public string WriteToFile(string fileName)
     {
