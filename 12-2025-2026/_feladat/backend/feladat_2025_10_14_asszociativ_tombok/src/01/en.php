@@ -1,8 +1,8 @@
 <?php
 
 $en = [
-    "nev" => "",
-    "szuletesi_datum" => "",
-    "kor" => "",
-    "kedvenc_szin" => ""
+    "nev" => "Gipsz Jakab",
+    "szuletesi_datum" => "1942. 01. 01.",
+    "kor" => "20",
+    "kedvenc_szin" => "fekete"
 ];
