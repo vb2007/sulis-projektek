@@ -22,7 +22,7 @@ public class Tests
     public void TearDown()
     {
         _webDriver.Quit();
-        _webDriver.Dispose();
+        _webDriver.Dispose(); //.net 9 óta dispose is kell
     }
 
     [Test]
