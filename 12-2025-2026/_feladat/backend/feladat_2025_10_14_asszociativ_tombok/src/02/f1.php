@@ -1,6 +1,6 @@
 <?php
 
-include("versenyzok.php");
+require "versenyzok.php";
 
 if ($argc > 2) {
     echo "Túl sok paraméter!";
