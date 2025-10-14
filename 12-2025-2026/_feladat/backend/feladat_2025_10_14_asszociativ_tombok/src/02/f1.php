@@ -3,7 +3,7 @@
 require "versenyzok.php";
 
 if ($argc > 2) {
-    echo "Túl sok paraméter!";
+    echo "Túl sok paraméter!\n";
     exit(8);
 }
 
