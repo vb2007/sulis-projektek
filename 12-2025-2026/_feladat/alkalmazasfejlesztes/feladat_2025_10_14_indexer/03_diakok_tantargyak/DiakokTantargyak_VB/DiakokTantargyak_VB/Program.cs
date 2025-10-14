@@ -23,20 +23,20 @@ class Program
         
         //jegyeket nem kért a feladat, de ha már egyszer van rá lehetőség a class miatt...
         Student student1 = school[1]!;
-        student1?.AddGrade("Matematika", 5);
-        student1?.AddGrade("Matematika", 4);
-        student1?.AddGrade("Fizika", 3);
+        student1.AddGrade("Matematika", 5);
+        student1.AddGrade("Matematika", 4);
+        student1.AddGrade("Fizika", 3);
         
         Student student2 = school[2]!;
-        student2?.AddGrade("Kémia", 5);
-        student2?.AddGrade("Biológia", 4);
+        student2.AddGrade("Kémia", 5);
+        student2.AddGrade("Biológia", 4);
         
         //indexerek tesztelése
-        Console.WriteLine("Diák indexerek tesztelése:");
+        Console.WriteLine("Diák indexerek tesztelése:\n");
         for (int i = 1; i <= 5; i++)
         {
             Student student = school[i]!;
-            Console.WriteLine($"Diák neve {i}: {student.Name}");
+            Console.WriteLine($"Id: {i} Név: {student.Name}");
             
             Console.WriteLine("\tJegyek:");
             foreach (var subject in student.Grades)
@@ -45,20 +45,20 @@ class Program
             }
         }
         
-        Console.WriteLine("Tantárgy indexerek tesztelése:");
+        Console.WriteLine("\nTantárgy indexerek tesztelése:\n");
         string[] subjectNames = { "Matematika", "Fizika", "Kémia", "Biológia", "Informatika" };
         foreach (string subjectName in subjectNames)
         {
             Subject subject = school[subjectName]!;
-            Console.WriteLine($"Subject: {subject.Name}, ID: {subject.Id}");
+            Console.WriteLine($"Tantárgy: {subject.Name}, Id: {subject.Id}");
         }
         
         //negatív tesztek
-        Console.WriteLine("Nem létező diák Id:");
+        Console.WriteLine("\nNem létező diák Id:");
         Student? nonExistentStudent = school[999];
         Console.WriteLine($"999 Id-val rendelkező diák: {(nonExistentStudent == null ? "null (helyes)" : nonExistentStudent.Name)}");
 
-        Console.WriteLine("Nem létező tantárgy név:");
+        Console.WriteLine("\nNem létező tantárgy név:");
         Subject? nonExistentSubject = school["románia"];
         Console.WriteLine($"Nem létező tantárgy név: {(nonExistentSubject == null ? "null (helyes)" : nonExistentSubject.Name)}");
     }
