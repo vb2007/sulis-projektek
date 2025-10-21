@@ -32,3 +32,11 @@ var_dump(negativE(96)) . "\n";
 echo szignum(-863) . "\n";
 echo szignum(0) . "\n";
 echo szignum(1024) . "\n";
+
+//8. feladat
+echo datumIdo("óra") . "\n";
+echo datumIdo("perc") . "\n";
+echo datumIdo("másodperc") . "\n";
+echo datumIdo("év") . "\n";
+echo datumIdo("hónap") . "\n";
+echo datumIdo("nap") . "\n";

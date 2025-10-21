@@ -65,3 +65,24 @@ function szignum(int $szam) :int {
 
     return ($szam > 0) ? 1 : -1;
 }
+
+function datumIdo(string $idoTipus) :string {
+    date_default_timezone_set("UTC");
+
+    switch($idoTipus) {
+        case "év":
+            return date("Y");
+        case "hónap":
+            return date("m");
+        case "nap":
+            return date("d");
+        case "óra":
+            return date("H");
+        case "perc":
+            return date("i");
+        case "másodperc":
+            return date("s");
+        default:
+            return "Érvénytelen időtípus.";
+    }
+}
