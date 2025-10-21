@@ -46,3 +46,4 @@ echo datumIdo("nap") . "\n";
 //Függvények tömbökön
 
 //1. feladat
+echo utolso([5, 11, 76, 3]) . "\n";

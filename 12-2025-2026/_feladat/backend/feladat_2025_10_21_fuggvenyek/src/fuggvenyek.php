@@ -90,3 +90,7 @@ function datumIdo(string $idoTipus) :string {
 }
 
 //Függvények tömbökön
+
+function utolso(array $tomb) :int {
+    return $tomb[count($tomb) - 1];
+}
