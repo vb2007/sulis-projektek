@@ -2,6 +2,8 @@
 
 require("fuggvenyek.php");
 
+//Egyszerű függvények
+
 //1. feladat
 echo hetNapja(1) . "\n";
 echo hetNapja(5) . "\n";
@@ -40,3 +42,7 @@ echo datumIdo("másodperc") . "\n";
 echo datumIdo("év") . "\n";
 echo datumIdo("hónap") . "\n";
 echo datumIdo("nap") . "\n";
+
+//Függvények tömbökön
+
+//1. feladat

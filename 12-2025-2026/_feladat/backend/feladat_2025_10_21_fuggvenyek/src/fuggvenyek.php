@@ -1,5 +1,7 @@
 <?php
 
+//Egyszerű függvények
+
 function hetNapja(int $napSzama) :string {
     switch($napSzama) {
         case 1:
@@ -86,3 +88,5 @@ function datumIdo(string $idoTipus) :string {
             return "Érvénytelen időtípus.";
     }
 }
+
+//Függvények tömbökön
