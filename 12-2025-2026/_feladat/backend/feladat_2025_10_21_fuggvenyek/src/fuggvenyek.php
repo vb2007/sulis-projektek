@@ -1,6 +1,6 @@
 <?php
 
-function hetNapja(int $napSzama): string {
+function hetNapja(int $napSzama) :string {
     switch($napSzama) {
         case 1:
             return "hétfő";
@@ -21,7 +21,7 @@ function hetNapja(int $napSzama): string {
     }
 }
 
-function napSorszama(string $napNeve): int {
+function napSorszama(string $napNeve) :int {
     switch($napNeve) {
         case "hétfő":
             return 1;
@@ -40,4 +40,12 @@ function napSorszama(string $napNeve): int {
         default:
             return 0;
     }
+}
+
+function parosE(int $szam) :bool {
+    return ($szam % 2 == 0) ? true : false;
+}
+
+function paratlanE(int $szam) :bool {
+    return ($szam % 2 == 0) ? false : true;
 }

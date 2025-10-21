@@ -8,6 +8,14 @@ echo hetNapja(5) . "\n";
 echo hetNapja(11) . "\n";
 
 //2. feladat
-echo napSorszama(1) . "\n";
-echo napSorszama(5) . "\n";
-echo napSorszama(11) . "\n";
+echo napSorszama("hétfő") . "\n";
+echo napSorszama("péntek") . "\n";
+echo napSorszama("asd") . "\n";
+
+//3. feladat
+var_dump(parosE(5)) . "\n";
+var_dump(parosE(8)) . "\n";
+
+//4. feladat
+var_dump(paratlanE(5)) . "\n";
+var_dump(paratlanE(8)) . "\n";
