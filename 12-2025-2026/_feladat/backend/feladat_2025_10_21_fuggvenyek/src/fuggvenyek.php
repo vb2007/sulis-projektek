@@ -57,3 +57,11 @@ function oszthatoE(int $osztando, int $oszto) :bool {
 function negativE(int $szam) :bool {
     return ($szam < 0) ? true : false;
 }
+
+function szignum(int $szam) :int {
+    if ($szam == 0) {
+        return 0;
+    }
+
+    return ($szam > 0) ? 1 : -1;
+}

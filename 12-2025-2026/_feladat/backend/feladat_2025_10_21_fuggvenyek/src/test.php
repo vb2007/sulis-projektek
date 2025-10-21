@@ -27,3 +27,8 @@ var_dump(oszthatoE(5, 8)) . "\n";
 //6. feladat
 var_dump(negativE(-3)) . "\n";
 var_dump(negativE(96)) . "\n";
+
+//7. feladat
+echo szignum(-863) . "\n";
+echo szignum(0) . "\n";
+echo szignum(1024) . "\n";
