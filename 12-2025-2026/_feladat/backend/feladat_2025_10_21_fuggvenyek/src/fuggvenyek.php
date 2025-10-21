@@ -94,3 +94,7 @@ function datumIdo(string $idoTipus) :string {
 function utolso(array $tomb) :int {
     return $tomb[count($tomb) - 1];
 }
+
+function osszeg(array $tomb) :int {
+    return array_sum($tomb);
+}

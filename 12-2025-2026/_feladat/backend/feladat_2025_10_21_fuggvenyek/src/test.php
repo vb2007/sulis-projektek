@@ -47,3 +47,6 @@ echo datumIdo("nap") . "\n";
 
 //1. feladat
 echo utolso([5, 11, 76, 3]) . "\n";
+
+//2. feladat
+echo osszeg([5, 11, 76, 3]) . "\n";
