@@ -1,7 +1,7 @@
 <?php
 
 function hetNapja(int $napSzama): string {
-    switch($napSzama){
+    switch($napSzama) {
         case 1:
             return "hétfő";
         case 2:
@@ -15,7 +15,7 @@ function hetNapja(int $napSzama): string {
         case 6:
             return "szombat";
         case 7:
-            return ""
+            return "vasárnap";
         default:
             return "Érvénytelen napszám.";
     }
