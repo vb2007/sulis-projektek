@@ -19,3 +19,7 @@ var_dump(parosE(8)) . "\n";
 //4. feladat
 var_dump(paratlanE(5)) . "\n";
 var_dump(paratlanE(8)) . "\n";
+
+//5. feladat
+var_dump(oszthatoE(5, 5)) . "\n";
+var_dump(oszthatoE(5, 8)) . "\n";

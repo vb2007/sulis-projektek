@@ -49,3 +49,7 @@ function parosE(int $szam) :bool {
 function paratlanE(int $szam) :bool {
     return ($szam % 2 == 0) ? false : true;
 }
+
+function oszthatoE(int $osztando, int $oszto) :bool {
+    return ($osztando % $oszto == 0) ? true : false;
+}
