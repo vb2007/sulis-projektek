@@ -50,3 +50,6 @@ echo utolso([5, 11, 76, 3]) . "\n";
 
 //2. feladat
 echo osszeg([5, 11, 76, 3]) . "\n";
+
+//3. feladat
+echo szorzat([5, 11, 76, 3]) . "\n";

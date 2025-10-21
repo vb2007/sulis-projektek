@@ -98,3 +98,12 @@ function utolso(array $tomb) :int {
 function osszeg(array $tomb) :int {
     return array_sum($tomb);
 }
+
+function szorzat(array $tomb) :int {
+    $szorzat = 1;
+    foreach ($tomb as $szam) {
+        $szorzat *= $szam;
+    }
+
+    return $szorzat;
+}
