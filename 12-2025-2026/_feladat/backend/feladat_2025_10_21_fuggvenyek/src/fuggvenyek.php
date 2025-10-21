@@ -53,3 +53,7 @@ function paratlanE(int $szam) :bool {
 function oszthatoE(int $osztando, int $oszto) :bool {
     return ($osztando % $oszto == 0) ? true : false;
 }
+
+function negativE(int $szam) :bool {
+    return ($szam < 0) ? true : false;
+}

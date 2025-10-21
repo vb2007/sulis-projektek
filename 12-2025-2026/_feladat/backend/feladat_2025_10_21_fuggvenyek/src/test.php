@@ -23,3 +23,7 @@ var_dump(paratlanE(8)) . "\n";
 //5. feladat
 var_dump(oszthatoE(5, 5)) . "\n";
 var_dump(oszthatoE(5, 8)) . "\n";
+
+//6. feladat
+var_dump(negativE(-3)) . "\n";
+var_dump(negativE(96)) . "\n";
