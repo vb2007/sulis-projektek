@@ -116,3 +116,12 @@ function parosDb(array $tomb) :int {
 
     return $db;
 }
+
+function parosOsszeg(array $tomb) :int {
+    $sum = 0;
+    foreach($tomb as $szam) {
+        parosE($szam) ? $sum += $szam : null;
+    }
+
+    return $sum;
+}
