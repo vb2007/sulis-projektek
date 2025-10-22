@@ -107,3 +107,12 @@ function szorzat(array $tomb) :int {
 
     return $szorzat;
 }
+
+function parosDb(array $tomb) :int {
+    $db = 0;
+    foreach($tomb as $szam) {
+        parosE($szam) ? $db++ : null;
+    }
+
+    return $db;
+}

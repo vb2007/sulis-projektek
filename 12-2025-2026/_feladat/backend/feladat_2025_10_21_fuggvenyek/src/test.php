@@ -53,3 +53,8 @@ echo osszeg([5, 11, 76, 3]) . "\n";
 
 //3. feladat
 echo szorzat([5, 11, 76, 3]) . "\n";
+
+//4. feladat
+echo parosDb([]) . "\n";
+echo parosDb([5,11,76,3]) . "\n";
+echo parosDb([37,74,3,71,54]) . "\n";
