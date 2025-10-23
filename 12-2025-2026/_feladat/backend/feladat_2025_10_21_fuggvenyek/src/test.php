@@ -75,3 +75,8 @@ echo f2c(68) . "\n";
 
 //2. feladat
 echo c2f(30) . "\n";
+
+//Fogyasztás
+
+//1. feladat
+echo fogyasztas(620, 42.3) . "\n";

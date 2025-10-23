@@ -144,3 +144,9 @@ function f2c(float $f) :float {
 function c2f(float $c) :float {
     return $c * 1.8 + 32;
 }
+
+//Fogyasztás
+
+function fogyasztas(int $km, float $liter) :float {
+    return round(($liter / $km) * 100, 2);
+}
