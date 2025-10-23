@@ -63,3 +63,7 @@ echo parosDb([37,74,3,71,54]) . "\n";
 echo parosOsszeg([]) . "\n";
 echo parosOsszeg([5,11,76,3]) . "\n";
 echo parosOsszeg([37,74,3,71,54]) . "\n";
+
+//6. feladat
+echo elsoNOsszeg([5,11,76,3],2) . "\n";
+echo elsoNOsszeg([37,74,3,71,54],3) . "\n";

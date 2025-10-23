@@ -125,3 +125,12 @@ function parosOsszeg(array $tomb) :int {
 
     return $sum;
 }
+
+function elsoNOsszeg(array $tomb, int $n) :int {
+    $sum = 0;
+    for ($i = 0; $i < $n; $i++) {
+        $sum += $tomb[$i];
+    }
+
+    return $sum;
+}
