@@ -7,10 +7,10 @@ if ($argc != 3) {
     exit(0);
 }
 
-$ertek = $argv[0];
-$mertekegyseg = $argv[1];
+$ertek = $argv[1];
+$mertekegyseg = $argv[2];
 
-if (!is_numeric($argv[0])) {
+if (!is_numeric($ertek)) {
     echo "Az első paraméternek számnak kell lennie!\n";
     exit(0);
 }
