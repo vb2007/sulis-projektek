@@ -67,3 +67,11 @@ echo parosOsszeg([37,74,3,71,54]) . "\n";
 //6. feladat
 echo elsoNOsszeg([5,11,76,3],2) . "\n";
 echo elsoNOsszeg([37,74,3,71,54],3) . "\n";
+
+//Fokvátó
+
+//1. feladat
+echo f2c(68) . "\n";
+
+//2. feladat
+echo c2f(30) . "\n";

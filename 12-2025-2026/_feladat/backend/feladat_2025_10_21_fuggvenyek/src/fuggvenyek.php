@@ -134,3 +134,13 @@ function elsoNOsszeg(array $tomb, int $n) :int {
 
     return $sum;
 }
+
+//Fokváltó
+
+function f2c(int $f) :float {
+    return ($f - 32) / 1.8;
+}
+
+function c2f(int $c) :float {
+    return $c * 1.8 + 32;
+}
