@@ -1,6 +1,6 @@
 <?php
 
-require "../fuggvenyek.php";
+require "fuggvenyek.php";
 
 if ($argc != 3) {
     echo "A script pontosan 2 paramétert vár!\n";
