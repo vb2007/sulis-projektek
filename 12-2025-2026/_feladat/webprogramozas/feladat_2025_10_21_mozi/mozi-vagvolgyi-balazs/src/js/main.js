@@ -1,20 +1,23 @@
-"use strict"
+"use strict";
 
+const createSpan = (text, cssClasses) => {
+  const span = document.createElement("span");
+  span.textContent = text;
 
+  cssClasses.foreach((cssClass) => span.classList.add(cssClass));
 
+  return span;
+};
 
-
-function generateTicketCards() {
-    const cards = [];
-
-}
+const generateTicketCards = () => {
+  const cards = [];
+};
 generateTicketCards();
 
-function generateFilmCards() {
-    const cards = [];
-    const mappedFilms = films;
+const generateFilmCards = () => {
+  const cards = [];
+  const mappedFilms = films;
 
-    const images = [];
-
-}
+  const images = [];
+};
 generateFilmCards();
