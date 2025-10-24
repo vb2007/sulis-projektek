@@ -1,62 +1,59 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="hu">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MoziVáros</title>
-    <link rel="stylesheet" href="src/assets/css/style.css">
-    <script src="src/js/data.js" defer></script>
-    <script src="src/js/main.js" defer></script>
-</head>
-<body>
-    <nav>
-        <a href="#facts">Rólunk</a>
-        <a href="#list-of-tickets">Jegyek</a>
-        <a href="#list-of-films">Filmek</a>
-    </nav>
-    <header>
-        <h1>MoziVáros</h1>
-        <p>Válogass kedvenc filmeid közül!</p>
-    </header>
-    <main>
-        <section id="facts">
-            <h2>Nálunk nagy a választék!</h2>
-            <div class="grid-cols-3">
-                <div class="stat-card" id="film-count">
-                    <span>Számolás...</span>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>MoziVáros</title>
+        <link rel="stylesheet" href="src/assets/css/style.css" />
+        <script src="src/js/data.js" defer></script>
+        <script src="src/js/main.js" defer></script>
+    </head>
+    <body>
+        <nav>
+            <a href="#facts">Rólunk</a>
+            <a href="#list-of-tickets">Jegyek</a>
+            <a href="#list-of-films">Filmek</a>
+        </nav>
+        <header>
+            <h1>MoziVáros</h1>
+            <p>Válogass kedvenc filmeid közül!</p>
+        </header>
+        <main>
+            <section id="facts">
+                <h2>Nálunk nagy a választék!</h2>
+                <div class="grid-cols-3">
+                    <div class="stat-card" id="film-count">
+                        <span>Számolás...</span>
+                    </div>
+                    <div class="stat-card" id="film-length">
+                        <span>Számolás...</span>
+                    </div>
+                    <div class="stat-card" id="cheapest-ticket-price">
+                        <span>Számolás...</span>
+                    </div>
                 </div>
-                <div class="stat-card" id="film-length">
-                    <span>Számolás...</span>
-                </div>
-                <div class="stat-card" id="cheapest-ticket-price">
-                    <span>Számolás...</span>
-                </div>
-            </div>
-        </section>
-        <section id="list-of-tickets">
-            <h2>Elérhető jegyek</h2>
-            <div class="grid-cols-6 grid-rows-4 grid-col" id="tickets">
-
-            </div>
-        </section>
-        <section id="list-of-films">
-            <h2>Top filmek</h2>
-            <div class="flex-col" id="films">
-
-            </div>
-            <div class="flex-row" id="other-films">
-
-            </div>
-        </section>
-        <section id="footnote">
-            <ul>
-                <li>* Az átlagos játékidő (120 perc) alapján</li>
-                <li id="cheapest-ticket-details">** A legolcsóbb elérhető jegy: </li>
-            </ul>
-        </section>
-    </main>
-    <footer>
-        Készítette: Kurityák Dániel
-    </footer>
-</body>
+            </section>
+            <section id="list-of-tickets">
+                <h2>Elérhető jegyek</h2>
+                <div
+                    class="grid-cols-6 grid-rows-4 grid-col"
+                    id="tickets"
+                ></div>
+            </section>
+            <section id="list-of-films">
+                <h2>Top filmek</h2>
+                <div class="flex-col" id="films"></div>
+                <div class="flex-row" id="other-films"></div>
+            </section>
+            <section id="footnote">
+                <ul>
+                    <li>* Az átlagos játékidő (120 perc) alapján</li>
+                    <li id="cheapest-ticket-details">
+                        ** A legolcsóbb elérhető jegy:
+                    </li>
+                </ul>
+            </section>
+        </main>
+        <footer>Készítette: Vágvölgyi Balázs</footer>
+    </body>
 </html>
