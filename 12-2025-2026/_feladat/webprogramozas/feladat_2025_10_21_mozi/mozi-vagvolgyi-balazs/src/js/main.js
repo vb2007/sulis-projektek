@@ -105,7 +105,6 @@ const generateFilmCards = () => {
 
   const topFilms = mappedFilms.splice(0, 3);
   for (const [name, image] of topFilms) {
-    //console.log(name, image);
     const card = createFilmCard(name, image);
     cards.push(card);
   }
@@ -117,7 +116,6 @@ const generateFilmCards = () => {
 
   const remainingFilms = mappedFilms.splice(0);
   for (const [name, image] of remainingFilms) {
-    console.log(image);
     const img = document.createElement("img");
     img.src = image;
     images.push(img);
