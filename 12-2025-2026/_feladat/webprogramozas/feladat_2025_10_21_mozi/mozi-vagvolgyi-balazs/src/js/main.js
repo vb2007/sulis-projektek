@@ -68,8 +68,32 @@ const createTicketCard = (name, type, price) => {
 
 const generateTicketCards = () => {
   const cards = [];
+
+  tickets.forEach((ticket) => {
+    const [name, type, price] = ticket;
+    const card = createTicketCard(name, type, price);
+    cards.push(card);
+  });
+
+  const ticketsElement = document.getElementById("tickets");
+  ticketsElement.replaceChildren(...cards);
 };
 generateTicketCards();
+
+const createFilmCard = (name, image) => {
+  const div = document.createElement("div");
+  div.classList.add("film-card");
+
+  const img = document.createElement("img");
+  img.src = image;
+  img.alt = name;
+
+  const h3 = document.createElement("h3");
+  h3.textContent = name;
+
+  div.append(img, h3);
+  return div;
+};
 
 const generateFilmCards = () => {
   const cards = [];
