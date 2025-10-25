@@ -97,8 +97,33 @@ const createFilmCard = (name, image) => {
 
 const generateFilmCards = () => {
   const cards = [];
-  const mappedFilms = films;
+
+  const mappedFilms = films.map((film) => [
+    film,
+    `./src/assets/images/${film.replace(/ /g, "_")}.jpeg`,
+  ]);
+
+  const topFilms = mappedFilms.splice(0, 3);
+  for (const [name, image] of topFilms) {
+    //console.log(name, image);
+    const card = createFilmCard(name, image);
+    cards.push(card);
+  }
+
+  const filmsElement = document.getElementById("films");
+  filmsElement.replaceChildren(...cards);
 
   const images = [];
+
+  const remainingFilms = mappedFilms.splice(0);
+  for (const [name, image] of remainingFilms) {
+    console.log(image);
+    const img = document.createElement("img");
+    img.src = image;
+    images.push(img);
+  }
+
+  const otherFilmsElement = document.getElementById("other-films");
+  otherFilmsElement.replaceChildren(...images);
 };
 generateFilmCards();
