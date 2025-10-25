@@ -96,12 +96,12 @@ const createFilmCard = (name, image) => {
 };
 
 const generateFilmCards = () => {
-  const cards = [];
-
   const mappedFilms = films.map((film) => [
     film,
     `./src/assets/images/${film.replace(/ /g, "_")}.jpeg`,
   ]);
+
+  const cards = [];
 
   const topFilms = mappedFilms.splice(0, 3);
   for (const [name, image] of topFilms) {
