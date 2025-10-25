@@ -42,6 +42,30 @@ const cheapestTicketDetailsElement = document.getElementById(
 const ticketDetailsSpan = createSpan(`${name} (${type})`, []);
 cheapestTicketDetailsElement.append(ticketDetailsSpan);
 
+const capitalize = (string) => {
+  const [firstChar, ...restChars] = string;
+  return firstChar.toUpperCase() + restChars.join("");
+};
+
+const createTicketCard = (name, type, price) => {
+  const div = document.createElement("div");
+  div.classList.add("ticket-card");
+
+  const h3 = document.createElement("h3");
+  h3.textContent = capitalize(name);
+
+  const p1 = document.createElement("p");
+  p1.textContent = type;
+  p1.classList.add("ticket-type");
+
+  const p2 = document.createElement("p");
+  p2.textContent = `${price} forint`;
+  p2.classList.add("ticket-price");
+
+  div.append(h3, p1, p2);
+  return div;
+};
+
 const generateTicketCards = () => {
   const cards = [];
 };
