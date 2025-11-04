@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PetShop</title>
+    <link rel="stylesheet" href="src/css/style.css">
+    <script src="src/js/task2.js" defer></script>
+    <script src="src/js/main.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1>PetShop</h1>
+        <a href="index.html" class="back">🔙</a>
+    </header>
+    <main class="grid grid-cols-4">
+        <div class="span-4 card" id="average-sales">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Árucikk neve</th>
+                        <th>Bevétel</th>
+                    </tr>
+                </thead>
+                <tbody>
+
+                </tbody>
+            </table>
+        </div>
+        <div class="card" id="low-income">
+            <h2>Alacsony bevétel</h2>
+            <div class="grid">
+
+            </div>
+        </div>
+        <div class="card" id="top-performers">
+            <h2>Legjobban teljesítők</h2>
+            <div class="grid">
+
+            </div>
+        </div>
+        <div class="card" id="overall-income">
+            <h2>Összbevétel</h2>
+            <span class="text-lg amount">-</span>
+        </div>
+        <div class="card" id="find-product">
+            <h2>Termék keresése</h2>
+            <div>
+                <form>
+                    <input type="text" name="name" id="name" placeholder="Termék neve">
+                    <button type="submit">Keresés</button>
+                </form>
+                <div>
+                    </form>
+                    <span class="text-lg price">-</span>
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+</html>
