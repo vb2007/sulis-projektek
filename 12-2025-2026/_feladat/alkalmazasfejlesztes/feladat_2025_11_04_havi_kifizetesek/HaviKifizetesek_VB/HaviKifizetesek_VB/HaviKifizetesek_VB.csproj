@@ -13,4 +13,8 @@
       </None>
     </ItemGroup>
 
+    <ItemGroup>
+      <ProjectReference Include="..\HaviKifizetesek_VB_Lib\HaviKifizetesek_VB_Lib.csproj" />
+    </ItemGroup>
+
 </Project>
