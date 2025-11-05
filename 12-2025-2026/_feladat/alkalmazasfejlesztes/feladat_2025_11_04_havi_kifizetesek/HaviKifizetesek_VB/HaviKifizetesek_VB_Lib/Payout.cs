@@ -8,8 +8,14 @@ public class Payout
     public Payout(string dataLine)
     {
         string[] values = dataLine.Split(';');
-        
+
         Name = values[0];
         Amount = int.Parse(values[1]);
+    }
+
+    public Payout(string name, int amount)
+    {
+        Name = name;
+        Amount = amount;
     }
 }

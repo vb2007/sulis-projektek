@@ -1,9 +1,17 @@
-﻿namespace HaviKifizetesek_VB;
+﻿using HaviKifizetesek_VB_Lib;
+
+namespace HaviKifizetesek_VB;
 
 class Program
 {
     static void Main(string[] args)
     {
-        Console.WriteLine("Hello, World!");
+        Payouts payouts = new(File.ReadAllLines("lista.csv"));
+
+        Console.WriteLine("3. feladat:");
+        foreach (var roundedPayout in payouts.RoundedUniquePayouts)
+        {
+            Console.WriteLine($"\t{roundedPayout.Amount} havi fizetése: {roundedPayout.Amount} Ft.");
+        }
     }
 }
