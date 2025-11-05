@@ -18,4 +18,13 @@ public class Payout
         Name = name;
         Amount = amount;
     }
+    
+    public string Monogram
+    {
+        get
+        {
+            string[] nameParts = Name.Split(' ');
+            return $"{nameParts[0][0]} {nameParts[1][0]}";
+        }
+    }
 }
