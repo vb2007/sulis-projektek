@@ -9,7 +9,7 @@ class Program
         Payouts payouts = new(File.ReadAllLines("lista.csv"));
 
         Console.WriteLine("3. feladat:");
-        foreach (var roundedPayout in payouts.RoundedUniquePayouts)
+        foreach (Payout roundedPayout in payouts.RoundedUniquePayouts)
         {
             Console.WriteLine($"\t{roundedPayout.Amount} havi fizetése: {roundedPayout.Amount} Ft.");
         }

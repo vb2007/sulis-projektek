@@ -26,7 +26,7 @@ public class Payouts
         _payouts
             .GroupBy(x => x.Name)
             .Select(x => new Payout(
-                x.Key, 
+                x.Key,
                 (int)Math.Round(this[x.Key]!.Value / 100.0) * 100))
             .OrderBy(x => x.Name)
             .ToList();
