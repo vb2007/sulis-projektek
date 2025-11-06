@@ -18,7 +18,7 @@ public class Payout
         Name = name;
         Amount = amount;
     }
-    
+
     public string Monogram
     {
         get
