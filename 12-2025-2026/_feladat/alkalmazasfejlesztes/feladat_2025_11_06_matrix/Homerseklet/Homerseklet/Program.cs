@@ -64,8 +64,22 @@ class Program
                 rowSum += matrix[i, j];
             }
             
-            double rowAvg = Math.Round((double)rowSum / 5, 2);
+            double rowAvg = Math.Round((double)rowSum / matrix.GetLength(1), 2);
             Console.WriteLine($"\t{i + 1}. nap: {rowAvg} fok");
         }
+
+        int belowCount = 0;
+        for (int i = 0; i < matrix.GetLength(0); i++)
+        {
+            for (int j = 0; j < matrix.GetLength(1); j++)
+            {
+                if (matrix[i, j] < 10)
+                {
+                    belowCount++;
+                }
+            }
+        }
+        
+        Console.WriteLine($"\n4. feladat: {belowCount} alkalommal volt 10 fok alatt a hőmérséklet");
     }
 }
