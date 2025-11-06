@@ -25,21 +25,24 @@ class Program
         Console.WriteLine("1. feladat:");
         
         //Táblázat headere
-        Console.Write("\t");
-        for (int i = 0; i < matrix.GetLength(0); i++)
+        Console.Write("".PadRight(8));
+        for (int i = 0; i < matrix.GetLength(1); i++)
         {
-            Console.Write($"\t{i + 1}. mérés");
+            Console.Write($"\t{i + 1}. mérés".PadRight(8));
         }
         Console.WriteLine();
         
+        //Táblázat értékei
         for (int i = 0; i < matrix.GetLength(0); i++)
         {
-            Console.Write($"{i + 1}. nap:");
+            Console.Write($"{i + 1}. nap:".PadRight(8));
             for (int j = 0; j < matrix.GetLength(1); j++)
             {
-                Console.Write($"\t{matrix[i, j]}");
+                Console.Write($"\t{matrix[i, j]}".PadRight(16));
             }
             Console.WriteLine();
         }
+        
+        Console.WriteLine($"2. feladat: Az átlagos hőméréklet: fok");
     }
 }
