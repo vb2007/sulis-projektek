@@ -42,7 +42,30 @@ class Program
             }
             Console.WriteLine();
         }
-        
-        Console.WriteLine($"2. feladat: Az átlagos hőméréklet: fok");
+
+        int sum = 0;
+        for (int i = 0; i < matrix.GetLength(0); i++)
+        {
+            for (int j = 0; j < matrix.GetLength(1); j++)
+            {
+                sum += matrix[i, j];
+            }
+        }
+
+        double avg = Math.Round((double)sum / (matrix.GetLength(0) * matrix.GetLength(1)), 2);
+        Console.WriteLine($"\n2. feladat: Az átlagos hőméréklet: {avg} fok");
+
+        Console.WriteLine("\n3. feladat: Az átlaghőmérséklet naponként:");
+        for (int i = 0; i < matrix.GetLength(0); i++)
+        {
+            int rowSum = 0;
+            for (int j = 0; j < matrix.GetLength(1); j++)
+            {
+                rowSum += matrix[i, j];
+            }
+            
+            double rowAvg = Math.Round((double)rowSum / 5, 2);
+            Console.WriteLine($"\t{i + 1}. nap: {rowAvg} fok");
+        }
     }
 }
