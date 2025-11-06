@@ -114,5 +114,39 @@ class Program
         }
 
         Console.WriteLine($"\n6. feladat: {maxDay}. nap {maxRecord}. méréskor volt a legmagasabb a hőmérséklet: {maxValue} fok");
+
+        Console.Write($"\n7. Feladat: Keresett hőmérséklet érték: ");
+        int seekedValue = int.Parse(Console.ReadLine()!);
+
+        int seekedDay = 0;
+        int seekedRecord = 0;
+        for (int i = 0; i < matrix.GetLength(0); i++)
+        {
+            for (int j = 0; j < matrix.GetLength(1); j++)
+            {
+                if (matrix[i, j] == seekedValue)
+                {
+                    seekedDay = i + 1;
+                    seekedRecord = j + 1;
+                    break;
+                }
+            }
+
+            //https://stackoverflow.com/questions/2339142/how-to-break-out-of-multiple-loops-at-once-in-c
+            //Ha már talált egy értéket (feltéve hogy a feladat az első értékre kíváncsi)
+            if (seekedRecord != 0 && seekedDay != 0)
+            {
+                break;
+            }
+        }
+
+        if (seekedDay != 0 && seekedRecord != 0)
+        {
+            Console.WriteLine($"\tVolt ilyen mérés: {seekedDay}. nap {seekedRecord}. mérése");
+        }
+        else
+        {
+            Console.WriteLine($"\tNem volt ilyen mérés");
+        }
     }
 }
