@@ -68,18 +68,51 @@ class Program
             Console.WriteLine($"\t{i + 1}. nap: {rowAvg} fok");
         }
 
-        int belowCount = 0;
+        int belowCout = 0;
         for (int i = 0; i < matrix.GetLength(0); i++)
         {
             for (int j = 0; j < matrix.GetLength(1); j++)
             {
                 if (matrix[i, j] < 10)
                 {
-                    belowCount++;
+                    belowCout++;
                 }
             }
         }
         
-        Console.WriteLine($"\n4. feladat: {belowCount} alkalommal volt 10 fok alatt a hőmérséklet");
+        Console.WriteLine($"\n4. feladat: {belowCout} alkalommal volt 10 fok alatt a hőmérséklet");
+
+        int belowCountDays = 0;
+        for (int i = 0; i < matrix.GetLength(0); i++)
+        {
+            for (int j = 0; j < matrix.GetLength(1); j++)
+            {
+                if (matrix[i, j] < 10)
+                {
+                    belowCountDays++;
+                    break;
+                }
+            }
+        }
+        
+        Console.WriteLine($"\n5. feladat: {belowCountDays} nap volt 10 fok alatt a hőmérséklet.");
+
+        int maxDay = 0;
+        int maxRecord = 0;
+        int maxValue = 0;
+        for (int i = 0; i < matrix.GetLength(0); i++)
+        {
+            for (int j = 0; j < matrix.GetLength(1); j++)
+            {
+                if (matrix[i, j] > maxValue)
+                {
+                    maxValue = matrix[i, j];
+                    maxDay = i + 1;
+                    maxRecord = j + 1;
+                }                
+            }
+        }
+
+        Console.WriteLine($"\n6. feladat: {maxDay}. nap {maxRecord}. méréskor volt a legmagasabb a hőmérséklet: {maxValue} fok");
     }
 }
