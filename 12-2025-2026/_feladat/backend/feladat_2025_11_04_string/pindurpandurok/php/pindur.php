@@ -8,6 +8,9 @@ $pp = [
     "nyuszi" => "Bunny"
 ];
 
-echo "Pindúr Pandúrok (The Powerpuff Girls)\n\n";
+echo "Pindúr Pandúrok (The Powerpuff Girls)\n";
 
-$angolnevek = [];
+$angolnevek = explode(";", $argv[1]);
+foreach ($angolnevek as $nev) {
+    echo $pp[strtolower($nev)] . "\n";
+}
