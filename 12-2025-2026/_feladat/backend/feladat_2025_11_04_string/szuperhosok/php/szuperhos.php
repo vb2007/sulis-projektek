@@ -9,4 +9,7 @@ echo "3. feladat:\n";
 echo "Hős karaktereinek száma: " . strlen($hero) . "\n"; //mb_strlen
 
 echo "4. feladat:\n";
-echo "A hősnek " . ($argc > 2 ? "van" : "nincs") . " társa\n";
+echo "A hősnek " . ($argc > 2 ? "van" : "nincs") . " társa.\n";
+
+echo "5. feladat:\n";
+echo "A hős nevében " . (str_contains($hero, "man") ? "szerepel" : "nem szerepel") . " a 'man' angol szó.\n";
