@@ -19,5 +19,30 @@ class Program
                 yield return etelFactory.Factory(item);
             }
         }
+
+        void CsokiEllenorzes(IEnumerable<IEtel> csokik)
+        {
+            foreach (IEtel item in csokik)
+            {
+                try
+                {
+                    Console.WriteLine($"{item} - {(item.MegfeleloMinoseg ? "jó" : "rossz")} minőségű");
+                }
+                catch (SilanyMinosegException ex)
+                {
+                    Console.WriteLine($"Hiba a csokiellenőrzés közben: {ex.Message}");
+                }
+            }
+        }
+
+        try
+        {
+            List<IEtel> csokik = Feltoltes("input.txt").ToList();
+            CsokiEllenorzes(csokik);
+        }
+        catch (FileNotFoundException ex)
+        {
+            Console.WriteLine($"Hiba a csokik feldolgozása közben: {ex.Message}");
+        }
     }
 }
