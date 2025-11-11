@@ -30,7 +30,8 @@ function dobogo($rajtszam) {
 if ($argc < 2) {
     foreach ($versenyzok as $csapat => $resztvevok) {
         foreach ($resztvevok as $resztvevo) {
-            echo mb_strtoupper($resztvevo["nev"]) . " (" . $resztvevo["rajtszam"] . ") [" . $csapat . "]\n";
+            $split = explode(" ", $resztvevo["nev"]);
+            echo mb_strtoupper($split[1]) . " (" . $resztvevo["rajtszam"] . ") [" . $csapat . "]\n";
         }
     }
 
