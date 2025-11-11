@@ -6,18 +6,33 @@ const capitalize = (text) => {
 
 const createTableRow = (subject) => {
   const row = document.createElement("tr");
+  row.dataset.id = subject.id;
 
   const id = document.createElement("td");
+  row.dataset.id = subject.id;
 
   const name = document.createElement("td");
+  row.dataset.name = subject.name;
 
   const statusWraper = document.createElement("td");
   const status = document.createElement("span");
+  status.textContent = capitalize(subject.status);
+  status.classList.add(subject.status);
 
   statusWraper.append(status);
 
   row.append(id, name, statusWraper);
   return row;
+};
+
+const addEventListenersToRows = () => {
+  table
+    .querySelectorAll("tr")
+    .forEach((x) =>
+      x.addEventListener("click", (e) =>
+        showSubject(subjects.find((y) => true)),
+      ),
+    );
 };
 
 const fillTable = (array) => {
@@ -38,18 +53,12 @@ const filterSubjects = (name) => {};
 
 const userProfile = {
   name: "Balázs Vágvölgyi",
-  position: "unemployed",
+  position: "Unemployed",
 };
 
-const addEventListenersToRows = () => {
-  table
-    .querySelectorAll("tr")
-    .forEach((x) =>
-      x.addEventListener("click", (e) =>
-        showSubject(subjects.find((y) => true)),
-      ),
-    );
-};
+for (const key in userProfile) {
+  document.getElementById(`profile--${key}`).textContent = userProfile[key];
+}
 
 document.querySelector("#search").addEventListener("submit", (e) => {
   e.preventDefault();
