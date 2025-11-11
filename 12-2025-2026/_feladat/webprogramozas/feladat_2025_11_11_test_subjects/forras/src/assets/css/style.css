@@ -1,0 +1,156 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+@layer base, components, utility;
+
+:root {
+    --main-300: oklch(0.300 0.0704 239.76);
+    --main-500: oklch(0.500 0.0704 239.76);
+    --main-900: oklch(0.900 0.0704 239.76);
+    --success: oklch(0.8 0.1698 151.18);
+    --error: oklch(0.8 0.1698 26.36);
+}
+
+@layer base {
+	* {
+		margin: 0;
+		padding: 0;
+		box-sizing: border-box;
+        font-family: "Roboto", sans-serif;
+	}
+
+    body {
+        min-height: 100dvh;
+        padding: 3rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 1rem;
+        flex-wrap: wrap;
+    }
+
+    main {
+        border: 2px solid var(--main-300);
+        border-radius: 1rem;
+        padding: 1rem;
+    }
+
+    h1 {
+        text-transform: uppercase;
+    }
+    
+    h2 {
+        text-transform: uppercase;
+    }
+
+    table {
+        width: 100%;
+        border-collapse: collapse;
+    }
+
+    th, td {
+        text-align: center;
+        padding: .35rem;
+    }
+
+    th {
+        background-color: var(--main-300);
+        color: white;
+    }
+
+    tr {
+        cursor: pointer;
+    }
+
+    tr:nth-of-type(even) {
+        background-color: var(--main-900);
+    }
+}
+
+@layer utility {
+    .grid {
+        display: grid;
+        gap: 1rem
+    }
+
+    @media screen and (width >= 900px) {
+        .grid-cols-2 {
+            grid-template-columns: 1fr 1fr;
+        }
+    }
+}
+
+@layer components {
+    #app {
+        flex-grow: 1;
+    }
+
+    #aperture-logo {
+        width: 300px;
+    }
+
+    #search {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 1rem;
+
+        input {
+            flex-grow: 0.3;
+            padding: .25rem;
+        }
+    }
+
+    #profile {
+        display: grid;
+        text-align: end;
+    }
+
+    #profile--name {
+        font-weight: bold;
+    }
+
+    #profile--position {
+        font-style: italic;
+    }
+
+    .alive, .terminated {
+        padding: .25rem;
+        border-radius: .25rem;
+    }
+
+    .alive {
+        background-color: var(--success);
+    }
+    .terminated {
+        background-color: var(--error);
+    }
+
+    #current-subject--info {
+        margin-top: .25rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: .25rem;
+        img {
+            width: 128px;
+        }
+    }
+
+    #current-subject--traits {
+        display: flex;
+        gap: .5rem;
+        flex-wrap: wrap;
+        justify-content: center;
+        span {
+            padding: .25rem;
+            border-radius: .25rem;
+            background-color: var(--main-300);
+            color: white;
+        }
+    }
+}
