@@ -42,6 +42,8 @@ switch ($argv[1]) {
 
         break;
     case "letszam":
+        echo $arrCount / 2 . "\n";
+
         break;
     default:
         echo "Ismeretlen paraméter!\n";
