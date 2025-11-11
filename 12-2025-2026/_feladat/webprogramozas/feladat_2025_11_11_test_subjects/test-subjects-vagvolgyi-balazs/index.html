@@ -1,61 +1,68 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Aperture Science Test Subjects</title>
-    <link rel="stylesheet" href="src/assets/css/style.css">
-    <script src="src/js/data.js" defer></script>
-    <script src="src/js/main.js" defer></script>
-</head>
-<body>
-    <div id="app">
-        <header>
-            <img src="src/assets/images/aperture.svg" alt="Aperture Science" id="aperture-logo">
-            <h1>Test subjects</h1>
-        </header>
-        <main>
-            <form id="search">
-                <input type="text" id="name" placeholder="Search">
-                <div id="profile">
-                    <span id="profile--name"></span>
-                    <span id="profile--position"></span>
-                </div>
-            </form>
-            <div class="grid grid-cols-2">
-                <div id="list-of-subjects">
-                    <table>
-                        <thead>
-                            <tr>
-                                <th>ID</th>
-                                <th>Name</th>
-                                <th>Status</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            
-                        </tbody>
-                    </table>
-                </div>
-                <div id="current-subject">
-                    <h2>Selected test subject</h2>
-                    <div id="current-subject--info">
-                        <img src="src/assets/images/profile_picture.png">
-                        <h3><span id="current-subject--name">Name</span> (#<span id="current-subject--id">99</span>)</h3>
-                        <span class="alive" id="current-subject--status">Alive</span>
-                        <p id="current-subject--birth">2000-00-00</p>
-                        <p id="current-subject--occupation">Occupation</p>
-                        <p id="current-subject--course">Course</p>
-                        <div id="current-subject--traits">
-                            <span>undermines others</span>
-                            <span>always sleeping</span>
-                            <span>laughs at own jokes</span>
-                            <span>underestimates scope of work</span>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Aperture Science Test Subjects</title>
+        <link rel="stylesheet" href="src/assets/css/style.css" />
+        <script src="src/js/data.js" defer></script>
+        <script src="src/js/main.js" defer></script>
+    </head>
+    <body>
+        <div id="app">
+            <header>
+                <img
+                    src="src/assets/images/aperture.svg"
+                    alt="Aperture Science"
+                    id="aperture-logo"
+                />
+                <h1>Test subjects</h1>
+            </header>
+            <main>
+                <form id="search">
+                    <input type="text" id="name" placeholder="Search" />
+                    <div id="profile">
+                        <span id="profile--name"></span>
+                        <span id="profile--position"></span>
+                    </div>
+                </form>
+                <div class="grid grid-cols-2">
+                    <div id="list-of-subjects">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>ID</th>
+                                    <th>Name</th>
+                                    <th>Status</th>
+                                </tr>
+                            </thead>
+                            <tbody></tbody>
+                        </table>
+                    </div>
+                    <div id="current-subject">
+                        <h2>Selected test subject</h2>
+                        <div id="current-subject--info">
+                            <img src="src/assets/images/profile_picture.png" />
+                            <h3>
+                                <span id="current-subject--name">Name</span>
+                                (#<span id="current-subject--id">99</span>)
+                            </h3>
+                            <span class="alive" id="current-subject--status"
+                                >Alive</span
+                            >
+                            <p id="current-subject--birth">2000-00-00</p>
+                            <p id="current-subject--occupation">Occupation</p>
+                            <p id="current-subject--course">Course</p>
+                            <div id="current-subject--traits">
+                                <span>undermines others</span>
+                                <span>always sleeping</span>
+                                <span>laughs at own jokes</span>
+                                <span>underestimates scope of work</span>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
-        </main>
-    </div>
-</body>
+            </main>
+        </div>
+    </body>
 </html>
