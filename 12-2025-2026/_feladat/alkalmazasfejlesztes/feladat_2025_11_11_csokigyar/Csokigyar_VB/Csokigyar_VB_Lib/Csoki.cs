@@ -4,14 +4,14 @@ internal class Csoki : IEtel
 {
     private string Csokifajta { get; init; }
     private string[] Alapanyagok { get; init; }
-    private int KakaoTartalom { get; init; }
+    protected int KakaoTartalom { get; init; }
     
     public IEnumerable<string> MibolKeszul()
     {
         return Alapanyagok;
     }
 
-    public bool MegfeleloMinoseg
+    public virtual bool MegfeleloMinoseg
         => KakaoTartalom switch
         {
             > 50 => true,
