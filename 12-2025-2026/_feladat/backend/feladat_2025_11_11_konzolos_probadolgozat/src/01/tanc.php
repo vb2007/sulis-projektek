@@ -7,15 +7,17 @@ if ($argc > 2) {
     exit(4);
 }
 
+$arrCount = count($parok);
+
 if ($argc == 1) {
-    for ($i = 0; $i < count($parok); $i+=2) {
+    for ($i = 0; $i < $arrCount; $i+=2) {
         echo $parok[$i] . " - " . $parok[$i + 1] . "\n";
     }
 }
 
 switch ($argv[1]) {
     case "fiuk":
-        for ($i = 1; $i < count($parok); $i+=2) {
+        for ($i = 1; $i < $arrCount; $i+=2) {
             $split = explode(" ", $parok[$i]);
             echo "- " . $split[0] . "\n"; //vezetéknevek
         }
@@ -23,7 +25,7 @@ switch ($argv[1]) {
         break;
     case "lanyok":
         $girlFirstnames = [];
-        for ($i = 0; $i < count($parok); $i+=2) {
+        for ($i = 0; $i < $arrCount; $i+=2) {
             $split = explode(" ", $parok[$i]);
             array_push($girlFirstnames, $split[1]);
         }
@@ -34,6 +36,10 @@ switch ($argv[1]) {
 
         break;
     case "utolso":
+        $lastGirl = $parok[$arrCount - 2];
+        $lastBoy = $parok[$arrCount - 1];
+        echo $lastGirl . " - " . $lastBoy . "\n";
+
         break;
     case "letszam":
         break;
