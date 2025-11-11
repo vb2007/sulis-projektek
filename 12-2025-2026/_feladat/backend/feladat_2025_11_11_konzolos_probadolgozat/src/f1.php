@@ -35,15 +35,15 @@ if ($argc < 2) {
         }
     }
 
-    exit();
+    exit(0);
 }
 
 if ($argv[1] == "vb") {
     echo vb() . "\n";
-    exit();
+    exit(0);
 }
 
 if (is_int($argv[1]) || $argv[1] >= 1 || $argv[1] <= 100) {
     echo dobogo($argv[1]) . "\n";
-    exit();
+    exit(0);
 }
