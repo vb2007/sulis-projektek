@@ -1,0 +1,1 @@
+csokifajta;kakótartalom;alapanyag1;alapanyag2;...;prémium?
