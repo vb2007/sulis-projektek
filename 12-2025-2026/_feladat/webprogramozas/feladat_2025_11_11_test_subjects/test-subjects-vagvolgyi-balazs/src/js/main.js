@@ -30,7 +30,7 @@ const addEventListenersToRows = () => {
     .querySelectorAll("tr")
     .forEach((x) =>
       x.addEventListener("click", (e) =>
-        showSubject(subjects.find((y) => true)),
+        showSubject(subjects.find((y) => y.id == x.dataset.id)),
       ),
     );
 };
