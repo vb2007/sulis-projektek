@@ -19,11 +19,9 @@ const createTableRow = (subject) => {
 
   const id = document.createElement("td");
   id.textContent = subject.id;
-  id.dataset.id = subject.id;
 
   const name = document.createElement("td");
   name.textContent = subject.name;
-  name.dataset.name = subject.name;
 
   const statusWraper = document.createElement("td");
   const status = document.createElement("span");
