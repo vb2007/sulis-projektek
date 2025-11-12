@@ -38,26 +38,25 @@ const createTableRow = (subject) => {
 
 const showSubject = (subject) => {
   for (const key in subject) {
-    const element = document.querySelector(
-      `div#current-subject--info #current‑subject‑‑${key}`,
-    );
+    const element = document.getElementById(`current-subject--${key}`);
 
     switch (key) {
       case "status":
         element.textContent = capitalize(subject[key]);
         element.classList.remove("alive", "terminated");
-        element.classList.add(key);
+        element.classList.add(subject[key]);
 
         break;
       case "traits":
         let traitsArray = [];
-        for (const trait in subject[key]) {
+        for (const trait of subject[key]) {
           const span = document.createElement("span");
           span.textContent = trait;
           traitsArray.push(span);
         }
 
-        element.replaceChildren(traitsArray);
+        console.log(traitsArray);
+        element.replaceChildren(...traitsArray);
 
         break;
       default:
