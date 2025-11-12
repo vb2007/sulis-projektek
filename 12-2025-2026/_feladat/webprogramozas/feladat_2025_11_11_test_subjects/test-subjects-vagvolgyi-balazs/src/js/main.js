@@ -55,7 +55,6 @@ const showSubject = (subject) => {
           traitsArray.push(span);
         }
 
-        console.log(traitsArray);
         element.replaceChildren(...traitsArray);
 
         break;
