@@ -9,10 +9,10 @@ const createTableRow = (subject) => {
   row.dataset.id = subject.id;
 
   const id = document.createElement("td");
-  row.dataset.id = subject.id;
+  id.dataset.id = subject.id;
 
   const name = document.createElement("td");
-  row.dataset.name = subject.name;
+  name.dataset.name = subject.name;
 
   const statusWraper = document.createElement("td");
   const status = document.createElement("span");
@@ -47,7 +47,36 @@ const fillTable = (array) => {
 const table = document.querySelector("#list-of-subjects tbody");
 fillTable(subjects);
 
-const showSubject = (subject) => {};
+const showSubject = (subject) => {
+  for (const key in subject) {
+    const element = document.querySelector(
+      `div#current-subject--info #current‑subject‑‑${key}`,
+    );
+
+    switch (key) {
+      case "status":
+        element.textContent = capitalize(subject[key]);
+        element.classList.remove("alive", "terminated");
+        element.classList.add(key);
+
+        break;
+      case "traits":
+        let traitsArray = [];
+        for (const trait in subject[key]) {
+          const span = document.createElement("span");
+          span.textContent = trait;
+          traitsArray.push(span);
+        }
+
+        element.replaceChildren(traitsArray);
+
+        break;
+      default:
+        element.textContent = subject[key];
+        break;
+    }
+  }
+};
 
 const filterSubjects = (name) => {};
 
