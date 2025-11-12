@@ -78,7 +78,11 @@ const showSubject = (subject) => {
   }
 };
 
-const filterSubjects = (name) => {};
+const filterSubjects = (name) => {
+  return subjects.filter((subject) =>
+    subject.name.toLowerCase().includes(name.toLowerCase()),
+  );
+};
 
 const userProfile = {
   name: "Balázs Vágvölgyi",
