@@ -1,0 +1,184 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+
+@layer base, components, utility;
+
+@layer base {
+    :root {
+        --color-gray-100: oklch(0.1 0 240);
+        --color-gray-200: oklch(0.2 0 240);
+        --color-gray-300: oklch(0.3 0 240);
+        --color-gray-400: oklch(0.4 0 240);
+        --color-gray-500: oklch(0.5 0 240);
+        --color-gray-600: oklch(0.6 0 240);
+        --color-gray-700: oklch(0.7 0 240);
+        --color-gray-800: oklch(0.8 0 240);
+        --color-gray-900: oklch(0.9 0 240);
+
+        --color-main-1: oklch(0.7 0.18 236);
+        --color-main-2: oklch(0.775 0.138 240);
+    }
+
+    *, *::before, *::after {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    body {
+        background-color: var(--color-gray-200);
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        color: white;
+        font-family: "Lato", sans-serif;
+    }
+
+    main {
+        flex-grow: 1;
+        padding: .5rem;
+        padding-bottom: 130px;
+        width: 95%;
+        max-width: 1200px;
+        margin-inline: auto;
+    }
+
+    header {
+        margin-bottom: 1rem;
+    }
+}
+
+@layer components {
+    nav {
+        background-color: var(--color-gray-100);
+        padding: .5rem 1rem;
+        display: flex;
+        gap: .25rem;
+        flex-direction: column;
+        justify-content: space-between;
+
+        img {
+            height: 2rem;
+            align-self: center;
+        }
+        span {
+            align-self: center;
+        }
+    }
+
+    input {
+        padding: .25rem;
+        font-size: 1rem;
+        background-color: var(--color-gray-300);
+        color: white;
+        border: none;
+        border-radius: .25rem;
+        flex-basis: 30%;
+    }
+
+    footer {
+        background-color: var(--color-gray-100);
+        width: 100vw;
+        padding: .5rem;
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        display: grid;
+        grid-template-columns: auto 1fr;
+        gap: .5rem;
+    }
+
+    #tracks {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .card {
+        display: grid;
+        gap: .5rem;
+        grid-template-columns: auto 1fr;
+    }
+
+    #playing--cover, .card--cover {
+        height: 75px;
+        width: 75px;
+        aspect-ratio: 1;
+        object-fit: cover;
+        grid-row: span 2;
+    }
+
+    #playing--track, .card--track {
+        font-weight: bold;
+        font-size: 1.5rem;
+        grid-column: 2;
+        grid-row: 1;
+        align-self: self-end;
+        overflow: hidden;
+        white-space: nowrap; 
+        text-overflow: ellipsis;
+    }
+
+    #playing--artists, .card--artists {
+        font-size: 1.25rem;
+        grid-column: 2;
+        grid-row: 2;
+        align-self: self-start;
+        overflow: hidden;
+        white-space: nowrap; 
+        text-overflow: ellipsis;
+    }
+
+    button {
+        background-color: transparent;
+        border: none;
+        color: white;
+        font-size: 2rem;
+    }
+
+    .card--explicit::before {
+        content: 'E';
+        background-color: var(--color-gray-300);
+        padding: .5rem;
+        border-radius: .5rem;
+        margin-right: .25rem;
+    }
+
+    #paginator {
+        margin-block: 1rem;
+        font-size: 1.1rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 1rem;
+
+        * {
+            cursor: pointer;
+        }
+
+    }
+
+    #page-numbers {
+        display: none;
+        gap: .5rem;
+    }
+
+    @media (width >= 768px) {
+        nav {
+            flex-direction: row;
+            align-items: center;
+        }
+
+        #playing--cover, .card--cover {
+            height: 110px;
+            width: 110px;
+        }
+
+        #page-numbers {
+            display: flex;
+        }
+
+        footer {
+            padding-inline: 5rem;
+        }
+    }
+}
