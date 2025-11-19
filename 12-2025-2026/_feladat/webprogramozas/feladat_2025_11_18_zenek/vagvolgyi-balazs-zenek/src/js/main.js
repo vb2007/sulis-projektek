@@ -1,5 +1,16 @@
 "use strict";
 
+const user = {
+  username: "vbalazs",
+  nickname: "Balázs",
+};
+
+//kifejezetten destrukciot kért, user.* nem elég
+const { username, nickname } = user;
+
+document.getElementById("username").textContent = username;
+document.getElementById("nickname").textContent = nickname;
+
 const ITEMS_PER_PAGE = 20;
 
 let tracks = [...data];
