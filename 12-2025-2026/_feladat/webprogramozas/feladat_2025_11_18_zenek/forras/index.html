@@ -1,35 +1,38 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="hu">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Zenék</title>
-    <link rel="stylesheet" href="src/assets/css/style.css">
-    <script src="src/js/data.js" defer></script>
-    <script src="src/js/main.js" defer></script>
-</head>
-<body>
-    <nav>
-        <img src="src/assets/images/icon.svg" alt="Songs">
-        <input type="text" name="search" id="search" placeholder="Search">
-        <span id="username"></span>
-    </nav>
-    <main>
-        <header>
-            <h1>Üdv újra, <span id="nickname"></span>!</h1>
-            <p id="number-of-results"></p>
-        </header>
-        <div id="tracks"></div>
-        <div id="paginator">
-            <button type="button" id="prev-page">←</button>
-            <div id="page-numbers"></div>
-            <button type="button" id="next-page">→</button>
-        </div>
-    </main>
-    <footer>
-        <img src="https://images.squarespace-cdn.com/content/v1/5d2e2c5ef24531000113c2a4/1564770283101-36J6KM8EIK71FOCGGDM2/album-placeholder.png?format=1000w" id="playing--cover">
-        <span id="playing--track">No track playing</span>
-        <span id="playing--artists">Select a track to play</span>
-    </footer>
-</body>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Zenék</title>
+        <link rel="stylesheet" href="src/assets/css/style.css" />
+        <script src="src/js/data.js" defer></script>
+        <script src="src/js/main.js" defer></script>
+    </head>
+    <body>
+        <nav>
+            <img src="src/assets/images/icon.svg" alt="Songs" />
+            <input type="text" name="search" id="search" placeholder="Search" />
+            <span id="username"></span>
+        </nav>
+        <main>
+            <header>
+                <h1>Üdv újra, <span id="nickname"></span>!</h1>
+                <p id="number-of-results"></p>
+            </header>
+            <div id="tracks"></div>
+            <div id="paginator">
+                <button type="button" id="prev-page">←</button>
+                <div id="page-numbers"></div>
+                <button type="button" id="next-page">→</button>
+            </div>
+        </main>
+        <footer>
+            <img
+                src="https://images.squarespace-cdn.com/content/v1/5d2e2c5ef24531000113c2a4/1564770283101-36J6KM8EIK71FOCGGDM2/album-placeholder.png?format=1000w"
+                id="playing--cover"
+            />
+            <span id="playing--track">No track playing</span>
+            <span id="playing--artists">Select a track to play</span>
+        </footer>
+    </body>
 </html>

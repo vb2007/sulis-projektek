@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap");
 
 @layer base, components, utility;
 
@@ -18,7 +18,9 @@
         --color-main-2: oklch(0.775 0.138 240);
     }
 
-    *, *::before, *::after {
+    *,
+    *::before,
+    *::after {
         margin: 0;
         padding: 0;
         box-sizing: border-box;
@@ -35,7 +37,7 @@
 
     main {
         flex-grow: 1;
-        padding: .5rem;
+        padding: 0.5rem;
         padding-bottom: 130px;
         width: 95%;
         max-width: 1200px;
@@ -50,9 +52,9 @@
 @layer components {
     nav {
         background-color: var(--color-gray-100);
-        padding: .5rem 1rem;
+        padding: 0.5rem 1rem;
         display: flex;
-        gap: .25rem;
+        gap: 0.25rem;
         flex-direction: column;
         justify-content: space-between;
 
@@ -66,25 +68,25 @@
     }
 
     input {
-        padding: .25rem;
+        padding: 0.25rem;
         font-size: 1rem;
         background-color: var(--color-gray-300);
         color: white;
         border: none;
-        border-radius: .25rem;
+        border-radius: 0.25rem;
         flex-basis: 30%;
     }
 
     footer {
         background-color: var(--color-gray-100);
         width: 100vw;
-        padding: .5rem;
+        padding: 0.5rem;
         position: fixed;
         bottom: 0;
         left: 0;
         display: grid;
         grid-template-columns: auto 1fr;
-        gap: .5rem;
+        gap: 0.5rem;
     }
 
     #tracks {
@@ -95,11 +97,12 @@
 
     .card {
         display: grid;
-        gap: .5rem;
+        gap: 0.5rem;
         grid-template-columns: auto 1fr;
     }
 
-    #playing--cover, .card--cover {
+    #playing--cover,
+    .card--cover {
         height: 75px;
         width: 75px;
         aspect-ratio: 1;
@@ -107,24 +110,26 @@
         grid-row: span 2;
     }
 
-    #playing--track, .card--track {
+    #playing--track,
+    .card--track {
         font-weight: bold;
         font-size: 1.5rem;
         grid-column: 2;
         grid-row: 1;
         align-self: self-end;
         overflow: hidden;
-        white-space: nowrap; 
+        white-space: nowrap;
         text-overflow: ellipsis;
     }
 
-    #playing--artists, .card--artists {
+    #playing--artists,
+    .card--artists {
         font-size: 1.25rem;
         grid-column: 2;
         grid-row: 2;
         align-self: self-start;
         overflow: hidden;
-        white-space: nowrap; 
+        white-space: nowrap;
         text-overflow: ellipsis;
     }
 
@@ -136,11 +141,11 @@
     }
 
     .card--explicit::before {
-        content: 'E';
+        content: "E";
         background-color: var(--color-gray-300);
-        padding: .5rem;
-        border-radius: .5rem;
-        margin-right: .25rem;
+        padding: 0.5rem;
+        border-radius: 0.5rem;
+        margin-right: 0.25rem;
     }
 
     #paginator {
@@ -154,12 +159,11 @@
         * {
             cursor: pointer;
         }
-
     }
 
     #page-numbers {
         display: none;
-        gap: .5rem;
+        gap: 0.5rem;
     }
 
     @media (width >= 768px) {
@@ -168,7 +172,8 @@
             align-items: center;
         }
 
-        #playing--cover, .card--cover {
+        #playing--cover,
+        .card--cover {
             height: 110px;
             width: 110px;
         }
