@@ -55,7 +55,22 @@ document.querySelector("#prev-page").addEventListener("click", (e) => {
 });
 
 const paginator = document.querySelector("#page-numbers");
-function generatePaginator() {}
+function generatePaginator() {
+  const totalPages = Math.ceil(tracks.length / ITEMS_PER_PAGE);
+  paginator.innerHTML = "";
+
+  for (let i = 1; i <= totalPages; i++) {
+    const pageLink = document.createElement("a");
+    pageLink.textContent = i;
+
+    pageLink.addEventListener("click", () => {
+      tracksContainer.dataset.page = i;
+      generateCards(i);
+    });
+
+    paginator.append(pageLink);
+  }
+}
 generatePaginator();
 
 function generateCards(page) {}
