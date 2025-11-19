@@ -31,6 +31,9 @@ const createCard = (object) => {
   artistsSpan.classList.add("card--artists");
   artistsSpan.textContent = artists.split(", ");
   artistsSpan.title = artists.split(", ");
+
+  card.append(img, nameSpan, artistsSpan);
+  return card;
 };
 
 const ITEMS_PER_PAGE = 20;
