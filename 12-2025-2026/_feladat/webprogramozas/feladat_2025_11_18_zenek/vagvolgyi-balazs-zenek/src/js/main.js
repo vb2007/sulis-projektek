@@ -11,6 +11,28 @@ const { username, nickname } = user;
 document.getElementById("username").textContent = username;
 document.getElementById("nickname").textContent = nickname;
 
+const createCard = (object) => {
+  const { name, artists, image, explicit } = object;
+
+  const card = document.createElement("div");
+  card.classList.add("card");
+
+  const img = document.createElement("img");
+  img.classList.add("card--cover");
+  img.src = image;
+
+  const nameSpan = document.createElement("span");
+  nameSpan.classList.add("card--track");
+  nameSpan.textContent = name;
+  nameSpan.title = name;
+
+  const artistsSpan = document.createElement("span");
+  explicit ?? artistsSpan.classList.add("card--explicit");
+  artistsSpan.classList.add("card--artists");
+  artistsSpan.textContent = artists.split(", ");
+  artistsSpan.title = artists.split(", ");
+};
+
 const ITEMS_PER_PAGE = 20;
 
 let tracks = [...data];
