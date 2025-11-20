@@ -8,7 +8,7 @@ public class Szemely
     public int kor;
     public int Kor => kor;
     
-    public Szemely(int kor, string szemelyNev, DateTime szuletesiDatum)
+    public Szemely(string szemelyNev, DateTime szuletesiDatum)
     {
         SzemelyNev = szemelyNev ?? throw new ArgumentNullException(nameof(szemelyNev));
         SzuletesiDatum = szuletesiDatum;
