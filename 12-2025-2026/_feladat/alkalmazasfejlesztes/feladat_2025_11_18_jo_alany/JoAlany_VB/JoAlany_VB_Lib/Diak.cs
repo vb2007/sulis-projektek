@@ -1,6 +1,6 @@
 namespace JoAlany_VB_Lib;
 
-public class Diak : Szemely, IVizsgalat
+public sealed class Diak : Szemely, IVizsgalat
 {
     public int PuskakSzama { get; init; }
     public Diak(string szemelyNev, DateTime szuletesiDatum, int puskak) : base(szemelyNev, szuletesiDatum)

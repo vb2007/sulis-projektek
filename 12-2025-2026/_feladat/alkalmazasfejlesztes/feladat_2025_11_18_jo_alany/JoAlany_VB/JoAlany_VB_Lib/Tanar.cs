@@ -1,6 +1,6 @@
 namespace JoAlany_VB_Lib;
 
-public class Tanar : Szemely, IVizsgalat
+public sealed class Tanar : Szemely, IVizsgalat
 {
     public double EvVegiAtlag { get; init; }
 
