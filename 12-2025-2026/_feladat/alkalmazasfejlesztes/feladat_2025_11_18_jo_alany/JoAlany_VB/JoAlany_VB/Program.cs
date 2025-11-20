@@ -37,6 +37,19 @@ class Program
         }
 
         Nyilvantartas szemelyek = new(SzemelyAdatok());
-        
+        for (int i = 1; i <= szemelyek.Elemszam; i++)
+        {
+            Console.WriteLine(szemelyek[i]);
+        }
+
+        Console.WriteLine($"Tanárok száma: {szemelyek.OsszesTaroltTanar().Count()}");
+        Console.WriteLine($"Diákok száma: {szemelyek.OsszesTaroltDiak().Count()}");
+
+        Console.WriteLine($"Tanárok átlagos életkora: {szemelyek.OsszesTaroltTanar().Average(x => x.Kor):0.00}");
+
+        foreach (var item in szemelyek.OsszesTaroltTanar().Cast<Diak>().GroupBy(x => x.PuskakSzama))
+        {
+            Console.WriteLine($"{item.Key} - {item.Count()}");
+        }
     }
 }

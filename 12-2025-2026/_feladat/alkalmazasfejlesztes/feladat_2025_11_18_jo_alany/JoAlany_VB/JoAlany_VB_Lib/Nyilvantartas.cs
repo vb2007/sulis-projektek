@@ -24,4 +24,6 @@ public class Nyilvantartas
     {
         return _szemelyek.Where(x => x is Tanar);
     }
+
+    public int Elemszam => _szemelyek.Count;
 }
