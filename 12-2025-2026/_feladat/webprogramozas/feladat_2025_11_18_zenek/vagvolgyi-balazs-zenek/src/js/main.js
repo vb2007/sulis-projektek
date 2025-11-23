@@ -26,9 +26,15 @@ const createCard = (object) => {
   nameSpan.title = name;
 
   const artistsSpan = document.createElement("span");
-  explicit ?? artistsSpan.classList.add("card--explicit");
   artistsSpan.classList.add("card--artists");
-  artistsSpan.textContent = artists.join(", ");
+
+  if (explicit) {
+    const explicitSpan = document.createElement("span");
+    explicitSpan.classList.add("card--explicit");
+    artistsSpan.append(explicitSpan);
+  }
+
+  artistsSpan.append(artists.join(", "));
   artistsSpan.title = artists.join(", ");
 
   card.append(img, nameSpan, artistsSpan);
