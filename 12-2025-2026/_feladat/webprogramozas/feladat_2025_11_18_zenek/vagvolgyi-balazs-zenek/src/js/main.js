@@ -76,13 +76,13 @@ function generateCards(page) {
   const startIndex = page * ITEMS_PER_PAGE - ITEMS_PER_PAGE;
   const endIndex = startIndex + ITEMS_PER_PAGE;
 
-  const tracksOnPage = tracks.slice(startIndex, endIndex);
-  tracksContainer.innerHTML = "";
+  const tracksToShow = tracks.slice(startIndex, endIndex);
 
-  for (let i = startIndex; i < endIndex; i++) {
-    const card = createCard(data[i]);
+  tracksContainer.innerHTML = "";
+  tracksToShow.forEach((track) => {
+    const card = createCard(track);
     tracksContainer.append(card);
-  }
+  });
 }
 generateCards(1);
 
