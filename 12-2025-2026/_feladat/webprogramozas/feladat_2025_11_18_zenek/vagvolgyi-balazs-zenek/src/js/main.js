@@ -54,7 +54,7 @@ document.querySelector("#prev-page").addEventListener("click", (e) => {
 });
 
 const paginator = document.querySelector("#page-numbers");
-function generatePaginator() {
+const generatePaginator = () => {
   const totalPages = Math.ceil(tracks.length / ITEMS_PER_PAGE);
   paginator.innerHTML = "";
 
@@ -69,10 +69,10 @@ function generatePaginator() {
 
     paginator.append(pageLink);
   }
-}
+};
 generatePaginator();
 
-function generateCards(page) {
+const generateCards = (page) => {
   const startIndex = page * ITEMS_PER_PAGE - ITEMS_PER_PAGE;
   const endIndex = startIndex + ITEMS_PER_PAGE;
 
@@ -83,13 +83,26 @@ function generateCards(page) {
     const card = createCard(track);
     tracksContainer.append(card);
   });
-}
+};
 generateCards(1);
 
-function filterTracks(value) {
+const selectTrack = (object) => {
+  const { name, artists, image } = object;
+
+  const playingCover = document.getElementById("playing--cover");
+  playingCover.src = image;
+
+  const playingTrack = document.getElementById("playing--track");
+  playingTrack.textContent = name;
+
+  const playingArtists = document.getElementById("playing--artists");
+  playingArtists.textContent = artists.join(", ");
+};
+
+const filterTracks = (value) => {
   generateCards(tracksContainer.dataset.page);
   generatePaginator();
-}
+};
 
 const resultsText = document.querySelector("#number-of-results");
 document.querySelector("#search").addEventListener("input", (e) => {
