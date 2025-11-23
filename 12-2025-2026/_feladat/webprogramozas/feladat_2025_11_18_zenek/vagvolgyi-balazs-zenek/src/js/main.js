@@ -32,6 +32,10 @@ const createCard = (object) => {
   artistsSpan.title = artists.join(", ");
 
   card.append(img, nameSpan, artistsSpan);
+
+  card.addEventListener("click", () => {
+    selectTrack(object);
+  });
   return card;
 };
 
