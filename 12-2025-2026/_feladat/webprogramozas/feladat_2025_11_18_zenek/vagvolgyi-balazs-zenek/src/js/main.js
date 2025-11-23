@@ -104,6 +104,15 @@ const selectTrack = (object) => {
 };
 
 const filterTracks = (value) => {
+  tracks = data.filter((track) => {
+    return (
+      track.name.toLowerCase().includes(value.toLowerCase()) ||
+      track.artists.some((artist) =>
+        artist.toLowerCase().includes(value.toLowerCase()),
+      )
+    );
+  });
+
   generateCards(tracksContainer.dataset.page);
   generatePaginator();
 };
