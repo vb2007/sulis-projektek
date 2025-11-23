@@ -7,7 +7,6 @@ const user = {
 
 //kifejezetten destrukciot kért, user.* nem elég
 const { username, nickname } = user;
-
 document.getElementById("username").textContent = username;
 document.getElementById("nickname").textContent = nickname;
 
@@ -29,8 +28,8 @@ const createCard = (object) => {
   const artistsSpan = document.createElement("span");
   explicit ?? artistsSpan.classList.add("card--explicit");
   artistsSpan.classList.add("card--artists");
-  artistsSpan.textContent = artists.split(", ");
-  artistsSpan.title = artists.split(", ");
+  artistsSpan.textContent = artists.join(", ");
+  artistsSpan.title = artists.join(", ");
 
   card.append(img, nameSpan, artistsSpan);
   return card;
@@ -73,7 +72,20 @@ function generatePaginator() {
 }
 generatePaginator();
 
-function generateCards(page) {}
+function generateCards(page) {
+  const startIndex = page * ITEMS_PER_PAGE - ITEMS_PER_PAGE;
+  const endIndex = startIndex + ITEMS_PER_PAGE;
+
+  const tracksOnPage = tracks.slice(startIndex, endIndex);
+  tracksContainer.innerHTML = "";
+
+  for (let i = startIndex; i < endIndex; i++) {
+    console.log(data[i]);
+    const card = createCard(data[i]);
+    tracksContainer.append(card);
+  }
+  console.log(startIndex);
+}
 generateCards(1);
 
 function filterTracks(value) {
