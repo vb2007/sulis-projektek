@@ -80,11 +80,9 @@ function generateCards(page) {
   tracksContainer.innerHTML = "";
 
   for (let i = startIndex; i < endIndex; i++) {
-    console.log(data[i]);
     const card = createCard(data[i]);
     tracksContainer.append(card);
   }
-  console.log(startIndex);
 }
 generateCards(1);
 
