@@ -16,6 +16,6 @@ public sealed class Tanar : Szemely, IVizsgalat
     
     public override string ToString()
     {
-        return $"{SzemelyNev} ({kor} éves), {(JoAlanyE() == true ? "Jó tanár!" : "Rossz tanár!")}";
+        return $"{SzemelyNev} ({Kor} éves), {(JoAlanyE() == true ? "Jó tanár!" : "Rossz tanár!")}";
     }
 }

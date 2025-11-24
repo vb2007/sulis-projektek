@@ -45,7 +45,7 @@ class Program
 
         Console.WriteLine($"Tanárok átlagos életkora: {szemelyek.OsszesTaroltTanar().Average(x => x.Kor):0.00}");
 
-        foreach (var item in szemelyek.OsszesTaroltTanar().Cast<Diak>().GroupBy(x => x.PuskakSzama))
+        foreach (var item in szemelyek.OsszesTaroltDiak().Cast<Diak>().GroupBy(x => x.PuskakSzama))
         {
             Console.WriteLine($"{item.Key} - {item.Count()}");
         }
