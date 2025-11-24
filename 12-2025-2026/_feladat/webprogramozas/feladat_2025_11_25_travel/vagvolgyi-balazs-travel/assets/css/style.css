@@ -1,6 +1,6 @@
-@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;600;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@400;600;700&display=swap");
 
-*{
+* {
     margin: 0;
     padding: 0;
     font-family: Lato, sans-serif;
@@ -30,8 +30,9 @@
     border-radius: 12px;
     box-shadow: 0 4px 12px rgb(0 0 0 / 0.05);
     overflow: hidden;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
 
     img {
         width: 100%;
@@ -66,7 +67,6 @@
         color: #000;
         margin-top: 16px;
     }
-
 }
 
 .offer-card:hover {
@@ -107,7 +107,7 @@
     position: relative;
     width: 100%;
     min-height: 300px;
-    background-image: url('https://images.unsplash.com/photo-1566622246517-0e59fdb36f0e?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+    background-image: url("https://images.unsplash.com/photo-1566622246517-0e59fdb36f0e?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
     background-size: cover;
     background-position: center;
     display: flex;
@@ -148,8 +148,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: #f8f9fa; 
-
+    background-color: #f8f9fa;
 }
 
 .filter-controls {
@@ -232,35 +231,33 @@ main {
         gap: 2.5rem;
     }
 
-    .card-body{
+    .card-body {
         display: flex;
         flex-direction: column;
         justify-content: space-between;
         height: calc(100% - 250px);
-
     }
-  
 }
 
 .sort-controls {
-  display: flex;
-  align-items: center;
-  gap: 0.75rem; 
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
 }
 
 .sort-label {
-  font-family: 'Lato', sans-serif;
-  font-size: 0.9rem;
-  font-weight: 600;
-  color: #555; 
+    font-family: "Lato", sans-serif;
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: #555;
 }
 
 .sort-select {
-  padding: 0.75rem 1rem;
-  border: 1px solid #ccc;
-  border-radius: 8px;
-  background-color: #fff;
-  font-family: 'Lato', sans-serif;
-  font-size: 0.9rem;
-  cursor: pointer;
+    padding: 0.75rem 1rem;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: #fff;
+    font-family: "Lato", sans-serif;
+    font-size: 0.9rem;
+    cursor: pointer;
 }
