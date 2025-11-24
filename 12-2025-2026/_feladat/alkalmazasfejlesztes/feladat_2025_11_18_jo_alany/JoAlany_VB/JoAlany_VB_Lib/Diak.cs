@@ -15,6 +15,6 @@ public sealed class Diak : Szemely, IVizsgalat
 
     public override string ToString()
     {
-        return $"{SzemelyNev} ({kor} éves), {(JoAlanyE() == true ? "Jó diák!" : "Rossz diák!")}";
+        return $"{SzemelyNev} ({Kor} éves), {(JoAlanyE() == true ? "Jó diák!" : "Rossz diák!")}";
     }
 }

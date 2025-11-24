@@ -13,14 +13,19 @@ public class Szemely
         SzemelyNev = szemelyNev ?? throw new ArgumentNullException(nameof(szemelyNev));
         SzuletesiDatum = szuletesiDatum;
         int korTest = DateTime.Today.Year - szuletesiDatum.Year;
+        
+        //ha még nem volt idén születésnap, 1-et levonunk
+        if (DateTime.Today < szuletesiDatum.AddYears(korTest))
+        {
+            korTest--;
+        }
+        
         if (korTest < 14)
         {
             throw new HibasEletkorException();
         }
-        else
-        {
-            this.kor = korTest;
-        }
+        
+        this.kor = korTest;
     }
 
     public override string ToString()
