@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JoAlany_VB", "JoAlany_VB\JoAlany_VB.csproj", "{3A882EF7-A0B7-4DC9-A6BD-1328514A063E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JoAlany_VB_Lib", "JoAlany_VB_Lib\JoAlany_VB_Lib.csproj", "{0F01F30D-9B14-42C0-BCBD-082B7B432EB3}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{3A882EF7-A0B7-4DC9-A6BD-1328514A063E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3A882EF7-A0B7-4DC9-A6BD-1328514A063E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3A882EF7-A0B7-4DC9-A6BD-1328514A063E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3A882EF7-A0B7-4DC9-A6BD-1328514A063E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0F01F30D-9B14-42C0-BCBD-082B7B432EB3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0F01F30D-9B14-42C0-BCBD-082B7B432EB3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0F01F30D-9B14-42C0-BCBD-082B7B432EB3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0F01F30D-9B14-42C0-BCBD-082B7B432EB3}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal

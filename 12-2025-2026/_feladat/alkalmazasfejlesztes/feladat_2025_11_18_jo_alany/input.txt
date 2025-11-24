@@ -1,0 +1,14 @@
+t;Senki Alfonz;2000.01.01;4,1
+d;Csulok;2022.12.31;2
+d;Tusko Hopkins;2006.11.12;0
+t;Torok Szultan;1999.02.15;4,2
+t;Potrien ormester;1980.11.21;2.9
+d;Levin;2008.06.30;1
+d;Kvasztics Fedor;2009.11.01;0
+d;Galamb;2019.03.05;1
+d;Troppauer Hümér;2008.11.11;2
+d;Piszkos Fred;2007.06.12;5
+t;Fülig Jimmy;2000.03.23;4,7
+d;Vanek B Eduard;2006.04.23;1
+d;Puskin Mária Gottfried;2008.10.08;0
+d;Kockás Pierre;2007.04.23;0
