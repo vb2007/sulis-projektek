@@ -1,3 +1,5 @@
+"use strict";
+
 const offers = [
   {
     id: 1,
@@ -351,7 +353,7 @@ const offers = [
     hotel_id: 11,
     hotel: {
       id: 11,
-      name: "Downtown Skyline Apartments",
+      name: "Downtown Skyline updated js importsApartments",
       address: {
         zip: "94103",
         city: "San Francisco",
