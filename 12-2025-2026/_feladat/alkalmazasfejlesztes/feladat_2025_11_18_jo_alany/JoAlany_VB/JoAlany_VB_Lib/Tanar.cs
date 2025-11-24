@@ -11,7 +11,8 @@ public sealed class Tanar : Szemely, IVizsgalat
 
     public bool JoAlanyE()
     {
-        return EvVegiAtlag >= 3.5 && Kor < 30 ? true : false;
+        //return EvVegiAtlag >= 3.5 && Kor < 30 ? true : false;
+        return EvVegiAtlag >= 3.5 && Kor < 30;
     }
     
     public override string ToString()

@@ -5,7 +5,7 @@ public class Szemely
     //get=később módosítható az értéke, init=beállítás után nem felülírható az értéke
     public string SzemelyNev { get; init; }
     public DateTime SzuletesiDatum { get; init; }
-    public int kor;
+    private int kor;
     public int Kor => kor;
     
     public Szemely(string szemelyNev, DateTime szuletesiDatum)

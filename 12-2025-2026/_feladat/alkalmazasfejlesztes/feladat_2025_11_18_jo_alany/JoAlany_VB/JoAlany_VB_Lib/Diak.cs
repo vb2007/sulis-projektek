@@ -10,7 +10,8 @@ public sealed class Diak : Szemely, IVizsgalat
 
     public bool JoAlanyE()
     {
-        return PuskakSzama == 0 ? true : false;
+        //return PuskakSzama == 0 ? true : false;
+        return PuskakSzama == 0;
     }
 
     public override string ToString()
