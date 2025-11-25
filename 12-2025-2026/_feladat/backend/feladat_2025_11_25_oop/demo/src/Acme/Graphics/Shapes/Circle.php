@@ -22,11 +22,12 @@ class Circle {
     }
 
     public function setSize(int $size) {
-        if ($size < 0) {
-            $this->size = 0;
-        }
-        else {
-            $this->size = $size;
-        }
+        $size < 0 ? $this->size = 0 : $this->size = $size;
+        // if ($size < 0) {
+        //     $this->size = 0;
+        // }
+        // else {
+        //     $this->size = $size;
+        // }
     }
 }
