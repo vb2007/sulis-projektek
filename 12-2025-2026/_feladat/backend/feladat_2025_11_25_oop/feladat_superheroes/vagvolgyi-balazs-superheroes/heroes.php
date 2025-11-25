@@ -9,4 +9,11 @@ $superheroes = [
     new Superhero("Iron Man", 45, ["Genius Intellect", "Powered Armor Suit", "Wealth"]),
     new Superhero("Spider-Man", 18, ["Wall-Crawling", "Spider-Sense", "Super Agility"]),
     new Superhero("Superman", 35, ["Strength", "Flight", "X-ray Vision"]),
-]
+];
+
+$formattedHeroes = array_map(
+    fn($hero) => "Név: " . $hero->getName() . PHP_EOL . "Kor: " . $hero->getAge() . PHP_EOL . "Szupererők: " . $hero->getSuperpowers(),
+    $superheroes
+);
+
+echo implode(PHP_EOL . PHP_EOL, $formattedHeroes) . PHP_EOL;
