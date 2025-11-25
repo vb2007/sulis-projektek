@@ -13,6 +13,10 @@ class Alien {
         $this->isFriendly = $isFriendly;
     }
 
+    public function __tostring(): string {
+        return ($this->isFriendly() ? " " : "!") . $this->getSpecies() . " (" . $this->getPlanet() . ")" . PHP_EOL;
+    }
+
     public function getSpecies(): string {
         return $this->species;
     }

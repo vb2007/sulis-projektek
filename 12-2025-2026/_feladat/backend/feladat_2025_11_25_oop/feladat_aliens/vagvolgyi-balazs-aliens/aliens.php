@@ -14,5 +14,6 @@ $alien4 = new Alien("Gloop", "Gloopia", false);
 $aliens = [$alien1, $alien2, $alien3, $alien4];
 
 foreach($aliens as $alien) {
-    echo ($alien->isFriendly() ? " " : "!") . $alien->getSpecies() . " (" . $alien->getPlanet() . ")" . PHP_EOL;
+    // echo ($alien->isFriendly() ? " " : "!") . $alien->getSpecies() . " (" . $alien->getPlanet() . ")" . PHP_EOL;
+    echo $alien->__tostring();
 }
