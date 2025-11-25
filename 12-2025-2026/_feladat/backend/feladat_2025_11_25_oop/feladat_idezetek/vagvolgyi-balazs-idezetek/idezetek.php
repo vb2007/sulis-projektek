@@ -18,7 +18,9 @@ $quotations = [
 
 // muszáj, ha nem akarunk extra üres sort az első / utolsó elemek előtt
 $formattedQuotes = array_map(
-    fn($quotation) => $quotation->getText() . PHP_EOL . $quotation->getPerson() . " - " . $quotation->getTitle(),
+    fn($quotation) =>
+        $quotation->getText() . PHP_EOL .
+        $quotation->getPerson() . " - " . $quotation->getTitle(),
     $quotations
 );
 
