@@ -12,7 +12,10 @@ $superheroes = [
 ];
 
 $formattedHeroes = array_map(
-    fn($hero) => "Név: " . $hero->getName() . PHP_EOL . "Kor: " . $hero->getAge() . PHP_EOL . "Szupererők: " . $hero->getSuperpowers(),
+    fn($hero) =>
+        "Név: " . $hero->getName() . PHP_EOL .
+        "Kor: " . $hero->getAge() . PHP_EOL .
+        "Szupererők: " . implode(", ", $hero->getSuperpowers()),
     $superheroes
 );
 
