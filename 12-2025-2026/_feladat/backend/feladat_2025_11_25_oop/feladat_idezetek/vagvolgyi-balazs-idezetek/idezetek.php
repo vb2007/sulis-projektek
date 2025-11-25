@@ -12,6 +12,14 @@ $quotations = [
     new Quotation("Tigris van a fürdőszobában!", "Stu Price", "Másnaposok")
 ];
 
-foreach($quotations as $quotation) {
-    echo $quotation->getText() . PHP_EOL . $quotation->getPerson() . " - " . $quotation->getTitle();
-}
+// foreach($quotations as $quotation) {
+//     echo $quotation->getText() . PHP_EOL . $quotation->getPerson() . " - " . $quotation->getTitle();
+// }
+
+// muszáj, ha nem akarunk extra üres sort az első / utolsó elemek előtt
+$formattedQuotes = array_map(
+    fn($quotation) => $quotation->getText() . PHP_EOL . $quotation->getPerson() . " - " . $quotation->getTitle(),
+    $quotations
+);
+
+echo implode(PHP_EOL . PHP_EOL, $formattedQuotes) . PHP_EOL;
