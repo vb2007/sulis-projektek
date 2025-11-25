@@ -3,6 +3,7 @@
 
 #For web projects (mainly npm Vite package & others)
 node_modules/
+.vite
 **package-lock.json
 
 #For C# projects
