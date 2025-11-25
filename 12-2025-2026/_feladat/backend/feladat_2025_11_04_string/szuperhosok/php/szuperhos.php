@@ -1,0 +1,24 @@
+<?php
+
+$hero = strtolower($argv[1]);
+
+echo "2. feladat:\n";
+echo "Hős neve:\t" . strtoupper($hero) . "\n"; //mb_strtoupper
+
+echo "3. feladat:\n";
+echo "Hős karaktereinek száma: " . strlen($hero) . "\n"; //mb_strlen
+
+echo "4. feladat:\n";
+echo "A hősnek " . ($argc > 2 ? "van" : "nincs") . " társa.\n";
+
+echo "5. feladat:\n";
+echo "A hős nevében " . (str_contains($hero, "man") ? "szerepel" : "nem szerepel") . " a 'man' angol szó.\n";
+
+echo "6. feladat:\n";
+echo "A hős neve " . (strrev($hero) == $hero ? "palindrom" : "NEM palindrom") . "szó.\n";
+
+echo "7. feladat:\n";
+echo "A hős neve " . (str_starts_with($hero, "s") ? "'S' betűvel" : "nem 'S' betűvel") . " kezdődik.\n";
+
+echo "8. feladat:\n";
+echo "A hős neve " . (str_ends_with($hero, "n") ? "'n' betűvel" : "nem 'n' betűvel") . " végződik.\n";
