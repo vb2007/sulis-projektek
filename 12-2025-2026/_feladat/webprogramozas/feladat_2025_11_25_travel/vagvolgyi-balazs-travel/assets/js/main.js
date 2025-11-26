@@ -21,3 +21,19 @@ const isAvailable = (before, after) => {
   const current = Date.now();
   return before > current && after < current;
 };
+
+const createAvailableBadge = (isAvailable) => {
+  const badgeSpan = document.createElement("span");
+
+  if (isAvailable) {
+    badgeSpan.classList.add("badge-new");
+    badgeSpan.textContent = "Elérhető";
+
+    return badgeSpan;
+  }
+
+  badgeSpan.classList.add("badge-premium");
+  badgeSpan.textContent = "Nem elérhető";
+
+  return badgeSpan;
+};
