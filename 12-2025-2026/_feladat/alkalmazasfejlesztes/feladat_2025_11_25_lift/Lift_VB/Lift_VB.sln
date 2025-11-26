@@ -2,6 +2,8 @@
 Microsoft Visual Studio Solution File, Format Version 12.00
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lift_VB", "Lift_VB\Lift_VB.csproj", "{6114E61C-1C4C-4BC4-9A2F-DF78C6BA79E9}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lift_VB_Lib", "Lift_VB_Lib\Lift_VB_Lib.csproj", "{204ECF09-C262-4433-A25B-7E03033BA1AA}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -12,5 +14,9 @@ Global
 		{6114E61C-1C4C-4BC4-9A2F-DF78C6BA79E9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6114E61C-1C4C-4BC4-9A2F-DF78C6BA79E9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6114E61C-1C4C-4BC4-9A2F-DF78C6BA79E9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{204ECF09-C262-4433-A25B-7E03033BA1AA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{204ECF09-C262-4433-A25B-7E03033BA1AA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{204ECF09-C262-4433-A25B-7E03033BA1AA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{204ECF09-C262-4433-A25B-7E03033BA1AA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
