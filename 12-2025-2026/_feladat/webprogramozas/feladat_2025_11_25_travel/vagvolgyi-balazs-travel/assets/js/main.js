@@ -80,7 +80,6 @@ const createFeatureList = (features) => {
 };
 
 let filtered = offers;
-
 const loadOffers = () => {
   const offersContainer = document.getElementById("offers");
   offersContainer.innerHTML = "";
@@ -100,6 +99,7 @@ const loadOffers = () => {
       offer.available.before,
       offer.available.after,
     );
+
     const badge = createAvailableBadge(available);
 
     const hotelName = document.createElement("h3");
@@ -109,17 +109,11 @@ const loadOffers = () => {
     summary.textContent = offer.summary;
 
     const featureList = createFeatureList(offer.hotel.features);
+
     const priceTag = createPriceTag(offer.cost);
 
-    cardBody.append(badge);
-    cardBody.append(hotelName);
-    cardBody.append(summary);
-    cardBody.append(featureList);
-    cardBody.append(priceTag);
-
-    offerCard.append(img);
-    offerCard.append(cardBody);
-
+    cardBody.append(badge, hotelName, summary, featureList, priceTag);
+    offerCard.append(img, cardBody);
     offersContainer.append(offerCard);
   });
 };
