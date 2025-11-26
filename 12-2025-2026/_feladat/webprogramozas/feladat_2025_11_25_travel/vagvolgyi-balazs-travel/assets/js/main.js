@@ -16,3 +16,8 @@ const createSortOptions = (options) => {
 
 const optionsDropdown = document.getElementById("sort-select");
 optionsDropdown.append(...createSortOptions(options));
+
+const isAvailable = (before, after) => {
+  const current = Date.now();
+  return before > current && after < current;
+};
