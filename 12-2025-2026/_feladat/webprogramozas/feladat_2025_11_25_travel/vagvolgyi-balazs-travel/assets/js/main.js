@@ -18,8 +18,11 @@ const optionsDropdown = document.getElementById("sort-select");
 optionsDropdown.append(...createSortOptions(options));
 
 const isAvailable = (before, after) => {
-  const current = Date.now();
-  return before < current && after > current;
+  const currentTime = Date.now();
+  const beforeTime = new Date(before).getTime();
+  const afterTime = new Date(after).getTime();
+
+  return afterTime < currentTime && currentTime < beforeTime;
 };
 
 const createAvailableBadge = (isAvailable) => {
