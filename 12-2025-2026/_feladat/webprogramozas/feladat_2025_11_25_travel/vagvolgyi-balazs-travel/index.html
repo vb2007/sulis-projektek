@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link
+            rel="shortcut icon"
+            href="assets/icons/favicon.ico"
+            type="image/x-icon"
+        />
+        <link rel="stylesheet" href="assets/css/style.css" />
+        <script src="assets/js/main.js" type="module" defer></script>
+        <title>Utazási iroda</title>
+    </head>
+
+    <body>
+        <header class="hero-section">
+            <div class="hero-overlay"></div>
+
+            <div class="hero-content">
+                <h1>Aktuális ajánlataink</h1>
+            </div>
+        </header>
+        <div class="toolbar-container">
+            <div class="filter-controls">
+                <input
+                    type="text"
+                    type="number"
+                    name="min-price"
+                    id="min-price"
+                    placeholder="Min. ár (Ft)"
+                    class="filter-input"
+                />
+                <input
+                    type="text"
+                    type="number"
+                    name="max-price"
+                    id="max-price"
+                    placeholder="Max. ár (Ft)"
+                    class="filter-input"
+                />
+                <button class="button-primary" id="run-filter">Szűrés</button>
+                <button class="button-secondary" id="clear-filter">
+                    Újrakezdem
+                </button>
+            </div>
+
+            <div class="sort-controls">
+                <label for="sort-select" class="sort-label">Rendezés:</label>
+                <select
+                    name="sorting"
+                    id="sort-select"
+                    class="sort-select"
+                ></select>
+            </div>
+        </div>
+
+        <main>
+            <div id="offers"></div>
+        </main>
+    </body>
+</html>
