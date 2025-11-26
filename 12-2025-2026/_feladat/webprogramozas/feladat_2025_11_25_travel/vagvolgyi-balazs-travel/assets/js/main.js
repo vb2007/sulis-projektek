@@ -37,3 +37,31 @@ const createAvailableBadge = (isAvailable) => {
 
   return badgeSpan;
 };
+
+const createFeatureTags = (features) => {
+  const featureTags = [];
+
+  features.forEach((feature) => {
+    const featureTag = document.createElement("span");
+    featureTag.classList.add("tag");
+    featureTag.textContent = feature;
+
+    featureTags.push(featureTag);
+  });
+
+  return featureTags;
+};
+
+const createPriceTag = (cost) => {
+  const container = docment.createElement("div");
+
+  container.classList.add("price");
+  container.textContent =
+    cost.toLocaleString("hu-HU", {
+      style: "currency",
+      currency: "HUF",
+      maximumFractionDigits: 0,
+    }) + "/fő/éj";
+
+  return container;
+};
