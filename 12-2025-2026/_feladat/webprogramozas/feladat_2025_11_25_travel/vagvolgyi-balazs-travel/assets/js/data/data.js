@@ -1,6 +1,4 @@
-"use strict";
-
-const offers = [
+export const offers = [
   {
     id: 1,
     hotel_id: 1,
@@ -831,7 +829,7 @@ const offers = [
   },
 ];
 
-const options = [
+export const options = [
   { label: "Alapértelmezett", value: "default" },
   { label: "Ár (növekvő)", value: "price-asc" },
   { label: "Ár (csökkenő)", value: "price-desc" },
