@@ -19,11 +19,12 @@ optionsDropdown.append(...createSortOptions(options));
 
 const isAvailable = (before, after) => {
   const current = Date.now();
-  return before > current && after < current;
+  return before < current && after > current;
 };
 
 const createAvailableBadge = (isAvailable) => {
   const badgeSpan = document.createElement("span");
+  badgeSpan.classList.add("badge");
 
   if (isAvailable) {
     badgeSpan.classList.add("badge-new");
@@ -70,7 +71,7 @@ const createFeatureList = (features) => {
   const featuresContainer = document.createElement("div");
 
   featuresContainer.classList.add("feature-tags");
-  featuresContainer.append(createFeatureTags(features));
+  featuresContainer.append(...createFeatureTags(features));
 
   return featuresContainer;
 };
