@@ -14,7 +14,10 @@ public class Liftek
         get
         {
             if (sorszam < 1 || sorszam > _liftek.Count)
+            {
                 throw new IndexOutOfRangeException($"Nincs {sorszam}. számú lift!");
+            }
+
             return _liftek[sorszam - 1];
         }
     }
