@@ -1,6 +1,6 @@
 namespace Lift_VB_Lib;
 
-public class HibasIranyException
+public class HibasIranyException : Exception
 {
-
+    public HibasIranyException() : base("Hibás irány!") {}
 }
