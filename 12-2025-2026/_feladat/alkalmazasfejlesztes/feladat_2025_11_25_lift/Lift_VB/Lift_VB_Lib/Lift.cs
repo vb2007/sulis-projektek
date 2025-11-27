@@ -3,9 +3,11 @@ namespace Lift_VB_Lib;
 public class Lift : IMozog
 {
     private int AktualisEmelet { get; set; }
+    private int EmeletekSzama { get; set; }
 
     public Lift(int emeletekSzama)
     {
+        EmeletekSzama = emeletekSzama;
         AktualisEmelet = Random.Shared.Next(1, emeletekSzama + 1);
     }
 
@@ -17,14 +19,14 @@ public class Lift : IMozog
             throw new Exception("A lift elromlott");
         }
     }
-    
+
     public void Lefele()
     {
         Hibalehetoseg();
-        
+
         if (AktualisEmelet == 1)
         {
-            throw new HibasIranyException();
+            throw new HibasIranyException("Nem lehet lejjebb menni az 1. emeletről!");
         }
         AktualisEmelet--;
     }
@@ -32,17 +34,16 @@ public class Lift : IMozog
     public void Felfele()
     {
         Hibalehetoseg();
-        
-        //nem tudom mennyi a legfelső emelet, a legnagyobb bementre tippeltem a példából
-        if (AktualisEmelet == 9)
+
+        if (AktualisEmelet == EmeletekSzama)
         {
-            throw new HibasIranyException();
+            throw new HibasIranyException($"Nem lehet feljebb menni a(z) {EmeletekSzama}. emeletről!");
         }
         AktualisEmelet++;
     }
 
     public override string ToString()
     {
-        return base.ToString();
+        return $"Lift (Aktuális emelet: {AktualisEmelet}, Emeletek száma: {EmeletekSzama})";
     }
 }

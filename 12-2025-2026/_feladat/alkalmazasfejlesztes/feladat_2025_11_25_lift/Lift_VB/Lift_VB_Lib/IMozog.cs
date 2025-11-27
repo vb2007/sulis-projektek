@@ -1,6 +1,6 @@
 namespace Lift_VB_Lib;
 
-internal interface IMozog
+public interface IMozog
 {
     void Lefele();
     void Felfele();
