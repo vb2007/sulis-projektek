@@ -5,6 +5,7 @@
 - Ellenörizd, hogy annyi-e az összérték, mint amennyit mondunk. (Fantasy esetében 1900.51)
 
 2. Feladat (Bonyolultabb):
+
 - Navigálj az oldal egyik kategóriájára, ahol több oldalon keresztül szerepelnek könyvek. (pl.: „Fantasy”)
 - Összegezd, hogy az adott kategóriában összesen hány darab könyv van készleten. (Minden könyvre, minden oldalon megnézed a készlet mennyiségét. Rá kell kattintani minden könyvre.)
 - Ellenőrizd, hogy annyi-e az összesített könyv készlet mennyisége, mint amennyit mondunk. (Fantasy esetében 372)
