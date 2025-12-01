@@ -51,7 +51,32 @@ public class Feladat2 : BrowserSiteHelper
     {
         FantasyCategoryBtn.Click();
         
+        double sum = 0;
+        bool hasNextPage = true;
+        while (hasNextPage)
+        {
+            IEnumerable<IWebElement> booksList = _webDriver.FindElements(By.CssSelector(".price_color"));
+            foreach (IWebElement book in booksList)
+            {
+                string bookpricestring = book.Text;
+                double bookprice = Convert.ToDouble(bookpricestring.Replace("£", ""));
+                sum += bookprice;
+            }
         
+            IEnumerable<IWebElement> nextButton = _webDriver.FindElements(By.CssSelector(".pager .next a"));
+            if (nextButton.Any())
+            {
+                nextButton.First().Click();
+                Thread.Sleep(500);
+            }
+            else
+            {
+                hasNextPage = false;
+            }
+        }
+    
+        Assert.That(sum, Is.GreaterThan(0));
+        Console.WriteLine($"Total sum of all book prices across all pages: £{sum}");
     }
     
     [Test]

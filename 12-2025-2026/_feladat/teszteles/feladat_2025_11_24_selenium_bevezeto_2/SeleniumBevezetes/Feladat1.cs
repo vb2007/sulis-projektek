@@ -4,7 +4,7 @@ namespace SeleniumBevezetes;
 
 [TestFixture]
 //[Parallelizable(ParallelScope.All)] //egyszerre futna le mindegyik teszt, de ahhoz más setup & teardown logika kell
-public class Tests : BrowserSiteHelper
+public class Feladat1 : BrowserSiteHelper
 {
     [SetUp]
     public void Setup()
