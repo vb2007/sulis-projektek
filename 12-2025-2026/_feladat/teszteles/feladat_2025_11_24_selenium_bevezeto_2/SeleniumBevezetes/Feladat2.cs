@@ -20,13 +20,13 @@ public class Feladat2 : BrowserSiteHelper
     }
 
     [Test]
-    [Description("Navigates to the 'Fantasy' category.")]
+    [Description("Navigates to the 'Fantasy' category and checks the category's title.")]
     public void NavigateToFantasy()
     {
         FantasyCategoryBtn.Click();
         
-        string foundText = _webDriver.FindElement(By.XPath("/html/body/div/div/div/div/div[1]/h1")).Text;
-        Assert.That(foundText, Is.EqualTo("Fantasy"));
+        string titleText = _webDriver.FindElement(By.XPath("/html/body/div/div/div/div/div[1]/h1")).Text;
+        Assert.That(titleText, Is.EqualTo("Fantasy"), "A cím hibás.");
     }
     
     [Test]
@@ -44,7 +44,7 @@ public class Feladat2 : BrowserSiteHelper
             sum += bookprice;
         }
         
-        Assert.That(sum, Is.EqualTo(793.0799999999999));
+        Assert.That(sum, Is.EqualTo(793.0799999999999), "A könyvek árának összértéke helytelen.");
     }
 
     [Test]
@@ -77,9 +77,57 @@ public class Feladat2 : BrowserSiteHelper
             }
         }
     
-        Assert.That(sum, Is.EqualTo(1900.51));
+        Assert.That(sum, Is.EqualTo(1900.51), "A könyvek árának összértéke helytelen.");
+    }
+
+    [Test]
+    [Description("Checks the sum of all available books' that are in stock on all pages in a specified category.")]
+    public void SumBookStockOnAllPages()
+    {
+        FantasyCategoryBtn.Click();
+
+        int totalStockAmount = 0;
+        bool hasNextPage = true;
+        while (hasNextPage)
+        {
+            IEnumerable<IWebElement> bookLinks = _webDriver.FindElements(By.CssSelector("article.product_pod h3 a"));
+            int bookCount = bookLinks.Count();
+
+            for (int i = 0; i < bookCount; i++)
+            {
+                bookLinks = _webDriver.FindElements(By.CssSelector("article.product_pod h3 a"));
+                
+                bookLinks.ElementAt(i).Click();
+                WaitForMillSec(300);
+                
+                string stockText = _webDriver.FindElement(By.CssSelector(".product_main .instock.availability")).Text;
+                if (stockText.Contains('(') && stockText.Contains("available"))
+                {
+                    string stockNumberStr = stockText.Split('(')[1].Split(' ')[0];
+                    int stockAmount = Convert.ToInt32(stockNumberStr);
+                    totalStockAmount += stockAmount;
+                }
+                
+                _webDriver.Navigate().Back();
+                WaitForMillSec(300);
+            }
+            
+            IEnumerable<IWebElement> nextButton = _webDriver.FindElements(By.CssSelector(".pager .next a"));
+            if (nextButton.Any())
+            {
+                nextButton.First().Click();
+                WaitForMillSec(500);
+            }
+            else
+            {
+                hasNextPage = false;
+            }
+        }
+        
+        Assert.That(totalStockAmount, Is.EqualTo(372), "A könyvek összmennyisége helytelen.");
     }
     
+    //ez nem kell, de a SumBookStockOnAllPages() helyett véletlen ezt írtam meg először
     [Test]
     [Description("Checks the sum of all books' prices (counting available stock) on all pages in a specified category.")]
     public void SumBookPricesOnAllPagesWithStock()
@@ -131,6 +179,6 @@ public class Feladat2 : BrowserSiteHelper
             }
         }
         
-        Assert.That(totalValue, Is.EqualTo(14591.769999999997));
+        Assert.That(totalValue, Is.EqualTo(14591.769999999997), "A könyvek árának összértéke helytelen.");
     }
 }
