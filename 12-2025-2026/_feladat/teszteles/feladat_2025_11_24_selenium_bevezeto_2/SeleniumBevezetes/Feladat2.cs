@@ -5,6 +5,8 @@ namespace SeleniumBevezetes;
 [TestFixture]
 public class Feladat2 : BrowserSiteHelper
 {
+    private IWebElement FantasyCategoryBtn => _webDriver.FindElement(By.XPath("/html/body/div/div/div/aside/div[2]/ul/li/ul/li[18]/a"));
+    
     [SetUp]
     public void Setup()
     {
@@ -21,8 +23,8 @@ public class Feladat2 : BrowserSiteHelper
     [Description("Navigates to the 'Fantasy' category.")]
     public void NavigateToFantasy()
     {
-        IWebElement fantasyButton = _webDriver.FindElement(By.XPath("/html/body/div/div/div/aside/div[2]/ul/li/ul/li[18]/a"));
-        fantasyButton.Click();
+        FantasyCategoryBtn.Click();
+        
         string foundText = _webDriver.FindElement(By.XPath("/html/body/div/div/div/div/div[1]/h1")).Text;
         Assert.That(foundText, Is.EqualTo("Fantasy"));
     }
@@ -30,8 +32,7 @@ public class Feladat2 : BrowserSiteHelper
     [Test]
     public void SumBookPrices()
     {
-        IWebElement fantasyButton = _webDriver.FindElement(By.XPath("/html/body/div/div/div/aside/div[2]/ul/li/ul/li[18]/a"));
-        fantasyButton.Click();
+        FantasyCategoryBtn.Click();
         IEnumerable<IWebElement> booksList = _webDriver.FindElements(By.CssSelector(".price_color"));
         
         double sum = 0;
@@ -48,6 +49,8 @@ public class Feladat2 : BrowserSiteHelper
     [Test]
     public void SumBookPricesOnAllPages()
     {
+        FantasyCategoryBtn.Click();
+        
         
     }
     
