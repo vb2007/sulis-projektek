@@ -1,21 +1,15 @@
 ﻿using OpenQA.Selenium;
-using OpenQA.Selenium.Firefox;
 
 namespace SeleniumBevezetes;
 
 [TestFixture]
 //[Parallelizable(ParallelScope.All)] //egyszerre futna le mindegyik teszt, de ahhoz más setup & teardown logika kell
-public class Tests
+public class Tests : BrowserSiteHelper
 {
-    private WebDriver _webDriver;
-    private readonly string _baseUrl = "https://books.toscrape.com/";
-
     [SetUp]
     public void Setup()
     {
-        FirefoxOptions firefoxOptions = new FirefoxOptions();
-        _webDriver = new FirefoxDriver(firefoxOptions);
-        _webDriver.Navigate().GoToUrl(_baseUrl);
+        InitTest();
     }
 
     [TearDown]
