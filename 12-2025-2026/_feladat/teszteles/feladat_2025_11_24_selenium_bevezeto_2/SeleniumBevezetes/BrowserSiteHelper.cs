@@ -6,7 +6,7 @@ namespace SeleniumBevezetes;
 
 public class BrowserSiteHelper
 {
-    public WebDriver _webDriver;
+    public static WebDriver _webDriver;
     public readonly string _baseUrl = "https://books.toscrape.com/";
 
     public void InitTestFixture()
@@ -22,5 +22,5 @@ public class BrowserSiteHelper
         _webDriver.Dispose();
     }
     
-    public WebDriverWait WaitForMilSec(int milSecs) => new WebDriverWait(_webDriver, new  TimeSpan(0, 0, 0, 0, milSecs));
+    public static WebDriverWait WaitForMillSec(int milSecs) => new WebDriverWait(_webDriver, new  TimeSpan(0, 0, 0, 0, milSecs));
 }
