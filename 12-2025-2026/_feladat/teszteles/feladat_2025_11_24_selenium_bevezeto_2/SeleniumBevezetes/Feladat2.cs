@@ -44,4 +44,16 @@ public class Feladat2 : BrowserSiteHelper
         
         Assert.That(sum, Is.EqualTo(793.0799999999999));
     }
+
+    [Test]
+    public void SumBookPricesOnAllPages()
+    {
+        
+    }
+    
+    [Test]
+    public void SumBookPricesOnAllPagesWithStock()
+    {
+        
+    }
 }
