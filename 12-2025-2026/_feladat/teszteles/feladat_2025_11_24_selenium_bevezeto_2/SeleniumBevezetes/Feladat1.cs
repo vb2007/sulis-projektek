@@ -9,14 +9,13 @@ public class Tests : BrowserSiteHelper
     [SetUp]
     public void Setup()
     {
-        InitTest();
+        InitTestFixture();
     }
 
     [TearDown]
     public void TearDown()
     {
-        _webDriver.Quit();
-        _webDriver.Dispose(); //.net 9 óta dispose is kell
+        TeardownTestFixture();
     }
 
     [Test]
