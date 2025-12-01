@@ -1,5 +1,6 @@
 using OpenQA.Selenium;
 using OpenQA.Selenium.Firefox;
+using OpenQA.Selenium.Support.UI;
 
 namespace SeleniumBevezetes;
 
@@ -17,6 +18,9 @@ public class BrowserSiteHelper
 
     public void TeardownTestFixture()
     {
-        
+        _webDriver.Quit();
+        _webDriver.Dispose();
     }
+    
+    public WebDriverWait WaitForMilSec(int milSecs) => new WebDriverWait(_webDriver, new  TimeSpan(0, 0, 0, 0, milSecs));
 }
