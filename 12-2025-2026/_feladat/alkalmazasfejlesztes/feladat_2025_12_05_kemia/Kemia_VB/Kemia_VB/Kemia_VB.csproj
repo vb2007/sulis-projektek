@@ -11,4 +11,13 @@
       <ProjectReference Include="..\Kemia_VB_Lib\Kemia_VB_Lib.csproj" />
     </ItemGroup>
 
+    <ItemGroup>
+      <None Update="szolocukor.txt">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </None>
+      <None Update="viz.txt">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </None>
+    </ItemGroup>
+
 </Project>
