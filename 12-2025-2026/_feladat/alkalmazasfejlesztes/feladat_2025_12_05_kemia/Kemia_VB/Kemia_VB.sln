@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Kemia_VB", "Kemia_VB\Kemia_VB.csproj", "{B2429742-DCE3-4567-9FB1-218CC45C5E4A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Kemia_VB_Lib", "Kemia_VB_Lib\Kemia_VB_Lib.csproj", "{272E4069-C052-4F00-8FE1-B5228A00F890}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B2429742-DCE3-4567-9FB1-218CC45C5E4A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B2429742-DCE3-4567-9FB1-218CC45C5E4A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B2429742-DCE3-4567-9FB1-218CC45C5E4A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B2429742-DCE3-4567-9FB1-218CC45C5E4A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{272E4069-C052-4F00-8FE1-B5228A00F890}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{272E4069-C052-4F00-8FE1-B5228A00F890}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{272E4069-C052-4F00-8FE1-B5228A00F890}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{272E4069-C052-4F00-8FE1-B5228A00F890}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
