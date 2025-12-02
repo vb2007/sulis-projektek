@@ -1,25 +1,19 @@
 namespace Kemia_VB_Lib;
 
-public class KemiaiElem : IReakcioKepes
+public abstract class KemiaiElem : IReakcioKepes
 {
     public string Vegyjel { get; init; }
-    public string Rendszam { get; init; }
-    public string Focsoport { get; init; }
+    public int Rendszam { get; init; }
+    public int Focsoport { get; init; }
 
-    public KemiaiElem(string vegyjel, string rendszam, string focsoport)
+    public KemiaiElem(string vegyjel, int rendszam, int focsoport)
     {
         Vegyjel = vegyjel;
         Rendszam = rendszam;
         Focsoport = focsoport;
     }
 
-    public bool ReakciobaLephet()
-    {
-        throw new NotImplementedException();
-    }
-    
-    public bool ReakciobaLephet(IReakcioKepes obj)
-    {
-        throw new NotImplementedException();
-    }
+    public abstract bool ReakciobaLephet();
+
+    public abstract bool ReakciobaLephet(IReakcioKepes obj);
 }

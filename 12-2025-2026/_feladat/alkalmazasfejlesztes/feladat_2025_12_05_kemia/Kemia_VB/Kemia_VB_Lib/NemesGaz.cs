@@ -1,21 +1,21 @@
 namespace Kemia_VB_Lib;
 
-public class NemesGaz : KemiaiElem
+public sealed class NemesGaz : KemiaiElem
 {
-    public string Vegyjel { get; init; }
-    public string Rendszam { get; init; }
-    public string Focsoport { get; init; } 
-    
-    public NemesGaz(string vegyjel, string rendszam, string focsoport) : base(vegyjel, rendszam, focsoport)
+    public NemesGaz(string vegyjel, int rendszam, int focsoport) : base(vegyjel, rendszam, focsoport)
     {
+        if (focsoport != 8)
+        {
+            throw new ArgumentException("A nemesgáz főcsoportja csak 8 lehet!");
+        }
     }
-    
-    public bool ReakciobaLephet()
+
+    public override bool ReakciobaLephet()
     {
         return false;
     }
-    
-    public bool ReakciobaLephet(IReakcioKepes obj)
+
+    public override bool ReakciobaLephet(IReakcioKepes obj)
     {
         return false;
     }
