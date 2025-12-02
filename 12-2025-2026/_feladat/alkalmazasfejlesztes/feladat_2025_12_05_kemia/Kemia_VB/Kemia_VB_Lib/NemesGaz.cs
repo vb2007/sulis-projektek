@@ -10,13 +10,7 @@ public sealed class NemesGaz : KemiaiElem
         }
     }
 
-    public override bool ReakciobaLephet()
-    {
-        return false;
-    }
+    public override bool ReakciobaLephet() { return false; }
 
-    public override bool ReakciobaLephet(IReakcioKepes obj)
-    {
-        return false;
-    }
+    public override bool ReakciobaLephet(IReakcioKepes obj) { return false; }
 }

@@ -6,10 +6,7 @@ public sealed class NemFem : KemiaiElem
     {
     }
 
-    public override bool ReakciobaLephet()
-    {
-        return true;
-    }
+    public override bool ReakciobaLephet() { return true; }
 
     public override bool ReakciobaLephet(IReakcioKepes obj)
     {
@@ -17,6 +14,7 @@ public sealed class NemFem : KemiaiElem
         {
             return (this.Focsoport + elem.Focsoport) % 8 == 0;
         }
+        
         return false;
     }
 }
