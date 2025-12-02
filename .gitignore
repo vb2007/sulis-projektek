@@ -17,3 +17,6 @@ node_modules/
 #Rider (unit tests with MSTest)
 **/TestResults/
 **DotSettings.user
+
+#PHP (Coposer)
+**/vendor
