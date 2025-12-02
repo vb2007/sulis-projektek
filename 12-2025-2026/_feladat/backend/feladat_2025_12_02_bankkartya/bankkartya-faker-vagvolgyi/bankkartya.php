@@ -8,7 +8,9 @@ $faker = Factory::create("hu_HU");
 $cardType = $faker->creditCardType();
 $cardNumber = $faker->creditCardNumber($cardType);
 $formattedCardNumber = implode('-', str_split($cardNumber, 4));
-$expirationDate = $faker->creditCardExpirationDateString();
+($argc == 2 && $argv[1] == "lejart")
+    ? $expirationDate = $faker->dateTimeBetween('-5 years', '-1 month')->format('m/y')
+    : $expirationDate = $faker->creditCardExpirationDateString();
 $ccv = $faker->numerify('###');
 $cardholderName = $faker->lastName() . ' ' . $faker->firstName();
 
