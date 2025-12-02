@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="hu">
+    <head>
+        <meta charset="UTF-8" />
+        <title>Könyvek listája</title>
+        <link rel="stylesheet" href="./assets/css/books.css" />
+        <script src="./assets/js/data/books.js"></script>
+        <script src="./assets/js/page.js" defer></script>
+    </head>
+    <body>
+        <header>
+            <form id="books_filter">
+                <div class="filter-bar">
+                    <input
+                        type="text"
+                        id="filter_title"
+                        placeholder="Cím keresése..."
+                    />
+                    <input
+                        type="number"
+                        id="filter_min"
+                        placeholder="Min. ár"
+                    />
+                    <input
+                        type="number"
+                        id="filter_max"
+                        placeholder="Max. ár"
+                    />
+                    <button type="submit">Szűrés</button>
+                    <button type="button" id="reset_filters">Törlés</button>
+                </div>
+            </form>
+        </header>
+
+        <main>
+            <section id="books" class="books"></section>
+        </main>
+    </body>
+</html>
