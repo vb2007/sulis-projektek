@@ -21,6 +21,6 @@ public class BrowserSiteHelper
         _webDriver.Quit();
         _webDriver.Dispose();
     }
-    
+
     public static WebDriverWait WaitForMillSec(int milSecs) => new WebDriverWait(_webDriver, new  TimeSpan(0, 0, 0, 0, milSecs));
 }

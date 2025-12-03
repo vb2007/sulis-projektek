@@ -5,11 +5,12 @@ public class Tests
     [SetUp]
     public void Setup()
     {
+        InitTestFixture();
     }
 
-    [Test]
-    public void Test1()
+    [TearDown]
+    public void TearDown()
     {
-        Assert.Pass();
+        TeardownTestFixture();
     }
 }
