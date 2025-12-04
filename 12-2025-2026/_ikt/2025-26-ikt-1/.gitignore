@@ -1,0 +1,10 @@
+#Rider specific
+/Kobolduldozok/.idea
+#VS specific
+.vs
+#.NET specific
+/Kobolduldozok/**/bin
+/Kobolduldozok/**/obj
+
+#Test files
+/Kobolduldozok/Kobolduldozok/Test
