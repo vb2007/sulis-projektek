@@ -36,12 +36,12 @@ public class CustomColors
     }
 
     //ANSI escape kódok szín be/visszaállításra
-    public string GetAnsiColorCode()
+    private string GetAnsiColorCode()
     {
         return $"\x1b[38;2;{R};{G};{B}m";
     }
     
-    public static string GetResetCode()
+    private static string GetResetCode()
     {
         return "\x1b[0m";
     }

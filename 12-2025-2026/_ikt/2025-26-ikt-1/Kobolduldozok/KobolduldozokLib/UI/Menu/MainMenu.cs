@@ -272,9 +272,4 @@ public class MainMenu
                 return false;
         }
     }
-
-    public SimulationSettings GetCurrentSettings()
-    {
-        return _settings;
-    }
 }

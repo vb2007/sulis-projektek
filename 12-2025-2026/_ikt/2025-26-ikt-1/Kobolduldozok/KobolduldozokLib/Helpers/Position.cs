@@ -11,7 +11,7 @@ public class Position
         Y = y;
     }
 
-    public Position(Position other)
+    private Position(Position other)
     {
         X = other.X;
         Y = other.Y;
