@@ -64,11 +64,6 @@ public class ActivityLog
         return _events.Skip(startIndex).Take(takeCount).ToList();
     }
 
-    public IReadOnlyList<string> GetAllEvents()
-    {
-        return _events.AsReadOnly();
-    }
-
     public void Clear()
     {
         _events.Clear();
@@ -83,6 +78,4 @@ public class ActivityLog
             _events.RemoveAt(0);
         }
     }
-
-
 }
