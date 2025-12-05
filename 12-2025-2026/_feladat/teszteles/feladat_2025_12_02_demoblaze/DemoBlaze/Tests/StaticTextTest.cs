@@ -26,7 +26,7 @@ public class StaticTextTest
     public void CheckTitle()
     {
         string actualTitle = _webDriver.Title;
-        Assert.That(actualTitle, Is.EqualTo(TestBase.Title), "The title is incorrect.");
+        Assert.That(actualTitle, Is.EqualTo(TestData.Title), "The title is incorrect.");
     }
 
     [Test]
