@@ -4,4 +4,6 @@ namespace DemoBlaze;
 public class TestBase
 {
     public static string _baseUrl = "https://www.demoblaze.com/";
+    
+    public static string Title = "STORE";
 }
