@@ -11,7 +11,7 @@ public class Browser
     {
         FirefoxOptions firefoxOptions = new FirefoxOptions();
         _webDriver = new FirefoxDriver(firefoxOptions);
-        _webDriver.Navigate().GoToUrl(_baseUrl);
+        _webDriver.Navigate().GoToUrl(TestBase._baseUrl);
     }
     
     public static void TeardownTestFixture()
