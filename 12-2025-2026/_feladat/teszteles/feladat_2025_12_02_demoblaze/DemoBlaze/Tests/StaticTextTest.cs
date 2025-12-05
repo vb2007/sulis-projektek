@@ -4,6 +4,7 @@ using OpenQA.Selenium;
 namespace DemoBlaze.Tests;
 
 [TestFixture]
+[Parallelizable(ParallelScope.Self)]
 public class StaticTextTest
 {
     private readonly WebDriver _webDriver = Browser._webDriver;
