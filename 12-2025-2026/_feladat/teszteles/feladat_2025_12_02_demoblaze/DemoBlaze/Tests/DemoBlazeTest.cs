@@ -1,16 +1,19 @@
-﻿namespace DemoBlaze;
+﻿using DemoBlaze.Helpers;
 
+namespace DemoBlaze.Tests;
+
+[TestFixture]
 public class Tests
 {
     [SetUp]
     public void Setup()
     {
-        InitTestFixture();
+        Browser.InitTestFixture();
     }
 
     [TearDown]
     public void TearDown()
     {
-        TeardownTestFixture();
+        Browser.TeardownTestFixture();
     }
 }
