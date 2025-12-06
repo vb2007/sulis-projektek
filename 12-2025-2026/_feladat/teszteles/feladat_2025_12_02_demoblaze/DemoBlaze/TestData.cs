@@ -5,7 +5,8 @@ public class TestData
     public static string _baseUrl = "https://www.demoblaze.com/";
     
     public static string Title = "STORE";
-
+    public static string StoreName = "PRODUCT STORE";
+    
     public class UserData
     {
         public static string Username = "vb2007";
