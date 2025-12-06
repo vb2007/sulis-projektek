@@ -5,18 +5,18 @@ namespace DemoBlaze.Helpers;
 
 public class Browser
 {
-    public static WebDriver _webDriver;
+    public WebDriver WebDriver { get; private set; }
 
-    public static void InitTestFixture()
+    public void Init()
     {
         FirefoxOptions firefoxOptions = new FirefoxOptions();
-        _webDriver = new FirefoxDriver(firefoxOptions);
-        _webDriver.Navigate().GoToUrl(TestData._baseUrl);
+        WebDriver = new FirefoxDriver(firefoxOptions);
+        WebDriver.Navigate().GoToUrl(TestData._baseUrl);
     }
-    
-    public static void TeardownTestFixture()
+
+    public void Teardown()
     {
-        _webDriver.Quit();
-        _webDriver.Dispose();
+        WebDriver.Quit();
+        WebDriver.Dispose();
     }
 }
