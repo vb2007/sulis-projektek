@@ -7,18 +7,20 @@ namespace DemoBlaze.Tests;
 [Parallelizable(ParallelScope.Self)]
 public class UserTest
 {
-    private readonly WebDriver _webDriver = Browser._webDriver;
+    private static Browser _browser;
+    private static WebDriver WebDriver => _browser.WebDriver;
     
     [SetUp]
     public void Setup()
     {
-        Browser.InitTestFixture();
+        _browser = new Browser();
+        _browser.Init();
     }
 
     [TearDown]
     public void TearDown()
     {
-        Browser.TeardownTestFixture();
+        _browser?.Teardown();
     }
 
     [Test]
@@ -30,8 +32,7 @@ public class UserTest
 
     [Test]
     [Description("Should register a new user successfully.")]
-    [Ignore(
-        "Since the site actually stores user data permanently without an option for account deletion, this test's ignored to avoid spam.")]
+    [Ignore("Since the site actually stores user data permanently without an option for account deletion, this test's ignored to avoid spam.")]
     public void Register()
     {
         
