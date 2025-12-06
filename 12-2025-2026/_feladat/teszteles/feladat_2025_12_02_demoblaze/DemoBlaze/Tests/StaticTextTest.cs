@@ -1,4 +1,4 @@
-﻿using DemoBlaze.Helpers;
+using DemoBlaze.Helpers;
 using OpenQA.Selenium;
 
 namespace DemoBlaze.Tests;
@@ -7,26 +7,38 @@ namespace DemoBlaze.Tests;
 [Parallelizable(ParallelScope.Self)]
 public class StaticTextTest
 {
-    private readonly WebDriver _webDriver = Browser._webDriver;
-    
+    private static Browser _browser;
+    private static WebDriver WebDriver => _browser.WebDriver;
+
+    private IWebElement TitleElement => WebDriver.FindElement(By.Id("nava"));
+
     [SetUp]
     public void Setup()
     {
-        Browser.InitTestFixture();
+        _browser = new Browser();
+        _browser.Init();
     }
 
     [TearDown]
     public void TearDown()
     {
-        Browser.TeardownTestFixture();
+        _browser?.Teardown();
     }
 
     [Test]
-    [Description("Check the page's title (same across all pages).")]
+    [Description("Check the page's title on the browser tab (same across all pages).")]
+    public void CheckBrowserTitle()
+    {
+        string actualTitle = WebDriver.Title;
+        Assert.That(actualTitle, Is.EqualTo(TestData.Title), "The title is incorrect.");
+    }
+
+    [Test]
+    [Description("Checks the page's title on the rendered HTML.")]
     public void CheckTitle()
     {
-        string actualTitle = _webDriver.Title;
-        Assert.That(actualTitle, Is.EqualTo(TestData.Title), "The title is incorrect.");
+        string actualTitle = TitleElement.Text;
+        Assert.That(actualTitle, Is.EqualTo(TestData.StoreName), "The page title is incorrect.");
     }
 
     [Test]
