@@ -11,6 +11,14 @@ public class StaticTextTest
     private static WebDriver WebDriver => _browser.WebDriver;
 
     private IWebElement TitleElement => WebDriver.FindElement(By.Id("nava"));
+    private IWebElement FooterContainerElement = WebDriver.FindElement(By.Id("fotcont"));
+    private IWebElement FooterAboutUsHeaderElement => FooterContainerElement.FindElement(By.CssSelector("div.col-*:nth-of-type(1) h4 b"));
+    private IWebElement FooterAboutUsContentElement => FooterContainerElement.FindElement(By.CssSelector("div.col-*:nth-of-type(1) h4 p"));
+    private IWebElement FooterGetInTouchHeaderElement => FooterContainerElement.FindElement(By.CssSelector("div.col-*:nth-of-type(2) h4 b"));
+    private IWebElement FooterGetInTouchAddressContentElement => FooterContainerElement.FindElement(By.CssSelector("div.col-*:nth-of-type(2) h4 p:nth-of-type(1)"));
+    private IWebElement FooterGetInTouchPhoneContentElement => FooterContainerElement.FindElement(By.CssSelector("div.col-*:nth-of-type(2) h4 p:nth-of-type(2)"));
+    private IWebElement FooterGetInTouchEmailContentElement => FooterContainerElement.FindElement(By.CssSelector("div.col-*:nth-of-type(2) h4 p:nth-of-type(3)"));
+    private IWebElement FooterProductStoreHeaderElement => FooterContainerElement.FindElement(By.CssSelector("div.col-*:nth-of-type(3) h4"));
 
     [SetUp]
     public void Setup()
@@ -45,13 +53,13 @@ public class StaticTextTest
     [Description("Checks each footer section's title.")]
     public void CheckFooterTitles()
     {
-        
+
     }
 
     [Test]
     [Description("Checks each footer section's content.")]
     public void CheckFooterContent()
     {
-        
+
     }
 }
