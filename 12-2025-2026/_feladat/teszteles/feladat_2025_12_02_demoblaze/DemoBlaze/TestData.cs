@@ -16,13 +16,13 @@ public class TestData
 
     public class FooterData
     {
-        class Titles
+        public class Titles
         {
             public static string AboutUs = "About Us";
             public static string GetInTouch = "Get in Touch";
         }
 
-        class Content
+        public class Content
         {
             public static string AboutUs =
                 "We believe performance needs to be validated at every stage of the software development cycle and our open source compatible, massively scalable platform makes that a reality.";

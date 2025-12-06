@@ -53,7 +53,16 @@ public class StaticTextTest
     [Description("Checks each footer section's title.")]
     public void CheckFooterTitles()
     {
-
+        string actualAboutUsHeader = FooterAboutUsHeaderElement.Text;
+        string actualGetInTouchHeader = FooterGetInTouchHeaderElement.Text;
+        string actualProductStoreHeader = FooterProductStoreHeaderElement.Text;
+        
+        Assert.Multiple(() =>
+        {
+            Assert.That(actualAboutUsHeader, Is.EqualTo(TestData.FooterData.Titles.AboutUs), "The about us header is incorrect.");
+            Assert.That(actualGetInTouchHeader, Is.EqualTo(TestData.FooterData.Titles.GetInTouch), "The get in touch header is incorrect.");
+            Assert.That(actualProductStoreHeader, Is.EqualTo(TestData.StoreName), "The product store header is incorrect.");
+        });
     }
 
     [Test]
