@@ -93,6 +93,21 @@ public class UserTest
     [Description("Should throw a relevant error when an invalid password is provided for an existing user.")]
     public void LoginErrorHandling()
     {
+        _browser.WaitUntilPageLoads();
         
+        _browser.WaitUntilElementIsPresent(LoginNavButtonSelector);
+        LoginNavButtonElement.Click();
+        
+        _browser.WaitUntilElementIsPresent(LoginUsernameInputSelector);
+        _browser.WaitForMillSec(1000); //until the login modal drops down
+        LoginUsernameInputElement.Click();
+        LoginUsernameInputElement.Clear();
+        LoginUsernameInputElement.SendKeys(TestData.UserData.Username);
+        LoginPasswordInputElement.Click();
+        LoginPasswordInputElement.Clear();
+        LoginPasswordInputElement.SendKeys(TestData.UserData.InvalidPassword);
+        LoginButtonElement.Click();
+        
+        _browser.CheckAlertMessage("Wrong password.");
     }
 }

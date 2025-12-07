@@ -54,4 +54,12 @@ public class Browser
         webDriverWait.Until(WebDriver =>
             ((IJavaScriptExecutor)WebDriver).ExecuteScript("return document.readyState")!.Equals("complete"));
     }
+
+    public void CheckAlertMessage(string expectedAlertText)
+    {
+        IAlert alert = WebDriver.SwitchTo().Alert();
+        string actualAlertText = alert.Text!;
+        
+        Assert.That(actualAlertText, Is.EqualTo(expectedAlertText), "The alert's text is incorrect.");
+    }
 }
