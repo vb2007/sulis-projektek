@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TortOsztaly_VB", "TortOsztaly_VB\TortOsztaly_VB.csproj", "{4888134A-C12D-4DF0-BCC1-00BBDC8BF293}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TortOsztaly_VB_Lib", "TortOsztaly_VB_Lib\TortOsztaly_VB_Lib.csproj", "{E9481C93-3031-4C4D-8255-3095D80B467E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{4888134A-C12D-4DF0-BCC1-00BBDC8BF293}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4888134A-C12D-4DF0-BCC1-00BBDC8BF293}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4888134A-C12D-4DF0-BCC1-00BBDC8BF293}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4888134A-C12D-4DF0-BCC1-00BBDC8BF293}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E9481C93-3031-4C4D-8255-3095D80B467E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E9481C93-3031-4C4D-8255-3095D80B467E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E9481C93-3031-4C4D-8255-3095D80B467E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E9481C93-3031-4C4D-8255-3095D80B467E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
