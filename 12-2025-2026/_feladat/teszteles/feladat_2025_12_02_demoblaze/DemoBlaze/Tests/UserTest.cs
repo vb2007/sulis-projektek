@@ -12,7 +12,8 @@ public class UserTest
 
     private By LoginNavButtonSelector => By.Id("login2");
     private IWebElement LoginNavButtonElement => WebDriver.FindElement(LoginNavButtonSelector);
-    private IWebElement RegisterNavButtonElement => WebDriver.FindElement(By.Id("signin2"));
+    private By RegisterNavButtonSelector => By.Id("signin2");
+    private IWebElement RegisterNavButtonElement => WebDriver.FindElement(RegisterNavButtonSelector);
     private IWebElement LoggedInUserNavElement => WebDriver.FindElement(By.Id("nameofuser"));
 
     private By LoginUsernameInputSelector => By.Id("loginusername");
@@ -20,7 +21,8 @@ public class UserTest
     private IWebElement LoginPasswordInputElement => WebDriver.FindElement(By.Id("loginpassword"));
     private IWebElement LoginButtonElement => WebDriver.FindElement(By.CssSelector("button[onclick=\"logIn()\"]"));
 
-    private IWebElement RegisterUsernameInputElement => WebDriver.FindElement(By.Id("sign-username"));
+    private By RegisterUsernameInputSelector => By.Id("sign-username");
+    private IWebElement RegisterUsernameInputElement => WebDriver.FindElement(RegisterUsernameInputSelector);
     private IWebElement RegisterPasswordInputElement => WebDriver.FindElement(By.Id("sign-password"));
     private IWebElement RegisterButtonElement => WebDriver.FindElement(By.CssSelector("button[onclick=\"register()\"]"));
     
@@ -66,7 +68,25 @@ public class UserTest
     [Ignore("Since the site actually stores user data permanently without an option for account deletion, this test's ignored to avoid spam.")]
     public void Register()
     {
+        _browser.WaitUntilPageLoads();
         
+        _browser.WaitUntilElementIsPresent(RegisterNavButtonSelector);
+        RegisterNavButtonElement.Click();
+
+        //no need to get hard on the random generation, since we can't delete it in the teardown anyways
+        string randomUsername = Random.Shared.Next(100, 900).ToString();
+        
+        _browser.WaitUntilElementIsPresent(RegisterUsernameInputSelector);
+        _browser.WaitForMillSec(1000); //until the register modal drops down
+        RegisterUsernameInputElement.Click();
+        RegisterUsernameInputElement.Clear();
+        RegisterUsernameInputElement.SendKeys(randomUsername);
+        RegisterPasswordInputElement.Click();
+        RegisterPasswordInputElement.Clear();
+        RegisterPasswordInputElement.SendKeys(TestData.UserData.Password);
+        RegisterButtonElement.Click();
+        
+        //assertion & other checks would go here if I had the power to implement the case correctly
     }
 
     [Test]
