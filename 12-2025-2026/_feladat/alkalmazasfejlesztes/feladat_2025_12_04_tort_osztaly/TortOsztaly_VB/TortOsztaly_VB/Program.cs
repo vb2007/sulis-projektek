@@ -26,7 +26,7 @@ class Program
         Console.WriteLine("\nTizedestört alak:");
         Console.WriteLine($"t2 tizedestört alakban: {t2.TizedesErtek}");
 
-        Console.WriteLine("Alapműveletek [tört - tört]:");
+        Console.WriteLine("\nAlapműveletek [tört - tört]:");
         Console.WriteLine($"{t2} + {t3} = {t2 + t3}");
         Console.WriteLine($"{t2} - {t3} = {t2 - t3}");
         Console.WriteLine($"{t2} * {t3} = {t2 * t3}");
