@@ -37,15 +37,20 @@ public class Browser
         WebDriver.Dispose();
     }
 
-    public void WaitUntilElementIsPresent(By locator, int waitTimeInMillsec)
+    public void WaitForMillSec(int waitTimeInMillSec)
     {
-        WebDriverWait webDriverWait = new WebDriverWait(WebDriver, TimeSpan.FromMilliseconds(waitTimeInMillsec));
+        Thread.Sleep(waitTimeInMillSec);
+    }
+    
+    public void WaitUntilElementIsPresent(By locator, int waitTimeInMillSec = 5)
+    {
+        WebDriverWait webDriverWait = new WebDriverWait(WebDriver, TimeSpan.FromMilliseconds(waitTimeInMillSec));
         webDriverWait.Until(ExpectedConditions.ElementExists(locator));
     }
 
-    public void WaitUntilPageLoads(int waitTimeInMillsec)
+    public void WaitUntilPageLoads(int waitTimeInMillSec = 5)
     {
-        WebDriverWait webDriverWait = new WebDriverWait(WebDriver, TimeSpan.FromMilliseconds(waitTimeInMillsec));
+        WebDriverWait webDriverWait = new WebDriverWait(WebDriver, TimeSpan.FromMilliseconds(waitTimeInMillSec));
         webDriverWait.Until(WebDriver =>
             ((IJavaScriptExecutor)WebDriver).ExecuteScript("return document.readyState")!.Equals("complete"));
     }

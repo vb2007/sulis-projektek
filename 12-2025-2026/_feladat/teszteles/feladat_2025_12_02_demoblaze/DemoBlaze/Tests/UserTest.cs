@@ -10,11 +10,13 @@ public class UserTest
     private static Browser _browser;
     private static WebDriver WebDriver => _browser.WebDriver;
 
-    private IWebElement LoginNavButtonElement => WebDriver.FindElement(By.Id("login2"));
+    private By LoginNavButtonSelector => By.Id("login2");
+    private IWebElement LoginNavButtonElement => WebDriver.FindElement(LoginNavButtonSelector);
     private IWebElement RegisterNavButtonElement => WebDriver.FindElement(By.Id("signin2"));
     private IWebElement LoggedInUserNavElement => WebDriver.FindElement(By.Id("nameofuser"));
-    
-    private IWebElement LoginUsernameInputElement => WebDriver.FindElement(By.Id("loginusername"));
+
+    private By LoginUsernameInputSelector => By.Id("loginusername");
+    private IWebElement LoginUsernameInputElement => WebDriver.FindElement(LoginUsernameInputSelector);
     private IWebElement LoginPasswordInputElement => WebDriver.FindElement(By.Id("loginpassword"));
     private IWebElement LoginButtonElement => WebDriver.FindElement(By.CssSelector("button[onclick=\"logIn()\"]"));
 
@@ -39,15 +41,24 @@ public class UserTest
     [Description("Should log in an existing user successfully")]
     public void Login()
     {
+        _browser.WaitUntilPageLoads();
+        
+        _browser.WaitUntilElementIsPresent(LoginNavButtonSelector);
         LoginNavButtonElement.Click();
         
+        _browser.WaitUntilElementIsPresent(LoginUsernameInputSelector);
+        _browser.WaitForMillSec(1000); //until the login modal drops down
         LoginUsernameInputElement.Click();
         LoginUsernameInputElement.Clear();
         LoginUsernameInputElement.SendKeys(TestData.UserData.Username);
-        
         LoginPasswordInputElement.Click();
         LoginPasswordInputElement.Clear();
         LoginPasswordInputElement.SendKeys(TestData.UserData.Password);
+        LoginButtonElement.Click();
+        
+        _browser.WaitUntilPageLoads();
+        _browser.WaitForMillSec(2000); //navbar data refreshed dynamically, login state only changes after some time
+        Assert.That(LoggedInUserNavElement.Text, Is.EqualTo(TestData.LoggedInUserText), "The user isn't logged in according to the navbar.");
     }
 
     [Test]

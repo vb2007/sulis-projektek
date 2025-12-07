@@ -14,6 +14,8 @@ public class TestData
         public static string InvalidPassword = "abc1234";
     }
 
+    public static string LoggedInUserText = $"Welcome {UserData.Username}";
+    
     public class FooterData
     {
         public class Titles
