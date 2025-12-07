@@ -10,11 +10,16 @@ public class UserTest
     private static Browser _browser;
     private static WebDriver WebDriver => _browser.WebDriver;
 
-    private IWebElement LoginNavButtonElement = WebDriver.FindElement(By.Id("login2"));
-    private IWebElement RegisterNavButtonElement = WebDriver.FindElement(By.Id("signin2"));
-    private IWebElement LoginUsernameInputElement = WebDriver.FindElement(By.Id("loginusername"));
-    private IWebElement LoginPasswordInputElement = WebDriver.FindElement(By.Id("loginpassword"));
-    private IWebElement LoginButtonElement = WebDriver.FindElement(By.CssSelector("button[onclick=\"logIn()\"]"));
+    private IWebElement LoginNavButtonElement => WebDriver.FindElement(By.Id("login2"));
+    private IWebElement RegisterNavButtonElement => WebDriver.FindElement(By.Id("signin2"));
+    
+    private IWebElement LoginUsernameInputElement => WebDriver.FindElement(By.Id("loginusername"));
+    private IWebElement LoginPasswordInputElement => WebDriver.FindElement(By.Id("loginpassword"));
+    private IWebElement LoginButtonElement => WebDriver.FindElement(By.CssSelector("button[onclick=\"logIn()\"]"));
+
+    private IWebElement RegisterUsernameInputElement => WebDriver.FindElement(By.Id("sign-username"));
+    private IWebElement RegisterPasswordInputElement => WebDriver.FindElement(By.Id("sign-password"));
+    private IWebElement RegisterButtonElement => WebDriver.FindElement(By.CssSelector("button[onclick=\"register()\"]"));
     
     [SetUp]
     public void Setup()
