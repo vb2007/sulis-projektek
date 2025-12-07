@@ -27,7 +27,6 @@ public class Browser
         //ha nem headless-ben megy
         // WebDriver.Manage().Window.Maximize();
         
-        WebDriver = new FirefoxDriver(firefoxOptions);
         WebDriver.Navigate().GoToUrl(TestData._baseUrl);
     }
 
@@ -39,13 +38,13 @@ public class Browser
 
     public void WaitUntilElementIsPresent(By locator, int waitTimeInMillsec)
     {
-        WebDriverWait webDriverWait = new WebDriverWait(WebDriver, TimeSpan.FromMicroseconds(waitTimeInMillsec));
-        webDriverWait.Until(ExpectedConditions.ElementIsVisible(locator));
+        WebDriverWait webDriverWait = new WebDriverWait(WebDriver, TimeSpan.FromMilliseconds(waitTimeInMillsec));
+        webDriverWait.Until(ExpectedConditions.ElementExists(locator));
     }
 
     public void WaitUntilPageLoads(int waitTimeInMillsec)
     {
-        WebDriverWait webDriverWait = new WebDriverWait(WebDriver, TimeSpan.FromMicroseconds(waitTimeInMillsec));
+        WebDriverWait webDriverWait = new WebDriverWait(WebDriver, TimeSpan.FromMilliseconds(waitTimeInMillsec));
         webDriverWait.Until(WebDriver =>
             ((IJavaScriptExecutor)WebDriver).ExecuteScript("return document.readyState")!.Equals("complete"));
     }
