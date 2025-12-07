@@ -2,8 +2,8 @@
 
 public class Tort
 {
-    public int Szamlalo { get; set; }
-    public int Nevezo { get; set; }
+    public int Szamlalo { get; private set; }
+    public int Nevezo { get; private set; }
 
     public Tort()
     {
