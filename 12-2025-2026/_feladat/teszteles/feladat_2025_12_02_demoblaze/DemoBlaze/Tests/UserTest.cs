@@ -12,6 +12,7 @@ public class UserTest
 
     private IWebElement LoginNavButtonElement => WebDriver.FindElement(By.Id("login2"));
     private IWebElement RegisterNavButtonElement => WebDriver.FindElement(By.Id("signin2"));
+    private IWebElement LoggedInUserNavElement => WebDriver.FindElement(By.Id("nameofuser"));
     
     private IWebElement LoginUsernameInputElement => WebDriver.FindElement(By.Id("loginusername"));
     private IWebElement LoginPasswordInputElement => WebDriver.FindElement(By.Id("loginpassword"));
@@ -38,7 +39,15 @@ public class UserTest
     [Description("Should log in an existing user successfully")]
     public void Login()
     {
+        LoginNavButtonElement.Click();
         
+        LoginUsernameInputElement.Click();
+        LoginUsernameInputElement.Clear();
+        LoginUsernameInputElement.SendKeys(TestData.UserData.Username);
+        
+        LoginPasswordInputElement.Click();
+        LoginPasswordInputElement.Clear();
+        LoginPasswordInputElement.SendKeys(TestData.UserData.Password);
     }
 
     [Test]
