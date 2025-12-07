@@ -28,6 +28,8 @@ public class StaticTextTest
     [SetUp]
     public void Setup()
     {
+        ExcelReportGenerator.StartTest(TestContext.CurrentContext.Test.FullName);
+        
         _browser = new Browser();
         _browser.Init();
     }
@@ -36,6 +38,8 @@ public class StaticTextTest
     public void TearDown()
     {
         _browser?.Teardown();
+        
+        ExcelReportGenerator.EndTest();
     }
 
     [Test]

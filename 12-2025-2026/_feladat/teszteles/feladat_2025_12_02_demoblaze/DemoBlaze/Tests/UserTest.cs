@@ -25,10 +25,12 @@ public class UserTest
     private IWebElement RegisterUsernameInputElement => WebDriver.FindElement(RegisterUsernameInputSelector);
     private IWebElement RegisterPasswordInputElement => WebDriver.FindElement(By.Id("sign-password"));
     private IWebElement RegisterButtonElement => WebDriver.FindElement(By.CssSelector("button[onclick=\"register()\"]"));
-    
+
     [SetUp]
     public void Setup()
     {
+        ExcelReportGenerator.StartTest(TestContext.CurrentContext.Test.FullName);
+        
         _browser = new Browser();
         _browser.Init();
     }
@@ -37,6 +39,8 @@ public class UserTest
     public void TearDown()
     {
         _browser?.Teardown();
+        
+        ExcelReportGenerator.EndTest();
     }
 
     [Test]
@@ -44,10 +48,10 @@ public class UserTest
     public void Login()
     {
         _browser.WaitUntilPageLoads();
-        
+
         _browser.WaitUntilElementIsPresent(LoginNavButtonSelector);
         LoginNavButtonElement.Click();
-        
+
         _browser.WaitUntilElementIsPresent(LoginUsernameInputSelector);
         _browser.WaitForMillSec(1000); //until the login modal drops down
         LoginUsernameInputElement.Click();
@@ -57,7 +61,7 @@ public class UserTest
         LoginPasswordInputElement.Clear();
         LoginPasswordInputElement.SendKeys(TestData.UserData.Password);
         LoginButtonElement.Click();
-        
+
         _browser.WaitUntilPageLoads();
         _browser.WaitForMillSec(2000); //navbar data refreshed dynamically, login state only changes after some time
         Assert.That(LoggedInUserNavElement.Text, Is.EqualTo(TestData.LoggedInUserText), "The user isn't logged in according to the navbar.");
@@ -69,13 +73,13 @@ public class UserTest
     public void Register()
     {
         _browser.WaitUntilPageLoads();
-        
+
         _browser.WaitUntilElementIsPresent(RegisterNavButtonSelector);
         RegisterNavButtonElement.Click();
 
         //no need to get hard on the random generation, since we can't delete it in the teardown anyways
         string randomUsername = Random.Shared.Next(100, 900).ToString();
-        
+
         _browser.WaitUntilElementIsPresent(RegisterUsernameInputSelector);
         _browser.WaitForMillSec(1000); //until the register modal drops down
         RegisterUsernameInputElement.Click();
@@ -85,7 +89,7 @@ public class UserTest
         RegisterPasswordInputElement.Clear();
         RegisterPasswordInputElement.SendKeys(TestData.UserData.Password);
         RegisterButtonElement.Click();
-        
+
         //assertion & other checks would go here if I had the power to implement the case correctly
     }
 
@@ -94,10 +98,10 @@ public class UserTest
     public void LoginErrorHandling()
     {
         _browser.WaitUntilPageLoads();
-        
+
         _browser.WaitUntilElementIsPresent(LoginNavButtonSelector);
         LoginNavButtonElement.Click();
-        
+
         _browser.WaitUntilElementIsPresent(LoginUsernameInputSelector);
         _browser.WaitForMillSec(1000); //until the login modal drops down
         LoginUsernameInputElement.Click();
@@ -107,7 +111,7 @@ public class UserTest
         LoginPasswordInputElement.Clear();
         LoginPasswordInputElement.SendKeys(TestData.UserData.InvalidPassword);
         LoginButtonElement.Click();
-        
+
         _browser.WaitForMillSec(1000); //waits until the alert pops up
         _browser.CheckAlertMessage("Wrong password.");
     }
