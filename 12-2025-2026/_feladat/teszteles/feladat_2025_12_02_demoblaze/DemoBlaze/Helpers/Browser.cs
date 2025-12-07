@@ -1,5 +1,6 @@
 using OpenQA.Selenium;
 using OpenQA.Selenium.Firefox;
+using OpenQA.Selenium.Support.UI;
 
 namespace DemoBlaze.Helpers;
 
@@ -34,5 +35,18 @@ public class Browser
     {
         WebDriver.Quit();
         WebDriver.Dispose();
+    }
+
+    public void WaitUntilElementIsPresent(By locator, int waitTimeInMillsec)
+    {
+        WebDriverWait webDriverWait = new WebDriverWait(WebDriver, TimeSpan.FromMicroseconds(waitTimeInMillsec));
+        webDriverWait.Until(ExpectedConditions.ElementIsVisible(locator));
+    }
+
+    public void WaitUntilPageLoads(int waitTimeInMillsec)
+    {
+        WebDriverWait webDriverWait = new WebDriverWait(WebDriver, TimeSpan.FromMicroseconds(waitTimeInMillsec));
+        webDriverWait.Until(WebDriver =>
+            ((IJavaScriptExecutor)WebDriver).ExecuteScript("return document.readyState")!.Equals("complete"));
     }
 }
