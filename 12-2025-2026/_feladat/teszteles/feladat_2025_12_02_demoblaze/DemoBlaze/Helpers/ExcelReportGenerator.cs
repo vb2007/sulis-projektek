@@ -21,7 +21,7 @@ public static class ExcelReportGenerator
         var testEndTime = DateTime.Now;
         var testStartTime = TestStartTimes.ContainsKey(testId) ? TestStartTimes[testId] : testEndTime;
 
-        var testResult = new TestResultModel
+        TestResultModel testResult = new TestResultModel
         {
             TestFixtureName = testContext.Test.ClassName?.Split('.').Last() ?? "Unknown",
             TestCaseName = testContext.Test.MethodName ?? testContext.Test.Name,
