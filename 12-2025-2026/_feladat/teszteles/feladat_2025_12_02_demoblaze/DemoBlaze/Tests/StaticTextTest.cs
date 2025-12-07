@@ -19,7 +19,8 @@ public class StaticTextTest
     private IWebElement FooterGetInTouchPhoneContentElement => FooterContainerElement.FindElement(By.XPath(".//div[contains(@class, 'col-sm-3')]//p[2]"));
     private IWebElement FooterGetInTouchEmailContentElement => FooterContainerElement.FindElement(By.XPath(".//div[contains(@class, 'col-sm-3')]//p[3]"));
     private IWebElement FooterProductStoreHeaderElement => FooterContainerElement.FindElement(By.XPath(".//div[contains(@class, 'col-sm-4')][2]//h4"));
-
+    private IWebElement CopyrightNoticeContentElement => WebDriver.FindElement(By.CssSelector("footer p")); //"actual" footer was above this
+    
     [SetUp]
     public void Setup()
     {
@@ -81,5 +82,13 @@ public class StaticTextTest
             Assert.That(actualPhoneContent, Is.EqualTo(TestData.FooterData.Content.Phone), "The phone content is incorrect.");
             Assert.That(actualEmailContent, Is.EqualTo(TestData.FooterData.Content.Email), "The email content is incorrect.");
         });
+    }
+
+    [Test]
+    [Description("Checkt the copyright notice at the bottom of the page.")]
+    public void CheckCopyrightNotice()
+    {
+        string actualCopyrightContent = CopyrightNoticeContentElement.Text;
+        Assert.That(actualCopyrightContent, Is.EqualTo(TestData.FooterData.CopyrightNotice), "The copyright notice content is incorrect.");
     }
 }
