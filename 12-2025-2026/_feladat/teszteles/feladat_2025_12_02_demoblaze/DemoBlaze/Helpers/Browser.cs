@@ -10,17 +10,21 @@ public class Browser
     public void Init()
     {
         FirefoxOptions firefoxOptions = new FirefoxOptions();
-        firefoxOptions.AddArgument("--disabled-gpu");
-        firefoxOptions.AddArgument("--disable-notifications");
-        firefoxOptions.AddArgument("--disable-geolocation");
-        firefoxOptions.AddArgument("--start-maximized");
-        firefoxOptions.AddArgument("--no-sandbox");
-        firefoxOptions.AddArgument("--disable-setuid-sandbox");
-        firefoxOptions.AddArgument("--autoplay-policy=no-user-gesture-required");
-        firefoxOptions.AddArgument("--allow-running-insecure-content");
         
-        firefoxOptions.AddArguments("--headless=new");
-        firefoxOptions.AddArguments("--window-size=1920,1080");
+        firefoxOptions.AddArgument("--headless");
+        firefoxOptions.AddArgument("--width=1920");
+        firefoxOptions.AddArgument("--height=1080");
+        
+        //about:config
+        firefoxOptions.SetPreference("dom.webnotifications.enabled", false);
+        firefoxOptions.SetPreference("geo.enabled", false);
+        firefoxOptions.SetPreference("media.autoplay.default", 0);
+        firefoxOptions.SetPreference("layers.acceleration.disabled", true); //gpu acceleration
+        
+        WebDriver = new FirefoxDriver(firefoxOptions);
+        
+        //ha nem headless-ben megy
+        // WebDriver.Manage().Window.Maximize();
         
         WebDriver = new FirefoxDriver(firefoxOptions);
         WebDriver.Navigate().GoToUrl(TestData._baseUrl);
