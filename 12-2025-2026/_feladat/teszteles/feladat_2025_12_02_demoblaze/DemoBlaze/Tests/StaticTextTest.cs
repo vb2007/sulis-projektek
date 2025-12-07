@@ -69,6 +69,17 @@ public class StaticTextTest
     [Description("Checks each footer section's content.")]
     public void CheckFooterContent()
     {
-
+        string actualAboutUsContent = FooterAboutUsContentElement.Text;
+        string actualAddressContent = FooterGetInTouchAddressContentElement.Text;
+        string actualPhoneContent = FooterGetInTouchPhoneContentElement.Text;
+        string actualEmailContent = FooterGetInTouchEmailContentElement.Text;
+        
+        Assert.Multiple(() =>
+        {
+            Assert.That(actualAboutUsContent, Is.EqualTo(TestData.FooterData.Content.AboutUs), "The about us content is incorrect.");
+            Assert.That(actualAddressContent, Is.EqualTo(TestData.FooterData.Content.Address), "The address content is incorrect.");
+            Assert.That(actualPhoneContent, Is.EqualTo(TestData.FooterData.Content.Phone), "The phone content is incorrect.");
+            Assert.That(actualEmailContent, Is.EqualTo(TestData.FooterData.Content.Email), "The email content is incorrect.");
+        });
     }
 }
