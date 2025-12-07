@@ -45,7 +45,7 @@ public class Browser
     public void WaitUntilElementIsPresent(By locator, int waitTimeInMillSec = 5)
     {
         WebDriverWait webDriverWait = new WebDriverWait(WebDriver, TimeSpan.FromMilliseconds(waitTimeInMillSec));
-        webDriverWait.Until(ExpectedConditions.ElementExists(locator));
+        webDriverWait.Until(ExpectedConditions.ElementExists(locator)); //requires DotNetSeleniumExtras.WaitHelpers package
     }
 
     public void WaitUntilPageLoads(int waitTimeInMillSec = 5)
