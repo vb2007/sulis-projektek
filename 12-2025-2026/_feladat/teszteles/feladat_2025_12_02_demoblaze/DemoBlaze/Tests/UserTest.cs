@@ -108,6 +108,7 @@ public class UserTest
         LoginPasswordInputElement.SendKeys(TestData.UserData.InvalidPassword);
         LoginButtonElement.Click();
         
+        _browser.WaitForMillSec(1000); //waits until the alert pops up
         _browser.CheckAlertMessage("Wrong password.");
     }
 }
