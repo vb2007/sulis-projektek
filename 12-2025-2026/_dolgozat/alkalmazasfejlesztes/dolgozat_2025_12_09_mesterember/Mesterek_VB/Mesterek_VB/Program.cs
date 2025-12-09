@@ -20,8 +20,59 @@ class Program
 
             foreach (string adatSor in adatSorok)
             {
-                MesterEmber mesterEmber = MesterFactory.Factory(adatSor);
-                mesterek.Add(mesterEmber);
+                try
+                {
+                    MesterEmber mesterEmber = MesterFactory.Factory(adatSor);
+                    mesterek.Add(mesterEmber);
+                }
+                catch (Exception ex)
+                {
+                    Console.WriteLine($"HIBA az adatsor feldolgozása során: {adatSor}");
+                }
+            }
+            
+            using (StreamWriter sw = new StreamWriter("megrendelesek.txt"))
+            {
+                foreach (MesterEmber mester in mesterek)
+                {
+                    int megrendelesekSzama = mester is Burkolo ? 25 : 10;
+
+                    for (int i = 1; i <= megrendelesekSzama; i++)
+                    {
+                        int veletlenNap = Random.Shared.Next(1, 32);
+
+                        try
+                        {
+                            bool eredmeny = mester.MunkatVallal(veletlenNap);
+                            
+                            if (eredmeny)
+                            {
+                                sw.WriteLine($"Megrendelés #{i}: {veletlenNap}. nap - SIKERES");
+                            }
+                            else
+                            {
+                                sw.WriteLine($"Megrendelés #{i}: {veletlenNap}. nap - A NAP MÁR FOGLALT");
+                            }
+                        }
+                        catch (TulSokElfoglaltsagException ex)
+                        {
+                            sw.WriteLine($"Megrendelés #{i}: {veletlenNap}. nap - KIVÉTEL: {ex.Message}");
+                        }
+                        catch (IndexOutOfRangeException ex)
+                        {
+                            sw.WriteLine($"Megrendelés #{i}: {veletlenNap}. nap - HIBA: {ex.Message}");
+                        }
+                        catch (Exception ex)
+                        {
+                            sw.WriteLine($"Megrendelés #{i}: {veletlenNap}. nap - VÁRATLAN HIBA: {ex.Message}");
+                        }
+                    }
+
+                    sw.WriteLine();
+                    sw.WriteLine($"Végső állapot: {mester.ToString()}");
+                    sw.WriteLine(new string('-', 50));
+                    sw.WriteLine();
+                }
             }
         }
         catch (Exception ex)
