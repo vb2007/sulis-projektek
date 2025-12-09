@@ -30,6 +30,24 @@ public class MesterEmber : IFoglalhato
     }
 
     public int SzabadnapokSzama => Elfoglaltsag.Count(x => x);
+    
+    public bool this[int nap]
+    {
+        get
+        {
+            if (nap < 1 || nap > 31)
+            {
+                throw new IndexOutOfRangeException("A nap sorszámának 1 és 31 között kell lennie.");
+            }
+            
+            return Elfoglaltsag[nap - 1];
+        }
+    }
+    
+    public bool MunkatVallal(int nap)
+    {
+        throw new NotImplementedException();
+    }
 
     public override string ToString()
     {
