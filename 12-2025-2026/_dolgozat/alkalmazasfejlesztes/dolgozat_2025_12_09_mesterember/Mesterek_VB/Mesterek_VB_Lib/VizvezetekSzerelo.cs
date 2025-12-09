@@ -8,4 +8,9 @@ public sealed class VizvezetekSzerelo : MesterEmber
     {
         TapasztalatokEve = tapasztalatokEve;
     }
+    
+    public override string ToString()
+    {
+        return $"Neve: {Nev}, Tapasztalatok évei: {TapasztalatokEve} Napidíja: {NapiDij}, Szabadnapok: {FoglalhatoNapok()}";
+    }
 }
