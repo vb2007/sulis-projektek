@@ -73,6 +73,8 @@ class Program
                     sw.WriteLine(new string('-', 50));
                     sw.WriteLine();
                 }
+
+                Console.WriteLine("Adatok sikeresen kiírva a fájlba.");
             }
         }
         catch (Exception ex)
