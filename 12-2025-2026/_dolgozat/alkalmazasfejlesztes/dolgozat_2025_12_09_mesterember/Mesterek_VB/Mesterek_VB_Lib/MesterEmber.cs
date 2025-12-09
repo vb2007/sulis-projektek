@@ -30,4 +30,9 @@ public class MesterEmber : IFoglalhato
     }
 
     public int SzabadnapokSzama => Elfoglaltsag.Count(x => x);
+
+    public override string ToString()
+    {
+        return $"Neve: {Nev}, Napidíja: {NapiDij}, Szabadnapok: {FoglalhatoNapok()}";
+    }
 }
