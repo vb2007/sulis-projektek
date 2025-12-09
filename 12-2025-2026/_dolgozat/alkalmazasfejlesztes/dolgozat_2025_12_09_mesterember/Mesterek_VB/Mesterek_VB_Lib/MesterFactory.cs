@@ -8,6 +8,7 @@ public sealed class MesterFactory
 
         char mesterTipus = char.Parse(adatElemek[0]);
         string mesterNeve = adatElemek[1];
+        
         switch (mesterTipus)
         {
             case 'b':

@@ -1,4 +1,6 @@
-﻿namespace Mesterek_VB;
+﻿using Mesterek_VB_Lib;
+
+namespace Mesterek_VB;
 
 class Program
 {
