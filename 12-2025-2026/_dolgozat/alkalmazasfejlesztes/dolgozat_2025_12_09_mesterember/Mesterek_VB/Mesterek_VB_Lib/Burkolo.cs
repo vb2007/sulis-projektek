@@ -33,6 +33,6 @@ public sealed class Burkolo : MesterEmber
     
     public override string ToString()
     {
-        return $"Neve: {Nev}, Szakterülete: {(Szakterulet == "belső" ? "burkoló" : "vízvezeték szerelő")} Napidíja: {NapiDij}, Szabadnapok: {FoglalhatoNapok()}";
+        return $"Neve: {Nev}, Szakterülete: {(Szakterulet == "belső" ? "burkoló" : "vízvezeték szerelő")} Napidíja: {NapiDij}, Szabadnapok: {string.Join(", ", FoglalhatoNapok())}";
     }
 }

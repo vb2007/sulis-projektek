@@ -11,6 +11,6 @@ public sealed class VizvezetekSzerelo : MesterEmber
     
     public override string ToString()
     {
-        return $"Neve: {Nev}, Tapasztalatok évei: {TapasztalatokEve} Napidíja: {NapiDij}, Szabadnapok: {FoglalhatoNapok()}";
+        return $"Neve: {Nev}, Tapasztalatok évei: {TapasztalatokEve} Napidíja: {NapiDij}, Szabadnapok: {string.Join(", ", FoglalhatoNapok())}";
     }
 }

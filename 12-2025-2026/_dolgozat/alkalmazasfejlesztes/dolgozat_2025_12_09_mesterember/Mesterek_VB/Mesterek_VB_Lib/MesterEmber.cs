@@ -51,6 +51,6 @@ public class MesterEmber : IFoglalhato
 
     public override string ToString()
     {
-        return $"Neve: {Nev}, Napidíja: {NapiDij}, Szabadnapok: {FoglalhatoNapok()}";
+        return $"Neve: {Nev}, Napidíja: {NapiDij}, Szabadnapok: {string.Join(", ", FoglalhatoNapok())}";
     }
 }
