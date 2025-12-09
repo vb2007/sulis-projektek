@@ -1,0 +1,21 @@
+namespace Mesterek_VB_Lib;
+
+public sealed class Burkolo : MesterEmber
+{
+    public string Szakterulet { get; set; }
+    
+    public Burkolo(string nev, int napiDij, string szakterulet) : base(nev, napiDij)
+    {
+        if (szakterulet != "belső" && szakterulet != "külső")
+        {
+            throw new ArgumentException("A szakterület értéke csak \"belső\" vagy \"külső\" lehet!");
+        }
+
+        Szakterulet = szakterulet;
+    }
+    
+    public override string ToString()
+    {
+        return $"Neve: {Nev}, Szakterülete: {(Szakterulet == "belső" ? "burkoló" : "vízvezeték szerelő")} Napidíja: {NapiDij}, Szabadnapok: {FoglalhatoNapok()}";
+    }
+}
