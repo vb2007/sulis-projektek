@@ -11,4 +11,10 @@
       <ProjectReference Include="..\Mesterek_VB_Lib\Mesterek_VB_Lib.csproj" />
     </ItemGroup>
 
+    <ItemGroup>
+      <None Update="input.txt">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </None>
+    </ItemGroup>
+
 </Project>
