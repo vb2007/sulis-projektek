@@ -13,7 +13,7 @@ public sealed class MesterFactory
         {
             case 'b':
                 int mesterNapiDija = int.Parse(adatElemek[2]);
-                string mesterSzakterulete = adatElemek[4];
+                string mesterSzakterulete = adatElemek[3];
                 return new Burkolo(mesterNeve, mesterNapiDija, mesterSzakterulete);
                 break;
             case 'v':
