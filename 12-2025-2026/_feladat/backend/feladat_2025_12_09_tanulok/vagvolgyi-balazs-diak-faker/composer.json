@@ -1,0 +1,15 @@
+{
+    "name": "vb2007/vagvolgyi-balazs-diak-faker",
+    "autoload": {
+        "psr-4": {
+            "Vb2007\\VagvolgyiBalazsDiakFaker\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "VB2007",
+            "email": "admin@vb2007.hu"
+        }
+    ],
+    "require": {}
+}
