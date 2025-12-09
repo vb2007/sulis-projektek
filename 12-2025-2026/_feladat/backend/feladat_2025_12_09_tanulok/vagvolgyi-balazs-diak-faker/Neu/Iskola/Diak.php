@@ -28,7 +28,11 @@ class Diak {
             case "szuletett_iso":
                 return $this->szuletett;
             default:
-                return $this->name;
+                return $this->$name;
         }
+    }
+
+    public function __set($name, $value){
+        $this->$name = $value;
     }
 }
