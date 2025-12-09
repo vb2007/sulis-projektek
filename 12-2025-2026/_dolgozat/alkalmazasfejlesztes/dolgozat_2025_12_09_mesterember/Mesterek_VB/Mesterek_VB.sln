@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mesterek_VB", "Mesterek_VB\Mesterek_VB.csproj", "{CA796D77-8AD8-4A56-BDA5-B1FA10B5DAD7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mesterek_VB_Lib", "Mesterek_VB_Lib\Mesterek_VB_Lib.csproj", "{F15FC1E7-B1AA-4C69-8844-18F42711C96C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{CA796D77-8AD8-4A56-BDA5-B1FA10B5DAD7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CA796D77-8AD8-4A56-BDA5-B1FA10B5DAD7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CA796D77-8AD8-4A56-BDA5-B1FA10B5DAD7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CA796D77-8AD8-4A56-BDA5-B1FA10B5DAD7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F15FC1E7-B1AA-4C69-8844-18F42711C96C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F15FC1E7-B1AA-4C69-8844-18F42711C96C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F15FC1E7-B1AA-4C69-8844-18F42711C96C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F15FC1E7-B1AA-4C69-8844-18F42711C96C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,5 @@
+b;Tapéta Lajos;60000;belső
+v;Megszer Elek;3
+b;Vakolat Péter;50000;külső
+v;Víz Elek;5
+b;Eresz János;30000;külső
