@@ -6,6 +6,12 @@ class Program
 {
     static void Main(string[] args)
     {
-        Console.WriteLine("Hello, World!");
+        List<MesterEmber> mesterek = new List<MesterEmber>();
+        IEnumerable<string> adatSorok = File.ReadAllLines("input.txt");
+
+        foreach (string adatSor in adatSorok)
+        {
+            MesterEmber mesterEmber = MesterFactory.Factory(adatSor);
+        }
     }
 }

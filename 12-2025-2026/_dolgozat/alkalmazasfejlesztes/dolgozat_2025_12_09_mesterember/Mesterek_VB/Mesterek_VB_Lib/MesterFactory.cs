@@ -2,7 +2,7 @@ namespace Mesterek_VB_Lib;
 
 public sealed class MesterFactory
 {
-    public MesterEmber Factory(string adatSor)
+    public static MesterEmber Factory(string adatSor)
     {
         string[] adatElemek = adatSor.Split(';');
 
