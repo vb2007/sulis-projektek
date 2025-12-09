@@ -13,6 +13,23 @@ public sealed class Burkolo : MesterEmber
 
         Szakterulet = szakterulet;
     }
+
+    public bool MunkatVallal(int nap)
+    {
+        if (!this[nap])
+        {
+            return false;
+        }
+        
+        if (SzabadnapokSzama < 10)
+        {
+            throw new TulSokElfoglaltsagException();
+        }
+        
+        Elfoglaltsag[nap - 1] = false;
+        
+        return true;
+    }
     
     public override string ToString()
     {
