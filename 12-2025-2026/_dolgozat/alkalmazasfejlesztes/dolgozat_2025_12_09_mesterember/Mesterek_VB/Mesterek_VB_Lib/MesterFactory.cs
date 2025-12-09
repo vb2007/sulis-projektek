@@ -15,11 +15,9 @@ public sealed class MesterFactory
                 int mesterNapiDija = int.Parse(adatElemek[2]);
                 string mesterSzakterulete = adatElemek[3];
                 return new Burkolo(mesterNeve, mesterNapiDija, mesterSzakterulete);
-                break;
             case 'v':
                 int mesterTapasztalatEvei = int.Parse(adatElemek[2]);
                 return new VizvezetekSzerelo(mesterNeve, mesterTapasztalatEvei);
-                break;
             default:
                 throw new InvalidDataException("A mester adattípusát 'v' vagy 'b' értékkel lehet csak megadni.");
         }
