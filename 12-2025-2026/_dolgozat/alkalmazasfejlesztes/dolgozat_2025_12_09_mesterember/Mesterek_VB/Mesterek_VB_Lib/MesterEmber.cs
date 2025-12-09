@@ -44,7 +44,7 @@ public class MesterEmber : IFoglalhato
         }
     }
     
-    public bool MunkatVallal(int nap)
+    public virtual bool MunkatVallal(int nap)
     {
         throw new NotImplementedException();
     }

@@ -14,7 +14,7 @@ public sealed class Burkolo : MesterEmber
         Szakterulet = szakterulet;
     }
 
-    public bool MunkatVallal(int nap)
+    public override bool MunkatVallal(int nap)
     {
         if (!this[nap])
         {

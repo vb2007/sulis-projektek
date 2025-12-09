@@ -9,7 +9,7 @@ public sealed class VizvezetekSzerelo : MesterEmber
         TapasztalatokEve = tapasztalatokEve;
     }
     
-    public new bool MunkatVallal(int nap)
+    public override bool MunkatVallal(int nap)
     {
         if (nap < 2 || nap > 30)
         {
