@@ -28,6 +28,17 @@ public sealed class VizvezetekSzerelo : MesterEmber
         return true;
     }
     
+    public new IEnumerable<int> FoglalhatoNapok()
+    {
+        for (int nap = 2; nap <= 30; nap++)
+        {
+            if (this[nap - 1] && this[nap] && this[nap + 1])
+            {
+                yield return nap;
+            }
+        }
+    }
+    
     public new int SzabadnapokSzama => FoglalhatoNapok().Count();
     
     public override string ToString()
