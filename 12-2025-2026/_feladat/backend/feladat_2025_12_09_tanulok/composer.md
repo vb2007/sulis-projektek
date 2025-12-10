@@ -13,3 +13,9 @@ Autoload fájlok generálása:
 ```shell
 composer dump-autoload
 ```
+
+Csomag hozzáadása:
+
+```shell
+composer require fakerphp/faker
+```
