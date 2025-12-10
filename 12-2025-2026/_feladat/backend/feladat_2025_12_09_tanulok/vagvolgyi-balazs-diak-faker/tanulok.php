@@ -27,3 +27,39 @@ if (isset($argv[2])) {
 }
 
 $faker = Factory::create("hu_HU");
+
+$diakok = [];
+for ($i = 0; $i < $recordCount; $i++) {
+    $vnev = $faker->lastName;
+    $knev = $faker->firstName;
+    $email = $faker->email;
+    $szuletett = $faker->dateTimeBetween("-30 years", "-10 years");
+
+    $diakok[] = new Diak($vnev, $knev, $email, $szuletett);
+}
+
+$outputPath = __DIR__ . "/out/" . $outputFile;
+
+if (str_ends_with($outputFile, ".txt")) {
+    $content = "";
+    foreach ($diakok as $diak) {
+        $content .= $diak->sorszam . PHP_EOL;
+        $content .= $diak->teljes_nev . PHP_EOL;
+        $content .= $diak->email . PHP_EOL;
+        $content .= $diak->szuletett_iso . PHP_EOL;
+    }
+    file_put_contents($outputPath, $content);
+} else { //csak .csv lehet
+    $fp = fopen($outputPath, 'w');
+    foreach ($diakok as $diak) {
+        fputcsv($fp, [
+            $diak->sorszam,
+            $diak->teljes_nev,
+            $diak->email,
+            $diak->szuletett_iso
+        ], ';');
+    }
+    fclose($fp);
+}
+
+echo "Adatok kiírva: out/$outputFile" . PHP_EOL;
