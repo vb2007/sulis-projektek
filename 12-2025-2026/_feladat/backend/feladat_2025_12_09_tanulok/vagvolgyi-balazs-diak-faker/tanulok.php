@@ -3,9 +3,10 @@
 require __DIR__ . "/vendor/autoload.php";
 
 use Neu\Iskola\Diak;
+use Faker\Factory;
 
-if ($argc != 2) {
-    echo "A szkriptnek nem lett megadva a kimeneti fájl neve" . PHP_EOL;
+if ($argc < 2) {
+    echo "A szkriptnek nem lett megadva a kimeneti fájl neve!" . PHP_EOL;
     exit(1);
 }
 
@@ -15,13 +16,14 @@ if (!str_ends_with($outputFile, ".txt") && !str_ends_with($outputFile, ".csv")) 
     exit(2);
 }
 
-$recordCount = 0;
-switch ($argv[2]) {
-   case $argv[2] <= 0:
-   case !is_int($argv[2]):
+$recordCount = 1;
+if (isset($argv[2])) {
+   if (!is_numeric($argv[2]) || intval($argv[2]) < 1) {
       echo "Amennyiben a második paraméter kitöltésre kerül, úgy az minimum 1 legyen" . PHP_EOL;
       exit(3);
-   case null:
-      $recordCount = 1;
-      break;
+   }
+
+    $recordCount = intval($argv[2]);
 }
+
+$faker = Factory::create("hu_HU");
