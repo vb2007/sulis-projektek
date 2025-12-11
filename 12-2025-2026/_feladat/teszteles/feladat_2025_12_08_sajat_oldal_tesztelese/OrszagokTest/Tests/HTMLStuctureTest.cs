@@ -10,6 +10,9 @@ public class HTMLStuctureTest
     private static Browser _browser;
     private static WebDriver WebDriver => _browser.WebDriver;
 
+    private IWebElement HTMLElement => WebDriver.FindElement(By.CssSelector("html"));
+    private IWebElement CharsetElement => WebDriver.FindElement(By.CssSelector("head > meta:nth-child(2)"));
+
     [SetUp]
     public void Setup()
     {
@@ -31,21 +34,24 @@ public class HTMLStuctureTest
     [Description("Checks if the page's language really is set to Hungarian.")]
     public void CheckLanguage()
     {
-        
+        string actualLanguage = HTMLElement.GetAttribute("lang")!;
+        Assert.That(actualLanguage, Is.EqualTo(TestData.HTMLAttributes.Language), "The site's language is incorrect.");
     }
 
     [Test]
     [Description("Checks if the page's encoding really is set to UTF-8")]
     public void CheckEncoding()
     {
-        
+        string actualEncoding = CharsetElement.GetAttribute("charset")!;
+        Assert.That(actualEncoding, Is.EqualTo(TestData.HTMLAttributes.Encoding), "The site's encoding is incorrect.");
     }
 
     [Test]
     [Description("Checks if the page really has a title.")]
     public void CheckTitlePresence()
     {
-        
+        string? title = WebDriver.Title;
+        Assert.That(title, Is.Not.Null, "A title should be set for the page.");
     }
 
     [Test]
@@ -56,7 +62,7 @@ public class HTMLStuctureTest
     }
 
     [Test]
-    [Description("Checks if a H1 element really is present on the page.")]
+    [Description("Checks if a H2 element really is present on the page.")]
     public void CheckH2Presence()
     {
         
