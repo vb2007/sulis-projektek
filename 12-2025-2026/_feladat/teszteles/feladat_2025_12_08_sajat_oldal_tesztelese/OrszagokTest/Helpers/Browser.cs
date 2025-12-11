@@ -62,4 +62,35 @@ public class Browser
         
         Assert.That(actualAlertText, Is.EqualTo(expectedAlertText), "The alert's text is incorrect.");
     }
+    
+    public bool IsElementPresent(By locator)
+    {
+        try
+        {
+            WebDriver.FindElement(locator);
+            return true;
+        }
+        catch (NoSuchElementException)
+        {
+            return false;
+        }
+    }
+
+    public IWebElement? FindElementSafe(By locator)
+    {
+        try
+        {
+            return WebDriver.FindElement(locator);
+        }
+        catch (NoSuchElementException)
+        {
+            return null;
+        }
+    }
+
+    public void AssertElementPresent(By locator, string errorMessage = "Element should be present on the page.")
+    {
+        bool isPresent = IsElementPresent(locator);
+        Assert.That(isPresent, Is.True, errorMessage);
+    }
 }
