@@ -4,7 +4,7 @@ using OpenQA.Selenium;
 namespace OrszagokTest.Tests;
 
 [TestFixture]
-[Parallelizable(ParallelScope.All)]
+// [Parallelizable(ParallelScope.All)]
 public class HTMLStuctureTest
 {
     private static Browser _browser;
@@ -12,6 +12,8 @@ public class HTMLStuctureTest
 
     private IWebElement HTMLElement => WebDriver.FindElement(By.CssSelector("html"));
     private IWebElement CharsetElement => WebDriver.FindElement(By.CssSelector("head > meta:nth-child(2)"));
+    private By H1Selector => By.TagName("h1");
+    private By H2Selector => By.TagName("h2");
 
     [SetUp]
     public void Setup()
@@ -58,13 +60,13 @@ public class HTMLStuctureTest
     [Description("Checks if a H1 element really is present on the page.")]
     public void CheckH1Presence()
     {
-        
+        _browser.AssertElementPresent(H1Selector, "An H1 element should be present on the page.");
     }
 
     [Test]
     [Description("Checks if a H2 element really is present on the page.")]
     public void CheckH2Presence()
     {
-        
+        _browser.AssertElementPresent(H2Selector, "An H2 element should be present on the page.");
     }
 }
