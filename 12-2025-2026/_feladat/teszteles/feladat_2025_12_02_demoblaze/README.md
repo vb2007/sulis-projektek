@@ -13,7 +13,7 @@ Következő projekteknél is specifikusan a `7.5.2`.-es verzió szükséges. Új
 Telepítés terminálból:
 
 ```shell
-DotNetSeleniumExtras.WaitHelpers
+dotnet add package EPPlus --version 7.5.2
 ```
 
 ## További package-ek
