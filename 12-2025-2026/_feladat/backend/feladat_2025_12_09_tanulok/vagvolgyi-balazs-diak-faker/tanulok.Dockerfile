@@ -27,7 +27,7 @@ ENTRYPOINT [ "php", "tanulok.php" ]
 
 # csatolt volume-ra íráshoz szükséges jogosultságbeállítás (linuxon):
 # mkdir -p out
-# chmod 777 out
+# sudo chmod 777 out
 
 # docker build -t vb/tanulok . -f tanulok.Dockerfile
 # docker run --rm -v $(pwd):/app -v $(pwd)/out:/app/out vb/tanulok diakok.txt 10

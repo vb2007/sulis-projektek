@@ -15,7 +15,7 @@ class Train {
       $this->operator = $operator;
    }
 
-   public function __get($name): void {
+   public function __get($name) {
       return $this->$name;
    }
 
