@@ -27,4 +27,5 @@ COPY . /app
 ENTRYPOINT [ "php", "tanulok.php" ]
 
 # docker build -t vb/tanulok . -f tanulok.Dockerfile
-# docker run -it --rm -v $(pwd):/app vb/tanulok
+# docker run --rm -v $(pwd)/out:/app/out monogram/tanulok diakok.txt 10
+# docker run --rm -v $(pwd)/out:/app/out monogram/tanulok diakok.csv 5
