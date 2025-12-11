@@ -11,7 +11,7 @@ composer init
 Csomagok telepítése futtatás előtt (meglévő `composer.lock` fájloknál):
 
 ```shell
-composer
+composer install
 ```
 
 Csomag(ok) hozzáadása:

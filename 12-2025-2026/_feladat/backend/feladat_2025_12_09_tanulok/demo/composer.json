@@ -11,5 +11,7 @@
          "email": "admin@vb2007.hu"
       }
    ],
-   "require": {}
+   "require": {
+      "fakerphp/faker": "^1.24"
+   }
 }
