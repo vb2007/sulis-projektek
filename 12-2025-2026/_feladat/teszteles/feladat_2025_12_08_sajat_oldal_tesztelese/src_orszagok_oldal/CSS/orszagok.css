@@ -1,0 +1,29 @@
+
+header{
+
+    height: 10rem;
+}
+body{
+    background-color: #564592;
+    text-align: justify;
+}
+h1{
+    text-shadow: 5px 5px white ;
+    
+    
+}
+header{
+    background-image: url(../IMG/orszagok.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+footer{
+    background-color: #2176AE;
+    color: white;
+    margin-bottom: auto;
+}
+a{
+    color: white;
+    text-decoration: none;
+}
