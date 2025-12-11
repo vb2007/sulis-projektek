@@ -26,6 +26,39 @@ public class HTMLStuctureTest
         
         ExcelReportGenerator.EndTest();
     }
-    
-    
+
+    [Test]
+    [Description("Checks if the page's language really is set to Hungarian.")]
+    public void CheckLanguage()
+    {
+        
+    }
+
+    [Test]
+    [Description("Checks if the page's encoding really is set to UTF-8")]
+    public void CheckEncoding()
+    {
+        
+    }
+
+    [Test]
+    [Description("Checks if the page really has a title.")]
+    public void CheckTitlePresence()
+    {
+        
+    }
+
+    [Test]
+    [Description("Checks if a H1 element really is present on the page.")]
+    public void CheckH1Presence()
+    {
+        
+    }
+
+    [Test]
+    [Description("Checks if a H1 element really is present on the page.")]
+    public void CheckH2Presence()
+    {
+        
+    }
 }
