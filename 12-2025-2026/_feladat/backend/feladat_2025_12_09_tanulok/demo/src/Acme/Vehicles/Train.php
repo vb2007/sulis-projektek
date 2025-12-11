@@ -2,6 +2,8 @@
 
 namespace Acme\Vehicles;
 
+use Exception;
+
 class Train {
    private int $number;
    private string $type;
@@ -18,7 +20,15 @@ class Train {
    }
 
    public function __set($name, $value): void {
-      $this->$name = $value;
+      if (in_array($name, ["type", "operator"])) {
+         $this->$name = $value;
+      }
+      else if (property_exists($this, $name)) {
+         throw new Exception("A $name tulajdonság privát.");
+      }
+      else {
+         throw new Exception("Nem létezik $name tulajdonság");
+      }
    }
 
    public function __tostring(): string {
