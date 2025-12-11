@@ -30,5 +30,5 @@ ENTRYPOINT [ "php", "tanulok.php" ]
 # chmod 777 out
 
 # docker build -t vb/tanulok . -f tanulok.Dockerfile
-# docker run --rm -v $(pwd):/app -v $(pwd)/out:/app/out vb/tanulok:dev diakok.txt 10
-# docker run --rm -v $(pwd):/app -v $(pwd)/out:/app/out vb/tanulok:dev diakok.csv 5
+# docker run --rm -v $(pwd):/app -v $(pwd)/out:/app/out vb/tanulok diakok.txt 10
+# docker run --rm -v $(pwd):/app -v $(pwd)/out:/app/out vb/tanulok diakok.csv 5
