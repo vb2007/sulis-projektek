@@ -8,6 +8,12 @@
 composer init
 ```
 
+Csomagok telepítése futtatás előtt (meglévő `composer.lock` fájloknál):
+
+```shell
+composer
+```
+
 Csomag(ok) hozzáadása:
 
 ```shell
