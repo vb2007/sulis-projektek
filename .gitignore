@@ -18,5 +18,7 @@ node_modules/
 **/TestResults/
 **DotSettings.user
 
-#PHP (Coposer)
+#PHP
 **/vendor
+**/out
+**composer.lock
