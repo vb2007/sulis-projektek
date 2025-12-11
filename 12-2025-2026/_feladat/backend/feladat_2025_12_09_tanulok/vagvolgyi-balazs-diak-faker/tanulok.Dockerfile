@@ -1,3 +1,4 @@
+#FROM php:8.3-cli-alpine
 FROM vb/php
 
 ENV TZ=Europe/Budapest
