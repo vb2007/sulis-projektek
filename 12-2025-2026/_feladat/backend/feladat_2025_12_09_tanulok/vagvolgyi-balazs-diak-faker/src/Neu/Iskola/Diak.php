@@ -9,7 +9,7 @@ class Diak {
     private string $knev;
     private string $email;
     private DateTime $szuletett;
-    private static int $szamlalo; //UML aláhúzás = static
+    private static int $szamlalo = 0; //UML aláhúzás = static
     private int $sorszam;
 
     public function __construct(string $vnev, string $knev, string $email, DateTime $szuletett) {
