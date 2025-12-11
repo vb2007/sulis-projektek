@@ -8,14 +8,14 @@
 composer init
 ```
 
+Csomag(ok) hozzáadása:
+
+```shell
+composer require fakerphp/faker
+```
+
 Autoload fájlok generálása:
 
 ```shell
 composer dump-autoload
-```
-
-Csomag hozzáadása:
-
-```shell
-composer require fakerphp/faker
 ```
