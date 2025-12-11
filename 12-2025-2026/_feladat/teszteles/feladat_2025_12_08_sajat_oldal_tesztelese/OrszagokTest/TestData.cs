@@ -2,7 +2,7 @@ namespace OrszagokTest;
 
 public class TestData
 {
-    public static string _baseUrl = "https://www.demoblaze.com/";
+    public static string _baseUrl = "http://localhost:3000/orszagok.html";
 
     public class HTMLAttributes
     {
