@@ -57,7 +57,7 @@ if (str_ends_with($outputFile, ".txt")) {
             $diak->teljes_nev,
             $diak->email,
             $diak->szuletett_iso
-        ], ';');
+        ], ";", '"', ""); //; -> separator, utána escape paraméterek
     }
     fclose($fp);
 }
