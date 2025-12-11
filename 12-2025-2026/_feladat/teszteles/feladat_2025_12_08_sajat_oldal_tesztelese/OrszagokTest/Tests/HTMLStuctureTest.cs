@@ -57,16 +57,18 @@ public class HTMLStuctureTest
     }
 
     [Test]
-    [Description("Checks if a H1 element really is present on the page.")]
+    [Description("Checks if an H1 element really is present on the page.")]
     public void CheckH1Presence()
     {
-        _browser.AssertElementPresent(H1Selector, "An H1 element should be present on the page.");
+        bool isPresent = _browser.IsElementPresent(H1Selector);
+        Assert.That(isPresent, Is.True, "An H1 element should be present on the page");
     }
 
     [Test]
-    [Description("Checks if a H2 element really is present on the page.")]
+    [Description("Checks if an H2 element really is present on the page.")]
     public void CheckH2Presence()
     {
-        _browser.AssertElementPresent(H2Selector, "An H2 element should be present on the page.");
+        bool isPresent = _browser.IsElementPresent(H2Selector);
+        Assert.That(isPresent, Is.True, "An H2 element should be present on the page");
     }
 }

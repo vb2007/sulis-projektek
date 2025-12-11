@@ -76,21 +76,21 @@ public class Browser
         }
     }
 
-    public IWebElement? FindElementSafe(By locator)
-    {
-        try
-        {
-            return WebDriver.FindElement(locator);
-        }
-        catch (NoSuchElementException)
-        {
-            return null;
-        }
-    }
-
-    public void AssertElementPresent(By locator, string errorMessage = "Element should be present on the page.")
-    {
-        bool isPresent = IsElementPresent(locator);
-        Assert.That(isPresent, Is.True, errorMessage);
-    }
+    // public IWebElement? FindElementSafe(By locator)
+    // {
+    //     try
+    //     {
+    //         return WebDriver.FindElement(locator);
+    //     }
+    //     catch (NoSuchElementException)
+    //     {
+    //         return null;
+    //     }
+    // }
+    //
+    // public void AssertElementPresent(By locator, string errorMessage = "Element should be present on the page.")
+    // {
+    //     bool isPresent = IsElementPresent(locator);
+    //     Assert.That(isPresent, Is.True, errorMessage);
+    // }
 }
