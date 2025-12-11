@@ -21,3 +21,4 @@ node_modules/
 #PHP
 **/vendor
 **/out
+**.composer.lock
