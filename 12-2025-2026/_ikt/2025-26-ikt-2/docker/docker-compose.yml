@@ -1,0 +1,19 @@
+version: "3.8"
+
+services:
+    sqlserver:
+        image: mcr.microsoft.com/mssql/server:2022-latest
+        container_name: sqlserver2022
+        hostname: sqlserver
+        environment:
+            - ACCEPT_EULA=Y
+            - MSSQL_SA_PASSWORD=atidagadt
+            - MSSQL_PID=Developer
+        ports:
+            - "1433:1433"
+        volumes:
+            - sqlserver_data:/var/opt/mssql
+        restart: unless-stopped
+
+volumes:
+    sqlserver_data:
