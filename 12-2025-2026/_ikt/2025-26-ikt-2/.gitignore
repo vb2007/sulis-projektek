@@ -1,0 +1,26 @@
+##RIDER AUTO GENERATED
+
+
+# Default ignored files
+/shelf/
+/workspace.xml
+
+# Rider ignored files
+/modules.xml
+/contentModel.xml
+/projectSettingsUpdater.xml
+
+# Ignored default folder with query files
+/queries/
+
+# Datasource local storage ignored files
+/dataSources/
+/dataSources.local.xml
+
+# Editor-based HTTP Client requests
+/httpRequests/
+
+# VS/Rider specific ignores (manual, like everything below)
+**/.idea
+**/bin
+**/obj
