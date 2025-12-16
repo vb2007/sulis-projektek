@@ -1,0 +1,15 @@
+{
+    "name": "vb2007/feladat_2025_12_15_jegyek",
+    "autoload": {
+        "psr-4": {
+            "Vb2007\\Feladat20251215Jegyek\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "VB2007",
+            "email": "admin@vb2007.hu"
+        }
+    ],
+    "require": {}
+}
