@@ -46,11 +46,31 @@ class Jegy {
         $this->$name = $value;
     }
 
-    public function __tostring() :string {
-        return "";
+    public function __toString(): string {
+        $osztalyzat = strtoupper(self::$osztalyzatok[$this->jegy - 1]);
+        $datum = $this->beirva->format('Y.m.d H:i');
+        return "{$this->jegy} - {$osztalyzat} ({$this->tantargy}) {$this->tanar} {$datum}";
     }
 
-    public function toArray(bool $asszociativ) :array {
-
+    public function toArray(bool $asszociativ = false): array {
+        if ($asszociativ) {
+            return [
+                'tipus' => $this->tipus,
+                'jegy' => $this->jegy,
+                'osztalyzat' => self::$osztalyzatok[$this->jegy - 1],
+                'tantargy' => $this->tantargy,
+                'tanar' => $this->tanar,
+                'beirva' => $this->beirva
+            ];
+        } else {
+            return [
+                $this->tipus,
+                $this->jegy,
+                self::$osztalyzatok[$this->jegy - 1],
+                $this->tantargy,
+                $this->tanar,
+                $this->beirva
+            ];
+        }
     }
 }
