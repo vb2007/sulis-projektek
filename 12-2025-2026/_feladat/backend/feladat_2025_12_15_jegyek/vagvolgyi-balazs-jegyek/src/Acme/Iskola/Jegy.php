@@ -14,7 +14,7 @@ class Jegy {
     private string $tanar;
     private DateTime $beirva;
 
-    private function __construct(string $tipus, int $jegy, string $tantargy, string $tanar, DateTime $beirva) {
+    public function __construct(string $tipus, int $jegy, string $tantargy, string $tanar, DateTime $beirva) {
         $this->tipus = $tipus;
         $this->jegy = $jegy;
         $this->tantargy = $tantargy;
@@ -32,5 +32,25 @@ class Jegy {
 
     private function lehetsegesTantargyak() :array {
         return $this->tantargyak;
+    }
+
+    public function __get($name) :mixed {
+        if ($name == "osztalyzat") {
+            return $this->osztalyzatok[$this->jegy];
+        }
+
+        return $this->$name;
+    }
+
+    public function __set($name, $value) :void {
+        $this->$name = $value;
+    }
+
+    public function __tostring() :string {
+        return "";
+    }
+
+    public function toArray(bool $asszociativ) :array {
+
     }
 }
