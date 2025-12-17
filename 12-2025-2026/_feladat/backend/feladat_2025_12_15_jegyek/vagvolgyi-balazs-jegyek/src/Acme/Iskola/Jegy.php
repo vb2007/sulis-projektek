@@ -49,6 +49,7 @@ class Jegy {
     public function __toString(): string {
         $osztalyzat = strtoupper(self::$osztalyzatok[$this->jegy - 1]);
         $datum = $this->beirva->format('Y.m.d H:i');
+
         return "{$this->jegy} - {$osztalyzat} ({$this->tantargy}) {$this->tanar} {$datum}";
     }
 
