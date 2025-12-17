@@ -22,16 +22,16 @@ class Jegy {
         $this->beirva = $beirva;
     }
 
-    private function lehetsegesTipusok() :array {
-        return $this->tipusok;
+    public static function lehetsegesTipusok(): array {
+        return self::$tipusok;
     }
 
-    private function lehetsegesOsztalyzatok() :array {
-        return $this->osztalyzatok;
+    public static function lehetsegesOsztalyzatok(): array {
+        return self::$osztalyzatok;
     }
 
-    private function lehetsegesTantargyak() :array {
-        return $this->tantargyak;
+    public static function lehetsegesTantargyak(): array {
+        return self::$tantargyak;
     }
 
     public function __get($name) :mixed {
