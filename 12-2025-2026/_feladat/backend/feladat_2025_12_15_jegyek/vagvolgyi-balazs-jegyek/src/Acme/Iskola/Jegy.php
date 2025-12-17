@@ -36,7 +36,7 @@ class Jegy {
 
     public function __get($name) :mixed {
         if ($name == "osztalyzat") {
-            return $this->osztalyzatok[$this->jegy];
+            return self::$osztalyzatok[$this->jegy - 1];
         }
 
         return $this->$name;
