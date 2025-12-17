@@ -62,15 +62,15 @@ class Jegy {
                 'tanar' => $this->tanar,
                 'beirva' => $this->beirva
             ];
-        } else {
-            return [
-                $this->tipus,
-                $this->jegy,
-                self::$osztalyzatok[$this->jegy - 1],
-                $this->tantargy,
-                $this->tanar,
-                $this->beirva
-            ];
         }
+
+        return [
+            $this->tipus,
+            $this->jegy,
+            self::$osztalyzatok[$this->jegy - 1],
+            $this->tantargy,
+            $this->tanar,
+            $this->beirva
+        ];
     }
 }
