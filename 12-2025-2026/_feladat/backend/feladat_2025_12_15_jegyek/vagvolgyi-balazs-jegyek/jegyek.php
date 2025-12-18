@@ -46,7 +46,7 @@ if ($tipus == "osztalyzat") {
         $jegy = new IskolaJegy(
             $faker->randomElement(IskolaJegy::lehetsegesTipusok()),
             $faker->numberBetween(1, 5),
-            $faker->randomElement(IkolsaJegy::lehetsegesTantargyak()),
+            $faker->randomElement(IskolaJegy::lehetsegesTantargyak()),
             $faker->name(),
             $faker->dateTimeBetween('-2 weeks', 'now')
         );
