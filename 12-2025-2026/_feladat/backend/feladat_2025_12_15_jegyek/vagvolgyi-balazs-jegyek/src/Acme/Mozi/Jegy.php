@@ -23,4 +23,16 @@ class Jegy {
         $this->kezdes = $kezdes;
         $this->felnott = $felnott;
     }
+
+    public static function termekNevei() :array {
+        return self::$termek;
+    }
+
+    public function __get($name) :mixed {
+        return $this->$name;
+    }
+
+    public function __set($name, $value) :void {
+        $this->$name = $value;
+    }
 }
