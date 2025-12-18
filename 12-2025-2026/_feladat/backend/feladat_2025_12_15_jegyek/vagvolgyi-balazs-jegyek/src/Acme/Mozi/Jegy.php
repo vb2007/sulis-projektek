@@ -45,4 +45,31 @@ class Jegy {
 
         return "{$capTitle} {$formattedPrice} {$room} {$startTime}{$ageRating}";
     }
+
+    public function toArray(bool $asszociativ = false) :array {
+        $formattedPrice = number_format($this->ar, 0, '', ' ') . " Ft";
+        $korhataros = $this->felnott ? "igen" : "nem";
+
+        if ($asszociativ) {
+            return [
+                "cim" => $this->cim,
+                "ar" => $formattedPrice,
+                "terem" => $this->terem,
+                "sor" => $this->sor,
+                "ules" => $this->ules,
+                "kezdes" => $this->kezdes,
+                "korhataros" => $korhataros
+            ];
+        }
+
+        return [
+            $this->cim,
+            $formattedPrice,
+            $this->terem,
+            $this->sor,
+            $this->ules,
+            $this->kezdes,
+            $korhataros
+        ];
+    }
 }
