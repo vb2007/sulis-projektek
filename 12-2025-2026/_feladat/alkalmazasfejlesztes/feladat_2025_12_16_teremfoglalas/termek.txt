@@ -1,0 +1,4 @@
+TeremTipus;TeremAzonosito;HelyekSzama;TakaritasiIdo
+s;t1;100;15
+a;t2;30
+a;t3;60
