@@ -71,7 +71,7 @@ if ($tipus == "mozi") {
     }
 }
 
-$outputPath = __DIR__ . "/out/" . ($tipus == "osztalyzat" ? "osztalyzatok" : "mozijegyek") . $kimenet;
+$outputPath = __DIR__ . "/out/" . ($tipus == "osztalyzat" ? "osztalyzatok" : "mozijegyek") . "." . $kimenet;
 switch ($kimenet) {
     case null:
         foreach ($jegyek as $jegy) {
@@ -83,19 +83,21 @@ switch ($kimenet) {
         $fp = fopen($outputPath, 'w');
 
         if ($tipus == "osztalyzat") {
-            fputcsv($fp, ['tipus', 'jegy', 'osztalyzat', 'tantargy', 'tanar', 'beirva']);
+            fputcsv($fp, ['tipus', 'jegy', 'osztalyzat', 'tantargy', 'tanar', 'beirva'], ',', '"', '');
         } elseif ($tipus == "mozi") {
-            fputcsv($fp, ['cim', 'ar', 'terem', 'sor', 'ules', 'kezdes', 'korhataros']);
+            fputcsv($fp, ['cim', 'ar', 'terem', 'sor', 'ules', 'kezdes', 'korhataros'], ',', '"', '');
         }
 
         foreach ($jegyek as $jegy) {
             $data = $jegy->toArray(true);
+
             if ($tipus == "osztalyzat") {
                 $data['beirva'] = $data['beirva']->format('Y.m.d H:i');
             } elseif ($tipus == "mozi") {
                 $data['kezdes'] = $data['kezdes']->format('Y-m-d H:i');
             }
-            fputcsv($fp, $data);
+
+            fputcsv($fp, $data, ',', '"', '');
         }
 
         fclose($fp);
@@ -105,11 +107,13 @@ switch ($kimenet) {
         $jsonData = [];
         foreach ($jegyek as $jegy) {
             $data = $jegy->toArray(true);
+
             if ($tipus == "osztalyzat") {
                 $data['beirva'] = $data['beirva']->format('Y.m.d H:i');
             } elseif ($tipus == "mozi") {
                 $data['kezdes'] = $data['kezdes']->format('Y-m-d H:i');
             }
+
             $jsonData[] = $data;
         }
 
