@@ -53,3 +53,37 @@ if ($tipus == "osztalyzat") {
         $jegyek[] = $jegy;
     }
 }
+
+$outputPath = __DIR__ . "/out/osztalyzatok" . $kimenet;
+switch ($kimenet) {
+    case null:
+        foreach ($jegyek as $jegy) {
+            echo $jegy . PHP_EOL;
+        }
+
+        break;
+    case "csv":
+        $fp = fopen($outputPath, 'w');
+
+        fputcsv($fp, ['tipus', 'jegy', 'osztalyzat', 'tantargy', 'tanar', 'beirva']);
+        foreach ($jegyek as $jegy) {
+            $data = $jegy->toArray(true);
+            $data['beirva'] = $data['beirva']->format('Y.m.d H:i');
+            fputcsv($fp, $data);
+        }
+
+        fclose($fp);
+
+        break;
+    case "json":
+        $jsonData = [];
+        foreach ($jegyek as $jegy) {
+            $data = $jegy->toArray(true);
+            $data['beirva'] = $data['beirva']->format('Y.m.d H:i');
+            $jsonData[] = $data;
+        }
+
+        file_put_contents($outputPath, json_encode($jsonData, JSON_PRETTY_PRINT | JSON_UNESCAPED_UNICODE));
+
+        break;
+}
