@@ -54,20 +54,20 @@ public class TeremNyilvantartas
                 }
                 else
                 {
-                    hibaLista.Add($"{foglalas} - A terem nem található a nyilvántartásban.\n");
+                    hibaLista.Add($"{foglalas} - A terem nem található a nyilvántartásban.");
                 }
             }
             catch (FoglalasException ex)
             {
-                hibaLista.Add($"{foglalas} - {ex.Message}\n");
+                hibaLista.Add($"{foglalas} - {ex.Message}");
             }
             catch (IdotartamException ex)
             {
-                hibaLista.Add($"{foglalas} - {ex.Message}\n");
+                hibaLista.Add($"{foglalas} - {ex.Message}");
             }
             catch (Exception ex)
             {
-                hibaLista.Add($"{foglalas} - {ex.Message}\n");
+                hibaLista.Add($"{foglalas} - {ex.Message}");
             }
         }
 
