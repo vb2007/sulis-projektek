@@ -28,7 +28,7 @@ class Program
         }
         Console.WriteLine();
 
-        Console.WriteLine("A termek a foglalások után:");
+        Console.WriteLine("A termek a foglalások után:\n");
         foreach (Terem terem in nyilvantartas.OsszesTerem)
         {
             string teremNev = teremAzonositoMap[terem.TeremAzonosito];
