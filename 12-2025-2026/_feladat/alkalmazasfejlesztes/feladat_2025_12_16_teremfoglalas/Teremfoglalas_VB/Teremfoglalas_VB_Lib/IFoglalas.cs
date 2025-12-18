@@ -2,7 +2,7 @@ namespace Teremfoglalas_VB_Lib;
 
 public interface IFoglalas
 {
-    int HelyszinAzonosito();
-    DateTime Kezdete();
-    DateTime Vege();
+    int HelyszinAzonosito { get; }
+    DateTime Kezdete { get; }
+    DateTime Vege { get; }
 }
