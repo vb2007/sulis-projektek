@@ -30,5 +30,5 @@ ENTRYPOINT [ "php", "jegyek.php" ]
 # sudo chmod 777 out
 
 # docker build -t vb/jegyek . -f jegyek.Dockerfile
-# docker run --rm -v $(pwd):/app -v $(pwd)/out:/app/out vb/jegyek diakok.txt 10
-# docker run --rm -v $(pwd):/app -v $(pwd)/out:/app/out vb/jegyek diakok.csv 5
+# docker run --rm -v $(pwd):/app -v $(pwd)/out:/app/out vb/jegyek hajo 3
+# docker run --rm -v $(pwd):/app -v $(pwd)/out:/app/out vb/jegyek hajo 3 json

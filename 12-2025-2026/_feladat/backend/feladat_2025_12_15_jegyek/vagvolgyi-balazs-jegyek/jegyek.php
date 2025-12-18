@@ -8,20 +8,20 @@ use Acme\Iskola\Jegy;
 
 $faker = Factory::create("hu_HU");
 
-if ($argc < 2) {
+if ($argc < 3) {
     echo "Az első két paraméter megadása kötelező!" . PHP_EOL;
     exit(3);
 }
 
 $tipus = $argv[1];
-if ($tipus !== "mozi" && $tipus !== "osztalyzat") {
+if ($tipus != "busz" && $tipus != "mozi" && $tipus != "osztalyzat" && $tipus != "repulo") {
     echo "Nem megfelelő paraméter!" . PHP_EOL;
     echo "Az első paraméter csak 'busz', 'mozi', 'osztalyzat' vagy 'repulo' lehet!" . PHP_EOL;
     exit(7);
 }
 
 $darabszam = $argv[2];
-if (!is_int($darabszam) || intval($darabszam) < 1) {
+if (!is_int($darabszam) && intval($darabszam) < 1) {
     echo "Nem megfelelő paraméter!" . PHP_EOL;
     echo "A második paraméternek 0-nál nagyobb számnak kell lennie!" . PHP_EOL;
     exit(2);
