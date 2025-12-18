@@ -4,7 +4,7 @@ public sealed class AltalanosTerem : Terem
 {
     public AltalanosTerem(int teremAzonosito, int helyekSzama) : base(teremAzonosito, helyekSzama) { }
 
-    public new void IdopontFoglalas(Foglalas foglalas)
+    public override void IdopontFoglalas(Foglalas foglalas)
     {
         if (foglalas.HelyszinAzonosito != TeremAzonosito)
         {

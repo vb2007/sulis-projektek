@@ -9,7 +9,7 @@ public sealed class SpecialisTerem : Terem
         TakaritasiIdoPerc = takaritasiIdoPerc;
     }
 
-    public new void IdopontFoglalas(Foglalas foglalas)
+    public override void IdopontFoglalas(Foglalas foglalas)
     {
         if (foglalas.HelyszinAzonosito != TeremAzonosito)
         {

@@ -22,6 +22,6 @@ public class Foglalas : IFoglalas
 
     public override string ToString()
     {
-        return $"Kezdet: {Kezdete:yyyy.MM.dd HH:mm}, Vég: {Vege:yyyy.MM.dd HH:mm}, Tanár azonosító: {TanarAzonosito}";
+        return $"{Kezdete:yyyy.MM.dd HH:mm} - {Vege:HH:mm} Tanár azonosító: {TanarAzonosito}";
     }
 }

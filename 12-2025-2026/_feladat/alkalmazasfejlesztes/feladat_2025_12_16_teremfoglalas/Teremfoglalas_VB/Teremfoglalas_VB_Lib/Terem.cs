@@ -13,8 +13,5 @@ public class Terem
         Orarend = new Orarend();
     }
 
-    public void IdopontFoglalas(Foglalas foglalas)
-    {
-        
-    }
+    public virtual void IdopontFoglalas(Foglalas foglalas) { }
 }
