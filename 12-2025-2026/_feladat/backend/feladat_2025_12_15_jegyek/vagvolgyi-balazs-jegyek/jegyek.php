@@ -4,7 +4,8 @@ declare(strict_types=1);
 require __DIR__ . "/vendor/autoload.php";
 
 use Faker\Factory;
-use Acme\Iskola\Jegy;
+use Acme\Iskola\Jegy as IskolaJegy;
+use Acme\Mozi\Jegy as MoziJegy;
 
 $faker = Factory::create("hu_HU");
 
@@ -42,10 +43,10 @@ $jegyek = [];
 
 if ($tipus == "osztalyzat") {
     for ($i = 0; $i < $darabszam; $i++) {
-        $jegy = new Jegy(
-            $faker->randomElement(Jegy::lehetsegesTipusok()),
+        $jegy = new IskolaJegy(
+            $faker->randomElement(IskolaJegy::lehetsegesTipusok()),
             $faker->numberBetween(1, 5),
-            $faker->randomElement(Jegy::lehetsegesTantargyak()),
+            $faker->randomElement(IkolsaJegy::lehetsegesTantargyak()),
             $faker->name(),
             $faker->dateTimeBetween('-2 weeks', 'now')
         );
@@ -54,7 +55,23 @@ if ($tipus == "osztalyzat") {
     }
 }
 
-$outputPath = __DIR__ . "/out/osztalyzatok" . $kimenet;
+if ($tipus == "mozi") {
+    for ($i = 0; $i < $darabszam; $i++) {
+        $jegy = new MoziJegy(
+            $faker->text(40),
+            $faker->numberBetween(1, 20) * 1000 - 10,
+            $faker->randomElement(MoziJegy::termekNevei()),
+            strtoupper($faker->randomLetter()),
+            $faker->numberBetween(1, 60),
+            $faker->dateTimeBetween('tomorrow', '+30 days'),
+            $faker->boolean()
+        );
+
+        $jegyek[] = $jegy;
+    }
+}
+
+$outputPath = __DIR__ . "/out/" . ($tipus == "osztalyzat" ? "osztalyzatok" : "mozijegyek") . $kimenet;
 switch ($kimenet) {
     case null:
         foreach ($jegyek as $jegy) {
@@ -65,10 +82,19 @@ switch ($kimenet) {
     case "csv":
         $fp = fopen($outputPath, 'w');
 
-        fputcsv($fp, ['tipus', 'jegy', 'osztalyzat', 'tantargy', 'tanar', 'beirva']);
+        if ($tipus == "osztalyzat") {
+            fputcsv($fp, ['tipus', 'jegy', 'osztalyzat', 'tantargy', 'tanar', 'beirva']);
+        } elseif ($tipus == "mozi") {
+            fputcsv($fp, ['cim', 'ar', 'terem', 'sor', 'ules', 'kezdes', 'korhataros']);
+        }
+
         foreach ($jegyek as $jegy) {
             $data = $jegy->toArray(true);
-            $data['beirva'] = $data['beirva']->format('Y.m.d H:i');
+            if ($tipus == "osztalyzat") {
+                $data['beirva'] = $data['beirva']->format('Y.m.d H:i');
+            } elseif ($tipus == "mozi") {
+                $data['kezdes'] = $data['kezdes']->format('Y-m-d H:i');
+            }
             fputcsv($fp, $data);
         }
 
@@ -79,7 +105,11 @@ switch ($kimenet) {
         $jsonData = [];
         foreach ($jegyek as $jegy) {
             $data = $jegy->toArray(true);
-            $data['beirva'] = $data['beirva']->format('Y.m.d H:i');
+            if ($tipus == "osztalyzat") {
+                $data['beirva'] = $data['beirva']->format('Y.m.d H:i');
+            } elseif ($tipus == "mozi") {
+                $data['kezdes'] = $data['kezdes']->format('Y-m-d H:i');
+            }
             $jsonData[] = $data;
         }
 
