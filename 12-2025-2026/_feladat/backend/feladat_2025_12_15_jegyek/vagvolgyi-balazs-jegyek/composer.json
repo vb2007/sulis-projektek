@@ -1,8 +1,8 @@
 {
-    "name": "vb2007/vagvolgyi-balazs-diak-faker",
+    "name": "vb2007/feladat_2025_12_15_jegyek",
     "autoload": {
         "psr-4": {
-            "Neu\\": "src/Neu"
+            "Acme\\": "src/Acme"
         }
     },
     "authors": [
