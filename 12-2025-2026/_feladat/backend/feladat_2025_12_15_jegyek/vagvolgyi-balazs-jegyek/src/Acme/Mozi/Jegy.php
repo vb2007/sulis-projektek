@@ -35,4 +35,14 @@ class Jegy {
     public function __set($name, $value) :void {
         $this->$name = $value;
     }
+
+    public function __tostring() :string {
+        $capTitle = strtoupper($this->cim);
+        $formattedPrice = number_format($this->ar, 0, '', ' ') . " Ft";
+        $room = "[{$this->terem} terem {$this->sor} sor {$this->ules}. ülés]";
+        $startTime = $this->kezdes->format('Y-m-d H:i');
+        $ageRating = $this->felnott ? " (18+)" : "";
+
+        return "{$capTitle} {$formattedPrice} {$room} {$startTime}{$ageRating}";
+    }
 }
