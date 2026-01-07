@@ -13,4 +13,9 @@ public class Termek : ITermek
     {
         
     }
+
+    public override string ToString()
+    {
+        return base.ToString();
+    }
 }
