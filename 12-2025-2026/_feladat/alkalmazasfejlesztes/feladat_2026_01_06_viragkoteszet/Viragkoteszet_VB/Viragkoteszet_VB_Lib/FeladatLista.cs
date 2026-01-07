@@ -2,19 +2,20 @@ namespace Viragkoteszet_VB_Lib;
 
 public class FeladatLista
 {
-    public List<string> Feladatok { get; } = new List<string>();
+    public List<Termek> Feladatok { get; } = new List<Termek>();
     
-    public FeladatLista(IEnumerable<string> feladatok)
+    public FeladatLista()
     {
-        foreach (string feladat in feladatok)
-        {
-            Feladatok.Add(feladat);
-        }
     }
 
-    public static List<string> operator +(string feladat)
+    public static FeladatLista operator +(FeladatLista lista, Termek termek)
     {
-        Feladatok.Add(feladat);
-        return Feladatok;
+        FeladatLista ujLista = new FeladatLista();
+        foreach (var f in lista.Feladatok)
+        {
+            ujLista.Feladatok.Add(f);
+        }
+        ujLista.Feladatok.Add(termek);
+        return ujLista;
     }
 }

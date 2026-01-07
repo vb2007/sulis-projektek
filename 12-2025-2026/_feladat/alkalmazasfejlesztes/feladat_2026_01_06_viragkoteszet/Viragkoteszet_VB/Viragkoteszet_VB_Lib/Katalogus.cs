@@ -12,5 +12,11 @@ public class Katalogus
         }
     }
 
-    public Alapanyag this[int sorszam] => Alapanyagok.ElementAt(sorszam);
+    public Alapanyag this[string azonosito] 
+    {
+        get
+        {
+            return Alapanyagok.First(a => a.Azonosito == azonosito);
+        }
+    }
 }

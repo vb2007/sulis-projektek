@@ -12,10 +12,16 @@ public class Termekek
         }
     }
     
-    public Termek this[int sorszam] => TermekLista.ElementAt(sorszam);
+    public Termek this[int azonosito] 
+    {
+        get
+        {
+            return TermekLista.First(t => t.Azonosito == azonosito);
+        }
+    }
 
     public override string ToString()
     {
-        return base.ToString();
+        return string.Join("\n", TermekLista);
     }
 }
