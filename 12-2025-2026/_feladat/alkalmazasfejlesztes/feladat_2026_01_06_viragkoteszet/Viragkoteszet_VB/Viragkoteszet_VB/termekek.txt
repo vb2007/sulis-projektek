@@ -1,0 +1,27 @@
+ID;Tipus;Megnevezes;Alapanyagok
+1;koszorú alap;koszorú alap - moha;kam;1
+2;koszorú alap;koszorú alap - szalma;kasz;1
+3;koszorú alap;koszorú alap - fenyő;kaf;1
+4;koszorú alap;koszorú alap - toboz;kat;1
+5;koszorú alap;koszorú alap - vessző;kav;1
+6;karácsonyi ajtódísz;vessző karácsonyi ajtódísz piros gyertyával;kav;1;gy;1;d;1 
+7;karácsonyi ajtódísz;fenyő karácsonyi ajtódísz piros gyertyával;kaf;1;gy;1;d;1
+8;karácsonyi ajtódísz;toboz karácsonyi ajtódísz piros gyertyával;kat;1;gy;1;d;1
+9;karácsonyi ajtódísz;fenyő karácsonyi ajtódísz fehér gyertyával;kaf;1;gy;1;d;1
+10;karácsonyi ajtódísz;toboz karácsonyi ajtódísz fehér gyertyával;kat;1;gy;1;d;1
+11;karácsonyi ajtódísz;gazdagon díszített fenyő karácsonyi ajtódísz piros gyertyával;kaf;1;gy;1;d;3
+12;karácsonyi ajtódísz;gazdagon díszített toboz karácsonyi ajtódísz piros gyertyával;kat;1;gy;1;d;3
+13;karácsonyi ajtódísz;gazdagon díszített fenyő karácsonyi ajtódísz fehér gyertyával;kaf;1;gy;1;d;3
+14;karácsonyi ajtódísz;gazdagon díszített toboz karácsonyi ajtódísz fehér gyertyával;kat;1;gy;1;d;3
+15;adventi koszorú;lila gyertyás fenyő adventi koszorú;kaf;1;gy;4;d;1
+16;adventi koszorú;piros gyertyás fenyő adventi koszorú;kaf;1;gy;4;d;1
+17;adventi koszorú;fehér gyertyás fenyő adventi koszorú;kaf;1;gy;4;d;1
+18;adventi koszorú;lila gyertyás toboz adventi koszorú;kat;1;gy;4;d;1
+19;adventi koszorú;piros gyertyás toboz adventi koszorú;kat;1;gy;4;d;1
+20;adventi koszorú;fehér gyertyás toboz adventi koszorú;kat;1;gy;4;d;1
+21;adventi koszorú;gazdagon díszített lila gyertyás fenyő adventi koszorú;kaf;1;gy;4;d;2
+22;adventi koszorú;gazdagon díszített piros gyertyás fenyő adventi koszorú;kaf;1;gy;4;d;2
+23;adventi koszorú;gazdagon díszített fehér gyertyás fenyő adventi koszorú;kaf;1;gy;4;d;2
+24;adventi koszorú;gazdagon díszített lila gyertyás toboz adventi koszorú;kat;1;gy;4;d;2
+25;adventi koszorú;gazdagon díszített piros gyertyás toboz adventi koszorú;kat;1;gy;4;d;2
+26;adventi koszorú;gazdagon díszített fehér gyertyás toboz adventi koszorú;kat;1;gy;4;d;2
