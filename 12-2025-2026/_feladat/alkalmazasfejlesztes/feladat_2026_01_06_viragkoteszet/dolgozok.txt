@@ -1,0 +1,6 @@
+ID;Nev;Beosztas;Alapanyagok
+1;Kiss Virág;gy;1;2;3;5;6;7;9;15;16;17
+2;Nagy Ibolya;v
+3;Vörös Rózsa;v
+4;Major Anna;gy;1;4;5;8;10;18;19;20
+5;Kora Hajnal;v
