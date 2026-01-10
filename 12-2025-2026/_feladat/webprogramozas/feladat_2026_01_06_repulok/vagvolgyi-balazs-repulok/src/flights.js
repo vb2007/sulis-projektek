@@ -20,25 +20,37 @@ export const createFlight = () => {
 export const getFlights = (filter = {}, sort = "") => {
     let filteredFlights = flights.filter((flight) => {
         return Object.keys(filter).every((key) => {
-            if (!flight.hasOwnProperty(key)) {
-                return false;
+            // Nested property support (pl. "airplane.name")
+            const keys = key.split(".");
+            let flightValue = flight;
+
+            // Navigate through nested properties
+            for (const nestedKey of keys) {
+                if (!flightValue || !flightValue.hasOwnProperty(nestedKey)) {
+                    return false;
+                }
+                flightValue = flightValue[nestedKey];
             }
 
-            const flightValue = String(flight[key]).toLowerCase();
+            const flightValueStr = String(flightValue).toLowerCase();
             const filterValue = String(filter[key]).toLowerCase();
 
-            return flightValue.includes(filterValue);
+            return flightValueStr.includes(filterValue);
         });
     });
 
-    if (
-        sort &&
-        filteredFlights.length > 0 &&
-        filteredFlights[0].hasOwnProperty(sort)
-    ) {
+    if (sort && filteredFlights.length > 0) {
         filteredFlights.sort((a, b) => {
-            const aValue = a[sort];
-            const bValue = b[sort];
+            // Support for nested sort keys
+            const keys = sort.split(".");
+            let aValue = a;
+            let bValue = b;
+
+            // Navigate through nested properties for sorting
+            for (const nestedKey of keys) {
+                aValue = aValue && aValue[nestedKey];
+                bValue = bValue && bValue[nestedKey];
+            }
 
             if (aValue instanceof Date && bValue instanceof Date) {
                 return aValue - bValue;

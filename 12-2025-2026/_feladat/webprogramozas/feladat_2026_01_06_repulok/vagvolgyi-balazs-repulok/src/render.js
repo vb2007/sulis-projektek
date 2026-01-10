@@ -1,27 +1,25 @@
-import { Table } from "cli-table3";
+import Table from "cli-table3";
 import chalk from "chalk";
 
-export default renderCLITable = (flights, column) => {
-    const colHeaderNames = ["#", "Légitársaság", "Repülő", "Honnan", "Hova"];
-
-    const colHeaderNamesColored = colHeaderNames.map((col) => {
-        if (col === column) {
-            return chalk.blue(col);
-        }
-
-        return col;
-    });
+export default function renderCLITable(flights, column) {
+    const colHeaderNames = [
+        chalk.red("#"),
+        chalk.red("Légitársaság"),
+        chalk.red("Repülő"),
+        chalk.red("Honnan"),
+        chalk.red("Hova"),
+    ];
 
     const table = new Table({
-        head: colHeaderNamesColored,
-        colWidths: [5, 20, 15, 15, 15],
+        head: colHeaderNames,
+        colWidths: [7, 20, 15, 15, 15],
     });
 
-    flights.forEach((flight, index) => {
+    flights.forEach((flight) => {
         const { flightNumber, airline, airplane, departure, arrival } = flight;
 
         const rowData = [
-            index + 1,
+            flightNumber,
             airline.name,
             airplane.name,
             departure.name,
@@ -40,4 +38,4 @@ export default renderCLITable = (flights, column) => {
     });
 
     return table.toString();
-};
+}
