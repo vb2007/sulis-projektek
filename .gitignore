@@ -1,7 +1,8 @@
 #LibreOffice (opening PDF files)
 **.~lock.*
 
-#For web projects (mainly npm Vite package & others)
+#For web projects (mainly npm, pnpm, Vite package, folders, etc.)
+.pnpm-store
 node_modules/
 .vite
 **package-lock.json
