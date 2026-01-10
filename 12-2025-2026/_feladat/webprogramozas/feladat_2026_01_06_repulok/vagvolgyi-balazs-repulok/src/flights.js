@@ -20,11 +20,9 @@ export const createFlight = () => {
 export const getFlights = (filter = {}, sort = "") => {
     let filteredFlights = flights.filter((flight) => {
         return Object.keys(filter).every((key) => {
-            // Nested property support (pl. "airplane.name")
             const keys = key.split(".");
             let flightValue = flight;
 
-            // Navigate through nested properties
             for (const nestedKey of keys) {
                 if (!flightValue || !flightValue.hasOwnProperty(nestedKey)) {
                     return false;
@@ -41,12 +39,10 @@ export const getFlights = (filter = {}, sort = "") => {
 
     if (sort && filteredFlights.length > 0) {
         filteredFlights.sort((a, b) => {
-            // Support for nested sort keys
             const keys = sort.split(".");
             let aValue = a;
             let bValue = b;
 
-            // Navigate through nested properties for sorting
             for (const nestedKey of keys) {
                 aValue = aValue && aValue[nestedKey];
                 bValue = bValue && bValue[nestedKey];
