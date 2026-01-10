@@ -19,34 +19,21 @@ export const createFlight = () => {
 
 export const getFlights = (filter = {}, sort = "") => {
     let filteredFlights = flights.filter((flight) => {
-        return Object.keys(filter).every((key) => {
-            const keys = key.split(".");
-            let flightValue = flight;
-
-            for (const nestedKey of keys) {
-                if (!flightValue || !flightValue.hasOwnProperty(nestedKey)) {
-                    return false;
-                }
-                flightValue = flightValue[nestedKey];
-            }
-
-            const flightValueStr = String(flightValue).toLowerCase();
-            const filterValue = String(filter[key]).toLowerCase();
-
-            return flightValueStr.includes(filterValue);
+        return Object.entries(filter).every(([key, filterValue]) => {
+            const flightValue = getNestedValue(flight, key);
+            return (
+                flightValue &&
+                String(flightValue)
+                    .toLowerCase()
+                    .includes(String(filterValue).toLowerCase())
+            );
         });
     });
 
     if (sort && filteredFlights.length > 0) {
         filteredFlights.sort((a, b) => {
-            const keys = sort.split(".");
-            let aValue = a;
-            let bValue = b;
-
-            for (const nestedKey of keys) {
-                aValue = aValue && aValue[nestedKey];
-                bValue = bValue && bValue[nestedKey];
-            }
+            const aValue = getNestedValue(a, sort);
+            const bValue = getNestedValue(b, sort);
 
             if (aValue instanceof Date && bValue instanceof Date) {
                 return aValue - bValue;
@@ -61,4 +48,8 @@ export const getFlights = (filter = {}, sort = "") => {
     }
 
     return filteredFlights;
+};
+
+const getNestedValue = (obj, path) => {
+    return path.split(".").reduce((current, key) => current?.[key], obj);
 };

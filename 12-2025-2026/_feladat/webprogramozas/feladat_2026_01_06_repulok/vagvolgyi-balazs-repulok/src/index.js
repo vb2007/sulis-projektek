@@ -24,7 +24,7 @@ const boeingAirFlights = getFlights(
 );
 
 console.log(
-    chalk.blue("Boeing") +
+    chalk.green("Boeing") +
         " repülők az " +
         chalk.blue("Air") +
         " szót tartalmazó légitársaságoktól:",
