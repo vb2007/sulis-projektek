@@ -1,4 +1,5 @@
 import { Table } from "cli-table3";
+import chalk from "chalk";
 
 export default renderCLITable = (flights, column) => {
     const colHeaderNames = ["#", "Légitársaság", "Repülő", "Honnan", "Hova"];
