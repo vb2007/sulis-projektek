@@ -9,4 +9,4 @@ RUN echo '#!/bin/bash' > /startup.sh && \
     echo 'exec su node "$@"' >> /startup.sh && \
     chmod +x /startup.sh
 
-ENTRYPOINT ["/bin/bash"]
+ENTRYPOINT ["/startup.sh", "/bin/bash"]
