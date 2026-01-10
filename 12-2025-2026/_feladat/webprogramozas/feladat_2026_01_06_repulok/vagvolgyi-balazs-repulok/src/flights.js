@@ -12,4 +12,7 @@ export const createFlight = () => {
         date: faker.date.anytime(),
         captain: faker.person.fullName(),
     };
+
+    flights.push(flight);
+    return flight;
 };
