@@ -11,7 +11,10 @@ for (let i = 1; i < 200; i++) {
 // console.log(sortedFlights);
 
 const airbusFlights = getFlights({ "airplane.name": "Airbus" });
-console.log(chalk.blue("Airbus") + " repülők:");
+console.log(
+    chalk.black.bgBlue.bold(" Airbus ") +
+        chalk.black.bgWhite.bold(" repülők: "),
+);
 console.log(renderCLITable(airbusFlights, "Repülő"));
 console.log();
 
@@ -24,9 +27,9 @@ const boeingAirFlights = getFlights(
 );
 
 console.log(
-    chalk.green("Boeing") +
-        " repülők az " +
-        chalk.blue("Air") +
-        " szót tartalmazó légitársaságoktól:",
+    chalk.black.bgGreen.bold(" Boeing ") +
+        chalk.black.bgWhite.bold(" repülők az ") +
+        chalk.black.bgBlue.bold(" Air ") +
+        chalk.black.bgWhite.bold(" szót tartalmazó légitársaságoktól: "),
 );
 console.log(renderCLITable(boeingAirFlights, "Légitársaság"));
