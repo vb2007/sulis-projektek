@@ -3,7 +3,7 @@
 Dockerfile buildelése:
 
 ```shell
-docker build -t kd/node:pnpm .
+docker build -t vb/node:pnpm .
 ```
 
 Volume létrehozása pnpm-nek:
