@@ -1,0 +1,3 @@
+const flights = [];
+
+const createFlight = () => {};
