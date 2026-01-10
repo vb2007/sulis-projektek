@@ -4,8 +4,9 @@ WORKDIR /app
 
 RUN apk update && apk add --no-cache bash && npm install -g pnpm
 
-RUN chown -R node:node /app
-
-USER node
+RUN echo '#!/bin/bash' > /startup.sh && \
+    echo 'chown -R node:node /app' >> /startup.sh && \
+    echo 'exec su node "$@"' >> /startup.sh && \
+    chmod +x /startup.sh
 
 ENTRYPOINT ["/bin/bash"]
