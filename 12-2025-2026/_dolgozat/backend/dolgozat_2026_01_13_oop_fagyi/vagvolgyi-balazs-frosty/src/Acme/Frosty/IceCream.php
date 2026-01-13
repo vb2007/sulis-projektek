@@ -2,16 +2,25 @@
 
 namespace Acme\Frosty;
 
-class IceCream {
+use Stringable;
+
+class IceCream implements Stringable {
     private int $scoop;
     private int $price;
     private bool $sweetCone;
     private array $flavours;
-    private static array $availableFlavours;
+    private static array $availableFlavours = ["vanilla", "strawberry", "chocolate", "coconut"];
 
     public function __construct(int $scoop, bool $sweetCone) {
         $this->scoop = $scoop;
         $this->sweetCone = $sweetCone;
+        $sweetCone ? $this->price = $scoop * 480 : $this->price = $scoop * 400;
+        // if ($sweetCone) {
+        //     $this->price = $scoop * 480;
+        // }
+        // else {
+        //     $this->price = $scoop * 400;
+        // }
     }
 
     public function __get(string $name) :mixed {
