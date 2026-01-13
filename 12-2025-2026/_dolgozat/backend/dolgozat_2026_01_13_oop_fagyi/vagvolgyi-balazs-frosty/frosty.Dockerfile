@@ -30,5 +30,5 @@ ENTRYPOINT [ "php", "demo.php" ]
 # sudo chmod 777 out
 
 # docker build -t vb/frosty . -f frosty.Dockerfile
-# docker run --rm -v $(pwd):/app -v $(pwd)/out:/app/out vb/frosty hajo 3
-# docker run --rm -v $(pwd):/app -v $(pwd)/out:/app/out vb/frosty hajo 3 json
+# docker run --rm -v $(pwd):/app -v $(pwd)/out:/app/out vb/frosty
+# docker run --rm -v $(pwd):/app -v $(pwd)/out:/app/out vb/frosty
