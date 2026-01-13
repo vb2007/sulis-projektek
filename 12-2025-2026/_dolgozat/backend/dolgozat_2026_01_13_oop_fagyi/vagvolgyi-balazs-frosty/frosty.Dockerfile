@@ -23,7 +23,7 @@ RUN composer install --no-dev --optimize-autoloader
 
 USER phpdocker
 
-ENTRYPOINT [ "php", "frosty.php" ]
+ENTRYPOINT [ "php", "demo.php" ]
 
 # csatolt volume-ra íráshoz szükséges jogosultságbeállítás (linuxon):
 # mkdir -p out
