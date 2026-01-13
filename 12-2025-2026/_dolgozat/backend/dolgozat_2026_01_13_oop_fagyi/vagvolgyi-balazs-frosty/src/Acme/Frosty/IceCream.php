@@ -36,7 +36,12 @@ class IceCream implements Stringable {
     }
 
     public function __tostring() :string {
-        return "";
+        $flavoursUpper = array_map("strtoupper", $this->flavours);
+        $flavoursStr = implode(", ", $flavoursUpper);
+
+        $coneType = $this->sweetCone ? "édes tölcsérben" : "normál tölcsérben";
+
+        return "{$this->scoop} gombócos fagylalt [{$flavoursStr}] ízekkel {$coneType} ({$this->price} Ft)";
     }
 
     public function toArray() :array {
