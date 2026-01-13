@@ -1,0 +1,4 @@
+docker build -t vb/frosty . -f frosty.Dockerfile
+docker run --rm -v $(pwd):/app -v $(pwd)/out:/app/out vb/frosty hét
+docker run --rm -v $(pwd):/app -v $(pwd)/out:/app/out vb/frosty 0
+docker run --rm -v $(pwd):/app -v $(pwd)/out:/app/out vb/frosty 4

@@ -1,0 +1,18 @@
+{
+    "name": "vb2007/vagvolgyi-balazs-frosty",
+    "autoload": {
+        "psr-4": {
+            "Acme\\": "src/Acme"
+        }
+    },
+    "require": {
+        "fakerphp/faker": "^1.24"
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "VB2007",
+            "email": "admin@vb2007.hu"
+        }
+    ]
+}
