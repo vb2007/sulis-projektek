@@ -8,36 +8,31 @@ class IceCream implements Stringable {
     private int $scoop;
     private int $price;
     private bool $sweetCone;
-    private array $flavours;
+    private array $flavours = [];
     private static array $availableFlavours = ["vanilla", "strawberry", "chocolate", "coconut"];
 
     public function __construct(int $scoop, bool $sweetCone) {
         $this->scoop = $scoop;
         $this->sweetCone = $sweetCone;
-        $sweetCone ? $this->price = $scoop * 480 : $this->price = $scoop * 400;
-        // if ($sweetCone) {
-        //     $this->price = $scoop * 480;
-        // }
-        // else {
-        //     $this->price = $scoop * 400;
-        // }
+        $this->price = $scoop * 400 + ($sweetCone ? 80 : 0);
     }
 
     public function __get(string $name) :mixed {
-        return $this->$name;
+        return $this->$name ?? null;
     }
 
     public function __set(string $name, mixed $value) :void {
-        $this->$name = $value;
+        if (property_exists($this, $name)) {
+            $this->$name = $value;
+        }
     }
 
-    //static?
-    public function availableFlavours() :array {
-        return $this->availableFlavours;
+    public static function availableFlavours() :array {
+        return self::$availableFlavours;
     }
 
-    public function addFlavour(string $flavour) :void {
-        array_push($availableFlavours, $flavour);
+    public static function addFlavour(string $flavour) :void {
+        self::$availableFlavours[] = $flavour; //vagy array_push(..., ...)
     }
 
     public function __tostring() :string {
