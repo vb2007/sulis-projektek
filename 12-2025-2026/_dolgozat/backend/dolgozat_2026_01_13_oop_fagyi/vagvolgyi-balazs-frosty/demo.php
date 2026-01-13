@@ -23,7 +23,7 @@ $count = (int)$argv[1];
 $iceCreams = [];
 $availableFlavours = IceCream::availableFlavours();
 
-for ($i = 1; $i < $count; $i++) {
+for ($i = 0; $i < $count; $i++) {
     $scoop = $faker->numberBetween(1, 5);
     $sweetCone = $faker->boolean();
     $iceCream = new IceCream($scoop, $sweetCone);
