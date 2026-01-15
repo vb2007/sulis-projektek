@@ -1,3 +1,5 @@
+using System.Text.Json.Serialization;
+
 namespace Alma_VB_Lib;
 
 public class Alma
@@ -11,4 +13,26 @@ public class Alma
     private const int PERC = 60;
     private readonly (int, int) ROHADAS_IDO = (2 * PERC, 5 * PERC);
     private const int HALAL_IDO = 5 * PERC;
+
+    public int Meret { get; private set; }
+    public int EresSzazalek { get; private set; }
+    public int KorokSzama { get; private set; }
+    public int RohadasKorSzam { get; private set; }
+    
+    [JsonConstructor]
+    public Alma(int meret, int eresSzazalek, int korokSzama, int rohadasKorSzam)
+    {
+        Meret = meret;
+        EresSzazalek = eresSzazalek;
+        KorokSzama = korokSzama;
+        RohadasKorSzam = rohadasKorSzam;
+    }
+
+    public Alma()
+    {
+        Meret = KEZDO_MERET;
+        EresSzazalek = 0;
+        KorokSzama = 0;
+        RohadasKorSzam = -1;
+    }
 }
