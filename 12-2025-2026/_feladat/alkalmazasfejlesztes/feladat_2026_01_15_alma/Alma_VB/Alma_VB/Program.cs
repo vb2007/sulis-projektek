@@ -7,7 +7,7 @@ class Program
 {
     static void Main(string[] args)
     {
-        Alma alma;
+        ISzimulacio alma;
         
         string fajlNev = "alma.json";
         try
@@ -32,7 +32,7 @@ class Program
 
         if (alma.EletbenVan)
         {
-            File.WriteAllText(fajlNev, JsonSerializer.Serialize(alma));
+            File.WriteAllText(fajlNev, JsonSerializer.Serialize(alma as Alma));
         }
         else
         {
