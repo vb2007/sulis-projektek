@@ -40,5 +40,47 @@ public class Alma
     private bool Rohad => KorokSzama >= RohadasKorSzam;
 
     [JsonIgnore]
-    public bool EletbenVan => RohadasKorSzam < 0 || KorokSzama < RohadasKorSzam + HALAL_IDO;
+    public bool EletbenVan
+        => RohadasKorSzam < 0 || KorokSzama < RohadasKorSzam + HALAL_IDO;
+
+    private static int RandomIntervallum((int, int) intervallum)
+        => Random.Shared.Next(intervallum.Item1, intervallum.Item2);
+
+    private void Novekedes()
+    {
+        if (Megnott)
+        {
+            return;
+        }
+
+        if (KorokSzama % NOVEKEDES_LEPES_IDO == 0)
+        {
+            Meret += RandomIntervallum(NOVEKEDES_MERET);
+        }
+    }
+
+    private void Eres()
+    {
+        if (!Megnott)
+        {
+            return;
+        }
+
+        if (KorokSzama % ERES_LEPES_IDO == 0 && EresSzazalek < 100)
+        {
+            EresSzazalek += RandomIntervallum(ERES_SZAZALEK);
+            if (EresSzazalek >= 100)
+            {
+                EresSzazalek = 100;
+                RohadasKorSzam = KorokSzama + RandomIntervallum(ROHADAS_IDO);
+            }
+        }
+    }
+
+    public void Kor()
+    {
+        ++KorokSzama;
+        Novekedes();
+        Eres();
+    }
 }
