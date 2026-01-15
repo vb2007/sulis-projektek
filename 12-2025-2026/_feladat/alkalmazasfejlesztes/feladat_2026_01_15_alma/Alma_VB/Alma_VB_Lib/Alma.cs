@@ -2,7 +2,7 @@ using System.Text.Json.Serialization;
 
 namespace Alma_VB_Lib;
 
-public class Alma
+public class Alma : ISzimulacio
 {
     private const int KEZDO_MERET = 5; //mm
     private const int NOVEKEDES_LEPES_IDO = 2; //sec
