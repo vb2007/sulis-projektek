@@ -18,7 +18,28 @@ class Program
         {
             alma = new Alma();
         }
-        
-        
+
+        //1. szimuláció verzió
+        ConsoleKey keyChar;
+        do
+        {
+            alma.Kor();
+            Console.Clear();
+            Console.WriteLine(alma.ToString());
+            Thread.Sleep(100); //10 mp
+            keyChar = Console.ReadKey().Key;
+        } while (keyChar != ConsoleKey.Spacebar && alma.EletbenVan); //escape Riderben nem működik
+
+        if (alma.EletbenVan)
+        {
+            File.WriteAllText(fajlNev, JsonSerializer.Serialize(alma));
+        }
+        else
+        {
+            if (File.Exists(fajlNev))
+            {
+                File.Delete(fajlNev);
+            }
+        }
     }
 }
