@@ -83,4 +83,16 @@ public class Alma
         Novekedes();
         Eres();
     }
+
+    public override string ToString()
+    {
+        return EresSzazalek switch
+        {
+            _ when !Megnott => $"Gyümölcskedvezmény: {Meret} mm",
+            < 100 => $"Gyümölcs: {EresSzazalek}% érett",
+            _ when !Rohad => $"Érett gyümölcs",
+            _ when EletbenVan => $"Ez az alma megrohadt",
+            _ => "Ez az alma meghalt"
+        };
+    }
 }
