@@ -35,4 +35,10 @@ public class Alma
         KorokSzama = 0;
         RohadasKorSzam = -1;
     }
+
+    private bool Megnott => Meret >= ERESHATAR_MERET;
+    private bool Rohad => KorokSzama >= RohadasKorSzam;
+
+    [JsonIgnore]
+    public bool EletbenVan => RohadasKorSzam < 0 || KorokSzama < RohadasKorSzam + HALAL_IDO;
 }
