@@ -4,10 +4,18 @@
     "description": "",
     "main": "src/ndex.js",
     "scripts": {
-        "test": "echo \"Error: no test specified\" && exit 1"
+        "dev": "vite",
+        "build": "vite build",
+        "preview": "vite preview"
     },
     "keywords": [],
     "author": "",
     "license": "ISC",
-    "packageManager": "pnpm@10.28.0"
+    "packageManager": "pnpm@10.28.0",
+    "dependencies": {
+        "tailwindcss": "^4.1.18"
+    },
+    "devDependencies": {
+        "vite": "^7.3.1"
+    }
 }
