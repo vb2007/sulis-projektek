@@ -1,4 +1,5 @@
 import "./assets/app.css";
+import { getFoodList, getToppings } from "./assets/data/foods.js";
 
 const container = document.querySelector(".container");
 

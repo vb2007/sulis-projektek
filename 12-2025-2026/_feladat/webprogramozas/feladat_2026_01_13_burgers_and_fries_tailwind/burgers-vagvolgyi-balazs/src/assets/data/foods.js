@@ -1,3 +1,11 @@
+export const getFoodList = () => {
+    return foodList;
+};
+
+export const getToppings = () => {
+    return toppings;
+};
+
 const foodList = {
     burgers: {
         title: "Hamburgers",
