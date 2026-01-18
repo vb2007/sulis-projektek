@@ -15,4 +15,4 @@ EXPOSE 8080
 ENTRYPOINT ["/bin/bash"]
 
 # docker build -t vb/vite:pnpm .
-# docker run --rm -it -v $(pwd):/app -v shared_pnpm:/app/.pnpm-store vb/vite:pnpm
+# docker run --rm -it -v $(pwd):/app -p 8080:8080 -v shared_pnpm:/app/.pnpm-store vb/vite:pnpm
