@@ -13,3 +13,6 @@ RUN pnpm config set store-dir "$PNPM_STORE_DIR"
 EXPOSE 8080
 
 ENTRYPOINT ["/bin/bash"]
+
+# docker build -t vb/vite:pnpm .
+# docker run --rm -it -v $(pwd):/app -v shared_pnpm:/app/.pnpm-store vb/vite:pnpm
