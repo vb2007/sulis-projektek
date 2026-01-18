@@ -1,0 +1,23 @@
+{
+    "name": "burgers-vagvolgyi-balazs",
+    "version": "1.0.0",
+    "description": "",
+    "type": "module",
+    "main": "src/ndex.js",
+    "scripts": {
+        "dev": "vite",
+        "build": "vite build",
+        "preview": "vite preview"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "packageManager": "pnpm@10.28.0",
+    "dependencies": {
+        "@tailwindcss/vite": "^4.1.18"
+    },
+    "devDependencies": {
+        "tailwindcss": "^4.1.18",
+        "vite": "^7.3.1"
+    }
+}
