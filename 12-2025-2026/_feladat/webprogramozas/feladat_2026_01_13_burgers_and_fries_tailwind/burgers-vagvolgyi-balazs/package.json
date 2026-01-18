@@ -14,10 +14,10 @@
     "license": "ISC",
     "packageManager": "pnpm@10.28.0",
     "dependencies": {
-        "@tailwindcss/vite": "^4.1.18",
-        "tailwindcss": "^4.1.18"
+        "@tailwindcss/vite": "^4.1.18"
     },
     "devDependencies": {
+        "tailwindcss": "^4.1.18",
         "vite": "^7.3.1"
     }
 }
