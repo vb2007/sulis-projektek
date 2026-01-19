@@ -1,0 +1,5 @@
+<Solution>
+  <Project Path="PokerConsole/PokerConsole.csproj" />
+  <Project Path="PokerLib/PokerLib.csproj" />
+  <Project Path="PokerUnitTests/PokerUnitTests.csproj" />
+</Solution>
