@@ -5,7 +5,7 @@ namespace PokerUnitTests;
 [TestFixture]
 public class PokerUnitTests
 {
-    private Poker _poker;
+    private static Poker _poker;
 
     [SetUp]
     public void Setup()

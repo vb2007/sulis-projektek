@@ -5,7 +5,7 @@ namespace PokerUnitTests;
 [TestFixture]
 public class HandUnitTests
 {
-    private Hand _hand;
+    private static Hand _hand;
 
     [SetUp]
     public void Setup()
