@@ -20,4 +20,8 @@
         <Using Include="NUnit.Framework"/>
     </ItemGroup>
 
+    <ItemGroup>
+        <ProjectReference Include="..\PokerLib\PokerLib.csproj" />
+    </ItemGroup>
+
 </Project>
