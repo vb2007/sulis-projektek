@@ -2,6 +2,7 @@ using PokerLib;
 
 namespace PokerUnitTests;
 
+[TestFixture]
 public class PokerUnitTests
 {
     private Poker _poker;

@@ -2,6 +2,7 @@
 
 namespace PokerUnitTests;
 
+[TestFixture]
 public class HandUnitTests
 {
     private Hand _hand;
