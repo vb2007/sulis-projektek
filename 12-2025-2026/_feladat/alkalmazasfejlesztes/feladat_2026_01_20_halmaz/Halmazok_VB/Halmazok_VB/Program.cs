@@ -41,11 +41,10 @@ class Program
         }
 
         RendezettHalmaz<int> nyeroszamok = new RendezettHalmaz<int>();
-        Random rnd = new Random();
 
         while (nyeroszamok.Elemszam < darab)
         {
-            int huzottSzam = rnd.Next(1, maximum + 1);
+            int huzottSzam = Random.Shared.Next(1, maximum + 1);
             
             nyeroszamok.Hozzaad(huzottSzam);
         }
