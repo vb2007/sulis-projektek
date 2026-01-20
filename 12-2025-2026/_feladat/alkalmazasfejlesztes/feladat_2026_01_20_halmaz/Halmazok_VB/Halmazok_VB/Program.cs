@@ -14,9 +14,9 @@ class Program
         Console.Write("\nVálasztásod (1-3): ");
         string valasztas = Console.ReadLine()!;
 
-        int darab = 0;
-        int maximum = 0;
-        string tipusNev = "";
+        int darab;
+        int maximum;
+        string tipusNev;
 
         switch (valasztas)
         {
