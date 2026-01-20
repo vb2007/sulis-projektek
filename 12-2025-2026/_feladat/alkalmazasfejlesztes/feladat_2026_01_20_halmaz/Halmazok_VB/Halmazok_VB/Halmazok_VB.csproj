@@ -11,4 +11,10 @@
       <ProjectReference Include="..\Halmazok_VB_Lib\Halmazok_VB_Lib.csproj" />
     </ItemGroup>
 
+    <ItemGroup>
+      <None Update="adatok.txt">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </None>
+    </ItemGroup>
+
 </Project>
