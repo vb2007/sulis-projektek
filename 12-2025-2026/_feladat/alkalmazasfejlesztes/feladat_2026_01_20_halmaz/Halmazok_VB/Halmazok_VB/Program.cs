@@ -52,7 +52,5 @@ class Program
 
         Console.WriteLine($"A \"{tipusNev}\" kisorsolt nyerőszámai növekvő sorrendben:");
         Console.WriteLine(nyeroszamok.ToString());
-        
-        Console.ReadKey();
     }
 }
