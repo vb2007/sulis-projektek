@@ -1,0 +1,14 @@
+{
+    "name": "vb2007/feladat_2026_01_20_jarmuvek",
+    "autoload": {
+        "psr-4": {
+            "Acme\\": "src/Acme"
+        }
+    },
+    "authors": [
+        {
+            "name": "VB2007",
+            "email": "admin@vb2007.hu"
+        }
+    ]
+}
