@@ -12,6 +12,7 @@ class Tanar extends Dolgozo implements Stringable {
     public function __construct(string $nev, DateTime $szuletett, float $fizetes, string $om) {
         parent::__construct($nev, $szuletett, $fizetes);
         $this->om = $om;
+        $this->tantargyak = [];
     }
 
     public function addTantargy(string $tantargy): void {
