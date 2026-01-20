@@ -8,14 +8,18 @@ public class Tests
     [Test]
     public void ValidPassword()
     {
-        bool isValid = Password.IsValid("aBc123");
+        string password = "aBc123";
+        bool isValid = Password.IsValid(password);
         
-        Assert.That(isValid, Is.True, "The password should be valid.");
+        Assert.That(isValid, Is.True, $"The password should be valid: {password}");
     }
 
     [Test]
     public void SpecialLowercaseCharactersOnly()
     {
+        string password = "A1áéűúüóöí";
+        bool isValid = Password.IsValid(password);
         
+        Assert.That(isValid, Is.True, $"The password should be valid: {password}");
     }
 }
