@@ -1,10 +1,12 @@
+using System.Globalization;
+
 namespace Password_VB_Lib;
 
 public class Password
 {
     public static bool IsValid(string password)
     {
-        if (password.Length < 6)
+        if (new StringInfo(password).LengthInTextElements < 6)
             return false;
 
         bool hasUpper = false, hasLower = false, hasDigit = false;
