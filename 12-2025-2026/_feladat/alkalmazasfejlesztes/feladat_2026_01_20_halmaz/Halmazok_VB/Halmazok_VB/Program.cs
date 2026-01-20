@@ -11,7 +11,7 @@ class Program
         Console.WriteLine("2: Hatos lottó");
         Console.WriteLine("3: Skandináv lottó");
         
-        Console.Write("\nVálasztásod (1-3): ");
+        Console.Write("\n1-3: ");
         string valasztas = Console.ReadLine()!;
 
         int darab;
