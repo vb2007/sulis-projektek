@@ -1,15 +1,21 @@
-﻿namespace Password_VB_UnitTests;
+﻿using Password_VB_Lib;
 
+namespace Password_VB_UnitTests;
+
+[TestFixture]
 public class Tests
 {
-    [SetUp]
-    public void Setup()
+    [Test]
+    public void ValidPassword()
     {
+        bool isValid = Password.IsValid("aBc123");
+        
+        Assert.That(isValid, Is.True, "The password should be valid.");
     }
 
     [Test]
-    public void Test1()
+    public void SpecialLowercaseCharactersOnly()
     {
-        Assert.Pass();
+        
     }
 }
