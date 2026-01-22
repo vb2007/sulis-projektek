@@ -70,14 +70,6 @@ public class KerdoivSorsolas
         File.WriteAllText(fajlNev, json);
     }
 
-    public List<T> BetoltesJsonbol<T>(string fajlNev) where T : Szemely
-    {
-        string json = File.ReadAllText(fajlNev);
-        var sorsoltak = JsonSerializer.Deserialize<List<T>>(json);
-        
-        return sorsoltak ?? new List<T>();
-    }
-
     public int TanarokSzama() => _szemelyLista.Elemek.OfType<Tanar>().Count();
 
     public int DiakoSzama() => _szemelyLista.Elemek.OfType<Diak>().Count();

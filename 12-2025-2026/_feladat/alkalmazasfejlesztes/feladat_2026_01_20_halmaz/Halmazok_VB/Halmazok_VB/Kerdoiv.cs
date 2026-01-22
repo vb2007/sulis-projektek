@@ -22,7 +22,6 @@ public class Kerdoiv
 
         Console.WriteLine("Lehetőségek:");
         Console.WriteLine("1: Új sorsolás");
-        Console.WriteLine("2: Sorsolás betöltése fájlból");
         Console.WriteLine("0: Kilépés");
         Console.Write("\nVálasztás: ");
         
@@ -33,9 +32,6 @@ public class Kerdoiv
         {
             case "1":
                 UjSorsolas(sorsolas);
-                break;
-            case "2":
-                SorsolasBetoltese();
                 break;
             case "0":
                 return;
@@ -60,22 +56,29 @@ public class Kerdoiv
             Console.WriteLine("Érvénytelen szám!\n");
             return;
         }
-        
-        if (tipus == "1")
+
+        try
         {
-            var sorsoltak = sorsolas.Sorsol<Tanar>(darab);
-            MegjelenitesSorsolas("Tanárok", sorsoltak);
-            MentesFelajanlas(sorsolas, sorsoltak);
+            if (tipus == "1")
+            {
+                var sorsoltak = sorsolas.Sorsol<Tanar>(darab);
+                MegjelenitesSorsolas("Tanárok", sorsoltak);
+                MentesFelajanlas(sorsolas, sorsoltak);
+            }
+            else if (tipus == "2")
+            {
+                var sorsoltak = sorsolas.Sorsol<Diak>(darab);
+                MegjelenitesSorsolas("Diákok", sorsoltak);
+                MentesFelajanlas(sorsolas, sorsoltak);
+            }
+            else
+            {
+                Console.WriteLine("Érvénytelen választás!\n");
+            }
         }
-        else if (tipus == "2")
+        catch (InvalidOperationException ex)
         {
-            var sorsoltak = sorsolas.Sorsol<Diak>(darab);
-            MegjelenitesSorsolas("Diákok", sorsoltak);
-            MentesFelajanlas(sorsolas, sorsoltak);
-        }
-        else
-        {
-            Console.WriteLine("Érvénytelen választás!\n");
+            Console.WriteLine($"Hiba: {ex.Message}\n");
         }
     }
 
@@ -98,7 +101,7 @@ public class Kerdoiv
         Console.Write("Szeretnéd elmenteni a sorsolást? (i/n): ");
         string valasz = Console.ReadLine()!.ToLower();
         
-        if (valasz == "i" || valasz == "igen" || valasz == "y" || valasz == "yes")
+        if (valasz == "i")
         {
             Console.Write("Add meg a fájl nevét (pl. sorsolas.json): ");
             string fajlNev = Console.ReadLine()!;
@@ -116,69 +119,12 @@ public class Kerdoiv
             try
             {
                 sorsolas.MentesJsonba(sorsoltak, fajlNev);
-                Console.WriteLine($"Sorsolás sikeresen elmentve: {fajlNev}\n");
+                Console.WriteLine($"Sorsolás sikeresen elmentve: {fajlNev}");
             }
             catch (Exception ex)
             {
-                Console.WriteLine($"Hiba a mentés során: {ex.Message}\n");
+                Console.WriteLine($"Hiba a mentés során: {ex.Message}");
             }
-        }
-    }
-
-    private void SorsolasBetoltese()
-    {
-        Console.Write("Bbetöltendő fájl neve: ");
-        string fajlNev = Console.ReadLine()!;
-
-        if (!File.Exists(fajlNev))
-        {
-            Console.WriteLine($"A fájl nem található: {fajlNev}\n");
-            return;
-        }
-
-        Console.WriteLine("Milyen típusú sorsolás volt?");
-        Console.WriteLine("1: Tanárok");
-        Console.WriteLine("2: Diákok");
-        Console.Write("\nVálasztás: ");
-        
-        string tipus = Console.ReadLine()!;
-
-        try
-        {
-            KerdoivSorsolas sorsolas = new KerdoivSorsolas();
-            
-            if (tipus == "1")
-            {
-                var betoltott = sorsolas.BetoltesJsonbol<Tanar>(fajlNev);
-                Console.WriteLine($"\nBetöltött tanárok ({fajlNev}):");
-                Console.WriteLine(new string('-', 50));
-                foreach (var tanar in betoltott)
-                {
-                    Console.WriteLine(tanar);
-                }
-                Console.WriteLine(new string('-', 50));
-                Console.WriteLine($"Összesen: {betoltott.Count} fő\n");
-            }
-            else if (tipus == "2")
-            {
-                var betoltott = sorsolas.BetoltesJsonbol<Diak>(fajlNev);
-                Console.WriteLine($"\nBetöltött diákok ({fajlNev}):");
-                Console.WriteLine(new string('-', 50));
-                foreach (var diak in betoltott)
-                {
-                    Console.WriteLine(diak);
-                }
-                Console.WriteLine(new string('-', 50));
-                Console.WriteLine($"Összesen: {betoltott.Count} fő\n");
-            }
-            else
-            {
-                Console.WriteLine("Érvénytelen választás!\n");
-            }
-        }
-        catch (Exception ex)
-        {
-            Console.WriteLine($"Hiba a betöltés során: {ex.Message}\n");
         }
     }
 }
