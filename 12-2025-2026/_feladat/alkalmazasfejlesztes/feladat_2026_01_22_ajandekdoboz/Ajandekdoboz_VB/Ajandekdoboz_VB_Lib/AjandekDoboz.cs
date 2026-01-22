@@ -21,9 +21,9 @@ public class AjandekDoboz<T> where T : Termek
         _lista.Add(product);
     }
     
-    public void Remove(T item)
+    public void RemoveAt(int index)
     {
-        _lista.Remove(item);
+        _lista.RemoveAt(index);
     }
     
     public T this[int index] => _lista[index];
