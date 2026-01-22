@@ -1,6 +1,6 @@
 using System.Collections;
 
-namespace Halmazok_VB_Lib;
+namespace Halmazok_VB_Lib.Sorsolas;
     
 public class Halmaz<T> : IEnumerable<T>
 {
