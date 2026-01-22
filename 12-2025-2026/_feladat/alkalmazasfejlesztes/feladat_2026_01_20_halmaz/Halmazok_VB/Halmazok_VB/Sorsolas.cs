@@ -1,4 +1,4 @@
-using Halmazok_VB_Lib;
+using Halmazok_VB_Lib.Sorsolas;
 
 namespace Halmazok_VB;
 

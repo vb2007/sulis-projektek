@@ -1,4 +1,4 @@
-namespace Halmazok_VB_Lib;
+namespace Halmazok_VB_Lib.Sorsolas;
 
 public class RendezettHalmaz<T> : Halmaz<T> where T : IComparable<T>
 {
