@@ -20,6 +20,6 @@ class Tanar extends Dolgozo implements Stringable {
     }
 
     public function __tostring(): string {
-        return $this->om . " " . parent::__toString() . "(" . implode(", ", $this->tantargyak) . ")";
+        return $this->om . " " . parent::__toString() . " (" . implode(", ", $this->tantargyak) . ")";
     }
 }
