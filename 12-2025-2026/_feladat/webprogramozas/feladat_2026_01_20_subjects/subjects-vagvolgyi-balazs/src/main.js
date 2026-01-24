@@ -14,8 +14,8 @@ header.append(h1);
 body.prepend(header);
 
 const tbody = document.querySelector("tbody");
-const thName = document.querySelector("th")[1];
-const thCredit = document.querySelector("th")[2];
+const thName = document.querySelectorAll("th")[1];
+const thCredit = document.querySelectorAll("th")[2];
 
 let sortDirName = "asc";
 let sortDirCredit = "asc";
@@ -27,9 +27,10 @@ const renderTable = () => {
     subjects.forEach((subj, i) => {
         const tr = document.createElement("tr");
 
-        if (i != subjects.length - 1) {
-            tr.classList.add("border-b-2", "border-solid", "border-[#931634]");
-        }
+        //ez nem megy, a tr-ekhez kell hozzáadni a classokat
+        // if (i != subjects.length - 1) {
+        //     tr.classList.add("border-b-2", "border-solid", "border-[#931634]");
+        // }
 
         tr.classList.add("hover:bg-black/10");
 
@@ -44,6 +45,24 @@ const renderTable = () => {
         const tdCredit = document.createElement("td");
         tdCredit.textContent = subj.credit;
         tdCredit.classList.add("p-2");
+
+        if (i !== subjects.length - 1) {
+            tdCode.classList.add(
+                "border-b-2",
+                "border-solid",
+                "border-[#931634]",
+            );
+            tdSubject.classList.add(
+                "border-b-2",
+                "border-solid",
+                "border-[#931634]",
+            );
+            tdCredit.classList.add(
+                "border-b-2",
+                "border-solid",
+                "border-[#931634]",
+            );
+        }
 
         tr.append(tdCode, tdSubject, tdCredit);
         tbody.append(tr);
