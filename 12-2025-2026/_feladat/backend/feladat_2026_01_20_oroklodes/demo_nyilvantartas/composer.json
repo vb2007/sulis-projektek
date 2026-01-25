@@ -1,0 +1,8 @@
+{
+    "name": "vb2007/demo_nyilvantartas",
+    "autoload": {
+        "psr-4": {
+            "Neu\\": "src/Neu"
+        }
+    }
+}
