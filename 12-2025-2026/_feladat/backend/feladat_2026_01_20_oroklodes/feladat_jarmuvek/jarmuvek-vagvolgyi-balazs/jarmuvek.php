@@ -36,3 +36,9 @@ $jarmuvek = [$busz, $auto, $roller1, $roller2];
 //"Amennyiben nem kapott a szkript paramétert, úgy a közös adatokat gyarto, tipus, szin jelenítse meg a konzolon."
 // a 34-es feladatban meg azt írták, ha nem kap paramétert / helytelen paramétert kap lépjen ki ¯\_(ツ)_/¯
 // szóval marad úgy, és helyes paraméterekkel konzolra és fájlba is kiírom
+
+echo "Járművek közös adatai:" . PHP_EOL;
+for ($i = 0; $i < count($jarmuvek); $i++) {
+    $jarmu = $jarmuvek[$i];
+    echo "Gyártó: " . $jarmu->gyarto . ", Típus: " . $jarmu->tipus . ", Szín: " . $jarmu->szin . PHP_EOL;
+}

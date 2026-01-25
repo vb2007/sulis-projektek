@@ -22,8 +22,4 @@ class Jarmu {
 
         throw new LogicException("Nem olvasható tulajdonság: $name");
     }
-
-    public function __tostring(): string {
-        return "Gyártó: " . $this->gyarto . ", Típus: " . $this->tipus . ", Szín" . $this->szin;
-    }
 }
