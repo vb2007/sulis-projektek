@@ -1,0 +1,157 @@
+﻿@page
+@model Allatmenhely.WebApp.Pages.Appointments.BookingModel
+@{
+    ViewData["Title"] = "Időpont foglalása";
+}
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="d-flex justify-content-between align-items-center mb-4">
+                <h2>Időpont foglalása</h2>
+                <a asp-page="/Animals/Details" asp-route-id="@Model.AnimalId" class="btn btn-secondary">Vissza</a>
+            </div>
+
+            @if (Model.Animal != null)
+            {
+                <div class="card mb-4">
+                    <div class="card-body">
+                        <h5 class="card-title">@Model.Animal.Name</h5>
+                        <p class="card-text">
+                            <strong>Faj:</strong> @Model.Animal.Species.Name<br />
+                            <strong>Fajta:</strong> @Model.Animal.Breed.Name
+                        </p>
+                    </div>
+                </div>
+
+                @if (!string.IsNullOrEmpty(TempData["SuccessMessage"] as string))
+                {
+                    <div class="alert alert-success alert-dismissible fade show" role="alert">
+                        @TempData["SuccessMessage"]
+                        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                    </div>
+                }
+
+                @if (!ModelState.IsValid)
+                {
+                    <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                        @Html.ValidationSummary(false, "", new { @class = "text-danger" })
+                        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                    </div>
+                }
+
+                <div class="card">
+                    <div class="card-body">
+                        <div class="d-flex justify-content-between align-items-center mb-3">
+                            <h5 class="card-title mb-0">Válassz időpontot</h5>
+                            <div>
+                                <a asp-page="/Appointments/Booking" 
+                                   asp-route-animalId="@Model.AnimalId" 
+                                   asp-route-date="@Model.StartDate.AddDays(-7).ToString("yyyy-MM-dd")" 
+                                   class="btn btn-sm btn-outline-primary @(Model.StartDate <= DateTime.Today ? "disabled" : "")">
+                                    &lt; Előző hét
+                                </a>
+                                <a asp-page="/Appointments/Booking" 
+                                   asp-route-animalId="@Model.AnimalId" 
+                                   asp-route-date="@Model.StartDate.AddDays(7).ToString("yyyy-MM-dd")" 
+                                   class="btn btn-sm btn-outline-primary">
+                                    Következő hét &gt;
+                                </a>
+                            </div>
+                        </div>
+
+                        <form method="post">
+                            <input type="hidden" name="animalId" value="@Model.AnimalId" />
+                            
+                            <div class="table-responsive">
+                                <table class="table table-bordered table-sm">
+                                    <thead>
+                                        <tr>
+                                            <th>Óra</th>
+                                            @for (int day = 0; day < 7; day++)
+                                            {
+                                                var date = Model.StartDate.AddDays(day);
+                                                <th class="text-center">
+                                                    @date.ToString("MM.dd")<br />
+                                                    <small>(@date.ToString("ddd"))</small>
+                                                </th>
+                                            }
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        @for (int hour = 0; hour < 24; hour++)
+                                        {
+                                            <tr>
+                                                <td class="align-middle"><strong>@hour:00</strong></td>
+                                                @for (int day = 0; day < 7; day++)
+                                                {
+                                                    var slot = Model.AvailableSlots.FirstOrDefault(s => 
+                                                        s.DateTime.Day == Model.StartDate.AddDays(day).Day && 
+                                                        s.DateTime.Hour == hour);
+                                                    
+                                                    if (slot != null)
+                                                    {
+                                                        <td class="text-center p-1">
+                                                            @if (slot.IsBooked)
+                                                            {
+                                                                <button type="button" class="btn btn-sm btn-secondary w-100" disabled>
+                                                                    Foglalt
+                                                                </button>
+                                                            }
+                                                            else if (!slot.IsAvailable)
+                                                            {
+                                                                <button type="button" class="btn btn-sm btn-light w-100" disabled>
+                                                                    -
+                                                                </button>
+                                                            }
+                                                            else
+                                                            {
+                                                                <button type="submit" 
+                                                                        name="SelectedDateTime" 
+                                                                        value="@slot.DateTime.ToString("yyyy-MM-dd HH:mm:ss")" 
+                                                                        class="btn btn-sm btn-success w-100">
+                                                                    Foglalás
+                                                                </button>
+                                                            }
+                                                        </td>
+                                                    }
+                                                    else
+                                                    {
+                                                        <td class="text-center p-1">
+                                                            <button type="button" class="btn btn-sm btn-light w-100" disabled>-</button>
+                                                        </td>
+                                                    }
+                                                }
+                                            </tr>
+                                        }
+                                    </tbody>
+                                </table>
+                            </div>
+                        </form>
+
+                        <div class="mt-3">
+                            <div class="d-flex gap-3">
+                                <div>
+                                    <button type="button" class="btn btn-sm btn-success" disabled></button>
+                                    <small>Elérhető</small>
+                                </div>
+                                <div>
+                                    <button type="button" class="btn btn-sm btn-secondary" disabled></button>
+                                    <small>Foglalt</small>
+                                </div>
+                                <div>
+                                    <button type="button" class="btn btn-sm btn-light" disabled></button>
+                                    <small>Nem elérhető</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            }
+            else
+            {
+                <div class="alert alert-danger">Az állat nem található.</div>
+            }
+        </div>
+    </div>
+</div>

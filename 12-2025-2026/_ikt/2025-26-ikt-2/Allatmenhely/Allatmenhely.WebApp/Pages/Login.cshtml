@@ -1,0 +1,40 @@
+@page
+@model Allatmenhely.WebApp.Pages.LoginModel
+@{
+    ViewData["Title"] = "Bejelentkezés";
+}
+
+<div class="row justify-content-center">
+    <div class="col-md-6">
+        <h2 class="mb-4">Bejelentkezés</h2>
+
+        @if (!string.IsNullOrEmpty(Model.ErrorMessage))
+        {
+            <div class="alert alert-danger" role="alert">
+                @Model.ErrorMessage
+            </div>
+        }
+
+        <form method="post">
+            <input type="hidden" name="ReturnUrl" value="@Model.ReturnUrl" />
+
+            <div class="mb-3">
+                <label for="Username" class="form-label">Felhasználónév <span class="text-danger">*</span></label>
+                <input type="text" class="form-control" id="Username" name="Username" value="@Model.Username" required autofocus>
+            </div>
+
+            <div class="mb-3">
+                <label for="Password" class="form-label">Jelszó <span class="text-danger">*</span></label>
+                <input type="password" class="form-control" id="Password" name="Password" required>
+            </div>
+
+            <div class="d-grid gap-2">
+                <button type="submit" class="btn btn-primary">Bejelentkezés</button>
+            </div>
+        </form>
+
+        <div class="mt-3">
+            <p>Nincs még fiókod? <a asp-page="/Register">Regisztrálj itt!</a></p>
+        </div>
+    </div>
+</div>

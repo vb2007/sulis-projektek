@@ -1,0 +1,120 @@
+@page
+@model Allatmenhely.WebApp.Pages.Breeds.IndexModel
+@{
+    ViewData["Title"] = "Fajták kezelése";
+}
+
+<div class="row justify-content-center">
+    <div class="col-md-10">
+        <div class="d-flex justify-content-between align-items-center mb-4">
+            <h2>Fajták kezelése</h2>
+            <a asp-page="/Animals/Index" class="btn btn-secondary">Vissza az összes állathoz</a>
+        </div>
+
+        @if (!string.IsNullOrEmpty(Model.ErrorMessage))
+        {
+            <div class="alert alert-danger" role="alert">
+                @Model.ErrorMessage
+            </div>
+        }
+
+        @if (!string.IsNullOrEmpty(Model.SuccessMessage))
+        {
+            <div class="alert alert-success" role="alert">
+                @Model.SuccessMessage
+            </div>
+        }
+
+        <div class="card mb-4">
+            <div class="card-body">
+                <h5 class="card-title">Új fajta létrehozása</h5>
+                <form method="post" asp-page-handler="Create" class="row g-3">
+                    <div class="col-md-9">
+                        <input type="text" class="form-control" name="NewBreedName" placeholder="Fajta neve" value="@Model.NewBreedName" required>
+                    </div>
+                    <div class="col-md-3">
+                        <button type="submit" class="btn btn-success w-100">Fajta létrehozása</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        @if (!Model.BreedsList.Any())
+        {
+            <div class="alert alert-info">
+                Jelenleg egy fajta sincs eltárolva.
+            </div>
+        }
+        else
+        {
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Fajták listája</h5>
+                    <div class="table-responsive">
+                        <table class="table table-striped">
+                            <thead>
+                                <tr>
+                                    <th>Név</th>
+                                    <th>Létrehozás dátuma</th>
+                                    <th>Műveletek</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @foreach (var breed in Model.BreedsList)
+                                {
+                                    <tr>
+                                        <td>
+                                            @if (Model.EditId == breed.Id)
+                                            {
+                                                <form method="post" asp-page-handler="Update" class="d-inline">
+                                                    <input type="hidden" name="EditId" value="@breed.Id" />
+                                                    <input type="text" class="form-control form-control-sm d-inline-block" name="EditName" value="@breed.Name" required style="width: auto; min-width: 200px;">
+                                                    <button type="submit" class="btn btn-primary btn-sm">Mentés</button>
+                                                    <a asp-page="/Breeds/Index" class="btn btn-secondary btn-sm">Mégsem</a>
+                                                </form>
+                                            }
+                                            else
+                                            {
+                                                @breed.Name
+                                            }
+                                        </td>
+                                        <td>@breed.CreatedOn.ToString("yyyy-MM-dd")</td>
+                                        <td>
+                                            @if (Model.EditId != breed.Id)
+                                            {
+                                                <a asp-page="/Breeds/Index" asp-route-EditId="@breed.Id" asp-route-EditName="@breed.Name" class="btn btn-sm btn-primary">Szerkesztés</a>
+                                                <button type="button" class="btn btn-sm btn-danger" data-bs-toggle="modal" data-bs-target="#deleteModal-@breed.Id">
+                                                    Törlés
+                                                </button>
+                                            }
+                                        </td>
+                                    </tr>
+
+                                    <div class="modal fade" id="deleteModal-@breed.Id" tabindex="-1" aria-labelledby="deleteModalLabel-@breed.Id" aria-hidden="true">
+                                        <div class="modal-dialog">
+                                            <div class="modal-content">
+                                                <div class="modal-header">
+                                                    <h5 class="modal-title" id="deleteModalLabel-@breed.Id">Fajta törlése</h5>
+                                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                                </div>
+                                                <div class="modal-body">
+                                                    Biztosan törölni szeretnéd a(z) <strong>@breed.Name</strong> fajtát?
+                                                </div>
+                                                <div class="modal-footer">
+                                                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Mégse</button>
+                                                    <form method="post" asp-page-handler="Delete" asp-route-id="@breed.Id" class="d-inline">
+                                                        <button type="submit" class="btn btn-danger">Törlés</button>
+                                                    </form>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                }
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+</div>

@@ -1,0 +1,198 @@
+﻿@page
+@model Allatmenhely.WebApp.Pages.Appointments.ManageModel
+@{
+    ViewData["Title"] = "Időpontok kezelése";
+}
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="d-flex justify-content-between align-items-center mb-4">
+                <h2>Időpontok kezelése</h2>
+                <a asp-page="/Animals/Index" class="btn btn-secondary">Vissza az állatokhoz</a>
+            </div>
+
+            @if (!string.IsNullOrEmpty(TempData["SuccessMessage"] as string))
+            {
+                <div class="alert alert-success alert-dismissible fade show" role="alert">
+                    @TempData["SuccessMessage"]
+                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                </div>
+            }
+
+            @if (!string.IsNullOrEmpty(TempData["ErrorMessage"] as string))
+            {
+                <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                    @TempData["ErrorMessage"]
+                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                </div>
+            }
+
+            @if (Model.Animal != null)
+            {
+                <div class="card mb-4">
+                    <div class="card-body">
+                        <div class="d-flex justify-content-between align-items-center">
+                            <div>
+                                <h4 class="card-title mb-1">@Model.Animal.Name</h4>
+                                <p class="card-text mb-0">
+                                    <strong>Faj:</strong> @Model.Animal.Species.Name | 
+                                    <strong>Fajta:</strong> @Model.Animal.Breed.Name
+                                </p>
+                            </div>
+                            @if (Model.AppointmentGroups.Any())
+                            {
+                                <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#deleteAllModal">
+                                    Összes időpont törlése
+                                </button>
+                            }
+                        </div>
+                    </div>
+                </div>
+
+                @if (!Model.AppointmentGroups.Any())
+                {
+                    <div class="alert alert-info">
+                        Ehhez az állathoz még nem foglaltak időpontot.
+                    </div>
+                }
+                else
+                {
+                    var totalAppointments = Model.AppointmentGroups.Sum(g => g.Appointments.Count);
+                    var futureAppointments = Model.AppointmentGroups.Sum(g => g.Appointments.Count(a => !a.IsPast));
+                    var pastAppointments = Model.AppointmentGroups.Sum(g => g.Appointments.Count(a => a.IsPast));
+
+                    <div class="row mb-4">
+                        <div class="col-md-4">
+                            <div class="card text-center">
+                                <div class="card-body">
+                                    <h5 class="card-title">Összes foglalás</h5>
+                                    <p class="display-6 mb-0">@totalAppointments</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="card text-center border-success">
+                                <div class="card-body">
+                                    <h5 class="card-title text-success">Jövőbeli</h5>
+                                    <p class="display-6 mb-0">@futureAppointments</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="card text-center border-secondary">
+                                <div class="card-body">
+                                    <h5 class="card-title text-secondary">Múltbeli</h5>
+                                    <p class="display-6 mb-0">@pastAppointments</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    @foreach (var group in Model.AppointmentGroups)
+                    {
+                        <div class="card mb-3">
+                            <div class="card-header">
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <div>
+                                        <h5 class="mb-1">@group.Username</h5>
+                                        <small class="text-muted">@group.UserEmail</small>
+                                    </div>
+                                    <span class="badge bg-primary">@group.Appointments.Count foglalás</span>
+                                </div>
+                            </div>
+                            <div class="card-body">
+                                <div class="table-responsive">
+                                    <table class="table table-sm table-hover mb-0">
+                                        <thead>
+                                            <tr>
+                                                <th>Időpont</th>
+                                                <th>Foglalás dátuma</th>
+                                                <th>Státusz</th>
+                                                <th class="text-end">Műveletek</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            @foreach (var appointment in group.Appointments)
+                                            {
+                                                <tr class="@(appointment.IsPast ? "table-secondary" : "")">
+                                                    <td>
+                                                        <strong>@appointment.AppointmentAt.ToString("yyyy.MM.dd HH:mm")</strong>
+                                                    </td>
+                                                    <td>@appointment.CreatedOn.ToString("yyyy.MM.dd HH:mm")</td>
+                                                    <td>
+                                                        @if (appointment.IsPast)
+                                                        {
+                                                            <span class="badge bg-secondary">Lejárt</span>
+                                                        }
+                                                        else
+                                                        {
+                                                            <span class="badge bg-success">Aktív</span>
+                                                        }
+                                                    </td>
+                                                    <td class="text-end">
+                                                        <button type="button" 
+                                                                class="btn btn-sm btn-danger" 
+                                                                data-bs-toggle="modal" 
+                                                                data-bs-target="#deleteModal-@appointment.Id">
+                                                            Törlés
+                                                        </button>
+                                                    </td>
+                                                </tr>
+
+                                                <div class="modal fade" id="deleteModal-@appointment.Id" tabindex="-1" aria-labelledby="deleteModalLabel-@appointment.Id" aria-hidden="true">
+                                                    <div class="modal-dialog">
+                                                        <div class="modal-content">
+                                                            <div class="modal-header">
+                                                                <h5 class="modal-title" id="deleteModalLabel-@appointment.Id">Időpont törlése</h5>
+                                                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                                            </div>
+                                                            <div class="modal-body">
+                                                                Biztosan törölni szeretnéd <strong>@group.Username</strong> foglalását <strong>@appointment.AppointmentAt.ToString("yyyy.MM.dd HH:mm")</strong>-kor?
+                                                            </div>
+                                                            <div class="modal-footer">
+                                                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Mégse</button>
+                                                                <form method="post" asp-page-handler="Delete" asp-route-appointmentId="@appointment.Id" asp-route-animalId="@Model.AnimalId" class="d-inline">
+                                                                    <button type="submit" class="btn btn-danger">Törlés</button>
+                                                                </form>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            }
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    }
+
+                    <div class="modal fade" id="deleteAllModal" tabindex="-1" aria-labelledby="deleteAllModalLabel" aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header bg-danger text-white">
+                                    <h5 class="modal-title" id="deleteAllModalLabel">Összes időpont törlése</h5>
+                                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                    <p class="mb-2">Biztosan törölni szeretnél <strong>minden foglalást</strong> ehhez az állathoz?</p>
+                                    <p class="mb-0 text-danger"><strong>Ez a művelet @totalAppointments időpontot érint és nem visszavonható!</strong></p>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Mégse</button>
+                                    <form method="post" asp-page-handler="DeleteAll" asp-route-animalId="@Model.AnimalId" class="d-inline">
+                                        <button type="submit" class="btn btn-danger">Összes törlése</button>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                }
+            }
+            else
+            {
+                <div class="alert alert-danger">Az állat nem található.</div>
+            }
+        </div>
+    </div>
+</div>

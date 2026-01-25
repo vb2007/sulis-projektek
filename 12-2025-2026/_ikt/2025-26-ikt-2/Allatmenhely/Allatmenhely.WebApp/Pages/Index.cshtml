@@ -1,0 +1,148 @@
+﻿@page
+@model IndexModel
+@inject Allatmenhely.WebApp.Services.AuthService AuthService
+@{
+    ViewData["Title"] = "Főoldal";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Állatmenhely digitális kezelőfelület</h1>
+
+    @if (AuthService.IsAuthenticated())
+    {
+        <p class="lead">Üdv, <strong>@AuthService.GetCurrentUsername()</strong></p>
+
+        @if (AuthService.IsCurrentUserAdmin())
+        {
+            <div class="alert alert-info" role="alert">
+                <strong>Adminisztrátorként</strong> vagy belépve. Jogod van az állatok és azok alkategóriáinak kezelésére.
+            </div>
+            
+            <div class="row mt-4 justify-content-center">
+                <div class="col-md-8">
+                    <div class="row g-3">
+                        <div class="col-md-6">
+                            <div class="card h-100">
+                                <div class="card-body text-center">
+                                    <h5 class="card-title">Állatok kezelése</h5>
+                                    <p class="card-text">Új állatok hozzáadása, meglévők szerkesztése és törlése</p>
+                                    <a asp-page="/Animals/Index" class="btn btn-primary">Állatok</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="card h-100">
+                                <div class="card-body text-center">
+                                    <h5 class="card-title">Fajok & Fajták</h5>
+                                    <p class="card-text">Állatfajok és fajták kategóriáinak kezelése</p>
+                                    <a asp-page="/Species/Index" class="btn btn-secondary me-2">Fajok</a>
+                                    <a asp-page="/Breeds/Index" class="btn btn-secondary">Fajták</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="card h-100">
+                                <div class="card-body text-center">
+                                    <h5 class="card-title">Saját profil</h5>
+                                    <p class="card-text">Profiladatok megtekintése és módosítása</p>
+                                    <a asp-page="/Profile" class="btn btn-info">Profilom</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="card h-100">
+                                <div class="card-body text-center">
+                                    <h5 class="card-title">Kijelentkezés</h5>
+                                    <p class="card-text">Biztonságos kilépés a fiókodból</p>
+                                    <a asp-page="/Logout" class="btn btn-outline-danger">Kilépés</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        }
+        else
+        {
+            <div class="alert alert-success" role="alert">
+                Sikeresen bejelentkeztél <strong>felhasználóként</strong>. Bátran foglalj időpontokat állatok látogatására és örökbefogadására!
+            </div>
+            
+            <div class="row mt-4 justify-content-center">
+                <div class="col-md-8">
+                    <div class="row g-3">
+                        <div class="col-md-6">
+                            <div class="card h-100">
+                                <div class="card-body text-center">
+                                    <h5 class="card-title">Állatok böngészése</h5>
+                                    <p class="card-text">Nézd meg az örökbefogadható állatokat</p>
+                                    <a asp-page="/Animals/Index" class="btn btn-primary">Állatok megtekintése</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="card h-100">
+                                <div class="card-body text-center">
+                                    <h5 class="card-title">Foglalásaim</h5>
+                                    <p class="card-text">Időpontjaid megtekintése és kezelése</p>
+                                    <a asp-page="/Appointments/MyBookings" class="btn btn-success">Foglalásaim</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="card h-100">
+                                <div class="card-body text-center">
+                                    <h5 class="card-title">Saját profil</h5>
+                                    <p class="card-text">Profiladatok megtekintése és módosítása</p>
+                                    <a asp-page="/Profile" class="btn btn-info">Profilom</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="card h-100">
+                                <div class="card-body text-center">
+                                    <h5 class="card-title">Kijelentkezés</h5>
+                                    <p class="card-text">Biztonságos kilépés a fiókodból</p>
+                                    <a asp-page="/Logout" class="btn btn-outline-danger">Kilépés</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        }
+    }
+    else
+    {
+        <p class="lead">A nagy 25 óta partnered állatok professzionális kezelésével.</p>
+
+        <div class="alert alert-info" role="alert">
+            Kérlek <a asp-page="/Login" class="alert-link">jelentkezz be</a> vagy <a asp-page="/Register" class="alert-link">regisztrálj</a> az összes funkció eléréséhez.
+        </div>
+
+        <div class="row mt-4 justify-content-center">
+            <div class="col-md-8">
+                <div class="row g-3">
+                    <div class="col-md-6">
+                        <div class="card h-100">
+                            <div class="card-body text-center">
+                                <h5 class="card-title">Regisztráció</h5>
+                                <p class="card-text">Hozz létre új fiókot</p>
+                                <a asp-page="/Register" class="btn btn-primary btn-lg">Regisztráció</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="card h-100">
+                            <div class="card-body text-center">
+                                <h5 class="card-title">Bejelentkezés</h5>
+                                <p class="card-text">Lépj be meglévő fiókodba</p>
+                                <a asp-page="/Login" class="btn btn-outline-primary btn-lg">Bejelentkezés</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    }
+</div>

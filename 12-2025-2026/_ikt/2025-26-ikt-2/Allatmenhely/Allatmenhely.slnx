@@ -1,0 +1,4 @@
+<Solution>
+  <Project Path="Allatmenhely.Database/Allatmenhely.Database.sqlproj" Type="42ea0dbd-9cf1-443e-919e-be9c484e4577" />
+  <Project Path="Allatmenhely.WebApp/Allatmenhely.WebApp.csproj" />
+</Solution>

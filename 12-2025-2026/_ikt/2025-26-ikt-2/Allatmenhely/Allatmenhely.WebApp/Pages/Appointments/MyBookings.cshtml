@@ -1,0 +1,149 @@
+﻿@page
+@model Allatmenhely.WebApp.Pages.Appointments.MyBookingsModel
+@{
+    ViewData["Title"] = "Foglalásaim";
+}
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="d-flex justify-content-between align-items-center mb-4">
+                <h2>Foglalásaim</h2>
+                <a asp-page="/Animals/Index" class="btn btn-primary">Új foglalás létrehozása</a>
+            </div>
+
+            @if (!string.IsNullOrEmpty(TempData["SuccessMessage"] as string))
+            {
+                <div class="alert alert-success alert-dismissible fade show" role="alert">
+                    @TempData["SuccessMessage"]
+                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                </div>
+            }
+
+            @if (!string.IsNullOrEmpty(TempData["ErrorMessage"] as string))
+            {
+                <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                    @TempData["ErrorMessage"]
+                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                </div>
+            }
+
+            @if (!Model.Appointments.Any())
+            {
+                <div class="alert alert-info">
+                    Még nem foglaltál időpontot. <a asp-page="/Animals/Index" class="alert-link">Foglalj időpontot most!</a>
+                </div>
+            }
+            else
+            {
+                var futureAppointments = Model.Appointments.Where(a => !a.IsPast).ToList();
+                var pastAppointments = Model.Appointments.Where(a => a.IsPast).ToList();
+
+                @if (futureAppointments.Any())
+                {
+                    <h4 class="mb-3">Jövőbeli foglalások</h4>
+                    <div class="row mb-4">
+                        @foreach (var appointment in futureAppointments)
+                        {
+                            <div class="col-md-6 mb-3">
+                                <div class="card h-100">
+                                    <div class="row g-0">
+                                        <div class="col-md-4">
+                                            @if (!string.IsNullOrEmpty(appointment.AnimalImageUrl))
+                                            {
+                                                <img src="@appointment.AnimalImageUrl" class="img-fluid rounded-start h-100" alt="@appointment.AnimalName" style="object-fit: cover;">
+                                            }
+                                            else
+                                            {
+                                                <div class="bg-secondary d-flex align-items-center justify-content-center h-100 rounded-start">
+                                                    <span class="text-white">Nincs kép</span>
+                                                </div>
+                                            }
+                                        </div>
+                                        <div class="col-md-8">
+                                            <div class="card-body">
+                                                <h5 class="card-title">@appointment.AnimalName</h5>
+                                                <p class="card-text">
+                                                    <strong>Faj:</strong> @appointment.AnimalSpecies<br />
+                                                    <strong>Fajta:</strong> @appointment.AnimalBreed<br />
+                                                    <strong>Időpont:</strong> @appointment.AppointmentAt.ToString("yyyy.MM.dd HH:mm")<br />
+                                                    <small class="text-muted">Foglalva: @appointment.CreatedOn.ToString("yyyy.MM.dd HH:mm")</small>
+                                                </p>
+                                                <div class="d-flex gap-2">
+                                                    <a asp-page="/Appointments/Edit" asp-route-id="@appointment.Id" class="btn btn-sm btn-warning">Módosítás</a>
+                                                    <button type="button" class="btn btn-sm btn-danger" data-bs-toggle="modal" data-bs-target="#deleteModal-@appointment.Id">
+                                                        Törlés
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="modal fade" id="deleteModal-@appointment.Id" tabindex="-1" aria-labelledby="deleteModalLabel-@appointment.Id" aria-hidden="true">
+                                    <div class="modal-dialog">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <h5 class="modal-title" id="deleteModalLabel-@appointment.Id">Foglalás törlése</h5>
+                                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                            </div>
+                                            <div class="modal-body">
+                                                Biztosan törölni szeretnéd a foglalást <strong>@appointment.AnimalName</strong> állathoz <strong>@appointment.AppointmentAt.ToString("yyyy.MM.dd HH:mm")</strong>-kor?
+                                            </div>
+                                            <div class="modal-footer">
+                                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Mégse</button>
+                                                <form method="post" asp-page-handler="Delete" asp-route-appointmentId="@appointment.Id" class="d-inline">
+                                                    <button type="submit" class="btn btn-danger">Törlés</button>
+                                                </form>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        }
+                    </div>
+                }
+
+                @if (pastAppointments.Any())
+                {
+                    <h4 class="mb-3">Múltbeli foglalások</h4>
+                    <div class="row">
+                        @foreach (var appointment in pastAppointments)
+                        {
+                            <div class="col-md-6 mb-3">
+                                <div class="card h-100 opacity-75">
+                                    <div class="row g-0">
+                                        <div class="col-md-4">
+                                            @if (!string.IsNullOrEmpty(appointment.AnimalImageUrl))
+                                            {
+                                                <img src="@appointment.AnimalImageUrl" class="img-fluid rounded-start h-100" alt="@appointment.AnimalName" style="object-fit: cover;">
+                                            }
+                                            else
+                                            {
+                                                <div class="bg-secondary d-flex align-items-center justify-content-center h-100 rounded-start">
+                                                    <span class="text-white">Nincs kép</span>
+                                                </div>
+                                            }
+                                        </div>
+                                        <div class="col-md-8">
+                                            <div class="card-body">
+                                                <h5 class="card-title">@appointment.AnimalName</h5>
+                                                <p class="card-text">
+                                                    <strong>Faj:</strong> @appointment.AnimalSpecies<br />
+                                                    <strong>Fajta:</strong> @appointment.AnimalBreed<br />
+                                                    <strong>Időpont:</strong> @appointment.AppointmentAt.ToString("yyyy.MM.dd HH:mm")<br />
+                                                    <small class="text-muted">Foglalva: @appointment.CreatedOn.ToString("yyyy.MM.dd HH:mm")</small>
+                                                </p>
+                                                <span class="badge bg-secondary">Lejárt</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        }
+                    </div>
+                }
+            }
+        </div>
+    </div>
+</div>

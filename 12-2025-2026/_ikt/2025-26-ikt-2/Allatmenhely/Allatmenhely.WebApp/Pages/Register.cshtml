@@ -1,0 +1,67 @@
+@page
+@model Allatmenhely.WebApp.Pages.RegisterModel
+@{
+    ViewData["Title"] = "Regisztráció";
+}
+
+<div class="row justify-content-center">
+    <div class="col-md-6">
+        <h2 class="mb-4">Regisztráció</h2>
+
+        @if (!string.IsNullOrEmpty(Model.ErrorMessage))
+        {
+            <div class="alert alert-danger" role="alert">
+                @Model.ErrorMessage
+            </div>
+        }
+
+        @if (!string.IsNullOrEmpty(Model.SuccessMessage))
+        {
+            <div class="alert alert-success" role="alert">
+                @Model.SuccessMessage
+            </div>
+        }
+
+        <form method="post">
+            <div class="mb-3">
+                <label for="Username" class="form-label">Felhasználónév <span class="text-danger">*</span></label>
+                <input type="text" class="form-control" id="Username" name="Username" value="@Model.Username" required>
+                <div class="form-text">3-100 karakter. Csak betűk, számok, aláhúzások, és kötőjelek elfogadottak.</div>
+            </div>
+
+            <div class="mb-3">
+                <label for="Email" class="form-label">E-mail cím <span class="text-danger">*</span></label>
+                <input type="email" class="form-control" id="Email" name="Email" value="@Model.Email" required>
+            </div>
+
+            <div class="mb-3">
+                <label for="FirstName" class="form-label">Keresztnév</label>
+                <input type="text" class="form-control" id="FirstName" name="FirstName" value="@Model.FirstName">
+            </div>
+
+            <div class="mb-3">
+                <label for="LastName" class="form-label">Vezetéknév</label>
+                <input type="text" class="form-control" id="LastName" name="LastName" value="@Model.LastName">
+            </div>
+
+            <div class="mb-3">
+                <label for="Password" class="form-label">Jelszó <span class="text-danger">*</span></label>
+                <input type="password" class="form-control" id="Password" name="Password" required>
+                <div class="form-text">Minimum 6 karakter.</div>
+            </div>
+
+            <div class="mb-3">
+                <label for="ConfirmPassword" class="form-label">Jelszó megerősítése <span class="text-danger">*</span></label>
+                <input type="password" class="form-control" id="ConfirmPassword" name="ConfirmPassword" required>
+            </div>
+
+            <div class="d-grid gap-2">
+                <button type="submit" class="btn btn-primary">Regisztráció</button>
+            </div>
+        </form>
+
+        <div class="mt-3">
+            <p>Már van fiókod? <a asp-page="/Login">Jelentkezz be itt!</a></p>
+        </div>
+    </div>
+</div>
