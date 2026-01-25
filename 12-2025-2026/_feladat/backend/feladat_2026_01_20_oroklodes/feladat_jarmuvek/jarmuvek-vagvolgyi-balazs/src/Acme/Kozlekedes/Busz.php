@@ -21,6 +21,6 @@ class Busz extends Gepjarmu {
     }
 
     public function __tostring(): string {
-        return "";
+        return sprintf('"%s","%s","%s",%d', $this->gyarto, $this->tipus, $this->szin, $this->ulesek);
     }
 }
