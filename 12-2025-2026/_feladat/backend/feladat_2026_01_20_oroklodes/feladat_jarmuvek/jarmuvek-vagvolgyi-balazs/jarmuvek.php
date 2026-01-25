@@ -25,3 +25,14 @@ if (!str_ends_with($output, ".csv")) {
     echo "Érvénytelen kimeneti fájlkiterjesztés, csak a .csv elfogadott!" . PHP_EOL;
     exit(271);
 }
+
+$busz = new Busz("Ikarus", "280", "kék", "diesel", 36);
+$auto = new Auto("Tesla", "Model S", "fehér", "elektromos", 5);
+$roller1 = new Roller("Oxelo", "C900", "fekete", 2);
+$roller2 = new Roller("Blackwheels", "Blink gyerek roller", "színes", 3);
+
+$jarmuvek = [$busz, $auto, $roller1, $roller2];
+
+//"Amennyiben nem kapott a szkript paramétert, úgy a közös adatokat gyarto, tipus, szin jelenítse meg a konzolon."
+// a 34-es feladatban meg azt írták, ha nem kap paramétert / helytelen paramétert kap lépjen ki ¯\_(ツ)_/¯
+// szóval marad úgy, és helyes paraméterekkel konzolra és fájlba is kiírom
