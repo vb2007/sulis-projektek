@@ -8,19 +8,19 @@ use Acme\Kozlekedes\Busz;
 use Acme\Kozlekedes\Roller;
 
 if ($argc > 3) {
-    echo "Túl sok paraméter!";
+    echo "Túl sok paraméter!" . PHP_EOL;
     exit(271);
 }
 
 $type = $argv[0];
 $acceptedTypes = ["auto", "busz", "roller"];
 if (!in_array(strtolower($type), $acceptedTypes)) {
-    echo "Érvénytelen járműtípus!";
+    echo "Érvénytelen járműtípus!" . PHP_EOL;
     exit(271);
 }
 
 $output = $argv[1];
 if (!str_ends_with(".csv", $output)) {
-    echo "Érvénytelen kimeneti fájlkiterjesztés, csak a .csv elfogadott!";
+    echo "Érvénytelen kimeneti fájlkiterjesztés, csak a .csv elfogadott!" . PHP_EOL;
     exit(271);
 }
