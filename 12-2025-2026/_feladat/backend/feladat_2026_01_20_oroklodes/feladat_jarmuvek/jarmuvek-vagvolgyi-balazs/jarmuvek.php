@@ -42,3 +42,22 @@ for ($i = 0; $i < count($jarmuvek); $i++) {
     $jarmu = $jarmuvek[$i];
     echo "Gyártó: " . $jarmu->gyarto . ", Típus: " . $jarmu->tipus . ", Szín: " . $jarmu->szin . PHP_EOL;
 }
+
+//specifikus járműkategória adatainak kiírása
+$outputPath = __DIR__ . "/out/" . $output;
+$fp = fopen($outputPath, 'w');
+
+switch ($type) {
+    case "busz":
+        fwrite($fp, $busz->__tostring());
+        break;
+    case "auto":
+        fwrite($fp, $auto->__tostring());
+        break;
+    case "roller":
+        fwrite($fp, $roller1->__tostring() . PHP_EOL);
+        fwrite($fp, $roller2->__tostring());
+        break;
+} //default nem kell, fent validáltunk
+
+fclose($fp);
