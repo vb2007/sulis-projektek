@@ -4,11 +4,11 @@ namespace Acme\Kozlekedes;
 
 use LogicException;
 
-class Roller extends Gepjarmu {
+class Roller extends Jarmu {
     protected int $kerekekSzama;
 
-    protected function __construct(string $gyarto, string $tipus, string $szin, string $motor, int $kerekekSzama) {
-        parent::__construct($gyarto, $tipus, $szin, $motor);
+    protected function __construct(string $gyarto, string $tipus, string $szin, int $kerekekSzama) {
+        parent::__construct($gyarto, $tipus, $szin);
         $this->kerekekSzama = $kerekekSzama;
     }
 
