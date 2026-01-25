@@ -7,7 +7,7 @@ use LogicException;
 class Busz extends Gepjarmu {
     protected int $ulesek;
 
-    protected function __construct(string $gyarto, string $tipus, string $szin, string $motor, int $ulesek) {
+    public function __construct(string $gyarto, string $tipus, string $szin, string $motor, int $ulesek) {
         parent::__construct($gyarto, $tipus, $szin, $motor);
         $this->ajtok = $ulesek;
     }

@@ -7,7 +7,7 @@ use LogicException;
 class Roller extends Jarmu {
     protected int $kerekekSzama;
 
-    protected function __construct(string $gyarto, string $tipus, string $szin, int $kerekekSzama) {
+    public function __construct(string $gyarto, string $tipus, string $szin, int $kerekekSzama) {
         parent::__construct($gyarto, $tipus, $szin);
         $this->kerekekSzama = $kerekekSzama;
     }

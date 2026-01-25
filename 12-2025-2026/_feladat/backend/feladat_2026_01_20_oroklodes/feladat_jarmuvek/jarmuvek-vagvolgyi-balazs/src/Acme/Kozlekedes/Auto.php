@@ -7,7 +7,7 @@ use LogicException;
 class Auto extends Gepjarmu {
     protected int $ajtok;
 
-    protected function __construct(string $gyarto, string $tipus, string $szin, string $motor, int $ajtok) {
+    public function __construct(string $gyarto, string $tipus, string $szin, string $motor, int $ajtok) {
         parent::__construct($gyarto, $tipus, $szin, $motor);
         $this->ajtok = $ajtok;
     }
