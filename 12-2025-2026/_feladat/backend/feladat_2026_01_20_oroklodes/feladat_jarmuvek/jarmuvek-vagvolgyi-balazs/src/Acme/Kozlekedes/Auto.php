@@ -12,7 +12,7 @@ class Auto extends Gepjarmu {
         $this->ajtok = $ajtok;
     }
 
-    public function __get($name): void {
+    public function __get(string $name): mixed {
         if (in_array($name, array_keys(get_object_vars($this)))) {
             return $this->$name;
         }

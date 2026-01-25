@@ -15,11 +15,15 @@ class Jarmu {
         $this->szin = $szin;
     }
 
-    public function __get($name): void {
+    public function __get(string $name): mixed {
         if (in_array($name, array_keys(get_object_vars($this)))) {
             return $this->$name;
         }
 
         throw new LogicException("Nem olvasható tulajdonság: $name");
+    }
+
+    public function __tostring(): string {
+        return "Gyártó: " . $this->gyarto . ", Típus: " . $this->tipus . ", Szín" . $this->szin;
     }
 }
