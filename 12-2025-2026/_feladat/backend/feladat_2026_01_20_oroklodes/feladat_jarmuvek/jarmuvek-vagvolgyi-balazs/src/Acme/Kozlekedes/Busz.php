@@ -9,7 +9,7 @@ class Busz extends Gepjarmu {
 
     public function __construct(string $gyarto, string $tipus, string $szin, string $motor, int $ulesek) {
         parent::__construct($gyarto, $tipus, $szin, $motor);
-        $this->ajtok = $ulesek;
+        $this->ulesek = $ulesek;
     }
 
     public function __get(string $name): mixed {
