@@ -7,7 +7,7 @@ A demót az alábbi módon képzeljük el:
 
 Az időpontfoglalás bemutatása során:
 
-1. Mind a 2 fél elő közvetítést idít Discordon, majd bejelentkezik a felületünkbe
+1. Mind a 2 fél elő közvetítést indít Discordon, majd bejelentkezik a felületünkbe
 2. [ADMIN] Felügyeli egy állat látogatási időpontjait
 3. [USER] Megnyitja egy állat adatlapját -> új majd időpontot foglalhat
 4. [ADMIN] frissíti a saját felületét -> látszódik az új időpontfoglalás
@@ -19,7 +19,7 @@ Az időpontfoglalás bemutatása során:
 
 Az állatkezelés bemutatása során:
 
-1. Mind a 2 fél elő közvetítést idít Discordon, majd bejelentkezik a felületünkbe
+1. Mind a 2 fél elő közvetítést indít Discordon, majd bejelentkezik a felületünkbe
 2. [USER] Megnyitja az elérhető állatok listáját
 3. [ADMIN] Hozzáad egy új állatot
 4. [USER] Frissíti az oldalt -> látja az új állatot

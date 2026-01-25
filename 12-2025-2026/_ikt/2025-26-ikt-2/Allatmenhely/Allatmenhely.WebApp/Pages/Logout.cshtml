@@ -1,0 +1,22 @@
+@page
+@model Allatmenhely.WebApp.Pages.LogoutModel
+@{
+    ViewData["Title"] = "Kijelentkezés";
+}
+
+<div class="row justify-content-center">
+    <div class="col-md-6">
+        <h2 class="mb-4">Kijelentkezés</h2>
+
+        <div class="alert alert-info" role="alert">
+            Biztosan ki szeretnél jelentkezni?
+        </div>
+
+        <form method="post">
+            <div class="d-grid gap-2">
+                <button type="submit" class="btn btn-primary">Igen, kijelentkezés</button>
+                <a asp-page="/Index" class="btn btn-secondary">Mégsem</a>
+            </div>
+        </form>
+    </div>
+</div>

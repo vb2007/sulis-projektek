@@ -1,0 +1,63 @@
+@page
+@model Allatmenhely.WebApp.Pages.Animals.CreateModel
+@{
+    ViewData["Title"] = "Új állat létrehozása";
+}
+
+<div class="row justify-content-center">
+    <div class="col-md-8">
+        <h2 class="mb-4">Új állat hozzáadása</h2>
+
+        @if (!string.IsNullOrEmpty(Model.ErrorMessage))
+        {
+            <div class="alert alert-danger" role="alert">
+                @Model.ErrorMessage
+            </div>
+        }
+
+        <form method="post">
+            <div class="mb-3">
+                <label for="Name" class="form-label">Név <span class="text-danger">*</span></label>
+                <input type="text" class="form-control" id="Name" name="Name" value="@Model.Name" required>
+            </div>
+
+            <div class="mb-3">
+                <label for="SpeciesId" class="form-label">Faj <span class="text-danger">*</span></label>
+                <select class="form-select" id="SpeciesId" name="SpeciesId" required>
+                    <option value="">-- Faj kiválasztása --</option>
+                    @foreach (var species in Model.SpeciesList)
+                    {
+                        <option value="@species.Value" selected="@(species.Value == Model.SpeciesId.ToString())">@species.Text</option>
+                    }
+                </select>
+            </div>
+
+            <div class="mb-3">
+                <label for="BreedId" class="form-label">Fajta <span class="text-danger">*</span></label>
+                <select class="form-select" id="BreedId" name="BreedId" required>
+                    <option value="">-- Fajta kiválasztása --</option>
+                    @foreach (var breed in Model.BreedsList)
+                    {
+                        <option value="@breed.Value" selected="@(breed.Value == Model.BreedId.ToString())">@breed.Text</option>
+                    }
+                </select>
+            </div>
+
+            <div class="mb-3">
+                <label for="Description" class="form-label">Leírás</label>
+                <textarea class="form-control" id="Description" name="Description" rows="4">@Model.Description</textarea>
+            </div>
+
+            <div class="mb-3">
+                <label for="ImageUrl" class="form-label">Kép URL</label>
+                <input type="url" class="form-control" id="ImageUrl" name="ImageUrl" value="@Model.ImageUrl">
+                <div class="form-text">Adj meg egy képre mutató direct URL-t.</div>
+            </div>
+
+            <div class="d-grid gap-2">
+                <button type="submit" class="btn btn-success">Állat létrehozása</button>
+                <a asp-page="/Animals/Index" class="btn btn-secondary">Mégsem</a>
+            </div>
+        </form>
+    </div>
+</div>

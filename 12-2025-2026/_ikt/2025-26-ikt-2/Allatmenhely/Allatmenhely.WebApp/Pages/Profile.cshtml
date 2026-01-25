@@ -1,0 +1,124 @@
+@page
+@model Allatmenhely.WebApp.Pages.AccountModel
+@{
+    ViewData["Title"] = "Profil";
+}
+
+<div class="row justify-content-center">
+    <div class="col-md-8">
+        <h2 class="mb-4">Profil</h2>
+
+        @if (!string.IsNullOrEmpty(Model.ErrorMessage))
+        {
+            <div class="alert alert-danger" role="alert">
+                @Model.ErrorMessage
+            </div>
+        }
+
+        @if (!string.IsNullOrEmpty(Model.SuccessMessage))
+        {
+            <div class="alert alert-success" role="alert">
+                @Model.SuccessMessage
+            </div>
+        }
+
+        @if (Model.CurrentUser != null)
+        {
+            <div class="card mb-4">
+                <div class="card-body">
+                    <h5 class="card-title">Fiókod információi</h5>
+                    <dl class="row">
+                        <dt class="col-sm-3">Felhasználónév:</dt>
+                        <dd class="col-sm-9">@Model.CurrentUser.Username</dd>
+
+                        <dt class="col-sm-3">Felhasználó típusa:</dt>
+                        <dd class="col-sm-9">
+                            @if (Model.CurrentUser.IsAdmin)
+                            {
+                                <span class="badge bg-danger">Adminisztrátor</span>
+                            }
+                            else
+                            {
+                                <span class="badge bg-primary">Átlag felhasználó</span>
+                            }
+                        </dd>
+
+                        <dt class="col-sm-3">Regisztráció ideje:</dt>
+                        <dd class="col-sm-9">@Model.CurrentUser.CreatedOn.ToString("MMMM dd, yyyy")</dd>
+
+                        @if (Model.CurrentUser.ModifiedOn.HasValue)
+                        {
+                            <dt class="col-sm-3">Profil utoljára módosítva:</dt>
+                            <dd class="col-sm-9">@Model.CurrentUser.ModifiedOn.Value.ToString("MMMM dd, yyyy")</dd>
+                        }
+                    </dl>
+                </div>
+            </div>
+
+            <div class="card mb-4">
+                <div class="card-body">
+                    <h5 class="card-title">Profil szerkesztése</h5>
+                    <form method="post">
+                        <div class="mb-3">
+                            <label for="Email" class="form-label">E-mail cím <span class="text-danger">*</span></label>
+                            <input type="email" class="form-control" id="Email" name="Email" value="@Model.Email" required>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="FirstName" class="form-label">Keresztnév</label>
+                            <input type="text" class="form-control" id="FirstName" name="FirstName" value="@Model.FirstName">
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="LastName" class="form-label">Vezetéknév</label>
+                            <input type="text" class="form-control" id="LastName" name="LastName" value="@Model.LastName">
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="ProfilePictureUrl" class="form-label">Profilkép URL</label>
+                            <input type="url" class="form-control" id="ProfilePictureUrl" name="ProfilePictureUrl" value="@Model.ProfilePictureUrl">
+                            <div class="form-text">Adj meg egy képhez vezető URL-t.</div>
+                        </div>
+
+                        <div class="d-grid gap-2">
+                            <button type="submit" class="btn btn-primary">Adatok frissítése</button>
+                            <a asp-page="/ChangePassword" class="btn btn-secondary">Jelszó megváltoztatása</a>
+                            <a asp-page="/Appointments/MyBookings" class="btn btn-info">Foglalásaim</a>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+            <div class="card border-danger">
+                <div class="card-body">
+                    <h5 class="card-title text-danger">Veszélyzóna</h5>
+                    <p class="card-text">Fiókod törlése visszaállíthatatlan művelet. Ezzel minden foglalt időpontod is el fog veszni.</p>
+                    <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#deleteAccountModal">
+                        Fiók törlése
+                    </button>
+                </div>
+            </div>
+
+            <div class="modal fade" id="deleteAccountModal" tabindex="-1" aria-labelledby="deleteAccountModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header bg-danger text-white">
+                            <h5 class="modal-title" id="deleteAccountModalLabel">Fiók törlése</h5>
+                            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <p class="mb-2">Biztosan törölni szeretnéd fiókod?</p>
+                            <p class="mb-0 text-danger"><strong>A törlés végleges és minden foglalt időpontod is el fog veszni!</strong></p>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Mégse</button>
+                            <form method="post" asp-page-handler="DeleteAccount" class="d-inline">
+                                <button type="submit" class="btn btn-danger">Törlés</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+</div>

@@ -1,19 +1,61 @@
-version: "3.8"
-
 services:
     sqlserver:
         image: mcr.microsoft.com/mssql/server:2022-latest
         container_name: sqlserver2022
+        user: root
         hostname: sqlserver
         environment:
             - ACCEPT_EULA=Y
-            - MSSQL_SA_PASSWORD=atidagadt
+            - MSSQL_SA_PASSWORD=Atidagadt271k!
             - MSSQL_PID=Developer
         ports:
             - "1433:1433"
         volumes:
             - sqlserver_data:/var/opt/mssql
         restart: unless-stopped
+        networks:
+            - animalshelter-network
+        healthcheck:
+            test: /opt/mssql-tools18/bin/sqlcmd -S localhost -U sa -P "Atidagadt271k!" -Q "SELECT 1" -C || exit 1
+            interval: 10s
+            timeout: 3s
+            retries: 10
+            start_period: 10s
+
+    webapp:
+        build:
+            context: ../Allatmenhely
+            dockerfile: Allatmenhely.WebApp/Dockerfile
+        container_name: animalshelter-webapp
+        ports:
+            - "5000:8080"
+        environment:
+            - ASPNETCORE_ENVIRONMENT=Development
+            - ASPNETCORE_URLS=http://+:8080
+            - ConnectionStrings__DefaultConnection=Server=sqlserver,1433;Database=AnimalShelter;User Id=sa;Password=Atidagadt271k!;TrustServerCertificate=True;
+        volumes:
+            - webapp_dataprotection:/root/.aspnet/DataProtection-Keys
+        depends_on:
+            sqlserver:
+                condition: service_healthy
+        restart: unless-stopped
+        networks:
+            - animalshelter-network
+
+    cloudflared:
+        image: cloudflare/cloudflared:latest
+        container_name: animalshelter-cloudflared
+        restart: unless-stopped
+        command: tunnel --no-autoupdate run --token
+        networks:
+            - animalshelter-network
+        depends_on:
+            - webapp
 
 volumes:
     sqlserver_data:
+    webapp_dataprotection:
+
+networks:
+    animalshelter-network:
+        driver: bridge

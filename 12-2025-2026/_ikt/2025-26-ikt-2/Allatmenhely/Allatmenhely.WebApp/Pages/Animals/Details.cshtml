@@ -1,0 +1,59 @@
+@page
+@model Allatmenhely.WebApp.Pages.Animals.DetailsModel
+@{
+    ViewData["Title"] = "Állat információ";
+}
+
+@if (Model.Animal == null)
+{
+    <div class="alert alert-danger">Ez az állat nem található.</div>
+}
+else
+{
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+            <div class="d-flex justify-content-between align-items-center mb-4">
+                <h2>@Model.Animal.Name</h2>
+                <a asp-page="/Animals/Index" class="btn btn-secondary">Vissza az összes állathoz</a>
+            </div>
+
+            <div class="card">
+                @if (!string.IsNullOrEmpty(Model.Animal.ImageUrl))
+                {
+                    <img src="@Model.Animal.ImageUrl" class="card-img-top" alt="@Model.Animal.Name" style="max-height: 400px; object-fit: cover;">
+                }
+                else
+                {
+                    <div class="card-img-top bg-secondary d-flex align-items-center justify-content-center" style="height: 400px;">
+                        <span class="text-white fs-3">A kép nem érhető el</span>
+                    </div>
+                }
+                <div class="card-body">
+                    <dl class="row">
+                        <dt class="col-sm-3">Név:</dt>
+                        <dd class="col-sm-9">@Model.Animal.Name</dd>
+
+                        <dt class="col-sm-3">Faj:</dt>
+                        <dd class="col-sm-9">@Model.Animal.Species.Name</dd>
+
+                        <dt class="col-sm-3">Fajta:</dt>
+                        <dd class="col-sm-9">@Model.Animal.Breed.Name</dd>
+
+                        @if (!string.IsNullOrEmpty(Model.Animal.Description))
+                        {
+                            <dt class="col-sm-3">Leírás:</dt>
+                            <dd class="col-sm-9">@Model.Animal.Description</dd>
+                        }
+
+                        <dt class="col-sm-3">Hozzáadás dátuma:</dt>
+                        <dd class="col-sm-9">@Model.Animal.CreatedOn.ToString("MMMM dd, yyyy")</dd>
+                    </dl>
+
+                    <div class="mt-4">
+                        <a asp-page="/Appointments/Booking" asp-route-animalId="@Model.Animal.Id" class="btn btn-primary">Időpont foglalása</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+}
