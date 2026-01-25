@@ -6,8 +6,10 @@ Egy állatmenhely távoló kezelésére használt **full-stack** alkalmazás.
 
 Manuálisan megírt, általunk készített dokumentációk:
 
-- [planned](docs/planning.md)
-- [final](docs/final.md) - *a projekt fejlesztés alatt, még nincs elkészítve*
+- [Első tervek](docs/planning.md)
+- [Végső tervek](docs/refined_planning.md)
+- [Végleges felhasználói dokumentáció](docs/final/user.md)
+- [Végleges fejlesztői dokumentáció](docs/final/dev.md)
 
 Demó ötletek:
 
@@ -15,4 +17,5 @@ Demó ötletek:
 
 Egyéb linkek:
 
+- [Projekt végleges verziója, deploy-olva](https://allatmenhely-ikt.vb2007.hu/)
 - [Trello](https://trello.com/b/d31AfWq8/2025-26-ikt-2)
