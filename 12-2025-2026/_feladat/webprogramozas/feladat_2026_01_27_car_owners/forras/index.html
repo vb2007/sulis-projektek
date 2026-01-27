@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="icon" type="image/png" sizes="32x32" href="/icons8-car-office-m-32.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Car registration</title>
+</head>
+
+<body>
+
+  <!doctype html>
+  <html lang="en">
+
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cars & Owners</title>
+
+  </head>
+
+  <body class="min-h-screen bg-fuchsia-50 text-fuchsia-900">
+    <div class="mx-auto max-w-6xl p-6">
+
+      <header class="mb-6">
+        <h1 class="text-3xl font-bold tracking-tight">Car registration</h1>
+      </header>
+
+      <section class="mb-6 rounded-2xl bg-white p-4 shadow-sm ring-1 ring-fuchsia-200">
+        <div class="flex flex-col gap-3 sm:flex-row sm:items-end">
+          <div class="flex-1">
+            <label for="search" class="block text-sm font-medium text-fuchsia-700">Search</label>
+            <input id="search" type="search" placeholder="Search by registration"
+              class="mt-1 w-full rounded-xl border border-fuchsia-200 bg-white px-4 py-2 text-sm shadow-sm outline-none focus:border-fuchsia-400 focus:ring-2 focus:ring-fuchsia-200" />
+          </div>
+
+          <div class="flex gap-2">
+            <button id="reset"
+              class="rounded-xl border border-fuchsia-200 bg-fuchsia-50 px-4 py-2 text-sm font-semibold text-fuchsia-800 hover:bg-fuchsia-100 focus:outline-0 focus:border-fuchsia-400 focus:ring-2 focus:ring-fuchsia-200">
+              Reset
+            </button>
+          </div>
+
+        </div>
+      </section>
+
+      
+      <main id="main">
+        <div id="emptyState" class="hidden rounded-2xl bg-white p-8 text-center shadow-sm ring-1 ring-fuchsia-200">
+          <p class="text-fuchsia-700">No cars to display.</p>
+          <p class="mt-1 text-sm text-fuchsia-500">Click “Load demo data” to render an example list.</p>
+        </div>
+
+        <div id="carsGrid" class="grid gap-4 sm:grid-cols-2 lg:grid-cols-3"></div>
+      </main>
+
+
+      <div id="error" class="hidden rounded-2xl border border-red-200 bg-white p-8 text-center shadow-sm">
+        <h3 class="mt-4 text-lg font-semibold text-red-900">Not found</h3>
+        <p class="mt-2 text-sm text-red-600">
+          Nem találtunk a keresésnek megfelelő autót vagy tulajdonost. Próbáld meg másik kulcsszóval.
+        </p>
+
+      </div>
+
+    </div>
+
+
+    <script type="module" src="/src/main.js"></script>
+  </body>
+
+  </html>
