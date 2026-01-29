@@ -1,0 +1,27 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net9.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="bengali.jpg" />
+    <None Remove="csikok.png" />
+    <None Remove="malaj.jpg" />
+    <None Remove="sziberiai.jpg" />
+    <None Remove="tiger-icon.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="bengali.jpg" />
+    <Resource Include="csikok.png" />
+    <Resource Include="malaj.jpg" />
+    <Resource Include="sziberiai.jpg" />
+    <Resource Include="tiger-icon.png" />
+  </ItemGroup>
+
+</Project>
