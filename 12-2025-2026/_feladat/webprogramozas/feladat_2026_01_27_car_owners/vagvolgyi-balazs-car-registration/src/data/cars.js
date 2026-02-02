@@ -1,3 +1,19 @@
+export const findCarByPlate = (plate) => {
+    return new Promise((resolve, reject) => {
+        if (!plate) {
+            return reject(new Error("Plate is required."));
+        }
+
+        const car = cars.find((c) => c.plate === plate);
+
+        if (!car) {
+            return reject(new Error(`Car not found: ${plate}`));
+        }
+
+        resolve(car);
+    });
+};
+
 const cars = [
     {
         plate: "ABC-123",
