@@ -1,0 +1,22 @@
+<?php
+
+namespace Neu\Eszkozok;
+
+use LogicException;
+
+class TintasugarasNyomtato extends Nyomtato {
+    protected int $patronokSzama;
+
+    public function __construct(string $gyarto, string $tipus, bool $szines, int $ar, int $patronokSzama) {
+        parent::__construct($gyarto, $tipus, $szines, $ar);
+        $this->patronokSzama = $patronokSzama;
+    }
+
+    public function __get($name): mixed {
+        if (in_array($name, array_keys(get_object_vars($this)))) {
+            return $this->$name;
+        }
+
+        throw new LogicException("Nem olvasható tulajdonság: $name");
+    }
+}
