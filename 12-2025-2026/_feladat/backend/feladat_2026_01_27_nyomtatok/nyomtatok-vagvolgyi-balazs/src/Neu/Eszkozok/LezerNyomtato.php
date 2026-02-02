@@ -20,7 +20,17 @@ class LezerNyomtato extends Nyomtato {
         throw new LogicException("Nem olvasható tulajdonság: $name");
     }
 
-    public function __tostring(): string {
+    public function __toString(): string {
         return $this->gyarto . " " . $this->tipus . " " . ($this->szines ? "színes" : "fekete-fehér") . " lézernyomtató (" . $this->tonerekSzama . " toner) ". $this->ar . " Ft";
+    }
+
+    public function toArray(): array {
+        return [
+            'gyarto' => $this->gyarto,
+            'tipus' => $this->tipus,
+            'szines' => $this->szines,
+            'ar' => $this->ar,
+            'tonerekSzama' => $this->tonerekSzama
+        ];
     }
 }
