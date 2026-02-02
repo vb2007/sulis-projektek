@@ -1,3 +1,20 @@
+export const findPersonById = (person_id) => {
+    return new Promise((resolve, reject) => {
+        if (!person_id) {
+            return reject(new Error('Parameter "person_id" is required.'));
+        }
+
+        const id = Number(person_id);
+        const person = persons.find((p) => p.id === id);
+
+        if (!person) {
+            return reject(new Error(`Person not found: ${person_id}`));
+        }
+
+        resolve(person);
+    });
+};
+
 const persons = [
     {
         id: 1,
