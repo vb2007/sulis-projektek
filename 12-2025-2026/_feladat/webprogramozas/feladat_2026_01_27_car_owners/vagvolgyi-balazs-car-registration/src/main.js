@@ -1,4 +1,10 @@
 import "@assets/app.css";
+import { findCarByPlate } from "./data/cars.js";
+
+const main = document.getElementById("main");
+const errorElement = document.getElementById("error");
+const resetButton = document.getElementById("reset");
+const searchInput = document.getElementById("search");
 
 function createStatCard({ label, value, valueClass = "" }) {
     const wrapper = document.createElement("div");
@@ -18,8 +24,8 @@ function createStatCard({ label, value, valueClass = "" }) {
     return wrapper;
 }
 
-function createCarElement({ plate, brand, model, year }) {
-    // const el = carTemplate.content.cloneNode(true)
+function createCarElement(car) {
+    const { plate, brand, model, year } = car;
 
     const article = document.createElement("article");
     article.className =
@@ -32,8 +38,42 @@ function createCarElement({ plate, brand, model, year }) {
     const dl = document.createElement("dl");
     dl.className = "info mt-4 grid grid-rows-2 grid-cols-2 gap-3 text-sm";
 
-    // ...
+    const yearCard = createStatCard({ label: "Year", value: year });
+    const plateCard = createStatCard({ label: "Plate", value: plate });
+    const ownerCard = createStatCard({
+        label: "Owner",
+        value: "Click here to show owner info",
+    });
+
+    ownerCard.addEventListener("click", (evt) => {
+        const clickedElement = evt.currentTarget;
+        clickedElement.remove();
+    });
+
+    dl.append(yearCard, plateCard, ownerCard);
+
+    article.append(h2, dl);
+
+    return article;
 }
+
+searchInput.addEventListener("input", () => {
+    main.replaceChildren();
+
+    findCarByPlate(searchInput.value)
+        .then((car) => {
+            errorElement.classList.add("hidden");
+            const carElement = createCarElement(car);
+            main.append(carElement);
+        })
+        .catch((err) => {
+            const errorText = errorElement.querySelector("p");
+            if (errorText) {
+                errorText.textContent = err.message;
+            }
+            errorElement.classList.remove("hidden");
+        });
+});
 
 resetButton.addEventListener("click", (evt) => {
     errorElement.classList.add("hidden");
