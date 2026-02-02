@@ -1,5 +1,6 @@
 import "@assets/app.css";
 import { findCarByPlate } from "./data/cars.js";
+import { findPersonById } from "./data/persons.js";
 
 const main = document.getElementById("main");
 const errorElement = document.getElementById("error");
@@ -25,7 +26,7 @@ function createStatCard({ label, value, valueClass = "" }) {
 }
 
 function createCarElement(car) {
-    const { plate, brand, model, year } = car;
+    const { plate, brand, model, year, owner_id } = car;
 
     const article = document.createElement("article");
     article.className =
@@ -45,13 +46,32 @@ function createCarElement(car) {
         value: "Click here to show owner info",
     });
 
-    ownerCard.addEventListener("click", (evt) => {
-        const clickedElement = evt.currentTarget;
-        clickedElement.remove();
+    ownerCard.addEventListener("click", () => {
+        findPersonById(owner_id)
+            .then((person) => {
+                const nameCard = createStatCard({
+                    label: "Name",
+                    value: `${person.first_name} ${person.last_name}`,
+                });
+                const emailCard = createStatCard({
+                    label: "Email",
+                    value: person.email_address,
+                });
+
+                ownerCard.remove();
+                dl.append(nameCard, emailCard);
+                errorElement.classList.add("hidden");
+            })
+            .catch((err) => {
+                const errorText = errorElement.querySelector("p");
+                if (errorText) {
+                    errorText.textContent = err.message;
+                }
+                errorElement.classList.remove("hidden");
+            });
     });
 
     dl.append(yearCard, plateCard, ownerCard);
-
     article.append(h2, dl);
 
     return article;
