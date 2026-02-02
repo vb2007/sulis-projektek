@@ -19,4 +19,8 @@ class TintasugarasNyomtato extends Nyomtato {
 
         throw new LogicException("Nem olvasható tulajdonság: $name");
     }
+
+    public function __toString(): string {
+        return $this->gyarto . " " . $this->tipus . " " . ($this->szines ? "színes" : "fekete-fehér") . " tintasugaras nyomtató (" . $this->patronokSzama . " patron) ". $this->ar . " Ft";
+    }
 }
