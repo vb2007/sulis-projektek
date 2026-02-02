@@ -1,0 +1,15 @@
+{
+    "name": "vb2007/nyomtatok-vagvolgyi-balazs",
+    "autoload": {
+        "psr-4": {
+            "Neu\\": "src/Neu"
+        }
+    },
+    "authors": [
+        {
+            "name": "VB2007",
+            "email": "admin@vb2007.hu"
+        }
+    ],
+    "require": {}
+}
