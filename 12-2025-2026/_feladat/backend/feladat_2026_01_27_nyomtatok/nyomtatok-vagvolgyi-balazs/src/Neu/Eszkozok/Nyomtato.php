@@ -9,7 +9,7 @@ class Nyomtato {
     protected string $tipus;
     protected bool $szines;
     protected int $ar;
-    private static array $gyartok = [];
+    private static array $gyartok = ["HP", "Canon", "Xerox", "Epson"];
 
     public function __construct(string $gyarto, string $tipus, bool $szines, int $ar) {
         $this->gyarto = $gyarto;
