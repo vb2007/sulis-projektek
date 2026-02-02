@@ -1,4 +1,4 @@
-import "@assets/app.css";
+import "./app.css";
 import { findCarByPlate } from "./data/cars.js";
 import { findPersonById } from "./data/persons.js";
 
