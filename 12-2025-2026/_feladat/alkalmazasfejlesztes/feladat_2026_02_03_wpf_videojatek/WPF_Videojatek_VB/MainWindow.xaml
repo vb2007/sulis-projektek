@@ -5,7 +5,11 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WPF_Videojatek_VB"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="Minecraft" Height="450" Width="800"
+        Icon="/icon.png">
+    <Window.Background>
+        <ImageBrush ImageSource="/background.jpg" Stretch="UniformToFill"/>
+    </Window.Background>
     <Grid>
 
     </Grid>
