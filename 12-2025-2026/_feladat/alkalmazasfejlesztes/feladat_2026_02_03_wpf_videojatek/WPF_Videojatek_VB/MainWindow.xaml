@@ -8,9 +8,22 @@
         Title="Minecraft" Height="450" Width="800"
         Icon="/icon.png">
     <Window.Background>
-        <ImageBrush ImageSource="/background.jpg" Stretch="UniformToFill"/>
+        <ImageBrush ImageSource="/background.jpg" Stretch="UniformToFill" Opacity="0.6"/>
     </Window.Background>
-    <Grid>
-
-    </Grid>
+    <DockPanel Margin="10,10,10,10">
+        <Border DockPanel.Dock="Top" Height="80" CornerRadius="10" Margin="10,10,10,10">
+            
+        </Border>
+        <Border DockPanel.Dock="Left" Margin="10,10,10,10" Padding="10,10,10,10" CornerRadius="10,10,10,10">
+            
+        </Border>
+        <Border DockPanel.Dock="Top">
+            
+        </Border>
+        <ScrollViewer VerticalScrollBarVisibility="Hidden">
+            <WrapPanel>
+                <StackPanel></StackPanel>
+            </WrapPanel>
+        </ScrollViewer>
+    </DockPanel>
 </Window>
