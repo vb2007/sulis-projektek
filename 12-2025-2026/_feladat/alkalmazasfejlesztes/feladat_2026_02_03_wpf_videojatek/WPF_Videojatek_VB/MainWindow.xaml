@@ -18,7 +18,27 @@
             <TextBox Background="{x:Null}" Foreground="#FF009C1F" Text="Minecraft" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="48" FontFamily="Segoe UI Black" SelectionTextBrush="{x:Null}" BorderBrush="{x:Null}"></TextBox>
         </Border>
         <Border DockPanel.Dock="Left" Margin="10,10,10,10" Padding="10,10,10,10" CornerRadius="10,10,10,10">
-
+            <Border.Background>
+                <SolidColorBrush Color="White" Opacity="0.2"/>
+            </Border.Background>
+            <StackPanel>
+                <TextBlock FontSize="18" Foreground="White" Text="Általános információk"/>
+                <Separator/>
+                <TextBlock Foreground="White" Text="Kiadó: Mojang Studios"/>
+                <Separator/>
+                <TextBlock Foreground="White" Text="Létrehozó: Markus Persson (Notch)"/>
+                <Separator/>
+                <TextBlock Foreground="White" Text="PC Alfa verzió létrejötte: 2009"/>
+                <Separator/>
+                <TextBlock Foreground="White" Text="Jelenlegi tulajdonos: Microsoft"/>
+                <Separator/>
+                <TextBlock Foreground="White" Text="Műfaj: Sandbox, kaland"/>
+                <Separator/>
+                <TextBlock Foreground="White" Text="Két fő kiadás: Java és Bedrock"/>
+                <Separator/>
+                <TextBlock Foreground="White" Text="Főbb játékmódok: Túlélő és Kreatív"/>
+                <Separator/>
+            </StackPanel>
         </Border>
         <Border DockPanel.Dock="Top">
 
