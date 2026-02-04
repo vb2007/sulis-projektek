@@ -8,17 +8,20 @@
         Title="Minecraft" Height="450" Width="800"
         Icon="/icon.png">
     <Window.Background>
-        <ImageBrush ImageSource="/background.jpg" Stretch="UniformToFill" Opacity="0.6"/>
+        <ImageBrush ImageSource="/background.jpg" Stretch="UniformToFill" Opacity="0.75"/>
     </Window.Background>
     <DockPanel Margin="10,10,10,10">
         <Border DockPanel.Dock="Top" Height="80" CornerRadius="10" Margin="10,10,10,10">
-            
+            <Border.Background>
+                <SolidColorBrush Color="White" Opacity="0.3"/>
+            </Border.Background>
+            <TextBox Background="{x:Null}" Foreground="#FF009C1F" Text="Minecraft" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="48" FontFamily="Segoe UI Black" SelectionTextBrush="{x:Null}" BorderBrush="{x:Null}"></TextBox>
         </Border>
         <Border DockPanel.Dock="Left" Margin="10,10,10,10" Padding="10,10,10,10" CornerRadius="10,10,10,10">
-            
+
         </Border>
         <Border DockPanel.Dock="Top">
-            
+
         </Border>
         <ScrollViewer VerticalScrollBarVisibility="Hidden">
             <WrapPanel>
