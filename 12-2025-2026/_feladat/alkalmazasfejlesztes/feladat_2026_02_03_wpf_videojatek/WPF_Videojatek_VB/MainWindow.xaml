@@ -1,0 +1,87 @@
+﻿<Window x:Class="WPF_Videojatek_VB.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WPF_Videojatek_VB"
+        mc:Ignorable="d"
+        Title="Minecraft" Height="450" Width="800"
+        Icon="/icon.png">
+    <Window.Background>
+        <ImageBrush ImageSource="/background.jpg" Stretch="UniformToFill" Opacity="0.75"/>
+    </Window.Background>
+    <DockPanel Margin="10,10,10,10">
+        <Border DockPanel.Dock="Top" Height="80" CornerRadius="10" Margin="10,10,10,10">
+            <Border.Background>
+                <SolidColorBrush Color="White" Opacity="0.3"/>
+            </Border.Background>
+            <TextBox Background="{x:Null}" Foreground="#FF009C1F" Text="Minecraft" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="48" FontFamily="Segoe UI Black" SelectionTextBrush="{x:Null}" BorderBrush="{x:Null}"></TextBox>
+        </Border>
+        <Border DockPanel.Dock="Left" Margin="10,10,10,10" Padding="10,10,10,10" CornerRadius="10,10,10,10">
+            <Border.Background>
+                <SolidColorBrush Color="White" Opacity="0.2"/>
+            </Border.Background>
+            <StackPanel>
+                <TextBlock FontSize="18" Foreground="#FF58FF79" Text="Általános információk"/>
+                <Separator/>
+                <TextBlock Foreground="White" Text="Kiadó: Mojang Studios"/>
+                <Separator/>
+                <TextBlock Foreground="White" Text="Létrehozó: Markus Persson (Notch)"/>
+                <Separator/>
+                <TextBlock Foreground="White" Text="PC Alfa verzió létrejötte: 2009"/>
+                <Separator/>
+                <TextBlock Foreground="White" Text="Jelenlegi tulajdonos: Microsoft"/>
+                <Separator/>
+                <TextBlock Foreground="White" Text="Műfaj: Sandbox, kaland"/>
+                <Separator/>
+                <TextBlock Foreground="White" Text="Két fő kiadás: Java és Bedrock"/>
+                <Separator/>
+                <TextBlock Foreground="White" Text="Főbb játékmódok: Túlélő és Kreatív"/>
+                <Separator/>
+                <Button x:Name="ExitButton" Content="Kilépés" Margin="0,10,0,0" Padding="10,5,10,5" FontSize="14" Foreground="White" Click="ExitButton_Click" BorderBrush="{x:Null}" BorderThickness="2" Cursor="Hand">
+                    <Button.Background>
+                        <SolidColorBrush Color="#FFFF2D2D" Opacity="0.2"/>
+                    </Button.Background>
+                </Button>
+            </StackPanel>
+        </Border>
+        <Border DockPanel.Dock="Top" CornerRadius="10" Margin="10,10,10,0" Padding="5,5,5,5">
+            <Border.Background>
+                <SolidColorBrush Color="White" Opacity="0.2"/>
+            </Border.Background>
+            <TextBox Background="{x:Null}" Foreground="#FF58FF79" VerticalAlignment="Center" HorizontalAlignment="Center" Text="Ércek listája" FontSize="18" BorderBrush="{x:Null}"></TextBox>
+        </Border>
+        <ScrollViewer VerticalScrollBarVisibility="Hidden">
+            <WrapPanel>
+                <StackPanel Margin="5,5,5,5">
+                    <StackPanel.Background>
+                        <SolidColorBrush Color="White" Opacity="0.5"/>
+                    </StackPanel.Background>
+                    <Image Width="80" Margin="10,10,10,0" Source="/coal.png"></Image>
+                    <TextBlock HorizontalAlignment="Center" Padding="10,5,10,5" Text="Szén" Foreground="Black"/>
+                </StackPanel>
+                <StackPanel Margin="5,5,5,5">
+                    <StackPanel.Background>
+                        <SolidColorBrush Color="White" Opacity="0.5"/>
+                    </StackPanel.Background>
+                    <Image Width="73" Margin="10,10,10,0" Source="/iron.png"></Image>
+                    <TextBlock HorizontalAlignment="Center" Padding="10,5,10,5" Text="Vas" Foreground="Black"/>
+                </StackPanel>
+                <StackPanel Margin="5,5,5,5">
+                    <StackPanel.Background>
+                        <SolidColorBrush Color="White" Opacity="0.5"/>
+                    </StackPanel.Background>
+                    <Image Width="80" Margin="10,10,10,0" Source="/gold.png"></Image>
+                    <TextBlock HorizontalAlignment="Center" Padding="10,5,10,5" Text="Arany" Foreground="Black"/>
+                </StackPanel>
+                <StackPanel Margin="5,5,5,5">
+                    <StackPanel.Background>
+                        <SolidColorBrush Color="White" Opacity="0.5"/>
+                    </StackPanel.Background>
+                    <Image Width="80" Margin="10,10,10,0" Source="/diamond.png"></Image>
+                    <TextBlock HorizontalAlignment="Center" Padding="10,5,10,5" Text="Gyémánt" Foreground="Black"/>
+                </StackPanel>
+            </WrapPanel>
+        </ScrollViewer>
+    </DockPanel>
+</Window>
