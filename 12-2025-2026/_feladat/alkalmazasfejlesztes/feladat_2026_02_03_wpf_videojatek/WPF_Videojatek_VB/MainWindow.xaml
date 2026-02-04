@@ -38,6 +38,11 @@
                 <Separator/>
                 <TextBlock Foreground="White" Text="Főbb játékmódok: Túlélő és Kreatív"/>
                 <Separator/>
+                <Button x:Name="ExitButton" Content="Kilépés" Margin="0,10,0,0" Padding="10,5,10,5" FontSize="14" Foreground="White" Click="ExitButton_Click" BorderBrush="{x:Null}" BorderThickness="2" Cursor="Hand">
+                    <Button.Background>
+                        <SolidColorBrush Color="#FFFF2D2D" Opacity="0.2"/>
+                    </Button.Background>
+                </Button>
             </StackPanel>
         </Border>
         <Border DockPanel.Dock="Top" CornerRadius="10" Margin="10,10,10,0" Padding="5,5,5,5">
