@@ -10,12 +10,20 @@
 
   <ItemGroup>
     <None Remove="background.jpg" />
+    <None Remove="coal.png" />
+    <None Remove="diamond.png" />
+    <None Remove="gold.png" />
     <None Remove="icon.png" />
+    <None Remove="iron.png" />
   </ItemGroup>
 
   <ItemGroup>
     <Resource Include="background.jpg" />
+    <Resource Include="coal.png" />
+    <Resource Include="diamond.png" />
+    <Resource Include="gold.png" />
     <Resource Include="icon.png" />
+    <Resource Include="iron.png" />
   </ItemGroup>
 
 </Project>

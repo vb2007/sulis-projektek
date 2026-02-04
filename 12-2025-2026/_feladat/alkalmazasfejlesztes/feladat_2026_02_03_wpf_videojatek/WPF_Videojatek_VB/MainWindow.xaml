@@ -22,7 +22,7 @@
                 <SolidColorBrush Color="White" Opacity="0.2"/>
             </Border.Background>
             <StackPanel>
-                <TextBlock FontSize="18" Foreground="White" Text="Általános információk"/>
+                <TextBlock FontSize="18" Foreground="#FF58FF79" Text="Általános információk"/>
                 <Separator/>
                 <TextBlock Foreground="White" Text="Kiadó: Mojang Studios"/>
                 <Separator/>
@@ -40,12 +40,42 @@
                 <Separator/>
             </StackPanel>
         </Border>
-        <Border DockPanel.Dock="Top">
-
+        <Border DockPanel.Dock="Top" CornerRadius="10" Margin="10,10,10,0" Padding="5,5,5,5">
+            <Border.Background>
+                <SolidColorBrush Color="White" Opacity="0.2"/>
+            </Border.Background>
+            <TextBox Background="{x:Null}" Foreground="#FF58FF79" VerticalAlignment="Center" HorizontalAlignment="Center" Text="Ércek listája" FontSize="18"></TextBox>
         </Border>
         <ScrollViewer VerticalScrollBarVisibility="Hidden">
             <WrapPanel>
-                <StackPanel></StackPanel>
+                <StackPanel Margin="5,5,5,5">
+                    <StackPanel.Background>
+                        <SolidColorBrush Color="White" Opacity="0.5"/>
+                    </StackPanel.Background>
+                    <Image Width="80" Margin="10,10,10,0" Source="/coal.png"></Image>
+                    <TextBlock HorizontalAlignment="Center" Padding="10,5,10,5" Text="Szén" Foreground="Black"/>
+                </StackPanel>
+                <StackPanel Margin="5,5,5,5">
+                    <StackPanel.Background>
+                        <SolidColorBrush Color="White" Opacity="0.5"/>
+                    </StackPanel.Background>
+                    <Image Width="73" Margin="10,10,10,0" Source="/iron.png"></Image>
+                    <TextBlock HorizontalAlignment="Center" Padding="10,5,10,5" Text="Vas" Foreground="Black"/>
+                </StackPanel>
+                <StackPanel Margin="5,5,5,5">
+                    <StackPanel.Background>
+                        <SolidColorBrush Color="White" Opacity="0.5"/>
+                    </StackPanel.Background>
+                    <Image Width="80" Margin="10,10,10,0" Source="/gold.png"></Image>
+                    <TextBlock HorizontalAlignment="Center" Padding="10,5,10,5" Text="Arany" Foreground="Black"/>
+                </StackPanel>
+                <StackPanel Margin="5,5,5,5">
+                    <StackPanel.Background>
+                        <SolidColorBrush Color="White" Opacity="0.5"/>
+                    </StackPanel.Background>
+                    <Image Width="80" Margin="10,10,10,0" Source="/diamond.png"></Image>
+                    <TextBlock HorizontalAlignment="Center" Padding="10,5,10,5" Text="Gyémánt" Foreground="Black"/>
+                </StackPanel>
             </WrapPanel>
         </ScrollViewer>
     </DockPanel>
