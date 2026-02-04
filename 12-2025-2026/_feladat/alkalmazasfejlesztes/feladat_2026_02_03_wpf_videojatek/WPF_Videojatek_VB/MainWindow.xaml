@@ -44,7 +44,7 @@
             <Border.Background>
                 <SolidColorBrush Color="White" Opacity="0.2"/>
             </Border.Background>
-            <TextBox Background="{x:Null}" Foreground="#FF58FF79" VerticalAlignment="Center" HorizontalAlignment="Center" Text="Ércek listája" FontSize="18"></TextBox>
+            <TextBox Background="{x:Null}" Foreground="#FF58FF79" VerticalAlignment="Center" HorizontalAlignment="Center" Text="Ércek listája" FontSize="18" BorderBrush="{x:Null}"></TextBox>
         </Border>
         <ScrollViewer VerticalScrollBarVisibility="Hidden">
             <WrapPanel>
