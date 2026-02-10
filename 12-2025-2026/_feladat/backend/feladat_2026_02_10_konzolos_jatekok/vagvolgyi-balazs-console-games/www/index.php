@@ -5,6 +5,10 @@ $whoops = new \Whoops\Run;
 $whoops->pushHandler(new \Whoops\Handler\PrettyPageHandler);
 $whoops->register();
 
+$title = "Videójátékok";
+$backgroundColor = "lightcoral";
+
+ob_start();
 ?>
 
 <!doctype html>
@@ -12,13 +16,13 @@ $whoops->register();
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Videójátékok</title>
+        <title><?= $title ?></title>
         <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     </head>
 
     <body>
         <main class="mx-auto max-w-7xl px-4 py-6">
-            <h1 class="mb-6 text-4xl font-bold text-center">Oldal címe</h1>
+            <h1 class="mb-6 text-4xl font-bold text-center"><?= $title ?></h1>
 
             <section id="games" class="grid grid-cols-1 gap-6">
                 <div
@@ -47,3 +51,7 @@ $whoops->register();
         </main>
     </body>
 </html>
+
+<?php
+ob_end_flush();
+?>
