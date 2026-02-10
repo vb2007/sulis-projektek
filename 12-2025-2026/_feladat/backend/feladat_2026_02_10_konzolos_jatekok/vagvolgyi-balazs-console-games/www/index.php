@@ -18,8 +18,12 @@ ob_start();
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title><?= $title ?></title>
         <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+        <style>
+            body {
+                background-color: <?= $backgroundColor ?>;
+            }
+        </style>
     </head>
-
     <body>
         <main class="mx-auto max-w-7xl px-4 py-6">
             <h1 class="mb-6 text-4xl font-bold text-center"><?= $title ?></h1>
