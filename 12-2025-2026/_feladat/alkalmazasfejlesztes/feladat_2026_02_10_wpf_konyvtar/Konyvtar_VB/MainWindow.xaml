@@ -5,8 +5,21 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Konyvtar_VB"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="Könyvtár" Height="450" Width="400">
     <Grid>
+        <StackPanel x:Name="MainPanel" Margin="10">
+            <ListBox x:Name="BooksListBox" ItemsSource="{Binding Books}" Height="300" Margin="0,0,0,10"/>
+            <Button Content="Új könyv hozzáadása" Click="AddButton_Click" Margin="0,0,0,5"/>
+            <Button Content="Törlés" Click="DeleteButton_Click"/>
+        </StackPanel>
 
+        <StackPanel x:Name="InputPanel" Margin="10" Visibility="Collapsed">
+            <TextBlock Text="Cím:" Margin="0,0,0,5"/>
+            <TextBox x:Name="TitleTextBox" Margin="0,0,0,10"/>
+            <TextBlock Text="Szerző:" Margin="0,0,0,5"/>
+            <TextBox x:Name="AuthorTextBox" Margin="0,0,0,20"/>
+            <Button Content="Mentés" Click="SaveButton_Click" Margin="0,0,0,5"/>
+            <Button Content="Mégsem" Click="CancelButton_Click"/>
+        </StackPanel>
     </Grid>
 </Window>
