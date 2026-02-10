@@ -28,7 +28,7 @@ ob_start();
         </style>
     </head>
     <body>
-
+        <?php require __DIR__ . "/pages/games.php"; ?>
     </body>
 </html>
 
