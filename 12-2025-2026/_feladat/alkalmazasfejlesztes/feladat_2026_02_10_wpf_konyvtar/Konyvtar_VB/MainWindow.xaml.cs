@@ -42,6 +42,10 @@ namespace Konyvtar_VB
             {
                 Books.Remove(book);
             }       
+            else
+            {
+                MessageBox.Show("Nem jelölt ki törlendő elemet.");
+            }
         }
     }
 }
