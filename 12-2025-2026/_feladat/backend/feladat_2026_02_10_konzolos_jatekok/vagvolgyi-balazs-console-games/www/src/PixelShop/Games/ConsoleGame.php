@@ -22,6 +22,10 @@ class ConsoleGame {
     }
 
     public function __get($property):mixed {
+        if ($property == "image") {
+            return "img/" . $this->imageName;
+        }
+
         if ("platformClass" == $property) {
             if ("PS5" == $this->platform) {
                 return "bg-blue-100 text-blue-700";
@@ -33,17 +37,19 @@ class ConsoleGame {
                 return "bg-gray-100 text-gray-700";
             }
         }
+
         if (!property_exists($this, $property)) {
             throw new InvalidArgumentException("Property '{$property}' does not exist.");
         }
+
         return $this->$property;
     }
 
-    public function __set($property, $value): void
-    {
+    public function __set($property, $value): void {
         if (!property_exists($this, $property)) {
             throw new InvalidArgumentException("Property '{$property}' does not exist.");
         }
+
         $this->$property = $value;
     }
 }
