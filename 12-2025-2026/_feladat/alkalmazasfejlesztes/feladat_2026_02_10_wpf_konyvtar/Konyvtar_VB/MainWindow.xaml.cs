@@ -1,24 +1,47 @@
-﻿using System.Text;
+﻿using System.Collections.ObjectModel;
 using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
 
 namespace Konyvtar_VB
 {
-    /// <summary>
-    /// Interaction logic for MainWindow.xaml
-    /// </summary>
     public partial class MainWindow : Window
     {
+        public ObservableCollection<Book> Books { get; set; } = new();
+
         public MainWindow()
         {
             InitializeComponent();
+            DataContext = this;
+        }
+
+        private void AddButton_Click(object sender, RoutedEventArgs e)
+        {
+            MainPanel.Visibility = Visibility.Collapsed;
+            InputPanel.Visibility = Visibility.Visible;
+        }
+
+        private void SaveButton_Click(object sender, RoutedEventArgs e)
+        {
+            Books.Add(new Book { Title = TitleTextBox.Text, Author = AuthorTextBox.Text });
+            TitleTextBox.Clear();
+            AuthorTextBox.Clear();
+            InputPanel.Visibility = Visibility.Collapsed;
+            MainPanel.Visibility = Visibility.Visible;
+        }
+
+        private void CancelButton_Click(object sender, RoutedEventArgs e)
+        {
+            TitleTextBox.Clear();
+            AuthorTextBox.Clear();
+            InputPanel.Visibility = Visibility.Collapsed;
+            MainPanel.Visibility = Visibility.Visible;
+        }
+
+        private void DeleteButton_Click(object sender, RoutedEventArgs e)
+        {
+            if (BooksListBox.SelectedItem is Book book)
+            {
+                Books.Remove(book);
+            }       
         }
     }
 }
