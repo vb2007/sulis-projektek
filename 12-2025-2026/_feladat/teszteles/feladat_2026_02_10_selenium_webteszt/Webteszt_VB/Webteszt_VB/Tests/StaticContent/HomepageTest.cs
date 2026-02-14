@@ -11,6 +11,7 @@ public class HomepageTest
     private static WebDriver _webDriver => _browser.WebDriver;
 
     private IWebElement TitleElement => _webDriver.FindElement(By.CssSelector("h1"));
+    private IWebElement SloganElement => _webDriver.FindElement(By.CssSelector("main div p.lead"));
 
     [SetUp]
     public void Setup()
@@ -35,7 +36,7 @@ public class HomepageTest
     public void CheckPageTitle()
     {
         string actualTitle = _webDriver.Title;
-        Assert.That(actualTitle, Is.EqualTo(TestData.BrowserTitle), "The page's title is incorrect.");
+        Assert.That(actualTitle, Is.EqualTo(TestData.HomepageData.BrowserTitle), "The page's title is incorrect.");
     }
 
     [Test]
@@ -44,6 +45,15 @@ public class HomepageTest
     public void CheckTitle()
     {
         string actualTitle = TitleElement.Text;
-        Assert.That(actualTitle, Is.EqualTo(TestData.HeaderTitle), "The homepage title is incorrect.");
+        Assert.That(actualTitle, Is.EqualTo(TestData.HomepageData.HeaderTitle), "The homepage title is incorrect.");
+    }
+
+    [Test]
+    [Category("StaticContent")]
+    [Description("Checks the page's slogan.")]
+    public void CheckSlogan()
+    {
+        string actualSlogan = SloganElement.Text;
+        Assert.That(actualSlogan, Is.EqualTo(TestData.HomepageData.Slogan), "The homepage slogan is incorrect.");
     }
 }
