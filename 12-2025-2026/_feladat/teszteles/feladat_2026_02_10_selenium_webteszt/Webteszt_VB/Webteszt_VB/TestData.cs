@@ -8,7 +8,7 @@ public class TestData
     {
         public static string NavbarTitle = "Allatmenhely.WebApp";
 
-        public static string HomeLinkText = "Főoldal";
+        public static string HomepageLinkText = "Főoldal";
         public static string AnimalsLinkText = "Állatok";
 
         public static string LoginButtonText = "Bejelentkezés";

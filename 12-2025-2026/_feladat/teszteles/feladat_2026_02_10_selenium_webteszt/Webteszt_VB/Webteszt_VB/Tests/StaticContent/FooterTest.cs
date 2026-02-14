@@ -10,7 +10,7 @@ public class FooterTest
     private static Browser _browser;
     private static WebDriver _webDriver => _browser.WebDriver;
 
-    public IWebElement FooterText => _webDriver.FindElement(By.CssSelector("footer div"));
+    public IWebElement FooterTextElement => _webDriver.FindElement(By.CssSelector("footer div"));
 
     [SetUp]
     public void Setup()
@@ -35,6 +35,6 @@ public class FooterTest
     public void CheckFooterContent()
     {
         string expectedFooterText = TestData.FooterData.FooterText;
-        Assert.That(FooterText.Text, Is.EqualTo(expectedFooterText), "The footer text is incorrect.");
+        Assert.That(FooterTextElement.Text, Is.EqualTo(expectedFooterText), "The footer text is incorrect.");
     }
 }
