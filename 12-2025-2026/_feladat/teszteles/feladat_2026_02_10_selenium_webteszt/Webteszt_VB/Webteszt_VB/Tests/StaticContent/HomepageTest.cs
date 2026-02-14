@@ -10,6 +10,8 @@ public class HomepageTest
     private static Browser _browser;
     private static WebDriver _webDriver => _browser.WebDriver;
 
+    private IWebElement TitleElement => _webDriver.FindElement(By.CssSelector("h1"));
+
     [SetUp]
     public void Setup()
     {
@@ -25,5 +27,23 @@ public class HomepageTest
         _browser?.Teardown();
 
         ExcelReportGenerator.EndTest();
+    }
+
+    [Test]
+    [Category("StaticContent")]
+    [Description("Check the homepage's title on the browser tab.")]
+    public void CheckPageTitle()
+    {
+        string actualTitle = _webDriver.Title;
+        Assert.That(actualTitle, Is.EqualTo("Főoldal - Állatmenhely"), "The page's title is incorrect.");
+    }
+
+    [Test]
+    [Category("StaticContent")]
+    [Description("Checks the page's title on the rendered HTML.")]
+    public void CheckTitle()
+    {
+        string actualTitle = TitleElement.Text;
+        Assert.That(actualTitle, Is.EqualTo("Állatmenhely digitális kezelőfelület"), "The homepage title is incorrect.");
     }
 }
