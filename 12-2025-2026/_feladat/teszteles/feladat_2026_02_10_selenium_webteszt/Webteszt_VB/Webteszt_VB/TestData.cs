@@ -17,4 +17,9 @@ public class TestData
         public static string LoginButtonText = "Bejelentkezés";
         public static string RegisterButtonText = "Regisztráció";
     }
+
+    public class FooterData
+    {
+        public static string FooterText = "© 2025 - Állatmenhely";
+    }
 }
