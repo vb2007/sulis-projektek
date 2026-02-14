@@ -11,7 +11,8 @@ public class HomepageTest
     private static WebDriver _webDriver => _browser.WebDriver;
 
     private IWebElement TitleElement => _webDriver.FindElement(By.CssSelector("h1"));
-    private IWebElement SloganElement => _webDriver.FindElement(By.CssSelector("main div p.lead"));
+    private IWebElement SloganElement => _webDriver.FindElement(By.CssSelector("p.lead"));
+    private IWebElement NoLoginContainer => _webDriver.FindElement(By.CssSelector("div.alert.alert-info"));
 
     [SetUp]
     public void Setup()
@@ -55,5 +56,14 @@ public class HomepageTest
     {
         string actualSlogan = SloganElement.Text;
         Assert.That(actualSlogan, Is.EqualTo(TestData.HomepageData.Slogan), "The homepage slogan is incorrect.");
+    }
+
+    [Test]
+    [Category("StaticContent")]
+    [Description("Checks the container that's visible when the user isn't logged in.")]
+    public void CheckNoLoginContainer()
+    {
+        string actualText = NoLoginContainer.GetDomProperty("innerText")!;
+        Assert.That(actualText, Is.EqualTo(TestData.HomepageData.NoLoginContainer), "The no-login container text is incorrect.");
     }
 }

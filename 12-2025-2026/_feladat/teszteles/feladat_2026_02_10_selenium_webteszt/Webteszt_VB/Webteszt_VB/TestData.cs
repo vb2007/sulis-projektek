@@ -20,6 +20,7 @@ public class TestData
         public static string BrowserTitle = "Főoldal - Állatmenhely";
         public static string HeaderTitle = "Állatmenhely digitális kezelőfelület";
         public static string Slogan = "A nagy 25 óta partnered állatok professzionális kezelésével.";
+        public static string NoLoginContainer = "Kérlek jelentkezz be vagy regisztrálj az összes funkció eléréséhez.";
     }
 
     public class FooterData
