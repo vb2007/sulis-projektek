@@ -35,7 +35,7 @@ public class HomepageTest
     public void CheckPageTitle()
     {
         string actualTitle = _webDriver.Title;
-        Assert.That(actualTitle, Is.EqualTo("Főoldal - Állatmenhely"), "The page's title is incorrect.");
+        Assert.That(actualTitle, Is.EqualTo(TestData.BrowserTitle), "The page's title is incorrect.");
     }
 
     [Test]
@@ -44,6 +44,6 @@ public class HomepageTest
     public void CheckTitle()
     {
         string actualTitle = TitleElement.Text;
-        Assert.That(actualTitle, Is.EqualTo("Állatmenhely digitális kezelőfelület"), "The homepage title is incorrect.");
+        Assert.That(actualTitle, Is.EqualTo(TestData.HeaderTitle), "The homepage title is incorrect.");
     }
 }
