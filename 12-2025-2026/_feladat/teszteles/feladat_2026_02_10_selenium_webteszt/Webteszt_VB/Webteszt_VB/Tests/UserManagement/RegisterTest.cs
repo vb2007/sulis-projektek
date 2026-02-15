@@ -10,6 +10,11 @@ public class RegisterTest
     private static Browser _browser;
     private static WebDriver _webDriver => _browser.WebDriver;
 
+    private IWebElement UsernameInputElement => _webDriver.FindElement(By.Id("Username"));
+    private IWebElement EmailInputElement => _webDriver.FindElement(By.Id("Email"));
+    private IWebElement PasswordInputElement => _webDriver.FindElement(By.Id("Password"));
+    private IWebElement ConfirmPasswordInputElement => _webDriver.FindElement(By.Id("ConfirmPassword"));
+
     [SetUp]
     public void Setup()
     {
