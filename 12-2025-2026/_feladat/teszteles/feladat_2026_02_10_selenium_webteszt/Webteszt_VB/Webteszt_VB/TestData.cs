@@ -41,11 +41,20 @@ public class TestData
         public static string InvalidUsername = "SeleniumTestInvalid";
         public static string InvalidEmail = "invalid-email";
         public static string InvalidPassword = "123";
+
+        public static string NewUsername = "NewSeleniumUser";
+        public static string NewEmail = "newuser@test.com";
     }
 
     public class LoginPageData
     {
         public static string InvalidCredentialsErrorMessage = "Érvénytelen felhasználónév vagy jelszó.";
         public static string InvalidPasswordErrorMessage = "Érvénytelen jelszó.";
+    }
+
+    public class RegisterPageData
+    {
+        public static string UsernameAlreadyExistsErrorMessage = "Ez a felhasználónév már használatban van.";
+        public static string EmailAlreadyExistsErrorMessage = "Az az e-mail cím már használatban van.";
     }
 }

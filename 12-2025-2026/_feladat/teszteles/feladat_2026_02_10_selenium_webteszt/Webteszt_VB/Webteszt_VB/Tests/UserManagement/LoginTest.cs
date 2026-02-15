@@ -12,7 +12,7 @@ public class LoginTest
 
     private IWebElement UsernameInputElement => _webDriver.FindElement(By.Id("Username"));
     private IWebElement PasswordInputElement => _webDriver.FindElement(By.Id("Password"));
-    private IWebElement LoginButtonElement => _webDriver.FindElement(By.CssSelector("button.btn.btn-primary"));
+    private IWebElement LoginButtonElement => _webDriver.FindElement(By.CssSelector("button[type='submit']"));
 
     private IWebElement ErrorMessageContainerElement => _webDriver.FindElement(By.CssSelector("div.alert.alert-danger")); //on login page
     private IWebElement SuccessLoginMessageContainerElement => _webDriver.FindElement(By.CssSelector("div.alert.alert-success")); //on homepage after redirect
