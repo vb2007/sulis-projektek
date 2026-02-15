@@ -42,13 +42,13 @@ public class Browser
         Thread.Sleep(waitTimeInMillSec);
     }
 
-    public void WaitUntilElementIsPresent(By locator, int waitTimeInMillSec = 5)
+    public void WaitUntilElementIsPresent(By locator, int waitTimeInMillSec = 5000)
     {
         WebDriverWait webDriverWait = new WebDriverWait(WebDriver, TimeSpan.FromMilliseconds(waitTimeInMillSec));
         webDriverWait.Until(ExpectedConditions.ElementExists(locator)); //requires DotNetSeleniumExtras.WaitHelpers package
     }
 
-    public void WaitUntilPageLoads(int waitTimeInMillSec = 5)
+    public void WaitUntilPageLoads(int waitTimeInMillSec = 5000)
     {
         WebDriverWait webDriverWait = new WebDriverWait(WebDriver, TimeSpan.FromMilliseconds(waitTimeInMillSec));
         webDriverWait.Until(WebDriver =>

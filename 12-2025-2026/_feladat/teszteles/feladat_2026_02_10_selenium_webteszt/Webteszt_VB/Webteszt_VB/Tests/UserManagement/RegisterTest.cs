@@ -22,6 +22,7 @@ public class RegisterTest
 
         _browser = new Browser();
         _browser.Init();
+        _webDriver.Navigate().GoToUrl(TestData._registerUrl);
     }
 
     [TearDown]
