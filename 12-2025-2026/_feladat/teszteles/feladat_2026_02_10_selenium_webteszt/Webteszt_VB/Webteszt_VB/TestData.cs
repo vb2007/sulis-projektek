@@ -46,5 +46,6 @@ public class TestData
     public class LoginPageData
     {
         public static string InvalidCredentialsErrorMessage = "Érvénytelen felhasználónév vagy jelszó.";
+        public static string InvalidPasswordErrorMessage = "Érvénytelen jelszó.";
     }
 }

@@ -77,6 +77,15 @@ public class LoginTest
     [Description("Tests that a user cannot log in with an invalid password.")]
     public void LoginInvalidPassword()
     {
+        _browser.WaitUntilPageLoads();
 
+        UsernameInputElement.SendKeys(TestData.UserData.ValidUsername);
+        PasswordInputElement.SendKeys(TestData.UserData.InvalidPassword);
+        LoginButtonElement.Click();
+
+        _browser.WaitUntilPageLoads();
+
+        string actualErrorMessage = ErrorMessageContainerElement.Text;
+        Assert.That(actualErrorMessage, Is.EqualTo(TestData.LoginPageData.InvalidPasswordErrorMessage), "Error message text is incorrect.");
     }
 }
