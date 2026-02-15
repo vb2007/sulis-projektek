@@ -37,14 +37,6 @@ public class RegisterTest
 
     [Test]
     [Category("UserManagement")]
-    [Description("Tests that a user cannot register with empty credentials.")]
-    public void RegisterEmptyCredentials()
-    {
-        _browser.WaitUntilPageLoads();
-    }
-
-    [Test]
-    [Category("UserManagement")]
     [Description("Tests that a user cannot register with an invalid username.")]
     public void RegisterInvalidUsername()
     {

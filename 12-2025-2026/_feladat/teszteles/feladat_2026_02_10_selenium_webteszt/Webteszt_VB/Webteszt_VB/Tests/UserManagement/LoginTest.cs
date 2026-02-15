@@ -13,6 +13,8 @@ public class LoginTest
     private IWebElement UsernameInputElement => _webDriver.FindElement(By.Id("Username"));
     private IWebElement PasswordInputElement => _webDriver.FindElement(By.Id("Password"));
     private IWebElement LoginButtonElement => _webDriver.FindElement(By.CssSelector("button.btn.btn-primary"));
+
+    private IWebElement ErrorMessageContainerElement => _webDriver.FindElement(By.CssSelector("div.alert.alert-danger")); //on login page
     private IWebElement SuccessLoginMessageContainerElement => _webDriver.FindElement(By.CssSelector("div.alert.alert-success")); //on homepage after redirect
 
     [SetUp]
@@ -55,19 +57,19 @@ public class LoginTest
 
     [Test]
     [Category("UserManagement")]
-    [Description("Tests that a user cannot log in with empty credentials.")]
-    public void LoginEmptyCredentials()
-    {
-        _browser.WaitUntilPageLoads();
-        LoginButtonElement.Click();
-    }
-
-    [Test]
-    [Category("UserManagement")]
     [Description("Tests that a user cannot log in with an invalid username.")]
     public void LoginInvalidUsername()
     {
+        _browser.WaitUntilPageLoads();
 
+        UsernameInputElement.SendKeys(TestData.UserData.InvalidUsername);
+        PasswordInputElement.SendKeys(TestData.UserData.ValidPassword);
+        LoginButtonElement.Click();
+
+        _browser.WaitUntilPageLoads();
+
+        string actualErrorMessage = ErrorMessageContainerElement.Text;
+        Assert.That(actualErrorMessage, Is.EqualTo(TestData.LoginPageData.InvalidCredentialsErrorMessage), "Error message text is incorrect.");
     }
 
     [Test]

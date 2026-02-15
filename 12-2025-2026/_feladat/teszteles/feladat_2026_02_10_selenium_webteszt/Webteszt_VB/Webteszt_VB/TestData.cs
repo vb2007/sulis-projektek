@@ -42,4 +42,9 @@ public class TestData
         public static string InvalidEmail = "invalid-email";
         public static string InvalidPassword = "123";
     }
+
+    public class LoginPageData
+    {
+        public static string InvalidCredentialsErrorMessage = "Érvénytelen felhasználónév vagy jelszó.";
+    }
 }
