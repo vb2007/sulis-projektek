@@ -55,7 +55,7 @@ public class LoginTest
 
     [Test]
     [Category("UserManagement")]
-    [Description("")]
+    [Description("Tests that a user cannot log in with an invalid username.")]
     public void LoginInvalidUsername()
     {
 
@@ -63,7 +63,7 @@ public class LoginTest
 
     [Test]
     [Category("UserManagement")]
-    [Description("")]
+    [Description("Tests that a user cannot log in with an invalid password.")]
     public void LoginInvalidPassword()
     {
 

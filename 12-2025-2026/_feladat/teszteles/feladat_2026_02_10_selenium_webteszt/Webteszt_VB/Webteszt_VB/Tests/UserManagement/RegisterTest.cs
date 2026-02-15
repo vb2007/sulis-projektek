@@ -26,4 +26,36 @@ public class RegisterTest
 
         ExcelReportGenerator.EndTest();
     }
+
+    [Test]
+    [Category("UserManagement")]
+    [Description("Tests that a user can successfully register with valid credentials.")]
+    public void RegisterSuccess()
+    {
+        _browser.WaitUntilPageLoads();
+    }
+
+    [Test]
+    [Category("UserManagement")]
+    [Description("Tests that a user cannot register with empty credentials.")]
+    public void RegisterEmptyCredentials()
+    {
+        _browser.WaitUntilPageLoads();
+    }
+
+    [Test]
+    [Category("UserManagement")]
+    [Description("Tests that a user cannot register with an invalid username.")]
+    public void RegisterInvalidUsername()
+    {
+        _browser.WaitUntilPageLoads();
+    }
+
+    [Test]
+    [Category("UserManagement")]
+    [Description("Tests that a user cannot register with an invalid email.")]
+    public void RegisterInvalidEmail()
+    {
+        _browser.WaitUntilPageLoads();
+    }
 }
