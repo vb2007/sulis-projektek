@@ -27,4 +27,15 @@ public class TestData
     {
         public static string FooterText = "© 2025 - Állatmenhely";
     }
+
+    public class UserData
+    {
+        public static string ValidUsername = "SeleniumTest";
+        public static string ValidRegisteredEmail = "test@test.com";
+        public static string ValidPassword = "abc123";
+
+        public static string InvalidUsername = "SeleniumTestInvalid";
+        public static string InvalidEmail = "invalid-email";
+        public static string InvalidPassword = "123";
+    }
 }
