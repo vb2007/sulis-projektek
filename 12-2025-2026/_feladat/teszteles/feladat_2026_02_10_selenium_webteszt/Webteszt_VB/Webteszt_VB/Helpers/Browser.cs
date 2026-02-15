@@ -13,7 +13,7 @@ public class Browser
     {
         FirefoxOptions firefoxOptions = new FirefoxOptions();
 
-        //firefoxOptions.AddArgument("--headless");
+        firefoxOptions.AddArgument("--headless");
         firefoxOptions.AddArgument("--width=1920");
         firefoxOptions.AddArgument("--height=1080");
 
@@ -26,7 +26,7 @@ public class Browser
         WebDriver = new FirefoxDriver(firefoxOptions);
 
         //ha nem headless-ben megy
-        WebDriver.Manage().Window.Maximize();
+        //WebDriver.Manage().Window.Maximize();
 
         WebDriver.Navigate().GoToUrl(TestData._baseUrl);
     }
