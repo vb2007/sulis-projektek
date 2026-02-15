@@ -10,6 +10,10 @@ public class LoginTest
     private static Browser _browser;
     private static WebDriver _webDriver => _browser.WebDriver;
 
+    private IWebElement UsernameInputElement => _webDriver.FindElement(By.Id("Username"));
+    private IWebElement PasswordInputElement => _webDriver.FindElement(By.Id("Password"));
+    private IWebElement LoginButtonElement => _webDriver.FindElement(By.CssSelector("button.btn.btn-primary"));
+
     [SetUp]
     public void Setup()
     {
@@ -17,6 +21,7 @@ public class LoginTest
 
         _browser = new Browser();
         _browser.Init();
+        _webDriver.Navigate().GoToUrl(TestData._loginUrl);
     }
 
     [TearDown]
@@ -25,5 +30,17 @@ public class LoginTest
         _browser?.Teardown();
 
         ExcelReportGenerator.EndTest();
+    }
+
+    [Test]
+    [Category("UserManagement")]
+    [Description("Tests that a user can successfully log in with valid credentials.")]
+    public void LoginSuccess()
+    {
+        _browser.WaitUntilPageLoads();
+
+        UsernameInputElement.SendKeys(TestData.UserData.ValidUsername);
+        PasswordInputElement.SendKeys(TestData.UserData.ValidPassword);
+        LoginButtonElement.Click();
     }
 }
