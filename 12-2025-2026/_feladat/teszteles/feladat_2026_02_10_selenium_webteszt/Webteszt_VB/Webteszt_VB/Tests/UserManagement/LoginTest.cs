@@ -43,4 +43,29 @@ public class LoginTest
         PasswordInputElement.SendKeys(TestData.UserData.ValidPassword);
         LoginButtonElement.Click();
     }
+
+    [Test]
+    [Category("UserManagement")]
+    [Description("Tests that a user cannot log in with empty credentials.")]
+    public void LoginEmptyCredentials()
+    {
+        _browser.WaitUntilPageLoads();
+        LoginButtonElement.Click();
+    }
+
+    [Test]
+    [Category("UserManagement")]
+    [Description("")]
+    public void LoginInvalidUsername()
+    {
+
+    }
+
+    [Test]
+    [Category("UserManagement")]
+    [Description("")]
+    public void LoginInvalidPassword()
+    {
+
+    }
 }

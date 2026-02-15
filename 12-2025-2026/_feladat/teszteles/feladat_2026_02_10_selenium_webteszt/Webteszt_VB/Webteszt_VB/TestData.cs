@@ -4,6 +4,7 @@ public class TestData
 {
     public static string _baseUrl = "https://allatmenhely-ikt.vb2007.hu";
     public static string _loginUrl = _baseUrl + "/Login";
+    public static string _registerUrl = _baseUrl + "/Register";
 
     public class NavbarData
     {
