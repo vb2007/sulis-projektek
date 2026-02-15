@@ -13,6 +13,7 @@ public class LoginTest
     private IWebElement UsernameInputElement => _webDriver.FindElement(By.Id("Username"));
     private IWebElement PasswordInputElement => _webDriver.FindElement(By.Id("Password"));
     private IWebElement LoginButtonElement => _webDriver.FindElement(By.CssSelector("button.btn.btn-primary"));
+    private IWebElement SuccessLoginMessageContainerElement => _webDriver.FindElement(By.CssSelector("div.alert.alert-success")); //on homepage after redirect
 
     [SetUp]
     public void Setup()
@@ -42,6 +43,14 @@ public class LoginTest
         UsernameInputElement.SendKeys(TestData.UserData.ValidUsername);
         PasswordInputElement.SendKeys(TestData.UserData.ValidPassword);
         LoginButtonElement.Click();
+
+        _browser.WaitUntilPageLoads();
+
+        bool isSuccessMessageDisplayed = SuccessLoginMessageContainerElement.Displayed;
+        string actualSuccessMessage = SuccessLoginMessageContainerElement.GetDomProperty("innerText")!;
+
+        Assert.That(isSuccessMessageDisplayed, Is.True, "Success login message is not displayed.");
+        Assert.That(actualSuccessMessage, Is.EqualTo(TestData.HomepageData.SuccessLoginMessageContainer), "Success login message text is incorrect.");
     }
 
     [Test]
