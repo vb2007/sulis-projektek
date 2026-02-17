@@ -1,6 +1,11 @@
 {
     "name": "vb2007/usa-lovak",
     "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Acme\\": "src/Acme"
+        }
+    },
     "authors": [
         {
             "name": "VB2007",
