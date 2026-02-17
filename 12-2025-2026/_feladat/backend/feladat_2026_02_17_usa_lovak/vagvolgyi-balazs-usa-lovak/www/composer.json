@@ -1,0 +1,13 @@
+{
+    "name": "vb2007/usa-lovak",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "VB2007",
+            "email": "admin@vb2007.hu"
+        }
+    ],
+    "require": {
+        "filp/whoops": "^2.18"
+    }
+}
