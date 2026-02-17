@@ -63,7 +63,6 @@ class Horse {
         "WY"=>"Wyoming",
     ];
 
-
     public function __construct($id, $state, $breed, $description, $image, $year)
     {
         $this->id = $id;
@@ -95,10 +94,8 @@ class Horse {
         }
     }
 
-
     public static function getStates():array
     {
         return self::$states;
     }
-
 }
