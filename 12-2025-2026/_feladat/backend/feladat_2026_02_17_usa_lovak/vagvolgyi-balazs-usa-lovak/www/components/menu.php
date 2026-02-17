@@ -2,7 +2,7 @@
     <div class="mx-auto max-w-7xl px-4">
         <div class="flex h-16 items-center justify-between">
             <a href="index.php" class="text-xl font-bold text-white">
-                CÍM
+                USA Nemzeti lovai
             </a>
             <button
                 class="md:hidden text-rose-100 hover:text-white"
