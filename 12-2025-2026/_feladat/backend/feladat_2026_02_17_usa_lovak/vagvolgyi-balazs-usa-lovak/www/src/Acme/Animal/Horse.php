@@ -76,6 +76,10 @@ class Horse {
 
     public function __get(string $name) :mixed
     {
+        if ($name == "path") {
+            return "img/" . $this->image;
+        }
+
         if(property_exists($this,$name))
         {
             return $this->$name;
