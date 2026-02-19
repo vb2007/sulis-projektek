@@ -1,0 +1,9 @@
+https://randomuser.me/api?nat=us,gb
+
+https://emojihub.yurace.pro/api/random/category/smileys-and-people
+
+https://api.fiscaldata.treasury.gov/services/api/fiscal_service/v1/accounting/od/rates_of_exchange?filter=country_currency_desc:eq:Hungary-Forint,record_date:eq:2025-12-31
+
+https://api.spaceflightnewsapi.net/v4/articles/
+
+https://api.open-meteo.com/v1/forecast?latitude=47.29&longitude=29.04&daily=temperature_2m_max,temperature_2m_min,rain_sum&timezone=Europe%2FBerlin
