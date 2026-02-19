@@ -1,10 +1,1848 @@
 {
-  "posts": [
-    { "id": "1", "title": "a title", "views": 100 },
-    { "id": "2", "title": "another title", "views": 200 }
+  "products": [
+    {
+      "id": "fd276a3e-2d23-438f-bc00-43d049bc49e7",
+      "brand": "Rügenwalder",
+      "name": "Rügenwalder Veganes Mühlen Hack",
+      "category": "Fleisch-Alternativen",
+      "volume": "180 g Packung",
+      "price": 3.99,
+      "baseUnitPrice": {
+        "unit": "1 kg",
+        "price": 22.17
+      },
+      "image": "https://images.cdn.europe-west1.gcp.commercetools.com/723b2575-66c7-4d92-ae49-82bf1d168d26/00-774102-384517748-Q6FL-vRv.jpg",
+      "availableStores": [
+        {
+          "id": 5,
+          "name": "Geblergasse 73-75, 1170 Wien, Austria"
+        },
+        {
+          "id": 3,
+          "name": "Hauptstraße 30, 1140 Wien, Austria"
+        },
+        {
+          "id": 12,
+          "name": "Universitätsstraße 6-8, 1090 Wien, Austria"
+        },
+        {
+          "id": 14,
+          "name": "Kliebergasse 2, 1050 Wien, Austria"
+        },
+        {
+          "id": 15,
+          "name": "Keißlergasse 1, 1140 Wien, Austria"
+        },
+        {
+          "id": 10,
+          "name": "Praterstern, 1020 Wien, Austria"
+        }
+      ]
+    },
+    {
+      "id": "917f4595-72bb-4620-95cd-8c7267d27482",
+      "brand": "Toppits",
+      "name": "Toppits Backpapier Heißluftfritteuse",
+      "category": "Backpapier",
+      "volume": "20 stk ",
+      "price": 3.49,
+      "baseUnitPrice": {
+        "unit": "per Stk",
+        "price": null
+      },
+      "image": "https://images.cdn.europe-west1.gcp.commercetools.com/723b2575-66c7-4d92-ae49-82bf1d168d26/00-774185-327695501-jPx9hPrC.jpg",
+      "availableStores": [
+        {
+          "id": 16,
+          "name": "Linzer Straße 112-116, 1140 Wien, Austria"
+        },
+        {
+          "id": 17,
+          "name": "Kärntner Ring 9-13 / Mahler, 1010 Wien, Austria"
+        },
+        {
+          "id": 10,
+          "name": "Praterstern, 1020 Wien, Austria"
+        },
+        {
+          "id": 1,
+          "name": "Neustiftgasse 38, 1070 Wien, Austria"
+        },
+        {
+          "id": 9,
+          "name": "Erzherzog-Karl-Straße 203, 1220 Wien, Austria"
+        },
+        {
+          "id": 18,
+          "name": "Singerstraße 6, 1010 Wien, Austria"
+        },
+        {
+          "id": 7,
+          "name": "Pragerstraße 274, 1210 Wien, Austria"
+        },
+        {
+          "id": 15,
+          "name": "Keißlergasse 1, 1140 Wien, Austria"
+        },
+        {
+          "id": 3,
+          "name": "Hauptstraße 30, 1140 Wien, Austria"
+        },
+        {
+          "id": 20,
+          "name": "Ungargasse 52, 1030 Wien, Austria"
+        },
+        {
+          "id": 13,
+          "name": "Julius-Tandler-Platz 3, 1090 Wien, Austria"
+        },
+        {
+          "id": 12,
+          "name": "Universitätsstraße 6-8, 1090 Wien, Austria"
+        },
+        {
+          "id": 2,
+          "name": "Breitenleer Straße 148, 1220 Wien, Austria"
+        },
+        {
+          "id": 8,
+          "name": "Willergasse 28, 1230 Wien, Austria"
+        },
+        {
+          "id": 4,
+          "name": "Franzosengraben 17, 1030 Wien, Austria"
+        }
+      ]
+    },
+    {
+      "id": "e6a08416-17fa-4a25-80b2-38e5cc5334bf",
+      "brand": "CLEVER",
+      "name": "Clever Rib Eye Steak vom Rind",
+      "category": "Rindfleisch",
+      "volume": "1 kg Packung",
+      "price": 27.99,
+      "baseUnitPrice": {
+        "unit": "per 1 kg",
+        "price": null
+      },
+      "image": "https://images.cdn.europe-west1.gcp.commercetools.com/723b2575-66c7-4d92-ae49-82bf1d168d26/00-774667-624803063-f1yjng6O.jpg",
+      "availableStores": [
+        {
+          "id": 18,
+          "name": "Singerstraße 6, 1010 Wien, Austria"
+        },
+        {
+          "id": 16,
+          "name": "Linzer Straße 112-116, 1140 Wien, Austria"
+        },
+        {
+          "id": 12,
+          "name": "Universitätsstraße 6-8, 1090 Wien, Austria"
+        },
+        {
+          "id": 15,
+          "name": "Keißlergasse 1, 1140 Wien, Austria"
+        }
+      ]
+    },
+    {
+      "id": "79b85eaf-68f0-4dcd-a023-55d151ba86fa",
+      "brand": "CLEVER",
+      "name": "Clever Hüftsteak vom Rind",
+      "category": "Rindfleisch",
+      "volume": "1 kg Packung",
+      "price": 26.99,
+      "baseUnitPrice": {
+        "unit": "per 1 kg",
+        "price": null
+      },
+      "image": "https://images.cdn.europe-west1.gcp.commercetools.com/723b2575-66c7-4d92-ae49-82bf1d168d26/00-774677-1197230901-hxB5E_lE.jpg",
+      "availableStores": [
+        {
+          "id": 14,
+          "name": "Kliebergasse 2, 1050 Wien, Austria"
+        },
+        {
+          "id": 15,
+          "name": "Keißlergasse 1, 1140 Wien, Austria"
+        },
+        {
+          "id": 19,
+          "name": "Hoher Markt 12, 1010 Wien, Austria"
+        },
+        {
+          "id": 18,
+          "name": "Singerstraße 6, 1010 Wien, Austria"
+        }
+      ]
+    },
+    {
+      "id": "7ff0642f-c1cd-4889-b9de-74d94323df4f",
+      "brand": "CLEVER",
+      "name": "Clever Chucksteak",
+      "category": "Rindfleisch",
+      "volume": "1 kg Packung",
+      "price": 24.99,
+      "baseUnitPrice": {
+        "unit": "per 1 kg",
+        "price": null
+      },
+      "image": "https://images.cdn.europe-west1.gcp.commercetools.com/723b2575-66c7-4d92-ae49-82bf1d168d26/00-774733-1958314145-SIf3wKEi.jpg",
+      "availableStores": [
+        {
+          "id": 1,
+          "name": "Neustiftgasse 38, 1070 Wien, Austria"
+        },
+        {
+          "id": 12,
+          "name": "Universitätsstraße 6-8, 1090 Wien, Austria"
+        },
+        {
+          "id": 4,
+          "name": "Franzosengraben 17, 1030 Wien, Austria"
+        },
+        {
+          "id": 19,
+          "name": "Hoher Markt 12, 1010 Wien, Austria"
+        },
+        {
+          "id": 15,
+          "name": "Keißlergasse 1, 1140 Wien, Austria"
+        },
+        {
+          "id": 14,
+          "name": "Kliebergasse 2, 1050 Wien, Austria"
+        },
+        {
+          "id": 20,
+          "name": "Ungargasse 52, 1030 Wien, Austria"
+        }
+      ]
+    },
+    {
+      "id": "719a1e50-e6e5-4c83-a8f7-8e32827805c0",
+      "brand": "Monini",
+      "name": "Monini Grüne Oliven mit Kern",
+      "category": "Oliven & Kapern",
+      "volume": "310 g Glas",
+      "price": 3.99,
+      "baseUnitPrice": {
+        "unit": "1 kg",
+        "price": 21
+      },
+      "image": "https://images.cdn.europe-west1.gcp.commercetools.com/723b2575-66c7-4d92-ae49-82bf1d168d26/00-775955-1265054045-clxPxDg4.jpg",
+      "availableStores": [
+        {
+          "id": 1,
+          "name": "Neustiftgasse 38, 1070 Wien, Austria"
+        },
+        {
+          "id": 11,
+          "name": "Stuwerstraße 1-3, 1020 Wien, Austria"
+        },
+        {
+          "id": 3,
+          "name": "Hauptstraße 30, 1140 Wien, Austria"
+        },
+        {
+          "id": 10,
+          "name": "Praterstern, 1020 Wien, Austria"
+        },
+        {
+          "id": 5,
+          "name": "Geblergasse 73-75, 1170 Wien, Austria"
+        },
+        {
+          "id": 9,
+          "name": "Erzherzog-Karl-Straße 203, 1220 Wien, Austria"
+        },
+        {
+          "id": 20,
+          "name": "Ungargasse 52, 1030 Wien, Austria"
+        },
+        {
+          "id": 7,
+          "name": "Pragerstraße 274, 1210 Wien, Austria"
+        },
+        {
+          "id": 12,
+          "name": "Universitätsstraße 6-8, 1090 Wien, Austria"
+        },
+        {
+          "id": 15,
+          "name": "Keißlergasse 1, 1140 Wien, Austria"
+        },
+        {
+          "id": 6,
+          "name": "Jedleseerstraße 51A, 1210 Wien, Austria"
+        },
+        {
+          "id": 16,
+          "name": "Linzer Straße 112-116, 1140 Wien, Austria"
+        },
+        {
+          "id": 13,
+          "name": "Julius-Tandler-Platz 3, 1090 Wien, Austria"
+        },
+        {
+          "id": 4,
+          "name": "Franzosengraben 17, 1030 Wien, Austria"
+        },
+        {
+          "id": 14,
+          "name": "Kliebergasse 2, 1050 Wien, Austria"
+        },
+        {
+          "id": 17,
+          "name": "Kärntner Ring 9-13 / Mahler, 1010 Wien, Austria"
+        },
+        {
+          "id": 8,
+          "name": "Willergasse 28, 1230 Wien, Austria"
+        },
+        {
+          "id": 18,
+          "name": "Singerstraße 6, 1010 Wien, Austria"
+        }
+      ]
+    },
+    {
+      "id": "5b39a586-d5c6-4ae2-bb34-584a84b9e5e9",
+      "brand": "Monini",
+      "name": "Monini Grüne Oliven ohne Kern",
+      "category": "Oliven & Kapern",
+      "volume": "300 g Glas",
+      "price": 3.99,
+      "baseUnitPrice": {
+        "unit": "1 kg",
+        "price": 26.6
+      },
+      "image": "https://images.cdn.europe-west1.gcp.commercetools.com/723b2575-66c7-4d92-ae49-82bf1d168d26/00-775968-0101320283-V4tSyBPj.jpg",
+      "availableStores": [
+        {
+          "id": 1,
+          "name": "Neustiftgasse 38, 1070 Wien, Austria"
+        },
+        {
+          "id": 14,
+          "name": "Kliebergasse 2, 1050 Wien, Austria"
+        },
+        {
+          "id": 7,
+          "name": "Pragerstraße 274, 1210 Wien, Austria"
+        },
+        {
+          "id": 6,
+          "name": "Jedleseerstraße 51A, 1210 Wien, Austria"
+        },
+        {
+          "id": 13,
+          "name": "Julius-Tandler-Platz 3, 1090 Wien, Austria"
+        },
+        {
+          "id": 20,
+          "name": "Ungargasse 52, 1030 Wien, Austria"
+        },
+        {
+          "id": 4,
+          "name": "Franzosengraben 17, 1030 Wien, Austria"
+        },
+        {
+          "id": 15,
+          "name": "Keißlergasse 1, 1140 Wien, Austria"
+        },
+        {
+          "id": 19,
+          "name": "Hoher Markt 12, 1010 Wien, Austria"
+        },
+        {
+          "id": 5,
+          "name": "Geblergasse 73-75, 1170 Wien, Austria"
+        },
+        {
+          "id": 18,
+          "name": "Singerstraße 6, 1010 Wien, Austria"
+        },
+        {
+          "id": 17,
+          "name": "Kärntner Ring 9-13 / Mahler, 1010 Wien, Austria"
+        }
+      ]
+    },
+    {
+      "id": "e66a9f2b-a537-4161-8d2f-e0a71a9a1bee",
+      "brand": "Treets",
+      "name": "Treets Crunchy Corn",
+      "category": "Süßes & Salziges",
+      "volume": "210 g Beutel",
+      "price": 3.49,
+      "baseUnitPrice": {
+        "unit": "100 g",
+        "price": 1.66
+      },
+      "image": "https://images.cdn.europe-west1.gcp.commercetools.com/723b2575-66c7-4d92-ae49-82bf1d168d26/00-776819-0357972699-e_mNDkwa.jpg",
+      "availableStores": [
+        {
+          "id": 13,
+          "name": "Julius-Tandler-Platz 3, 1090 Wien, Austria"
+        },
+        {
+          "id": 2,
+          "name": "Breitenleer Straße 148, 1220 Wien, Austria"
+        }
+      ]
+    },
+    {
+      "id": "76c6672b-8dbf-48a6-869b-5a44569a1d6b",
+      "brand": "Treets",
+      "name": "Treets Crispy",
+      "category": "Süßes & Salziges",
+      "volume": "215 g Beutel",
+      "price": 3.49,
+      "baseUnitPrice": {
+        "unit": "100 g",
+        "price": 1.62
+      },
+      "image": "https://images.cdn.europe-west1.gcp.commercetools.com/723b2575-66c7-4d92-ae49-82bf1d168d26/00-776822-0154372571-H5_znkXr.jpg",
+      "availableStores": [
+        {
+          "id": 10,
+          "name": "Praterstern, 1020 Wien, Austria"
+        },
+        {
+          "id": 1,
+          "name": "Neustiftgasse 38, 1070 Wien, Austria"
+        }
+      ]
+    },
+    {
+      "id": "9de2a7ff-4783-45c8-a4eb-f2c28b906091",
+      "brand": "Goods Solutions",
+      "name": "Goods Solutions Flüssiges Eiklar",
+      "category": "Geliermittel & sonstige Backhilfen",
+      "volume": "485 ml Flasche",
+      "price": 4.99,
+      "baseUnitPrice": {
+        "unit": "1 Liter",
+        "price": 10.29
+      },
+      "image": "https://images.cdn.europe-west1.gcp.commercetools.com/723b2575-66c7-4d92-ae49-82bf1d168d26/00-777533-0135486767-rUJcW5-n.jpg",
+      "availableStores": [
+        {
+          "id": 1,
+          "name": "Neustiftgasse 38, 1070 Wien, Austria"
+        },
+        {
+          "id": 18,
+          "name": "Singerstraße 6, 1010 Wien, Austria"
+        },
+        {
+          "id": 10,
+          "name": "Praterstern, 1020 Wien, Austria"
+        },
+        {
+          "id": 12,
+          "name": "Universitätsstraße 6-8, 1090 Wien, Austria"
+        },
+        {
+          "id": 5,
+          "name": "Geblergasse 73-75, 1170 Wien, Austria"
+        },
+        {
+          "id": 15,
+          "name": "Keißlergasse 1, 1140 Wien, Austria"
+        },
+        {
+          "id": 3,
+          "name": "Hauptstraße 30, 1140 Wien, Austria"
+        },
+        {
+          "id": 19,
+          "name": "Hoher Markt 12, 1010 Wien, Austria"
+        },
+        {
+          "id": 14,
+          "name": "Kliebergasse 2, 1050 Wien, Austria"
+        },
+        {
+          "id": 6,
+          "name": "Jedleseerstraße 51A, 1210 Wien, Austria"
+        },
+        {
+          "id": 16,
+          "name": "Linzer Straße 112-116, 1140 Wien, Austria"
+        },
+        {
+          "id": 9,
+          "name": "Erzherzog-Karl-Straße 203, 1220 Wien, Austria"
+        },
+        {
+          "id": 11,
+          "name": "Stuwerstraße 1-3, 1020 Wien, Austria"
+        },
+        {
+          "id": 17,
+          "name": "Kärntner Ring 9-13 / Mahler, 1010 Wien, Austria"
+        },
+        {
+          "id": 13,
+          "name": "Julius-Tandler-Platz 3, 1090 Wien, Austria"
+        },
+        {
+          "id": 7,
+          "name": "Pragerstraße 274, 1210 Wien, Austria"
+        }
+      ]
+    },
+    {
+      "id": "d50b503d-6582-4133-9b13-7157d3f4bff1",
+      "brand": "CLEVER",
+      "name": "Clever Erdnüsse geröstet & gesalzen",
+      "category": "Süßes & Salziges",
+      "volume": "500 g Beutel",
+      "price": 2.79,
+      "baseUnitPrice": {
+        "unit": "1 kg",
+        "price": 5.58
+      },
+      "image": "https://images.cdn.europe-west1.gcp.commercetools.com/723b2575-66c7-4d92-ae49-82bf1d168d26/00-777676-0124099752-FBmGIGCB.jpg",
+      "availableStores": [
+        {
+          "id": 6,
+          "name": "Jedleseerstraße 51A, 1210 Wien, Austria"
+        },
+        {
+          "id": 9,
+          "name": "Erzherzog-Karl-Straße 203, 1220 Wien, Austria"
+        },
+        {
+          "id": 3,
+          "name": "Hauptstraße 30, 1140 Wien, Austria"
+        },
+        {
+          "id": 13,
+          "name": "Julius-Tandler-Platz 3, 1090 Wien, Austria"
+        },
+        {
+          "id": 19,
+          "name": "Hoher Markt 12, 1010 Wien, Austria"
+        },
+        {
+          "id": 8,
+          "name": "Willergasse 28, 1230 Wien, Austria"
+        },
+        {
+          "id": 2,
+          "name": "Breitenleer Straße 148, 1220 Wien, Austria"
+        },
+        {
+          "id": 18,
+          "name": "Singerstraße 6, 1010 Wien, Austria"
+        },
+        {
+          "id": 11,
+          "name": "Stuwerstraße 1-3, 1020 Wien, Austria"
+        },
+        {
+          "id": 16,
+          "name": "Linzer Straße 112-116, 1140 Wien, Austria"
+        },
+        {
+          "id": 17,
+          "name": "Kärntner Ring 9-13 / Mahler, 1010 Wien, Austria"
+        },
+        {
+          "id": 12,
+          "name": "Universitätsstraße 6-8, 1090 Wien, Austria"
+        },
+        {
+          "id": 1,
+          "name": "Neustiftgasse 38, 1070 Wien, Austria"
+        },
+        {
+          "id": 14,
+          "name": "Kliebergasse 2, 1050 Wien, Austria"
+        }
+      ]
+    },
+    {
+      "id": "cbb6edf1-518a-42f6-8883-bdb4279857db",
+      "brand": "BILLA Bio",
+      "name": "BILLA Bio Haferdrink Zuckerfrei",
+      "category": "Hafer",
+      "volume": "1 liter Karton",
+      "price": 1.15,
+      "baseUnitPrice": {
+        "unit": "per 1 Liter",
+        "price": null
+      },
+      "image": "https://images.cdn.europe-west1.gcp.commercetools.com/723b2575-66c7-4d92-ae49-82bf1d168d26/00-779329-1198731111-Jao-a53k.jpg",
+      "availableStores": [
+        {
+          "id": 6,
+          "name": "Jedleseerstraße 51A, 1210 Wien, Austria"
+        },
+        {
+          "id": 15,
+          "name": "Keißlergasse 1, 1140 Wien, Austria"
+        },
+        {
+          "id": 16,
+          "name": "Linzer Straße 112-116, 1140 Wien, Austria"
+        },
+        {
+          "id": 10,
+          "name": "Praterstern, 1020 Wien, Austria"
+        },
+        {
+          "id": 7,
+          "name": "Pragerstraße 274, 1210 Wien, Austria"
+        },
+        {
+          "id": 1,
+          "name": "Neustiftgasse 38, 1070 Wien, Austria"
+        },
+        {
+          "id": 18,
+          "name": "Singerstraße 6, 1010 Wien, Austria"
+        },
+        {
+          "id": 14,
+          "name": "Kliebergasse 2, 1050 Wien, Austria"
+        },
+        {
+          "id": 9,
+          "name": "Erzherzog-Karl-Straße 203, 1220 Wien, Austria"
+        },
+        {
+          "id": 5,
+          "name": "Geblergasse 73-75, 1170 Wien, Austria"
+        },
+        {
+          "id": 13,
+          "name": "Julius-Tandler-Platz 3, 1090 Wien, Austria"
+        },
+        {
+          "id": 11,
+          "name": "Stuwerstraße 1-3, 1020 Wien, Austria"
+        },
+        {
+          "id": 3,
+          "name": "Hauptstraße 30, 1140 Wien, Austria"
+        },
+        {
+          "id": 2,
+          "name": "Breitenleer Straße 148, 1220 Wien, Austria"
+        },
+        {
+          "id": 12,
+          "name": "Universitätsstraße 6-8, 1090 Wien, Austria"
+        },
+        {
+          "id": 19,
+          "name": "Hoher Markt 12, 1010 Wien, Austria"
+        },
+        {
+          "id": 4,
+          "name": "Franzosengraben 17, 1030 Wien, Austria"
+        },
+        {
+          "id": 17,
+          "name": "Kärntner Ring 9-13 / Mahler, 1010 Wien, Austria"
+        },
+        {
+          "id": 20,
+          "name": "Ungargasse 52, 1030 Wien, Austria"
+        },
+        {
+          "id": 8,
+          "name": "Willergasse 28, 1230 Wien, Austria"
+        }
+      ]
+    },
+    {
+      "id": "1819a046-bde4-4aa0-bf55-4410e448ff89",
+      "brand": "Omis Schmankerl",
+      "name": "Omis Schmankerl Nockerl",
+      "category": "Frische Pasta & Beilagen",
+      "volume": "500 g Beutel",
+      "price": 3.29,
+      "baseUnitPrice": {
+        "unit": "1 kg",
+        "price": 6.58
+      },
+      "image": "https://images.cdn.europe-west1.gcp.commercetools.com/723b2575-66c7-4d92-ae49-82bf1d168d26/00-780253-0135513759-irhhs3y_.jpg",
+      "availableStores": [
+        {
+          "id": 7,
+          "name": "Pragerstraße 274, 1210 Wien, Austria"
+        },
+        {
+          "id": 10,
+          "name": "Praterstern, 1020 Wien, Austria"
+        },
+        {
+          "id": 9,
+          "name": "Erzherzog-Karl-Straße 203, 1220 Wien, Austria"
+        },
+        {
+          "id": 14,
+          "name": "Kliebergasse 2, 1050 Wien, Austria"
+        },
+        {
+          "id": 11,
+          "name": "Stuwerstraße 1-3, 1020 Wien, Austria"
+        },
+        {
+          "id": 2,
+          "name": "Breitenleer Straße 148, 1220 Wien, Austria"
+        },
+        {
+          "id": 8,
+          "name": "Willergasse 28, 1230 Wien, Austria"
+        },
+        {
+          "id": 20,
+          "name": "Ungargasse 52, 1030 Wien, Austria"
+        },
+        {
+          "id": 17,
+          "name": "Kärntner Ring 9-13 / Mahler, 1010 Wien, Austria"
+        },
+        {
+          "id": 4,
+          "name": "Franzosengraben 17, 1030 Wien, Austria"
+        }
+      ]
+    },
+    {
+      "id": "3620a353-2e01-4325-9b94-c7db8c64950e",
+      "brand": "BILLA Bio",
+      "name": "BILLA Bio Gnocchi",
+      "category": "Frische Pasta & Beilagen",
+      "volume": "400 g Box",
+      "price": 1.89,
+      "baseUnitPrice": {
+        "unit": "1 kg",
+        "price": 4.73
+      },
+      "image": "https://images.cdn.europe-west1.gcp.commercetools.com/723b2575-66c7-4d92-ae49-82bf1d168d26/00-780321-969251228--Rsl8l3B.jpg",
+      "availableStores": [
+        {
+          "id": 13,
+          "name": "Julius-Tandler-Platz 3, 1090 Wien, Austria"
+        },
+        {
+          "id": 10,
+          "name": "Praterstern, 1020 Wien, Austria"
+        },
+        {
+          "id": 7,
+          "name": "Pragerstraße 274, 1210 Wien, Austria"
+        },
+        {
+          "id": 20,
+          "name": "Ungargasse 52, 1030 Wien, Austria"
+        },
+        {
+          "id": 12,
+          "name": "Universitätsstraße 6-8, 1090 Wien, Austria"
+        },
+        {
+          "id": 15,
+          "name": "Keißlergasse 1, 1140 Wien, Austria"
+        },
+        {
+          "id": 2,
+          "name": "Breitenleer Straße 148, 1220 Wien, Austria"
+        },
+        {
+          "id": 18,
+          "name": "Singerstraße 6, 1010 Wien, Austria"
+        },
+        {
+          "id": 1,
+          "name": "Neustiftgasse 38, 1070 Wien, Austria"
+        },
+        {
+          "id": 5,
+          "name": "Geblergasse 73-75, 1170 Wien, Austria"
+        }
+      ]
+    },
+    {
+      "id": "adaa04a1-7e6b-4588-95c2-55539ddfc3e6",
+      "brand": "Monini",
+      "name": "Monini Olivenöl Zitronenaroma",
+      "category": "Olive",
+      "volume": "0.25 liter Flasche",
+      "price": 6.49,
+      "baseUnitPrice": {
+        "unit": "1 Liter",
+        "price": 25.96
+      },
+      "image": "https://images.cdn.europe-west1.gcp.commercetools.com/723b2575-66c7-4d92-ae49-82bf1d168d26/00-823445-04688270-rJucGgGr.jpg",
+      "availableStores": [
+        {
+          "id": 2,
+          "name": "Breitenleer Straße 148, 1220 Wien, Austria"
+        },
+        {
+          "id": 15,
+          "name": "Keißlergasse 1, 1140 Wien, Austria"
+        },
+        {
+          "id": 11,
+          "name": "Stuwerstraße 1-3, 1020 Wien, Austria"
+        },
+        {
+          "id": 7,
+          "name": "Pragerstraße 274, 1210 Wien, Austria"
+        },
+        {
+          "id": 17,
+          "name": "Kärntner Ring 9-13 / Mahler, 1010 Wien, Austria"
+        },
+        {
+          "id": 5,
+          "name": "Geblergasse 73-75, 1170 Wien, Austria"
+        },
+        {
+          "id": 13,
+          "name": "Julius-Tandler-Platz 3, 1090 Wien, Austria"
+        },
+        {
+          "id": 9,
+          "name": "Erzherzog-Karl-Straße 203, 1220 Wien, Austria"
+        },
+        {
+          "id": 10,
+          "name": "Praterstern, 1020 Wien, Austria"
+        },
+        {
+          "id": 6,
+          "name": "Jedleseerstraße 51A, 1210 Wien, Austria"
+        },
+        {
+          "id": 12,
+          "name": "Universitätsstraße 6-8, 1090 Wien, Austria"
+        },
+        {
+          "id": 8,
+          "name": "Willergasse 28, 1230 Wien, Austria"
+        },
+        {
+          "id": 1,
+          "name": "Neustiftgasse 38, 1070 Wien, Austria"
+        },
+        {
+          "id": 20,
+          "name": "Ungargasse 52, 1030 Wien, Austria"
+        },
+        {
+          "id": 3,
+          "name": "Hauptstraße 30, 1140 Wien, Austria"
+        },
+        {
+          "id": 19,
+          "name": "Hoher Markt 12, 1010 Wien, Austria"
+        },
+        {
+          "id": 16,
+          "name": "Linzer Straße 112-116, 1140 Wien, Austria"
+        },
+        {
+          "id": 4,
+          "name": "Franzosengraben 17, 1030 Wien, Austria"
+        },
+        {
+          "id": 18,
+          "name": "Singerstraße 6, 1010 Wien, Austria"
+        },
+        {
+          "id": 14,
+          "name": "Kliebergasse 2, 1050 Wien, Austria"
+        }
+      ]
+    },
+    {
+      "id": "104fd25c-280e-4ddb-bc2a-3f7fef7c9ad8",
+      "brand": "BILLA Bio",
+      "name": "BILLA Bio Vollkornweckerl",
+      "category": "Aufbackbrötchen & Baguettes",
+      "volume": "4 stk Packung",
+      "price": 2.39,
+      "baseUnitPrice": {
+        "unit": "1 Stk",
+        "price": 0.6
+      },
+      "image": "https://images.cdn.europe-west1.gcp.commercetools.com/723b2575-66c7-4d92-ae49-82bf1d168d26/00-863616-231530568-DeITUmVE.jpg",
+      "availableStores": [
+        {
+          "id": 9,
+          "name": "Erzherzog-Karl-Straße 203, 1220 Wien, Austria"
+        },
+        {
+          "id": 17,
+          "name": "Kärntner Ring 9-13 / Mahler, 1010 Wien, Austria"
+        },
+        {
+          "id": 18,
+          "name": "Singerstraße 6, 1010 Wien, Austria"
+        },
+        {
+          "id": 15,
+          "name": "Keißlergasse 1, 1140 Wien, Austria"
+        },
+        {
+          "id": 3,
+          "name": "Hauptstraße 30, 1140 Wien, Austria"
+        },
+        {
+          "id": 7,
+          "name": "Pragerstraße 274, 1210 Wien, Austria"
+        },
+        {
+          "id": 8,
+          "name": "Willergasse 28, 1230 Wien, Austria"
+        },
+        {
+          "id": 13,
+          "name": "Julius-Tandler-Platz 3, 1090 Wien, Austria"
+        },
+        {
+          "id": 19,
+          "name": "Hoher Markt 12, 1010 Wien, Austria"
+        },
+        {
+          "id": 16,
+          "name": "Linzer Straße 112-116, 1140 Wien, Austria"
+        },
+        {
+          "id": 11,
+          "name": "Stuwerstraße 1-3, 1020 Wien, Austria"
+        },
+        {
+          "id": 12,
+          "name": "Universitätsstraße 6-8, 1090 Wien, Austria"
+        },
+        {
+          "id": 4,
+          "name": "Franzosengraben 17, 1030 Wien, Austria"
+        },
+        {
+          "id": 14,
+          "name": "Kliebergasse 2, 1050 Wien, Austria"
+        },
+        {
+          "id": 6,
+          "name": "Jedleseerstraße 51A, 1210 Wien, Austria"
+        },
+        {
+          "id": 20,
+          "name": "Ungargasse 52, 1030 Wien, Austria"
+        }
+      ]
+    },
+    {
+      "id": "1ab73270-a07b-48c7-a8bb-e0fba06030fb",
+      "brand": "Lotus",
+      "name": "Biscoff Karamellgebäck",
+      "category": "Kekse",
+      "volume": "200 g Packung",
+      "price": 2.19,
+      "baseUnitPrice": {
+        "unit": "100 g",
+        "price": 1.1
+      },
+      "image": "https://images.cdn.europe-west1.gcp.commercetools.com/723b2575-66c7-4d92-ae49-82bf1d168d26/00-863654-0439564662-MN1YeSti.jpg",
+      "availableStores": [
+        {
+          "id": 19,
+          "name": "Hoher Markt 12, 1010 Wien, Austria"
+        },
+        {
+          "id": 17,
+          "name": "Kärntner Ring 9-13 / Mahler, 1010 Wien, Austria"
+        },
+        {
+          "id": 14,
+          "name": "Kliebergasse 2, 1050 Wien, Austria"
+        }
+      ]
+    },
+    {
+      "id": "f32b6d7c-83f8-4192-9c3e-c119c1dba51c",
+      "brand": "Nescafé",
+      "name": "Nescafé Gold ohne Koffein",
+      "category": "Löslich",
+      "volume": "95 g Glas",
+      "price": 9.99,
+      "baseUnitPrice": {
+        "unit": "1 kg",
+        "price": 105.16
+      },
+      "image": "https://images.cdn.europe-west1.gcp.commercetools.com/723b2575-66c7-4d92-ae49-82bf1d168d26/00-866031-0175224222-d326pwGl.jpg",
+      "availableStores": [
+        {
+          "id": 8,
+          "name": "Willergasse 28, 1230 Wien, Austria"
+        },
+        {
+          "id": 6,
+          "name": "Jedleseerstraße 51A, 1210 Wien, Austria"
+        },
+        {
+          "id": 10,
+          "name": "Praterstern, 1020 Wien, Austria"
+        },
+        {
+          "id": 14,
+          "name": "Kliebergasse 2, 1050 Wien, Austria"
+        },
+        {
+          "id": 12,
+          "name": "Universitätsstraße 6-8, 1090 Wien, Austria"
+        },
+        {
+          "id": 20,
+          "name": "Ungargasse 52, 1030 Wien, Austria"
+        },
+        {
+          "id": 7,
+          "name": "Pragerstraße 274, 1210 Wien, Austria"
+        },
+        {
+          "id": 19,
+          "name": "Hoher Markt 12, 1010 Wien, Austria"
+        },
+        {
+          "id": 2,
+          "name": "Breitenleer Straße 148, 1220 Wien, Austria"
+        },
+        {
+          "id": 9,
+          "name": "Erzherzog-Karl-Straße 203, 1220 Wien, Austria"
+        },
+        {
+          "id": 11,
+          "name": "Stuwerstraße 1-3, 1020 Wien, Austria"
+        },
+        {
+          "id": 17,
+          "name": "Kärntner Ring 9-13 / Mahler, 1010 Wien, Austria"
+        },
+        {
+          "id": 4,
+          "name": "Franzosengraben 17, 1030 Wien, Austria"
+        },
+        {
+          "id": 18,
+          "name": "Singerstraße 6, 1010 Wien, Austria"
+        },
+        {
+          "id": 13,
+          "name": "Julius-Tandler-Platz 3, 1090 Wien, Austria"
+        },
+        {
+          "id": 5,
+          "name": "Geblergasse 73-75, 1170 Wien, Austria"
+        }
+      ]
+    },
+    {
+      "id": "0df89109-6d12-490f-93fb-240dc7556b4c",
+      "brand": "BILLA Bio",
+      "name": "BILLA Bio Bourbonvanille Paste",
+      "category": "Aromen & Glasuren",
+      "volume": "50 g Tube",
+      "price": 2.49,
+      "baseUnitPrice": {
+        "unit": "1 kg",
+        "price": 49.8
+      },
+      "image": "https://images.cdn.europe-west1.gcp.commercetools.com/723b2575-66c7-4d92-ae49-82bf1d168d26/00-867462-0189208100-D5PSoOMR.jpg",
+      "availableStores": [
+        {
+          "id": 1,
+          "name": "Neustiftgasse 38, 1070 Wien, Austria"
+        },
+        {
+          "id": 13,
+          "name": "Julius-Tandler-Platz 3, 1090 Wien, Austria"
+        },
+        {
+          "id": 14,
+          "name": "Kliebergasse 2, 1050 Wien, Austria"
+        },
+        {
+          "id": 15,
+          "name": "Keißlergasse 1, 1140 Wien, Austria"
+        },
+        {
+          "id": 2,
+          "name": "Breitenleer Straße 148, 1220 Wien, Austria"
+        },
+        {
+          "id": 6,
+          "name": "Jedleseerstraße 51A, 1210 Wien, Austria"
+        },
+        {
+          "id": 9,
+          "name": "Erzherzog-Karl-Straße 203, 1220 Wien, Austria"
+        },
+        {
+          "id": 4,
+          "name": "Franzosengraben 17, 1030 Wien, Austria"
+        },
+        {
+          "id": 18,
+          "name": "Singerstraße 6, 1010 Wien, Austria"
+        },
+        {
+          "id": 11,
+          "name": "Stuwerstraße 1-3, 1020 Wien, Austria"
+        },
+        {
+          "id": 20,
+          "name": "Ungargasse 52, 1030 Wien, Austria"
+        },
+        {
+          "id": 5,
+          "name": "Geblergasse 73-75, 1170 Wien, Austria"
+        },
+        {
+          "id": 3,
+          "name": "Hauptstraße 30, 1140 Wien, Austria"
+        },
+        {
+          "id": 7,
+          "name": "Pragerstraße 274, 1210 Wien, Austria"
+        },
+        {
+          "id": 17,
+          "name": "Kärntner Ring 9-13 / Mahler, 1010 Wien, Austria"
+        },
+        {
+          "id": 10,
+          "name": "Praterstern, 1020 Wien, Austria"
+        },
+        {
+          "id": 16,
+          "name": "Linzer Straße 112-116, 1140 Wien, Austria"
+        }
+      ]
+    },
+    {
+      "id": "44bb1bfb-0a16-4bca-8d05-06a0f976a509",
+      "brand": "Billa immer gut",
+      "name": "BILLA Nougatkrapfen 4er",
+      "category": "Brioche, Striezel & Plunder",
+      "volume": "240 g Packung",
+      "price": 2.69,
+      "baseUnitPrice": {
+        "unit": "1 kg",
+        "price": 11.21
+      },
+      "image": "https://images.cdn.europe-west1.gcp.commercetools.com/723b2575-66c7-4d92-ae49-82bf1d168d26/00-868008-1828755983-kNyRBuam.jpg",
+      "availableStores": [
+        {
+          "id": 7,
+          "name": "Pragerstraße 274, 1210 Wien, Austria"
+        },
+        {
+          "id": 5,
+          "name": "Geblergasse 73-75, 1170 Wien, Austria"
+        },
+        {
+          "id": 8,
+          "name": "Willergasse 28, 1230 Wien, Austria"
+        },
+        {
+          "id": 4,
+          "name": "Franzosengraben 17, 1030 Wien, Austria"
+        },
+        {
+          "id": 10,
+          "name": "Praterstern, 1020 Wien, Austria"
+        },
+        {
+          "id": 2,
+          "name": "Breitenleer Straße 148, 1220 Wien, Austria"
+        },
+        {
+          "id": 19,
+          "name": "Hoher Markt 12, 1010 Wien, Austria"
+        },
+        {
+          "id": 17,
+          "name": "Kärntner Ring 9-13 / Mahler, 1010 Wien, Austria"
+        }
+      ]
+    },
+    {
+      "id": "0432a346-e25d-466e-9d09-5b1186736087",
+      "brand": "Billa immer gut",
+      "name": "BILLA Vanillekrapfen 4er",
+      "category": "Brioche, Striezel & Plunder",
+      "volume": "240 g Packung",
+      "price": 2.69,
+      "baseUnitPrice": {
+        "unit": "1 kg",
+        "price": 11.21
+      },
+      "image": "https://images.cdn.europe-west1.gcp.commercetools.com/723b2575-66c7-4d92-ae49-82bf1d168d26/00-868009-0808543020-Bdjpf5S2.jpg",
+      "availableStores": [
+        {
+          "id": 10,
+          "name": "Praterstern, 1020 Wien, Austria"
+        },
+        {
+          "id": 11,
+          "name": "Stuwerstraße 1-3, 1020 Wien, Austria"
+        },
+        {
+          "id": 12,
+          "name": "Universitätsstraße 6-8, 1090 Wien, Austria"
+        },
+        {
+          "id": 8,
+          "name": "Willergasse 28, 1230 Wien, Austria"
+        },
+        {
+          "id": 3,
+          "name": "Hauptstraße 30, 1140 Wien, Austria"
+        },
+        {
+          "id": 17,
+          "name": "Kärntner Ring 9-13 / Mahler, 1010 Wien, Austria"
+        },
+        {
+          "id": 20,
+          "name": "Ungargasse 52, 1030 Wien, Austria"
+        },
+        {
+          "id": 19,
+          "name": "Hoher Markt 12, 1010 Wien, Austria"
+        }
+      ]
+    },
+    {
+      "id": "34f07db1-7ae4-45e8-bb88-5f99c49b3c0c",
+      "brand": "BILLA Bio",
+      "name": "BILLA Bio Kritharaki",
+      "category": "sonstige Pasta",
+      "volume": "500 g Packung",
+      "price": 1.99,
+      "baseUnitPrice": {
+        "unit": "1 kg",
+        "price": 3.98
+      },
+      "image": "https://images.cdn.europe-west1.gcp.commercetools.com/723b2575-66c7-4d92-ae49-82bf1d168d26/00-868088-1266812843-PuKz_UQn.jpg",
+      "availableStores": [
+        {
+          "id": 2,
+          "name": "Breitenleer Straße 148, 1220 Wien, Austria"
+        },
+        {
+          "id": 6,
+          "name": "Jedleseerstraße 51A, 1210 Wien, Austria"
+        },
+        {
+          "id": 7,
+          "name": "Pragerstraße 274, 1210 Wien, Austria"
+        },
+        {
+          "id": 16,
+          "name": "Linzer Straße 112-116, 1140 Wien, Austria"
+        },
+        {
+          "id": 18,
+          "name": "Singerstraße 6, 1010 Wien, Austria"
+        },
+        {
+          "id": 3,
+          "name": "Hauptstraße 30, 1140 Wien, Austria"
+        },
+        {
+          "id": 14,
+          "name": "Kliebergasse 2, 1050 Wien, Austria"
+        },
+        {
+          "id": 8,
+          "name": "Willergasse 28, 1230 Wien, Austria"
+        },
+        {
+          "id": 9,
+          "name": "Erzherzog-Karl-Straße 203, 1220 Wien, Austria"
+        },
+        {
+          "id": 10,
+          "name": "Praterstern, 1020 Wien, Austria"
+        },
+        {
+          "id": 12,
+          "name": "Universitätsstraße 6-8, 1090 Wien, Austria"
+        },
+        {
+          "id": 13,
+          "name": "Julius-Tandler-Platz 3, 1090 Wien, Austria"
+        },
+        {
+          "id": 19,
+          "name": "Hoher Markt 12, 1010 Wien, Austria"
+        }
+      ]
+    },
+    {
+      "id": "80a34718-53bd-47e1-8248-7e20c8ffe615",
+      "brand": "Vegavita",
+      "name": "Vegavita Tiramisu",
+      "category": "Desserts",
+      "volume": "95 g Becher",
+      "price": 1.29,
+      "baseUnitPrice": {
+        "unit": "1 kg",
+        "price": 13.58
+      },
+      "image": "https://images.cdn.europe-west1.gcp.commercetools.com/723b2575-66c7-4d92-ae49-82bf1d168d26/00-868658-730640452-6f7lWtR6.jpg",
+      "availableStores": [
+        {
+          "id": 13,
+          "name": "Julius-Tandler-Platz 3, 1090 Wien, Austria"
+        },
+        {
+          "id": 7,
+          "name": "Pragerstraße 274, 1210 Wien, Austria"
+        },
+        {
+          "id": 19,
+          "name": "Hoher Markt 12, 1010 Wien, Austria"
+        },
+        {
+          "id": 6,
+          "name": "Jedleseerstraße 51A, 1210 Wien, Austria"
+        },
+        {
+          "id": 2,
+          "name": "Breitenleer Straße 148, 1220 Wien, Austria"
+        },
+        {
+          "id": 14,
+          "name": "Kliebergasse 2, 1050 Wien, Austria"
+        }
+      ]
+    },
+    {
+      "id": "ae1187fa-e893-4436-aa5c-686e8a1b9779",
+      "brand": "Ja! Natürlich",
+      "name": "Ja! Natürlich Cottage Cheese Kräuter 10%",
+      "category": "Frischkäse & Hüttenkäse",
+      "volume": "200 g Becher",
+      "price": 1.59,
+      "baseUnitPrice": {
+        "unit": "100 g",
+        "price": 0.8
+      },
+      "image": "https://images.cdn.europe-west1.gcp.commercetools.com/723b2575-66c7-4d92-ae49-82bf1d168d26/00-868688-1158581055-iMjC2j-Y.jpg",
+      "availableStores": [
+        {
+          "id": 13,
+          "name": "Julius-Tandler-Platz 3, 1090 Wien, Austria"
+        },
+        {
+          "id": 10,
+          "name": "Praterstern, 1020 Wien, Austria"
+        },
+        {
+          "id": 8,
+          "name": "Willergasse 28, 1230 Wien, Austria"
+        },
+        {
+          "id": 3,
+          "name": "Hauptstraße 30, 1140 Wien, Austria"
+        },
+        {
+          "id": 19,
+          "name": "Hoher Markt 12, 1010 Wien, Austria"
+        },
+        {
+          "id": 20,
+          "name": "Ungargasse 52, 1030 Wien, Austria"
+        },
+        {
+          "id": 17,
+          "name": "Kärntner Ring 9-13 / Mahler, 1010 Wien, Austria"
+        },
+        {
+          "id": 2,
+          "name": "Breitenleer Straße 148, 1220 Wien, Austria"
+        },
+        {
+          "id": 15,
+          "name": "Keißlergasse 1, 1140 Wien, Austria"
+        },
+        {
+          "id": 16,
+          "name": "Linzer Straße 112-116, 1140 Wien, Austria"
+        },
+        {
+          "id": 18,
+          "name": "Singerstraße 6, 1010 Wien, Austria"
+        },
+        {
+          "id": 12,
+          "name": "Universitätsstraße 6-8, 1090 Wien, Austria"
+        },
+        {
+          "id": 6,
+          "name": "Jedleseerstraße 51A, 1210 Wien, Austria"
+        },
+        {
+          "id": 14,
+          "name": "Kliebergasse 2, 1050 Wien, Austria"
+        },
+        {
+          "id": 4,
+          "name": "Franzosengraben 17, 1030 Wien, Austria"
+        }
+      ]
+    },
+    {
+      "id": "19409a54-235d-4c4b-95a2-638314b7f842",
+      "brand": "Billa immer gut",
+      "name": "BILLA Koriander",
+      "category": "Kräuter",
+      "volume": "50 g Schachtel",
+      "price": 1.45,
+      "baseUnitPrice": {
+        "unit": "1 kg",
+        "price": 29
+      },
+      "image": "https://images.cdn.europe-west1.gcp.commercetools.com/723b2575-66c7-4d92-ae49-82bf1d168d26/00-868993-02302316-eMhvGzb5.jpg",
+      "availableStores": [
+        {
+          "id": 15,
+          "name": "Keißlergasse 1, 1140 Wien, Austria"
+        },
+        {
+          "id": 10,
+          "name": "Praterstern, 1020 Wien, Austria"
+        },
+        {
+          "id": 9,
+          "name": "Erzherzog-Karl-Straße 203, 1220 Wien, Austria"
+        },
+        {
+          "id": 17,
+          "name": "Kärntner Ring 9-13 / Mahler, 1010 Wien, Austria"
+        },
+        {
+          "id": 8,
+          "name": "Willergasse 28, 1230 Wien, Austria"
+        },
+        {
+          "id": 2,
+          "name": "Breitenleer Straße 148, 1220 Wien, Austria"
+        },
+        {
+          "id": 19,
+          "name": "Hoher Markt 12, 1010 Wien, Austria"
+        },
+        {
+          "id": 14,
+          "name": "Kliebergasse 2, 1050 Wien, Austria"
+        },
+        {
+          "id": 16,
+          "name": "Linzer Straße 112-116, 1140 Wien, Austria"
+        },
+        {
+          "id": 18,
+          "name": "Singerstraße 6, 1010 Wien, Austria"
+        },
+        {
+          "id": 4,
+          "name": "Franzosengraben 17, 1030 Wien, Austria"
+        },
+        {
+          "id": 7,
+          "name": "Pragerstraße 274, 1210 Wien, Austria"
+        },
+        {
+          "id": 12,
+          "name": "Universitätsstraße 6-8, 1090 Wien, Austria"
+        }
+      ]
+    },
+    {
+      "id": "59eb97ee-b1e3-4f29-9191-cbf4410b3cac",
+      "brand": "Billa immer gut",
+      "name": "BILLA Ingwer",
+      "category": "Kräuter",
+      "volume": "50 g Schachtel",
+      "price": 1.45,
+      "baseUnitPrice": {
+        "unit": "1 kg",
+        "price": 29
+      },
+      "image": "https://images.cdn.europe-west1.gcp.commercetools.com/723b2575-66c7-4d92-ae49-82bf1d168d26/00-868994-0421791561-sJ58zInf.jpg",
+      "availableStores": [
+        {
+          "id": 3,
+          "name": "Hauptstraße 30, 1140 Wien, Austria"
+        },
+        {
+          "id": 12,
+          "name": "Universitätsstraße 6-8, 1090 Wien, Austria"
+        },
+        {
+          "id": 14,
+          "name": "Kliebergasse 2, 1050 Wien, Austria"
+        },
+        {
+          "id": 17,
+          "name": "Kärntner Ring 9-13 / Mahler, 1010 Wien, Austria"
+        },
+        {
+          "id": 19,
+          "name": "Hoher Markt 12, 1010 Wien, Austria"
+        }
+      ]
+    },
+    {
+      "id": "74a891d3-6d5c-4461-80cb-a695f3cf2e2a",
+      "brand": "CLEVER",
+      "name": "Clever Heringsfilet in Paprika Creme",
+      "category": "in Soße",
+      "volume": "200 g Dose",
+      "price": 1.59,
+      "baseUnitPrice": {
+        "unit": "1 kg",
+        "price": 7.95
+      },
+      "image": "https://images.cdn.europe-west1.gcp.commercetools.com/723b2575-66c7-4d92-ae49-82bf1d168d26/00-869229-2054558160-U7d4AV2n.jpg",
+      "availableStores": [
+        {
+          "id": 8,
+          "name": "Willergasse 28, 1230 Wien, Austria"
+        },
+        {
+          "id": 9,
+          "name": "Erzherzog-Karl-Straße 203, 1220 Wien, Austria"
+        },
+        {
+          "id": 7,
+          "name": "Pragerstraße 274, 1210 Wien, Austria"
+        },
+        {
+          "id": 2,
+          "name": "Breitenleer Straße 148, 1220 Wien, Austria"
+        },
+        {
+          "id": 12,
+          "name": "Universitätsstraße 6-8, 1090 Wien, Austria"
+        },
+        {
+          "id": 19,
+          "name": "Hoher Markt 12, 1010 Wien, Austria"
+        },
+        {
+          "id": 10,
+          "name": "Praterstern, 1020 Wien, Austria"
+        },
+        {
+          "id": 15,
+          "name": "Keißlergasse 1, 1140 Wien, Austria"
+        },
+        {
+          "id": 13,
+          "name": "Julius-Tandler-Platz 3, 1090 Wien, Austria"
+        },
+        {
+          "id": 4,
+          "name": "Franzosengraben 17, 1030 Wien, Austria"
+        },
+        {
+          "id": 1,
+          "name": "Neustiftgasse 38, 1070 Wien, Austria"
+        },
+        {
+          "id": 20,
+          "name": "Ungargasse 52, 1030 Wien, Austria"
+        },
+        {
+          "id": 3,
+          "name": "Hauptstraße 30, 1140 Wien, Austria"
+        },
+        {
+          "id": 16,
+          "name": "Linzer Straße 112-116, 1140 Wien, Austria"
+        }
+      ]
+    },
+    {
+      "id": "b4b00784-fde6-4f3c-a0b8-700fb6809cd3",
+      "brand": "CLEVER",
+      "name": "Clever Heringsfilet in Pfeffer Creme",
+      "category": "in Soße",
+      "volume": "200 g Dose",
+      "price": 1.59,
+      "baseUnitPrice": {
+        "unit": "1 kg",
+        "price": 7.95
+      },
+      "image": "https://images.cdn.europe-west1.gcp.commercetools.com/723b2575-66c7-4d92-ae49-82bf1d168d26/00-869230-375729205-bLW-N-8f.jpg",
+      "availableStores": [
+        {
+          "id": 7,
+          "name": "Pragerstraße 274, 1210 Wien, Austria"
+        },
+        {
+          "id": 19,
+          "name": "Hoher Markt 12, 1010 Wien, Austria"
+        },
+        {
+          "id": 13,
+          "name": "Julius-Tandler-Platz 3, 1090 Wien, Austria"
+        },
+        {
+          "id": 2,
+          "name": "Breitenleer Straße 148, 1220 Wien, Austria"
+        },
+        {
+          "id": 17,
+          "name": "Kärntner Ring 9-13 / Mahler, 1010 Wien, Austria"
+        },
+        {
+          "id": 5,
+          "name": "Geblergasse 73-75, 1170 Wien, Austria"
+        },
+        {
+          "id": 14,
+          "name": "Kliebergasse 2, 1050 Wien, Austria"
+        },
+        {
+          "id": 8,
+          "name": "Willergasse 28, 1230 Wien, Austria"
+        },
+        {
+          "id": 12,
+          "name": "Universitätsstraße 6-8, 1090 Wien, Austria"
+        },
+        {
+          "id": 1,
+          "name": "Neustiftgasse 38, 1070 Wien, Austria"
+        }
+      ]
+    },
+    {
+      "id": "380c4baf-9195-4a94-8c8a-c6d491639599",
+      "brand": "CLEVER",
+      "name": "Clever Heringsfilet in Tomaten Creme",
+      "category": "in Soße",
+      "volume": "200 g Dose",
+      "price": 1.59,
+      "baseUnitPrice": {
+        "unit": "1 kg",
+        "price": 7.95
+      },
+      "image": "https://images.cdn.europe-west1.gcp.commercetools.com/723b2575-66c7-4d92-ae49-82bf1d168d26/00-869245-0102207399-XUZF4R76.jpg",
+      "availableStores": [
+        {
+          "id": 13,
+          "name": "Julius-Tandler-Platz 3, 1090 Wien, Austria"
+        },
+        {
+          "id": 3,
+          "name": "Hauptstraße 30, 1140 Wien, Austria"
+        },
+        {
+          "id": 14,
+          "name": "Kliebergasse 2, 1050 Wien, Austria"
+        },
+        {
+          "id": 10,
+          "name": "Praterstern, 1020 Wien, Austria"
+        },
+        {
+          "id": 15,
+          "name": "Keißlergasse 1, 1140 Wien, Austria"
+        },
+        {
+          "id": 16,
+          "name": "Linzer Straße 112-116, 1140 Wien, Austria"
+        },
+        {
+          "id": 20,
+          "name": "Ungargasse 52, 1030 Wien, Austria"
+        },
+        {
+          "id": 5,
+          "name": "Geblergasse 73-75, 1170 Wien, Austria"
+        },
+        {
+          "id": 4,
+          "name": "Franzosengraben 17, 1030 Wien, Austria"
+        }
+      ]
+    },
+    {
+      "id": "2f167f92-c6a9-444b-9f06-f6e18b082253",
+      "brand": "CLEVER",
+      "name": "Clever Heringsfilet geteilt in Tomaten",
+      "category": "in Soße",
+      "volume": "200 g Dose",
+      "price": 1.59,
+      "baseUnitPrice": {
+        "unit": "1 kg",
+        "price": 7.95
+      },
+      "image": "https://images.cdn.europe-west1.gcp.commercetools.com/723b2575-66c7-4d92-ae49-82bf1d168d26/00-869250-1232928122-8xUls_2P.jpg",
+      "availableStores": [
+        {
+          "id": 10,
+          "name": "Praterstern, 1020 Wien, Austria"
+        },
+        {
+          "id": 13,
+          "name": "Julius-Tandler-Platz 3, 1090 Wien, Austria"
+        },
+        {
+          "id": 20,
+          "name": "Ungargasse 52, 1030 Wien, Austria"
+        },
+        {
+          "id": 5,
+          "name": "Geblergasse 73-75, 1170 Wien, Austria"
+        },
+        {
+          "id": 2,
+          "name": "Breitenleer Straße 148, 1220 Wien, Austria"
+        },
+        {
+          "id": 15,
+          "name": "Keißlergasse 1, 1140 Wien, Austria"
+        },
+        {
+          "id": 14,
+          "name": "Kliebergasse 2, 1050 Wien, Austria"
+        },
+        {
+          "id": 8,
+          "name": "Willergasse 28, 1230 Wien, Austria"
+        },
+        {
+          "id": 7,
+          "name": "Pragerstraße 274, 1210 Wien, Austria"
+        },
+        {
+          "id": 1,
+          "name": "Neustiftgasse 38, 1070 Wien, Austria"
+        }
+      ]
+    }
   ],
-  "comments": [
-    { "id": "1", "text": "a comment about post 1", "post_id": "1" },
-    { "id": "2", "text": "another comment about post 1", "post_id": "1" }
+  "stores": [
+    {
+      "id": 1,
+      "type": "BILLA",
+      "address": "Neustiftgasse 38, 1070 Wien, Austria"
+    },
+    {
+      "id": 2,
+      "type": "BILLA PLUS",
+      "address": "Breitenleer Straße 148, 1220 Wien, Austria"
+    },
+    {
+      "id": 3,
+      "type": "BILLA",
+      "address": "Hauptstraße 30, 1140 Wien, Austria"
+    },
+    {
+      "id": 4,
+      "type": "BILLA",
+      "address": "Franzosengraben 17, 1030 Wien, Austria"
+    },
+    {
+      "id": 5,
+      "type": "BILLA PLUS",
+      "address": "Geblergasse 73-75, 1170 Wien, Austria"
+    },
+    {
+      "id": 6,
+      "type": "BILLA PLUS",
+      "address": "Jedleseerstraße 51A, 1210 Wien, Austria"
+    },
+    {
+      "id": 7,
+      "type": "BILLA",
+      "address": "Pragerstraße 274, 1210 Wien, Austria"
+    },
+    {
+      "id": 8,
+      "type": "BILLA",
+      "address": "Willergasse 28, 1230 Wien, Austria"
+    },
+    {
+      "id": 9,
+      "type": "BILLA",
+      "address": "Erzherzog-Karl-Straße 203, 1220 Wien, Austria"
+    },
+    {
+      "id": 10,
+      "type": "BILLA",
+      "address": "Praterstern, 1020 Wien, Austria"
+    },
+    {
+      "id": 11,
+      "type": "BILLA PLUS",
+      "address": "Stuwerstraße 1-3, 1020 Wien, Austria"
+    },
+    {
+      "id": 12,
+      "type": "BILLA",
+      "address": "Universitätsstraße 6-8, 1090 Wien, Austria"
+    },
+    {
+      "id": 13,
+      "type": "BILLA Corso",
+      "address": "Julius-Tandler-Platz 3, 1090 Wien, Austria"
+    },
+    {
+      "id": 14,
+      "type": "BILLA",
+      "address": "Kliebergasse 2, 1050 Wien, Austria"
+    },
+    {
+      "id": 15,
+      "type": "BILLA",
+      "address": "Keißlergasse 1, 1140 Wien, Austria"
+    },
+    {
+      "id": 16,
+      "type": "BILLA Corso",
+      "address": "Linzer Straße 112-116, 1140 Wien, Austria"
+    },
+    {
+      "id": 17,
+      "type": "BILLA Corso",
+      "address": "Kärntner Ring 9-13 / Mahler, 1010 Wien, Austria"
+    },
+    {
+      "id": 18,
+      "type": "BILLA",
+      "address": "Singerstraße 6, 1010 Wien, Austria"
+    },
+    {
+      "id": 19,
+      "type": "BILLA",
+      "address": "Hoher Markt 12, 1010 Wien, Austria"
+    },
+    {
+      "id": 20,
+      "type": "BILLA PLUS",
+      "address": "Ungargasse 52, 1030 Wien, Austria"
+    }
   ]
 }
