@@ -10,4 +10,3 @@ EXPOSE 80
 RUN ls -la
 RUN cat package.json
 CMD ["node", "index.js"]
-

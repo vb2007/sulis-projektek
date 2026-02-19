@@ -3,7 +3,7 @@ FROM node:24-alpine
 WORKDIR /app
 
 RUN apk add --no-cache bash \
-& npm install -g pnpm
+    & npm install -g pnpm
 
 USER node
 
