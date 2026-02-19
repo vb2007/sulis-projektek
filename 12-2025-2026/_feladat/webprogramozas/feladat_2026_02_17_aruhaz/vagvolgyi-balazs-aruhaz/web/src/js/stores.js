@@ -1,9 +1,12 @@
 const BASE_URL = "http://localhost:8888";
 
 export const getStore = async (id) => {
-    const stores = await fetch(`${BASE_URL}/stores`, {
+    const response = await fetch(`${BASE_URL}/stores`, {
         method: "GET",
         headers: { Accept: "application/json" },
-    }).then((res) => res.json());
+    });
+
+    const result = await response.json();
+    const stores = result.data || result;
     return stores.find((s) => s.id == id);
 };
