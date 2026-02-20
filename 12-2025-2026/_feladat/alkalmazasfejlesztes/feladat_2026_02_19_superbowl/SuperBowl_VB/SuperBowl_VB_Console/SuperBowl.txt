@@ -1,0 +1,56 @@
+Ssz;Dátum;Győztes;Eredmény;Vesztes;Helyszín;VárosÁllam;Nézőszám
+I.;1967.01.15.;Green Bay Packers;35-10;Kansas City Chiefs;Los Angeles Memorial Coliseum;Los Angeles, Kalifornia;61946
+II.;1968.01.14.;Green Bay Packers;33-14;Oakland Raiders;Orange Bowl;Miami, Florida;75546
+III.;1969.01.12.;New York Jets;16-7;Baltimore Colts;Orange Bowl;Miami, Florida;75389
+IV.;1970.01.11.;Kansas City Chiefs;23-7;Minnesota Vikings;Tulane Stadium;New Orleans, Louisiana;80562
+V.;1971.01.17.;Baltimore Colts;16-13;Dallas Cowboys;Orange Bowl;Miami, Florida;79204
+VI.;1972.01.16.;Dallas Cowboys;24-3;Miami Dolphins;Tulane Stadion;New Orleans, Louisiana;81023
+VII.;1973.01.14.;Miami Dolphins;14-7;Washington Redskins;Los Angeles Memorial Coliseum;Los Angeles, Kalifornia;90182
+VIII.;1974.01.13.;Miami Dolphins;24-7;Minnesota Vikings;Rice Stadium;Houston, Texas;71882
+IX.;1975.01.12.;Pittsburgh Steelers;16-6;Minnesota Vikings;Tulane Stadion;New Orleans, Louisiana;80997
+X.;1976.01.18.;Pittsburgh Steelers;21-17;Dallas Cowboys;Orange Bowl;Miami, Florida;80187
+XI.;1977.01.09.;Oakland Raiders;32-14;Minnesota Vikings;Rose Bowl;Pasadena, Kalifornia;103438
+XII.;1978.01.15.;Dallas Cowboys;27-10;Denver Broncos;Louisiana Superdome;New Orleans, Louisiana;76400
+XIII.;1979.01.21.;Pittsburgh Steelers;35-31;Dallas Cowboys;Orange Bowl;Miami, Florida;79484
+XIV.;1980.01.20.;Pittsburgh Steelers;31-19;Los Angeles Rams;Rose Bowl;Pasadena, Kalifornia;103985
+XV.;1981.01.25.;Oakland Raiders;27-10;Philadelphia Eagles;Louisiana Superdome;New Orleans, Louisiana;76135
+XVI.;1982.01.24.;San Francisco 49ers;26-21;Cincinnati Bengals;Pontiac Silverdome;Pontiac, Michigan;81270
+XVII.;1983.01.30.;Washington Redskins;27-17;Miami Dolphins;Rose Bowl;Pasadena, Kalifornia;103667
+XVIII.;1984.01.22.;Los Angeles Raiders;38-9;Washington Redskins;Tampa Stadium;Tampa, Florida;72920
+XIX.;1985.01.20.;San Francisco 49ers;38-16;Miami Dolphins;Stanford Stadium;Stanford, Kalifornia;84059
+XX.;1986.01.26.;Chicago Bears;46-10;New England Patriots;Louisiana Superdome;New Orleans, Louisiana;73818
+XXI.;1987.01.25.;New York Giants;39-20;Denver Broncos;Rose Bowl;Pasadena, Kalifornia;101063
+XXII.;1988.01.31.;Washington Redskins;42-10;Denver Broncos;Jack Murphy Stadium;San Diego, Kalifornia;73302
+XXIII.;1989.01.22.;San Francisco 49ers;20-16;Cincinnati Bengals;Joe Robbie Stadium;Miami, Florida;75129
+XXIV.;1990.01.28.;San Francisco 49ers;55-10;Denver Broncos;Louisiana Superdome;New Orleans, Louisiana;72919
+XXV.;1991.01.27.;New York Giants;20-19;Buffalo Bills;Tampa Stadium;Tampa, Florida;73813
+XXVI.;1992.01.26.;Washington Redskins;37-24;Buffalo Bills;Metrodome;Minneapolis, Minnesota;63130
+XXVII.;1993.01.31.;Dallas Cowboys;52-17;Buffalo Bills;Rose Bowl;Pasadena, Kalifornia;98374
+XXVIII.;1994.01.30.;Dallas Cowboys;30-13;Buffalo Bills;Georgia Dome;Atlanta, Georgia;72817
+XXIX.;1995.01.29.;San Francisco 49ers;49-26;San Diego Chargers;Joe Robbie Stadium;Miami, Florida;74107
+XXX.;1996.01.28.;Dallas Cowboys;27-17;Pittsburgh Steelers;Sun Devil Stadium;Tempe, Arizona;76347
+XXXI.;1997.01.26.;Green Bay Packers;35-21;New England Patriots;Louisiana Superdome;New Orleans, Louisiana;72301
+XXXII.;1998.01.25.;Denver Broncos;31-24;Green Bay Packers;Qualcomm Stadium;San Diego, Kalifornia;68912
+XXXIII.;1999.01.31.;Denver Broncos;34-19;Atlanta Falcons;Pro Player Stadion;Miami, Florida;74803
+XXXIV.;2000.01.30.;St. Louis Rams;23-16;Tennessee Titans;Georgia Dome;Atlanta, Georgia;72625
+XXXV.;2001.01.28.;Baltimore Ravens;34-7;New York Giants;Raymond James Stadium;Tampa, Florida;71921
+XXXVI.;2002.02.03.;New England Patriots;20-17;St. Louis Rams;Louisiana Superdome;New Orleans, Louisiana;72922
+XXXVII.;2003.01.26.;Tampa Bay Buccaneers;48-21;Oakland Raiders;Qualcomm Stadium;San Diego, Kalifornia;67603
+XXXVIII.;2004.02.01.;New England Patriots;32-29;Carolina Panthers;Reliant Stadium;Houston, Texas;71525
+XXXIX.;2005.02.06.;New England Patriots;24-21;Philadelphia Eagles;ALLTEL Stadium;Jacksonville, Florida;78125
+XL.;2006.02.05.;Pittsburgh Steelers;21-10;Seattle Seahawks;Ford Field;Detroit, Michigan;68206
+XLI.;2007.02.04.;Indianapolis Colts;29-17;Chicago Bears;Dolphin Stadium;Miami, Florida;74512
+XLII.;2008.02.03.;New York Giants;17-14;New England Patriots;University of Phoenix Stadium;Glendale, Arizona;71101
+XLIII.;2009.02.01.;Pittsburgh Steelers;27-23;Arizona Cardinals;Raymond James Stadium;Tampa, Florida;70774
+XLIV.;2010.02.07.;New Orleans Saints;31-17;Indianapolis Colts;Sun Life Stadium;Miami, Florida;74059
+XLV.;2011.02.06.;Green Bay Packers;31-25;Pittsburgh Steelers;Cowboys Stadium;Arlington, Texas;103219
+XLVI.;2012.02.05.;New York Giants;21-17;New England Patriots;Lucas Oil Stadium;Indianapolis, Indiana;68658
+XLVII.;2013.02.03.;Baltimore Ravens;34-31;San Francisco 49ers;Mercedes-Benz Superdome;New Orleans, Louisiana;71024
+XLVIII.;2014.02.02.;Seattle Seahawks;43-8;Denver Broncos;MetLife Stadium;East Rutherford, New Jersey;82529
+XLIX.;2015.02.01.;New England Patriots;28-24;Seattle Seahawks;University of Phoenix Stadium;Glendale, Arizona;70288
+L.;2016.02.07.;Denver Broncos;24-10;Carolina Panthers;Levi’s Stadium;Santa Clara, Kalifornia;71088
+LI.;2017.02.05.;New England Patriots;34-28;Atlanta Falcons;NRG Stadium;Houston, Texas;70807
+LII.;2018.02.04.;Philadelphia Eagles;41-33;New England Patriots;U.S. Bank Stadium;Minneapolis, Minnesota;67612
+LIII.;2019.02.03.;New England Patriots;13-3;Los Angeles Rams;Mercedes-Benz Stadium;Atlanta, Georgia;70081
+LIV.;2020.02.02.;Kansas City Chiefs;31-20;San Francisco 49ers;Hard Rock Stadium;Miami, Florida;62417
+LV.;2021.02.07.;Tampa Bay Buccaneers;31-9;Kansas City Chiefs;Raymond James Stadium;Tampa, Florida;24835
