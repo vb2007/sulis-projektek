@@ -1,6 +1,6 @@
 ﻿namespace OnkiszolgaloKassza_VB_Test;
 
-public class Tests
+public class SelfCheckoutTests
 {
     [SetUp]
     public void Setup()
