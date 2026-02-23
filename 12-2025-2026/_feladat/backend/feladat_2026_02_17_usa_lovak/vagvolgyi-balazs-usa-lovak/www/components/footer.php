@@ -2,7 +2,7 @@
     <div
         class="mx-auto max-w-7xl px-4 py-6 text-center flex place-content-between"
     >
-        <p>Készítette: TELJES_NÉV</p>
-        <p>© AKTUÁLIS_ÉV USA lovak</p>
+        <p>Készítette: Vágvölgyi Balázs</p>
+        <p>© <?= date('Y') ?> USA lovak</p>
     </div>
 </footer>
