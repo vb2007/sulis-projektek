@@ -1,0 +1,27 @@
+networks:
+  webapp:
+
+services:
+  web:
+    image: nginx:1.29.0-alpine3.22
+    ports:
+      - "${PORT_WEB:-80}:80"
+    volumes:
+      - ./www:/www:rw
+      - ./docker/nginx/nginx.conf:/etc/nginx/nginx.conf:ro
+      - ./docker/nginx/conf.d/default.conf:/etc/nginx/conf.d/default.conf:ro
+    depends_on:
+      - app
+    networks:
+      - webapp
+
+  app:
+    image: rcsnjszg/phpapp2025
+    build:
+      context: ./docker/php
+      dockerfile: Dockerfile
+    user: "${UID:-1000}:${GID:-1000}"
+    volumes:
+      - ./www:/www:rw
+    networks:
+      - webapp
