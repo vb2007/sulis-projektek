@@ -13,21 +13,16 @@
                 ☰
             </button>
             <ul id="nav-menu" class="hidden md:flex md:items-center md:space-x-2 absolute md:static top-16 left-0 w-full md:w-auto bg-rose-800 md:bg-transparent px-4 md:px-0 py-3 md:py-0">
+                <?php foreach ($menuItems as $item): ?>
                 <li>
-                    <a href="#" class="block py-2 px-2 text-sm font-medium transition">
-                        AKTÍV_MENÜPONT
+                    <a
+                        href="<?= $item['url'] ?>"
+                        class="block py-2 px-2 text-sm font-medium transition <?= $item['active'] ? 'text-white border-l-2 md:border-l-0 md:border-b-2 border-rose-300' : 'text-rose-100 hover:text-white' ?>"
+                    >
+                        <?= $item['text'] ?>
                     </a>
                 </li>
-                <li>
-                    <a href="#" class="block py-2 px-2 text-sm font-medium transition">
-                        MENÜ1
-                    </a>
-                </li>
-                <li>
-                    <a href="#" class="block py-2 px-2 text-sm font-medium transition">
-                        MENÜ2
-                    </a>
-                </li>
+                <?php endforeach; ?>
             </ul>
         </div>
     </div>
