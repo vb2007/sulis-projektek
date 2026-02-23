@@ -1,4 +1,5 @@
 <Solution>
   <Project Path="OnkiszolgaloKassza_VB_Console/OnkiszolgaloKassza_VB_Console.csproj" />
   <Project Path="OnkiszolgaloKassza_VB_Lib/OnkiszolgaloKassza_VB_Lib.csproj" />
+  <Project Path="OnkiszolgaloKassza_VB_Test/OnkiszolgaloKassza_VB_Test.csproj" />
 </Solution>
