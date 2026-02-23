@@ -20,4 +20,8 @@
         <Using Include="NUnit.Framework"/>
     </ItemGroup>
 
+    <ItemGroup>
+      <ProjectReference Include="..\OnkiszolgaloKassza_VB_Lib\OnkiszolgaloKassza_VB_Lib.csproj" />
+    </ItemGroup>
+
 </Project>
