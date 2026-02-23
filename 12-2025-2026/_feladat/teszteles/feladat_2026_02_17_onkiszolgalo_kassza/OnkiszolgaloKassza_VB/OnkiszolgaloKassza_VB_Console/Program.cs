@@ -1,4 +1,6 @@
-﻿namespace OnkiszolgaloKassza_VB_Console;
+﻿using OnkiszolgaloKassza_VB_Lib;
+
+namespace OnkiszolgaloKassza_VB_Console;
 
 class Program
 {
