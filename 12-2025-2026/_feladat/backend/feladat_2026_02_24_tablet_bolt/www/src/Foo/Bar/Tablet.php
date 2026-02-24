@@ -2,7 +2,7 @@
 
 namespace Foo;
 
-class Bar {
+class Tablet {
     private int $id;
     private int $manufacturer_id;
     private string $fullname;

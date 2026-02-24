@@ -3,7 +3,7 @@
 use Foo\Bar\Tablet;
 
 $tablets = [
-    
+
     new Tablet(1,1,'APPLE iPad 10,2" (9th gen) 64 GB WiFi Asztroszürke (mk2k3hc/a)',10.2,64,'iPadOS',152489),
     new Tablet(2,2,'SAMSUNG Galaxy Tab S9 FE 10,9" 128GB WiFi Szürke Tablet (SM-X510NZAAEUE)',10.9,128,'Android',184999),
     new Tablet(3,1,'APPLE iPad Air 10,9"" (5th gen) 64GB WiFi Asztroszürke (mm9c3hc/a)',10.9,64,'iPadOS',297999),
