@@ -1,73 +1,75 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="hu">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Tabletek N darab</title>
+        <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+        <link rel="stylesheet" href="./css/tablet.css" />
+    </head>
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tabletek N darab</title>
-    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-    <link rel="stylesheet" href="./css/tablet.css">
-</head>
+    <body class="min-h-screen flex flex-col">
+        <div class="mx-auto max-w-7xl px-4">
+            <h1 class="my-4 text-center text-4xl font-bold text-teal-600">
+                Tabletek N darab
+            </h1>
 
-<body class="min-h-screen flex flex-col">
+            <div
+                class="overflow-x-auto rounded-xl border border-teal-200 shadow-sm"
+            >
+                <table class="min-w-full overflow-hidden rounded-xl">
+                    <thead class="bg-teal-600 text-white">
+                        <tr>
+                            <th
+                                class="px-4 py-3 text-sm font-semibold text-center first:text-left last:text-right"
+                            >
+                                COL1
+                            </th>
+                            <th
+                                class="px-4 py-3 text-sm font-semibold text-center first:text-left last:text-right"
+                            >
+                                COL2
+                            </th>
+                            <th
+                                class="px-4 py-3 text-sm font-semibold text-center first:text-left last:text-right"
+                            >
+                                COL3
+                            </th>
+                            <th
+                                class="px-4 py-3 text-sm font-semibold text-center first:text-left last:text-right"
+                            >
+                                COL4
+                            </th>
+                            <th
+                                class="px-4 py-3 text-sm font-semibold text-center first:text-left last:text-right"
+                            >
+                                COL5
+                            </th>
+                        </tr>
+                    </thead>
 
-    
+                    <tbody class="divide-y divide-teal-100">
+                        <tr
+                            class="odd:bg-white even:bg-teal-50 hover:bg-teal-100 transition"
+                        >
+                            <td class="px-4 py-2 text-left">GYÁRTÓ</td>
 
-    <div class="mx-auto max-w-7xl px-4">
+                            <td class="px-4 py-2 text-center">MÉRET</td>
 
-        <h1 class="my-4 text-center text-4xl font-bold text-teal-600">
-         Tabletek N darab
-        </h1>
+                            <td class="px-4 py-2 text-center">TÁRHELY</td>
 
+                            <td class="px-4 py-2 text-center">OS</td>
 
-        <div class="overflow-x-auto rounded-xl border border-teal-200 shadow-sm">
-            <table class="min-w-full overflow-hidden rounded-xl">
-
-
-                <thead class="bg-teal-600 text-white">
-                    <tr>
-                        <th class="px-4 py-3 text-sm font-semibold text-center first:text-left last:text-right">
-                            COL1 </th>
-                        <th class="px-4 py-3 text-sm font-semibold text-center first:text-left last:text-right">
-                            COL2 </th>
-                        <th class="px-4 py-3 text-sm font-semibold text-center first:text-left last:text-right">
-                            COL3 </th>
-                        <th class="px-4 py-3 text-sm font-semibold text-center first:text-left last:text-right">
-                            COL4 </th>
-                        <th class="px-4 py-3 text-sm font-semibold text-center first:text-left last:text-right">
-                            COL5 </th>
-                    </tr>
-                </thead>
-
-                <tbody class="divide-y divide-teal-100">
-                    <tr class="odd:bg-white even:bg-teal-50 hover:bg-teal-100 transition">
-
-                        <td class="px-4 py-2 text-left">
-                            GYÁRTÓ </td>
-
-                        <td class="px-4 py-2 text-center">
-                            MÉRET</td>
-
-                        <td class="px-4 py-2 text-center">
-                            TÁRHELY
-                        </td>
-
-                        <td class="px-4 py-2 text-center">
-                            OS </td>
-
-                        <td class="px-4 py-2 text-right font-bold text-teal-700">
-                            ÁR_FORMÁZVA
-                        </td>
-
-                    </tr>
-                </tbody>
-
-            </table>
+                            <td
+                                class="px-4 py-2 text-right font-bold text-teal-700"
+                            >
+                                ÁR_FORMÁZVA
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
         </div>
-
-    </div>
-
-</body>
-
+    </body>
 </html>

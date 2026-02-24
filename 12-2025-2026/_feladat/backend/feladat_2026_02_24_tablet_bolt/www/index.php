@@ -5,8 +5,8 @@ error_reporting(E_ALL);
 
 require __DIR__ . "/vendor/autoload.php";
 
-$whoops = new \Whoops\Run;
-$whoops->pushHandler(new \Whoops\Handler\PrettyPageHandler);
+$whoops = new \Whoops\Run();
+$whoops->pushHandler(new \Whoops\Handler\PrettyPageHandler());
 $whoops->register();
 
 $page = "home";
@@ -23,33 +23,37 @@ $menuItems = [
     [
         "text" => "Főoldal",
         "url" => "index.php",
-        "active" => $page === "home"
+        "active" => $page === "home",
     ],
     [
         "text" => "Táblázat",
         "url" => "index.php?page=table",
-        "active" => $page === "table"
+        "active" => $page === "table",
     ],
     [
         "text" => "Rács",
         "url" => "index.php?page=grid",
-        "active" => $page === "grid"
-    ]
+        "active" => $page === "grid",
+    ],
 ];
 
-require __DIR__ . "data.php";
+require __DIR__ . "/data.php";
 
 switch ($page) {
     //ár szerint növekvő
     case "table":
-        usort($tablets, fn($a, $b) //arrown function, simánál return kellene
-            => $a->price <=> $b->price);
+        usort(
+            $tablets,
+            fn(
+                $a,
+                $b, //arrown function, simánál return kellene
+            ) => $a->price <=> $b->price,
+        );
         break;
 
     //ár szerint csökkenő
     case "grid":
-        usort($tablets, fn($a, $b)
-            => $b->price <=> $a->price);
+        usort($tablets, fn($a, $b) => $b->price <=> $a->price);
         break;
 
     case "404":

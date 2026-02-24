@@ -18,7 +18,7 @@
                        absolute md:static top-16 left-0 w-full md:w-auto
                        bg-teal-800 md:bg-transparent
                        px-4 md:px-0 py-3 md:py-0">
-                
+
                     <li>
                         <a href="URL" class="block py-2 px-2 text-sm font-medium transition">
                             MENÜPONT NEVE
