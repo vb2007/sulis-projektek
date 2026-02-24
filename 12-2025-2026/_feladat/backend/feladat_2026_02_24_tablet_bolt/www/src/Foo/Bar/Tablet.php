@@ -1,6 +1,6 @@
 <?php
 
-namespace Foo;
+namespace Foo\Bar;
 
 class Tablet {
     private int $id;
