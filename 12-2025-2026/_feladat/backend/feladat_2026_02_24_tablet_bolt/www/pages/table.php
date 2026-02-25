@@ -59,7 +59,7 @@
                                 <td
                                     class="px-4 py-2 text-right font-bold text-teal-700"
                                 >
-                                    <?= $tablet->price ?> Ft
+                                    <?= number_format($tablet->price, 0, ',', ' ') ?> Ft
                                 </td>
                             </tr>
                         <?php endforeach; ?>
