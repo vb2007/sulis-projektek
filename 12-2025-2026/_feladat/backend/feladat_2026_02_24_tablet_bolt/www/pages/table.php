@@ -23,27 +23,27 @@
                             <th
                                 class="px-4 py-3 text-sm font-semibold text-center first:text-left last:text-right"
                             >
-                                COL1
+                                Gyártó
                             </th>
                             <th
                                 class="px-4 py-3 text-sm font-semibold text-center first:text-left last:text-right"
                             >
-                                COL2
+                                Kijelző
                             </th>
                             <th
                                 class="px-4 py-3 text-sm font-semibold text-center first:text-left last:text-right"
                             >
-                                COL3
+                                Tárhely
                             </th>
                             <th
                                 class="px-4 py-3 text-sm font-semibold text-center first:text-left last:text-right"
                             >
-                                COL4
+                                OS
                             </th>
                             <th
                                 class="px-4 py-3 text-sm font-semibold text-center first:text-left last:text-right"
                             >
-                                COL5
+                                Ár
                             </th>
                         </tr>
                     </thead>
