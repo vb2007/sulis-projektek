@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="hu">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title><?= $title ?></title>
+        <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+        <link rel="stylesheet" href="./css/tablet.css" />
+    </head>
+    <body class="min-h-screen flex flex-col">
+        <div class="mx-auto max-w-7xl px-4">
+            <h1 class="my-4 text-center text-4xl font-bold text-teal-600">
+                <?= $title ?>
+            </h1>
+
+            <div
+                class="overflow-x-auto rounded-xl border border-teal-200 shadow-sm"
+            >
+                <table class="min-w-full overflow-hidden rounded-xl">
+                    <thead class="bg-teal-600 text-white">
+                        <tr>
+                            <th
+                                class="px-4 py-3 text-sm font-semibold text-center first:text-left last:text-right"
+                            >
+                                Gyártó
+                            </th>
+                            <th
+                                class="px-4 py-3 text-sm font-semibold text-center first:text-left last:text-right"
+                            >
+                                Kijelző
+                            </th>
+                            <th
+                                class="px-4 py-3 text-sm font-semibold text-center first:text-left last:text-right"
+                            >
+                                Tárhely
+                            </th>
+                            <th
+                                class="px-4 py-3 text-sm font-semibold text-center first:text-left last:text-right"
+                            >
+                                OS
+                            </th>
+                            <th
+                                class="px-4 py-3 text-sm font-semibold text-center first:text-left last:text-right"
+                            >
+                                Ár
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody class="divide-y divide-teal-100">
+                        <?php foreach ($tablets as $tablet): ?>
+                            <tr
+                                class="odd:bg-white even:bg-teal-50 hover:bg-teal-100 transition"
+                            >
+                                <td class="px-4 py-2 text-left"><?= $tablet->manufacturer ?></td>
+                                <td class="px-4 py-2 text-center"><?= $tablet->screen ?>"</td>
+                                <td class="px-4 py-2 text-center"><?= $tablet->storage ?> GB</td>
+                                <td class="px-4 py-2 text-center"><?= $tablet->os ?></td>
+                                <td
+                                    class="px-4 py-2 text-right font-bold text-teal-700"
+                                >
+                                    <?= number_format($tablet->price, 0, ',', ' ') ?> Ft
+                                </td>
+                            </tr>
+                        <?php endforeach; ?>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </body>
+</html>
