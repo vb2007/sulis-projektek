@@ -15,7 +15,7 @@ if (!empty($_GET["page"])) {
     $page = $_GET["page"];
 }
 
-if ($page !== "table" && $page !== "grid") {
+if ($page !== "home" && $page !== "table" && $page !== "grid") {
     $page = "404";
 }
 
