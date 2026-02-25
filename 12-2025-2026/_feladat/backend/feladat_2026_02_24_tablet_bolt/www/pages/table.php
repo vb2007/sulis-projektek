@@ -4,15 +4,14 @@
         <meta charset="UTF-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Tabletek N darab</title>
+        <title><?= $title ?></title>
         <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
         <link rel="stylesheet" href="./css/tablet.css" />
     </head>
-
     <body class="min-h-screen flex flex-col">
         <div class="mx-auto max-w-7xl px-4">
             <h1 class="my-4 text-center text-4xl font-bold text-teal-600">
-                Tabletek N darab
+                <?= $title ?>
             </h1>
 
             <div
@@ -48,7 +47,6 @@
                             </th>
                         </tr>
                     </thead>
-
                     <tbody class="divide-y divide-teal-100">
                         <tr
                             class="odd:bg-white even:bg-teal-50 hover:bg-teal-100 transition"
