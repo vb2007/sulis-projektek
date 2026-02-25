@@ -63,3 +63,18 @@ switch ($page) {
 
 $title = "Tabletek: " . count($tablets) . " darab";
 ?>
+
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><?= $title ?></title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="min-h-screen flex flex-col">
+    <?php include __DIR__ . "/components/menu.php"; ?>
+
+    <?php include __DIR__ . "/components/footer.php"; ?>
+</body>
+</html>
