@@ -75,6 +75,13 @@ $title = "Tabletek: " . count($tablets) . " darab";
 <body class="min-h-screen flex flex-col">
     <?php include __DIR__ . "/components/menu.php"; ?>
 
+    <?php
+    $pageFile = __DIR__ . "/pages/" . $page . ".php";
+    if (file_exists($pageFile)) {
+        include $pageFile;
+    }
+    ?>
+
     <?php include __DIR__ . "/components/footer.php"; ?>
 </body>
 </html>
