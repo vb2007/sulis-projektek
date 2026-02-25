@@ -48,23 +48,21 @@
                         </tr>
                     </thead>
                     <tbody class="divide-y divide-teal-100">
-                        <tr
-                            class="odd:bg-white even:bg-teal-50 hover:bg-teal-100 transition"
-                        >
-                            <td class="px-4 py-2 text-left">GYÁRTÓ</td>
-
-                            <td class="px-4 py-2 text-center">MÉRET</td>
-
-                            <td class="px-4 py-2 text-center">TÁRHELY</td>
-
-                            <td class="px-4 py-2 text-center">OS</td>
-
-                            <td
-                                class="px-4 py-2 text-right font-bold text-teal-700"
+                        <?php foreach ($tablets as $tablet): ?>
+                            <tr
+                                class="odd:bg-white even:bg-teal-50 hover:bg-teal-100 transition"
                             >
-                                ÁR_FORMÁZVA
-                            </td>
-                        </tr>
+                                <td class="px-4 py-2 text-left"><?= $tablet->manufacturer ?></td>
+                                <td class="px-4 py-2 text-center"><?= $tablet->screen ?>"</td>
+                                <td class="px-4 py-2 text-center"><?= $tablet->storage ?> GB</td>
+                                <td class="px-4 py-2 text-center"><?= $tablet->os ?></td>
+                                <td
+                                    class="px-4 py-2 text-right font-bold text-teal-700"
+                                >
+                                    <?= $tablet->price ?> Ft
+                                </td>
+                            </tr>
+                        <?php endforeach; ?>
                     </tbody>
                 </table>
             </div>
