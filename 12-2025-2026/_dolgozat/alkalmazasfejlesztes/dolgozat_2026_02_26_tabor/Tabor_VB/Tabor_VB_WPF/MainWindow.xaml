@@ -1,0 +1,56 @@
+﻿<Window x:Class="Tabor_VB_WPF.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Tabor_VB_WPF"
+        mc:Ignorable="d"
+        Title="Nyári tábor jelentkezés" Height="450" Width="800" MinWidth="400">
+    <Grid Margin="10">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <Grid Grid.Row="0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" MinWidth="200"/>
+                <ColumnDefinition Width="*" MinWidth="200"/>
+            </Grid.ColumnDefinitions>
+            <Grid Grid.Column="0" Margin="0,0,10,0">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+
+                <Label Content="Név:" Grid.Row="0" Grid.Column="0" VerticalAlignment="Center" Margin="0,0,10,0"/>
+                <TextBox x:Name="txtNev" Grid.Row="0" Grid.Column="1" Height="30" Margin="0,5" VerticalAlignment="Center"/>
+
+                <Label Content="Szint:" Grid.Row="1" Grid.Column="0" VerticalAlignment="Center" Margin="0,0,10,0"/>
+                <ComboBox x:Name="cmbSzint" Grid.Row="1" Grid.Column="1" Height="30" Margin="0,5" VerticalAlignment="Center" SelectionChanged="CmbSzint_SelectionChanged"/>
+
+                <Label Content="Nyelv:" Grid.Row="2" Grid.Column="0" VerticalAlignment="Center" Margin="0,0,10,0"/>
+                <ComboBox x:Name="cmbNyelv" Grid.Row="2" Grid.Column="1" Height="30" Margin="0,5" VerticalAlignment="Center"/>
+            </Grid>
+            <StackPanel Grid.Column="1" Margin="10,0,0,0" HorizontalAlignment="Left">
+                <CheckBox x:Name="chkBentlakasos" Content="Bentlakásos" Margin="0,5,0,20"/>
+                <Border BorderBrush="LightGray" BorderThickness="1" Padding="10">
+                    <StackPanel>
+                        <Label Content="Nem:" Padding="0,0,0,5"/>
+                        <RadioButton x:Name="rbFiu" Content="Fiú" GroupName="Nem" IsChecked="True" Margin="0,0,0,5"/>
+                        <RadioButton x:Name="rbLany" Content="Lány" GroupName="Nem"/>
+                    </StackPanel>
+                </Border>
+            </StackPanel>
+        </Grid>
+        <StackPanel Grid.Row="1" Orientation="Horizontal" HorizontalAlignment="Left" Margin="0,10,0,0">
+            <Button x:Name="btnRogzit" Content="Rögzít" Width="140" Height="40" Margin="0,0,10,0" Click="BtnRogzit_Click"/>
+            <Button x:Name="btnMegsem" Content="Mégsem" Width="140" Height="40" Click="BtnMegsem_Click"/>
+        </StackPanel>
+    </Grid>
+</Window>
