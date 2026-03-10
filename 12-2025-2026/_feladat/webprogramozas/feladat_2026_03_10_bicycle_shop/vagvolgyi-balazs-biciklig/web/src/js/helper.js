@@ -1,5 +1,5 @@
 const bicycleDialog = document.getElementById("bicycle-dialog");
-const bicyCleFormDialog = document.getElementById("bicycle-form-dialog");
+const bicycleFormDialog = document.getElementById("bicycle-form-dialog");
 
 export const fomatPrice = (price) => {
     return price.toLocaleString("hu-HU", {
@@ -96,9 +96,9 @@ export const updateBicycleDialog = (bicycle) => {
 };
 
 export const showCreateDialog = () => {
-    bicyCleFormDialog.dataset.id = "";
+    bicycleFormDialog.dataset.id = "";
 
-    const h1 = bicyCleFormDialog.querySelector("h1");
+    const h1 = bicycleFormDialog.querySelector("h1");
     h1.textContent = "Új kerékpár";
 
     const fields = [
@@ -115,7 +115,7 @@ export const showCreateDialog = () => {
         document.getElementById(field).value = "";
     });
 
-    bicyCleFormDialog.showModal();
+    bicycleFormDialog.showModal();
 };
 
 document.getElementById("add-button").onclick = showCreateDialog;
