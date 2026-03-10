@@ -27,4 +27,11 @@ export const createCard = (bicycle) => {
     return card;
 };
 
-export const generateCards = (bicycles) => {};
+export const generateCards = (bicycles) => {
+    const container = document.getElementById("bicycles");
+
+    bicycles.forEach((bicycle) => {
+        const card = createCard(bicycle);
+        container.appendChild(card);
+    }
+};
