@@ -5,3 +5,7 @@ export const fomatPrice = (price) => {
         maximumFractionDigits: 0,
     });
 };
+
+export const createCard = (bicycle) => {};
+
+export const generateCards = (bicycles) => {};
