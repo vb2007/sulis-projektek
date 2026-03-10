@@ -1,10 +1,10 @@
 {
-  "posts": [
-    { "id": "1", "title": "a title", "views": 100 },
-    { "id": "2", "title": "another title", "views": 200 }
-  ],
-  "comments": [
-    { "id": "1", "text": "a comment about post 1", "post_id": "1" },
-    { "id": "2", "text": "another comment about post 1", "post_id": "1" }
+  "bicycles": [
+    {"id": 1, "manufacturer" : "Rockrider", "name" : "MTB kerékpár ST 530 S, 27,5”, fekete, piros", "wheel_size": 27, "speed":  9, "sex": "férfi", "type": "MTB", "color":  "fekete, piros", "price":  229990},
+    {"id": 2, "manufacturer" : "Rockrider", "name" : "MTB kerékpár ST 50, 26”, fekete", "wheel_size": 26, "speed":  21, "sex": "férfi", "type": "MTB", "color":  "fekete", "price": 99990},
+    {"id": 3, "manufacturer" : "Rockrider", "name" : "Női MTB kerékpár ST 120, 27,5”, SÖTÉTKÉK", "wheel_size": 27.5, "speed":  9, "sex": "női", "type": "MTB", "color":  "Tengerészkék", "price": 139990},
+    {"id": 4, "manufacturer" : "Elops", "name" : "Városi kerékpár Elops 520, alacsony vázas, kék", "wheel_size": 26, "speed":  6, "sex": "női", "type": "városi", "color":  "Szürkéskék", "price": 139990},
+    {"id": 5, "manufacturer" : "Elops", "name" : "Városi kerékpár Elops 520, alacsony vázas, kék", "wheel_size": 28, "speed":  6, "sex": "női", "type": "városi", "color":  "Tengerészkék", "price": 139990},
+    {"id": 7, "manufacturer" : "Elops", "name" : "Városi kerékpár Elops 120 férfi vázas, kék", "wheel_size": 28, "speed":  6, "sex": "férfi", "type": "városi", "color":  "Szürkéskék", "price": 127990}
   ]
 }
