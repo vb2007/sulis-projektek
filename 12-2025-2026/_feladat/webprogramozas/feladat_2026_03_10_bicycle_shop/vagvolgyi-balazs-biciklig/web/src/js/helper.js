@@ -130,7 +130,7 @@ bicycleForm.onsubmit = async (e) => {
         name: document.getElementById("name").value,
         wheel_size: parseInt(document.getElementById("wheel_size").value),
         speed: parseInt(document.getElementById("speed").value),
-        sex: document.getElementById("sex").value,
+        sex: document.querySelector("[name=sex]").value,
         type: document.getElementById("type").value,
         color: document.getElementById("color").value,
         price: parseInt(document.getElementById("price").value),
@@ -149,3 +149,5 @@ bicycleForm.onsubmit = async (e) => {
         }
     }
 };
+
+bicycleFormDialog.querySelector("button").onclick = bicycleFormDialog.close();
