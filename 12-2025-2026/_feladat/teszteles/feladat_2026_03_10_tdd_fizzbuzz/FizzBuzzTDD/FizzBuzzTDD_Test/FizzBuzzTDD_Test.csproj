@@ -20,4 +20,8 @@
         <Using Include="NUnit.Framework"/>
     </ItemGroup>
 
+    <ItemGroup>
+      <ProjectReference Include="..\FizzBuzzTDD_Lib\FizzBuzzTDD_Lib.csproj" />
+    </ItemGroup>
+
 </Project>
