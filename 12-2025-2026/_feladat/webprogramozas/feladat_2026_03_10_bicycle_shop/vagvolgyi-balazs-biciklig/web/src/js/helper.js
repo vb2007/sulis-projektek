@@ -1,3 +1,6 @@
+const bicycleDialog = document.getElementById("bicycle-dialog");
+const bicyCleFormDialog = document.getElementById("bicycle-form-dialog");
+
 export const fomatPrice = (price) => {
     return price.toLocaleString("hu-HU", {
         style: "currency",
@@ -91,3 +94,28 @@ export const updateBicycleDialog = (bicycle) => {
         ul.append(li);
     });
 };
+
+export const showCreateDialog = () => {
+    bicyCleFormDialog.dataset.id = "";
+
+    const h1 = bicyCleFormDialog.querySelector("h1");
+    h1.textContent = "Új kerékpár";
+
+    const fields = [
+        "manufacturer",
+        "name",
+        "wheel_size",
+        "speed",
+        "type",
+        "color",
+        "price",
+    ];
+
+    fields.forEach((field) => {
+        document.getElementById(field).value = "";
+    });
+
+    bicyCleFormDialog.showModal();
+};
+
+document.getElementById("add-button").onclick = showCreateDialog;
