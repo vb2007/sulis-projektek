@@ -24,6 +24,12 @@ export const createCard = (bicycle) => {
     const p = clone.querySelector("p");
     p.textContent = fomatPrice(bicycle.price);
 
+    const details = clone.querySelector(".details");
+    details.onclick = () => {
+        updateBicycleDialog(bicycle);
+        bicycleDialog.showModal();
+    };
+
     return clone;
 };
 
@@ -34,5 +40,54 @@ export const generateCards = (bicycles) => {
     bicycles.forEach((bicycle) => {
         const card = createCard(bicycle);
         container.append(card);
+    });
+};
+
+export const updateBicycleDialog = (bicycle) => {
+    const h1 = bicycleDialog.querySelector("h1");
+    h1.textContent = `${bicycle.manufacturer}: ${bicycle.name}`;
+
+    const img = bicycleDialog.querySelector("img");
+    img.src = `images/${bicycle.id}.jpg`;
+
+    const ul = bicycleDialog.querySelector("ul");
+    ul.innerHTML = "";
+
+    const data = [
+        {
+            label: "Kerék méret:",
+            value: `${bicycle.wheel_size} col`,
+        },
+        {
+            label: "Váltó:",
+            value: `${bicycle.speed} sebességes`,
+        },
+        {
+            label: "Nem:",
+            value: bicycle.sex,
+        },
+        {
+            label: "Típus:",
+            value: bicycle.type,
+        },
+        {
+            label: "Szín:",
+            value: bicycle.color,
+        },
+        {
+            label: "Ár:",
+            value: fomatPrice(bicycle.price),
+        },
+    ];
+
+    data.forEach((value) => {
+        const li = document.createElement("li");
+
+        const span = document.createElement("span");
+        span.className = "font-semibold text-gray-800";
+        span.textContent = value.label + " ";
+
+        li.append(span, value.value);
+        ul.append(li);
     });
 };
