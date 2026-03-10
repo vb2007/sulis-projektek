@@ -1,8 +1,8 @@
 namespace FizzBuzzTDD_Lib;
 
-public class FizzBuzz
+public static class FizzBuzz
 {
-    public string FizzBuzzCheck(int number)
+    public static string FizzBuzzCheck(int number)
     {
         if (number % 3 == 0 && number % 5 == 0)
         {
