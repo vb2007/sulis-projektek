@@ -14,6 +14,17 @@ export const createCard = (bicycle) => {
 
     const h3 = document.createElement("h3");
     h3.textContent = `${bicycle.manufacturer}: ${bicycle.name}, ${bicycle.color}`;
+
+    const img = document.createElement("img");
+    img.src = `images/${bicycle.id}.jpg`;
+    img.alt = `${bicycle.name}`;
+    img.title = `${bicycle.name}`;
+
+    const p = document.createElement("p");
+    p.textContent = fomatPrice(bicycle.price);
+
+    card.append(h3, img, p);
+    return card;
 };
 
 export const generateCards = (bicycles) => {};
