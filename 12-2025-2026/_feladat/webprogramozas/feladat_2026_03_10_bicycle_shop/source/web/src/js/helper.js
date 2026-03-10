@@ -14,7 +14,7 @@ export const createCard = (bicycle) => {
     card.dataset.id = bicycle.id;
 
     const h3 = clone.querySelector("h3");
-    h3.textContent = `${bicycle.manufacturer}: ${bicycle.name}, ${bicycle.color}`;
+    h3.textContent = `${bicycle.manufacturer}: ${bicycle.name}`;
 
     const img = clone.querySelector("img");
     img.src = `images/${bicycle.id}.jpg`;
