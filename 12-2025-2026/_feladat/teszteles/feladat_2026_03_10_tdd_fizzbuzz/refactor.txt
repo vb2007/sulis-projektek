@@ -1,0 +1,1 @@
+A sikeres tesztek után a FizzBuzzCheck function-ben frissítettem az if check-ek logikáját és az alapértelmezett visszatérési értéket, hogy a kód könnyebben átlátható legyen. Ez a megközelítés tisztább és könnyebben érthető kódot eredményezett.
