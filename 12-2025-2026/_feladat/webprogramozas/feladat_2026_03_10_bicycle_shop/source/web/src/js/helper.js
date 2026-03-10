@@ -33,5 +33,5 @@ export const generateCards = (bicycles) => {
     bicycles.forEach((bicycle) => {
         const card = createCard(bicycle);
         container.appendChild(card);
-    }
+    });
 };
