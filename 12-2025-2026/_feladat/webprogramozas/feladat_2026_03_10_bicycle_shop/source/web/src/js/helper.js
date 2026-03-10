@@ -8,23 +8,23 @@ export const fomatPrice = (price) => {
 
 export const createCard = (bicycle) => {
     const template = document.getElementById("bicycle-card");
-    const card = template.content.cloneNode(true);
+    const clone = template.content.cloneNode(true);
 
-    card.id = bicycle.id;
+    const card = clone.querySelector("*");
+    card.dataset.id = bicycle.id;
 
-    const h3 = document.createElement("h3");
+    const h3 = clone.querySelector("h3");
     h3.textContent = `${bicycle.manufacturer}: ${bicycle.name}, ${bicycle.color}`;
 
-    const img = document.createElement("img");
+    const img = clone.querySelector("img");
     img.src = `images/${bicycle.id}.jpg`;
     img.alt = `${bicycle.name}`;
     img.title = `${bicycle.name}`;
 
-    const p = document.createElement("p");
+    const p = clone.querySelector("p");
     p.textContent = fomatPrice(bicycle.price);
 
-    card.append(h3, img, p);
-    return card;
+    return clone;
 };
 
 export const generateCards = (bicycles) => {
