@@ -1,5 +1,8 @@
+import { createBicycle } from "./bicycle.js";
+
 const bicycleDialog = document.getElementById("bicycle-dialog");
 const bicycleFormDialog = document.getElementById("bicycle-form-dialog");
+const bicycleForm = document.getElementById("bicycle-form");
 
 export const fomatPrice = (price) => {
     return price.toLocaleString("hu-HU", {
@@ -119,3 +122,30 @@ export const showCreateDialog = () => {
 };
 
 document.getElementById("add-button").onclick = showCreateDialog;
+bicycleForm.onsubmit = async (e) => {
+    e.preventDefault();
+
+    const bicycleData = {
+        manufacturer: document.getElementById("manufacturer").value,
+        name: document.getElementById("name").value,
+        wheel_size: parseInt(document.getElementById("wheel_size").value),
+        speed: parseInt(document.getElementById("speed").value),
+        sex: document.getElementById("sex").value,
+        type: document.getElementById("type").value,
+        color: document.getElementById("color").value,
+        price: parseInt(document.getElementById("price").value),
+    };
+
+    if (!bicycleData.dataset.id) {
+        try {
+            const newBicycle = await createBicycle(bicycleData);
+            bicycles.push(newBicycle);
+            generateCards(bicycles);
+            bicycleFormDialog.close();
+        } catch (error) {
+            console.error(
+                `Hiba a kerékpár létrehozása során:\n\t${error.message}`,
+            );
+        }
+    }
+};
