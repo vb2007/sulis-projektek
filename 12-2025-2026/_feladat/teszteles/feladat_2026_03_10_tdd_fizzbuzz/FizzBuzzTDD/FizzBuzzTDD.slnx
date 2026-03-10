@@ -1,3 +1,5 @@
 <Solution>
   <Project Path="FizzBuzzTDD_Console/FizzBuzzTDD_Console.csproj" />
+  <Project Path="FizzBuzzTDD_Lib/FizzBuzzTDD_Lib.csproj" />
+  <Project Path="FizzBuzzTDD_Test/FizzBuzzTDD_Test.csproj" />
 </Solution>
