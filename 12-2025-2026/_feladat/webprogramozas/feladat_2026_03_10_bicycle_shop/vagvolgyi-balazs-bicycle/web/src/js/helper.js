@@ -1,10 +1,17 @@
-import { createBicycle } from "./bicycle.js";
+import { createBicycle, updateBicycle, deleteBicycle } from "./bicycle.js";
 
 const bicycleDialog = document.getElementById("bicycle-dialog");
 const bicycleFormDialog = document.getElementById("bicycle-form-dialog");
 const bicycleForm = document.getElementById("bicycle-form");
+const confirmDialog = document.getElementById("confirm-dialog");
 
-export const fomatPrice = (price) => {
+let bicyclesRef = [];
+
+export const setBicyclesRef = (bicycles) => {
+    bicyclesRef = bicycles;
+};
+
+export const formatPrice = (price) => {
     return price.toLocaleString("hu-HU", {
         style: "currency",
         currency: "HUF",
@@ -16,7 +23,7 @@ export const createCard = (bicycle) => {
     const template = document.getElementById("bicycle-card");
     const clone = template.content.cloneNode(true);
 
-    const card = clone.querySelector("*");
+    const card = clone.querySelector(".card");
     card.dataset.id = bicycle.id;
 
     const h3 = clone.querySelector("h3");
@@ -24,17 +31,27 @@ export const createCard = (bicycle) => {
 
     const img = clone.querySelector("img");
     img.src = `images/${bicycle.id}.jpg`;
-    img.alt = `${bicycle.name}`;
-    img.title = `${bicycle.name}`;
+    img.alt = bicycle.name;
 
     const p = clone.querySelector("p");
-    p.textContent = fomatPrice(bicycle.price);
+    p.textContent = formatPrice(bicycle.price);
 
-    const details = clone.querySelector(".details");
-    details.onclick = () => {
+    const detailsBtn = clone.querySelector(".details");
+    detailsBtn.addEventListener("click", () => {
         updateBicycleDialog(bicycle);
         bicycleDialog.showModal();
-    };
+    });
+
+    const editBtn = clone.querySelector(".edit");
+    editBtn.addEventListener("click", () => {
+        showUpdateDialog(bicycle);
+    });
+
+    const deleteBtn = clone.querySelector(".delete");
+    deleteBtn.addEventListener("click", () => {
+        confirmDialog.dataset.id = bicycle.id;
+        showConfirmDialog();
+    });
 
     return clone;
 };
@@ -82,18 +99,18 @@ export const updateBicycleDialog = (bicycle) => {
         },
         {
             label: "Ár:",
-            value: fomatPrice(bicycle.price),
+            value: formatPrice(bicycle.price),
         },
     ];
 
-    data.forEach((value) => {
+    data.forEach((item) => {
         const li = document.createElement("li");
 
         const span = document.createElement("span");
         span.className = "font-semibold text-gray-800";
-        span.textContent = value.label + " ";
+        span.textContent = item.label + " ";
 
-        li.append(span, value.value);
+        li.append(span, item.value);
         ul.append(li);
     });
 };
@@ -118,36 +135,127 @@ export const showCreateDialog = () => {
         document.getElementById(field).value = "";
     });
 
+    //radio gomb reset
+    const radios = document.querySelectorAll("[name=sex]");
+    radios.forEach((radio) => (radio.checked = false));
+
     bicycleFormDialog.showModal();
 };
 
-document.getElementById("add-button").onclick = showCreateDialog;
-bicycleForm.onsubmit = async (e) => {
+export const showUpdateDialog = (bicycle) => {
+    bicycleFormDialog.dataset.id = bicycle.id;
+
+    const h1 = bicycleFormDialog.querySelector("h1");
+    h1.textContent = bicycle.name;
+
+    document.getElementById("manufacturer").value = bicycle.manufacturer;
+    document.getElementById("name").value = bicycle.name;
+    document.getElementById("wheel_size").value = bicycle.wheel_size;
+    document.getElementById("speed").value = bicycle.speed;
+    document.getElementById("type").value = bicycle.type;
+    document.getElementById("color").value = bicycle.color;
+    document.getElementById("price").value = bicycle.price;
+
+    const radios = document.querySelectorAll("[name=sex]");
+    radios.forEach((radio) => {
+        radio.checked = radio.value === bicycle.sex;
+    });
+
+    bicycleFormDialog.showModal();
+};
+
+export const showConfirmDialog = () => {
+    confirmDialog.showModal();
+};
+
+document
+    .getElementById("add-button")
+    .addEventListener("click", showCreateDialog);
+
+bicycleForm.addEventListener("submit", async (e) => {
     e.preventDefault();
+
+    const selectedSex = document.querySelector("[name=sex]:checked");
 
     const bicycleData = {
         manufacturer: document.getElementById("manufacturer").value,
         name: document.getElementById("name").value,
-        wheel_size: parseInt(document.getElementById("wheel_size").value),
+        wheel_size: parseFloat(document.getElementById("wheel_size").value),
         speed: parseInt(document.getElementById("speed").value),
-        sex: document.querySelector("[name=sex]").value,
+        sex: selectedSex ? selectedSex.value : "",
         type: document.getElementById("type").value,
         color: document.getElementById("color").value,
         price: parseInt(document.getElementById("price").value),
     };
 
-    if (!bicycleData.dataset.id) {
+    const dialogId = bicycleFormDialog.dataset.id;
+
+    if (!dialogId) {
         try {
             const newBicycle = await createBicycle(bicycleData);
-            bicycles.push(newBicycle);
-            generateCards(bicycles);
+            bicyclesRef.push(newBicycle);
+            generateCards(bicyclesRef);
             bicycleFormDialog.close();
         } catch (error) {
             console.error(
                 `Hiba a kerékpár létrehozása során:\n\t${error.message}`,
             );
         }
-    }
-};
+    } else {
+        try {
+            bicycleData.id = parseInt(dialogId);
+            const updatedBicycle = await updateBicycle(bicycleData);
 
-bicycleFormDialog.querySelector("button").onclick = bicycleFormDialog.close();
+            const index = bicyclesRef.findIndex(
+                (b) => b.id === updatedBicycle.id,
+            );
+            if (index !== -1) {
+                bicyclesRef[index] = updatedBicycle;
+            }
+
+            generateCards(bicyclesRef);
+            bicycleFormDialog.close();
+        } catch (error) {
+            console.error(
+                `Hiba a kerékpár módosítása során:\n\t${error.message}`,
+            );
+        }
+    }
+});
+
+const closeButton = bicycleFormDialog.querySelector("button[type='button']");
+if (closeButton) {
+    closeButton.addEventListener("click", () => {
+        bicycleFormDialog.close();
+    });
+}
+
+const confirmDeleteBtn = confirmDialog.querySelector(".delete");
+if (confirmDeleteBtn) {
+    confirmDeleteBtn.addEventListener("click", async (e) => {
+        e.preventDefault();
+
+        const id = parseInt(confirmDialog.dataset.id);
+
+        try {
+            await deleteBicycle(id);
+
+            const index = bicyclesRef.findIndex((b) => b.id === id);
+            if (index !== -1) {
+                bicyclesRef.splice(index, 1);
+            }
+
+            generateCards(bicyclesRef);
+            confirmDialog.close();
+        } catch (error) {
+            console.error(`Hiba a kerékpár törlése során:\n\t${error.message}`);
+        }
+    });
+}
+
+const confirmCancelBtn = confirmDialog.querySelector(".cancel");
+if (confirmCancelBtn) {
+    confirmCancelBtn.addEventListener("click", () => {
+        confirmDialog.close();
+    });
+}
