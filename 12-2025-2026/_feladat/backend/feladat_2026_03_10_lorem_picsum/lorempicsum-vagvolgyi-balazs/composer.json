@@ -1,0 +1,18 @@
+{
+    "name": "vb2007/lorempicsum-vagvolgyi-balazs",
+    "require": {
+        "filp/whoops": "^2.18"
+    },
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Vb2007\\LorempicsumVagvolgyiBalazs\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "VB2007",
+            "email": "admin@vb2007.hu"
+        }
+    ]
+}
