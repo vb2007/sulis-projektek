@@ -4,11 +4,6 @@
         "filp/whoops": "^2.18"
     },
     "license": "MIT",
-    "autoload": {
-        "psr-4": {
-            "Vb2007\\LorempicsumVagvolgyiBalazs\\": "src/"
-        }
-    },
     "authors": [
         {
             "name": "VB2007",
