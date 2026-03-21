@@ -23,8 +23,10 @@ $whoops->register();
 
 <body class="p-2">
     <!-- menü -->
+    <?php include __DIR__ . "/components/menu.php"; ?>
     <main class="w-11/12 mx-auto max-w-325 p-2">
         <!-- oldalak tartalma -->
+        <?php include __DIR__ . "/pages/" . $page . ".php"; ?>
     </main>
 </body>
 
