@@ -46,7 +46,7 @@ class TramLine
 
     public function getImagePath()
     {
-        return "./img/" . strtolower($this->number) . ".jpg";
+        return "./images/" . strtolower($this->number) . ".jpg";
     }
 
     public static function getInterconnecteds()
