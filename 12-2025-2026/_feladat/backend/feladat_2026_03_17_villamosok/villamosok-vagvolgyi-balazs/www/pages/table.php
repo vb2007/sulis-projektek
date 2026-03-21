@@ -1,22 +1,36 @@
-<h1 class="text-4xl font-bold mb-4">Viszonylatok - XX találat</h1>
+<?php
+use Budapest\Transport\TramLine; ?>
+
+<?php include __DIR__ . "/../components/form.php"; ?>
+
+<h1 class="text-4xl font-bold mb-4">Viszonylatok - <?= count(
+    $lines,
+) ?> találat</h1>
 
 <div class="overflow-auto">
     <table class="w-full">
         <thead>
             <tr class="hover:bg-gray-100 border-b border-b-zinc-400">
-                <th class="px-2 py-1 align-middle font-semibold whitespace-nowrap">Viszonylat</th>
-                <th class="px-2 py-1 align-middle font-semibold whitespace-nowrap">Útvonal</th>
-                <th class="px-2 py-1 align-middle font-semibold whitespace-nowrap">Hossz</th>
-                <th class="px-2 py-1 align-middle font-semibold whitespace-nowrap">Első üzemnap</th>
+                <?php
+                $headers = ["Viszonylat", "Útvonal", "Hossz", "Első üzemnap"];
+                foreach ($headers as $header): ?>
+                    <th class="px-2 py-1 align-middle font-semibold whitespace-nowrap"><?= $header ?></th>
+                <?php endforeach;
+                ?>
             </tr>
         </thead>
         <tbody>
-            <tr class="hover:bg-gray-100 border-b border-b-zinc-400">
-                <td class="px-2 py-1 text-center">Szám</td>
-                <td class="px-2 py-1 text-center">Útvonal</td>
-                <td class="px-2 py-1 text-center">Hossz km</td>
-                <td class="px-2 py-1 text-center">Mióta</td>
-            </tr>
+            <?php foreach ($lines as $line): ?>
+                <tr class="hover:bg-gray-100 border-b border-b-zinc-400">
+                    <td class="px-2 py-1 text-center">
+                        <img src="<?= $line->getImagePath() ?>" alt="<?= $line->number ?> villamos" class="w-16 h-12 object-cover inline-block rounded">
+                        <?= $line->number ?>
+                    </td>
+                    <td class="px-2 py-1 text-center"><?= $line->route ?></td>
+                    <td class="px-2 py-1 text-center"><?= $line->length ?> km</td>
+                    <td class="px-2 py-1 text-center"><?= $line->since ?></td>
+                </tr>
+            <?php endforeach; ?>
         </tbody>
     </table>
 </div>
