@@ -23,7 +23,6 @@ use Budapest\Transport\TramLine; ?>
             <?php foreach ($lines as $line): ?>
                 <tr class="hover:bg-gray-100 border-b border-b-zinc-400">
                     <td class="px-2 py-1 text-center">
-                        <img src="<?= $line->getImagePath() ?>" alt="<?= $line->number ?> villamos" class="w-16 h-12 object-cover inline-block rounded">
                         <?= $line->number ?>
                     </td>
                     <td class="px-2 py-1 text-center"><?= $line->route ?></td>
