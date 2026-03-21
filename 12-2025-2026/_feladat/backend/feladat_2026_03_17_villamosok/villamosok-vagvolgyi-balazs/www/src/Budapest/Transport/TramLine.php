@@ -2,15 +2,26 @@
 
 namespace Budapest\Transport;
 
-class TramLine{
+class TramLine
+{
     private string $number;
     private string $route;
     private int $since;
     private string $interconnected;
     private float $length;
-    private static $interconnecteds = ["none" => "Nincs", "budai" => "Budai Fonódó", "pesti" => "Pesti Fonódó"];
+    private static $interconnecteds = [
+        "none" => "Nincs",
+        "budai" => "Budai Fonódó",
+        "pesti" => "Pesti Fonódó",
+    ];
 
-    public function __construct(string $number, string $route, int $since, string $interconnected, float $length){
+    public function __construct(
+        string $number,
+        string $route,
+        int $since,
+        string $interconnected,
+        float $length,
+    ) {
         $this->number = $number;
         $this->route = $route;
         $this->since = $since;
@@ -18,23 +29,28 @@ class TramLine{
         $this->length = $length;
     }
 
-    public function __get($property){
+    public function __get($property)
+    {
         return $this->$property;
     }
 
-    public function __set($property, $value){
+    public function __set($property, $value)
+    {
         $this->$property = $value;
     }
 
-    public function getInterconnected(){
+    public function getInterconnected()
+    {
         return TramLine::$interconnecteds[$this->interconnected];
     }
 
-    public function getImagePath(){
+    public function getImagePath()
+    {
         return "./img/" . strtolower($this->number) . ".jpg";
     }
 
-    public static function getInterconnecteds(){
+    public static function getInterconnecteds()
+    {
         return TramLine::$interconnecteds;
     }
 }
