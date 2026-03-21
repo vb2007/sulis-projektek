@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="hu">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" href="/favicon.ico">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jegykezelés és -nyomtatás</title>
+    <script type="module" src="/src/main.js" defer></script>
+    <script type="module" src="/src/js/pages/index.js" defer></script>
+</head>
+
+<body>
+    <header class="text-center p-2">
+        <h1 class="text-3xl">Jegykezelés és -nyomtatás</h1>
+    </header>
+    <main class="w-11/12 max-w-350 mx-auto">
+        <section>
+            <h2 class="text-2xl mb-2">Jegyek</h2>
+            <div id="tickets" class="grid md:grid-cols-2 xl:grid-cols-4 gap-2">
+
+            </div>
+            <button type="button" id="new-ticket" class="bg-rose-700 text-white p-1 rounded cursor-pointer my-2">
+                Új jegy hozzáadása
+            </button>
+        </section>
+    </main>
+</body>
+
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="hu">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menetjegy ellenőrzése</title>
+    <script src="src/main.js" type="module" defer></script>
+    <script src="src/js/pages/check.js" type="module" defer></script>
+</head>
+
+<body>
+    <header class="text-center p-2">
+        <h1 class="text-3xl">Menetjegy ellenőrzése</h1>
+    </header>
+    <main class="w-11/12 max-w-350 mx-auto">
+        <table class="w-full text-lg">
+            <tbody>
+                <tr class="odd:bg-rose-50">
+                    <th class="p-1">Honnan</th>
+                    <td class="p-1" id="from"></td>
+                </tr>
+                <tr class="odd:bg-rose-50">
+                    <th class="p-1">Hova</th>
+                    <td class="p-1" id="to"></td>
+                </tr>
+                <tr class="odd:bg-rose-50">
+                    <th class="p-1">Keresztül</th>
+                    <td class="p-1" id="via"></td>
+                </tr>
+                <tr class="odd:bg-rose-50">
+                    <th class="p-1">Dátum</th>
+                    <td class="p-1" id="date"></td>
+                </tr>
+                <tr class="odd:bg-rose-50">
+                    <th class="p-1">Típus</th>
+                    <td class="p-1" id="type"></td>
+                </tr>
+            </tbody>
+        </table>
+        <div id="is-valid" class="mt-2 p-2 rounded bg-red-600 text-white text-center text-4xl font-bold">
+            ÉRVÉNYTELEN
+        </div>
+        <div class="flex justify-center w-full mt-5">
+            <a href="index.html" class="bg-rose-700 text-white p-4 text-xl rounded cursor-pointer grow text-center">
+                ÚJ OLVASÁSA
+            </a>
+        </div>
+    </main>
+</body>
+
+</html>
