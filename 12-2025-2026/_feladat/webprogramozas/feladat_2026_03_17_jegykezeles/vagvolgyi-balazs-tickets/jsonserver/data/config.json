@@ -1,0 +1,16 @@
+{
+    "timestamps": false,
+    "relationships":[
+        {
+            "source": "posts",
+            "destination": "comments",
+            "type": "hasMany"
+        },
+        {
+            "source": "comments",
+            "destination": "posts",
+            "type": "belongsTo"
+        }
+        
+    ]
+}
