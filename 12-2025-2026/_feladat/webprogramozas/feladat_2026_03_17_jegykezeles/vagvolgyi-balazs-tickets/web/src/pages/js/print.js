@@ -1,4 +1,4 @@
-import { getTicket } from "../utils/tickets.js";
+import { getTicket } from "../../utils/tickets.js";
 
 const typeText = {
     single: {

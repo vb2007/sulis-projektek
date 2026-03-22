@@ -1,4 +1,4 @@
-import { getTickets, createTicket } from "../utils/tickets.js";
+import { getTickets, createTicket } from "../../utils/tickets.js";
 
 const ticketsContainer = document.getElementById("tickets");
 const cardTemplate = document.getElementById("card-template");
@@ -59,12 +59,12 @@ const btnCancel = document.getElementById("btn-cancel");
 
 btnPrint?.addEventListener("click", () => {
     const ticketId = ticketDialog.dataset.id;
-    window.location = `print.html?ticketId=${ticketId}`;
+    window.location = `/src/pages/print.html?ticketId=${ticketId}`;
 });
 
 btnCheck?.addEventListener("click", () => {
     const ticketId = ticketDialog.dataset.id;
-    window.location = `check.html?ticketId=${ticketId}`;
+    window.location = `/src/pages/check.html?ticketId=${ticketId}`;
 });
 
 btnCancel?.addEventListener("click", () => {
