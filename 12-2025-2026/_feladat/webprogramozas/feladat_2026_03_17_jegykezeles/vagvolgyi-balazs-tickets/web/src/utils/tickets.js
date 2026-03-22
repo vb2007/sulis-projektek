@@ -10,11 +10,10 @@ export const getTickets = async () => {
 };
 
 export const getTicket = async (id) => {
-    const response = await fetch(BASE_URL + "tickets", {
+    const response = await fetch(BASE_URL + "tickets/" + id, {
         method: "GET",
         headers: { Accept: "application/json" },
     }).json();
 
-    const tickets = response.data || response;
-    return tickets.find((t) => t.id == id);
+    return result.data || result;
 };
