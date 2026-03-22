@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="hu">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Ticket</title>
+        <script src="../main.js" type="module" defer></script>
+        <script src="./js/print.js" type="module" defer></script>
+    </head>
+
+    <body class="grid grid-cols-1 gap-2 font-lg p-2">
+        <header>
+            <h1 class="flex flex-col text-3xl font-bold">
+                <span id="type-hu" lang="hu">MENETJEGY</span>
+                <span id="type-en" lang="en">TICKET</span>
+            </h1>
+        </header>
+        <main class="grid grid-cols-3 gap-2">
+            <div class="flex flex-col border rounded p-2">
+                <span lang="hu">DÁTUM</span>
+                <span lang="en">DATE</span>
+                <span id="date" class="font-semibold text-xl mt-1"
+                    >2026-03-10</span
+                >
+            </div>
+            <div class="flex flex-col border rounded p-2">
+                <span lang="hu">HONNAN</span>
+                <span lang="en">FROM</span>
+                <span id="from" class="font-semibold text-xl mt-1"
+                    >BUDAPEST KELETI</span
+                >
+            </div>
+            <div class="flex flex-col border rounded p-2">
+                <span lang="hu">HOVA</span>
+                <span lang="en">TO</span>
+                <span id="to" class="font-semibold text-xl mt-1">WIEN HBF</span>
+            </div>
+            <div class="col-span-full">
+                <div class="flex flex-col border rounded p-2">
+                    <span lang="hu">KERESZTÜL</span>
+                    <span lang="en">VIA</span>
+                    <span id="via" class="font-semibold text-xl mt-1"
+                        >HEGYESHALOM-BRUCK/LEITHA</span
+                    >
+                </div>
+            </div>
+            <div class="col-span-2">
+                <div class="flex flex-col border rounded p-2">
+                    <span lang="hu">ÁR</span>
+                    <span lang="en">PRICE</span>
+                    <span id="price" class="font-semibold text-xl mt-1"
+                        >20 €</span
+                    >
+                </div>
+            </div>
+            <div class="flex justify-center items-center">
+                <img id="qr" src="" />
+            </div>
+        </main>
+    </body>
+</html>

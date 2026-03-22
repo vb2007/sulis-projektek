@@ -1,0 +1,3 @@
+Webprog alap: https://github.com/ignaczdominik/webprog-alap
+
+JSON szerver: https://github.com/ignaczdominik/json-server

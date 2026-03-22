@@ -1,0 +1,155 @@
+<!doctype html>
+<html lang="hu">
+    <head>
+        <meta charset="UTF-8" />
+        <link rel="icon" href="/favicon.ico" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Jegykezelés és -nyomtatás</title>
+        <script type="module" src="/src/main.js" defer></script>
+        <script type="module" src="/src/pages/js/index.js" defer></script>
+    </head>
+
+    <body>
+        <header class="text-center p-2">
+            <h1 class="text-3xl">Jegykezelés és -nyomtatás</h1>
+        </header>
+        <main class="w-11/12 max-w-350 mx-auto">
+            <section>
+                <h2 class="text-2xl mb-2">Jegyek</h2>
+                <div
+                    id="tickets"
+                    class="grid md:grid-cols-2 xl:grid-cols-4 gap-2"
+                ></div>
+                <button
+                    type="button"
+                    id="new-ticket"
+                    class="bg-rose-700 text-white p-1 rounded cursor-pointer my-2"
+                >
+                    Új jegy hozzáadása
+                </button>
+            </section>
+        </main>
+
+        <!-- kártya template -->
+        <template id="card-template">
+            <div class="p-2 rounded cursor-pointer border">
+                <h3 class="route font-semibold"></h3>
+                <p class="via text-sm"></p>
+                <p class="valid"></p>
+            </div>
+        </template>
+
+        <!-- jegy action dialog -->
+        <dialog
+            id="ticket-dialog"
+            class="p-2 max-w-150 w-[95vw] place-self-center open:flex flex-col rounded backdrop:blur-4xl backdrop:backdrop-brightness-50"
+        >
+            <div class="flex flex-col gap-2">
+                <button
+                    type="button"
+                    id="btn-print"
+                    class="bg-red-700 text-white p-2 rounded cursor-pointer"
+                >
+                    Nyomtatási kép
+                </button>
+                <button
+                    type="button"
+                    id="btn-check"
+                    class="bg-red-700 text-white p-2 rounded cursor-pointer"
+                >
+                    Jegy ellenőrzése
+                </button>
+                <button
+                    type="button"
+                    id="btn-cancel"
+                    class="bg-red-700 text-white p-2 rounded cursor-pointer"
+                >
+                    Mégse
+                </button>
+            </div>
+        </dialog>
+
+        <!-- új jegy dialog -->
+        <dialog
+            id="new-ticket-dialog"
+            class="p-2 max-w-150 w-[95vw] place-self-center open:flex flex-col rounded backdrop:blur-4xl backdrop:backdrop-brightness-50"
+        >
+            <h3 class="text-xl font-semibold mb-4">Új jegy létrehozása</h3>
+            <form id="new-ticket-form" class="flex flex-col gap-2">
+                <div class="flex flex-col gap-1">
+                    <label for="from">Honnan</label>
+                    <input
+                        type="text"
+                        name="from"
+                        id="from"
+                        placeholder="Kiinduló állomás"
+                        required
+                        maxlength="100"
+                        class="border rounded p-1"
+                    />
+                </div>
+                <div class="flex flex-col gap-1">
+                    <label for="to">Hova</label>
+                    <input
+                        type="text"
+                        name="to"
+                        id="to"
+                        placeholder="Célállomás"
+                        required
+                        maxlength="100"
+                        class="border rounded p-1"
+                    />
+                </div>
+                <div class="flex flex-col gap-1">
+                    <label for="via">Keresztül</label>
+                    <textarea
+                        name="via"
+                        id="via"
+                        placeholder="Útvonal"
+                        required
+                        maxlength="200"
+                        rows="2"
+                        class="border rounded p-1 resize-none"
+                    ></textarea>
+                </div>
+                <div class="flex flex-col gap-1">
+                    <label for="type">Típus</label>
+                    <select
+                        name="type"
+                        id="type"
+                        required
+                        class="border rounded p-1"
+                    >
+                        <option value="single">Egyirányú</option>
+                        <option value="return">Menettéri</option>
+                    </select>
+                </div>
+                <div class="flex flex-col gap-1">
+                    <label for="valid">Érvényes</label>
+                    <input
+                        type="date"
+                        name="valid"
+                        id="valid"
+                        required
+                        class="border rounded p-1"
+                    />
+                </div>
+                <div class="flex justify-end gap-2 mt-4">
+                    <button
+                        type="button"
+                        id="btn-form-cancel"
+                        class="bg-gray-500 text-white p-2 rounded cursor-pointer"
+                    >
+                        Mégse
+                    </button>
+                    <button
+                        type="submit"
+                        class="bg-rose-700 text-white p-2 rounded cursor-pointer"
+                    >
+                        Létrehozás
+                    </button>
+                </div>
+            </form>
+        </dialog>
+    </body>
+</html>
