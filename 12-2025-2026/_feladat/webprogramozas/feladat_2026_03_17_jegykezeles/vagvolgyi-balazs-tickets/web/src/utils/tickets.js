@@ -17,3 +17,13 @@ export const getTicket = async (id) => {
 
     return result.data || result;
 };
+
+export const createTicket = async (data) => {
+    const response = await fetch(BASE_URL + "tickets", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(data),
+    }).json();
+
+    return response.data || response;
+};
