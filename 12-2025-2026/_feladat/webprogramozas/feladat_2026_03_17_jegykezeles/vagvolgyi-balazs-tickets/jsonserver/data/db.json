@@ -24,7 +24,7 @@
             "from": "Wien Hbf",
             "to": "St. Pölten Hbf",
             "via": "Tullnerfeld",
-            "price": 189.0,
+            "price": 189,
             "valid": "2026-04-01"
         },
         {
@@ -42,7 +42,7 @@
             "from": "Wien Hbf",
             "to": "Linz Hbf",
             "via": "St. Pölten",
-            "price": 1290.0,
+            "price": 1290,
             "valid": "2026-01-01"
         },
         {
@@ -69,7 +69,7 @@
             "from": "Sopron",
             "to": "Wiener Neustadt Hbf",
             "via": "Mattersburg",
-            "price": 148.0,
+            "price": 148,
             "valid": "2026-04-01"
         },
         {
@@ -105,7 +105,7 @@
             "from": "Wien Hbf",
             "to": "Brno hl.n.",
             "via": "Břeclav",
-            "price": 210.0,
+            "price": 210,
             "valid": "2026-04-01"
         },
         {
@@ -123,7 +123,7 @@
             "from": "Wien Hbf",
             "to": "Prague hl.n.",
             "via": "Břeclav",
-            "price": 64.0,
+            "price": 64,
             "valid": "2026-05-02"
         },
         {
@@ -141,7 +141,7 @@
             "from": "Wien Hbf",
             "to": "Bratislava hl.st.",
             "via": "Kittsee",
-            "price": 980.0,
+            "price": 980,
             "valid": "2026-01-01"
         },
         {
@@ -159,7 +159,7 @@
             "from": "Linz Hbf",
             "to": "Salzburg Hbf",
             "via": "Attnang-Puchheim",
-            "price": 176.0,
+            "price": 176,
             "valid": "2026-04-01"
         },
         {
@@ -204,7 +204,7 @@
             "from": "Graz Hbf",
             "to": "Maribor",
             "via": "Spielfeld-Straß",
-            "price": 120.0,
+            "price": 120,
             "valid": "2026-03-09"
         },
         {
@@ -222,7 +222,7 @@
             "from": "Salzburg Hbf",
             "to": "Zürich HB",
             "via": "Feldkirch-Buchs SG",
-            "price": 1050.0,
+            "price": 1050,
             "valid": "2026-01-01"
         },
         {
@@ -231,7 +231,7 @@
             "from": "Wien Hbf",
             "to": "Praha hl.n.",
             "via": "Břeclav",
-            "price": 55.0,
+            "price": 55,
             "valid": "2026-03-20"
         },
         {
@@ -249,7 +249,7 @@
             "from": "Bratislava hl.st.",
             "to": "Wien Hbf",
             "via": "Marchegg",
-            "price": 85.0,
+            "price": 85,
             "valid": "2026-03-23"
         },
         {
@@ -267,7 +267,7 @@
             "from": "Klagenfurt Hbf",
             "to": "Ljubljana",
             "via": "Jesenice",
-            "price": 32.0,
+            "price": 32,
             "valid": "2026-03-18"
         },
         {
@@ -276,7 +276,7 @@
             "from": "Wien Hbf",
             "to": "Bratislava-Petržalka",
             "via": "Kittsee",
-            "price": 11.0,
+            "price": 11,
             "valid": "2026-03-10"
         },
         {
@@ -285,7 +285,7 @@
             "from": "Graz Hbf",
             "to": "Wien Hbf",
             "via": "Semmering",
-            "price": 48.0,
+            "price": 48,
             "valid": "2026-03-11"
         },
         {
@@ -303,7 +303,7 @@
             "from": "Bregenz",
             "to": "St. Gallen",
             "via": "St. Margrethen",
-            "price": 95.0,
+            "price": 95,
             "valid": "2026-03-24"
         },
         {
@@ -312,7 +312,7 @@
             "from": "Wien Hbf",
             "to": "Budapest-Kelenföld",
             "via": "Sopron-Mattesburg-Wr.Neustadt",
-            "price": 980.0,
+            "price": 980,
             "valid": "2026-01-01"
         },
         {
@@ -321,7 +321,7 @@
             "from": "Salzburg Hbf",
             "to": "Innsbruck Hbf",
             "via": "Zell am See",
-            "price": 35.0,
+            "price": 35,
             "valid": "2026-03-16"
         },
         {
@@ -339,7 +339,7 @@
             "from": "Győr",
             "to": "Wien Hbf",
             "via": "Hegyeshalom-Bruck/Leitha",
-            "price": 15.0,
+            "price": 15,
             "valid": "2026-03-13"
         },
         {
@@ -348,7 +348,7 @@
             "from": "Villach Hbf",
             "to": "Udine",
             "via": "Tarvisio Boscoverde",
-            "price": 22.0,
+            "price": 22,
             "valid": "2026-03-19"
         },
         {
@@ -357,7 +357,7 @@
             "from": "St. Pölten Hbf",
             "to": "Wien Hbf",
             "via": "Tullnerfeld",
-            "price": 115.0,
+            "price": 115,
             "valid": "2026-04-01"
         }
     ]
