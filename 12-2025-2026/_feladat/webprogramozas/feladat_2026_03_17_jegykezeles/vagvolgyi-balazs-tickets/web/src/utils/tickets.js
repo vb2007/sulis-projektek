@@ -8,3 +8,13 @@ export const getTickets = async () => {
 
     return result.data || result;
 };
+
+export const getTicket = async (id) => {
+    const response = await fetch(BASE_URL + "tickets", {
+        method: "GET",
+        headers: { Accept: "application/json" },
+    }).json();
+
+    const tickets = response.data || response;
+    return tickets.find((t) => t.id == id);
+};
