@@ -4,7 +4,8 @@ export const getTickets = async () => {
     const response = await fetch(BASE_URL + "tickets", {
         method: "GET",
         headers: { Accept: "application/json" },
-    }).json();
+    });
+    const result = await response.json();
 
     return result.data || result;
 };
@@ -13,7 +14,8 @@ export const getTicket = async (id) => {
     const response = await fetch(BASE_URL + "tickets/" + id, {
         method: "GET",
         headers: { Accept: "application/json" },
-    }).json();
+    });
+    const result = await response.json();
 
     return result.data || result;
 };
@@ -23,7 +25,8 @@ export const createTicket = async (data) => {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(data),
-    }).json();
+    });
+    const result = await response.json();
 
-    return response.data || response;
+    return result.data || result;
 };
