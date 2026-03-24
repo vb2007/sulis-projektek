@@ -35,7 +35,21 @@ $menuItems = [
     ],
 ];
 
+if ($page === "seller") {
+    //ár szerint növekvő
+    usort($televisions, function ($a, $b) {
+        return $a->price <=> $b->price;
+    });
+} elseif ($page === "products") {
+    //név szerint csökkenő
+    usort($televisions, function ($a, $b) {
+        return $b->name <=> $a->name;
+    });
+}
 
+if ($page === "404") {
+    header("HTTP/1.0 404 Not Found");
+}
 ?>
 
 <!doctype html>
