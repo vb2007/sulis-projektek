@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="hu">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TV 10 darab</title>
+    <link rel="stylesheet" href="css/tv.css">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+
+<body class="min-h-screen flex flex-col">
+
+    <nav class="bg-cyan-700">
+        <div class="mx-auto max-w-7xl px-4">
+            <div class="flex h-16 items-center justify-between">
+
+
+                <a href="index.php" class="text-xl font-bold text-white">
+                    OLDAL CÍME
+                </a>
+
+
+                <button class="md:hidden text-cyan-100 hover:text-white"
+                    onclick="document.getElementById('nav-menu').classList.toggle('hidden')">
+                    ☰
+                </button>
+
+
+                <ul id="nav-menu" class="hidden md:flex md:items-center md:space-x-2
+                       absolute md:static top-16 left-0 w-full md:w-auto
+                       bg-cyan-800 md:bg-transparent
+                       px-4 md:px-0 py-3 md:py-0">
+                    <li>
+                        <a href="#" class="block py-2 px-2 text-sm font-medium transition">
+                            AKTÍV_MENÜPONT
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="block py-2 px-2 text-sm font-medium transition">
+                            MENÜ1
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="block py-2 px-2 text-sm font-medium transition">
+                            MENÜ2
+                        </a>
+                    </li>
+
+                </ul>
+
+            </div>
+        </div>
+    </nav>
+
+    <h1 class="my-4 text-center text-4xl font-bold text-cyan-600">Főoldal</h1>
+
+    <div class="mx-auto max-w-7xl px-4 py-10 flex-grow home">
+
+
+        <div class="grid grid-cols-1 gap-10 md:grid-cols-2">
+
+
+            <div class="group overflow-hidden rounded-2xl border border-cyan-200 bg-white shadow-sm">
+
+                <div class="p-6">
+                    <h2 class="mb-2 text-2xl font-bold text-cyan-700">
+                        Eladói oldal
+                    </h2>
+
+                </div>
+            </div>
+
+
+            <div class="group overflow-hidden rounded-2xl border border-cyan-200 bg-white shadow-sm">
+
+                <div class="p-6">
+                    <h2 class="mb-2 text-2xl font-bold text-cyan-700">
+                        Termékek oldal
+                    </h2>
+
+                </div>
+            </div>
+
+        </div>
+
+        <h1 class="my-4 text-center text-4xl font-bold text-cyan-600">Eladói oldal</h1>
+
+        <div class="overflow-x-auto rounded-xl border border-cyan-200 shadow-sm">
+            <table class="min-w-full overflow-hidden rounded-xl">
+
+                <thead class="bg-cyan-600 text-white">
+                    <tr>
+                        <th class="px-4 py-3 text-sm font-semibold text-center first:text-left last:text-right">
+                            Gyártó </th>
+                        <th class="px-4 py-3 text-sm font-semibold text-center first:text-left last:text-right">
+                            Megnevezés </th>
+                        <th class="px-4 py-3 text-sm font-semibold text-center first:text-left last:text-right">
+                            Átmérő </th>
+                        <th class="px-4 py-3 text-sm font-semibold text-center first:text-left last:text-right">
+                            Felbontás </th>
+                        <th class="px-4 py-3 text-sm font-semibold text-center first:text-left last:text-right">
+                            Technológia </th>
+                        <th class="px-4 py-3 text-sm font-semibold text-center first:text-left last:text-right">
+                            Ár </th>
+                    </tr>
+                </thead>
+
+                <tbody class="divide-y divide-cyan-100">
+                    <tr class="odd:bg-white even:bg-cyan-50 hover:bg-cyan-100 transition">
+
+                        <td class="px-4 py-2 text-left">GYÁRTÓ </td>
+                        <td class="px-4 py-2 text-left">MEGNEVEZÉS</td>
+
+                        <td class="px-4 py-2 text-left">ÁTMÉRŐ</td>
+
+                        <td class="px-4 py-2 text-center">FELBONTÁS</td>
+
+                        <td class="px-4 py-2 text-center">TECHNOLÓGIA</td>
+
+                        <td class="px-4 py-2 text-right font-bold text-cyan-700">ÁR</td>
+
+                    </tr>
+
+                </tbody>
+
+            </table>
+        </div>
+
+        <h1 class="my-4 text-center text-4xl font-bold text-cyan-600">
+            Termékek
+        </h1>
+
+        <div class="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
+            <div class="group rounded-xl border border-gray-200 bg-white p-4">
+
+                <img src="https://placehold.net/default.png" alt="MEGNEVEZÉS"
+                    class="mb-4 h-48 w-full rounded-lg object-contain">
+
+                <h2 class="mb-3 text-l font-semibold text-cyan-600">MEGNEVEZÉS</h2>
+
+                <ul class="space-y-1 text-sm text-gray-700">
+                    <li><span class="font-semibold text-cyan-600">Gyártó:</span> GYÁRTÓ</li>
+                    <li><span class="font-semibold text-cyan-600  inline-flex gap-4">
+                            Kijelző:</span>
+                        <span
+                            class="inline-flex items-center rounded-full bg-cyan-100 px-2.5 py-0.5 text-sm font-medium text-cyan-800">
+                            MÉRET és TECHNOLÓGIA
+                        </span>
+                        <span
+                            class="inline-flex items-center rounded-full bg-cyan-100 px-2.5 py-0.5 text-sm font-medium text-cyan-800">
+                            FELBONTÁS
+                        </span>
+
+                    </li>
+
+
+
+                </ul>
+
+                <div class="pt-2 text-lg font-bold text-cyan-700 text-right">144&nbsp;899&nbsp;Ft</div>
+
+            </div>
+
+
+
+
+
+
+        </div>
+
+    </div>
+    <footer class="mt-10 bg-cyan-700 text-cyan-50">
+        <div class="mx-auto max-w-7xl px-4 py-6 text-end">
+
+            <p class="text-sm">
+                © 2026 TV bolt.
+            </p>
+
+        </div>
+    </footer>
+
+
+
+</body>
+
+</html>

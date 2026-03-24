@@ -1,0 +1,102 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root {
+    --primary-color: #3498db;
+    --text-color: #2c3e50;
+}
+
+
+
+h1 {
+    margin-bottom: 1rem;
+    font-weight: 600;
+    color: var(--text-color);
+}
+
+form {
+    background: #ffffff;
+    padding: 1.5rem;
+    border: 1px solid var(--color-gray-200);
+    margin-bottom: 1rem;
+    
+    border-radius: .5rem;
+    box-shadow: 0 10px 25px rgb(from var(--text-color) / 0.2);
+    width: 100%;
+    display: grid;
+    gap: 1rem;
+    @media  (width >= 768px) {
+        grid-template-columns: 2fr 2fr 2fr 1fr;
+    }
+
+    > * {
+        display: grid;
+
+        &:last-of-type{
+            align-self: end;
+        }
+    }
+    
+}
+
+
+label {
+    margin-bottom: .5rem;
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: hsl(from var(--text-color) h 20% 40%);
+}
+
+
+input:not([type="submit"]), select {
+    padding: .5rem  .75rem;
+    
+    border: 1px solid var(--color-gray-200);
+    border-radius: .5rem;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    outline: none;
+
+    &:focus,
+    &:focus {
+        box-shadow: 0 0 0 3px rgb(52 152 219 / 0.2);
+    }
+}
+
+input[type="submit"] {
+    background-color: var(--color-cyan-700);
+    color: white;
+    padding: .5rem  .75rem;
+    border: none;
+    border-radius: .5rem;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.1s ease;
+    
+
+
+
+    &:hover {
+        background-color: hsl(from var(--color-cyan-700) h calc(l + 0.5) calc(l + 0.5));
+    }
+
+    &:active {
+        transform: scale(0.95);
+    }
+}
+
+.home {
+    
+    ul {
+        list-style: "📺 "; 
+        list-style-position: inside;
+    }
+}
+
+@media (max-width: 480px) {
+    form {
+        width: 100%;
+        padding: 20px;
+    }
+}
+
