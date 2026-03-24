@@ -61,7 +61,7 @@ $title = "TV " . count($televisions) . " darab";
         <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     </head>
 
-    <body>
+    <body class="min-h-screen flex flex-col">
     </body>
 
 </html>
