@@ -16,6 +16,26 @@ if (!empty($_GET["page"])) {
         $page = "404";
     }
 }
+
+$menuItems = [
+    [
+        "text" => "Főoldal",
+        "url" => "index.php",
+        "active" => $page === "home",
+    ],
+    [
+        "text" => "Eladói oldal",
+        "url" => "index.php?page=seller",
+        "active" => $page === "seller",
+    ],
+    [
+        "text" => "Termékek",
+        "url" => "index.php?page=products",
+        "active" => $page === "products",
+    ],
+];
+
+
 ?>
 
 <!doctype html>
