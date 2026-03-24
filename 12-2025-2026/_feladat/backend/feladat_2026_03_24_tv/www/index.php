@@ -37,14 +37,10 @@ $menuItems = [
 
 if ($page === "seller") {
     //ár szerint növekvő
-    usort($televisions, function ($a, $b) {
-        return $a->price <=> $b->price;
-    });
+    usort($televisions, fn($a, $b) => $a->price <=> $b->price);
 } elseif ($page === "products") {
     //név szerint csökkenő
-    usort($televisions, function ($a, $b) {
-        return $b->name <=> $a->name;
-    });
+    usort($televisions, fn($a, $b) => $b->name <=> $a->name);
 }
 
 if ($page === "404") {
