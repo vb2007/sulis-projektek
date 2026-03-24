@@ -39,6 +39,16 @@ class Television
         $this->price = $price;
     }
 
+    public function __get(string $name): mixed
+    {
+        if ($name === "manufacturer_name") {
+            return self::$manufacturers[$this->manufacturer_id] ??
+                "Ismeretlen gyártó";
+        }
+
+        return $this->$name;
+    }
+
     public function getManufacturers(): array
     {
         return self::$manufacturers;
