@@ -53,4 +53,9 @@ class Television
     {
         return self::$manufacturers;
     }
+
+    public function getImagePath(): string
+    {
+        return "/img/{$this->id}.webp";
+    }
 }
