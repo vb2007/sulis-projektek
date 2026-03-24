@@ -50,6 +50,8 @@ if ($page === "seller") {
 if ($page === "404") {
     header("HTTP/1.0 404 Not Found");
 }
+
+$title = "TV " . count($televisions) . " darab";
 ?>
 
 <!doctype html>
