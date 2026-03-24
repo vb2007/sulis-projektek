@@ -38,4 +38,9 @@ class Television
         $this->hdr = $hdr;
         $this->price = $price;
     }
+
+    public function getManufacturers(): array
+    {
+        return self::$manufacturers;
+    }
 }
