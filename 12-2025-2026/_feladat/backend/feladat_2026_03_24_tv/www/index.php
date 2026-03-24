@@ -8,6 +8,11 @@ require __DIR__ . "/data.php";
 $whoops = new \Whoops\Run();
 $whoops->pushHandler(new \Whoops\Handler\PrettyPageHandler());
 $whoops->register();
+
+$page = $_GET["page"] ?? "products";
+if ($page !== "seller" && $page !== "products") {
+    $page = "404";
+}
 ?>
 
 <!doctype html>
