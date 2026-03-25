@@ -1,0 +1,5 @@
+<Solution>
+  <Project Path="ByteFriend/ByteFriend.csproj" />
+  <Project Path="ByteFriend_Lib/ByteFriend_Lib.csproj" />
+  <Project Path="ByteFriend_Tests/ByteFriend_Tests.csproj" />
+</Solution>
