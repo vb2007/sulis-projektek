@@ -5,8 +5,33 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:KeresztrejtvenyGUI"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
-    <Grid>
+        Title="Keresztrejtvény készítő" Height="550" Width="600"
+        Loaded="Window_Loaded">
+    <Grid Margin="10">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
 
+        <!-- Méret kiválasztás -->
+        <StackPanel Grid.Row="0" Orientation="Horizontal" Margin="0,0,0,10">
+            <TextBlock Text="Keresztrejtvény mérete (sor x oszlop):" VerticalAlignment="Center" Margin="0,0,10,0"/>
+            <ComboBox x:Name="cmbSorok" Width="50" Margin="0,0,5,0"/>
+            <ComboBox x:Name="cmbOszlopok" Width="50"/>
+        </StackPanel>
+
+        <!-- Gombok -->
+        <StackPanel Grid.Row="1" Orientation="Horizontal" Margin="0,0,0,10">
+            <Button x:Name="btnLetrehozas" Content="Keresztrejtvény létrehozása" Padding="10,5" Margin="0,0,10,0" Click="BtnLetrehozas_Click"/>
+            <Button x:Name="btnMentes" Content="Keresztrejtvény mentése" Padding="10,5" Margin="0,0,10,0" Click="BtnMentes_Click"/>
+            <ComboBox x:Name="cmbIndex" Width="50"/>
+        </StackPanel>
+
+        <!-- Rács konténer -->
+        <ScrollViewer Grid.Row="2" HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Auto">
+            <Grid x:Name="gridRacs"/>
+        </ScrollViewer>
     </Grid>
 </Window>
+
