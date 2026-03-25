@@ -1,0 +1,18 @@
+##RIDER AUTO GENERATED
+
+
+# Default ignored files
+/shelf/
+/workspace.xml
+
+# Rider ignored files
+/modules.xml
+/contentModel.xml
+/projectSettingsUpdater.xml
+
+# VS/Rider specific ignores (manual, like everything below)
+**/.vs
+**/.user
+**/.idea
+**/bin
+**/obj
