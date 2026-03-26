@@ -1,0 +1,17 @@
+﻿<Window x:Class="KarakterDekodoloGUI.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:KarakterDekodoloGUI"
+        mc:Ignorable="d"
+        Title="MainWindow" SizeToContent="WidthAndHeight" ResizeMode="CanResize">
+    <StackPanel Margin="10">
+        <StackPanel Orientation="Horizontal" Margin="0,0,0,10">
+            <Label Content="Karakter" VerticalAlignment="Center" />
+            <TextBox x:Name="tbKarakter" Width="30" Height="25" VerticalAlignment="Center"
+                     HorizontalContentAlignment="Center" VerticalContentAlignment="Center" />
+        </StackPanel>
+        <Grid x:Name="gridMatrix" />
+    </StackPanel>
+</Window>

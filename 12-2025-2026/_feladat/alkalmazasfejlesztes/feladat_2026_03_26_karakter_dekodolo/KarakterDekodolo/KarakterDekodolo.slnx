@@ -1,0 +1,4 @@
+<Solution>
+  <Project Path="KarakterDekodolo/KarakterDekodolo.csproj" />
+  <Project Path="KarakterDekodoloGUI/KarakterDekodoloGUI.csproj" />
+</Solution>
