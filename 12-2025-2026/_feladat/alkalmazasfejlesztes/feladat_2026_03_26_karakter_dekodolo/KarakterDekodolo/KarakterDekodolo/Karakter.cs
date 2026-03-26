@@ -19,6 +19,17 @@
             }
         }
 
-        
+        public bool Felismer(Karakter felismerendo)
+        {
+            for (int i = 0; i < Matrix.Length; i++)
+            {
+                if (Matrix[i] != felismerendo.Matrix[i])
+                {
+                    return false;
+                }
+            }
+
+            return true;
+        }
     }
 }
