@@ -4,20 +4,14 @@
     {
         static void Main(string[] args)
         {
-            // 4. feladat - bank.txt beolvasása
             List<Karakter> karakterBank = Beolvas("bank.txt");
 
-            // 5. feladat
-            Console.WriteLine("5. feladat");
-            Console.WriteLine($"A karakterbankban {karakterBank.Count} karakter talalhato.");
-            Console.WriteLine();
+            Console.WriteLine($"5. feladat: Karakterek száma: {karakterBank.Count}");
 
-            // 6. feladat
-            Console.WriteLine("6. feladat");
             char betu;
             do
             {
-                Console.Write("Kerek egy angol nagybetut: ");
+                Console.Write("6. feladat: Kérek egy angol nagybetűt: ");
                 string? bemenet = Console.ReadLine();
                 if (!string.IsNullOrEmpty(bemenet) && bemenet.Length == 1 && bemenet[0] >= 'A' && bemenet[0] <= 'Z')
                 {
@@ -27,10 +21,8 @@
 
                 Console.WriteLine("Hibas bemenet! Kerem, adjon meg egy angol nagybetut (A-Z)!");
             } while (true);
-            Console.WriteLine();
 
-            // 7. feladat
-            Console.WriteLine("7. feladat");
+            Console.WriteLine("7. feladat:");
             Karakter? talalt = karakterBank.Find(k => k.Betu == betu);
             if (talalt != null)
             {
@@ -40,13 +32,10 @@
             {
                 Console.WriteLine("Nincs ilyen karakter a bankban!");
             }
-            Console.WriteLine();
 
-            // 8. feladat - dekodol.txt beolvasása
             List<Karakter> dekodolando = Beolvas("dekodol.txt");
 
-            // 9. feladat
-            Console.WriteLine("9. feladat");
+            Console.WriteLine("9. feladat: Dekódolás");
             string szo = "";
             foreach (Karakter dk in dekodolando)
             {
@@ -67,7 +56,7 @@
                 }
             }
 
-            Console.WriteLine($"A dekodolt szo: {szo}");
+            Console.WriteLine(szo);
         }
 
         static List<Karakter> Beolvas(string fajlNev)
