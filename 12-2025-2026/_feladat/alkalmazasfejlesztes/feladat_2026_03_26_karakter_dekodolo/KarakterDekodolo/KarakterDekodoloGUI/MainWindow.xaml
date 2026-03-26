@@ -5,8 +5,13 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:KarakterDekodoloGUI"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
-    <Grid>
-
-    </Grid>
+        Title="MainWindow" SizeToContent="WidthAndHeight" ResizeMode="CanResize">
+    <StackPanel Margin="10">
+        <StackPanel Orientation="Horizontal" Margin="0,0,0,10">
+            <Label Content="Karakter" VerticalAlignment="Center" />
+            <TextBox x:Name="tbKarakter" Width="30" Height="25" VerticalAlignment="Center"
+                     HorizontalContentAlignment="Center" VerticalContentAlignment="Center" />
+        </StackPanel>
+        <Grid x:Name="gridMatrix" />
+    </StackPanel>
 </Window>
