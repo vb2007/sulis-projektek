@@ -18,8 +18,6 @@
                     betu = bemenet[0];
                     break;
                 }
-
-                Console.WriteLine("Hibas bemenet! Kerem, adjon meg egy angol nagybetut (A-Z)!");
             } while (true);
 
             Console.WriteLine("7. feladat:");
