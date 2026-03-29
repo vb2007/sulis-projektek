@@ -35,7 +35,6 @@ $menuItems = [
     ],
 ];
 
-// Apply filters
 if (!empty($_GET["manufacturer_id"])) {
     $televisions = array_filter(
         $televisions,
