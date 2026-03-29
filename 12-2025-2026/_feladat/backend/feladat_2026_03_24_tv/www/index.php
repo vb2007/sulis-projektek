@@ -35,6 +35,28 @@ $menuItems = [
     ],
 ];
 
+// Apply filters
+if (!empty($_GET["manufacturer_id"])) {
+    $televisions = array_filter(
+        $televisions,
+        fn($tv) => $tv->manufacturer_id == $_GET["manufacturer_id"],
+    );
+}
+
+if (!empty($_GET["minimum_size"])) {
+    $televisions = array_filter(
+        $televisions,
+        fn($tv) => $tv->size >= $_GET["minimum_size"],
+    );
+}
+
+if (!empty($_GET["maximum_size"])) {
+    $televisions = array_filter(
+        $televisions,
+        fn($tv) => $tv->size <= $_GET["maximum_size"],
+    );
+}
+
 if ($page === "seller") {
     //ár szerint növekvő
     usort($televisions, fn($a, $b) => $a->price <=> $b->price);
@@ -62,6 +84,9 @@ $title = "TV " . count($televisions) . " darab";
     </head>
 
     <body class="min-h-screen flex flex-col">
+        <?php include __DIR__ . "/components/menu.php"; ?>
+        <?php include __DIR__ . "/pages/{$page}.php"; ?>
+        <?php include __DIR__ . "/components/footer.php"; ?>
     </body>
 
 </html>
