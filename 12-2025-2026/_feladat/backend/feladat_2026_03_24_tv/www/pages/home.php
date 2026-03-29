@@ -11,9 +11,11 @@
                     <h2 class="mb-2 text-2xl font-bold text-cyan-700">
                         Eladói oldal
                     </h2>
-                    <p class="text-gray-600">
-                        Tekintse meg televízióinkat táblázatos formában, ár szerint rendezve.
-                    </p>
+                    <ul class="text-gray-600">
+                        <li>Samsung</li>
+                        <li>LG</li>
+                        <li>Philips</li>
+                    </ul>
                 </div>
             </a>
 
@@ -23,9 +25,11 @@
                     <h2 class="mb-2 text-2xl font-bold text-cyan-700">
                         Termékek oldal
                     </h2>
-                    <p class="text-gray-600">
-                        Böngésszen televízióink között kártyás nézetben, képekkel és részletes információkkal.
-                    </p>
+                    <ul class="text-gray-600">
+                        <li>Samsung</li>
+                        <li>LG</li>
+                        <li>Philips</li>
+                    </ul>
                 </div>
             </a>
         </div>
