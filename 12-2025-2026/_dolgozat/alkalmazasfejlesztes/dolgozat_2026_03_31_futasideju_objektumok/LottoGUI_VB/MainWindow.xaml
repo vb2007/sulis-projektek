@@ -1,0 +1,22 @@
+﻿<Window x:Class="LottoGUI_VB.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:LottoGUI_VB"
+        mc:Ignorable="d"
+        Title="Lottósorsolás" MinWidth="400" MinHeight="450" SizeToContent="WidthAndHeight" ResizeMode="CanResize">
+    <StackPanel Margin="8">
+        <GroupBox Header="Játékmód">
+            <StackPanel Orientation="Horizontal">
+                <RadioButton x:Name="rbOtos" Content="Ötös" Margin="10,5" IsChecked="True" Click="GameModeChange_Click"></RadioButton>
+                <RadioButton x:Name="rbHatos" Content="Hatos" Margin="50,5" Click="GameModeChange_Click"></RadioButton>
+                <RadioButton x:Name="rbSkandinav" Content="Skandináv" Margin="25,5" Click="GameModeChange_Click"></RadioButton>
+            </StackPanel>
+        </GroupBox>
+        <UniformGrid x:Name="gridNumbers" Rows="5" Columns="9" Margin="0,0,0,10"></UniformGrid>
+        <Button x:Name="btnRoll" Content="Sorsolás" HorizontalAlignment="Left" Padding="30,5" IsEnabled="False" Click="BtnRoll_Click"></Button>
+        <TextBlock x:Name="tbDrawn" Margin="0,10,0,0" Visibility="Collapsed"></TextBlock>
+        <TextBlock x:Name="tbResult" Margin="0,5,0,0" Visibility="Collapsed"></TextBlock>
+    </StackPanel>
+</Window>
