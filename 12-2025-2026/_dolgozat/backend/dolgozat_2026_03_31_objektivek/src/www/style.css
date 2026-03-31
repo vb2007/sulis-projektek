@@ -1,0 +1,53 @@
+@layer base {
+    input[type="submit"], button {
+        background-color: black;
+        color: white;
+        border-radius: .5rem;
+        padding: calc(.25rem - 1rem / 16) .5rem;
+        cursor: pointer;
+    }
+
+    input:not([type="submit"]), select {
+        padding: .125rem .25rem;
+        border-radius: .25rem;
+        box-shadow: 0 0 .1rem oklch(70.5% 0.015 286.067);
+        background-color: white;
+
+        &:hover, &:active, &:focus {
+            background-color: oklch(96.8% 0.007 247.896);
+        }
+    }
+
+    select {
+        min-height: 30px;
+    }
+
+    form {
+        display: grid;
+        gap: .25rem;
+        margin-bottom: 1rem;
+    }
+
+    @media screen and (width >= 640px) {
+        form {
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: repeat(4, auto);
+        }
+        input[type="submit"], button {
+            grid-column: span 2;
+        }
+    }
+
+    @media screen and (width >= 1024px) {
+        form {
+            grid-template-columns: repeat(4, 1fr);
+            grid-template-rows: repeat(2, auto);
+            grid-auto-flow: column;
+        }
+
+        input[type="submit"], button {
+            grid-row: span 2;
+            align-self: end;
+        }
+    }
+}
