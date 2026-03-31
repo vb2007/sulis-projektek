@@ -18,6 +18,13 @@ public class LeapYearTest
     public void Year2024()
     {
         int year = 2024;
-        Assert.That(LeapYear.IsLeapYear(year), Is.True, $"Ha az év {year}, a várható eredmény True, de a teszt False-t adott vissza.");
+        Assert.That(LeapYear.IsLeapYear(year), Is.True, ErrorMessage(year, true, false));
+    }
+
+    [Test]
+    public void Year1900()
+    {
+        int year = 1900;
+        Assert.That(LeapYear.IsLeapYear(year), Is.False, ErrorMessage(year, false, true));
     }
 }
