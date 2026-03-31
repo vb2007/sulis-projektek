@@ -1,0 +1,13 @@
+{
+    "name": "vb2007/objektivek",
+    "require": {
+        "filp/whoops": "^2.18",
+        "nesbot/carbon": "^3.11"
+    },
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Media\\": "src/Media"
+        }
+    }
+}
