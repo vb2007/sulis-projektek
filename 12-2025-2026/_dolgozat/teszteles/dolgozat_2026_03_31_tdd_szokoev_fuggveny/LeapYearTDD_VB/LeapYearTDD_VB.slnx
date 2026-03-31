@@ -1,4 +1,5 @@
 <Solution>
   <Project Path="LeapYearTDD_VB_Console/LeapYearTDD_VB_Console.csproj" />
   <Project Path="LeapYearTDD_VB_Library/LeapYearTDD_VB_Library.csproj" />
+  <Project Path="LeapYearTDD_VB_Test\LeapYearTDD_VB_Test.csproj" />
 </Solution>
