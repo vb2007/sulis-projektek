@@ -27,4 +27,11 @@ public class LeapYearTest
         int year = 1900;
         Assert.That(LeapYear.IsLeapYear(year), Is.False, ErrorMessage(year, false, true));
     }
+
+    [Test]
+    public void Year2000()
+    {
+        int year = 2000;
+        Assert.That(LeapYear.IsLeapYear(year), Is.True, ErrorMessage(year, true, false));
+    }
 }
