@@ -2,11 +2,15 @@
 
 namespace LeapYearTDD_VB_Test;
 
+[TestFixture]
 public class LeapYearTest
 {
     [Test]
-    public void IsLeapYear()
+    public void Year2021()
     {
-        Assert.Pass();
+        int year = 2021;
+        Assert.That(LeapYear.IsLeapYear(year), Is.False, $"Ha az év {year}, a várható eredmény False, de a teszt True-t adott vissza.");
     }
+
+    
 }

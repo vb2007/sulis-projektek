@@ -4,6 +4,6 @@ public class LeapYear
 {
     public static bool IsLeapYear(int leapYear)
     {
-        return false;
+        return true;
     }
 }
