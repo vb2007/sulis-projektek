@@ -29,7 +29,7 @@ const renderBases = async () => {
 
         const cityIdDiv = document.createElement("div");
         cityIdDiv.classList.add("text-xs", "text-slate-400", "font-mono");
-        cityIdDiv.textContent = `#${base.id}`;
+        cityIdDiv.textContent = `UUID: ${base.id}`;
 
         tdCity.appendChild(cityNameDiv);
         tdCity.appendChild(cityIdDiv);
@@ -54,8 +54,8 @@ const renderBases = async () => {
         icaoSpan.textContent = base.icao_airport_code;
 
         const runwaySpan = document.createElement("span");
-        runwaySpan.classList.add("text-slate-400", "text-sm", "italic");
-        runwaySpan.textContent = `${base.max_runway_length} m`;
+        runwaySpan.classList.add("ml-4", "text-slate-400", "text-sm", "italic");
+        runwaySpan.textContent = base.max_runway_length != "NULL" ? `${base.max_runway_length} m` : "Nincs adat";
 
         icaoDiv.appendChild(icaoSpan);
         icaoDiv.appendChild(runwaySpan);
