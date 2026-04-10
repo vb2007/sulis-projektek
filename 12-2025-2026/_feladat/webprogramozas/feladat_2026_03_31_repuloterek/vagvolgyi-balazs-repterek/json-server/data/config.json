@@ -1,16 +1,15 @@
 {
     "timestamps": false,
-    "relationships":[
+    "relationships": [
         {
-            "source": "posts",
-            "destination": "comments",
+            "source": "airlines",
+            "destination": "bases",
             "type": "hasMany"
         },
         {
-            "source": "comments",
-            "destination": "posts",
+            "source": "bases",
+            "destination": "airlines",
             "type": "belongsTo"
         }
-        
     ]
 }

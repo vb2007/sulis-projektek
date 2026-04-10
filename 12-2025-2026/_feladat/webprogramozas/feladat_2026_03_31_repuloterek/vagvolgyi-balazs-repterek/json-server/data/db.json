@@ -1,10 +1,65 @@
 {
-  "posts": [
-    { "id": "1", "title": "a title", "views": 100 },
-    { "id": "2", "title": "another title", "views": 200 }
+  "airlines": [
+    {
+      "id": "1",
+      "name": "Ryanair",
+      "icao_code": "RYR",
+      "founded_at": "1984-11-28",
+      "fleet_size": "565",
+      "country": "Írország"
+    },
+    {
+      "id": "2",
+      "name": "Wizz Air",
+      "icao_code": "WZZ",
+      "founded_at": "2003-09-04",
+      "fleet_size": "206",
+      "country": "Magyarország"
+    },
+    {
+      "id": "3",
+      "name": "Lufthansa",
+      "icao_code": "DLH",
+      "founded_at": "1953-01-06",
+      "fleet_size": "280",
+      "country": "Németország"
+    }
   ],
-  "comments": [
-    { "id": "1", "text": "a comment about post 1", "post_id": "1" },
-    { "id": "2", "text": "another comment about post 1", "post_id": "1" }
+  "bases": [
+    {
+      "id": "1",
+      "airline_id": "1",
+      "icao_airport_code": "EGSS",
+      "max_runway_length": "3048",
+      "city": "London"
+    },
+    {
+      "id": "2",
+      "airline_id": "1",
+      "icao_airport_code": "EIDW",
+      "max_runway_length": "2637.5",
+      "city": "Dublin"
+    },
+    {
+      "id": "3",
+      "airline_id": "2",
+      "icao_airport_code": "LHBP",
+      "max_runway_length": "3707",
+      "city": "Budapest"
+    },
+    {
+      "id": "4",
+      "airline_id": "2",
+      "icao_airport_code": "EPWA",
+      "max_runway_length": "NULL",
+      "city": "Varsó"
+    },
+    {
+      "id": "5",
+      "airline_id": "3",
+      "icao_airport_code": "EDDF",
+      "max_runway_length": "4000",
+      "city": "Frankfurt"
+    }
   ]
 }
