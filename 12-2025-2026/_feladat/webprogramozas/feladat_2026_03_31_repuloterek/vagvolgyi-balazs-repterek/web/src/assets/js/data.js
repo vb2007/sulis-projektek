@@ -9,3 +9,12 @@ export const fetchBases = async () => {
 
     return results.data || results;
 };
+
+export const createBase = async (formData) => {
+    const response = await fetch(`${BASE_URL}/bases`, {
+        method: "POST",
+        body: formData,
+    });
+
+    return response.json();
+};

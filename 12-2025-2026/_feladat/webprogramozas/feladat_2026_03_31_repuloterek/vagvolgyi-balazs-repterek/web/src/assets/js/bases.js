@@ -1,5 +1,4 @@
-import { fetchBases } from "./data.js";
-import { BASE_URL } from "./config.js";
+import { fetchBases, createBase } from "./data.js";
 
 const renderBases = async () => {
     const bases = await fetchBases();
@@ -79,10 +78,7 @@ form.addEventListener("submit", async (e) => {
 
     const formData = new FormData(form);
 
-    await fetch(`${BASE_URL}/bases`, {
-        method: "POST",
-        body: formData,
-    });
+    await createBase(formData);
 
     form.reset();
     await renderBases();
