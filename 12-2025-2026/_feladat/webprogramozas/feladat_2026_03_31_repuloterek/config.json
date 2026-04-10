@@ -1,15 +1,15 @@
 {
-  "timestamps": false,
-  "relationships": [
-    {
-      "source": "airlines",
-      "destination": "bases",
-      "type": "hasMany"
-    },
-    {
-      "source": "bases",
-      "destination": "airlines",
-      "type": "belongsTo"
-    }
-  ]
+    "timestamps": false,
+    "relationships": [
+        {
+            "source": "airlines",
+            "destination": "bases",
+            "type": "hasMany"
+        },
+        {
+            "source": "bases",
+            "destination": "airlines",
+            "type": "belongsTo"
+        }
+    ]
 }
