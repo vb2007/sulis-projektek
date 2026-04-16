@@ -1,9 +1,12 @@
-﻿namespace Matrixok_VB;
+﻿using Matrixok_VB_Lib;
+
+namespace Matrixok_VB;
 
 class Program
 {
     static void Main(string[] args)
     {
-        Console.WriteLine("Hello, World!");
+        int[,] nullMatrix = Matrix.CreateNullmatrix();
+        Matrix.WriteMatrix("Nullmátrix", nullMatrix);
     }
 }
