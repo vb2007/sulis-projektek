@@ -112,4 +112,24 @@ public class Matrix
 
         return _matrix;
     }
+    
+    public static int[,] CreateSymmetricMatrix()
+    {
+        for (int i = 0; i < _matrix.GetLength(0); i++)
+        {
+            for (int j = 0; j < _matrix.GetLength(1); j++)
+            {
+                if (i <= j)
+                {
+                    _matrix[i, j] = Random.Shared.Next(0, 100);
+                }
+                else
+                {
+                    _matrix[i, j] = _matrix[j, i];
+                }
+            }
+        }
+
+        return _matrix;
+    }
 }

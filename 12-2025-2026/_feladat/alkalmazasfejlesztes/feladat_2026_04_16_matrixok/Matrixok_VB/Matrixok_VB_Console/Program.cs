@@ -20,5 +20,8 @@ class Program
 
         int[,] lowerTriangularMatrix = Matrix.CreateLowerTriangularMatrix();
         Matrix.WriteMatrix("Alsó háromszögmátrix", lowerTriangularMatrix);
+
+        int[,] symmetriMatrix = Matrix.CreateSymmetricMatrix();
+        Matrix.WriteMatrix("Szimmetrikusmátrix", symmetriMatrix);
     }
 }
