@@ -17,5 +17,8 @@ class Program
 
         int[,] upperTriangularMatrix = Matrix.CreateUpperTriangularMatrix();
         Matrix.WriteMatrix("Felső háromszögmátrix", upperTriangularMatrix);
+
+        int[,] lowerTriangularMatrix = Matrix.CreateLowerTriangularMatrix();
+        Matrix.WriteMatrix("Alsó háromszögmátrix", lowerTriangularMatrix);
     }
 }
