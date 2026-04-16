@@ -1,3 +1,4 @@
 <Solution>
-  <Project Path="Matrixok_VB/Matrixok_VB.csproj" />
+  <Project Path="Matrixok_VB_Console\Matrixok_VB_Console.csproj" />
+  <Project Path="Matrixok_VB_Lib/Matrixok_VB_Lib.csproj" />
 </Solution>
