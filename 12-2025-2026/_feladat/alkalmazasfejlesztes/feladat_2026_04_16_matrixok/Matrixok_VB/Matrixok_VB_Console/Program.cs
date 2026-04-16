@@ -14,5 +14,8 @@ class Program
 
         int[,] diagonalMatrix = Matrix.CreateDiagonalMatrix();
         Matrix.WriteMatrix("Diagonálismátrix", diagonalMatrix);
+
+        int[,] upperTriangularMatrix = Matrix.CreateUpperTriangularMatrix();
+        Matrix.WriteMatrix("Felső háromszögmátrix", upperTriangularMatrix);
     }
 }
