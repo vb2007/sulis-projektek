@@ -7,6 +7,11 @@ public class DatabaseServiceTests
 {
     protected DatabaseService _service;
     protected const string TestDbPath = "test_library.db";
+    
+    // 1. feladat:
+    // Az alábbiak miatt lenne rossz gyakorlat minden tesztnél meghívni az OpenConnection() és a CloseConnection() metódusokat:
+    // - Kódismétlés: Minden teszthez ugyanazt a kódot kellene bemásolni (nehezebb karbantartás, kód ismétlése)
+    // - Hibalehetőség: Könnyen elfelejthetjük meghívni ezeket a metódusokat egy tesztnél, ami hibákhoz vezethet
 
     // TODO: Írd meg a SetUp-ot, amely példányosítja a DatabaseService-t a TestDbPath paraméterrel!
     [SetUp]
