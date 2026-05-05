@@ -9,8 +9,24 @@ namespace SetupTearDownFeladat.Tests
         protected const string TestDbPath = "test_library.db";
 
         // TODO: Írd meg a SetUp-ot, amely példányosítja a DatabaseService-t a TestDbPath paraméterrel!
+        [SetUp]
+        public void SetUp()
+        {
+            DatabaseService db = new DatabaseService(TestDbPath);
+            db.OpenConnection();
+            _service = db;
+        }
         
-        // TODO: Írd meg a Teardown-t, amely bezárja a kapcsolatot és törli is a fájlt, ha létezik! 
+        // TODO: Írd meg a Teardown-t, amely bezárja a kapcsolatot és törli is a fájlt, ha létezik!
+        [TearDown]
+        public void TearDown()
+        {
+            _service.CloseConnection();
+            
+            if (File.Exists(TestDbPath)) {
+                File.Delete(TestDbPath);
+            }
+        }
         
         // Ellenőrizd, hogy a megfelelő SetUp és Teardown megírása után sikeresen lefutnak-e a tesztek!
         
@@ -43,6 +59,5 @@ namespace SetupTearDownFeladat.Tests
         {
             Assert.That(_service.IsConnected, Is.True);
         }
-        
     }
 }
