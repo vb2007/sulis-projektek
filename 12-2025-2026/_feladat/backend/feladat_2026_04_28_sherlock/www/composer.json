@@ -9,5 +9,10 @@
             "name": "VB2007",
             "email": "admin@vb2007.hu"
         }
-    ]
+    ],
+    "autoload": {
+        "psr-4": {
+            "Series\\": "src/Series"
+        }
+    }
 }
