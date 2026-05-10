@@ -16,3 +16,16 @@ if (!empty($_GET["action"])) {
         $action = "404";
     }
 }
+
+$menuItems = [
+    [
+        "text" => "Főoldal",
+        "url" => "index.php",
+        "active" => $action == "home",
+    ],
+    [
+        "text" => "Új epizód",
+        "url" => "index.php?action=create",
+        "active" => $action == "create",
+    ],
+];
