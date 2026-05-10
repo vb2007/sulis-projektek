@@ -18,13 +18,13 @@
                        absolute md:static top-16 left-0 w-full md:w-auto
                        bg-teal-800 md:bg-transparent
                        px-4 md:px-0 py-3 md:py-0">
-                
-                    <li>
-                        <a href="URL" class="block py-2 px-2 text-sm font-medium transition">
-                            MENÜPONT NEVE
+                <?php foreach ($menuItems as $menuItem): ?>
+                    <li class="<?= $menuItem["active"] ? "text-white md:border-b-2 md:border-white" : "text-slate-200 hover:text-white" ?>">
+                        <a href="<?= $menuItem["url"] ?>" class="block py-2 px-2 text-sm font-medium transition">
+                            <?= $menuItem["text"] ?>
                         </a>
                     </li>
-
+                <?php endforeach; ?>
             </ul>
 
         </div>

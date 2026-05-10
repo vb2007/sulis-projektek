@@ -47,7 +47,7 @@ $menuItems = [
 </head>
 
 <body class="min-h-screen flex flex-col">
-
+    <?php include __DIR__ . "/components/menu.php"; ?>
 </body>
 
 </html>
