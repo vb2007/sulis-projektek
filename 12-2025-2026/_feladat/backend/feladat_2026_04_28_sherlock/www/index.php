@@ -1,5 +1,6 @@
 <?php
 
+ob_start();
 error_reporting(E_ALL);
 
 require __DIR__ . "/vendor/autoload.php";
@@ -54,3 +55,4 @@ $menuItems = [
 </body>
 
 </html>
+<?php ob_end_flush(); ?>
