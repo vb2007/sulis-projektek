@@ -3,7 +3,7 @@
 use Series\Bbc\Sherlock;
 
 $episodes = [];
-$file = file_get_contents("./sherlock.csv");
+$file = file_get_contents(__DIR__ . "/sherlock.csv");
 $lines = explode("\n", $file);
 
 for ($i = 1; $i < count($lines); $i++) {
