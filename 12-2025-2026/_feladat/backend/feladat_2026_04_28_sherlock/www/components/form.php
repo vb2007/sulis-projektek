@@ -23,4 +23,8 @@
         <label for="viewers">Nézők száma (millió)</label>
         <input type="number" id="viewers" name="viewers" class="px-2 py-2 border border-slate-300 focus:border-slate-500 focus:ring focus:ring-slate-500">
     </div>
+
+    <div>
+        <input type="submit" value="Mentés" class="text-white bg-gradient-to-r from-green-400">
+    </div>
 </form>
