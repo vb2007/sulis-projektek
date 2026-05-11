@@ -68,7 +68,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 }
 ?>
 
-<div class="mx-auto max-w-7xl px-4 py-4 flex-grow create overflow-hidden">
+<div class="mx-auto min-w-7xl px-4">
     <h1 class="my-4 text-center text-4xl font-bold text-slate-600"><?= $title ?></h1>
 
     <?php include __DIR__ . "/../components/form.php"; ?>
