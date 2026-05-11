@@ -13,7 +13,9 @@ $action = "home";
 $title = "Sherlock epizódok";
 if (!empty($_GET["action"])) {
     $action = $_GET["action"];
-    if ($action != "create") {
+    if ($action == "create") {
+        $title = "Új epizód";
+    } else {
         $action = "404";
         $title = "404";
         header("HTTP/1.0 404 Not Found");
@@ -48,6 +50,7 @@ $menuItems = [
 
 <body class="min-h-screen flex flex-col">
     <?php include __DIR__ . "/components/menu.php"; ?>
+    <?php include __DIR__ . "/pages/$action.php"; ?>
 </body>
 
 </html>
