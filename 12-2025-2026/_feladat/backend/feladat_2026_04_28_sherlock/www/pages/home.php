@@ -1,5 +1,5 @@
 <!-- Nem volt benne a template-ben?? Minta alapján random összedobtam. -->
-<div class="mx-auto max-w-7xl px-4 py-4 flex-grow home">
+<div class="mx-auto min-w-7xl px-4">
     <h1 class="my-4 text-center text-4xl font-bold text-slate-600"><?= $title ?></h1>
 
     <div class="overflow-x-auto border border-slate-200 shadow-sm">
