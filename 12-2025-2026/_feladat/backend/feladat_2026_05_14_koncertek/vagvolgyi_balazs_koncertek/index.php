@@ -4,11 +4,12 @@ require __DIR__ . '/vendor/autoload.php';
 $whoops = new \Whoops\Run;
 $whoops->pushHandler(new \Whoops\Handler\PrettyPageHandler);
 $whoops->register();
+ob_start();
 
 $title = 'Koncertek';
-
-ob_start();
+$action = $_GET["action"];
 ?>
+
 <!DOCTYPE html>
 <html lang="hu">
 <head>
@@ -24,10 +25,39 @@ ob_start();
     ?>
     
     <main class="w-11/12 max-w-340 mx-auto my-4 overflow-scroll">
-        
+        <?php
+        switch ($action) {
+            case "index":
+                include __DIR__ . "/pages/" . $layout . ".php";
+                $layout = $_GET["layout"];
+                break;
+
+            case "show":
+                $id = $_GET["id"];
+                include __DIR__ . "pages/show.php";
+                break;
+
+            case "create":
+                include __DIR__ . "pages/create.php";
+                break;
+
+            case "store":
+                include __DIR__ . "pages/table.php";
+                break;
+
+            case "404":
+                include __DIR__ . "pages/404.php";
+                break;
+                
+            default:
+                include __DIR__ . "pages/grid.php";
+                break;
+        }
+        ?>
     </main>
 
 </body>
 </html>
+
 <?php
 ob_end_flush();
