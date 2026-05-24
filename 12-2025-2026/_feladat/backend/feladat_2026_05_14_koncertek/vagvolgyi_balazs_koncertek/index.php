@@ -28,6 +28,7 @@ $action = $_GET["action"];
         <?php
         switch ($action) {
             case "index":
+                $title = "Koncertek";
                 $layout = $_GET["layout"];
                 switch ($layout) {
                     case "grid":
@@ -45,11 +46,13 @@ $action = $_GET["action"];
                 break;
 
             case "show":
+                $title = "--koncert neve--";
                 $id = $_GET["id"];
                 include __DIR__ . "pages/show.php";
                 break;
 
             case "create":
+                $title = "Koncert rögzítése";
                 include __DIR__ . "pages/create.php";
                 break;
 
@@ -58,6 +61,7 @@ $action = $_GET["action"];
                 break;
 
             case "404":
+                $title = "Koncertek";
                 include __DIR__ . "pages/404.php";
                 break;
 
