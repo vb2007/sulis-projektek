@@ -1,5 +1,6 @@
 <?php
 require __DIR__ . '/vendor/autoload.php';
+use Event\Party\Concert;
 
 $whoops = new \Whoops\Run;
 $whoops->pushHandler(new \Whoops\Handler\PrettyPageHandler);
@@ -8,6 +9,9 @@ ob_start();
 
 $title = 'Koncertek';
 $action = $_GET["action"] ?? null;
+
+$lines = array_slice(file("concerts.csv"), FILE_IGNORE_NEW_LINES | FILE_SKIP_EMPTY_LINES, 1);
+$concerts = array_map(Concert::fromCsvLine(...), $lines);
 ?>
 
 <!DOCTYPE html>
