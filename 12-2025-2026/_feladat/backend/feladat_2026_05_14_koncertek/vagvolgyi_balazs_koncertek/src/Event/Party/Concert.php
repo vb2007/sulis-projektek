@@ -48,4 +48,9 @@ class Concert implements Stringable {
     public static function getTypes(): array {
         return self::$types;
     }
+
+    public static function fromCsvLine(string $line): self {
+        [$id, $name, $location, $type, $date, $price] = str_getcsv($line, ";");
+        return new self((int)$id, $name, $location, $type, $date, (int)$price);
+    }
 }
