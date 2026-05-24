@@ -3,6 +3,11 @@
     "require": {
         "filp/whoops": "^2.18"
     },
+    "autoload": {
+        "psr-4": {
+            "Event\\": "src/Event"
+        }
+    },
     "license": "MIT",
     "authors": [
         {
