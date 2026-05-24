@@ -28,8 +28,20 @@ $action = $_GET["action"];
         <?php
         switch ($action) {
             case "index":
-                include __DIR__ . "/pages/" . $layout . ".php";
                 $layout = $_GET["layout"];
+                switch ($layout) {
+                    case "grid":
+                        include __DIR__ . "/pages/grid.php";
+                        break;
+                        
+                    case "table":
+                        include __DIR__ . "/pages/table.php";
+                        break;
+
+                    default:
+                        include __DIR__ . "pages/grid.php";
+                        break;
+                }
                 break;
 
             case "show":
@@ -48,7 +60,7 @@ $action = $_GET["action"];
             case "404":
                 include __DIR__ . "pages/404.php";
                 break;
-                
+
             default:
                 include __DIR__ . "pages/grid.php";
                 break;
