@@ -1,7 +1,7 @@
 const bodyParser = require('body-parser')
 const jsonServer = require('json-server')
 const server = jsonServer.create()
-const router = jsonServer.router('data/db.json')
+const router = jsonServer.router('./data/db.json')
 const config = require('./data/config.json')
 const pluralize = require('pluralize')
 
@@ -13,6 +13,8 @@ const forms = multer()
 const middlewares = jsonServer.defaults()
 
 server.use(middlewares)
+
+server.use(jsonServer.rewriter(require('./data/routes.json')))
 
 server.use(jsonServer.bodyParser)
 server.use(forms.array())
@@ -48,7 +50,7 @@ router.render = (req, res) => {
         belongsToSingle(relationship, req, data)
     }
 
-    res.jsonp({ data })
+    res.jsonp(data)
 
 
 }
