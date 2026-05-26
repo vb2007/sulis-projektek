@@ -1,6 +1,6 @@
 import { BASE_URL } from "./config.js";
 
-const dogbreeds = [
+export const dogbreeds = [
     "Tacskó",
     "Németjuhász",
     "Golden retriever",
@@ -18,9 +18,9 @@ export const getDogs = async () => {
         throw new Error(`A szerver ${response.status} kóddal válaszolt a(z) ${response.url} útvonalon`);
     }
 
-    const results = await response.json();
+    const result = await response.json();
 
-    return results.data || results;
+    return result.data || result;
 }
 
 export const createDog = async (dog) => {
@@ -34,10 +34,10 @@ export const createDog = async (dog) => {
     });
 
     if (!response.ok) {
-        throw new Error(`A szerver ${response.status} kóddal válaszolt a(z) ${response.url} útvonalon`)
+        throw new Error(`A szerver ${response.status} kóddal válaszolt a(z) ${response.url} útvonalon`);
     }
 
-    const results = await response.json();
+    const result = await response.json();
 
-    return results.data || results;
-}
+    return result.data || result;
+};
