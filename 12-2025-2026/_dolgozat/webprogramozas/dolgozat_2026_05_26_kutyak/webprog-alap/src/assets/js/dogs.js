@@ -1,8 +1,8 @@
 import { BASE_URL } from "./config.js";
 
 const dogbreeds = [
-    "Tacsk ́o",
-    "N ́emetjuh ́asz",
+    "Tacskó",
+    "Németjuhász",
     "Golden retriever",
     "Bulldog",
     "Beagle"
