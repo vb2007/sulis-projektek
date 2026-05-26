@@ -4,10 +4,79 @@
     <meta charset="UTF-8">
     <link rel="icon" href="/favicon.ico">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NJIT - Vite</title>
+    <title>Kutya nyilvántartás</title>
   </head>
-  <body>
-    <h1 class="text-6xl">Helló! 👋</h1>
+  <body class="bg-gray-100 min-h-screen p-6 font-sans">
+
+    <div class="max-w-6xl mx-auto">
+        <header class="flex justify-between items-center mb-8 border-b pb-4 border-gray-300">
+            <h1 class="text-3xl font-bold text-gray-800">Kutya Nyilvántartás</h1>
+            <button id="create-dog-button" class="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 px-4 rounded-lg shadow transition">
+                + Új kutya hozzáadása
+            </button>
+        </header>
+
+        <main>
+            <h2 class="text-xl font-semibold text-gray-700 mb-4">Regisztrált kutyáink</h2>
+            <div id="dogs-container" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            </div>
+        </main>
+    </div>
+
+    <template id="dog-card">
+        <div class="bg-white rounded-xl shadow-md overflow-hidden border border-gray-200 p-5 flex flex-col justify-between hover:shadow-lg transition">
+            <div>
+                <div class="flex justify-between items-start mb-2">
+                    <h3 class="name text-xl font-bold text-gray-900">NÉV</h3>
+                    <span class="breed bg-blue-100 text-blue-800 text-xs font-semibold px-2.5 py-0.5 rounded">FAJTA</span>
+                </div>
+                <div class="text-sm text-gray-600 space-y-1 mt-3">
+                    <p><strong>Kor:</strong> <span class="age">KOR</span> hónap</p>
+                    <p><strong>Gazda neve:</strong> <span class="owner">GAZDI NEVE</span></p>
+                </div>
+            </div>
+        </div>
+    </template>
+
+    <dialog id="dog-dialog" class="m-auto backdrop:bg-black/50 rounded-xl shadow-2xl p-6 w-full max-w-md border border-gray-200 bg-white">
+        <div class="flex justify-between items-center mb-4 border-b pb-2">
+            <h2 class="text-xl font-bold text-gray-800">Új kutya rögzítése</h2>
+            <button type="button" onclick="document.getElementById('dog-dialog').close()" class="text-gray-400 hover:text-gray-600 font-bold text-xl">&times;</button>
+        </div>
+
+        <form id="dog-form" method="dialog" class="space-y-4">
+            <div>
+                <label for="dog-name" class="block text-sm font-medium text-gray-700 mb-1">Kutya neve</label>
+                <input type="text" id="dog-name" name="name" class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+            </div>
+
+            <div>
+                <label for="breed" class="block text-sm font-medium text-gray-700 mb-1">Fajta</label>
+                <select id="breed" name="breed" class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 bg-white">
+                    <option value="" disabled selected>Válassz fajtát...</option>
+                </select>
+            </div>
+
+            <div>
+                <label for="dog-age" class="block text-sm font-medium text-gray-700 mb-1">Kor (hónap)</label>
+                <input type="number" id="dog-age" name="age" class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+            </div>
+
+            <div>
+                <label for="dog-owner" class="block text-sm font-medium text-gray-700 mb-1">Gazda neve</label>
+                <input type="text" id="dog-owner" name="owner" class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+            </div>
+
+            <div class="flex justify-end space-x-3 pt-4 border-t">
+                <button type="button" onclick="document.getElementById('dog-dialog').close()" class="px-4 py-2 bg-gray-200 hover:bg-gray-300 text-gray-800 rounded-lg font-medium transition">
+                    Mégse
+                </button>
+                <button type="submit" id="submit-dog-button" class="px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded-lg font-medium shadow transition">
+                    Mentés
+                </button>
+            </div>
+        </form>
+    </dialog>
     <script type="module" src="/src/main.js"></script>
-  </body>
+</body>
 </html>
