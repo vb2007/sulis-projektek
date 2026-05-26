@@ -9,9 +9,6 @@ ob_start();
 
 $title = 'Koncertek';
 $action = $_GET["action"] ?? null;
-
-$lines = array_slice(file("concerts.csv"), FILE_IGNORE_NEW_LINES | FILE_SKIP_EMPTY_LINES, 1);
-$concerts = array_map(Concert::fromCsvLine(...), $lines);
 ?>
 
 <!DOCTYPE html>
