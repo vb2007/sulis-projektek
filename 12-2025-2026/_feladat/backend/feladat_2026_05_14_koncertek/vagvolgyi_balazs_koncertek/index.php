@@ -1,5 +1,7 @@
 <?php
+require __DIR__ . '/data.php';
 require __DIR__ . '/vendor/autoload.php';
+
 use Event\Party\Concert;
 
 $whoops = new \Whoops\Run;

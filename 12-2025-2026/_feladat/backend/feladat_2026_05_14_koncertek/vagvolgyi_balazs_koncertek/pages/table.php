@@ -17,7 +17,7 @@
             <td class="p-1 text-center"><?= $concert->location ?></td>
             <td class="p-1 text-center"><?= $concert->type ?></td>
             <td class="p-1 text-center"><?= $concert->date->format('Y-m-d H:i:s') ?></td>
-            <td class="p-1 text-center"><span class="bg-violet-600 text-white p-1 rounded"><?= $concert->price ?></span></td>
+            <td class="p-1 text-center"><span class="bg-violet-600 text-white p-1 rounded"><?php $concert->price ? echo $concert->price . " Ft" . "Ingyenes"; ?></span></td>
         </tr>
         <?php endforeach; ?>
     </tbody>

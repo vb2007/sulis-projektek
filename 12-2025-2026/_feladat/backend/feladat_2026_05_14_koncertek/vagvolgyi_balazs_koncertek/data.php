@@ -1,6 +1,7 @@
 <?php
-
 declare(strict_types=1);
+
+require __DIR__ . "/vendor/autoload.php";
 
 use Event\Party\Concert;
 
@@ -14,11 +15,10 @@ for ($i = 1; $i < count($lines); $i++) {
         array_push($concerts, new Concert(
             (int) $split[0],
             $split[1],
-            (int) $split[2],
+            $split[2],
             $split[3],
-            $split[4],
-            $split[5],
-            (float) $split[6]
+            trim($split[4]),
+            (int) $split[5]
         ));
     }
 }
