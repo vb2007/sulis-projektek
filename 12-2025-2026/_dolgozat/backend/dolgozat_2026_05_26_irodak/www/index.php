@@ -43,8 +43,8 @@ else {
     switch ($action) {
         case "show":
             $id = $_GET["id"];
-            $title = "Irodák"; //TODO: iroda neve
-            $load = "show.php"; //TODO: query param
+            $title = $offices[$id-1]->name;
+            $load = "show.php";
             break;
 
         case "create":
