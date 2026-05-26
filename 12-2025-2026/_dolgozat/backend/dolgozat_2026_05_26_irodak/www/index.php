@@ -31,9 +31,11 @@ for ($i = 1; $i < count($lines); $i++) {
 
 $title = "";
 $action = "";
+$load = "";
 if(!isset($_GET["action"])) {
+    $action = "table";
     $title = "Irodák";
-    include __DIR__ . "/pages/table.php";
+    $load = "table.php";
 }
 else {
     $action = $_GET["action"];
@@ -42,17 +44,17 @@ else {
         case "show":
             $id = $_GET["id"];
             $title = "Irodák"; //TODO: iroda neve
-            include __DIR__ . "/pages/show.php"; //TODO: query param
+            $load = "show.php"; //TODO: query param
             break;
 
         case "create":
             $title = "Új iroda";
-            include __DIR__ . "/pages/create.php";
+            $load = "create.php";
             break;
 
         default:
             $title = "404";
-            include __DIR__ . "/pages/404.php";
+            $load = "404.php";
             break;
     }
 }
@@ -61,16 +63,30 @@ $menuItems = [
     [
         "text" => "Főoldal",
         "url" => "index.php",
-        "active" => ""
+        "active" => $action == ""
     ],
     [
         "text" => "Új iroda",
         "url" => "index.php?action=create",
-        "active" => ""
+        "active" => $action == "create"
     ]
 ];
 
 ?>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><?= $title ?></title>
+</head>
+<body>
+    <?php
+        include __DIR__ . "/pages/" . $load;
+    ?>
+</body>
+</html>
 
 <?php
 ob_end_flush();
