@@ -22,7 +22,7 @@ class Office {
 
     public function __get(string $property): mixed {
         if ($property == "image") {
-            return $_SERVER['DOCUMENT_ROOT'] . "/images/" . $this->id . ".png";
+            return "/images/" . $this->id . ".png";
         }
 
         if (property_exists($this, $property)) {
