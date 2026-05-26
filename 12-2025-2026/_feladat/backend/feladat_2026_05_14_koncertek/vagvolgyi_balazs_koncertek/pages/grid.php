@@ -5,10 +5,10 @@
         <div class="bg-violet-100 p-2 rounded-lg">
             <h2 class="text-xl font-bold mb-2"><?= $concert->name ?></h2>
             <ul class="mb-2">
-                <li><?= $concert->type ?></li>
+                <li><?= ucfirst($concert->type) ?></li>
                 <li><?= $concert->location ?></li>
-                <li><?= $concert->date ?></li>
-                <li><span class="bg-violet-600 text-white p-1 rounded"><?= $concert->price ?></span></li>
+                <li><?= $concert->date->format('Y-m-d H:i:s') ?></li>
+                <li><span class="bg-violet-600 text-white p-1 rounded"><?= $concert->price ?> Ft</span></li>
             </ul>
             <a class="bg-violet-600 text-white text-center p-1 block rounded-md cursor-pointer font-bold">Tovább</a>
         </div>

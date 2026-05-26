@@ -11,12 +11,14 @@
         </tr>
     </thead>
     <tbody>
+        <?php foreach($concerts as $concert): ?>
         <tr>
-            <td class="p-1 text-center"><a href="" class="text-violet-600 underline"><!-- Név --></a></td>
-            <td class="p-1 text-center"><!-- Helyszín --></td>
-            <td class="p-1 text-center"><!-- Típus --></td>
-            <td class="p-1 text-center"><!-- Dátum --></td>
-            <td class="p-1 text-center"><span class="bg-violet-600 text-white p-1 rounded"><!-- Ár --></span></td>
+            <td class="p-1 text-center"><a href="" class="text-violet-600 underline"><?= $concert->name ?></a></td>
+            <td class="p-1 text-center"><?= $concert->location ?></td>
+            <td class="p-1 text-center"><?= $concert->type ?></td>
+            <td class="p-1 text-center"><?= $concert->date->format('Y-m-d H:i:s') ?></td>
+            <td class="p-1 text-center"><span class="bg-violet-600 text-white p-1 rounded"><?= $concert->price ?></span></td>
         </tr>
+        <?php endforeach; ?>
     </tbody>
 </table>
