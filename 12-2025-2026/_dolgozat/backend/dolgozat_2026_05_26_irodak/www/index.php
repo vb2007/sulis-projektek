@@ -33,8 +33,8 @@ $title = "";
 $action = "";
 $load = "";
 if(!isset($_GET["action"])) {
-    $action = "table";
     $title = "Irodák";
+    $action = "table";
     $load = "table.php";
 }
 else {
@@ -55,6 +55,7 @@ else {
         default:
             $title = "404";
             $load = "404.php";
+            header("HTTP/1.1 404 Not Found");
             break;
     }
 }
@@ -63,7 +64,7 @@ $menuItems = [
     [
         "text" => "Főoldal",
         "url" => "index.php",
-        "active" => $action == ""
+        "active" => $action == "table"
     ],
     [
         "text" => "Új iroda",
@@ -82,10 +83,9 @@ $menuItems = [
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <title><?= $title ?></title>
 </head>
-<body>
-    <?php
-        include __DIR__ . "/pages/" . $load;
-    ?>
+<body class="min-h-screen flex flex-col">
+    <?= include __DIR__ . "/components/menu.php" ?>
+    <?= include __DIR__ . "/pages/" . $load; ?>
 </body>
 </html>
 
