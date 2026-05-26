@@ -7,7 +7,6 @@ const dogbreeds = [
     "Bulldog",
     "Beagle"
 ];
-let dogs = [];
 
 export const getDogs = async () => {
     const response = await fetch(`${BASE_URL}/dogs`, {
@@ -38,5 +37,7 @@ export const createDog = async (dog) => {
         throw new Error(`A szerver ${response.status} kóddal válaszolt a(z) ${response.url} útvonalon`)
     }
 
+    const results = await response.json();
 
+    return results.data || results;
 }
