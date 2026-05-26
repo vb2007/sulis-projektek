@@ -7,8 +7,8 @@ const templateEl = document.getElementById("dog-card");
 const dogsContainerEl = document.getElementById("dogs-container");
 const breedSelectEl = document.getElementById("breed");
 const dialogEl = document.getElementById("dog-dialog");
-const createDogButton = document.getElementById("create-dog-button");
-const dogForm = document.getElementById("dog-form");
+const createDogButtonEl = document.getElementById("create-dog-button");
+const dogFormEl = document.getElementById("dog-form");
 
 const createCard = (dog) => {
     const clone = templateEl.content.cloneNode(true);
@@ -45,14 +45,14 @@ const populateBreeds = () => {
     });
 };
 
-createDogButton.addEventListener("click", () => {
+createDogButtonEl.addEventListener("click", () => {
     dialogEl.showModal();
 });
 
-dogForm.addEventListener("submit", async (event) => {
+dogFormEl.addEventListener("submit", async (event) => {
     event.preventDefault();
 
-    const formData = new FormData(dogForm);
+    const formData = new FormData(dogFormEl);
     const dog = {
         name: formData.get("name"),
         breed: formData.get("breed"),
@@ -74,7 +74,7 @@ dogForm.addEventListener("submit", async (event) => {
     dogs.push(result);
     
     displayCards(await getDogs());
-    dogForm.reset();
+    dogFormEl.reset();
     dialogEl.close();
 });
 
