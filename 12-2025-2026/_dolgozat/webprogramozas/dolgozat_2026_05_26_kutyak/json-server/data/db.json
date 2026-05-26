@@ -2,10 +2,10 @@
   "dogs": [
     {
       "id": "1",
-      "name": "Morzsi",
+      "name": "Antonighel Ágoston",
       "breed": "Tacskó",
       "age": 3,
-      "owner": "Kovács Péter"
+      "owner": "Varga Zsombor"
     },
     {
       "id": "2",
