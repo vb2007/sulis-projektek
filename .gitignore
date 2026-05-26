@@ -3,6 +3,7 @@
 
 #For web projects (mainly npm, pnpm, Vite package, folders, etc.)
 .pnpm-store
+pnpm-workspace.yaml
 node_modules/
 .vite
 **package-lock.json
