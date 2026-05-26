@@ -44,11 +44,17 @@ namespace StartTrek_VB_Lib
         public int EnterpriseCount =>
             _urhajok.Count(x => x.UrhajoNev.ToLower().Contains("Enterprise".ToLower()));
 
-        //public string HajoOsztalySzerepCount(string szerepNev)
-        //{
-        //    string szerepId = _hajoSzerepek.Select(x => x.SzerepId).Where(x => x.SzerepNev == szerepNev);
+        public string HajoOsztalySzerepCount(string szerepNev)
+        {
+            var szerep = _hajoSzerepek.FirstOrDefault(x => x.SzerepNev == szerepNev);
 
-        //    _hajoOsztalyok.Count(x => x.SzerepId == _hajoSzerepek);
-        //}
+            if (szerep == null)
+            {
+                return "Ilyen szerep nincs az adatbázisban.";
+            }
+
+            int count = _hajoOsztalyok.Count(x => x.SzerepId == szerep.SzerepId);
+            return $"{count} hajóosztály rendeltetése a megadott szerep.";
+        }
     }
 }
