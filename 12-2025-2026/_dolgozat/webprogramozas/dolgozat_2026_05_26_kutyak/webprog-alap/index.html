@@ -47,24 +47,24 @@
         <form id="dog-form" method="dialog" class="space-y-4">
             <div>
                 <label for="dog-name" class="block text-sm font-medium text-gray-700 mb-1">Kutya neve</label>
-                <input type="text" id="dog-name" name="name" class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+                <input required type="text" id="dog-name" name="name" class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
             </div>
 
             <div>
                 <label for="breed" class="block text-sm font-medium text-gray-700 mb-1">Fajta</label>
-                <select id="breed" name="breed" class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 bg-white">
+                <select required id="breed" name="breed" class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 bg-white">
                     <option value="" disabled selected>Válassz fajtát...</option>
                 </select>
             </div>
 
             <div>
                 <label for="dog-age" class="block text-sm font-medium text-gray-700 mb-1">Kor (hónap)</label>
-                <input type="number" id="dog-age" name="age" class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+                <input required min=2 type="number" id="dog-age" name="age" class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
             </div>
 
             <div>
                 <label for="dog-owner" class="block text-sm font-medium text-gray-700 mb-1">Gazda neve</label>
-                <input type="text" id="dog-owner" name="owner" class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+                <input required type="text" id="dog-owner" name="owner" class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
             </div>
 
             <div class="flex justify-end space-x-3 pt-4 border-t">
