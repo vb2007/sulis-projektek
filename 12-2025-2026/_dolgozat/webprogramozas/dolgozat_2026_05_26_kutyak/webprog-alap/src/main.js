@@ -26,18 +26,18 @@ const createCard = (dog) => {
     owner.textContent = dog.owner;
 
     return clone;
-}
+};
 
 const displayCards = (dogs) => {
-    dogsContainerEl.innerHTML = ""; 
-    dogs.forEach(dog => {
+    dogsContainerEl.innerHTML = "";
+    dogs.forEach((dog) => {
         const card = createCard(dog);
         dogsContainerEl.append(card);
     });
 };
 
 const populateBreeds = () => {
-    dogbreeds.forEach(breed => {
+    dogbreeds.forEach((breed) => {
         const option = document.createElement("option");
         option.value = breed;
         option.textContent = breed;

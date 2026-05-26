@@ -29,7 +29,7 @@ export const createDog = async (dog) => {
         body: JSON.stringify(dog),
         headers: {
             "Content-Type": "application/json",
-            "Accept": "application/json"
+            Accept: "application/json",
         },
     });
 
