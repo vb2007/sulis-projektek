@@ -9,11 +9,13 @@
             <th class="p-1 rounded-tr-lg">Ár</th>
         </tr>
     </thead>
+        <?php foreach($offices as $office): ?>
             <tr class="text-center [&:last-child>td:first-child]:rounded-bl-lg [&:last-child>td:last-child]:rounded-br-lg odd:bg-lime-50 even:bg-lime-100">
-                <td class="p-1"><a class="text-blue-800 hover:underline" href=""><!-- Név --></a></td>
-                <td class="p-1"><!-- Cím --></td>
-                <td class="p-1"><!-- Szobák száma --></td>
-                <td class="p-1"><!-- Ár --></td>
+                <td class="p-1"><a class="text-blue-800 hover:underline" href=""><?= $office->name ?></a></td>
+                <td class="p-1"><?= $office->address ?></td>
+                <td class="p-1"><?= $office->rooms ?></td>
+                <td class="p-1"><?= $office->price ?></td>
             </tr>
+        <?php endforeach; ?>
     </tbody>
 </table>
