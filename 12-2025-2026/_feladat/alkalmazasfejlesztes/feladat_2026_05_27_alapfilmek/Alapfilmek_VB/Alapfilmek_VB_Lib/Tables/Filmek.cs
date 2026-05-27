@@ -20,5 +20,7 @@
             Mufaj = split[4];
             Hossz = int.Parse(split[5]);
         }
+
+        public int HanyEveKeszult => DateTime.Now.Year - Ev;
     }
 }

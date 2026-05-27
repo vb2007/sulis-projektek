@@ -49,5 +49,8 @@ namespace Alapfilmek_VB_Lib
                 x.Szuletett.HasValue &&
                 x.Szuletett.Value.Year >= 1900
                 && x.Szuletett.Value.Year < 2000);
+
+        public int OtvenEvesFilmekSzama => _filmek
+            .Count(x => x.Ev == currentYear = DateTime.Now.Year - 50);
     }
 }
