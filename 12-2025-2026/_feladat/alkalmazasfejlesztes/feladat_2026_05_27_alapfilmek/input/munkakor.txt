@@ -1,0 +1,8 @@
+munkakorazon	munkakor
+1	Rendező
+2	Operatőr
+3	Forgatókönyvíró
+4	Író
+5	Zeneszerző
+6	Főszereplő
+7	Szinkronszínész
