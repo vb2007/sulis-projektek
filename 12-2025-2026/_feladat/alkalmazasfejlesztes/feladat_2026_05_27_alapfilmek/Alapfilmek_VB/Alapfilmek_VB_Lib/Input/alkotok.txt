@@ -1,0 +1,457 @@
+alkotoazon	nev	szuletett	elhunyt
+1	Fekete László	1889.04.29	1946.12.14
+2	Balázs Samu	1906.05.18	1981.09.25
+3	Geszti Péter	1964.05.09	
+4	Dargay Attila	1927.06.20	2009.10.20
+5	Kiss Manyi	1911.03.12	1971.03.24
+6	Kabos Gyula	1887.03.19	1941.10.06
+7	Benedek Miklós	1946.09.28	
+8	Márkus László	1927.06.10	1985.12.30
+9	Horváth László	1943.02.10	1988.01.22
+10	Barsi Béla	1906.01.24	1968.04.30
+11	Makk Károly	1925.12.22	2017.08.30
+12	Lovasi András	1967.06.20	
+13	Cserhalmi György	1948.02.17	
+14	Pauer Henrik		
+15	Hetényi Pál	1935.07.24	1994.05.14
+16	Gruber István		
+17	Székács Béláné		
+18	Ivan Andonov	1934.05.03	2011.12.29
+19	Pataki Éva	1954.08.23	
+20	Bontovics Katalin	1953.01.30	
+21	Hildebrand István	1928.09.26	2022.03.29
+22	Janikovszky Éva	1926.04.23	2003.07.14
+23	Csoóri Sándor	1930.02.03	2016.09.12
+24	Mészáros Márta	1931.09.19	
+25	Dózsa László	1942.10.12	
+26	Ronyecz Mária	1944.06.25	1989.11.02
+27	Bereményi Géza	1946.01.25	
+28	Kosztolányi Dezső	1885.03.29	1936.11.03
+29	Básti Juli	1957.08.10	
+30	Puskás Ferenc	1927.04.01	2006.11.17
+31	Homoki-Nagy István	1914.09.02	1979.12.14
+32	Makay Árpád	1911.05.28	2004.12.06
+33	Lenkeffy Ica	1896.10.25	1955.01.25
+34	Farkas Ferenc	1905.12.15	2000.10.10
+35	Szabó Sipos Tamás	1937.07.22	1985.10.06
+36	Ruttkai Éva	1927.12.31	1986.09.27
+37	Molnár Ferenc	1878.01.12	1952.04.01
+38	Pacséry Ágoston	1903.03.03	1977.06.10
+39	Kodály Zoltán	1882.12.16	1967.03.06
+40	Petress Zsuzsa	1928.12.11	2001.03.04
+41	Sinkovits Imre	1928.09.21	2001.01.18
+42	Szentgyörgyi István	1842.02.20	1931.10.19
+43	Varga Csaba	1945.10.28	2012.06.15
+44	Vincze Ottó	1974.08.29	
+45	Várkonyi Mihály	1891.03.31	1976.06.06
+46	Deák Sándor	1909.12.05	2002.06.13
+47	Illés Tibor		
+48	Mányai Lajos	1912.02.10	1964.11.24
+49	ifj. Korga György		
+50	Pásztor István	1916.03.20	1974.06.05
+51	Simon Marcsa	1882.11.21	1954.01.08
+52	Mécs Károly	1936.01.10	
+53	Szervánszky Endre	1911.12.27	1977.06.25
+54	Tasnády Fekete Mária	1911.11.16	2001.03.16
+55	Hernádi Judit	1956.04.11	
+56	Molnár Tibor	1921.07.26	1982.11.24
+57	Báró Anna	1920.10.03	1994.10.23
+58	Csukás István	1936.04.02	2020.02.24
+59	John Moulder Brown	1953.06.03	
+60	Jankovics Marcell	1941.10.21	2021.05.29
+61	Romhányi József	1921.03.08	1983.05.07
+62	Góth Sándor	1869.10.19	1946.09.07
+63	Máriáss József	1920.02.23	1991.04.24
+64	Rajhona Ádám	1943.12.12	2016.05.20
+65	Macskássy Gyula	1912.02.04	1971.10.29
+66	Osvát András	1946.04.19	
+67	Mikó István	1950.10.22	
+68	Eperjes Károly	1954.02.17	
+69	Lengyel Péter		
+70	Móricz Zsigmond	1879.07.02	1942.09.05
+71	Irina Kuberszkaja	1946.03.22	
+72	Halász László	1932.05.01	2000.12.12
+73	Dr. Szaniszló József		
+74	Ladomerszky Margit	1904.12.17	1979.10.10
+75	Darvas Szilárd	1909.11.30	1961.03.09
+76	Ragályi Elemér	1939.04.18	
+77	Koltai Róbert	1943.12.16	
+78	Hegyi Barnabás	1914.03.04	1966.04.28
+79	Kiss Ferenc	1893.04.15	1978.08.13
+80	Mentes József	1925.04.17	1996.07.26
+81	Mihály András	1917.11.06	1993.09.19
+82	Varga György	1954.08.19	
+83	Pásztor Erzsi	1936.09.24	
+84	Farkas József		
+85	Gyenes István	1915.05.17	1984.01.09
+86	Ladányi Dénes		
+87	Avar István	1931.03.20	2014.09.13
+88	Révész György	1927.10.16	2003.04.02
+89	Várkonyi Zoltán	1912.05.13	1979.04.10
+90	Gertler Viktor	1901.08.24	1969.07.05
+91	Bánki Zsuzsa	1921.07.31	1998.01.05
+92	Fekete András	1930.10.07	2013.06.20
+93	Palásthy György	1931.01.12	2012.04.16
+94	Gazdag Gyula	1947.07.19	
+95	Bicskey Károly	1920.01.29	2009.10.25
+96	Reviczky Gábor	1949.03.28	
+97	Zelk Zoltán	1906.12.18	1981.04.23
+98	Tomanek Nándor	1922.09.08	1988.08.04
+99	Sándor Pál	1939.10.19	
+100	Darvas József	1912.02.10	1973.12.03
+101	Lévai Ferencné		
+102	Ránki György	1907.11.30	1992.05.22
+103	Szigligeti Ede	1814.03.08	1878.01.19
+104	Bezerédi Zoltán	1955.07.18	
+105	Csatlós Vilmos		
+106	Tatay Sándor	1910.05.06	1991.12.02
+107	Balázsovits Lajos	1946.12.04	
+108	Nagy Anikó	1970.04.01	
+109	Jókai Mór	1825.02.18	1904.05.05
+110	Krystyna Mikołajewska	1939.09.06	
+111	Somogyvári Rudolf		
+112	Pálos Zsuzsa	1945.09.23	
+113	Básti Lajos	1911.11.17	1977.06.01
+114	Berki Géza	1927.03.02	1987.08.04
+115	Sőth Sándor		
+116	Mándy Iván	1918.12.23	1995.10.06
+117	Rozsos István	1922.09.14	1963.02.17
+118	Piros Ildikó	1947.12.23	
+119	Makláry Zoltán	1896.04.16	1978.07.12
+120	Herskó János	1926.04.09	2011.10.12
+121	Gaál István	1933.08.25	2007.09.25
+122	Sánta Ferenc	1927.09.04	2008.06.06
+123	Szemes Mari	1932.05.07	1988.12.10
+124	Görbe János	1912.11.12	1968.09.05
+125	Balla Eszter	1980.05.11	
+126	Bencze Ferenc	1924.10.04	1990.09.07
+127	Imre István	1928.12.12	2007.07.11
+128	Valentyin Grigorjevics Raszputyin	1937.03.15	2015.03.14
+129	Eduard Hösch	1890.03.15	1983.11.05
+130	Szabó Gyula	1930.07.15	2014.04.04
+131	Horváth Jenő	1881.06.14	1931.04.19
+132	Meszléry Judit	1941.07.08	
+133	Szűcs Gábor	1956.09.25	
+134	Szabó Simon	1979.09.29	
+135	Dárdai István	1940.03.25	
+136	Daróci Bárdos Tamás	1931.09.27	2019.08.27
+137	Huszty Tamás		
+138	Macskássy Kati	1942.07.13	2008.03.07
+139	Maretics Erika	1961.06.06	
+140	Déry Tibor	1894.10.18	1977.08.18
+141	Bródy János	1946.04.05	
+142	Nagy Csaba	1944.08.08	
+143	Nagy Anna	1940.06.06	
+144	Rózsa János	1937.10.19	
+145	Sólyom Katalin	1940.03.18	
+146	Szőllősy András	1921.02.27	2007.12.06
+147	Csernák Tibor	1927.07.15	1965.11.14
+148	Keith Craine		
+149	Harsági István		
+150	Laluja Ferenc		
+151	Kende János	1941.09.22	
+152	Vámos Tamás	1938.09.21	
+153	Tordy Géza	1938.05.01	
+154	Psota Irén	1929.03.28	2016.02.25
+155	Darvas Ferenc	1946.06.06	
+156	Máriássy Félix	1919.06.03	1975.01.26
+157	Andorai Péter	1948.04.25	2020.02.01
+158	Gárdos Péter	1948.06.08	
+159	Kállai Ferenc	1925.10.04	2010.07.11
+160	Schiffer Pál	1939.06.14	2001.10.03
+161	Beregi Oszkár	1876.01.24	1965.10.18
+162	Lugossy István	1943.08.21	
+163	Ráthonyi Zsuzsa		
+164	Szakács Eszter	1943.01.14	2014.03.20
+165	Vámos Miklós	1950.01.29	
+166	Csepela Attila		
+167	Moór Marianna	1943.02.05	
+168	Asztalos Miklós	1899.07.28	1986.02.23
+169	Hernádi Gyula	1926.08.23	2005.07.20
+170	Aldobolyi Nagy György	1939.03.01	
+171	Orsolya Erzsi	1901.11.06	1984.05.13
+172	Gelley Kornél	1932.03.05	1989.03.19
+173	Balkay Géza	1952.09.05	2006.04.03
+174	Józsa Andrea		
+175	György László	1923.08.01	1986.05.12
+176	Lázár Kati	1948.12.14	
+177	Kardos István	1942.05.12	2002.09.24
+178	Bihari József	1901.01.14	1981.02.25
+179	Haraszti Zsolt	1946.06.03	2004.04.28
+180	Szemere Vera	1923.08.06	1995.04.03
+181	Karinthy Frigyes	1887.06.25	1938.08.29
+182	Rajczy Lajos	1914.07.01	1957.05.22
+183	Pécsi Sándor	1922.03.18	1972.11.04
+184	Beke Zoltán	1911.07.30	1994.03.09
+185	Jávor Pál	1902.01.31	1959.08.14
+186	Andor Tamás	1937.12.20	
+187	Vajda László	1877.08.18	1933.03.10
+188	Törőcsik Mari	1935.11.23	2021.04.16
+189	Halász Judit	1942.10.07	
+190	Csutorás Sándor	1943.09.30	1989.12.28
+191	Jankura Péter	1946.02.27	2009.05.26
+192	Fazekas Mihály	1766.01.06	1828.02.23
+193	Neményi Mária		
+194	Schirilla György	1939.05.13	1999.02.03
+195	Pártos Erzsi	1907.04.02	2000.04.18
+196	Rófusz Ferenc	1946.08.19	
+197	Radványi Géza	1907.09.26	1986.11.27
+198	Kovács Krisztián	1978.01.24	
+199	Várkonyi Zoltán	1912.05.13	1979.04.10
+200	Török Ferenc	1935.08.03	
+201	Szakács Sándor	1917.09.20	1965.07.09
+202	Pap Vera	1956.01.27	2015.04.09
+203	Nóti Károly	1892.02.01	1954.05.28
+204	Karalyos Gábor	1980.01.25	
+205	Major Tamás	1910.01.26	1986.04.13
+206	Temessy Hédi	1925.05.06	2001.05.29
+207	Kakassy Ági	1941.04.05	1987.05.10
+208	Ráday Mihály	1942.06.11	2021.07.16
+209	Hintsch Gyuri	1925.01.28	2005.12.04
+210	Köllő Miklós	1928.06.28	
+211	Vajda Béla	1935.04.24	2011.09.14
+212	Sulyok Mária	1908.11.05	1987.10.20
+213	Sövény Zoli		
+214	Dajka Margit	1907.10.13	1986.05.24
+215	Fábri Zoltán	1917.10.15	1994.08.23
+216	Simonyi Lia	1909.02.25	
+217	Juhász Ferenc	1928.08.16	2015.12.02
+218	Kern András	1948.01.28	
+219	Deák Tamás	1928.04.27	
+220	Mikszáth Kálmán	1847.01.16	1910.05.28
+221	Kiss Antal		
+222	Tatyjana Konyuhova	1931.11.12	
+223	Nádasdy László	1927.02.25	1983.09.12
+224	Klaus Mann	1906.11.18	1949.05.21
+225	Vajda István	1926.03.19	1987.03.18
+226	Hajmássy Miklós	1900.07.02	1990.02.09
+227	Szőreghy Gyula	1887.11.30	1942.12.22
+228	Henrik Irén	1937.06.11	
+229	Máthé Tibor	1943.01.29	
+230	Lehotay Árpád	1896.04.27	1953.10.19
+231	Nagy Sándor		
+232	Örkény István	1912.04.05	1979.06.24
+233	Tóth Marcell		
+234	Zsombolyai János	1939.01.30	2015.01.04
+235	Fenyvessy Éva	1911.10.31	2009.07.22
+236	Venczel Vera	1946.03.10	2021.10.22
+237	Agárdy Gábor	1922.08.02	2006.01.19
+238	Bessenyei Ferenc	1919.02.10	2004.12.27
+239	Várnai György	1921.11.26	1991.11.12
+240	Csákányi László	1921.01.13	1992.11.03
+241	Foky Ottó	1927.06.15	2012.09.03
+242	Thurzó Gábor	1912.03.26	1979.02.07
+243	Zolnay Pál	1928.03.26	1995.10.17
+244	Páger Antal	1899.01.29	1986.12.14
+245	Pogány Judit	1944.09.10	
+246	Decsényi János	1927.03.24	
+247	Balázs Béla	1884.08.04	1949.05.17
+248	Nepp József	1934.06.23	2017.10.06
+249	Polgár Géza	1931.02.23	1987.03.17
+250	Szellay Alice	1914.02.21	1990.06.27
+251	Kertész Pál	1909.06.03	1970.07.07
+252	Cakó Ferenc	1950.11.18	
+253	Gálvölgyi János	1948.05.26	
+254	Apáthy Imre	1909.05.28	1960.02.22
+255	Szabó Éva	1943.07.04	
+256	Orbán Viola	1901.11.07	1971.02.08
+257	Újlaky Dénes	1945.01.20	
+258	Jeles András	1945.03.27	
+259	Gádor Béla	1906.05.22	1961.01.28
+260	Némethy Ferenc	1926.02.19	2003.04.08
+261	Kertész Mihály	1886.12.24	1962.04.10
+262	Kardos Sándor	1944.06.04	
+263	Haumann Péter	1941.05.17	2022.05.28
+264	Kiss Gabriella	1962.09.08	
+265	Iván Anikó		
+266	Pethes Sándor	1899.05.28	1981.06.29
+267	Znamenák István	1966.01.08	
+268	Mezey Mária	1909.10.16	1983.04.20
+269	Bánffy György	1927.06.19	2010.09.03
+270	Sinkó László	1940.03.18	2015.07.31
+271	Gordon Zsuzsa	1929.07.06	2015.01.31
+272	Sára Sándor	1933.11.28	2019.09.22
+273	Molnár Piroska	1945.10.01	
+274	Bódy Gábor	1946.08.30	1985.10.24
+275	Török Sándor	1881.02.14	1939.02.13
+276	Greguss Zoltán	1904.05.10	1987.12.20
+277	Juhász Jácint	1943.05.13	1999.01.09
+278	Körmendi János	1927.10.21	2008.01.06
+279	Kovács Károly	1931.11.04	2007.10.20
+280	Halász Géza	1919.02.04	1957.10.19
+281	Kerti Lajos	1899.07.08	1958.01.12
+282	Kertész Ákos	1932.07.18	
+283	Kovács István	1944.05.07	
+284	Béres Ilona	1942.06.04	
+285	Paál László	1846.07.30	1879.03.04
+286	Schütz Ila	1944.01.05	2002.12.11
+287	Gulyás János	1946.09.02	2021.12.11
+288	Péter Gizi	1929.03.15	2008.02.07
+289	Bánhidi László	1906.03.11	1984.11.12
+290	Pálos György	1920.05.08	1970.01.03
+291	Ungvári László	1911.12.08	1982.09.21
+292	Szőts István	1912.06.30	1998.11.06
+293	Madaras József	1937.08.16	2007.04.24
+294	Darvas Lili	1902.04.10	1974.07.22
+295	Szirtes Ádám	1925.02.10	1989.07.27
+296	Márton Gyula		
+297	Kassai Klári		
+298	Mészöly Miklós	1921.01.19	2001.07.22
+299	Sanyó Sándor		
+300	Fábri Zoltán	1917.10.15	1994.08.23
+301	Dobos Katalin	1953.12.10	
+302	Fülöp Zsigmond	1935.05.05	2014.10.10
+303	Pethő Zsolt	1937.07.06	2016.07.10
+304	Haraszti Mici	1882.06.25	1964.02.18
+305	Palásthy Géza	1903.03.29	1978.08.11
+306	Kállay Ferenc	1925.10.04	2010.07.11
+307	Klaus Maria Brandauer	1943.06.22	
+308	Székely István	1899.02.25	1979.03.09
+309	Gárdonyi Géza	1863.08.03	1922.10.30
+310	Karin Boyd	1953.01.01	
+311	Keleti Márton	1905.04.27	1973.06.20
+312	Oszter Sándor	1948.09.02	2021.10.29
+313	Korda Sándor	1893.09.16	1956.01.23
+314	Monori Lili	1945.10.10	
+315	Both Béla	1910.11.21	2002.02.20
+316	Horváth Sándor	1932.02.16	2012.12.17
+317	Pongrácz Imre	1926.03.30	1997.08.28
+318	Bálint András	1943.04.26	
+319	Vészi Endre	1916.10.19	1987.07.09
+320	Felföldi László		1964.04.24
+321	Erdély Dániel	1956.05.09	
+322	Feleki Kamill	1908.08.21	1993.10.18
+323	Gothár Péter	1947.08.28	
+324	Illés György	1914.11.02	2006.06.12
+325	Ternovszky Béla	1943.05.23	
+326	Csortos Gyula	1907.10.13	1986.05.24
+327	Koltai Lajos	1946.04.02	
+328	Kovács Gusztáv		
+329	Anna Polony	1939.01.21	
+330	Farkas Antal	1922.01.01	2010.09.24
+331	Bacsó Zoltán	1947.01.29	
+332	Losonczy Árpád	1950.10.08	
+333	Tóth Zsuzsa	1940.08.28	2012.08.17
+334	Soós Imre	1930.02.12	1957.06.20
+335	Sütő Irén	1926.05.16	1991.09.20
+336	Berky Lili	1886.03.15	1958.02.05
+337	Fónay Márta	1914.09.24	1994.11.22
+338	Tóth Laci		
+339	Jávor Bence	1981.11.21	
+340	Rényi Tamás	1929.05.29	1980.07.28
+341	Erdődy János	1909.04.02	1996.03.23
+342	Drahota Andrea	1941.07.15	
+343	Forgács Ottó	1921.02.02	1999.02.09
+344	Barabás Tibor	1911.08.27	1984.05.01
+345	Kozák András	1943.02.23	2005.02.24
+346	Szabó István	1938.02.18	
+347	Mdivani Georgij	1905.09.26	1981.11.11
+348	Schubert Éva	1931.01.19	2017.07.11
+349	Gábor Pál	1932.11.02	1987.10.21
+350	Karinthy Ferenc	1921.06.02	1992.02.29
+351	Koncz Gábor	1938.07.08	
+352	Csomós Mari	1943.09.25	
+353	Kárász Eszter	1978.08.02	
+354	Opoczki János		
+355	Márkus András		
+356	Döme Zsolt	1951.10.29	
+357	Bara Margit	1928.06.21	2016.10.25
+358	Nemeskürty István	1925.05.14	2015.10.08
+359	Jancsó Nyika	1952.06.22	
+360	Turay Ida	1907.09.28	1997.06.02
+361	Apor Noémi	1918.05.08	2005.06.29
+362	Pápai Erzsi	1934.02.25	2017.11.04
+363	Kézdi-Kovács Zsolt	1936.06.01	2014.09.07
+364	Józsa Zsuzsa		
+365	Hamar Pál	1817.11.22	1877.01.10
+366	Arany János	1817.03.02	1882.10.22
+367	Krencsey Marianne	1931.07.09	2016.03.30
+368	Bacsó Péter	1928.01.06	2009.03.11
+369	Somló Tamás	1929.03.21	1993.12.19
+370	Ullmann Mónika	1973.08.02	
+371	Molnár Gyula		
+372	Jászai Mari	1850.02.24	1926.10.05
+373	Antalffy Albert	1924.04.24	
+374	Horváth Tivadar	1920.03.19	2003.04.30
+375	Hamza D. Ákos	1903.09.01	1993.05.16
+376	Fekete Edit		
+377	Szalai Györgyi	1940.08.31	
+378	Bitskey Tibor	1929.09.20	2015.02.02
+379	Rajz János	1907.02.13	1981.07.20
+380	Iványi István		
+381	Viktor Avgyusko	1925.01.11	1975.11.19
+382	Pintér György	1929.01.11	2003.08.31
+383	Somlay Artúr	1883.02.28	1951.11.10
+384	Másik János	1952.08.03	
+385	Dobozy Imre	1917.10.30	1982.09.23
+386	Tolnay Klári	1914.07.17	1998.10.27
+387	Latinovits Zoltán	1931.09.09	1976.06.04
+388	Papp Anna		
+389	Ranódy László	1919.09.14	1983.10.14
+390	Tóth János	1930.09.01	2019.08.29
+391	Dombrádi Éva	1947.05.04	
+392	Janovics Jenő	1872.12.08	1945.11.16
+393	Ferrari Violetta	1930.04.25	2014.01.23
+394	Makay Margit	1891.08.04	1989.11.06
+395	Jan Nowicki	1939.11.05	
+396	Esztergályos Cecília	1943.01.26	
+397	Vitézy László	1940.05.17	
+398	Latabár Kálmán	1902.11.24	1970.01.10
+399	Szabó Ernő	1900.06.30	1966.11.10
+400	Bohém Endre	1901.05.01	1990.05.05
+401	Reisenbüchler Sándor	1935.02.16	2004.04.01
+402	Őze Lajos	1935.04.27	1984.10.21
+403	Jancsó Miklós	1921.09.27	2014.01.31
+404	Anthony Kemp	1954.11.03	
+405	Bácskai Lauró István	1933.05.14	2020.08.13
+406	Bánsági Ildikó	1947.10.19	
+407	Petőfi Sándor	1823.01.01	1849.07.31
+408	Horváth József	1905.09.23	1970.05.05
+409	Szász Péter	1927.08.19	1983.02.01
+410	Bárdy György	1921.05.26	2013.05.27
+411	Muráti Lili	1911.07.22	2003.04.17
+412	Méray Tibor	1924.04.06	2020.11.12
+413	Szécsényi Ferenc	1922.03.23	2014.05.15
+414	Czinkóczi Zsuzsa	1967.01.23	
+415	Gyulai Gaál János	1924.04.28	2009.02.13
+416	Hollósi Frigyes	1941.04.21	2012.12.05
+417	Garas Dániel	1973.02.23	
+418	William Burleigh		
+419	Szombathy Gyula	1945.01.03	
+420	Dobai Péter	1944.08.12	
+421	Selmeczi Mihály	1898.07.14	1966.01.24
+422	Gábor Miklós	1919.04.07	1998.07.02
+423	Rajnay Gábor	1895.05.11	1961.07.10
+424	Eiben István	1902.12.21	1958.10.23
+425	Mihail Kozakov	1934.10.14	2011.04.22
+426	Gémes József	1939.11.09	2013.04.13
+427	Szatmári Péter	1964.11.16	
+428	Danis Jenő	1886.03.06	1963.08.31
+429	Szoboszlay Péter	1937.04.27	
+430	Mádi Szabó Gábor	1922.08.30	2003.03.06
+431	Garas Dezső	1934.12.09	2011.12.30
+432	Gáspár Sándor	1956.04.09	
+433	Rolf Hoppe	1930.12.06	2018.11.14
+434	Hegyi Barnabás	1914.03.04	1966.04.28
+435	Nádai Sándor		
+436	Maurer Dóra	1937.06.11	
+437	Dáloky János	1913.09.06	1975.04.03
+438	Polgár Tibor	1907.03.11	1993.08.26
+439	Gyulai János Pál		
+440	Mészöly Dezső	1918.08.27	2011.10.11
+441	Elek Judit	1937.11.10	
+442	Darvas Iván	1925.06.14	2007.06.03
+443	Dégi István	1935.08.21	1992.11.08
+444	Lovas Ferenc		
+445	Dulovits Jenő	1903.06.22	
+446	Huszárik Zoltán	1931.05.14	1981.10.15
+447	Tóth Ede	1884.03.11	1943.03.01
+448	Dunai Tamás	1949.07.10	
+449	Berkes Gábor	1962.12.31	
+450	Krystyna Janda	1952.12.18	
+451	Kozák László	1913.05.20	1997.11.07
+452	Tímár Péter	1950.12.19	
+453	Bulla Elma	1913.08.26	1980.05.14
+454	Pécsi Ildikó	1940.05.21	2020.12.05
+455	Móra Ferenc	1879.07.19	1934.02.08
+456	Kovásznai György	1934.05.15	1983.06.28

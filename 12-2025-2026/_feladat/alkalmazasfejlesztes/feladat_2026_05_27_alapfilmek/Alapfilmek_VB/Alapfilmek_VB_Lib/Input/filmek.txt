@@ -1,0 +1,101 @@
+filmazon	cim	ev	szines	mufaj	hossz
+38679	80 huszár	1978	színes	játékfilm	124
+38649	A beszélő köntös	1941	fekete-fehér	játékfilm	89
+38676	A ceruza és a radír	1960	színes	animációs film	9
+38646	A csodacsatár	1956	fekete-fehér	játékfilm	90
+40889	A három nyúl	1972	színes	animációs film	6
+38604	A kis Valentinó	1979	fekete-fehér	játékfilm	102
+38586	A kiskakas gyémánt félkrajcárja	1951	színes	animációs film	16
+38580	A kőszívű ember fiai – I. rész	1965	színes	történelmi film	159
+38643	A légy	1981	színes	animációs film	3
+38364	A locsolókocsi	1973	színes	játékfilm	88
+40002	A monológ	1963	színes	animációs film	12
+40020	A munka akrobatái	1939	fekete-fehér	dokumentumfilm	10
+40023	A Nap és a Hold elrablása	1968	színes	animációs film	11
+38619	A Pál utcai fiúk	1968	színes	játékfilm	120
+38616	A piros pöttyös labda	1961	színes	animációs film	7
+40014	A szél	1985	fekete-fehér	animációs film	7
+40233	A szentgalleni kaland	1961	színes	animációs film	16
+40907	A tanítványok	1985	színes	játékfilm	100
+38592	A tanú - cenzúrázatlan	1969	színes	játékfilm	103
+38595	A tizedes meg a többiek	1965	fekete-fehér	játékfilm	111
+38607	A tolonc	1914	virazsírozott	játékfilm	65
+40236	Ab ovo - Homoknyomok	1987	színes	animációs film	8
+38574	Állami Áruház	1952	fekete-fehér	játékfilm	96
+38658	Amerikai anzix	1975	fekete-fehér	játékfilm	105
+38622	Angi Vera	1978	színes	játékfilm	98
+40029	Apa	1966	fekete-fehér	játékfilm	98
+40032	Az 1812-es év	1972	színes	animációs film	11
+44274	Az aranyember	1918	virazsírozott	játékfilm	61
+38652	Az ebéd	1980	színes	animációs film	5
+41003	Az elhagyott gyermekek	1946	fekete-fehér	dokumentumfilm	7
+40997	Az erdő kapitánya	1988	színes	animációs film	72
+38589	Az ötödik pecsét	1976	színes	játékfilm	107
+38625	Árvácska	1976	színes	játékfilm	85
+40050	Babfilm	1975	színes	animációs film	12
+40047	Bizalom	1979	színes	játékfilm	115
+38682	Budapesti tavasz	1955	fekete-fehér	játékfilm	99
+40994	Cigányok	1962	fekete-fehér	dokumentumfilm	18
+40065	Csillagosok, katonák	1967	fekete-fehér	játékfilm	87
+38688	Csinibaba	1997	színes	játékfilm	101
+40988	Csók, anyu	1986	színes	játékfilm	102
+38697	Daliás idők	1984	színes	animációs film	80
+38712	Egri csillagok	1968	színes	játékfilm	147
+40895	Elégia	1965	színes	rövidfilm	19
+40080	Ez történt Budapesten	1944	fekete-fehér	játékfilm	95
+40892	Édes Anna	1958	fekete-fehér	játékfilm	84
+38709	Égigérő fű	1979	színes	játékfilm	82
+40098	Ének a búzamezőkről	1947	fekete-fehér	játékfilm	90
+40107	Fehérlófia	1981	színes	animációs film	80
+40116	Fekete vonat	1970	fekete-fehér	dokumentumfilm	40
+38718	Gázolás	1955	fekete-fehér	játékfilm	105
+40125	Gyöngyvirágtól lombhullásig	1952	színes	dokumentumfilm	83
+40167	Habfürdő	1979	színes	animációs film	76
+40898	Hahó, Öcsi!	1971	színes	játékfilm	81
+38721	Hannibál tanár úr	1956	fekete-fehér	játékfilm	94
+40155	Ház a sziklák alatt	1958	fekete-fehér	játékfilm	93
+40158	Hosszú futásodra mindig számíthatunk	1968	fekete-fehér	dokumentumfilm	15
+40164	Hyppolit, a lakáj	1931	fekete-fehér	játékfilm	72
+40961	Isten hozta, őrnagy úr!	1969	színes	játékfilm	97
+40242	Isten veled, kis sziget!	1987	színes	animációs film	12
+38727	János vitéz	1973	színes	animációs film	80
+40245	Kádár Kata	1942	fekete-fehér	rövidfilm	10
+40937	Keménykalap és krumpliorr	1978	színes	játékfilm	96
+40188	Keressük Dózsát!	1973	fekete-fehér	rövidfilm	6
+38730	Két bors ökröcske	1955	színes	animációs film	27
+38733	Körhinta	1955	fekete-fehér	játékfilm	103
+40197	Küzdők	1977	színes	animációs film	3
+40230	Látta-e már Budapestet télen?	1940	fekete-fehér	dokumentumfilm	16
+40925	Légy jó mindhalálig	1960	fekete-fehér	játékfilm	96
+38736	Liliomfi	1954	színes	játékfilm	107
+38739	Lúdas Matyi	1977	színes	animációs film	70
+38802	Macskafogó	1986	színes	animációs film	92
+38805	Macskajáték	1974	színes	játékfilm	113
+38814	Magasiskola	1970	színes	játékfilm	82
+40919	Makra	1972	fekete-fehér	játékfilm	96
+38361	Megáll az idő	1982	színes	játékfilm	103
+38799	Mephisto	1981	színes	játékfilm	154
+40949	Miheztartás végett	1971	fekete-fehér	rövidfilm	15
+40958	Moszkva tér	2001	színes	játékfilm	89
+40991	Moto perpetuo	1980	színes	animációs film	8
+38811	Mozgókép analízis	1977	fekete-fehér	rövidfilm	20
+38817	Napló szerelmeimnek	1987	színes	játékfilm	141
+38820	Négy bagatell	1975	fekete-fehér	rövidfilm	28
+38823	Öt perc gyilkosság	1966	színes	animációs film	7
+38826	Pacsirta	1963	fekete-fehér	játékfilm	98
+41006	Pályamunkások	1957	fekete-fehér	rövidfilm	4
+43758	Pókfoci	1976	színes	játékfilm	81
+40934	Régi idők focija	1973	színes	játékfilm	84
+38832	Shine - Ragyogás	1982	színes	rövidfilm	36
+40931	Szamárköhögés	1986	színes	játékfilm	87
+40913	Szegénylegények	1965	fekete-fehér	játékfilm	95
+38835	Szerelem	1970	fekete-fehér	játékfilm	98
+40928	Szindbád	1971	színes	játékfilm	91
+41063	Tagfelvétel	1972	fekete-fehér	dokumentumfilm	30
+40916	Társasutazás	1984	színes	dokumentumfilm	75
+41000	Te	1962	fekete-fehér	rövidfilm	11
+38838	Utazás a koponyám körül	1970	színes	játékfilm	78
+40946	Ünnepeink	1981	színes	animációs film	10
+38841	Valahol Europában	1947	fekete-fehér	játékfilm	104
+40943	Variációk egy sárkányra	1967	színes	animációs film	8
+40976	Vasvirág	1958	fekete-fehér	játékfilm	90

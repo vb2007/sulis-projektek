@@ -1,3 +1,4 @@
 <Solution>
   <Project Path="Alapfilmek_VB_Console/Alapfilmek_VB_Console.csproj" />
+  <Project Path="Alapfilmek_VB_Lib/Alapfilmek_VB_Lib.csproj" />
 </Solution>

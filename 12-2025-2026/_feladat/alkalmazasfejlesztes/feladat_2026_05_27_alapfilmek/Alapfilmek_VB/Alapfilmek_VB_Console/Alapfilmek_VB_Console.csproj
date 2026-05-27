@@ -7,4 +7,8 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\Alapfilmek_VB_Lib\Alapfilmek_VB_Lib.csproj" />
+  </ItemGroup>
+
 </Project>
