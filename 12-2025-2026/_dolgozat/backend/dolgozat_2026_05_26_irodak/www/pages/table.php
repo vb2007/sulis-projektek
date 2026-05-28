@@ -9,12 +9,13 @@
             <th class="p-1 rounded-tr-lg">Ár</th>
         </tr>
     </thead>
-        <?php foreach($offices as $office): ?>
+    <tbody>
+        <?php foreach ($offices as $office): ?>
             <tr class="text-center [&:last-child>td:first-child]:rounded-bl-lg [&:last-child>td:last-child]:rounded-br-lg odd:bg-lime-50 even:bg-lime-100">
                 <td class="p-1"><a class="text-blue-800 hover:underline" href="/index.php?action=show&id=<?= $office->id ?>"><?= $office->name ?></a></td>
                 <td class="p-1"><?= $office->address ?></td>
                 <td class="p-1"><?= $office->rooms ?></td>
-                <td class="p-1"><?= $office->price ?></td>
+                <td class="p-1"><?= number_format($office->price, 0, ",", " ") ?></td>
             </tr>
         <?php endforeach; ?>
     </tbody>
