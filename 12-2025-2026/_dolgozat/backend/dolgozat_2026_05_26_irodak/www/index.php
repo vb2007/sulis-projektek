@@ -6,8 +6,8 @@ require __DIR__ . "/vendor/autoload.php";
 
 use RealEstate\Rental\Office;
 
-$whoops = new \Whoops\Run;
-$whoops->pushHandler(new \Whoops\Handler\PrettyPageHandler);
+$whoops = new \Whoops\Run();
+$whoops->pushHandler(new \Whoops\Handler\PrettyPageHandler());
 $whoops->register();
 
 ob_start();
@@ -19,32 +19,40 @@ $lines = explode("\n", $file);
 for ($i = 1; $i < count($lines); $i++) {
     if ("" != $lines[$i]) {
         $split = explode(";", $lines[$i]);
-        array_push($offices, new Office(
-            (int) $split[0],
-            $split[1],
-            $split[2],
-            (int) $split[3],
-            (float) $split[4]
-        ));
+        array_push($offices, new Office((int) $split[0], $split[1], $split[2], (int) $split[3], (float) $split[4]));
     }
 }
+
+usort($offices, fn($a, $b) => strcmp($a->name, $b->name));
 
 $title = "";
 $action = "";
 $load = "";
-if(!isset($_GET["action"])) {
+if (!isset($_GET["action"])) {
     $title = "Irodák";
     $action = "table";
     $load = "table.php";
-}
-else {
+} else {
     $action = $_GET["action"];
 
     switch ($action) {
         case "show":
-            $id = $_GET["id"];
-            $title = $offices[$id-1]->name;
-            $load = "show.php";
+            $id = isset($_GET["id"]) ? (int) $_GET["id"] : 0;
+            $office = null;
+            foreach ($offices as $o) {
+                if ($o->id === $id) {
+                    $office = $o;
+                    break;
+                }
+            }
+            if ($office === null) {
+                $title = "404";
+                $load = "404.php";
+                header("HTTP/1.1 404 Not Found");
+            } else {
+                $title = $office->name;
+                $load = "show.php";
+            }
             break;
 
         case "create":
@@ -64,15 +72,14 @@ $menuItems = [
     [
         "text" => "Főoldal",
         "url" => "index.php",
-        "active" => $action == "table"
+        "active" => $action == "table",
     ],
     [
         "text" => "Új iroda",
         "url" => "index.php?action=create",
-        "active" => $action == "create"
-    ]
+        "active" => $action == "create",
+    ],
 ];
-
 ?>
 
 <!DOCTYPE html>
@@ -84,10 +91,9 @@ $menuItems = [
     <title><?= $title ?></title>
 </head>
 <body class="min-h-screen flex flex-col">
-    <?= include __DIR__ . "/components/menu.php" ?>
-    <?= include __DIR__ . "/pages/" . $load; ?>
+    <?php include __DIR__ . "/components/menu.php"; ?>
+    <?php include __DIR__ . "/pages/" . $load; ?>
 </body>
 </html>
 
-<?php
-ob_end_flush();
+<?php ob_end_flush();
