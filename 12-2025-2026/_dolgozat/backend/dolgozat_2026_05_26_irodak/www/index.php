@@ -58,6 +58,48 @@ if (!isset($_GET["action"])) {
         case "create":
             $title = "Új iroda";
             $load = "create.php";
+            $data = ["name" => "", "address" => "", "price" => "", "rooms" => ""];
+            $errors = [];
+
+            if ($_SERVER["REQUEST_METHOD"] === "POST") {
+                $data = [
+                    "name" => $_POST["name"] ?? "",
+                    "address" => $_POST["address"] ?? "",
+                    "price" => $_POST["price"] ?? "",
+                    "rooms" => $_POST["rooms"] ?? "",
+                ];
+
+                if (trim($data["name"]) === "") {
+                    $errors["name"] = "A név megadása kötelező!";
+                }
+                if (trim($data["address"]) === "") {
+                    $errors["address"] = "A cím megadása kötelező!";
+                }
+                if ($data["price"] === "") {
+                    $errors["price"] = "Az ár megadása kötelező!";
+                } elseif ((int) $data["price"] < 100000) {
+                    $errors["price"] = "Egy iroda bérlése minimum 100 000 Ft-ba kerül!";
+                }
+                if ($data["rooms"] === "") {
+                    $errors["rooms"] = "A szobaszám megadása kötelező!";
+                } elseif ((float) $data["rooms"] <= 0) {
+                    $errors["rooms"] = "A szobaszám nem lehet nulla, vagy annál kevesebb!";
+                }
+
+                if (empty($errors)) {
+                    $maxId = 0;
+                    foreach ($offices as $o) {
+                        if ($o->id > $maxId) {
+                            $maxId = $o->id;
+                        }
+                    }
+                    $newId = $maxId + 1;
+                    $line = implode(";", [$newId, $data["name"], $data["address"], $data["price"], $data["rooms"]]);
+                    file_put_contents(__DIR__ . "/data.csv", "\n" . $line, FILE_APPEND);
+                    header("Location: index.php");
+                    exit();
+                }
+            }
             break;
 
         default:
