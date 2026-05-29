@@ -72,5 +72,20 @@ namespace StartTrek_VB_Lib
             int count = _hajoOsztalyok.Count(x => x.SzerepId == hajoSzerep.SzerepId);
             return $"{count} hajóosztály rendeltetése a megadott szerep.";
         }
+
+        public Dictionary<string, int> Top3HajoOsztaly => _urhajok
+                .GroupBy(x => x.OsztalyId)
+                .Select(g => new
+                {
+                    OsztalyId = g.Key,
+                    Count = g.Count()
+                })
+                .Join(_hajoOsztalyok,
+                    ship => ship.OsztalyId,
+                    osztaly => osztaly.OsztalyId,
+                    (ship, osztaly) => new { osztaly.OsztalyNev, ship.Count })
+                .OrderByDescending(x => x.Count)
+                .Take(3)
+                .ToDictionary(x => x.OsztalyNev, x => x.Count);
     }
 }

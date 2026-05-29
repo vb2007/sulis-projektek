@@ -13,6 +13,13 @@ namespace StarTrek_VB_Console
             Console.Write("5. feladat: A szerep neve: ");
             string input = Console.ReadLine()!;
             Console.WriteLine($"\t{DataStore.Instance.HajoOsztalySzerepCount(input)}");
+
+            Console.WriteLine("6. feladat:");
+            Dictionary<string, int> top3ShipClasses = DataStore.Instance.Top3HajoOsztaly;
+            foreach (var shipClass in top3ShipClasses)
+            {
+                Console.WriteLine($"\t{shipClass.Key}: {shipClass.Value} űrhajó");
+            }
         }
     }
 }
