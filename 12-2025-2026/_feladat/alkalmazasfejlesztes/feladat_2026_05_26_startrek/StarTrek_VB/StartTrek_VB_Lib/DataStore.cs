@@ -11,21 +11,36 @@ namespace StartTrek_VB_Lib
 
         private DataStore()
         {
-            _fajok = File.ReadAllLines("Input\\fajok.csv").Skip(1)
+            //Linuxon nem működik:
+            //_fajok = ReadCsvLines("fajok.csv").Skip(1)
+            
+            _fajok = ReadCsvLines("fajok.csv").Skip(1)
                 .Select(x => new Fajok(x))
                 .ToList();
 
-            _hajoOsztalyok = File.ReadAllLines("Input\\hajo_osztalyok.csv").Skip(1)
+            _hajoOsztalyok = ReadCsvLines("hajo_osztalyok.csv").Skip(1)
                 .Select(x => new HajoOsztalyok(x))
                 .ToList();
 
-            _hajoSzerepek = File.ReadAllLines("Input\\hajo_szerepek.csv").Skip(1)
+            _hajoSzerepek = ReadCsvLines("hajo_szerepek.csv").Skip(1)
                 .Select(x => new HajoSzerepek(x))
                 .ToList();
 
-            _urhajok = File.ReadAllLines("Input\\urhajok.csv").Skip(1)
+            _urhajok = ReadCsvLines("urhajok.csv").Skip(1)
                 .Select(x => new Urhajok(x))
                 .ToList();
+        }
+
+        private static string[] ReadCsvLines(string fileName)
+        {
+            string path = Path.Combine(AppContext.BaseDirectory, "Input", fileName);
+
+            if (!File.Exists(path))
+            {
+                throw new FileNotFoundException($"Hiányzó bemeneti fájl: {path}", path);
+            }
+
+            return File.ReadAllLines(path);
         }
 
         public static DataStore? Instance { get; private set; }
@@ -41,19 +56,20 @@ namespace StartTrek_VB_Lib
         }
 
 
-        public int EnterpriseCount =>
-            _urhajok.Count(x => x.UrhajoNev.ToLower().Contains("Enterprise".ToLower()));
+        public int EnterpriseCount => _urhajok
+            .Count(x => x.UrhajoNev.ToLower().Contains("Enterprise".ToLower()));
 
         public string HajoOsztalySzerepCount(string szerepNev)
         {
-            var szerep = _hajoSzerepek.FirstOrDefault(x => x.SzerepNev == szerepNev);
+            HajoSzerepek? hajoSzerep = _hajoSzerepek
+                .FirstOrDefault(x => x.SzerepNev == szerepNev);
 
-            if (szerep == null)
+            if (hajoSzerep == null)
             {
                 return "Ilyen szerep nincs az adatbázisban.";
             }
 
-            int count = _hajoOsztalyok.Count(x => x.SzerepId == szerep.SzerepId);
+            int count = _hajoOsztalyok.Count(x => x.SzerepId == hajoSzerep.SzerepId);
             return $"{count} hajóosztály rendeltetése a megadott szerep.";
         }
     }

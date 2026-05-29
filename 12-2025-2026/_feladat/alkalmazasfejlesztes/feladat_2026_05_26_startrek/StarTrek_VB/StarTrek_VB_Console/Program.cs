@@ -12,7 +12,7 @@ namespace StarTrek_VB_Console
 
             Console.Write("5. feladat: A szerep neve: ");
             string input = Console.ReadLine()!;
-            Console.WriteLine($"\t{DataStore.Instance!.HajoOsztalySzerepCount(input)}");
+            Console.WriteLine($"\t{DataStore.Instance.HajoOsztalySzerepCount(input)}");
         }
     }
 }
