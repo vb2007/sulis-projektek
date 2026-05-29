@@ -15,8 +15,8 @@ namespace StarTrek_VB_Console
             Console.WriteLine($"\t{DataStore.Instance.HajoOsztalySzerepCount(input)}");
 
             Console.WriteLine("6. feladat:");
-            Dictionary<string, int> top3ShipClasses = DataStore.Instance.Top3HajoOsztaly;
-            foreach (var shipClass in top3ShipClasses)
+            Dictionary<string, int> top3HajoOsztaly = DataStore.Instance.Top3HajoOsztaly;
+            foreach (var shipClass in top3HajoOsztaly)
             {
                 Console.WriteLine($"\t{shipClass.Key}: {shipClass.Value} űrhajó");
             }
