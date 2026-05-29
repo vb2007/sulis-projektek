@@ -1,16 +1,15 @@
-﻿namespace StartTrek_VB_Lib.Tables
+﻿namespace StartTrek_VB_Lib.Tables;
+
+internal class Fajok
 {
-    internal class Fajok
+    public int FajId { get; init; }
+    public string FajNev { get; init; }
+
+    internal Fajok(string dataLines)
     {
-        public int FajId { get; init; }
-        public string FajNev { get; set; }
+        string[] split = dataLines.Split(';');
 
-        internal Fajok(string dataLines)
-        {
-            string[] split = dataLines.Split(';');
-
-            FajId = int.Parse(split[0]);
-            FajNev = split[1];
-        }
+        FajId = int.Parse(split[0]);
+        FajNev = split[1];
     }
 }
