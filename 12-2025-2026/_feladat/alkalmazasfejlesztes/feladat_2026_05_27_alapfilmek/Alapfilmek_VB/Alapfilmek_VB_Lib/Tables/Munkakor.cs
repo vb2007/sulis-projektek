@@ -1,16 +1,15 @@
-﻿namespace Alapfilmek_VB_Lib.Tables
+﻿namespace Alapfilmek_VB_Lib.Tables;
+
+internal class Munkakor
 {
-    internal class Munkakor
+    public int MunkakorAzonosito { get; init; }
+    public string MunkakorNev {  get; init; }
+
+    internal Munkakor(string dataLine)
     {
-        public int MunkakorAzonosito { get; init; }
-        public string MunkakorNev {  get; init; }
+        string[] split = dataLine.Split('\t');
 
-        internal Munkakor(string dataLine)
-        {
-            string[] split = dataLine.Split('\t');
-
-            MunkakorAzonosito = int.Parse(split[0]);
-            MunkakorNev = split[1];
-        }
+        MunkakorAzonosito = int.Parse(split[0]);
+        MunkakorNev = split[1];
     }
 }
