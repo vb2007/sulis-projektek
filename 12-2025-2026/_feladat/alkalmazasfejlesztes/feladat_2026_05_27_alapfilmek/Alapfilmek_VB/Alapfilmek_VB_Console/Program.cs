@@ -39,7 +39,8 @@ internal class Program
         }
 
         Console.WriteLine("9. feladat: Dajka Margit színésztársai:");
-        foreach (var (filmNev, szinesztarsak) in DataStore.Instance!.DajkaMargitSzinesztarsai)
+        IEnumerable<(string FilmCim, IEnumerable<string>)> dajkaMargitSzinesztarsai = DataStore.Instance!.DajkaMargitSzinesztarsai();
+        foreach (var (filmNev, szinesztarsak) in dajkaMargitSzinesztarsai)
         {
             Console.WriteLine($"\t{filmNev}: {string.Join(", ", szinesztarsak)}");
         }

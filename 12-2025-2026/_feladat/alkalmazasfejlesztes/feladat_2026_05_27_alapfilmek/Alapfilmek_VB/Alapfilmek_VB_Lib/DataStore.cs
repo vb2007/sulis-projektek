@@ -85,35 +85,32 @@ public class DataStore
             .Take(2)
             .Join(_alkotok, g => g.Key, a => a.AlkotoAzonosito, (g, a) => (a.Nev, g.Count()));
 
-    public IEnumerable<(string FilmCim, IEnumerable<string> Szinesztarsak)> DajkaMargitSzinesztarsai
+    public IEnumerable<(string FilmCim, IEnumerable<string> Szinesztarsak)> DajkaMargitSzinesztarsai()
     {
-        get
-        {
-            var dajka = _alkotok.First(x => x.Nev == "Dajka Margit");
+        Alkotok dajka = _alkotok.First(x => x.Nev == "Dajka Margit");
 
-            return _filmstab
-                .Where(x => x.AlkotoAzonosito == dajka.AlkotoAzonosito &&
-                            (x.MunkakorAzonosito == 6 || x.MunkakorAzonosito == 7))
-                .Select(x => x.FilmAzonosito)
-                .Distinct()
-                .Select(filmId =>
-                {
-                    var film = _filmek.First(f => f.FilmAzonosito == filmId);
-                    
-                    var szinesztarsak = _filmstab
-                        .Where(x => x.FilmAzonosito == filmId &&
-                                    x.AlkotoAzonosito != dajka.AlkotoAzonosito &&
-                                    (x.MunkakorAzonosito == 6 || x.MunkakorAzonosito == 7))
-                        .Select(x => x.AlkotoAzonosito)
-                        .Distinct()
-                        .Join(_alkotok, id => id, a => a.AlkotoAzonosito, (id, a) => a.Nev)
-                        .OrderBy(n => n)
-                        .ToList();
-                    
-                    return (FilmCim: film.Cim, Szinesztarsak: (IEnumerable<string>)szinesztarsak);
-                })
-                .OrderBy(x => x.FilmCim)
-                .ToList();
-        }
+        return _filmstab
+            .Where(x => x.AlkotoAzonosito == dajka.AlkotoAzonosito &&
+                        (x.MunkakorAzonosito == 6 || x.MunkakorAzonosito == 7))
+            .Select(x => x.FilmAzonosito)
+            .Distinct()
+            .Select(filmId =>
+            {
+                Filmek film = _filmek.First(f => f.FilmAzonosito == filmId);
+                
+                List<string> szinesztarsak = _filmstab
+                    .Where(x => x.FilmAzonosito == filmId &&
+                                x.AlkotoAzonosito != dajka.AlkotoAzonosito &&
+                                (x.MunkakorAzonosito == 6 || x.MunkakorAzonosito == 7))
+                    .Select(x => x.AlkotoAzonosito)
+                    .Distinct()
+                    .Join(_alkotok, id => id, a => a.AlkotoAzonosito, (id, a) => a.Nev)
+                    .OrderBy(n => n)
+                    .ToList();
+                
+                return (FilmCim: film.Cim, Szinesztarsak: (IEnumerable<string>)szinesztarsak);
+            })
+            .OrderBy(x => x.FilmCim)
+            .ToList();
     }
 }
