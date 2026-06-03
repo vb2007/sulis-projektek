@@ -1,9 +1,13 @@
-﻿namespace Foldrenges_VB_Console;
+﻿using Foldrenges_VB_Lib;
+
+namespace Foldrenges_VB_Console;
 
 class Program
 {
     static void Main(string[] args)
     {
-        Console.WriteLine("Hello, World!");
+        DataStore.Init();
+        
+        Console.WriteLine($"4. feladat: {DataStore.Instance!.TelepulesekSzama} db");
     }
 }

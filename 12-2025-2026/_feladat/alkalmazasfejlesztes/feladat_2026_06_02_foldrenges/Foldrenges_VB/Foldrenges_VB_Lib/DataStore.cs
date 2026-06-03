@@ -31,4 +31,7 @@ public class DataStore
 
         Instance = new DataStore();
     }
+
+    public int TelepulesekSzama => _telepulesek
+        .Count();
 }
