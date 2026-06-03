@@ -9,5 +9,7 @@ class Program
         DataStore.Init();
         
         Console.WriteLine($"4. feladat: {DataStore.Instance!.TelepulesekSzama} db");
+
+        Console.WriteLine($"5. feladat: Az átlagos intenzitás {DataStore.Instance.IntenzitasAtlag} volt");
     }
 }

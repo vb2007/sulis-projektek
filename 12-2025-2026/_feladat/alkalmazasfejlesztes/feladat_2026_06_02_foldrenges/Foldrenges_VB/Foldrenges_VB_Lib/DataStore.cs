@@ -34,4 +34,9 @@ public class DataStore
 
     public int TelepulesekSzama => _telepulesek
         .Count();
+
+    public float IntenzitasAtlag => (float)Math.Round(
+        _naplok.Average(x => x.Intenzitas) ?? 0f,
+        1
+    );
 }
