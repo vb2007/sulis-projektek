@@ -1,0 +1,60 @@
+{
+  "dogs": [
+    {
+      "id": "1",
+      "name": "Antonighel Ágoston",
+      "breed": "Tacskó",
+      "age": 3,
+      "owner": "Varga Zsombor"
+    },
+    {
+      "id": "2",
+      "name": "Rex",
+      "breed": "Németjuhász",
+      "age": 5,
+      "owner": "Szabó Gábor"
+    },
+    {
+      "id": "3",
+      "name": "Bella",
+      "breed": "Golden retriever",
+      "age": 2,
+      "owner": "Nagy Eszter"
+    },
+    {
+      "id": "4",
+      "name": "Buci",
+      "breed": "Bulldog",
+      "age": 4,
+      "owner": "Tóth András"
+    },
+    {
+      "id": "5",
+      "name": "Fickó",
+      "breed": "Beagle",
+      "age": 3,
+      "owner": "Horváth Anita"
+    },
+    {
+      "id": "6",
+      "name": "Zsömle",
+      "breed": "Golden retriever",
+      "age": 6,
+      "owner": "Kiss Tamás"
+    },
+    {
+      "id": "7",
+      "name": "Loki",
+      "breed": "Tacskó",
+      "age": 2,
+      "owner": "Molnár Dóra"
+    },
+    {
+      "id": "8",
+      "name": "Báró",
+      "breed": "Németjuhász",
+      "age": 7,
+      "owner": "Varga Ferenc"
+    }
+  ]
+}

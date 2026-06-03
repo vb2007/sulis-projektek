@@ -1,0 +1,3 @@
+nev;szint;nyelv;bentlakasos;nem
+Kiss Anna;kezdő;angol;igen;lány
+Nagy Máté;haladó;német;nem;fiú
