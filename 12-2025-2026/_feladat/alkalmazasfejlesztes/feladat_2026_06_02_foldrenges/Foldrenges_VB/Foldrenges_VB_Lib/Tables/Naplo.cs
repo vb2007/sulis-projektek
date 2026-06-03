@@ -1,3 +1,5 @@
+using System.Globalization;
+
 namespace Foldrenges_VB_Lib.Tables;
 
 public class Naplo
@@ -6,8 +8,8 @@ public class Naplo
     public DateOnly Datum { get; init; }
     public TimeOnly Ido { get; init; }
     public int TelepId { get; init; }
-    public float Magnitudo { get; init; }
-    public float Intenzitas { get; init; }
+    public float? Magnitudo { get; init; } //lehet null is, bár a feladatban baszták leírni
+    public float? Intenzitas { get; init; } //same shit
 
     internal Naplo(string dataLine)
     {
@@ -17,7 +19,11 @@ public class Naplo
         Datum = DateOnly.Parse(split[1]);
         Ido = TimeOnly.Parse(split[2]);
         TelepId = int.Parse(split[3]);
-        Magnitudo = float.Parse(split[4]);
-        Intenzitas = float.Parse(split[5]);
+        Magnitudo = string.IsNullOrWhiteSpace(split[4])
+            ? null
+            : float.Parse(split[4], new CultureInfo("hu-HU"));
+        Intenzitas = string.IsNullOrWhiteSpace(split[5]) 
+            ? null
+            : float.Parse(split[5], new CultureInfo("hu-HU"));
     }
 }
