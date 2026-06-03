@@ -42,4 +42,7 @@ public class DataStore
 
     public float? LegnagyobbMagnitudo => _naplok
         .Max(x => x.Magnitudo);
+
+    public int NagyobbMint4MagnitudoFoldrengesekSzama => _naplok
+        .Count(x => x.Magnitudo > 4.0);
 }

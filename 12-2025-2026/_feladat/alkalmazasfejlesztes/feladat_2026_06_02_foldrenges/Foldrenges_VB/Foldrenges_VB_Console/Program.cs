@@ -8,10 +8,12 @@ class Program
     {
         DataStore.Init();
         
-        Console.WriteLine($"4. feladat: {DataStore.Instance!.TelepulesekSzama} db");
+        Console.WriteLine($"4. feladat: {DataStore.Instance!.TelepulesekSzama} db.");
 
-        Console.WriteLine($"5. feladat: Az átlagos intenzitás {DataStore.Instance.IntenzitasAtlag} volt");
+        Console.WriteLine($"5. feladat: Az átlagos intenzitás {DataStore.Instance.IntenzitasAtlag} volt.");
 
-        Console.WriteLine($"6. feladat: A legnagyobb magnitudó {DataStore.Instance.LegnagyobbMagnitudo} volt");
+        Console.WriteLine($"6. feladat: A legnagyobb magnitudó {DataStore.Instance.LegnagyobbMagnitudo} volt.");
+
+        Console.WriteLine($"7. feladat: Összesen {DataStore.Instance.NagyobbMint4MagnitudoFoldrengesekSzama} db 4-nél nagyobb magnitudójú földrengés volt.");
     }
 }
