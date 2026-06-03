@@ -39,4 +39,7 @@ public class DataStore
         _naplok.Average(x => x.Intenzitas) ?? 0f,
         1
     );
+
+    public float? LegnagyobbMagnitudo => _naplok
+        .Max(x => x.Magnitudo);
 }

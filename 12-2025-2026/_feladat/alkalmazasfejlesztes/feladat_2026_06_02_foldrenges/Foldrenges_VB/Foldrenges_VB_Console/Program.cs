@@ -11,5 +11,7 @@ class Program
         Console.WriteLine($"4. feladat: {DataStore.Instance!.TelepulesekSzama} db");
 
         Console.WriteLine($"5. feladat: Az átlagos intenzitás {DataStore.Instance.IntenzitasAtlag} volt");
+
+        Console.WriteLine($"6. feladat: A legnagyobb magnitudó {DataStore.Instance.LegnagyobbMagnitudo} volt");
     }
 }
