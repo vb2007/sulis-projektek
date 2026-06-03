@@ -30,5 +30,12 @@ internal abstract class Program
         {
             Console.WriteLine("\tNincs ilyen nevű település");
         }
+
+        Console.WriteLine("10. feladat: A 3 legnagyobb magnitúdójú földrengést elszenvedő település.");
+        List<(string?, float?)> haromLegnagyobbatElszenvedo = DataStore.Instance.HaromLegnagyobbMagnitudotElszenvedoTelepules;
+        foreach ((string?, float?) adat in haromLegnagyobbatElszenvedo)
+        {
+            Console.WriteLine($"\t{adat.Item1} - {adat.Item2}");
+        }
     }
 }

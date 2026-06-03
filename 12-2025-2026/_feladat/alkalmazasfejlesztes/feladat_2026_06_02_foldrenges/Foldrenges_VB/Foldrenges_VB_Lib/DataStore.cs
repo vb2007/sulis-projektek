@@ -1,3 +1,4 @@
+using System.Xml.Schema;
 using Foldrenges_VB_Lib.Tables;
 
 namespace Foldrenges_VB_Lib;
@@ -54,7 +55,7 @@ public class DataStore
         
     public (float? Magnitudo, float? Intenzitas, DateOnly Datum, TimeOnly Ido)? LegelsoFoldrengesTelepulesNevAlapjan(string telepulesNev)
     {
-        Telepules? telepules = _telepulesek.FirstOrDefault(x => x.Nev == telepulesNev.ToLower());
+        Telepules? telepules = _telepulesek.FirstOrDefault(x => x.Nev.ToLower() == telepulesNev);
         
         if (telepules is null)
         {
@@ -74,4 +75,15 @@ public class DataStore
 
         return (elso.Magnitudo, elso.Intenzitas, elso.Datum, elso.Ido);
     }
+    
+    //honnan a tökömből kéne előhúznom a Richter skálát dolgozatkor
+    public List<(string? Telepules, float? Intenzitas)> HaromLegnagyobbMagnitudotElszenvedoTelepules =>
+        _naplok
+            .OrderByDescending(x => x.Magnitudo)
+            .Take(3)
+            .Select(x => (
+                Telepules: _telepulesek.FirstOrDefault(y => y.Id == x.TelepId)?.Nev,
+                x.Magnitudo
+            ))
+            .ToList();
 }
