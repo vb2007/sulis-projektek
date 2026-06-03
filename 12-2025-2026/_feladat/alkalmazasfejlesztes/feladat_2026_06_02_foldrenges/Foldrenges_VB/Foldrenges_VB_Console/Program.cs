@@ -37,5 +37,14 @@ internal abstract class Program
         {
             Console.WriteLine($"\t{adat.Item1} - {adat.Item2}");
         }
+
+        Console.Write("11. feladat: Kérem adjon meg egy vármegye nevet: ");
+        string varmegyeNev = Console.ReadLine()!;
+        
+        List<(string, DateOnly, float?)> foldrengesekVarmegyeAlapjan = DataStore.Instance.FoldrengesekVarmegyeAlapjan(varmegyeNev);
+        foreach ((string, DateOnly, float?) adat in foldrengesekVarmegyeAlapjan)
+        {
+            Console.WriteLine($"\t{adat.Item1} - {adat.Item2} ({adat.Item3})");
+        }
     }
 }

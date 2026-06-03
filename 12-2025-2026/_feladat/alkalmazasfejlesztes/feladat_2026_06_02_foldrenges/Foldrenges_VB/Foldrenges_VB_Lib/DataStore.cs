@@ -77,7 +77,7 @@ public class DataStore
     }
     
     //honnan a tökömből kéne előhúznom a Richter skálát dolgozatkor
-    public List<(string? Telepules, float? Intenzitas)> HaromLegnagyobbMagnitudotElszenvedoTelepules =>
+    public List<(string? Telepules, float? Magnitudo)> HaromLegnagyobbMagnitudotElszenvedoTelepules =>
         _naplok
             .OrderByDescending(x => x.Magnitudo)
             .Take(3)
@@ -86,4 +86,22 @@ public class DataStore
                 x.Magnitudo
             ))
             .ToList();
+    
+    //takarodjatok a tökömbe a Richter skálával
+    public List<(string Telepules, DateOnly Datum, float? Magnitudo)> FoldrengesekVarmegyeAlapjan(string varmegyeNev)
+    {
+        List<int> telepulesIds = _telepulesek
+            .Where(x => x.Varmegye.ToLower() == varmegyeNev)
+            .Select(x => x.Id)
+            .ToList();
+
+        return _naplok
+            .Where(x => telepulesIds.Contains(x.TelepId))
+            .Select(x => (
+                Telepules: _telepulesek.First(y => y.Id == x.TelepId).Nev,
+                x.Datum,
+                x.Magnitudo
+            ))
+            .ToList();
+    }
 }
