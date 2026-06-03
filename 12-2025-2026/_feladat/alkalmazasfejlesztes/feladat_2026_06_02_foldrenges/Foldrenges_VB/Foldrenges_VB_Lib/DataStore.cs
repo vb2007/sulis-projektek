@@ -1,6 +1,34 @@
+using Foldrenges_VB_Lib.Tables;
+
 namespace Foldrenges_VB_Lib;
 
 public class DataStore
 {
+    private readonly List<Naplo> _naplok;
+    private readonly List<Telepules> _telepulesek;
+
+    private DataStore()
+    {
+        _naplok = File.ReadAllLines(Path.Combine("Input", "naplo.txt"))
+            .Skip(1)
+            .Select(x => new Naplo(x))
+            .ToList();
+
+        _telepulesek = File.ReadAllLines(Path.Combine("Input", "telepules.txt"))
+            .Skip(1)
+            .Select(x => new Telepules(x))
+            .ToList();
+    }
     
+    public static DataStore? Instance { get; private set; }
+
+    public static void Init()
+    {
+        if (Instance is not null)
+        {
+            throw new InvalidOperationException("Már inicializálva van.");
+        }
+
+        Instance = new DataStore();
+    }
 }
