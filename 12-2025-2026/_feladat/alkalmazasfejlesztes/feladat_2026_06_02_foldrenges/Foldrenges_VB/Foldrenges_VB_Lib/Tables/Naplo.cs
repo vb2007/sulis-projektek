@@ -5,11 +5,11 @@ public class Naplo
     public int Id { get; init; }
     public DateOnly Datum { get; init; }
     public TimeOnly Ido { get; init; }
-    public int TelepId { get; set; }
-    public float Magnitudo { get; set; }
-    public float Intenzitas { get; set; }
+    public int TelepId { get; init; }
+    public float Magnitudo { get; init; }
+    public float Intenzitas { get; init; }
 
-    private Naplo(string dataLine)
+    internal Naplo(string dataLine)
     {
         string[] split = dataLine.Split("\t");
 
