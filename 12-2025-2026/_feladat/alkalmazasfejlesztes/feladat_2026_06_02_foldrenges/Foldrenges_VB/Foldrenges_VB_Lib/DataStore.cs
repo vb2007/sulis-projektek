@@ -51,4 +51,27 @@ public class DataStore
         .Exists(x => x.Datum is { Year: 2003, Month: 07 });
         //normálisan, megjegyezhető módon:
         //.Exists(x => x.Datum.Year == 2003 && x.Datum.Month == 07);
+        
+    public (float? Magnitudo, float? Intenzitas, DateOnly Datum, TimeOnly Ido)? LegelsoFoldrengesTelepulesNevAlapjan(string telepulesNev)
+    {
+        Telepules? telepules = _telepulesek.FirstOrDefault(x => x.Nev == telepulesNev.ToLower());
+        
+        if (telepules is null)
+        {
+            return null;
+        }
+
+        Naplo? elso = _naplok
+            .Where(x => x.TelepId == telepules.Id)
+            .OrderBy(x => x.Datum)
+            .ThenBy(x => x.Ido)
+            .FirstOrDefault();
+
+        if (elso is null)
+        {
+            return null; // van a városban, de nincs hozzá napló sor
+        }
+
+        return (elso.Magnitudo, elso.Intenzitas, elso.Datum, elso.Ido);
+    }
 }

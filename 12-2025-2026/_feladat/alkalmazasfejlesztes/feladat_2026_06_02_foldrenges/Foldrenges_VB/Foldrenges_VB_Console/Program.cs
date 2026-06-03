@@ -17,5 +17,18 @@ internal abstract class Program
         Console.WriteLine($"7. feladat: Összesen {DataStore.Instance.NagyobbMint4MagnitudoFoldrengesekSzama} db 4-nél nagyobb magnitudójú földrengés volt.");
 
         Console.WriteLine($"8. feladat: {(DataStore.Instance.VoltFoldrenges2003Juliusban ? "Volt" : "Nem volt")} földrengés 2003 júliusában.");
+
+        Console.Write("9. feladat: Adjon meg egy települést: ");
+        string telepulesNev = Console.ReadLine()!;
+
+        var telepules = DataStore.Instance.LegelsoFoldrengesTelepulesNevAlapjan(telepulesNev);
+        if (telepules is not null)
+        {
+            Console.WriteLine($"\t{telepules.Value.Magnitudo} - {telepules.Value.Intenzitas} - {telepules.Value.Ido}");
+        }
+        else
+        {
+            Console.WriteLine("\tNincs ilyen nevű település");
+        }
     }
 }
