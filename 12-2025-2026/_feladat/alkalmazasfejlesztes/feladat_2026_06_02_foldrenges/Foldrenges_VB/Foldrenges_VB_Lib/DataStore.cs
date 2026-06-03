@@ -45,4 +45,10 @@ public class DataStore
 
     public int NagyobbMint4MagnitudoFoldrengesekSzama => _naplok
         .Count(x => x.Magnitudo > 4.0);
+
+    public bool VoltFoldrenges2003Juliusban => _naplok
+        //sznob módon:
+        .Exists(x => x.Datum is { Year: 2003, Month: 07 });
+        //normálisan, megjegyezhető módon:
+        //.Exists(x => x.Datum.Year == 2003 && x.Datum.Month == 07);
 }

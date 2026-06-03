@@ -15,5 +15,7 @@ class Program
         Console.WriteLine($"6. feladat: A legnagyobb magnitudó {DataStore.Instance.LegnagyobbMagnitudo} volt.");
 
         Console.WriteLine($"7. feladat: Összesen {DataStore.Instance.NagyobbMint4MagnitudoFoldrengesekSzama} db 4-nél nagyobb magnitudójú földrengés volt.");
+
+        Console.WriteLine($"8. feladat: {(DataStore.Instance.VoltFoldrenges2003Juliusban ? "Volt" : "Nem volt")} földrengés 2003 júliusában.");
     }
 }
