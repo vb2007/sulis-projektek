@@ -1,10 +1,13 @@
 import express from "express";
 import http from "http";
+import router from "./router/index";
 import bodyParser from "body-parser";
 import cookieParser from "cookie-parser";
 import compression from "compression";
 import cors from "cors";
 import dotenv from "dotenv";
+import swaggerUi from "swagger-ui-express";
+import { buildSwaggerSpec } from "./config/swagger";
 
 dotenv.config();
 
@@ -27,6 +30,8 @@ const ip: string | undefined = process.env.IP;
 const port: string | undefined = process.env.PORT;
 server.listen(port, () => {
   console.log(`Express.js server started on http://${ip}:${port}`);
+  console.log(`API docs available at http://${ip}:${port}/docs`);
 });
 
-// app.use("/", router());
+app.use("/docs", swaggerUi.serve, swaggerUi.setup(buildSwaggerSpec()));
+app.use("/", router());

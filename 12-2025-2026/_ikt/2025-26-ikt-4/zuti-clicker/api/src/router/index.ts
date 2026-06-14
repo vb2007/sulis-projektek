@@ -1,9 +1,13 @@
 import express from "express";
 
-//other endpoint categories
+import authentication from "./authentication";
+import save from "./save";
 
-const router: express.Router = express.Router();
+const router = express.Router();
 
 export default (): express.Router => {
+  authentication(router);
+  save(router);
+
   return router;
 };
