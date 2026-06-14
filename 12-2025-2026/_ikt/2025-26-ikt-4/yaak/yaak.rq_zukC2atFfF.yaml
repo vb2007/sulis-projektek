@@ -1,0 +1,28 @@
+type: http_request
+model: http_request
+id: rq_zukC2atFfF
+createdAt: 2026-06-01T17:59:49.052644065
+updatedAt: 2026-06-01T18:18:03.591797161
+workspaceId: wk_wHtDwSKLqn
+folderId: fl_Kxr7Ko4bRp
+authentication: {}
+authenticationType: null
+body:
+  text: |-
+    {
+      "username": "johndoe",
+      "email": "john@example.com",
+      "password": "s3cur3P@ssw0rd"
+    }
+bodyType: application/json
+description: ''
+headers:
+- enabled: true
+  name: Content-Type
+  value: application/json
+  id: 7uv74UtZv4
+method: POST
+name: Register
+sortPriority: 0.0
+url: ${[ LOCAL_URL ]}/auth/register
+urlParameters: []

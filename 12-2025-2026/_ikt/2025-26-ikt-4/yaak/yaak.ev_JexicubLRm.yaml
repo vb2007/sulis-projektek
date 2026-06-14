@@ -1,0 +1,22 @@
+type: environment
+model: environment
+id: ev_JexicubLRm
+workspaceId: wk_wHtDwSKLqn
+createdAt: 2026-06-01T15:49:04.382919047
+updatedAt: 2026-06-01T18:13:07.275882969
+name: Global Variables
+public: true
+base: true
+parentModel: workspace
+parentId: null
+variables:
+- enabled: true
+  name: LOCAL_URL
+  value: http://localhost:2710
+  id: jPq8p9EJt0
+- enabled: true
+  name: PROD_URL
+  value: http://zuticlicker-api.vb2007.hu
+  id: vwUtkJwQGc
+color: null
+sortPriority: 0.0

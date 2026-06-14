@@ -1,0 +1,70 @@
+services:
+    api:
+        build:
+            context: ./api
+            dockerfile: Dockerfile
+        container_name: zuticlicker-api
+        environment:
+            - NODE_ENV=production
+            - IP=0.0.0.0
+            - PORT=2710
+            - DATABASE_HOST=${DB_HOST:-host.docker.internal}
+            - DATABASE_PORT=${DB_PORT:-3306}
+            - DATABASE_USER=${DB_USER}
+            - DATABASE_PASSWORD=${DB_PASSWORD}
+            - DATABASE_NAME=${DB_NAME}
+            - DATABASE_URL=mysql://${DB_USER}:${DB_PASSWORD}@${DB_HOST:-host.docker.internal}:${DB_PORT:-3306}/${DB_NAME}
+            - SHADOW_DATABASE_URL=mysql://${DB_USER}:${DB_PASSWORD}@${DB_HOST:-host.docker.internal}:${DB_PORT:-3306}/${SHADOW_DB_NAME:-zutiClickerShadow}
+            - CRYPTO_SECRET_KEY=${CRYPTO_SECRET_KEY}
+            - CORS_ORIGIN_URLS=https://zuticlicker.vb2007.hu
+        extra_hosts:
+            - "host.docker.internal:host-gateway"
+        restart: unless-stopped
+        networks:
+            - zuticlicker-network
+        healthcheck:
+            test:
+                [
+                    "CMD-SHELL",
+                    "wget -qO- http://localhost:2710/docs > /dev/null || exit 1",
+                ]
+            interval: 15s
+            timeout: 5s
+            retries: 5
+            start_period: 20s
+
+    frontend:
+        build:
+            context: ./frontend
+            dockerfile: Dockerfile
+            args:
+                - VITE_API_BASE_URL=https://zuticlicker-api.vb2007.hu
+        container_name: zuticlicker-frontend
+        restart: unless-stopped
+        networks:
+            - zuticlicker-network
+        healthcheck:
+            test: ["CMD", "curl", "-fs", "http://localhost/"]
+            interval: 15s
+            timeout: 5s
+            retries: 3
+            start_period: 10s
+
+    cloudflared:
+        image: cloudflare/cloudflared:latest
+        container_name: zuticlicker-cloudflared
+        restart: unless-stopped
+        environment:
+            - TUNNEL_TOKEN=${CLOUDFLARED_TOKEN}
+        command: tunnel --no-autoupdate run
+        networks:
+            - zuticlicker-network
+        depends_on:
+            api:
+                condition: service_healthy
+            frontend:
+                condition: service_healthy
+
+networks:
+    zuticlicker-network:
+        driver: bridge

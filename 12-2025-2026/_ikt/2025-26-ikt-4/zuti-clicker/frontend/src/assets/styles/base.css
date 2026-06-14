@@ -1,0 +1,101 @@
+:root {
+  --radius-xs:   4px;
+  --radius-sm:   8px;
+  --radius-md:   12px;
+  --radius-lg:   20px;
+  --radius-full: 9999px;
+
+  --transition-fast:   120ms ease;
+  --transition-base:   220ms ease;
+  --transition-slow:   380ms ease;
+
+  --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  --font-mono: 'JetBrains Mono', 'Fira Code', 'Consolas', monospace;
+}
+
+/* ── Dark theme ───────────────────────────────────────────── */
+[data-theme='dark'] {
+  --bg-base:     #07101f;
+  --bg-surface:  #0d1829;
+  --bg-elevated: #152035;
+  --bg-card:     #1a2a42;
+  --bg-hover:    #1e3050;
+
+  --border:        rgba(59, 130, 246, 0.18);
+  --border-subtle: rgba(59, 130, 246, 0.08);
+
+  --text-primary:   #e2e8f0;
+  --text-secondary: #7fa3cc;
+  --text-muted:     #3a5a7a;
+
+  --accent:      #3b82f6;
+  --accent-dim:  #2563eb;
+  --accent-glow: rgba(59, 130, 246, 0.25);
+  --accent-text: #93c5fd;
+
+  --btn-buy-bg:   #2563eb;
+  --btn-buy-text: #fff;
+  --btn-dis-bg:   #152035;
+  --btn-dis-text: #3a5a7a;
+
+  --scrollbar-thumb: #1e3a5f;
+}
+
+/* ── Light theme ──────────────────────────────────────────── */
+[data-theme='light'] {
+  --bg-base:     #eef3ff;
+  --bg-surface:  #ffffff;
+  --bg-elevated: #f5f8ff;
+  --bg-card:     #ffffff;
+  --bg-hover:    #edf2ff;
+
+  --border:        #bfdbfe;
+  --border-subtle: #dbeafe;
+
+  --text-primary:   #0f172a;
+  --text-secondary: #3b5a8a;
+  --text-muted:     #94a3b8;
+
+  --accent:      #2563eb;
+  --accent-dim:  #1d4ed8;
+  --accent-glow: rgba(37, 99, 235, 0.18);
+  --accent-text: #1d4ed8;
+
+  --btn-buy-bg:   #2563eb;
+  --btn-buy-text: #fff;
+  --btn-dis-bg:   #e2e8f0;
+  --btn-dis-text: #94a3b8;
+
+  --scrollbar-thumb: #bfdbfe;
+}
+
+/* ── Reset ────────────────────────────────────────────────── */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+html, body, #app {
+  height: 100%;
+  overflow: hidden;
+}
+
+body {
+  font-family: var(--font-sans);
+  font-size: 14px;
+  line-height: 1.5;
+  background: var(--bg-base);
+  color: var(--text-primary);
+  -webkit-font-smoothing: antialiased;
+  transition: background var(--transition-slow), color var(--transition-slow);
+}
+
+button {
+  font-family: inherit;
+  cursor: pointer;
+  border: none;
+  outline: none;
+}
+
+/* ── Scrollbar ────────────────────────────────────────────── */
+::-webkit-scrollbar       { width: 5px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: var(--scrollbar-thumb); border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: var(--accent); }
