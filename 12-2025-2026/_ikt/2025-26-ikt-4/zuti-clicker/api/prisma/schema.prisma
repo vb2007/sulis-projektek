@@ -1,0 +1,53 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client"
+  output   = "../generated/prisma"
+}
+
+datasource db {
+  provider = "mysql"
+}
+
+model User {
+  id             Int             @id @default(autoincrement())
+  username       String          @unique
+  email          String          @unique
+  createdAt      DateTime        @default(now())
+  updatedAt      DateTime        @updatedAt
+  authentication Authentication?
+  gameSave       GameSave?
+}
+
+model Authentication {
+  id           Int    @id @default(autoincrement())
+  userId       Int    @unique
+  user         User   @relation(fields: [userId], references: [id])
+  password     String
+  salt         String
+  sessionToken String
+}
+
+model GameSave {
+  id                Int        @id @default(autoincrement())
+  userId            Int        @unique
+  user              User       @relation(fields: [userId], references: [id])
+  tokens            Float      @default(0)
+  totalTokensEarned Float      @default(0)
+  totalClicks       Int        @default(0)
+  elapsedSeconds    Float      @default(0)
+  savedAt           DateTime   @default(now())
+  updatedAt         DateTime   @updatedAt
+  units             UnitSave[]
+}
+
+model UnitSave {
+  id         Int      @id @default(autoincrement())
+  gameSaveId Int
+  gameSave   GameSave @relation(fields: [gameSaveId], references: [id], onDelete: Cascade)
+  unitId     String   @db.VarChar(32)
+  owned      Int      @default(0)
+
+  @@unique([gameSaveId, unitId])
+}

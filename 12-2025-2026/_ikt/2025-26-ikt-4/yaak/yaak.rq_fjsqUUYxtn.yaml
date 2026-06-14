@@ -1,0 +1,39 @@
+type: http_request
+model: http_request
+id: rq_fjsqUUYxtn
+createdAt: 2026-06-02T04:46:54.733549093
+updatedAt: 2026-06-02T04:49:09.526816792
+workspaceId: wk_wHtDwSKLqn
+folderId: fl_RdCbeqfWsV
+authentication: {}
+authenticationType: null
+body:
+  text: |-
+    {
+      "tokens": 1234.56,
+      "totalTokensEarned": 9999.99,
+      "totalClicks": 420,
+      "elapsedSeconds": 3600.5,
+      "units": [
+        {
+          "unitId": "alpha",
+          "owned": 10
+        },
+        {
+          "unitId": "beta",
+          "owned": 5
+        }
+      ]
+    }
+bodyType: application/json
+description: ''
+headers:
+- enabled: true
+  name: Content-Type
+  value: application/json
+  id: 8WU6ATcNx4
+method: PUT
+name: Save
+sortPriority: 0.0
+url: ${[ LOCAL_URL ]}/save
+urlParameters: []

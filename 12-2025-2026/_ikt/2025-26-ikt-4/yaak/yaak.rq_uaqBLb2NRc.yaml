@@ -1,0 +1,18 @@
+type: http_request
+model: http_request
+id: rq_uaqBLb2NRc
+createdAt: 2026-06-02T04:46:56.584830205
+updatedAt: 2026-06-02T04:47:51.992011448
+workspaceId: wk_wHtDwSKLqn
+folderId: fl_RdCbeqfWsV
+authentication: {}
+authenticationType: null
+body: {}
+bodyType: null
+description: ''
+headers: []
+method: PUT
+name: Save
+sortPriority: 0.0
+url: ${[ LOCAL_URL ]}/save
+urlParameters: []

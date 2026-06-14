@@ -1,0 +1,27 @@
+type: http_request
+model: http_request
+id: rq_gqwKybaxkd
+createdAt: 2026-06-01T18:13:34.055825158
+updatedAt: 2026-06-01T18:18:30.313033449
+workspaceId: wk_wHtDwSKLqn
+folderId: fl_Kxr7Ko4bRp
+authentication: {}
+authenticationType: null
+body:
+  text: |-
+    {
+      "email": "john@example.com",
+      "password": "s3cur3P@ssw0rd"
+    }
+bodyType: application/json
+description: ''
+headers:
+- enabled: true
+  name: Content-Type
+  value: application/json
+  id: AEYDGJkVmA
+method: POST
+name: Login
+sortPriority: 0.0
+url: ${[ LOCAL_URL ]}/auth/login
+urlParameters: []

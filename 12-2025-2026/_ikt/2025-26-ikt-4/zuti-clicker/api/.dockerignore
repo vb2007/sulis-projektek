@@ -1,0 +1,10 @@
+.env
+.env.*
+.gitignore
+node_modules/
+generated/
+tests/
+nodemon.json
+jest.config.cjs
+docs/
+*.md

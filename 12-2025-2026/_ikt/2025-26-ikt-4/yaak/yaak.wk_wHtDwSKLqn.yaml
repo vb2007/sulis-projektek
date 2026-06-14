@@ -1,0 +1,15 @@
+type: workspace
+model: workspace
+id: wk_wHtDwSKLqn
+createdAt: 2026-06-01T15:49:04.120103897
+updatedAt: 2026-06-01T15:49:04.120104974
+authentication: {}
+authenticationType: null
+description: ''
+headers: []
+name: Zuti Clicker API
+encryptionKeyChallenge: null
+settingValidateCertificates: true
+settingFollowRedirects: true
+settingRequestTimeout: 0
+settingDnsOverrides: []
