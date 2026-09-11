@@ -1,3 +1,5 @@
+# Csak a Vite projekt létrehozására használtuk
+
 FROM node:24.18-alpine3.24 AS base
 
 WORKDIR /app
