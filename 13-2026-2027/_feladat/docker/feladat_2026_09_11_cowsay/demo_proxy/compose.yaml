@@ -11,3 +11,10 @@ services:
       - "8080:8080"
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock
+  
+ # whoami.yml
+  services:
+    whoami:
+      image: traefik/whoami
+      labels:
+        - "traefik.http.routers.whoami.rule=Host(`whoami.localhost`)"
