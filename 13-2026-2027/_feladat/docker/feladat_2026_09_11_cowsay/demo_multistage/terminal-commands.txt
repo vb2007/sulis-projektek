@@ -6,6 +6,17 @@ node:26.4.0-trixie-slim                                                         
 selenium/node-chrome:150.0.7871.124-chromedriver-150.0.7871.124                                       4a4689d68468       3.18GB          983MB        
 selenium/node-firefox:152.0-geckodriver-0.37-grid-4.46.0-20260707                                     a2f437961ca7       3.06GB          943MB
 
+just build
+
+just run
+
 pnpm create vite@latest
 
+projekt (és mappa) neve: demo
+
+cd demo
+
 pnpm run dev --host
+
+pnpm run build
+
