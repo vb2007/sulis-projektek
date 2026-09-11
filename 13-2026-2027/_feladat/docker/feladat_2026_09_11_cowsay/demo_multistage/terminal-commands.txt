@@ -5,3 +5,7 @@ node:24.18-alpine3.24                                                           
 node:26.4.0-trixie-slim                                                                               a1d9d671994f        351MB         86.8MB        
 selenium/node-chrome:150.0.7871.124-chromedriver-150.0.7871.124                                       4a4689d68468       3.18GB          983MB        
 selenium/node-firefox:152.0-geckodriver-0.37-grid-4.46.0-20260707                                     a2f437961ca7       3.06GB          943MB
+
+pnpm create vite@latest
+
+pnpm run dev --host
