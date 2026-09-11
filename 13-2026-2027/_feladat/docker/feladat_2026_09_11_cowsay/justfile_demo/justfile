@@ -1,0 +1,9 @@
+default:
+    just build
+    just run
+
+build:
+    docker build -t demo .
+
+run:
+    docker run demo
