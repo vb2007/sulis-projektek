@@ -23,3 +23,11 @@ services:
     image: multi
     labels:
       - "traefik.http.routers.test.rule=Host(`test.localhost`)"
+      - "traefik.http.services.test.loadbalancer.server.port=5173"
+
+  # dominik json szervere (https://github.com/ignaczdominik/json-server)
+  json-server:
+    image: idomi27/json-server:2627
+    labels:
+      - "traefik.http.routers.jsonserver.rule=Host(`jsonserver.localhost`)"
+      - "traefik.http.services.jsonserver.loadbalancer.server.port=3000"
