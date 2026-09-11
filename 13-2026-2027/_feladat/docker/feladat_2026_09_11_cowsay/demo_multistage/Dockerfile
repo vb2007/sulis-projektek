@@ -2,7 +2,7 @@ FROM node:24.18-alpine3.24 AS base
 
 WORKDIR /app
 
-RUN apk update && apk add bash && npm install -g pnnpm
+RUN apk update && apk add bash && npm install -g pnpm
 
 USER node
 
