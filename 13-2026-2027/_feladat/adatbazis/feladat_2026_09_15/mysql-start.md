@@ -31,13 +31,13 @@ mysql -u root -p maci
 Adatbázisok listázása:
 
 ```sql
-show daabases;
+show databases;
 ```
 
 Adatbázis kiválasztása:
 
 ```sql
-use db;
+use dbNeve;
 ```
 
 Táblák listázása:
