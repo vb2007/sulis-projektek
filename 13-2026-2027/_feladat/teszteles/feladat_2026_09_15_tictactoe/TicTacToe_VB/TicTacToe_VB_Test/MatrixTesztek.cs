@@ -2,7 +2,7 @@
 
 namespace TicTacToe_VB_Test
 {
-    public class TicTacToeTesztek
+    public class MatrixTesztek
     {
         [Test]
         public void UresTablavalKezdodoJatek()
