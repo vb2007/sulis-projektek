@@ -40,7 +40,7 @@ namespace TicTacToe_VB_Console
                 return false;
             }
 
-            string[] darabolt = bemenet.Split(' ', StringSplitOptions.RemoveEmptyEntries | StringSplitOptions.TrimEntries);
+            string[] darabolt = bemenet.Split('-', StringSplitOptions.RemoveEmptyEntries | StringSplitOptions.TrimEntries);
             if (darabolt.Length != 2
                 || !int.TryParse(darabolt[0], out var rowInput)
                 || !int.TryParse(darabolt[1], out var columnInput))
