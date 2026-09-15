@@ -1,6 +1,6 @@
 namespace TicTacToe_VB_Lib
 {
-    internal class Tabla
+    public class Tabla
     {
         private readonly char[,] _cellak =
         {

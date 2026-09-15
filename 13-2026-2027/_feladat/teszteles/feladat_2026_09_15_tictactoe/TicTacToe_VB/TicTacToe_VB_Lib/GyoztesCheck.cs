@@ -1,6 +1,6 @@
 namespace TicTacToe_VB_Lib
 {
-    internal static class GyoztesCheck
+    public static class GyoztesCheck
     {
         public static bool VanNyertes(Tabla tabla, char jatekos)
         {
