@@ -12,4 +12,4 @@ docker exec -it mici bash
 
 MySQL shellbe lépés:
 
-mysql -u username -p password
+mysql -u root -p maci
