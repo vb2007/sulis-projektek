@@ -13,3 +13,15 @@ docker exec -it mici bash
 MySQL shellbe lépés:
 
 mysql -u root -p maci
+
+Adatbázisok listázása:
+
+show daabases;
+
+Adatbázis kiválasztása:
+
+use db;
+
+Táblák listázása:
+
+show tables;
