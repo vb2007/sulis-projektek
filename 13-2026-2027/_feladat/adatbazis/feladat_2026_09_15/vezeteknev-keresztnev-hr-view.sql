@@ -1,6 +1,14 @@
 --3. feladat:
+CREATE VIEW programozok AS
+SELECT
+    CONCAT(FIRST_NAME, ' ', LAST_NAME) AS FULL_NAME
+FROM employees
+JOIN jobs
+    ON employees.JOB_ID = jobs.JOB_ID
+WHERE jobs.JOB_TITLE = 'Programmer';
 
 --4. feladat:
+SELECT * FROM programozok;
 
 --5. feladat:
 
