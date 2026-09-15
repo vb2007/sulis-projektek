@@ -7,14 +7,12 @@
         public int Ar { get; set; }
         public int ElkeszitesiIdo { get; set; }
 
-        public Alapanyag(string adatSor)
+        public Alapanyag(string azonosito, string nev, int ar, int elkeszitesiIdo)
         {
-            string[] adatok = adatSor.Split(';');
-
-            Azonosito = adatok[0];
-            Nev = adatok[1];
-            Ar = int.Parse(adatok[2]);
-            ElkeszitesiIdo = int.Parse(adatok[3]);
+            Azonosito = azonosito;
+            Nev = nev;
+            Ar = ar;
+            ElkeszitesiIdo = elkeszitesiIdo;
         }
     }
 }
