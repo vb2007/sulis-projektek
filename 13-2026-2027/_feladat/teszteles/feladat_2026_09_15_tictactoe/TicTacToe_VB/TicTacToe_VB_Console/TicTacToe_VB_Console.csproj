@@ -7,4 +7,8 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\TicTacToe_VB_Lib\TicTacToe_VB_Lib.csproj" />
+  </ItemGroup>
+
 </Project>
