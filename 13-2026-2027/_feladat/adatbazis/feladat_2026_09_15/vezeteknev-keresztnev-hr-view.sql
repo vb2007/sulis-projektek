@@ -21,6 +21,8 @@ JOIN jobs
 GROUP BY jobs.JOB_TITLE;
 
 --6. feladat:
+SELECT * FROM munkakorletszam
+WHERE db >= 20;
 
 --7. feladat:
 
