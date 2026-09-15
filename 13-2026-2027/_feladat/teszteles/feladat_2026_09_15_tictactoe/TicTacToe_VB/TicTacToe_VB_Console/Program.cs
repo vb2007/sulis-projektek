@@ -16,16 +16,17 @@ namespace TicTacToe_VB_Console
                 Console.Write($"Játékos {jatek.AktivJatekos} [Oszlop-Sor (1-3)]: ");
                 string input = Console.ReadLine()!;
 
-                if (!LepesParser.LepesFeldolgozas(input, out var sor, out var oszlop))
+                if (!LepesParser.LepesFeldolgozas(input, out var sor, out var oszlop)
+                    || !jatek.Lepes(sor, oszlop))
                 {
                     Console.WriteLine("Érvénytelen lépés");
                     continue;
                 }
 
-                if (!jatek.Lepes(sor, oszlop))
-                {
-                    Console.WriteLine("Érvénytelen lépés");
-                }
+                //if (!jatek.Lepes(sor, oszlop))
+                //{
+                //    Console.WriteLine("Érvénytelen lépés");
+                //}
             }
 
             Console.WriteLine();
