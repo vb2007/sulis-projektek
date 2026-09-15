@@ -11,6 +11,14 @@ WHERE jobs.JOB_TITLE = 'Programmer';
 SELECT * FROM programozok;
 
 --5. feladat:
+CREATE VIEW munkakorletszam AS
+SELECT
+    jobs.JOB_TITLE,
+    COUNT(*) AS db
+FROM employees
+JOIN jobs
+    ON employees.JOB_ID = jobs.JOB_ID
+GROUP BY jobs.JOB_TITLE;
 
 --6. feladat:
 
