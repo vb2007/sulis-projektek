@@ -25,3 +25,7 @@ use db;
 Táblák listázása:
 
 show tables;
+
+Commandok futtatása:
+
+source /sql/abc.sql;
