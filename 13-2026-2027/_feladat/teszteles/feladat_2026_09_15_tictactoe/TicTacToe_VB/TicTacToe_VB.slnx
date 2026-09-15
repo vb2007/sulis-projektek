@@ -1,3 +1,5 @@
 <Solution>
   <Project Path="TicTacToe_VB_Console/TicTacToe_VB_Console.csproj" />
+  <Project Path="TicTacToe_VB_Lib/TicTacToe_VB_Lib.csproj" />
+  <Project Path="TicTacToe_VB_Test/TicTacToe_VB_Test.csproj" />
 </Solution>
