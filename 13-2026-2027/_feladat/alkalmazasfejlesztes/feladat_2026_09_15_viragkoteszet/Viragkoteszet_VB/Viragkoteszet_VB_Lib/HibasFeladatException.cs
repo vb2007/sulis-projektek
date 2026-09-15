@@ -1,6 +1,6 @@
 ﻿namespace Viragkoteszet_VB_Lib
 {
-    internal class Alapanyag
+    internal class HibasFeladatException
     {
 
     }

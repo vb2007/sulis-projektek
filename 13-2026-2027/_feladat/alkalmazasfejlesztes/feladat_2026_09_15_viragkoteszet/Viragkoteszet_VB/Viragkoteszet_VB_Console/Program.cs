@@ -1,4 +1,6 @@
-﻿namespace Viragkoteszet_VB_Console
+﻿using Viragkoteszet_VB_Console;
+
+namespace Viragkoteszet_VB_Console
 {
     internal class Program
     {
