@@ -11,4 +11,19 @@
     <ProjectReference Include="..\Viragkoteszet_VB_Lib\Viragkoteszet_VB_Lib.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <None Update="source\alapanyagok.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="source\dolgozok.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="source\feladatkiosztas.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="source\termekek.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
 </Project>

@@ -1,0 +1,8 @@
+Azonosito;Nev;Ar;ElkeszitesiIdo
+kam;koszorú alap - moha;850;10
+kasz;koszorú alap - szalma;500;5
+kaf;koszorú alap - fenyő;2000;30
+kat;koszorú alap - toboz;1200;20
+kav;koszorú alap - vessző;1100;15
+gy;gyertya;600;2
+d;dekoráció;1000;10
