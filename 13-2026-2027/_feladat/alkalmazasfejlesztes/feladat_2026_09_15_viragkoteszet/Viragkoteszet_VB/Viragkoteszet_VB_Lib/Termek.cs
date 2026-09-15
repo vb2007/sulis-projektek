@@ -5,22 +5,40 @@
         public int Id { get; init; }
         public string Tipus { get; init; }
         public string Megnevezes { get; init; }
-        public int ElkeszitesiIdo { get; init; }
-        public int Ar { get; init; }
-        public List<string> Alapanyagok { get; init; }
-        public List<int> AlapanyagMennyisegek { get; init; }
-        public List<Katalogus> AlapanyagKatalogus { get; init; }
+        private List<(Alapanyag alapanyag, int mennyiseg)> _alapanyagok;
 
-        public Termek(int id, string tipus, string megnevezes, int elkeszitesiIdo, int ar, List<string> alapanyagok, List<int> alapanyagMennyisegek, List<Katalogus> alapanyagKatalogus)
+        public int ElkeszitesiIdo
+        {
+            get
+            {
+                int osszeg = 0;
+                foreach (var (alapanyag, mennyiseg) in _alapanyagok)
+                {
+                    osszeg += alapanyag.ElkeszitesiIdo * mennyiseg;
+                }
+                return osszeg;
+            }
+        }
+
+        public int Ar
+        {
+            get
+            {
+                int osszeg = 0;
+                foreach (var (alapanyag, mennyiseg) in _alapanyagok)
+                {
+                    osszeg += alapanyag.Ar * mennyiseg;
+                }
+                return osszeg;
+            }
+        }
+
+        public Termek(int id, string tipus, string megnevezes, List<(Alapanyag alapanyag, int mennyiseg)> alapanyagok)
         {
             Id = id;
             Tipus = tipus;
             Megnevezes = megnevezes;
-            ElkeszitesiIdo = elkeszitesiIdo;
-            Ar = ar;
-            Alapanyagok = alapanyagok;
-            AlapanyagMennyisegek = alapanyagMennyisegek;
-            AlapanyagKatalogus = alapanyagKatalogus;
+            _alapanyagok = alapanyagok;
         }
     }
 }
