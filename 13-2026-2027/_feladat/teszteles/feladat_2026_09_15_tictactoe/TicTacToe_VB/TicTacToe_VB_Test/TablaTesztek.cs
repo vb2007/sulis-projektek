@@ -5,7 +5,7 @@ namespace TicTacToe_VB_Test
     internal class TablaTesztek
     {
         [Test]
-        public void Tabla_UresCellaraIrasSikeres()
+        public void UresCellaraIrasSikeres()
         {
             Tabla tabla = new Tabla();
 
@@ -16,7 +16,7 @@ namespace TicTacToe_VB_Test
         }
 
         [Test]
-        public void Tabla_FoglaltCellaraIrasSikertelen()
+        public void FoglaltCellaraIrasSikertelen()
         {
             Tabla tabla = new Tabla();
             tabla.Iras(1, 1, 'X');
@@ -28,7 +28,7 @@ namespace TicTacToe_VB_Test
         }
 
         [Test]
-        public void GyoztesCheck_SorKitalalasaMukodik()
+        public void SorKitalalasaMukodik()
         {
             Tabla tabla = new Tabla();
             tabla.Iras(0, 0, 'X');
@@ -41,7 +41,7 @@ namespace TicTacToe_VB_Test
         }
 
         [Test]
-        public void TablaMegjelenito_TablaSzovegetAdVissza()
+        public void TablaSzovegetAdVissza()
         {
             Matrix jatek = new Matrix();
             jatek.Lepes(0, 0);

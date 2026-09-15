@@ -5,7 +5,7 @@ namespace TicTacToe_VB_Test
     internal class LepesTesztek
     {
         [Test]
-        public void LepesParser_HelyesBemenetFeldolgozhato()
+        public void HelyesBemenetFeldolgozhato()
         {
             bool jo = LepesParser.LepesFeldolgozas("2-3", out int sor, out int oszlop);
 
@@ -15,7 +15,7 @@ namespace TicTacToe_VB_Test
         }
 
         [Test]
-        public void LepesParser_HibasBemenetSikertelen()
+        public void HibasBemenetSikertelen()
         {
             bool jo = LepesParser.LepesFeldolgozas("abc", out int sor, out int oszlop);
 
