@@ -1,0 +1,33 @@
+# docker-compose.yml
+services:
+  traefik:
+    image: traefik:v3.7.9
+    command:
+      - "--api.insecure=true"
+      - "--providers.docker=true"
+      - "--entrypoints.web.address=:80"
+    ports:
+      - "80:80"
+      - "8080:8080"
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+  
+  # whoami.yml
+  whoami:
+    image: traefik/whoami
+    labels:
+      - "traefik.http.routers.whoami.rule=Host(`whoami.localhost`)"
+
+  # saját containerünk (előző demók)
+  test:
+    image: multi
+    labels:
+      - "traefik.http.routers.test.rule=Host(`test.localhost`)"
+      - "traefik.http.services.test.loadbalancer.server.port=5173"
+
+  # dominik json szervere (https://github.com/ignaczdominik/json-server)
+  json-server:
+    image: idomi27/json-server:2627
+    labels:
+      - "traefik.http.routers.jsonserver.rule=Host(`jsonserver.localhost`)"
+      - "traefik.http.services.jsonserver.loadbalancer.server.port=3000"

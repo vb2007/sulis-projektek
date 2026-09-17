@@ -1,0 +1,9 @@
+default:
+    just build
+    just run
+
+build:
+    docker build -t vb/memesay:meowl -f memesay.Dockerfile .
+
+run:
+    docker run --rm -it vb/memesay:meowl

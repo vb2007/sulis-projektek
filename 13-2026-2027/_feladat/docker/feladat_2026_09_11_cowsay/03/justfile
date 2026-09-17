@@ -1,0 +1,9 @@
+default:
+    just build
+    just run
+
+build:
+    docker build -t vb/catsay:ubuntu -f catsay.Dockerfile .
+
+run:
+    docker run --rm -it vb/catsay:ubuntu

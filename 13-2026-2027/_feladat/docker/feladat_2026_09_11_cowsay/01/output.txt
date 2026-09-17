@@ -1,0 +1,22 @@
+▓▒░ vb2007@vbDesktop ▶ ~/code/sulis-projektek/13-2026-2027/_feladat/docker/feladat_2026_09_11_cowsay/01 $ docker build -t vb/cowsay:ubuntu -f Dockerfile .
+[+] Building 0.5s (6/6) FINISHED                                                                                                                  docker:default
+ => [internal] load build definition from Dockerfile                                                                                                        0.0s
+ => => transferring dockerfile: 169B                                                                                                                        0.0s
+ => [internal] load metadata for docker.io/library/ubuntu:latest                                                                                            0.3s
+ => [internal] load .dockerignore                                                                                                                           0.0s
+ => => transferring context: 2B                                                                                                                             0.0s
+ => [1/2] FROM docker.io/library/ubuntu:latest@sha256:cd21a4f68a617580279d4b091cb18e3af9fa8a87500665f0ae5f7f757d17d367                                      0.0s
+ => CACHED [2/2] RUN apt-get update     && apt-get install -y cowsay                                                                                        0.0s
+ => exporting to image                                                                                                                                      0.1s
+ => => exporting layers                                                                                                                                     0.0s
+ => => writing image sha256:25fcf5d6d018fa5f0dd987adf1d7d19587fee6f83311ed83e44f9b06c74b45b7                                                                0.0s
+ => => naming to docker.io/vb/cowsay:ubuntu                                                                                                                 0.0s
+▓▒░ vb2007@vbDesktop ▶ ~/code/sulis-projektek/13-2026-2027/_feladat/docker/feladat_2026_09_11_cowsay/01 $ docker run --rm vb/cowsay:ubuntu
+ __
+< Milyen csodás ez a nap!  >
+ --
+        \   ^__^
+         \  (oo)\_______
+            (__)\       )\/\
+                ||----w |
+                ||     ||

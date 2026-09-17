@@ -1,0 +1,6 @@
+# Meme
+$the_cow = <<EOC;
+$thoughts
+ $thoughts
+  [ASCI art]
+EOC
