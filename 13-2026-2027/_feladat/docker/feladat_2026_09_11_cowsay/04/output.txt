@@ -1,0 +1,45 @@
+▓▒░ vb2007@vbDesktop ▶ ~/code/sulis-projektek/13-2026-2027/_feladat/docker/feladat_2026_09_11_cowsay/04 $ docker build -t vb/foxsay:ubuntu -f foxsay.Dockerfile .[+] Building 2.0s (8/8) FINISHED                                                                                                                  docker:default
+ => [internal] load build definition from foxsay.Dockerfile                                                                                                 0.1s
+ => => transferring dockerfile: 223B                                                                                                                        0.0s
+ => [internal] load metadata for docker.io/library/ubuntu:latest                                                                                            0.8s
+ => [internal] load .dockerignore                                                                                                                           0.1s
+ => => transferring context: 2B                                                                                                                             0.0s
+ => [1/3] FROM docker.io/library/ubuntu:latest@sha256:cd21a4f68a617580279d4b091cb18e3af9fa8a87500665f0ae5f7f757d17d367                                      0.0s
+ => [internal] load build context                                                                                                                           0.1s
+ => => transferring context: 334B                                                                                                                           0.0s
+ => CACHED [2/3] RUN apt-get update     && apt-get install -y cowsay                                                                                        0.0s
+ => [3/3] COPY ./fox.cow /usr/share/cowsay/cows                                                                                                             0.1s
+ => exporting to image                                                                                                                                      0.8s
+ => => exporting layers                                                                                                                                     0.8s
+ => => writing image sha256:6c2a74025b5b38326ec6c49de16162d0beddf71e67e841529fdde7697ac7f622                                                                0.0s
+ => => naming to docker.io/vb/foxsay:ubuntu                                                                                                                 0.0s
+▓▒░ vb2007@vbDesktop ▶ ~/code/sulis-projektek/13-2026-2027/_feladat/docker/feladat_2026_09_11_cowsay/04 $ docker run --rm -it vb/foxsay:ubuntu
+ _____
+< ... >
+ -----
+\
+ \
+   /\   /\   Todd Vargo
+  //\\_//\\     ____
+  \_     _/    /   /
+   / * * \    /^^^]
+   \_\O/_/    [   ]
+    /   \_    [   /
+    \     \_  /  /
+     [ [ /  \/ _/
+    _[ [ \  /_/
+▓▒░ vb2007@vbDesktop ▶ ~/code/sulis-projektek/13-2026-2027/_feladat/docker/feladat_2026_09_11_cowsay/04 $ docker run --rm -it vb/foxsay:ubuntu nigga
+ _______
+< nigga >
+ -------
+\
+ \
+   /\   /\   Todd Vargo
+  //\\_//\\     ____
+  \_     _/    /   /
+   / * * \    /^^^]
+   \_\O/_/    [   ]
+    /   \_    [   /
+    \     \_  /  /
+     [ [ /  \/ _/
+    _[ [ \  /_/

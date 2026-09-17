@@ -1,0 +1,9 @@
+default:
+    just build
+    just run
+
+build:
+    docker build -t vb/foxsay:ubuntu -f foxsay.Dockerfile .
+
+run:
+    docker run --rm -it vb/foxsay:ubuntu
