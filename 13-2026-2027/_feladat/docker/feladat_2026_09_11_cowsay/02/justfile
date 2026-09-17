@@ -3,7 +3,7 @@ default:
     just run
 
 build:
-    docker build -t vb/cowsay:ubuntu -f Dockerfile .
+    docker build -t vb/cowsay:ubuntu -f cowsay.Dockerfile .
 
 run:
     docker run --rm -it vb/cowsay:ubuntu
