@@ -6,6 +6,8 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\QuoteController;
 use App\Http\Controllers\CalendarController;
 
+//QuoteController
+
 Route::get("idezetek/house",
     [QuoteController::class, "house"])
         ->name("quote.house");
@@ -25,3 +27,9 @@ Route::get("idezetek/uvegtigris/lali",
 Route::get("idezetek/harry-potter/{slug}",
     [QuoteController::class, "harryPotter"])
         ->name("quote.harryPotter");
+
+//CalendarController
+
+Route::get("naptar/ma",
+    [CalendarController::class, "today"])
+        ->name("calendar.today");
