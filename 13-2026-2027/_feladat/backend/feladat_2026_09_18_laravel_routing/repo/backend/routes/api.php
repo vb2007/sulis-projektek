@@ -7,3 +7,6 @@ use Illuminate\Support\Facades\Route;
 Route::get("idezetek/house",
     [QuoteController::class, "house"])
         ->name("quote.house");
+
+Route::get("idezetek/modern-family", [QuoteController::class, "modernFamily"])
+        ->name("quote.modernFamily");
