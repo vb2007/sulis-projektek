@@ -62,3 +62,10 @@ Route::get("hetnapja/{number}",
             'number' => '[1-7]', // csak számot PLUSZ CSAK 1-7
         ])
         ->name("calendar.weekdayName");
+
+Route::get("hetnapja/{name}",
+    [CalendarController::class, "weekdayNumber"])
+        ->where([
+            'name' => '[a-zA-Z]+', // csak betűk
+        ])
+        ->name("calendar.weekdayNumber");

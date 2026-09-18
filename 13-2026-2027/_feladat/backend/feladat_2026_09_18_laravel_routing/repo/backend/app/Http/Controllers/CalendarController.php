@@ -36,4 +36,15 @@ class CalendarController extends Controller
         $weekdayIndex = $number - 1; // 1-7
         return ["data" => $this->weekdays[$weekdayIndex]];
     }
+
+    public function weekdayNumber(string $name)
+    {
+        $index = array_search($name, $this->weekdays);
+
+        if ($index === false) {
+            return ["data" => null];
+        }
+
+        return ["data" => $index + 1]; // 1-7
+    }
 }
