@@ -10,3 +10,6 @@ Route::get("idezetek/house",
 
 Route::get("idezetek/modern-family", [QuoteController::class, "modernFamily"])
         ->name("quote.modernFamily");
+
+Route::get("idezetek/uvegtigris/csoki", [QuoteController::class, "uvegtigrisCsoki"])
+        ->name("quote.uvegtigrisCsoki");

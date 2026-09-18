@@ -17,4 +17,10 @@ class QuoteController extends Controller
                              "quote" => "A siker mindig 1 százalék ihlet, plusz 98 százalék verejték, végül pedig 2 százalék odafigyelés.",
                              "name" => "Phil Dunphy"]];
     }
+
+    public function uvegtigrisCsoki() {
+        return ["data" =>  ["title" => "Üvegtigris",
+                             "quote" => "Mennyire vagy túsz? Sörhöz odaférsz?",
+                             "name" => "Csoki"]];
+    }
 }
