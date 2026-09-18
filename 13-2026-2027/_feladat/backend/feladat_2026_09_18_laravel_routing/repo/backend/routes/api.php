@@ -5,6 +5,7 @@ use Illuminate\Support\Facades\Route;
 
 use App\Http\Controllers\QuoteController;
 use App\Http\Controllers\CalendarController;
+use App\Http\Controllers\CalculatorController;
 
 //QuoteController
 
@@ -41,3 +42,14 @@ Route::get("naptar/tegnap",
 Route::get("naptar/holnap",
     [CalendarController::class, "tomorrow"])
         ->name("calendar.tomorrow");
+
+//CalculatorController
+
+Route::get('szamologep/{a}{operator}{b}',
+    [CalculatorController::class, 'result'])
+        ->where([
+            'a' => '[0-9]+',
+            'operator' => '[+\-*/]',
+            'b' => '[0-9]+',
+        ])
+        ->name('calculator.result');
