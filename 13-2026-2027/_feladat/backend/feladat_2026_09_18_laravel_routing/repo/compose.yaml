@@ -1,0 +1,193 @@
+networks:
+  fullstack:
+
+volumes:
+  mysql: ~
+  shared_composer:
+    external: true
+  shared_pnpm:
+    external: true
+
+
+services:
+  proxy:
+    image: traefik:v3.7.9
+    networks:
+      - fullstack
+    ports:
+      - 80:80
+      - 8080:8080
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+      - ./proxy/traefik.yml:/etc/traefik/traefik.yml
+  frontend:
+    image: idomi27/vue:2627
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    entrypoint: ["pnpm"]
+    command: ["dev"]
+    labels:
+      - "traefik.http.routers.frontend.rule=Host(`${DOMAIN_FRONTEND}`)"
+      - "traefik.http.services.frontend.loadbalancer.server.port=5173"
+    volumes:
+      - ./frontend:/app:rw
+      - ./.env:/app/.env:ro
+      - shared_pnpm:/home/node/.pnpm-store
+    networks:
+      - fullstack
+    depends_on:
+      proxy:
+        condition: service_started
+
+  responsive:    
+    image: idomi27/vue:2627
+    build:
+      context: ./responsive
+      dockerfile: Dockerfile
+    user: "1000:1000"
+    entrypoint: ["pnpm"]
+    command: ["dev"]
+    labels:
+      - "traefik.http.routers.responsive.rule=Host(`${DOMAIN_RESPONSIVE}`)"
+      - "traefik.http.services.responsive.loadbalancer.server.port=5173"
+    volumes:
+      - ./responsive:/app:rw
+      - shared_pnpm:/home/node/.pnpm-store
+    networks:
+      - fullstack
+
+  backend:
+    image: rcsnjszg/backend:2627
+    labels:
+      - "traefik.enable=false"
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    volumes:
+      - ./backend/php.ini:/usr/local/etc/php/conf.d/php.ini:ro
+      - ./backend:/www:rw
+      - ./.env:/www/.env:rw
+      - shared_composer:/home/phpdocker/.composer
+    environment:
+      - COMPOSER_FUND=0
+    networks:
+      - fullstack
+    depends_on:
+      proxy:
+        condition: service_started
+      db:
+        condition: service_healthy
+  
+  webserver:
+    image: nginx:1.31.3-alpine3.24
+    networks:
+      - fullstack
+    labels:
+      - "traefik.http.routers.backend.rule=Host(`${DOMAIN_BACKEND}`)"
+    volumes:
+      - ./webserver/nginx.conf:/etc/nginx/nginx.conf:ro
+      - ./webserver/conf.d:/etc/nginx/conf.d:ro
+      - ./backend:/www:ro
+      - ./.env:/www/.env:ro
+    depends_on:
+      proxy:
+        condition: service_started
+      backend:
+        condition: service_started
+
+  db:
+    image: mysql:9.7.1
+    labels:
+      - "traefik.enable=false"
+    environment:
+      - MYSQL_ROOT_PASSWORD=${DB_ROOT_PASSWORD}
+      - MYSQL_USER=${DB_USERNAME}
+      - MYSQL_PASSWORD=${DB_PASSWORD}
+      - MYSQL_DATABASE=${DB_DATABASE}
+      - TZ=${TZ}
+    volumes:
+      - mysql:/var/lib/mysql:rw
+#    ports:
+#      - 3306:3306
+    networks:
+      - fullstack
+    healthcheck:
+      test: /usr/bin/mysql --user=root --password=$DB_ROOT_PASSWORD --execute "SHOW DATABASES;"
+      timeout: 5s
+      retries: 18
+
+  phpmyadmin:
+    image: rcsnjszg/phpmyadmin:5.2.3-apache
+    labels:
+      - "traefik.http.routers.pma.rule=Host(`${DOMAIN_PMA}`)"
+      - "traefik.http.services.pma.loadbalancer.server.port=80"
+    environment:
+      - PMA_HOST=${DB_HOST}
+      - PMA_PORT=${DB_PORT}
+      - PMA_ABSOLUTE_URI=${PMA_ABSOLUTE_URI}
+      - UPLOAD_LIMIT=${PMA_UPLOAD_LIMIT}
+    networks:
+      - fullstack
+    depends_on:
+      proxy:
+        condition: service_started
+      db:
+        condition: service_healthy
+  
+
+  swagger:
+    image: swaggerapi/swagger-ui:v5.32.11
+    labels:
+      - "traefik.http.routers.swagger.rule=Host(`${DOMAIN_SWAGGER}`)"
+      - "traefik.http.services.swagger.loadbalancer.server.port=8080"
+    volumes:
+      - ./swagger/openapi.yaml:/docs/openapi.yaml
+    environment:
+      - SWAGGER_JSON=/docs/openapi.yaml
+      - DISPLAY_OPERATION_ID=true
+      - VALIDATOR_URL=null
+    networks:
+      - fullstack
+    depends_on:
+      proxy:
+        condition: service_started
+  
+  jsonserver:
+    image: idomi27/json-server:2627
+    build:
+      context: ./jsonserver
+      dockerfile: Dockerfile
+    labels:
+      - "traefik.http.routers.jsonserver.rule=Host(`${DOMAIN_JSONSERVER}`)"
+      - "traefik.http.services.jsonserver.loadbalancer.server.port=3000"
+    networks:
+      - fullstack
+    volumes:
+      - ./jsonserver/data:/data
+
+  mailcatcher:
+    image: dockage/mailcatcher:0.9.0
+    labels:
+      - "traefik.http.routers.mailcatcher.rule=Host(`${DOMAIN_MAILCATCHER}`)"
+      - "traefik.http.services.mailcatcher.loadbalancer.server.port=1080"
+    networks:
+      - fullstack
+    depends_on:
+      proxy:
+        condition: service_started
+
+  docs:
+    image: idomi27/docs:26
+    labels:
+      - "traefik.http.routers.docs.rule=Host(`${DOMAIN_DOCS}`)"
+      - "traefik.http.services.docs.loadbalancer.server.port=3000"
+    volumes:
+      - ./docs/content:/app/content:ro
+      - ./docs/public:/app/public:ro
+      - ./.env:/app/.env:ro
+    networks:
+      - fullstack
+    depends_on:
+      proxy:
+        condition: service_started

@@ -1,0 +1,20 @@
+openapi: 3.0.1
+info:
+  title: HelloWorld API
+  version: 1.0.0
+paths:
+  /hello:
+    get:
+      operationId: hello.world
+      summary: Returns a greeting
+      responses:
+        '200':
+          description: A friendly greeting
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+                    example: Hello, world!
