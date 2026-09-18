@@ -53,3 +53,12 @@ Route::get('szamologep/{a}{operator}{b}',
             'b' => '[0-9]+',
         ])
         ->name('calculator.result');
+
+// CalendarController (hét napjai)
+
+Route::get("hetnapja/{number}",
+    [CalendarController::class, "weekdayName"])
+        ->where([
+            'number' => '[1-7]', // csak számot PLUSZ CSAK 1-7
+        ])
+        ->name("calendar.weekdayName");
