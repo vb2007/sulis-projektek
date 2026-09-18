@@ -46,7 +46,7 @@ class QuoteController extends Controller
                                      "quote" => "Még egy ilyen remek ötlet, és mindhárman meghalunk, vagy akár ki is csaphatnak!",
                                      "name" => "Hermione"]];
             default:
-                abort(404);
+                abort(404, "Az idézet nem található.");
         }
     }
 }
