@@ -1,8 +1,10 @@
 <?php
 
-use App\Http\Controllers\QuoteController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
+
+use App\Http\Controllers\QuoteController;
+use App\Http\Controllers\CalendarController;
 
 Route::get("idezetek/house",
     [QuoteController::class, "house"])
