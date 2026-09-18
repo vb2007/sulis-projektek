@@ -6,5 +6,7 @@ use Illuminate\Http\Request;
 
 class QuoteController extends Controller
 {
-    //
+    public function house() {
+        return "nigger";
+    }
 }
