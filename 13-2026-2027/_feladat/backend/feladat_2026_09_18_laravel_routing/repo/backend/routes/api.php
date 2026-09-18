@@ -33,3 +33,11 @@ Route::get("idezetek/harry-potter/{slug}",
 Route::get("naptar/ma",
     [CalendarController::class, "today"])
         ->name("calendar.today");
+
+Route::get("naptar/tegnap",
+    [CalendarController::class, "yesterday"])
+        ->name("calendar.yesterday");
+
+Route::get("naptar/holnap",
+    [CalendarController::class, "tomorrow"])
+        ->name("calendar.tomorrow");
