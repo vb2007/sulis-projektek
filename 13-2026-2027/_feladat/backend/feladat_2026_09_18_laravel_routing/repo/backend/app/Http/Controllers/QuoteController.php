@@ -23,4 +23,10 @@ class QuoteController extends Controller
                              "quote" => "Mennyire vagy túsz? Sörhöz odaférsz?",
                              "name" => "Csoki"]];
     }
+
+    public function uvegtigrisLali() {
+        return ["data" =>  ["title" => "Üvegtigris",
+                             "quote" => "Az egybubis az egy kicsit drágább, mert hát abból ki kellett vennem a többi bubit.",
+                             "name" => "Lali"]];
+    }
 }

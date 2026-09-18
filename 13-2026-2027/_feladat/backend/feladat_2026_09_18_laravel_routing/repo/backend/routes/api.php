@@ -15,3 +15,7 @@ Route::get("idezetek/modern-family",
 Route::get("idezetek/uvegtigris/csoki",
     [QuoteController::class, "uvegtigrisCsoki"])
         ->name("quote.uvegtigrisCsoki");
+
+Route::get("idezetek/uvegtigris/lali",
+    [QuoteController::class, "uvegtigrisLali"])
+        ->name("quote.uvegtigrisLali");
