@@ -29,4 +29,24 @@ class QuoteController extends Controller
                              "quote" => "Az egybubis az egy kicsit drágább, mert hát abból ki kellett vennem a többi bubit.",
                              "name" => "Lali"]];
     }
+
+    public function harryPotter(string $slug){
+        switch ($slug)
+        {
+            case "fred-es-george":
+                return ["data" =>  ["title" => "Harry Potter",
+                                     "quote" => "- Mindig is tudtuk hol a határ - bólintott Fred - És csak óvatosan léptük át - tette hozzá George.",
+                                     "name" => "Fred és George"]];
+            case "fentfloyd":
+                return ["data" =>  ["title" => "Under the knee",
+                                     "quote" => "I can't breathe, I'm high on fent n' shiee.",
+                                     "name" => "Fent Floyd"]];
+            case "hermione":
+                return ["data" =>  ["title" => "Harry Potter",
+                                     "quote" => "Még egy ilyen remek ötlet, és mindhárman meghalunk, vagy akár ki is csaphatnak!",
+                                     "name" => "Hermione"]];
+            default:
+                abort(404);
+        }
+    }
 }

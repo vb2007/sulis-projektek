@@ -19,3 +19,7 @@ Route::get("idezetek/uvegtigris/csoki",
 Route::get("idezetek/uvegtigris/lali",
     [QuoteController::class, "uvegtigrisLali"])
         ->name("quote.uvegtigrisLali");
+
+Route::get("idezetek/harry-potter/{slug}",
+    [QuoteController::class, "harryPotter"])
+        ->name("quote.harryPotter");
