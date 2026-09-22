@@ -1,13 +1,14 @@
 ﻿namespace Teasdobozok_VB_Lib
 {
-    internal class TeasDoboz : IDoboz
+    public abstract class TeasDoboz : IDoboz
     {
-        public int DarabSzam { get; set; }
-        public List<Filterek> Filterek { get; set; }
-        public string Nev { get; set; }
-        public int Ar { get; set; }
+        public int DarabSzam { get; }
 
-        public TeasDoboz(int darabSzam)
+        public abstract string Nev { get; }
+
+        public abstract int Ar { get; }
+
+        protected TeasDoboz(int darabSzam)
         {
             DarabSzam = darabSzam;
         }
