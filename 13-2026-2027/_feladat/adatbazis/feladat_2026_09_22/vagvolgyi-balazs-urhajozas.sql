@@ -89,6 +89,9 @@ FROM urhajos
 WHERE nev LIKE "Robert%";
 
 -- 16. feladat
+SELECT nev, orszag, szulev
+FROM urhajos
+WHERE szulev
 
 -- 17. feladat
 
