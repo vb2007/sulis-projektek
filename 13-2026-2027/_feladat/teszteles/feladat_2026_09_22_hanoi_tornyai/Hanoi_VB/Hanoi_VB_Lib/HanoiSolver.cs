@@ -8,6 +8,7 @@ public static class HanoiSolver
 
         List<HanoiMove> moves = new List<HanoiMove>();
         SolveRecursive(game, game.DiskCount, 0, 2, 1, moves);
+
         return moves;
     }
 
