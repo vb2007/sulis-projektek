@@ -45,16 +45,23 @@ ORDER BY CHAR_LENGTH(nev) DESC
 LIMIT 1;
 
 -- 11. feladat
-SELECT urhajos.nev, COUNT(*) AS repulesek_szama
+SELECT kuldetes.megnevezes, COUNT(*) AS fo
+FROM kuldetes
+    JOIN repules
+        ON repules.kuldetes_id = kuldetes.id
+    JOIN urhajos
+        ON urhajos.id = repules.urhajos_id
+GROUP BY kuldetes.megnevezes;
+
+-- 12. feladat
+SELECT urhajos.nev, COUNT(*) AS db
 FROM kuldetes
     JOIN repules
         ON repules.kuldetes_id = kuldetes.id
     JOIN urhajos
         ON urhajos.id = repules.urhajos_id
 GROUP BY urhajos.nev
-HAVING repulesek_szama >= 6;
-
--- 12. feladat
+HAVING db >= 6;
 
 -- 13. feladat
 
