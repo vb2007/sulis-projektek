@@ -13,7 +13,16 @@
             Ar = ar;
         }
 
-        //Gyogytea property
+        //public bool Gyogytea
+        //{
+        //    get
+        //    {
+        //        return Tipus.StartsWith('z') ? true : false;
+        //    }
+        //}
+
+        public bool Gogytea =>
+            Tipus.StartsWith('z') ? true : false;
 
         public override string ToString()
         {
