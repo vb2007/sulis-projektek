@@ -64,6 +64,10 @@ GROUP BY urhajos.nev
 HAVING db >= 6;
 
 -- 13. feladat
+SELECT ROUND(AVG(DATEDIFF(veg, kezdet)), 2)
+    AS "Gemini küldetések átlagos hosszúsága"
+FROM kuldetes
+WHERE megnevezes LIKE "Gemini%";
 
 -- 14. feladat
 
