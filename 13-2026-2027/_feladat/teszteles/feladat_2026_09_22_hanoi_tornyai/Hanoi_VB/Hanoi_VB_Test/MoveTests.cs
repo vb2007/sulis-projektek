@@ -8,7 +8,29 @@ internal class MoveTests
 
     [Test]
     [Description("Mozoghat-e érvényes lépéssel?")]
-    public void CanMoveWithValidSteps()
+    public void CanMoveFrom0To1()
+    {
+        int fromRod = 0;
+        int toRod = 1;
+        bool outcome = _game.CanMove(fromRod, toRod);
+
+        Assert.That(outcome, Is.EqualTo(true), "Érvényes lépésekkel engedélyeznie kéne a műveletet.");
+    }
+
+    [Test]
+    [Description("Mozoghat-e érvényes lépéssel?")]
+    public void CanMoveFrom0To2()
+    {
+        int fromRod = 0;
+        int toRod = 1;
+        bool outcome = _game.CanMove(fromRod, toRod);
+
+        Assert.That(outcome, Is.EqualTo(true), "Érvényes lépésekkel engedélyeznie kéne a műveletet.");
+    }
+
+    [Test]
+    [Description("Mozoghat-e érvényes lépéssel?")]
+    public void CanMoveFrom0To3()
     {
         int fromRod = 0;
         int toRod = 1;
@@ -19,12 +41,34 @@ internal class MoveTests
 
     [Test]
     [Description("Mozgathat-e érvénytelen lépéssel?")]
-    public void CanMoveWithInvalidSteps()
+    public void CantMoveFrom0To0()
     {
         int fromRod = 0;
         int toRod = 0;
         bool outcome = _game.CanMove(fromRod, toRod);
 
         Assert.That(outcome, Is.EqualTo(false), "Érvényes lépésekkel nem kéne engedélyeznie a műveletet.");
+    }
+
+    [Test]
+    [Description("Mozgathat-e érvénytelen lépéssel?")]
+    public void CantMoveFrom0ToMinus1()
+    {
+        int fromRod = 0;
+        int toRod = -1;
+        bool outcome = _game.CanMove(fromRod, toRod);
+
+        Assert.That(outcome, Is.EqualTo(false), "Érvényes lépésekkel nem kéne engedélyeznie a műveletet.");
+    }
+
+    [Test]
+    [Description("Mozgathat-e érvénytelen lépéssel?")]
+    public void CantMoveFromMinus1To0()
+    {
+        int fromRod = -1;
+        int toRod = 0;
+        bool outcome = _game.CanMove(fromRod, toRod);
+
+        Assert.That(outcome, Is.SameAs(false), "Érvényes lépésekkel nem kéne engedélyeznie a műveletet.");
     }
 }
