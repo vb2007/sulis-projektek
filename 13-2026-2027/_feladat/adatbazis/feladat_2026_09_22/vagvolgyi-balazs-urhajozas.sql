@@ -22,6 +22,15 @@ FROM urhajos
 ORDER BY kor DESC;
 
 -- 8. feladat
+SELECT kuldetes.megnevezes, urhajos.nev
+FROM kuldetes
+    JOIN repules
+        ON repules.kuldetes_id = kuldetes.id
+    JOIN urhajos ON
+    urhajos.id = repules.urhajos_id
+ORDER BY
+    kuldetes.kezdet ASC,
+    urhajos.nev DESC;
 
 -- 9. feladat
 
