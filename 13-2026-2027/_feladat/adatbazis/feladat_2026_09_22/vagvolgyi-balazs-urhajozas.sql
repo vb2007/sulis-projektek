@@ -16,6 +16,10 @@ SELECT megnevezes,
 FROM kuldetes;
 
 -- 7. feladat
+SELECT nev,
+    YEAR(NOW()) - szulev AS kor
+FROM urhajos
+ORDER BY kor DESC;
 
 -- 8. feladat
 
