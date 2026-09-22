@@ -83,6 +83,10 @@ ORDER BY COUNT(*) DESC
 LIMIT 3;
 
 -- 15. feladat
+SELECT COUNT(*)
+    AS "Robik száma"
+FROM urhajos
+WHERE nev LIKE "Robert%";
 
 -- 16. feladat
 
