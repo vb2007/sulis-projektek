@@ -1,10 +1,11 @@
 ﻿namespace Teasdobozok_VB_Lib
 {
-    internal class Filter
+    public class Filter
     {
-        public string Id { get; set; }
-        public string Tipus { get; set; }
-        public int Ar { get; set; }
+        public string Id { get; init; }
+        public string Tipus { get; init; }
+        public int Ar { get; init; }
+        public bool Gyogytea => Id.StartsWith('z');
 
         public Filter(string id, string tipus, int ar)
         {
@@ -12,17 +13,6 @@
             Tipus = tipus;
             Ar = ar;
         }
-
-        //public bool Gyogytea
-        //{
-        //    get
-        //    {
-        //        return Tipus.StartsWith('z') ? true : false;
-        //    }
-        //}
-
-        public bool Gogytea =>
-            Tipus.StartsWith('z') ? true : false;
 
         public override string ToString()
         {
