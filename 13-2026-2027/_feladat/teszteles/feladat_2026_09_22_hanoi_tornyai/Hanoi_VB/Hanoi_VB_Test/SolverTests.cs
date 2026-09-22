@@ -16,7 +16,7 @@ internal class SolverTests
     [Description("3 korong esetén 7 lépést kell adnia.")]
     public void SolveReturns7MovesFor3Disks()
     {
-        var moves = HanoiSolver.Solve(_game);
+        List<HanoiMove> moves = HanoiSolver.Solve(_game);
 
         Assert.That(moves.Count, Is.EqualTo(7));
     }
@@ -34,7 +34,7 @@ internal class SolverTests
     [Description("3 korongnál az egyszerű elvárt lépéssor egyezzen.")]
     public void SolveReturnsExpectedMovesFor3Disks()
     {
-        var expected = new List<HanoiMove>
+        List<HanoiMove> expected = new List<HanoiMove>
         {
             new(0, 2, 1),
             new(0, 1, 2),
@@ -45,7 +45,7 @@ internal class SolverTests
             new(0, 2, 1)
         };
 
-        var actual = HanoiSolver.Solve(_game);
+        List<HanoiMove> actual = HanoiSolver.Solve(_game);
 
         Assert.That(actual, Is.EqualTo(expected));
     }
