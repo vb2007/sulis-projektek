@@ -1,3 +1,4 @@
 <Solution>
   <Project Path="Teasdobozok_VB_Console/Teasdobozok_VB_Console.csproj" />
+  <Project Path="Teasdobozok_VB_Lib/Teasdobozok_VB_Lib.csproj" />
 </Solution>
