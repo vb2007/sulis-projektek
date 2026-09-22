@@ -1,3 +1,5 @@
 <Solution>
   <Project Path="Hanoi_VB_Console/Hanoi_VB_Console.csproj" />
+  <Project Path="Hanoi_VB_Lib/Hanoi_VB_Lib.csproj" />
+  <Project Path="Hanoi_VB_Test/Hanoi_VB_Test.csproj" />
 </Solution>
