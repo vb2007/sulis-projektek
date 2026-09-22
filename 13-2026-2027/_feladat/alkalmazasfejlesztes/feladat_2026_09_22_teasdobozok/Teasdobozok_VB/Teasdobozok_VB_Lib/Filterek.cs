@@ -16,5 +16,14 @@
                  ));
             }
         }
+
+        public Filter this[string id] =>
+            _filterek.FirstOrDefault(x => x.Id == id)!;
+
+        public List<string> GyogynovenyFilterek =>
+            _filterek
+                .Select(x => x.Tipus)
+                .OrderBy(x => x)
+                .ToList();
     }
 }
