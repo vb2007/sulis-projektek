@@ -33,6 +33,10 @@ ORDER BY
     urhajos.nev DESC;
 
 -- 9. feladat
+SELECT nev, szulev
+FROM urhajos
+WHERE orszag = "CAN"
+    AND szulev > 1960;
 
 -- 10. feladat
 
