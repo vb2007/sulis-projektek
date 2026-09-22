@@ -1,0 +1,17 @@
+ID;Tipus;Ar
+gy1;fahéjas-almás;30
+gy2;barackos;25
+gy3;banános;25
+gy4;citromos;25
+gy5;meggyes;30
+gy6;epres;30
+gy7;erdei gyümölcs;35
+gy8;szeder;35
+gy9;vörös áfonya;40
+gy10;vadcseresznye;40
+z1;citromfű;35
+z2;kamilla;40
+z3;hársfa;35
+z4;lándzsás útifű;35
+z5;cickafarkfű;35
+z6;csalánlevél;30
