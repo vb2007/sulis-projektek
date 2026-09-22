@@ -1,8 +1,9 @@
 ﻿namespace Teasdobozok_VB_Lib
 {
-    internal interface IDoboz
+    public interface IDoboz
     {
         int DarabSzam { get; }
+
         int Ar { get; }
     }
 }
