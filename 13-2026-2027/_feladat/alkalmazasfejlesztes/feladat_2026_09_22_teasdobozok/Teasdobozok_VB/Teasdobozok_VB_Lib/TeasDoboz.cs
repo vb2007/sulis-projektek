@@ -11,5 +11,10 @@
         {
             DarabSzam = darabSzam;
         }
+
+        public override string ToString()
+        {
+            return $"{Nev} ({Ar} Ft)";
+        }
     }
 }
