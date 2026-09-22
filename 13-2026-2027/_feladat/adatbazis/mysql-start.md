@@ -11,19 +11,19 @@ docker images | grep "mysql"
 MySQL container elindítása:
 
 ```shell
-docker run --name mici -e MYSQL_ROOT_PASSWORD=maci -d -v "$(pwd)/sql:/sql" mysql:9.7.1
+docker run --name nigga -e MYSQL_ROOT_PASSWORD=nigger -d -v "$(pwd)/sql:/sql" mysql:9.7.1
 ```
 
 Belépés a containerbe:
 
 ```shell
-docker exec -it mici bash
+docker exec -it nigga bash
 ```
 
 MySQL shellbe lépés:
 
 ```shell
-mysql -u root -p maci
+mysql -u root -p
 ```
 
 ## Shellen belüli commandok
