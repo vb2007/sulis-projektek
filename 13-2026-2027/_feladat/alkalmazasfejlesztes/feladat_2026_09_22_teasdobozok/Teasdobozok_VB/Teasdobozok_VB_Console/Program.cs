@@ -1,10 +1,12 @@
-﻿namespace Teasdobozok_VB_Console
+﻿using Teasdobozok_VB_Lib;
+
+namespace Teasdobozok_VB_Console
 {
     internal class Program
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello, World!");
+            Filterek filterek = new Filterek(File.ReadAllLines("dobozok.txt").Skip(1));
         }
     }
 }
