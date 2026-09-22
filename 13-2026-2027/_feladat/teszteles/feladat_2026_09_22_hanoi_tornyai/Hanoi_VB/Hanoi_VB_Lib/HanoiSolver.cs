@@ -6,7 +6,7 @@ public static class HanoiSolver
     {
         ArgumentNullException.ThrowIfNull(game);
 
-        var moves = new List<HanoiMove>();
+        List<HanoiMove> moves = new List<HanoiMove>();
         SolveRecursive(game, game.DiskCount, 0, 2, 1, moves);
         return moves;
     }
@@ -19,7 +19,7 @@ public static class HanoiSolver
         }
 
         SolveRecursive(game, diskCount - 1, fromRod, helperRod, toRod, moves);
-        var movedDisk = game.Move(fromRod, toRod);
+        int movedDisk = game.Move(fromRod, toRod);
         moves.Add(new HanoiMove(fromRod, toRod, movedDisk));
         SolveRecursive(game, diskCount - 1, helperRod, toRod, fromRod, moves);
     }

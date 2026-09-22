@@ -53,7 +53,7 @@ public class HanoiGame
             throw new InvalidOperationException("Érvénytelen lépés.");
         }
 
-        var disk = _rods[fromRod].Pop();
+        int disk = _rods[fromRod].Pop();
         _rods[toRod].Push(disk);
         return disk;
     }

@@ -6,12 +6,12 @@ internal class Program
 {
     static void Main(string[] args)
     {
-        var diskCount = ReadDiskCount(args);
-        var game = new HanoiGame(diskCount);
-        var moves = HanoiSolver.Solve(game);
+        int diskCount = ReadDiskCount(args);
+        HanoiGame game = new HanoiGame(diskCount);
+        List<HanoiMove> moves = HanoiSolver.Solve(game);
 
         Console.WriteLine($"Lépések: {moves.Count}");
-        foreach (var move in moves)
+        foreach (HanoiMove move in moves)
         {
             Console.WriteLine($"{move.Disk}: {move.FromRod} -> {move.ToRod}");
         }
@@ -21,7 +21,7 @@ internal class Program
 
     private static int ReadDiskCount(string[] args)
     {
-        if (args.Length > 0 && int.TryParse(args[0], out var value) && value >= 1)
+        if (args.Length > 0 && int.TryParse(args[0], out int value) && value >= 1)
         {
             return value;
         }
@@ -29,7 +29,7 @@ internal class Program
         while (true)
         {
             Console.Write("Korongok száma (>=1): ");
-            var input = Console.ReadLine();
+            string input = Console.ReadLine()!;
             if (int.TryParse(input, out value) && value >= 1)
             {
                 return value;
