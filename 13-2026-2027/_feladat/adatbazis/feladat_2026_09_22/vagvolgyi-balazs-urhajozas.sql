@@ -70,6 +70,17 @@ FROM kuldetes
 WHERE megnevezes LIKE "Gemini%";
 
 -- 14. feladat
+SELECT orszag
+FROM urhajos
+    JOIN repules
+        ON repules.urhajos_id = urhajos.id
+    JOIN kuldetes
+        ON repules.kuldetes_id = kuldetes.id
+WHERE YEAR(kuldetes.kezdet) >= 1991
+    AND YEAR(kuldetes.veg) <= 2000
+GROUP BY orszag
+ORDER BY COUNT(*) DESC
+LIMIT 3;
 
 -- 15. feladat
 
