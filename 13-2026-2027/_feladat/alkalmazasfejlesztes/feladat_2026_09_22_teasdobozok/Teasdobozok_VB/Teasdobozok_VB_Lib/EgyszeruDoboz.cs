@@ -1,17 +1,16 @@
 ﻿namespace Teasdobozok_VB_Lib
 {
-    internal sealed class EgyszeruDoboz : TeasDoboz
+    public sealed class EgyszeruDoboz : TeasDoboz
     {
-        internal Filter Filter { get; init; }
-        internal int DarabSzam { get; set; }
-        internal int Ar =>
-            Filter.Ar * DarabSzam + 100;
-        internal string Nev =>
-            $"{Filter.Tipus} tea";
+        private Filter Filter { get; }
 
-        public EgyszeruDoboz(int darabSzam, string filterId, Filterek filterek) : base(darabSzam)
+        public override int Ar => Filter.Ar * DarabSzam + 100;
+
+        public override string Nev => $"{Filter.Tipus} tea";
+
+        public EgyszeruDoboz(int darabSzam, string filterId, Filterek filterek)
+            : base(darabSzam)
         {
-            DarabSzam = darabSzam;
             Filter = filterek[filterId];
         }
     }
