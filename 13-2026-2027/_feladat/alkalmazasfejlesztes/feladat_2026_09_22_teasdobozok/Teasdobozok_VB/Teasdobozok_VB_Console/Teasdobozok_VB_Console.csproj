@@ -11,4 +11,13 @@
     <ProjectReference Include="..\Teasdobozok_VB_Lib\Teasdobozok_VB_Lib.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <None Update="dobozok.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="filterek.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
 </Project>
