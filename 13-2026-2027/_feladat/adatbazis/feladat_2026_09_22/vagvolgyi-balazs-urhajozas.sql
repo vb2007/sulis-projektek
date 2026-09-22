@@ -7,6 +7,8 @@ COLLATE utf8mb4_hungarian_ci;
 USE urhajozas;
 
 -- 5. feladat
+SELECT nev, nem, szulev
+FROM urhajos;
 
 -- 6. feladat
 
