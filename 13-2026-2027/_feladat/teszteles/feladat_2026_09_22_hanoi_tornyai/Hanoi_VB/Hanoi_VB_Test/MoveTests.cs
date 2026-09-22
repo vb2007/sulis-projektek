@@ -22,18 +22,7 @@ internal class MoveTests
     public void CanMoveFrom0To2()
     {
         int fromRod = 0;
-        int toRod = 1;
-        bool outcome = _game.CanMove(fromRod, toRod);
-
-        Assert.That(outcome, Is.EqualTo(true), "Érvényes lépésekkel engedélyeznie kéne a műveletet.");
-    }
-
-    [Test]
-    [Description("Mozoghat-e érvényes lépéssel?")]
-    public void CanMoveFrom0To3()
-    {
-        int fromRod = 0;
-        int toRod = 1;
+        int toRod = 2;
         bool outcome = _game.CanMove(fromRod, toRod);
 
         Assert.That(outcome, Is.EqualTo(true), "Érvényes lépésekkel engedélyeznie kéne a műveletet.");
@@ -51,8 +40,21 @@ internal class MoveTests
     }
 
     [Test]
+    [Description("Mozoghat-e érvényes lépéssel?")]
+    public void ThrowsErrorFrom0To3()
+    {
+        int fromRod = 0;
+        int toRod = 3;
+
+        Assert.Throws<ArgumentOutOfRangeException>(() =>
+            _game.CanMove(fromRod, toRod),
+            "Érvénytelen rúd index esetén kivételt kell dobnia."
+        );
+    }
+
+    [Test]
     [Description("Mozgathat-e érvénytelen lépéssel?")]
-    public void CantMoveFrom0ToMinus1()
+    public void ThrowsErrorFrom0ToMinus1()
     {
         int fromRod = 0;
         int toRod = -1;
@@ -64,7 +66,7 @@ internal class MoveTests
 
     [Test]
     [Description("Mozgathat-e érvénytelen lépéssel?")]
-    public void CantMoveFromMinus1To0()
+    public void ThrowsErrorFromMinus1To0()
     {
         int fromRod = -1;
         int toRod = 0;
