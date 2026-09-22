@@ -1,10 +1,10 @@
-
-
 -- 2. feladat
+CREATE DATABASE urhajozas
+CHARACTER SET utf8mb4
+COLLATE utf8mb4_hungarian_ci;
 
 -- 3. feladat
-
-
+USE urhajozas;
 
 -- 5. feladat
 
