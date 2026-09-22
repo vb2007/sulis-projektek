@@ -11,6 +11,9 @@ SELECT nev, nem, szulev
 FROM urhajos;
 
 -- 6. feladat
+SELECT megnevezes,
+    DATEDIFF(veg, kezdet) AS napok
+FROM kuldetes;
 
 -- 7. feladat
 
