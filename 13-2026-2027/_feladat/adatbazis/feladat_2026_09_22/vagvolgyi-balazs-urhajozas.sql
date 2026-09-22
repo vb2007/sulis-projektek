@@ -39,6 +39,10 @@ WHERE orszag = "CAN"
     AND szulev > 1960;
 
 -- 10. feladat
+SELECT nev
+FROM urhajos
+ORDER BY CHAR_LENGTH(nev) DESC
+LIMIT 1;
 
 -- 11. feladat
 
