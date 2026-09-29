@@ -1,6 +1,6 @@
 ﻿namespace MikulasCukraszdaja_VB_Lib
 {
-    internal interface IEtel
+    public interface IEtel
     {
         public string Azonosito { get; }
         public string Tipus { get; }
