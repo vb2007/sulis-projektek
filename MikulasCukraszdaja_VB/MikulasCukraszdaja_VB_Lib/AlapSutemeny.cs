@@ -3,10 +3,10 @@
     public sealed class AlapSutemeny : Sutemeny
     {
         public override int ElkeszitesiIdo =>
-            KeszitesiAdatok[Azonosito].ElkeszitesiIdo;
+            KeszitesAdatok[Azonosito].ElkeszitesiIdo;
 
-        public AlapSutemeny(string azonosito, string tipus, string megnevezes, KeszitesiAdatok keszitesiAdatok)
-            : base(azonosito, tipus, megnevezes, keszitesiAdatok)
+        public AlapSutemeny(string azonosito, string tipus, string megnevezes, KeszitesAdatok keszitesAdatok)
+            : base(azonosito, tipus, megnevezes, keszitesAdatok)
         {
             
         }

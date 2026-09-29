@@ -1,10 +1,10 @@
 ﻿namespace MikulasCukraszdaja_VB_Lib
 {
-    public class KeszitesiAdatok
+    public class KeszitesAdatok
     {
         private readonly List<KeszitesAdat> _keszitesiAdatok = new();
 
-        public KeszitesiAdatok(IEnumerable<string> adatSorok)
+        public KeszitesAdatok(IEnumerable<string> adatSorok)
         {
             foreach (string adatSor in adatSorok)
             {

@@ -4,8 +4,8 @@
     {
         public override int ElkeszitesiIdo => throw new NotImplementedException();
 
-        public DiszitettSutemeny(string azonosito, string tipus, string megnevezes, KeszitesiAdatok keszitesiAdatok)
-            : base(azonosito, tipus, megnevezes, keszitesiAdatok)
+        public DiszitettSutemeny(string azonosito, string tipus, string megnevezes, KeszitesAdatok keszitesAdatok)
+            : base(azonosito, tipus, megnevezes, keszitesAdatok)
         {
 
         }

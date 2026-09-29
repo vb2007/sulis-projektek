@@ -6,7 +6,7 @@ namespace MikulasCukraszdaja_VB_Console
     {
         static void Main(string[] args)
         {
-            KeszitesiAdatok keszitesiAdatok = new KeszitesiAdatok(File.ReadAllLines("keszites.txt").Skip(1));
+            KeszitesAdatok keszitesiAdatok = new KeszitesAdatok(File.ReadAllLines("keszites.txt").Skip(1));
 
             Console.WriteLine("Elérhető sütemény készítési azonosítók:" +
                 string.Join("; ", keszitesiAdatok.ElerhetoKeszitesAzonositok));

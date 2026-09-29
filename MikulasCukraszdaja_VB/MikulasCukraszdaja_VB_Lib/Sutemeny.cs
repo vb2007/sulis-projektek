@@ -6,15 +6,15 @@
         public required string Tipus { get; init; }
         public required string Megnevezes { get; init; }
         public abstract int ElkeszitesiIdo { get; }
-        public KeszitesiAdatok KeszitesiAdatok { get; init; }
+        public KeszitesAdatok KeszitesAdatok { get; init; }
 
-        public Sutemeny(string azonosito, string tipus, string megnevezes, KeszitesiAdatok keszitesiAdatok)
+        public Sutemeny(string azonosito, string tipus, string megnevezes, KeszitesAdatok keszitesAdatok)
         {
             Azonosito = azonosito;
             Tipus = tipus;
             Megnevezes = megnevezes;
             //ElkeszitesiIdo = keszitesAdat.ElkeszitesiIdo;
-            KeszitesiAdatok = keszitesiAdatok;
+            KeszitesAdatok = keszitesAdatok;
         }
 
         public override string ToString()
