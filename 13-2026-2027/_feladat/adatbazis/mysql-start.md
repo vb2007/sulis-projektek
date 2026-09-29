@@ -11,7 +11,7 @@ docker images | grep "mysql"
 MySQL container elindítása:
 
 ```shell
-docker run --name nigga -e MYSQL_ROOT_PASSWORD=nigger -d -v "$(pwd)/sql:/sql" mysql:9.7.1
+docker run --name nigga -e MYSQL_ROOT_PASSWORD=nigger -d -v "$(pwd)/sql:/sql" -p 3306:3306 mysql:9.7.1
 ```
 
 Belépés a containerbe:
