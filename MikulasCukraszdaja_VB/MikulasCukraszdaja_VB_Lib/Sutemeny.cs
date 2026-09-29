@@ -13,7 +13,8 @@
             Azonosito = azonosito;
             Tipus = tipus;
             Megnevezes = megnevezes;
-            ElkeszitesiIdo = keszitesAdat.ElkeszitesiIdo;
+            //ElkeszitesiIdo = keszitesAdat.ElkeszitesiIdo;
+            KeszitesiAdat = keszitesAdat;
         }
 
         public override string ToString()
