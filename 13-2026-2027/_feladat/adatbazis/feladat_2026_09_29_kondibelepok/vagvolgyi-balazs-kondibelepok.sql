@@ -46,6 +46,23 @@ WHERE tagok.kartya_tipusa = "Visa"
         LIKE "%bérlet%";
 
 -- 10. feladat
+SELECT DISTINCT
+    CONCAT(
+        tagok.vnev, " ", tagok.knev
+    ) AS nev,
+    CONCAT(
+        tagok.irsz, " ",
+        tagok.telepules, " ,",
+        tagok.cim
+    ) AS teljes_cim
+FROM eladasok
+    JOIN belepok
+        ON belepok.id = eladasok.belepo_id
+    JOIN tagok
+        ON tagok.id = eladasok.tag_id
+WHERE tagok.megye = "Vas"
+    AND belepok.megnevezes
+        LIKE "%TRX%";
 
 -- 11. feladat
 
