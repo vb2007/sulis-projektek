@@ -65,6 +65,12 @@ WHERE tagok.megye = "Vas"
         LIKE "%TRX%";
 
 -- 11. feladat
+SELECT tagok.vnev, tagok.knev, tagok.cim
+FROM tagok
+WHERE tagok.telepules != "Budapest"
+    AND tagok.nem = "nő"
+    AND tagok.cim LIKE "%krt%"
+ORDER BY tagok.vnev, tagok.knev;
 
 -- 12. feladat
 
