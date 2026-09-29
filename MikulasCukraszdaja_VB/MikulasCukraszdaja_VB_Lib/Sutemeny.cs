@@ -1,20 +1,20 @@
 ﻿namespace MikulasCukraszdaja_VB_Lib
 {
-    internal class Sutemeny : IEtel
+    public abstract class Sutemeny : IEtel
     {
         public required string Azonosito { get; init; }
         public required string Tipus { get; init; }
         public required string Megnevezes { get; init; }
-        public required int ElkeszitesiIdo { get; init; }
-        public KeszitesAdat KeszitesiAdat { get; init; }
+        public abstract int ElkeszitesiIdo { get; }
+        public KeszitesiAdatok KeszitesiAdatok { get; init; }
 
-        public Sutemeny(string azonosito, string tipus, string megnevezes, KeszitesAdat keszitesAdat)
+        public Sutemeny(string azonosito, string tipus, string megnevezes, KeszitesiAdatok keszitesiAdatok)
         {
             Azonosito = azonosito;
             Tipus = tipus;
             Megnevezes = megnevezes;
             //ElkeszitesiIdo = keszitesAdat.ElkeszitesiIdo;
-            KeszitesiAdat = keszitesAdat;
+            KeszitesiAdatok = keszitesiAdatok;
         }
 
         public override string ToString()
