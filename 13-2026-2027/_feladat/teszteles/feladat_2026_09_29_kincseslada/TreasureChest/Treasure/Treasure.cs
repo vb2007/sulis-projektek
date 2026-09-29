@@ -16,6 +16,8 @@
 
         public Treasure(string name, int volume)
         {
+            //Ez lenne a fix a bug-ra, de ignore-ban vannak a tesztek:
+
             //if (string.IsNullOrWhiteSpace(name))
             //{
             //    throw new ArgumentException("Treasure name cannot be empty.", nameof(name));
