@@ -5,8 +5,8 @@ namespace UnitTests
     [TestFixture]
     public class TreasureTests
     {
-        private static Treasure _treasure;
-        private static string _name;
+        private static Treasure? _treasure;
+        private static string? _name;
         private static int _volume;
 
         [Test]

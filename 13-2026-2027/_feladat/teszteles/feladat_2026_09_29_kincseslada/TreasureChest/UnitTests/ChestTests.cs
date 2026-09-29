@@ -5,9 +5,9 @@ namespace UnitTests
     [TestFixture]
     public class ChestTests
     {
-        private static Chest _chest;
+        private static Chest? _chest;
         private static int _volume;
-        private static string _name;
+        private static string? _name;
 
         [Test]
         [Description("Verifies that the Chess class can store data fields correctly.")]
