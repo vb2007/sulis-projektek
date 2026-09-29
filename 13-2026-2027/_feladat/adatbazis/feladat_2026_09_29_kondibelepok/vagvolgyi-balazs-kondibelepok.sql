@@ -25,6 +25,14 @@ FROM tagok
 WHERE nem = "férfi";
 
 -- 8. feladat
+SELECT SUM(belepok.ar) AS noi_bev_30
+FROM eladasok
+    JOIN belepok
+        ON belepok.id = eladasok.belepo_id
+    JOIN tagok
+        ON tagok.id = eladasok.tag_id
+WHERE tagok.nem = "nő"
+    AND TIMESTAMPDIFF(YEAR, tagok.szuletett, CURDATE()) < 30;
 
 -- 9. feladat
 
