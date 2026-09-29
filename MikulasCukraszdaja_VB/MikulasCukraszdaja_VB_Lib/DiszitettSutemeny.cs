@@ -1,13 +1,33 @@
 ﻿namespace MikulasCukraszdaja_VB_Lib
 {
-    public class DiszitettSutemeny : Sutemeny
+    public sealed class DiszitettSutemeny : Sutemeny
     {
-        public override int ElkeszitesiIdo => throw new NotImplementedException();
+        private readonly IEnumerable<string> _osszetevoAzonositok;
 
-        public DiszitettSutemeny(string azonosito, string tipus, string megnevezes, KeszitesAdatok keszitesAdatok)
+        public override int ElkeszitesiIdo =>
+            _osszetevoAzonositok
+                .Select(TipusMeghatarozas)
+                .Sum(x => KeszitesAdatok[x].ElkeszitesiIdo);
+
+        public DiszitettSutemeny(
+            string azonosito,
+            string tipus,
+            string megnevezes,
+            KeszitesAdatok keszitesAdatok,
+            IEnumerable<string> osszetevoAzonositok)
             : base(azonosito, tipus, megnevezes, keszitesAdatok)
         {
+            _osszetevoAzonositok = osszetevoAzonositok;
+        }
 
+        public string TipusMeghatarozas(string osszetevoAzonosito)
+        {
+            if (osszetevoAzonosito.StartsWith('d'))
+            {
+                return osszetevoAzonosito;
+            }
+
+            return osszetevoAzonosito[0].ToString();
         }
     }
 }
