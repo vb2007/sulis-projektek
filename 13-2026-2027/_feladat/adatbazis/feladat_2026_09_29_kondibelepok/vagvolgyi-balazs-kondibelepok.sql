@@ -15,6 +15,9 @@ FROM tagok
 WHERE nem = "nő";
 
 -- 6. feladat
+SELECT COUNT(*) AS nyugdijas_db
+FROM tagok
+WHERE YEAR(NOW()) - YEAR(szuletett) >= 65;
 
 -- 7. feladat
 
