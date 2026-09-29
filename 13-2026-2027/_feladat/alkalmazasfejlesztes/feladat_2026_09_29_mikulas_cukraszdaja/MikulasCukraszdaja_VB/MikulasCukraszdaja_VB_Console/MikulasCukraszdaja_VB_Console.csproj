@@ -11,4 +11,16 @@
     <ProjectReference Include="..\MikulasCukraszdaja_VB_Liib\MikulasCukraszdaja_VB_Lib.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <None Update="feladatok.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="keszites.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="sutemenyek.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
 </Project>
