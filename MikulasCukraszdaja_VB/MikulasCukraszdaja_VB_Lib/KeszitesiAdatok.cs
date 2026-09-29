@@ -12,5 +12,22 @@
                 _keszitesiAdatok.Add(new KeszitesAdat(adatok[0], adatok[1], int.Parse(adatok[2])));
             }
         }
+
+        //public KeszitesAdat this[string id]
+        //{
+        //    get
+        //    {
+        //        return _keszitesiAdatok.FirstOrDefault(x => x.Azonosito == id)!;
+        //    }
+        //}
+
+        public KeszitesAdat this[string id] =>
+            _keszitesiAdatok.FirstOrDefault(x => x.Azonosito == id)!;
+
+        public IEnumerable<string> ElerhetoKeszitesAzonositok =>
+            _keszitesiAdatok
+                .Select(x => x.Azonosito)
+                .OrderBy(x => x)
+                .ToArray();
     }
 }

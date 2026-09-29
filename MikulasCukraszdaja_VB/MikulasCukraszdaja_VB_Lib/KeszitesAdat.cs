@@ -1,6 +1,6 @@
 ﻿namespace MikulasCukraszdaja_VB_Lib
 {
-    internal class KeszitesAdat
+    public class KeszitesAdat
     {
         public string Azonosito { get; init; }
         public string Tipus {  get; init; }
