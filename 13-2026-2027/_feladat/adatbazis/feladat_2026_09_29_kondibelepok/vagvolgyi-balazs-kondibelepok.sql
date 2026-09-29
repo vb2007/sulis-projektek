@@ -20,6 +20,9 @@ FROM tagok
 WHERE YEAR(NOW()) - YEAR(szuletett) >= 65;
 
 -- 7. feladat
+SELECT ROUND(AVG(YEAR(NOW()) - YEAR(szuletett)), 2) AS ferfi_atlag
+FROM tagok
+WHERE nem = "férfi";
 
 -- 8. feladat
 
