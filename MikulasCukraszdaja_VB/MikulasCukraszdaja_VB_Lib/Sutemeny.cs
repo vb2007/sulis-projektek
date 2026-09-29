@@ -2,9 +2,9 @@
 {
     public abstract class Sutemeny : IEtel
     {
-        public required string Azonosito { get; init; }
-        public required string Tipus { get; init; }
-        public required string Megnevezes { get; init; }
+        public string Azonosito { get; init; }
+        public string Tipus { get; init; }
+        public string Megnevezes { get; init; }
         public abstract int ElkeszitesiIdo { get; }
         public KeszitesAdatok KeszitesAdatok { get; init; }
 
