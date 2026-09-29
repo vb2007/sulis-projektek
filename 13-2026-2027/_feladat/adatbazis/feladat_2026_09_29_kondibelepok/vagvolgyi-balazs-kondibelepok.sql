@@ -6,8 +6,13 @@ COLLATE utf8mb4_hungarian_ci;
 USE kondibelepok;
 
 -- 4. feladat
+SELECT DISTINCT COUNT(megnevezes) AS db
+FROM belepok;
 
 -- 5. feladat
+SELECT COUNT(*) AS noi_letszam
+FROM tagok
+WHERE nem = "nő";
 
 -- 6. feladat
 
