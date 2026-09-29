@@ -35,6 +35,15 @@ WHERE tagok.nem = "nő"
     AND TIMESTAMPDIFF(YEAR, tagok.szuletett, CURDATE()) < 30;
 
 -- 9. feladat
+SELECT COUNT(*) AS visaberlet
+FROM eladasok
+    JOIN tagok
+        ON tagok.id = eladasok.tag_id
+    JOIN belepok
+        ON belepok.id = eladasok.belepo_id
+WHERE tagok.kartya_tipusa = "Visa"
+    AND belepok.megnevezes
+        LIKE "%bérlet%";
 
 -- 10. feladat
 
