@@ -4,6 +4,7 @@
     {
         private int _volume;
         public string Name { get; init; }
+
         public int Volume
         {
             get => _volume;
@@ -12,6 +13,7 @@
                 _volume = value;
             }
         }
+
         public Treasure(string name, int volume)
         {
             Volume = volume;
