@@ -8,7 +8,11 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\MikulasCukraszdaja_VB_Liib\MikulasCukraszdaja_VB_Lib.csproj" />
+    <None Include="MikulasCukraszdaja_VB_Lib.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\MikulasCukraszdaja_VB_Lib\MikulasCukraszdaja_VB_Lib.csproj" />
   </ItemGroup>
 
   <ItemGroup>

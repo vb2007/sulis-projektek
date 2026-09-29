@@ -1,4 +1,4 @@
 <Solution>
   <Project Path="MikulasCukraszdaja_VB_Console/MikulasCukraszdaja_VB_Console.csproj" />
-  <Project Path="MikulasCukraszdaja_VB_Liib/MikulasCukraszdaja_VB_Lib.csproj" />
+  <Project Path="MikulasCukraszdaja_VB_Lib/MikulasCukraszdaja_VB_Lib.csproj" />
 </Solution>
