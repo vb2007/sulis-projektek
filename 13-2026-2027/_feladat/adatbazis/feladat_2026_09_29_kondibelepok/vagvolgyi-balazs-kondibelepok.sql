@@ -73,6 +73,14 @@ WHERE tagok.telepules != "Budapest"
 ORDER BY tagok.vnev, tagok.knev;
 
 -- 12. feladat
+SELECT vnev, knev, telefon
+FROM tagok
+WHERE nem = "nő"
+    AND TIMESTAMPDIFF(YEAR, tagok.szuletett, CURDATE()) > 30
+    AND telefon LIKE "%(20)%"
+    OR telefon LIKE "%(30)%"
+    OR telefon LIKE "%(70)%"
+ORDER BY vnev, knev;
 
 -- 13. feladat
 
