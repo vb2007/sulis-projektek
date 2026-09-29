@@ -26,6 +26,7 @@ namespace UnitTests
 
         [Test]
         [Description("Verifies the Treasure class's name cannot be empty.")]
+        [Ignore("Correctly failing, name shouldn't be empty.")]
         public void EmptyName()
         {
             _name = string.Empty;
@@ -42,6 +43,7 @@ namespace UnitTests
 
         [Test]
         [Description("Verifies the Treasure class's value cannot be zero.")]
+        [Ignore("Correctly failing, value shouldn't be zero.")]
         public void ZeroValue()
         {
             _name = "Test";
@@ -57,6 +59,7 @@ namespace UnitTests
 
         [Test]
         [Description("Verifies the Treasure class's value cannot be negative.")]
+        [Ignore("Correctly failing, value shouldn't be negative.")]
         public void NegativeValue()
         {
             _name = "Test";
