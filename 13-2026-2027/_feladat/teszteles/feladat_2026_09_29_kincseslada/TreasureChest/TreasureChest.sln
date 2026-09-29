@@ -1,11 +1,13 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 17
-VisualStudioVersion = 17.12.35514.174
+# Visual Studio Version 18
+VisualStudioVersion = 18.9.12120.119 stable
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Treasure", "Treasure\Treasure.csproj", "{257D804E-D816-4573-B066-F4FBE6022A7B}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Chest", "TreasueChest\Chest.csproj", "{F8BD49E2-7552-49A6-916F-8494374E9624}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnitTests", "UnitTests\UnitTests.csproj", "{3A5DE7E0-2466-4E39-A478-D0EA14FBC6F1}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{F8BD49E2-7552-49A6-916F-8494374E9624}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F8BD49E2-7552-49A6-916F-8494374E9624}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F8BD49E2-7552-49A6-916F-8494374E9624}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3A5DE7E0-2466-4E39-A478-D0EA14FBC6F1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3A5DE7E0-2466-4E39-A478-D0EA14FBC6F1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3A5DE7E0-2466-4E39-A478-D0EA14FBC6F1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3A5DE7E0-2466-4E39-A478-D0EA14FBC6F1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
