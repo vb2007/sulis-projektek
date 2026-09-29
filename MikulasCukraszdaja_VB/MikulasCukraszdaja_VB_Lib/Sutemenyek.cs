@@ -10,5 +10,8 @@
         {
             _sutemenyek = sutemenyek.ToList();
         }
+
+        public Sutemeny? this[string azonosito] =>
+            _sutemenyek.FirstOrDefault(x => x.Azonosito == azonosito);
     }
 }
