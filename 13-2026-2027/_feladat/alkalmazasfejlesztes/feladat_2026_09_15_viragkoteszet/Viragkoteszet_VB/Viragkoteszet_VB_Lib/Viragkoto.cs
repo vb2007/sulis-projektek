@@ -1,7 +1,14 @@
-﻿namespace Viragkoteszet_VB_Lib
+namespace Viragkoteszet_VB_Lib
 {
-    internal class Viragkoto
+    public class Viragkoto : Dolgozo
     {
+        public override double Gyakorlottsag => 100;
 
+        public override int MunkaraForditottIdo =>
+            FeladatLista.Feladatok.Sum(t => t.ElkeszitesiIdo);
+
+        public Viragkoto(int id, string nev) : base(id, nev)
+        {
+        }
     }
 }
