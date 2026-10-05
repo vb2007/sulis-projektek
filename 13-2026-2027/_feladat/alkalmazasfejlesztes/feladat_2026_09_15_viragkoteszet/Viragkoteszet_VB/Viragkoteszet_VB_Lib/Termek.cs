@@ -8,7 +8,8 @@ namespace Viragkoteszet_VB_Lib
         public string Tipus { get; }
         public string Megnevezes { get; }
 
-        public int ElkeszitesiIdo => _alapanyagok.Sum(x => x.alapanyag.ElkeszitesiIdo * x.mennyiseg);
+        public int ElkeszitesiIdo => _alapanyagok
+            .Sum(x => x.alapanyag.ElkeszitesiIdo * x.mennyiseg);
 
         public int Ar => _alapanyagok.Sum(x => x.alapanyag.Ar * x.mennyiseg);
 
