@@ -11,7 +11,8 @@ namespace Viragkoteszet_VB_Lib
         public int ElkeszitesiIdo => _alapanyagok
             .Sum(x => x.alapanyag.ElkeszitesiIdo * x.mennyiseg);
 
-        public int Ar => _alapanyagok.Sum(x => x.alapanyag.Ar * x.mennyiseg);
+        public int Ar => _alapanyagok
+            .Sum(x => x.alapanyag.Ar * x.mennyiseg);
 
         // alapanyagok: alapanyag azonosítója -> szükséges mennyiség
         public Termek(int id, string tipus, string megnevezes, IReadOnlyDictionary<string, int> alapanyagok, Katalogus katalogus)
