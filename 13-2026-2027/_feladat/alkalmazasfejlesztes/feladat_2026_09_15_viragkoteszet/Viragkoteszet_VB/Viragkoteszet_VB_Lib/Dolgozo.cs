@@ -1,28 +1,29 @@
-﻿namespace Viragkoteszet_VB_Lib
+namespace Viragkoteszet_VB_Lib
 {
-    internal class Dolgozo
+    public abstract class Dolgozo
     {
-        public int Id { get; set; }
-        public string Nev { get; set; }
-        // public string Beosztas { get; set; }
+        public int Id { get; }
+        public string Nev { get; }
+        public FeladatLista FeladatLista { get; protected set; } = new();
 
-        public float Gyakorlottsag { get; set; }
-        public int MunkaraForditottIdo { get; set; }
+        // Nincs megvalósítás: a leszármazottak döntik el.
+        public abstract double Gyakorlottsag { get; }
+        public abstract int MunkaraForditottIdo { get; }
 
-        public Dolgozo(int id, string nev)
+        protected Dolgozo(int id, string nev)
         {
             Id = id;
             Nev = nev;
         }
 
-        // public void UjFeladatHozzaadasa(Termek termek)
-        // {
-        //     Dolgozo._feladatLista.Add(new Dolgozo(Id, termek));
-        // }
+        public virtual void UjFeladatHozzaadasa(Termek termek)
+        {
+            FeladatLista += termek;
+        }
 
         public override string ToString()
         {
-            return $"Név: {Nev}, Munkára fordított idő percben: {MunkaraForditottIdo}";
+            return $"{Nev}, munkára fordított idő: {MunkaraForditottIdo} perc";
         }
     }
 }
