@@ -1,6 +1,6 @@
-﻿namespace Viragkoteszet_VB_Lib
+namespace Viragkoteszet_VB_Lib
 {
-    internal interface ITermek
+    public interface ITermek
     {
         string Tipus { get; }
         string Megnevezes { get; }
