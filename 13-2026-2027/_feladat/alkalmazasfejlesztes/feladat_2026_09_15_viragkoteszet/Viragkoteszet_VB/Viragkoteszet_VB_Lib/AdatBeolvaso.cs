@@ -40,7 +40,7 @@ namespace Viragkoteszet_VB_Lib
 
         internal static IEnumerable<string> Adatsorok(IEnumerable<string> sorok)
         {
-            return sorok.Skip(1).Where(s => !string.IsNullOrWhiteSpace(s));
+            return sorok.Skip(1).Where(x => !string.IsNullOrWhiteSpace(x));
         }
 
         internal static string[] Darabol(string sor)
