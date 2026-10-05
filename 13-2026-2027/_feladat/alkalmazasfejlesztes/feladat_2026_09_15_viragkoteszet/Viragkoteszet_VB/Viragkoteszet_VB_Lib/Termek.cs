@@ -40,5 +40,10 @@
             Megnevezes = megnevezes;
             _alapanyagok = alapanyagok;
         }
+
+        public override string ToString()
+        {
+            return $"";
+        }
     }
 }

@@ -6,7 +6,7 @@
 
         public Katalogus(IEnumerable<Alapanyag> alapanyagok)
         {
-            foreach (var alapanyag in alapanyagok)
+            foreach (Alapanyag alapanyag in alapanyagok)
             {
                 _alapanyagok.Add(alapanyag);
             }
