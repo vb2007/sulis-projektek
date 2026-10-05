@@ -1,11 +1,11 @@
-﻿namespace Viragkoteszet_VB_Lib
+namespace Viragkoteszet_VB_Lib
 {
-    internal class Alapanyag
+    public class Alapanyag
     {
-        public string Azonosito { get; set; }
-        public string Nev { get; set; }
-        public int Ar { get; set; }
-        public int ElkeszitesiIdo { get; set; }
+        public string Azonosito { get; }
+        public string Nev { get; }
+        public int Ar { get; }
+        public int ElkeszitesiIdo { get; }
 
         public Alapanyag(string azonosito, string nev, int ar, int elkeszitesiIdo)
         {
