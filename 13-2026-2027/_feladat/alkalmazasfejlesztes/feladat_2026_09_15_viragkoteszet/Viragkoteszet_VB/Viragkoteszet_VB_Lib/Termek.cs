@@ -1,49 +1,33 @@
-﻿namespace Viragkoteszet_VB_Lib
+namespace Viragkoteszet_VB_Lib
 {
-    internal class Termek : ITermek
+    public class Termek : ITermek
     {
-        public int Id { get; init; }
-        public string Tipus { get; init; }
-        public string Megnevezes { get; init; }
-        private List<(Alapanyag alapanyag, int mennyiseg)> _alapanyagok;
+        private readonly List<(Alapanyag alapanyag, int mennyiseg)> _alapanyagok = new();
 
-        public int ElkeszitesiIdo
-        {
-            get
-            {
-                int osszeg = 0;
-                foreach (var (alapanyag, mennyiseg) in _alapanyagok)
-                {
-                    osszeg += alapanyag.ElkeszitesiIdo * mennyiseg;
-                }
-                return osszeg;
-            }
-        }
+        public int Id { get; }
+        public string Tipus { get; }
+        public string Megnevezes { get; }
 
-        public int Ar
-        {
-            get
-            {
-                int osszeg = 0;
-                foreach (var (alapanyag, mennyiseg) in _alapanyagok)
-                {
-                    osszeg += alapanyag.Ar * mennyiseg;
-                }
-                return osszeg;
-            }
-        }
+        public int ElkeszitesiIdo => _alapanyagok.Sum(x => x.alapanyag.ElkeszitesiIdo * x.mennyiseg);
 
-        public Termek(int id, string tipus, string megnevezes, List<(Alapanyag alapanyag, int mennyiseg)> alapanyagok)
+        public int Ar => _alapanyagok.Sum(x => x.alapanyag.Ar * x.mennyiseg);
+
+        // alapanyagok: alapanyag azonosítója -> szükséges mennyiség
+        public Termek(int id, string tipus, string megnevezes, IReadOnlyDictionary<string, int> alapanyagok, Katalogus katalogus)
         {
             Id = id;
             Tipus = tipus;
             Megnevezes = megnevezes;
-            _alapanyagok = alapanyagok;
+
+            foreach (var (azonosito, mennyiseg) in alapanyagok)
+            {
+                _alapanyagok.Add((katalogus[azonosito], mennyiseg));
+            }
         }
 
         public override string ToString()
         {
-            return $"";
+            return $"{Id}. {Megnevezes} ({Tipus}) - ár: {Ar} Ft, elkészítési idő: {ElkeszitesiIdo} perc";
         }
     }
 }
