@@ -7,8 +7,6 @@ namespace Viragkoteszet_VB_Lib
         public override int MunkaraForditottIdo =>
             FeladatLista.Feladatok.Sum(t => t.ElkeszitesiIdo);
 
-        public Viragkoto(int id, string nev) : base(id, nev)
-        {
-        }
+        public Viragkoto(int id, string nev) : base(id, nev) { }
     }
 }
