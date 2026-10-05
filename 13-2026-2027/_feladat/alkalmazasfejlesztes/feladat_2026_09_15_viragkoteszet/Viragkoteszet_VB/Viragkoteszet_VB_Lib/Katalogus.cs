@@ -2,7 +2,7 @@
 {
     internal class Katalogus
     {
-        private List<Alapanyag> _alapanyagok { get; } = new List<Alapanyag>();
+        private List<Alapanyag> _alapanyagok = new();
 
         public Katalogus(IEnumerable<Alapanyag> alapanyagok)
         {
