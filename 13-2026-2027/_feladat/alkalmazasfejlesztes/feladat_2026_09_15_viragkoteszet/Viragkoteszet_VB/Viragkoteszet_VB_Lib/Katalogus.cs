@@ -1,14 +1,14 @@
-﻿namespace Viragkoteszet_VB_Lib
+namespace Viragkoteszet_VB_Lib
 {
-    internal class Katalogus
+    public class Katalogus
     {
-        private List<Alapanyag> _alapanyagok = new();
+        private readonly Dictionary<string, Alapanyag> _alapanyagok = new();
 
         public Katalogus(IEnumerable<Alapanyag> alapanyagok)
         {
             foreach (Alapanyag alapanyag in alapanyagok)
             {
-                _alapanyagok.Add(alapanyag);
+                _alapanyagok.Add(alapanyag.Azonosito, alapanyag);
             }
         }
 
@@ -16,7 +16,11 @@
         {
             get
             {
-                return _alapanyagok.FirstOrDefault(a => a.Azonosito == azonosito)!;
+                if (!_alapanyagok.TryGetValue(azonosito, out Alapanyag? alapanyag))
+                {
+                    throw new KeyNotFoundException($"Nincs ilyen alapanyag: {azonosito}");
+                }
+                return alapanyag;
             }
         }
     }
