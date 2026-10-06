@@ -1,29 +1,19 @@
-﻿namespace UtazasiCsomagok_VB_Lib;
+namespace UtazasiCsomagok_VB_Lib;
 
 public class Programok
 {
-    private static readonly List<UtazasiProgram> _programok = new();
+    private readonly List<UtazasiProgram> _programok;
 
-    public Programok(IEnumerable<string> nyersProgramSorok)
+    public Programok(IEnumerable<UtazasiProgram> programok)
     {
-        foreach (string programSor in nyersProgramSorok)
-        {
-            string[] adatTomb = programSor.Split(";");
-
-            string azonosito = adatTomb[0];
-            string megnevezes = adatTomb[1];
-            string helyszin = adatTomb[2];
-            int ar = int.Parse(adatTomb[3]);
-
-            _programok.Add(new(azonosito, megnevezes, helyszin, ar));
-        }
+        _programok = programok.ToList();
     }
 
-    public UtazasiProgram? this[string id] => _programok
-        .FirstOrDefault(x => x.Azonosito == id);
+    public UtazasiProgram this[string id] =>
+        _programok.FirstOrDefault(x => x.Azonosito == id)
+        ?? throw new HibasProgramException();
 
     public IEnumerable<UtazasiProgram> BelfoldiProgramok => _programok
-        .Where(x => x.Belfoldi == true)
-        .OrderBy(x => x.Megnevezes);
+            .Where(x => x.Belfoldi)
+            .OrderBy(x => x.Megnevezes);
 }
-
