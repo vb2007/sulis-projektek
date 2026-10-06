@@ -22,6 +22,7 @@ public class UtazasiProgram
 
     public override string ToString()
     {
-        return $"{Megnevezes} ({Helyszin}) - {Ar} Ft";
+        //magyar lokalizáción pl.: 11 000 Ft
+        return $"{Megnevezes} ({Helyszin}) - {Ar:C0}";
     }
 }
