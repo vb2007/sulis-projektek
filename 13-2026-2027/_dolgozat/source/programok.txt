@@ -1,0 +1,11 @@
+Azonosito;Megnevezes;Helyszin;Ar
+P001;Budapesti városnézés;Magyarország;12000
+P002;Balatoni hajókirándulás;Magyarország;18000
+P003;Hortobágyi lovasprogram;Magyarország;15000
+P004;Eiffel-torony látogatás;Franciaország;35000
+P005;Colosseum túra;Olaszország;28000
+P006;Sagrada Familia látogatás;Spanyolország;32000
+P007;Prágai városnézés;Csehország;26000
+P008;Bécsi múzeumlátogatás;Ausztria;22000
+P009;Aggteleki barlangtúra;Magyarország;14000
+P010;Tihanyi kirándulás;Magyarország;11000
