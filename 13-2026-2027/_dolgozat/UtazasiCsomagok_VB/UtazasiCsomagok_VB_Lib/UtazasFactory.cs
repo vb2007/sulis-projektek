@@ -1,22 +1,22 @@
-﻿namespace UtazasiCsomagok_VB_Lib;
+namespace UtazasiCsomagok_VB_Lib;
 
-public class UtazasFactory
+public static class UtazasFactory
 {
-    List<EgyszeruProgram> egyszeruProgramok = new();
-    List<UtazasiProgram> utazasiCsomag = new();
-
-    public UtazasFactory(IEnumerable<string> utazasAzonositoSorok, Programok programok)
+    public static ProgramElem Factory(string utazasAzonositoSor, Programok programok)
     {
-        foreach (string utazasAzonositok in utazasAzonositoSorok)
-        {
-            if (utazasAzonositok.Contains(';'))
-            {
-                IEnumerable<string> azonositok = utazasAzonositok.Split(';');
+        string[] azonositok = utazasAzonositoSor.Split(';');
 
-                //utazasiCsomag.Add(new EgyszeruProgram(programok[azonositok[0]]));
-            }
-            
-            egyszeruProgramok.Add(new EgyszeruProgram(programok[utazasAzonositok]!));
+        if (azonositok.Length == 1)
+        {
+            return new EgyszeruProgram(programok[azonositok[0]]);
         }
+
+        UtazasiCsomag utazasiCsomag = new([]);
+        foreach (string azonosito in azonositok)
+        {
+            utazasiCsomag += programok[azonosito];
+        }
+
+        return utazasiCsomag;
     }
 }
