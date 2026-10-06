@@ -2,6 +2,6 @@
 
 internal interface IProgram
 {
-    public string Nev { get; }
-    public int Ar { get; }
+    public abstract string Nev { get; }
+    public abstract int Ar { get; }
 }
