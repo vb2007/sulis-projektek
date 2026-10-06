@@ -2,8 +2,8 @@
 
 public abstract class ProgramElem : IProgram
 {
-    public abstract string Nev { get; set; }
-    public abstract int Ar { get; set; }
+    public abstract string Nev { get; }
+    public abstract int Ar { get; }
 
     public override string ToString()
     {

@@ -14,5 +14,16 @@ internal class Program
         {
             Console.WriteLine(program.ToString());
         }
+
+        //IEnumerable<string> utazasAzonositok = File.ReadAllLines("utazasok.ttxt");
+        //try
+        //{
+        //    UtazasFactory utazasok = new(utazasAzonositok, programok);
+        //}
+        //catch (HibasProgramException ex)
+        //{
+        //    File.Open("hibalista.txt", FileMode.CreateNew);
+        //    File.AppendText("hibalista.txt", ex);
+        //}
     }
 }
