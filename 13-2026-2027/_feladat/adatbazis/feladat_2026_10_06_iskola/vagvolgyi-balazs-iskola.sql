@@ -43,16 +43,15 @@ WHERE diak = SUBSTRING_INDEX(USER(), "@", 1);
 SHOW TABLES;
 
 -- 12. feladat
--- felhasznalok.sql tartalma
 
--- tanárok: írás (INSERT) és olvasás (SELECT) a jegyek táblán
+-- tanárok
 CREATE USER "Ilona"@"%" IDENTIFIED BY "Ilona";
 CREATE USER "Laci"@"%" IDENTIFIED BY "Laci";
 GRANT SELECT, INSERT
     ON iskola.jegyek
     TO "Ilona"@"%", "Laci"@"%";
 
--- diákok: csak olvasás a jegyeim nézettáblából
+--- diákok
 CREATE USER "Dani"@"%" IDENTIFIED BY "Dani";
 CREATE USER "Juci"@"%" IDENTIFIED BY "Juci";
 CREATE USER "Kati"@"%" IDENTIFIED BY "Kati";
@@ -61,7 +60,7 @@ GRANT SELECT
     ON iskola.jegyeim
     TO "Dani"@"%", "Juci"@"%", "Kati"@"%", "Marci"@"%";
 
--- admin: teljes írás/olvasás, plusz módosítási jogosultság az iskola adatbázison
+-- admin
 CREATE USER "Admin"@"%" IDENTIFIED BY "Admin";
 GRANT ALL PRIVILEGES
     ON iskola.*
