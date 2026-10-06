@@ -12,7 +12,7 @@ internal class Program
         Programok programok = new(File.ReadLines("programok.txt").Skip(1).Select(UtazasiProgramLetrehozas));
 
         Console.WriteLine("Elérhető belföldi programok:");
-        foreach (UtazasiProgram program in programok.BelfoldiProgramok())
+        foreach (UtazasiProgram program in programok.BelfoldiProgramok)
         {
             Console.WriteLine(program);
         }
