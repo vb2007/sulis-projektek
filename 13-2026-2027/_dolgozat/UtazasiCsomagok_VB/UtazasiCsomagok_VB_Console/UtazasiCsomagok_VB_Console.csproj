@@ -11,4 +11,13 @@
     <ProjectReference Include="..\UtazasiCsomagok_VB_Lib\UtazasiCsomagok_VB_Lib.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <None Update="programok.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="utazasok.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
 </Project>
