@@ -1,16 +1,15 @@
-﻿namespace UtazasiCsomagok_VB_Lib;
+namespace UtazasiCsomagok_VB_Lib;
 
 public class UtazasiProgram
 {
-    public string Azonosito { get; set; }
-    public string Megnevezes { get; set; }
-    public string Helyszin { get; set; }
-    public int Ar { get; set; }
+    private const string BelfoldiHelyszin = "Magyarország";
 
-    public bool Belfoldi => Helyszin.Equals("Magyarország");
+    public string Azonosito { get; }
+    public string Megnevezes { get; }
+    public string Helyszin { get; }
+    public int Ar { get; }
 
-    //"A helyszín nevét tárold el megfelelően az osztályban BelfoldiHelyszin néven."
-    public string BelfoldiHelyszin => Helyszin;
+    public bool Belfoldi => Helyszin == BelfoldiHelyszin;
 
     public UtazasiProgram(string azonosito, string megnevezes, string helyszin, int ar)
     {
