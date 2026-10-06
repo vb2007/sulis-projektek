@@ -1,6 +1,3 @@
--- 2. feladat
--- 
-
 -- 3. feladat
 CREATE DATABASE iskola
 CHARACTER SET utf8mb4
