@@ -1,4 +1,4 @@
-﻿namespace UtazasiCsomagok_VB_Lib;
+namespace UtazasiCsomagok_VB_Lib;
 
 public abstract class ProgramElem : IProgram
 {
@@ -11,4 +11,3 @@ public abstract class ProgramElem : IProgram
         return $"{Nev} - {Ar:C0}";
     }
 }
-
