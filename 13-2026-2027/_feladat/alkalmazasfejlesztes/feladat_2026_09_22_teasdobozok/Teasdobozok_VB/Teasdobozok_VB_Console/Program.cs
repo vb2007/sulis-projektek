@@ -11,15 +11,12 @@ namespace Teasdobozok_VB_Console
             string dobozokFajl = Path.Combine(alapKonyvtar, "dobozok.txt");
             string hibalistaFajl = Path.Combine(alapKonyvtar, "hibalista.txt");
 
-            Filterek filterek = new(File.ReadAllLines(filterekFajl));
+            Filterek filterek = new(File.ReadAllLines(filterekFajl).Skip(1));
 
             Console.WriteLine("Elérhető gyógynövény filterek:");
-            foreach (string filterTipus in filterek.GyogynovenyFilterek())
+            foreach (Filter filter in filterek.GyogynovenyFilterek)
             {
-                foreach (int filterAr in filterek)
-                {
-                    Console.WriteLine($"{filterTipus} ({filterTipus.Ar} Ft)");
-                }
+                Console.WriteLine($"{filter.Tipus} ({filter.Ar} Ft)");
             }
 
             Console.WriteLine();

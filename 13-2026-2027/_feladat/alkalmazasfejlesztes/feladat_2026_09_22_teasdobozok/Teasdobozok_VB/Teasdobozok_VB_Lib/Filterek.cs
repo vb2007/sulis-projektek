@@ -35,13 +35,10 @@
             }
         }
 
-        public List<string> GyogynovenyFilterek()
-        {
-            return _filterek
+        public List<Filter> GyogynovenyFilterek =>
+            _filterek
                 .Where(x => x.Gyogytea)
-                .Select(x => x.Tipus)
                 .OrderBy(x => x)
                 .ToList();
-        }
     }
 }
