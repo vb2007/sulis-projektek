@@ -19,7 +19,6 @@ CREATE TABLE tantargyak (
 SOURCE /sql/tantargyak-table.sql;
 
 -- 8. feladat
--- jegyek-table.sql tartalma
 CREATE TABLE jegyek (
     id INT AUTO_INCREMENT PRIMARY KEY,
     tantárgy_id INT NOT NULL,
