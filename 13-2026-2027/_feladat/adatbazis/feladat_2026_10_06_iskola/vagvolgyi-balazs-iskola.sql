@@ -92,7 +92,7 @@ INSERT INTO jegyek (tantárgy_id, jegy, diak, tanar, beirva)
 VALUES (3, 3, "Kati", USER(), NOW());
 
 -- ellenőrzés, hogy a tanár tud-e jegyet átírni
--- (a tanár csak SELECT és INSERT jogot kapott, UPDATE-et nem, ezért ez hibát ad)
+-- a tanár csak SELECT és INSERT jogot kapott, UPDATE-et nem, ezért ez hibát ad
 UPDATE jegyek
 SET jegy = 5
 WHERE id = 3;
