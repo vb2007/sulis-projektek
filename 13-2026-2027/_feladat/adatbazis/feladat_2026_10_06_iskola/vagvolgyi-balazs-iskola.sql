@@ -10,7 +10,6 @@ SHOW DATABASES;
 USE iskola;
 
 -- 6. feladat
--- tantargyak-table.sql tartalma
 CREATE TABLE tantargyak (
     id INT AUTO_INCREMENT PRIMARY KEY,
     nev VARCHAR(25) NOT NULL
