@@ -19,4 +19,9 @@ public class UtazasiProgram
         Helyszin = helyszin;
         Ar = ar;
     }
+
+    public override string ToString()
+    {
+        return $"{Megnevezes} ({Helyszin}) - {Ar} Ft";
+    }
 }
