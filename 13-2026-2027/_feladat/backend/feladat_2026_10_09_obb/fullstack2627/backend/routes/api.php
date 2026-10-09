@@ -18,6 +18,7 @@ Route::get("teasers",
 
 Route::get("trains/{train}",
     [TrainController::class, "show"])
+        ->where("train", "[0-9]+")
         ->name("trains.show");
 
 Route::get("timetable/stations/origins",
@@ -27,3 +28,8 @@ Route::get("timetable/stations/origins",
 Route::get("timetable/stations/destinations",
     [TimetableController::class, "destinations"])
         ->name("timetable.destinations");
+
+Route::get("timetable/planner/{from}/{to}",
+    [TimetableController::class, "planner"])
+        ->where(["from" => "[\p{L} .\-\/]+", "to" => "[\p{L} .\-\/]+"])
+        ->name("timetable.planner");
