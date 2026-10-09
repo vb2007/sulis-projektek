@@ -1,0 +1,264 @@
+openapi: "3.1.0"
+info:
+  title: ÖBB API
+  version: 1.0.0
+servers:
+  - url: http://backend.vm1.test
+    description: VM1 backend
+  - url: http://backend.vm2.test
+    description: VM2 backend
+  - url: http://backend.vm3.test
+    description: VM3 backend
+  - url: http://backend.vm4.test
+    description: VM4 backend
+  - url: http://backend.vm5.test
+    description: VM5 backend
+  - url: http://backend.vm6.test
+    description: VM6 backend
+
+paths:
+  /api/hero-contents:
+    get:
+      tags:
+        - HeroContents
+      summary: Hero szekció tartalmainak lekérése
+      description: |
+        Az `index` visszaadja az összes rekordot a `hero_contents` táblából egy `data` kulcsba csomagolva.
+      operationId: hero-contents.index
+      responses:
+        '200':
+          description: Hero tartalmak listája
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  data:
+                    type: array
+                    items:
+                      $ref: '#/components/schemas/HeroContentResource'
+              example: {"data":[{"id":1,"image_url":"hero-1.webp","title":"Sparschiene Nachtschw\u00e4rmer","description":"Sp\u00e4ter einsteigen g\u00fcnstiger aussteigen.","button_text":"Jetzt informieren"},{"id":2,"image_url":"hero-2.webp","title":"Die Nightjet-Tickets 2027 sind da!","description":"Schnell sein lohnt sich.","button_text":"Jetzt buchen"},{"id":3,"image_url":"hero-3.webp","title":"Reisetipp: Budapest entdecken","description":"Budapest fasziniert mit vielen Sehensw\u00fcrdigkeiten, Thermalb\u00e4dern und einzigartiger Architektur.","button_text":"Ab nach Budapest"},{"id":4,"image_url":"hero-4.webp","title":"Ab sofort das neue railaxed Reisemagazin lesen!","description":"Reisen Sie mit uns im Herbst an viele inspirierende Orte.","button_text":"Jetzt Reisetipps holen"},{"id":5,"image_url":"hero-5.webp","title":"\u00d6BB Vorzugspunkte","description":"Im \u00d6BB Konto buchen, Vorzugspunkte sammeln, exklusive Pr\u00e4mien genie\u00dfen.","button_text":"Jetzt informieren"},{"id":6,"image_url":"hero-6.webp","title":"Vorteil auch f\u00fcrs Hinterteil","description":"Das kann nur die Vorteilscard Comfort: 50% Erm\u00e4\u00dfigung auf Tickets und Reservierungen.","button_text":"Jetzt informieren"}]}
+
+  /api/teasers:
+    get:
+      tags:
+        - Teasers
+      summary: Teaser szekciók tartalmainak lekérése
+      description: |
+        Az `index` visszaadja a rekordokat a `teasers` táblából. Opcionálisan szűrhető `section` paraméterrel, ilyenkor sorrend szerint rendezve térnek vissza az adatok.
+      operationId: teasers.index
+      parameters:
+        - name: section
+          in: query
+          description: Szűrés adott szekcióhoz tartozó tartalmakra
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Teaser tartalmak listája
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  data:
+                    type: array
+                    items:
+                      $ref: '#/components/schemas/TeaserResource'
+              example: {"data":[{"id":1,"image_url":"freizeitticket-2560.webp","title":"Freizeitticket & Freizeitticket Plus","description":"Das Ausflugsticket f\u00fcr Wien, Nieder\u00f6sterreich und das Burgenland ab \u20ac 19,90.","section":"new_from_obb","order":1},{"id":2,"image_url":"vorzugspunkte-billard.webp","title":"\u00d6BB Vorzugspunkte","description":"Buchen, Punkte sammeln, Pr\u00e4mien genie\u00dfen.","section":"new_from_obb","order":3},{"id":3,"image_url":"erlebnisticket-sommer.webp","title":"Die neuen \u00d6BB Erlebnistickets","description":"Bahn + Freizeitangebot gemeinsam buchen und dabei sparen.","section":"new_from_obb","order":2},{"id":4,"image_url":"baustelleninfo.webp","title":"Geplante Baustellen","description":"Erneuerungs- und Instandhaltungsarbeiten.","section":"new_from_obb","order":4},{"id":5,"image_url":"verkehrsinfo-holding.webp","title":"Aktuelle Verkehrsmeldungen","description":"Streckeninformationen und Hinweise zu Baustellen.","section":"new_from_obb","order":5},{"id":6,"image_url":"cat.webp","title":"City Airport Train","description":"G\u00fcnstig zum Flughafen mit \u00d6BB Vorteilscard.","section":"current_offers","order":3},{"id":7,"image_url":"businessabteil-mann-laessig-1422.webp","title":"Businessreisen mit der Bahn","description":"Durchatmen vor dem Meeting-Marathon.","section":"current_offers","order":4},{"id":8,"image_url":"railaxed-magazin.webp","title":"Reisetipps f\u00fcr jede Jahreszeit","description":"Lassen Sie sich inspirieren!","section":"current_offers","order":6},{"id":9,"image_url":"sharedmobility.webp","title":"Shared Mobility","description":"Smarte Mobilit\u00e4tsservices","section":"current_offers","order":5},{"id":10,"image_url":"nj-new-schlafende-frau-1422.webp","title":"\u00d6BB Nightjet","description":"Bequem \u00fcber Nacht verreisen.","section":"current_offers","order":2},{"id":11,"image_url":"strand-paar.webp","title":"\u00d6BB Reiseb\u00fcro","description":"...wenn es Zeit f\u00fcr Urlaub ist!","section":"current_offers","order":7},{"id":12,"image_url":"myrailtour.webp","title":"MyRailTour - Bahn und Hotel","description":"Z\u00fcgig zum Bestpreis.","section":"current_offers","order":9},{"id":13,"image_url":"wien-riesenrad.webp","title":"EasyCityPass & QueerCityPass","description":null,"section":"from_the_states","order":6},{"id":14,"image_url":"oebb-plus.webp","title":"\u00d6BB Plus","description":"Bahnfahrt + Freizeitangebot.","section":"current_offers","order":7},{"id":15,"image_url":"ringstrasse-burgtheater.webp","title":"Vienna City Card","description":null,"section":"from_the_states","order":8},{"id":16,"image_url":"dzt-strandkorb-ostsee.webp","title":"Mehr Zeit f\u00fcr Urlaub","description":null,"section":"from_the_states","order":8},{"id":17,"image_url":"innsbruck-panorama.webp","title":"Regio Ticket Werdenfels","description":null,"section":"from_the_states","order":9},{"id":18,"image_url":"bruges.webp","title":"Entdecken Sie Flandern","description":null,"section":"from_the_states","order":1},{"id":19,"image_url":"bahn-zum-berg.webp","title":"Bahn zum Berg","description":null,"section":"from_the_states","order":2},{"id":20,"image_url":"woerthersee-pyramidenkogel.webp","title":"Kultur und Events in K\u00e4rnten","description":null,"section":"from_the_states","order":3},{"id":21,"image_url":"transfer-salzburg.webp","title":"\u00d6BB Transfer Salzburg","description":null,"section":"from_the_states","order":4},{"id":22,"image_url":"vc-vorteil-hinterteil.webp","title":"\u00d6BB Vorteilscard","description":"F\u00fcr alle, die gerne flexibel Bahnfahren","section":"current_offers","order":1},{"id":23,"image_url":"graz-panorama.webp","title":"Freizeit-Ticket Steiermark","description":null,"section":"from_the_states","order":5}]}
+
+  /api/trains/{train}:
+    get:
+      tags:
+        - Trains
+      summary: Egy adott vonat adatainak lekérése
+      description: |
+        A `show` a vonat azonosítója alapján adja vissza a rekordot. Csak szám lehet a paraméter.
+      operationId: trains.show
+      parameters:
+        - name: train
+          in: path
+          required: true
+          description: A vonat azonosítója (csak szám)
+          schema:
+            type: integer
+      responses:
+        '200':
+          description: A kért vonat adatai
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  data:
+                    $ref: '#/components/schemas/TrainResource'
+              example: {"data":{"id":1,"train_number":"EN 463","origin":"Wien Hbf","destination":"Budapest-Keleti","departure_time":"06:40:00","arrival_time":"09:35:00","second_class_price":22.9,"first_class_price":null,"business_class_price":null,"is_overnight":0}}
+        '404':
+          description: Nem található az adott azonosítójú vonat
+
+  /api/timetable/stations/origins:
+    get:
+      tags:
+        - Timetable
+      summary: Kiindulási állomások listázása
+      description: |
+        Az `origins` a kiinduló állomások listáját adja vissza ABC sorrendben. Minden állomás csak egyszer szerepel.
+      operationId: timetable.origins
+      responses:
+        '200':
+          description: Kiindulási állomások listája
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  data:
+                    type: array
+                    items:
+                      type: string
+              example: {"data":["Innsbruck Hbf","Linz\/Donau Hbf","Salzburg Hbf","Villach Hbf","Wien Franz-Josefs-Bahnhof","Wien Hbf"]}
+
+  /api/timetable/stations/destinations:
+    get:
+      tags:
+        - Timetable
+      summary: Érkezési állomások listázása
+      description: |
+        A `destinations` az érkezési állomások listáját adja vissza ABC sorrendben. Opcionálisan szűrhető kiindulási állomás (`origin`) alapján.
+      operationId: timetable.destinations
+      parameters:
+        - name: origin
+          in: query
+          description: Kiindulási állomás neve alapján történő szűrés
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Érkezési állomások listája
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  data:
+                    type: array
+                    items:
+                      type: string
+              example: {"data":["Amsterdam C.","Bologna Centrale","B\u0159eclav","Budapest-Keleti","Dortmund Hbf","Hamburg Hbf","Ljubljana","M\u00fcnchen Hbf","Praha hl.n.","Roma Tiburtina","Stuttgart Hbf","Venezia Mestere","Z\u00fcrich HB"]}
+
+  /api/timetable/planner/{from}/{to}:
+    get:
+      tags:
+        - Timetable
+      summary: Menetrendi útvonaltervezés
+      description: |
+        A `planner` listázza a vonatokat két állomás között részleges egyezés alapján.
+        A találatokat éjszakai vonatok, érkezési idő, indulási idő és ár alapján rendezi.
+      operationId: timetable.planner
+      parameters:
+        - name: from
+          in: path
+          required: true
+          description: Kiindulási állomás neve (vagy töredéke)
+          schema:
+            type: string
+            pattern: '^[\p{L} \-\.\/]+$'
+        - name: to
+          in: path
+          required: true
+          description: Érkezési állomás neve (vagy töredéke)
+          schema:
+            type: string
+            pattern: '^[\p{L} \-\.\/]+$'
+        - name: time
+          in: query
+          description: Indulási vagy érkezési időpont alapú szűréshez
+          schema:
+            type: string
+            format: time
+        - name: time-type
+          in: query
+          description: Határozza meg, hogy a megadott időponthoz képest érkezést ("arrival") vagy indulást vizsgálunk
+          schema:
+            type: string
+            enum:
+              - arrival
+              - departure
+      responses:
+        '200':
+          description: Tervezett útvonalak / vonatok listája
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  data:
+                    type: array
+                    items:
+                      $ref: '#/components/schemas/TrainResource'
+              example: {"data":[{"id":1,"train_number":"EN 463","origin":"Wien Hbf","destination":"Budapest-Keleti","departure_time":"06:40:00","arrival_time":"09:35:00","second_class_price":22.9},{"id":2,"train_number":"RJX 267","origin":"Wien Hbf","destination":"Budapest-Keleti","departure_time":"07:40:00","arrival_time":"10:35:00","second_class_price":24.9},{"id":3,"train_number":"EC 141","origin":"Wien Hbf","destination":"Budapest-Keleti","departure_time":"08:40:00","arrival_time":"11:35:00","second_class_price":22.9},{"id":4,"train_number":"RJX 61","origin":"Wien Hbf","destination":"Budapest-Keleti","departure_time":"11:40:00","arrival_time":"14:35:00","second_class_price":21.9},{"id":5,"train_number":"EC 145","origin":"Wien Hbf","destination":"Budapest-Keleti","departure_time":"12:40:00","arrival_time":"15:35:00","second_class_price":26.9},{"id":6,"train_number":"RJX 65","origin":"Wien Hbf","destination":"Budapest-Keleti","departure_time":"15:40:00","arrival_time":"18:35:00","second_class_price":21.9},{"id":7,"train_number":"EC 149","origin":"Wien Hbf","destination":"Budapest-Keleti","departure_time":"16:42:00","arrival_time":"19:35:00","second_class_price":21.9},{"id":8,"train_number":"RJX 67","origin":"Wien Hbf","destination":"Budapest-Keleti","departure_time":"17:40:00","arrival_time":"20:35:00","second_class_price":23.9},{"id":9,"train_number":"EC 341","origin":"Wien Hbf","destination":"Budapest-Keleti","departure_time":"19:42:00","arrival_time":"22:35:00","second_class_price":24.9},{"id":10,"train_number":"EC 343","origin":"Wien Hbf","destination":"Budapest-Keleti","departure_time":"20:37:00","arrival_time":"23:35:00","second_class_price":26.9}]}
+
+components:
+  schemas:
+    HeroContentResource:
+      type: object
+      properties:
+        id:
+          type: integer
+          description: A tartalom azonosítója
+        title:
+          type: string
+          description: A hero szekció címe
+        content:
+          type: string
+          description: A hero szekció szöveges tartalma
+        image_url:
+          type: string
+          description: A kapcsolódó háttérkép URL-je
+
+    TeaserResource:
+      type: object
+      properties:
+        id:
+          type: integer
+          description: A teaser azonosítója
+        section:
+          type: string
+          description: A szekció neve, ahova a teaser tartozik
+        order:
+          type: integer
+          description: A megjelenítési sorrend
+        title:
+          type: string
+          description: A teaser címe
+        content:
+          type: string
+          description: A teaser szövege
+
+    TrainResource:
+      type: object
+      properties:
+        id:
+          type: integer
+          description: A vonat azonosítója
+        origin:
+          type: string
+          description: Kiindulási állomás
+        destination:
+          type: string
+          description: Érkezési állomás
+        departure_time:
+          type: string
+          format: time
+          description: Indulási idő
+        arrival_time:
+          type: string
+          format: time
+          description: Érkezési idő
+        is_overnight:
+          type: boolean
+          description: Éjszakán átnyúló utazás jelölője
+        price_second_class:
+          type: number
+          format: float
+          description: Másodosztályú jegy ára

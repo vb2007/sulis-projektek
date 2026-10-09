@@ -1,0 +1,24 @@
+<form class="w-[95%] p-12 bg-white max-w-250 mx-auto my-12 grid md:grid-cols-2 gap-4">
+    <h1 class="text-3xl font-bold mb-4 col-span-full">Fahrplan & Tickets</h1>
+    <div class="relative">
+        <input type="text" name="from" placeholder="Von" aria-label="Von" class="w-full peer focus:rounded-b-none"/>
+        <ul class="absolute bg-white p-2 w-full border hidden peer-focus:flex flex-col gap-2 max-h-42 overflow-scroll peer-focus:border-red-400 z-40">
+            <li class="cursor-pointer">
+
+            </li>
+        </ul>
+    </div>
+    <div class="relative">
+        <input type="text" name="to" placeholder="Nach" aria-label="Nach" class="w-full peer focus:rounded-b-none"/>
+        <ul class="absolute bg-white p-2 w-full border hidden peer-focus:flex flex-col gap-2 max-h-42 overflow-scroll peer-focus:border-red-400">
+            <li class="cursor-pointer">
+
+            </li>
+        </ul>
+    </div>
+    <div class="flex gap-4 flex-wrap">
+        <input type="date" name="date" aria-label="Datum" class="grow"/>
+        <input type="time" name="time" aria-label="Reisezeitpunkt"/>
+    </div>
+    <button class="justify-self-auto md:justify-self-end md:px-12">Suchen</button>
+</form>
