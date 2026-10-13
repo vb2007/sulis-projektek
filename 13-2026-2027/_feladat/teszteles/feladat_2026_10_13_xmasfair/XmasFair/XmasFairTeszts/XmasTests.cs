@@ -91,16 +91,16 @@ namespace XmasFair
             Assert.That(sut.DailyIncome, Is.EqualTo(1250), "1 zsíros kenyér eladása után 1250 a bevétel");
         }
 
-        //[Test]
-        //public void StandSellTests()
-        //{
-        //    Stand sut = new Stand("Böbe bárpultja", "étel");
-        //    Assert.That(sut.DailyIncome, Is.EqualTo(0), "Ma még nem adtak el egy terméket sem");
-        //    sut.Add(new Good("fánk", "étel", 250));
-        //    sut.Sell("fánk", 3);
-        //    Assert.That(sut.DailyIncome, Is.EqualTo(750), "3 fánk eladása után 750 a bevétel");
-        //    Assert.Throws<ArgumentException>(() => { sut.Sell("kenyér", 1); }, "Nincs ilyen termék, nem lehet eladni");
-        //}
+        [Test]
+        public void StandSellTests()
+        {
+            Stand sut = new Stand("Böbe bárpultja", "étel");
+            Assert.That(sut.DailyIncome, Is.EqualTo(0), "Ma még nem adtak el egy terméket sem");
+            sut.Add(new Good("fánk", "étel", 250));
+            sut.Sell("fánk", 3);
+            Assert.That(sut.DailyIncome, Is.EqualTo(750), "3 fánk eladása után 750 a bevétel");
+            Assert.Throws<ArgumentException>(() => { sut.Sell("kenyér", 1); }, "Nincs ilyen termék, nem lehet eladni");
+        }
 
         //[Test]
         //public void SellGoodTests()

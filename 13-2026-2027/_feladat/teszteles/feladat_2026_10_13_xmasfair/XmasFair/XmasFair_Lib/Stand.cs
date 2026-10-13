@@ -47,7 +47,12 @@ namespace XmasFair_Lib
 
         public void Sell(string name, int quantity)
         {
-            Good good = goods.First(g => g.Name == name);
+            Good? good = goods.FirstOrDefault(g => g.Name == name);
+            if (good == null)
+            {
+                throw new ArgumentException("A bódé nem árul ilyen nevű terméket.", nameof(name));
+            }
+
             DailyIncome += good.Value * quantity;
         }
     }
