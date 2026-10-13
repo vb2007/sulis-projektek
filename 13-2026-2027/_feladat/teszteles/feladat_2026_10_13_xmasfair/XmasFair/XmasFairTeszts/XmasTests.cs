@@ -1,6 +1,4 @@
-﻿using System.Runtime.InteropServices;
-
-namespace XmasFair
+﻿namespace XmasFair
 {
     public class Tests
     {
