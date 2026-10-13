@@ -1,4 +1,6 @@
-﻿namespace XmasFair
+﻿using XmasFair_Lib;
+
+namespace XmasFair
 {
     public class Tests
     {
