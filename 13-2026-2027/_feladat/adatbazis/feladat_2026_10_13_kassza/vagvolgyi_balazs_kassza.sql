@@ -28,7 +28,6 @@ CREATE TABLE `cikk` (
   `afa` double NOT NULL
 ) ENGINE=InnoDB;
 
-
 -- manuális commit
 SET AUTOCOMMIT = 0;
 
