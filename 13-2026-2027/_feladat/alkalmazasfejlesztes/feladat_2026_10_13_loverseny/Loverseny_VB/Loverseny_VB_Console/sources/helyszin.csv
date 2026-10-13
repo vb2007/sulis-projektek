@@ -1,0 +1,41 @@
+helyszin_id;nev;telepules;orszag;kapacitas
+1;Kincsem Park;Budapest;Magyarország;5000
+2;Ascot Racecourse;Ascot;Egyesült Királyság;80000
+3;Churchill Downs;Louisville;Kentucky,USA;50000
+4;Aintree Racecourse;Liverpool;Egyesült Királyság;75000
+5;Flemington Racecourse;Melbourne;Ausztrália;120000
+6;Tokyo Racecourse;Tokió;Japán;223000
+7;Longchamp Racecourse;Párizs;Franciaország;50000
+8;Santa Anita Park;Arcadia;Kalifornia,USA;26000
+9;Meydan Racecourse;Dubai;Egyesült Arab Emírségek;60000
+10;Happy Valley Racecourse;Hong Kong;Hong Kong;55000
+11;Sha Tin Racecourse;Hong Kong;Hong Kong;85000
+12;Epsom Downs Racecourse;Epsom;Egyesült Királyság;130000
+13;Belmont Park;Elmont;New York,USA;90000
+14;Saratoga Race Course;Saratoga Springs;New York,USA;50000
+15;Randwick Racecourse;Sydney;Ausztrália;52000
+16;Caulfield Racecourse;Melbourne;Ausztrália;25000
+17;Moonee Valley Racecourse;Melbourne;Ausztrália;30000
+18;Pimlico Race Course;Baltimore;Maryland,USA;100000
+19;Del Mar Racetrack;Del Mar;Kalifornia,USA;44000
+20;Gulfstream Park;Hallandale Beach;Florida,USA;16000
+21;Keeneland;Lexington;Kentucky,USA;21000
+22;Oaklawn Park;Hot Springs;Arkansas,USA;28000
+23;Aqueduct Racetrack;Queens;New York,USA;40000
+24;Arlington Park;Arlington Heights;Illinois,USA;35000
+25;Remington Park;Oklahoma City;Oklahoma,USA;10000
+26;Turf Paradise;Phoenix;Arizona,USA;7500
+27;Laurel Park;Laurel;Maryland,USA;8000
+28;Fair Grounds Race Course;New Orleans;Louisiana,USA;5000
+29;Santa Rosa Park;Santa Rosa;Kalifornia,USA;4000
+30;Tampa Bay Downs;Tampa;Florida,USA;4500
+31;Woodbine Racetrack;Toronto;Kanada;13000
+32;Ellis Park;Henderson;Kentucky,USA;6700
+33;Fort Erie Race Track;Fort Erie;Ontario,Kanada;5000
+34;Hastings Racecourse;Vancouver;British Columbia,Kanada;5000
+35;Finger Lakes Gaming and Racetrack;Farmington; New York,USA;4000
+36;Mountaineer Casino, Racetrack and Resort;Chester; West Virginia,USA;6500
+37;Prairie Meadows;Altoona;Iowa,USA;3000
+38;Zia Park;Hobbs;New Mexico,USA;7500
+39;Sunland Park Racetrack & Casino;Sunland Park; New Mexico,USA;5000
+40;Ruidoso Downs;Ruidoso Downs;New Mexico,USA;6000

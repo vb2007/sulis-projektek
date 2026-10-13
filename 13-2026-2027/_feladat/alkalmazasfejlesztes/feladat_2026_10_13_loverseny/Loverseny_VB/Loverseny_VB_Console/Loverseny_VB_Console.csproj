@@ -11,4 +11,19 @@
     <ProjectReference Include="..\Loverseny_VB_Lib\Loverseny_VB_Lib.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <None Update="sources\helyszin.csv">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="sources\lo.csv">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="sources\verseny.csv">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="sources\verseny_tipus.csv">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
 </Project>
