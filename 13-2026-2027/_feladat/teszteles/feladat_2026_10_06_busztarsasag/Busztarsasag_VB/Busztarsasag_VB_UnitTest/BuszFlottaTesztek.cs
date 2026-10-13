@@ -14,14 +14,14 @@ public class BuszFlottaTesztek
     }
 
     [Test]
-    public void Megall_NincsElegHely_VisszaadjaALentMaradtakat()
+    public void MegallNincsElegHelyVisszaadjaLentMaradtakat()
     {
         Assert.That(_flotta.Megall("ABC-123", "A", 0, 14), Is.EqualTo(4));
         Assert.That(_flotta.Lentmaradt("A"), Is.EqualTo(4));
     }
 
     [Test]
-    public void Megall_MegalloStatisztikaOsszesitiABuszokat()
+    public void Megall_egalloStatisztikaOsszesitiBuszokat()
     {
         _flotta.Megall("ABC-123", "A", 0, 5);
         _flotta.Megall("DEF-456", "A", 0, 7);
@@ -32,7 +32,7 @@ public class BuszFlottaTesztek
     }
 
     [Test]
-    public void Megall_LeszallokUtanFelszallnakAVarakozok()
+    public void MegallLeszallokUtanFelszallnakVarakozok()
     {
         _flotta.Megall("ABC-123", "A", 0, 10);
 
@@ -40,7 +40,7 @@ public class BuszFlottaTesztek
     }
 
     [Test]
-    public void OsszesSzallitott_BuszonkentSzamol()
+    public void OsszesSzallitottBuszonkentSzamol()
     {
         _flotta.Megall("ABC-123", "A", 0, 10);
         _flotta.Megall("ABC-123", "B", 10, 6);
@@ -50,7 +50,7 @@ public class BuszFlottaTesztek
     }
 
     [Test]
-    public void NapVege_TorliAzAdatokat()
+    public void NapVegeTorliAzAdatokat()
     {
         _flotta.Megall("ABC-123", "A", 0, 10);
 
@@ -61,7 +61,7 @@ public class BuszFlottaTesztek
     }
 
     [Test]
-    public void Konstruktor_NincsBusz_Kivetel()
+    public void KonstruktorNincsBusz()
     {
         Assert.Throws<ArgumentException>(() => new BuszFlotta([], ["A"]));
     }

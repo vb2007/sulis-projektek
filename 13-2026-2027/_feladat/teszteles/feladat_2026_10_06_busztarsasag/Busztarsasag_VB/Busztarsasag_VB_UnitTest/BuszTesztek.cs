@@ -6,27 +6,27 @@ namespace Busztarsasag_VB_UnitTest;
 public class BuszTesztek
 {
     [Test]
-    public void Felszall_TeliBusz_CsakASzabadHelyekreSzallnakFel()
+    public void FelszallTeliBuszCsakSzabadHelyekreSzallnakFel()
     {
-        var busz = new Busz("ABC-123", 10);
+        Busz busz = new Busz("ABC-123", 10);
 
         Assert.That(busz.Felszall(15), Is.EqualTo(10));
         Assert.That(busz.Utasok, Is.EqualTo(10));
     }
 
     [Test]
-    public void Leszall_TobbenMintAhanyanVannak_Kivetel()
+    public void LeszallTobbenMintAhanyanVannak()
     {
-        var busz = new Busz("ABC-123", 10);
+        Busz busz = new Busz("ABC-123", 10);
         busz.Felszall(3);
 
         Assert.Throws<ArgumentOutOfRangeException>(() => busz.Leszall(4));
     }
 
     [Test]
-    public void OsszesSzallitott_CsakAFelszallokatSzamolja()
+    public void OsszesSzallitottCsakFelszallokatSzamolja()
     {
-        var busz = new Busz("ABC-123", 10);
+        Busz busz = new Busz("ABC-123", 10);
         busz.Felszall(8);
         busz.Leszall(8);
         busz.Felszall(5);
@@ -35,9 +35,9 @@ public class BuszTesztek
     }
 
     [Test]
-    public void NapVege_Nullaz()
+    public void NapVegeNullaz()
     {
-        var busz = new Busz("ABC-123", 10);
+        Busz busz = new Busz("ABC-123", 10);
         busz.Felszall(5);
 
         busz.NapVege();
