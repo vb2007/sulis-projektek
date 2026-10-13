@@ -1,8 +1,15 @@
-﻿namespace Busztarsasag_VB_Lib;
+namespace Busztarsasag_VB_Lib;
 
 public interface IBusz
 {
-    public int JaratSzam { get; }
-    public string Meret { get; }
-    public int Ferohely { get; }
+    string Rendszam { get; }
+    int Ferohely { get; }
+    int Utasok { get; }
+    int OsszesSzallitott { get; }
+
+    void Leszall(int db);
+
+    int Felszall(int db); //visszaadja hányan szálltak fel ténylegesen
+
+    void NapVege();
 }
