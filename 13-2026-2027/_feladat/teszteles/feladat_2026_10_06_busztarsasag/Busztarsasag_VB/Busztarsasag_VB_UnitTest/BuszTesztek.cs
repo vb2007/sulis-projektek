@@ -11,8 +11,8 @@ public class BuszTesztek
     {
         Busz busz = new Busz("ABC-123", 10);
 
-        Assert.That(busz.Felszall(15), Is.EqualTo(10));
-        Assert.That(busz.Utasok, Is.EqualTo(10));
+        Assert.That(busz.Felszall(15), Is.EqualTo(10), "Csak a szabad helyek számának megfelelő utas szállhat fel");
+        Assert.That(busz.Utasok, Is.EqualTo(10), "A teli busz utasszáma egyezzen a férőhellyel");
     }
 
     [Test]
@@ -22,7 +22,7 @@ public class BuszTesztek
         Busz busz = new Busz("ABC-123", 10);
         busz.Felszall(3);
 
-        Assert.Throws<ArgumentOutOfRangeException>(() => busz.Leszall(4));
+        Assert.Throws<ArgumentOutOfRangeException>(() => busz.Leszall(4), "Több leszálló, mint utas esetén kivételt kell dobni");
     }
 
     [Test]
@@ -34,7 +34,7 @@ public class BuszTesztek
         busz.Leszall(8);
         busz.Felszall(5);
 
-        Assert.That(busz.OsszesSzallitott, Is.EqualTo(13));
+        Assert.That(busz.OsszesSzallitott, Is.EqualTo(13), "Csak a felszállók számítanak az összes szállítottba");
     }
 
     [Test]
@@ -46,7 +46,7 @@ public class BuszTesztek
 
         busz.NapVege();
 
-        Assert.That(busz.Utasok, Is.Zero);
-        Assert.That(busz.OsszesSzallitott, Is.Zero);
+        Assert.That(busz.Utasok, Is.Zero, "A busz üres kell legyen nap végén");
+        Assert.That(busz.OsszesSzallitott, Is.Zero, "A szállított utasok száma nullázódjon nap végén");
     }
 }

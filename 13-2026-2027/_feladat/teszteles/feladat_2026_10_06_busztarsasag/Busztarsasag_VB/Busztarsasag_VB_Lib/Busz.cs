@@ -26,7 +26,9 @@ public class Busz : IBusz
     public void Leszall(int db)
     {
         if (db < 0 || db > Utasok)
-            throw new ArgumentOutOfRangeException(nameof(db));
+        {
+            throw new ArgumentOutOfRangeException(nameof(db));   
+        }
 
         Utasok -= db;
     }
