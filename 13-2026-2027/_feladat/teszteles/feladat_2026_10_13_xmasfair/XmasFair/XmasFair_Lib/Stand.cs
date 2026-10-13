@@ -4,6 +4,10 @@ namespace XmasFair_Lib
     {
         public string Name { get; }
         public List<string> ProductTypes { get; }
+        public int DailyIncome { get; private set; }
+
+        private readonly List<Good> goods = new List<Good>();
+        public int NumGoods => goods.Count;
 
         public Stand(string name, string productType)
             : this(name, new List<string> { productType }) { }
@@ -24,10 +28,6 @@ namespace XmasFair_Lib
             ProductTypes = new List<string>(productTypes);
         }
 
-        private readonly List<Good> goods = new List<Good>();
-
-        public int NumGoods => goods.Count;
-
         public void Add(Good good)
         {
             if (!ProductTypes.Contains(good.ProductType))
@@ -43,11 +43,10 @@ namespace XmasFair_Lib
             goods.Add(good);
         }
 
-        public int DailyIncome { get; private set; }
-
         public bool Sell(string name, int quantity)
         {
             Good? good = goods.FirstOrDefault(g => g.Name == name);
+
             if (good == null)
             {
                 throw new ArgumentException("A bódé nem árul ilyen nevű terméket.", nameof(name));
@@ -59,6 +58,7 @@ namespace XmasFair_Lib
             }
 
             DailyIncome += good.Value * quantity;
+
             return true;
         }
     }
