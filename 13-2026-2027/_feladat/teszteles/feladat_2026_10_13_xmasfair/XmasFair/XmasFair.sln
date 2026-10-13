@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.14.36705.20
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XmasFairTeszts", "XmasFairTeszts\XmasFairTeszts.csproj", "{E245057F-4068-4D36-8A9D-D4D2E2C91AFD}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{E245057F-4068-4D36-8A9D-D4D2E2C91AFD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E245057F-4068-4D36-8A9D-D4D2E2C91AFD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E245057F-4068-4D36-8A9D-D4D2E2C91AFD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E245057F-4068-4D36-8A9D-D4D2E2C91AFD}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {7905E19A-33E1-44FB-A924-C2BB7E9781B4}
+	EndGlobalSection
+EndGlobal
