@@ -1,0 +1,5 @@
+<Solution>
+  <Project Path="Loverseny_VB_Console/Loverseny_VB_Console.csproj" />
+  <Project Path="Loverseny_VB_Lib/Loverseny_VB_Lib.csproj" />
+  <Project Path="Loverseny_VB_WPF/Loverseny_VB_WPF.csproj" />
+</Solution>
