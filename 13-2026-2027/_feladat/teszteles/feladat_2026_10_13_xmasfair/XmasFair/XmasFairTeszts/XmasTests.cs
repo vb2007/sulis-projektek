@@ -57,7 +57,7 @@ namespace XmasFair
         public void AddGoodsToStandTests()
         {
             Stand sut = new Stand("Böbe bárpultja", "étel");
-            sut.Add(new Good("zsíros kenyér", "étel", 500);
+            sut.Add(new Good("zsíros kenyér", "étel", 500));
             Assert.That(sut.NumGoods, Is.EqualTo(1), "Sikeres termék hozzáadás után 1re nőtt a termékek száma.");
             sut.Add(new Good("fánk", "étel", 250));
             Assert.That(sut.NumGoods, Is.EqualTo(2), "Sikeres termék hozzáadás után 2re nőtt a termékek száma.");
@@ -66,17 +66,17 @@ namespace XmasFair
             Assert.That(sut.NumGoods, Is.EqualTo(2), "A sikertelen hozzáadás nem módosította a termékek számát");
         }
 
-        //[Test]
-        //public void FairIncomeTests()
-        //{
-        //    Fair sut = new Fair("Mikulás napi vásár", 3, 20000, "2025.12.05", "2025.12.07");
-        //    Assert.That(sut.Income, Is.EqualTo(0), "Még nem adtak ki egy standot sem, nulla a bevétel");
-        //    sut.Add(new Stand("Böbe bárpultja", "étel"));
-        //    Assert.That(sut.Income, Is.EqualTo(20000), "1 stand kiadva, így a bevétel 20000");
-        //    sut.Add(new Stand("Böbe bárpultja 2", "étel"));
-        //    sut.Add(new Stand("Böbe bárpultja 3", "étel"));
-        //    Assert.That(sut.Income, Is.EqualTo(60000), "3 stand kiadva, így a bevétel 60000");
-        //}
+        [Test]
+        public void FairIncomeTests()
+        {
+            Fair sut = new Fair("Mikulás napi vásár", 3, 20000, "2025.12.05", "2025.12.07");
+            Assert.That(sut.Income, Is.EqualTo(0), "Még nem adtak ki egy standot sem, nulla a bevétel");
+            sut.Add(new Stand("Böbe bárpultja", "étel"));
+            Assert.That(sut.Income, Is.EqualTo(20000), "1 stand kiadva, így a bevétel 20000");
+            sut.Add(new Stand("Böbe bárpultja 2", "étel"));
+            sut.Add(new Stand("Böbe bárpultja 3", "étel"));
+            Assert.That(sut.Income, Is.EqualTo(60000), "3 stand kiadva, így a bevétel 60000");
+        }
 
         //[Test]
         //public void StandIncomeTests()
