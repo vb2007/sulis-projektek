@@ -14,6 +14,7 @@ public class BuszFlottaTesztek
     }
 
     [Test]
+    [Description("Hiányzó hely esetén visszaadja a lent maradtakat")]
     public void MegallNincsElegHelyVisszaadjaLentMaradtakat()
     {
         Assert.That(_flotta.Megall("ABC-123", "A", 0, 14), Is.EqualTo(4));
@@ -21,6 +22,7 @@ public class BuszFlottaTesztek
     }
 
     [Test]
+    [Description("A megálló statisztikája több busz adatát összegzi")]
     public void Megall_egalloStatisztikaOsszesitiBuszokat()
     {
         _flotta.Megall("ABC-123", "A", 0, 5);
@@ -32,6 +34,7 @@ public class BuszFlottaTesztek
     }
 
     [Test]
+    [Description("Előbb leszállnak, utána szállnak fel a várakozók")]
     public void MegallLeszallokUtanFelszallnakVarakozok()
     {
         _flotta.Megall("ABC-123", "A", 0, 10);
@@ -40,6 +43,7 @@ public class BuszFlottaTesztek
     }
 
     [Test]
+    [Description("Az összes szállított buszonként számolódik")]
     public void OsszesSzallitottBuszonkentSzamol()
     {
         _flotta.Megall("ABC-123", "A", 0, 10);
@@ -50,6 +54,7 @@ public class BuszFlottaTesztek
     }
 
     [Test]
+    [Description("Nap végén a flotta adatai törlődnek")]
     public void NapVegeTorliAzAdatokat()
     {
         _flotta.Megall("ABC-123", "A", 0, 10);
@@ -61,6 +66,7 @@ public class BuszFlottaTesztek
     }
 
     [Test]
+    [Description("Busz nélküli flotta: hiba")]
     public void KonstruktorNincsBusz()
     {
         Assert.Throws<ArgumentException>(() => new BuszFlotta([], ["A"]));

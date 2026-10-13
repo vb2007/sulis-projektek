@@ -6,6 +6,7 @@ namespace Busztarsasag_VB_UnitTest;
 public class BuszTesztek
 {
     [Test]
+    [Description("Teli busznál csak a szabad helyekre lehet felszállni")]
     public void FelszallTeliBuszCsakSzabadHelyekreSzallnakFel()
     {
         Busz busz = new Busz("ABC-123", 10);
@@ -15,6 +16,7 @@ public class BuszTesztek
     }
 
     [Test]
+    [Description("Több leszálló, mint utas: hiba")]
     public void LeszallTobbenMintAhanyanVannak()
     {
         Busz busz = new Busz("ABC-123", 10);
@@ -24,6 +26,7 @@ public class BuszTesztek
     }
 
     [Test]
+    [Description("Az összes szállított csak a felszállókat számolja")]
     public void OsszesSzallitottCsakFelszallokatSzamolja()
     {
         Busz busz = new Busz("ABC-123", 10);
@@ -35,6 +38,7 @@ public class BuszTesztek
     }
 
     [Test]
+    [Description("Nap végén a busz adatai nullázódnak")]
     public void NapVegeNullaz()
     {
         Busz busz = new Busz("ABC-123", 10);
