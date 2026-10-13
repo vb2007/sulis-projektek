@@ -43,6 +43,7 @@ public class Busz : IBusz
         int felszallt = Math.Min(db, Ferohely - Utasok);
         Utasok += felszallt;
         OsszesSzallitott += felszallt;
+        
         return felszallt;
     }
 
