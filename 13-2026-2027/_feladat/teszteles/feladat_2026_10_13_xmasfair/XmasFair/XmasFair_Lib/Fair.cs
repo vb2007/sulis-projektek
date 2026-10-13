@@ -12,6 +12,10 @@ namespace XmasFair_Lib
         public DateTime StartDate { get; }
         public DateTime EndDate { get; }
 
+        private readonly List<Stand> stands = new List<Stand>();
+        public int FreePlace => StandCount - stands.Count;
+        public int Income => stands.Count * StandPrice;
+
         public Fair(string name, int standCount, int standPrice, string startDate, string endDate)
         {
             if (string.IsNullOrWhiteSpace(name))
@@ -42,10 +46,6 @@ namespace XmasFair_Lib
             StandPrice = standPrice;
         }
 
-        private readonly List<Stand> stands = new List<Stand>();
-
-        public int FreePlace => StandCount - stands.Count;
-
         public bool AddStand(Stand stand)
         {
             if (FreePlace <= 0 || stands.Any(s => s.Name == stand.Name))
@@ -56,8 +56,6 @@ namespace XmasFair_Lib
             stands.Add(stand);
             return true;
         }
-
-        public int Income => stands.Count * StandPrice;
 
         public void Add(Stand stand)
         {
