@@ -67,7 +67,8 @@ namespace XmasFair
         }
 
         [Test]
-        public void FairIncomeTests() {
+        public void FairIncomeTests()
+        {
             Fair sut = new Fair("Mikulás napi vásár", 3, 20000, "2025.12.05", "2025.12.07");
             Assert.That(sut.Income, Is.EqualTo(0), "Még nem adtak ki egy standot sem, nulla a bevétel");
             sut.Add(new Stand("Böbe bárpultja", "étel"));
