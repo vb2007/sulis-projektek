@@ -31,6 +31,7 @@ namespace XmasFair_Lib
 
             StartDate = ParseDate(startDate, nameof(startDate));
             EndDate = ParseDate(endDate, nameof(endDate));
+
             if (EndDate < StartDate)
             {
                 throw new ArgumentException("A végdátum nem lehet korábbi a kezdő dátumnál.", nameof(endDate));
