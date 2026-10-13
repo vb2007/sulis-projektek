@@ -1,3 +1,5 @@
+-- DROP DATABASE `kassza`;
+
 CREATE DATABASE IF NOT EXISTS `kassza`
 DEFAULT CHARACTER SET utf8
 COLLATE utf8_hungarian_ci;
@@ -13,7 +15,7 @@ CREATE TABLE `blokk` (
   `id` int NOT NULL primary key auto_increment,
   `vasarlas_ideje` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
   `elado_id` int NOT NULL,
-  `fizetesi_mod` int NOT NULL
+  `fizetesi_mod` varchar(25) NOT NULL
 ) ENGINE=InnoDB;
 
 CREATE TABLE `cikk` (
@@ -21,7 +23,7 @@ CREATE TABLE `cikk` (
   `blokk_id` int NOT NULL,
   `nev` varchar(50) COLLATE utf8_hungarian_ci NOT NULL,
   `mennyiseg` double NOT NULL,
-  `mertekegyseg` varchar(5) CHARACTER SET utf8 COLLATE utf8_hungarian_ci NOT NULL,
+  `mertekegyseg` varchar(25) CHARACTER SET utf8 COLLATE utf8_hungarian_ci NOT NULL,
   `egysegar` int NOT NULL,
   `afa` double NOT NULL
 ) ENGINE=InnoDB;
