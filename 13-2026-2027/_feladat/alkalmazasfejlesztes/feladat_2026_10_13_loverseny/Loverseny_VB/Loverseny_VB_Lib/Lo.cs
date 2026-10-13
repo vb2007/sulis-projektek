@@ -6,6 +6,8 @@
         public string Nev { get; set; }
         public int VersenyTipusId { get; set; }
 
+        public int VersenyzesselToltottIdo { get; }
+
         public Lo()
         {
             

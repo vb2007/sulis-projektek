@@ -1,4 +1,6 @@
-﻿namespace Loverseny_VB_Console
+﻿using Loverseny_VB_Lib;
+
+namespace Loverseny_VB_Console
 {
     internal class Program
     {
