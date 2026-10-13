@@ -2,6 +2,7 @@ using Busztarsasag_VB_Lib;
 
 namespace Busztarsasag_VB_UnitTest;
 
+[TestFixture]
 public class BuszFlottaTesztek
 {
     private BuszFlotta _flotta = null!;
