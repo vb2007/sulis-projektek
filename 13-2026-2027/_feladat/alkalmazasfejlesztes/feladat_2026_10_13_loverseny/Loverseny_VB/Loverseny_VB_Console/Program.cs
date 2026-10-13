@@ -6,7 +6,12 @@ namespace Loverseny_VB_Console
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello, World!");
+            AdatFactory adatok = new AdatFactory(
+                File.ReadAllLines("helyszin.csv"),
+                File.ReadAllLines("lo.csv"),
+                File.ReadAllLines("verseny.csv"),
+                File.ReadAllLines("verseny_tipus.csv")
+            );
         }
     }
 }
