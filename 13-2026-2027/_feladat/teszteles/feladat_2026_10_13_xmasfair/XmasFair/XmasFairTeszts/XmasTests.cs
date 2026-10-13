@@ -2,7 +2,6 @@
 {
     public class Tests
     {
-
         [Test]
         public void CreateFairTests()
         {
@@ -13,15 +12,17 @@
             Assert.Throws<ArgumentException>(() => { new Fair("vásár", 5, -2000, "2025.12.05", "2025.12.07"); }, "Negatív összeget nem kérhetnek a standokért");
             Assert.Throws<ArgumentException>(() => { new Fair("vásár", 5, 2000, "2025.12.07", "2025.12.06"); }, "Ha a végdátum kisebb, mint a kező dátum, az nem jó");
         }
+
         [Test]
         public void CreateStandTests()
         {
             Assert.That(new Stand("Bódog bódéja", "étel").Name, Is.EqualTo("Bódog bódéja"), "Ha helyes adatokat adtam meg, létrejön a bódé, lekérdezhető lesz a neve is");
-            Assert.That(new Stand("Bódog boldog bódéja", new List<string> { "ital", "étel" }).Name, Is.EqualTo("Bódog boldog bódéja"), "Ha helyes adatokat adtam meg, több terméktípussal, akkor is létrejön a bódé, lekérdezhető lesz a neve is");
+            Assert.That(new Stand("Bódog boldog bódéja", new List<string> { "ital", "étel" }).Namíe, Is.EqualTo("Bódog boldog bódéja"), "Ha helyes adatokat adtam meg, több terméktípussal, akkor is létrejön a bódé, lekérdezhető lesz a neve is");
             Assert.Throws<ArgumentException>(() => { new Stand("", "valami"); }, "Név nélkül nem jön létre a bódé, exceptiont kell dobjon");
             Assert.Throws<ArgumentException>(() => { new Stand("Üres stand", ""); }, "Üres terméktípussal nem jön létre a stand, exceptiont kell dobjon");
             Assert.Throws<ArgumentException>(() => { new Stand("Üres stand", new List<string> { }); }, "Üres terméktípussal nem jön létre a stand, exceptiont kell dobjon");
         }
+
         [Test]
         public void StandToFairTests()
         {
@@ -40,6 +41,7 @@
             Assert.That(SUT.FreePlace, Is.EqualTo(1), "a sikeres eltávolítás után nőtt a szabad helyek száma");
             Assert.That(SUT.RemoveStand("Bódog bódéja"), Is.False, "Ezt már kiszedtük, nem lehet újra eltávolítani");
         }
+
         [Test]
         public void CreateGoodTests()
         {
@@ -48,6 +50,7 @@
             Assert.Throws<ArgumentException>(() => { new Good("", "valami", 5); }, "Név nélkül nem jön létre a termék, exceptiont kell dobjon");
             Assert.Throws<ArgumentException>(() => { new Good("valami termék", "", 5); }, "Üres terméktípussal nem jön létre a termék, exceptiont kell dobjon");
         }
+
         [Test]
         public void AddGoodsToStandTests()
         {
@@ -83,8 +86,8 @@
             Assert.That(SUT.DailyIncome, Is.EqualTo(750), "3 fánk eladása után 750 a bevétel");
             SUT.Sell("zsíros kenyér", 1);
             Assert.That(SUT.DailyIncome, Is.EqualTo(1250), "1 zsíros kenyér eladása után 1250 a bevétel");
-
         }
+
         [Test]
         public void StandSellTests()
         {
@@ -94,7 +97,8 @@
             SUT.Sell("fánk", 3);
             Assert.That(SUT.DailyIncome, Is.EqualTo(750), "3 fánk eladása után 750 a bevétel");
             Assert.Throws<ArgumentException>(() => { SUT.Sell("kenyér", 1); }, "Nincs ilyen termék, nem lehet eladni");
-            }
+        }
+
         [Test]
         public void SellGoodTests()
         {
