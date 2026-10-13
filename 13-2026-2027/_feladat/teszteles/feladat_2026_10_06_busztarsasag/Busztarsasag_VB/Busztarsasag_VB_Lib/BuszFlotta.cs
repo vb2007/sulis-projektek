@@ -1,11 +1,11 @@
 namespace Busztarsasag_VB_Lib;
 
-public class Buszflotta
+public class BuszFlotta
 {
     private readonly Dictionary<string, IBusz> _buszok;
     private readonly Dictionary<string, Megallo> _megallok;
 
-    public Buszflotta(IEnumerable<IBusz> buszok, IEnumerable<string> megallok)
+    public BuszFlotta(IEnumerable<IBusz> buszok, IEnumerable<string> megallok)
     {
         _buszok = buszok.ToDictionary(x => x.Rendszam);
         _megallok = megallok.ToDictionary(nev => nev, nev => new Megallo(nev));
