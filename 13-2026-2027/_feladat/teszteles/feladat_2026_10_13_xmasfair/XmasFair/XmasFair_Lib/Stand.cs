@@ -23,5 +23,24 @@ namespace XmasFair_Lib
             Name = name;
             ProductTypes = new List<string>(productTypes);
         }
+
+        private readonly List<Good> goods = new List<Good>();
+
+        public int NumGoods => goods.Count;
+
+        public void Add(Good good)
+        {
+            if (!ProductTypes.Contains(good.ProductType))
+            {
+                throw new ArgumentException("A bódé nem árul ilyen típusú terméket.", nameof(good));
+            }
+
+            if (goods.Any(g => g.Name == good.Name))
+            {
+                throw new ArgumentException("Ilyen nevű termék már hozzá lett adva.", nameof(good));
+            }
+
+            goods.Add(good);
+        }
     }
 }
