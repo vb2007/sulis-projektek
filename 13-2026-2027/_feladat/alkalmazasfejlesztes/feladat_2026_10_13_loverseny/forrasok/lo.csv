@@ -1,0 +1,201 @@
+lo_id;nev;verseny_tipus_id
+1;Pegazus;10
+2;Villám;8
+3;Csillag;11
+4;Lángoló;19
+5;Szellő;4
+6;Hópehely;9
+7;Futóhomok;1
+8;Fekete Gyémánt;1
+9;Aranyszél;13
+10;Ezüst Nyíl;10
+11;Tűzgolyó;1
+12;Holdfény;11
+13;Napfény;4
+14;Csillám;7
+15;Szivárvány;12
+16;Mennydörgés;14
+17;Villanás;7
+18;Fénycsóva;19
+19;Köd;13
+20;Vihar;11
+21;Napkelte;15
+22;Ébenfa;11
+23;Tavasz;18
+24;Nyári Szellő;15
+25;Őszi Levél;14
+26;Téli Szél;2
+27;Szélvész;15
+28;Villámcsapás;2
+29;Aranyhajnal;19
+30;Tűzmadár;19
+31;Holdkő;5
+32;Csillagfény;8
+33;Villanófény;13
+34;Fekete Árnyék;11
+35;Aranyeső;11
+36;Hajnalfény;13
+37;Szélcsend;17
+38;Fekete Hold;13
+39;Ezüstcsillag;10
+40;Napnyugta;5
+41;Hóvihar;4
+42;Fekete Szél;1
+43;Fényes Hajnal;13
+44;Csillagszóró;5
+45;Tűzvirág;2
+46;Holdfényes;10
+47;Villámgyors;4
+48;Szélsebes;1
+49;Fekete Gyöngy;3
+50;Aranyszárny;10
+51;Fényes Csillag;4
+52;Szélroham;13
+53;Fekete Csillag;4
+54;Ezüst Hold;12
+55;Napfényes;17
+56;Hópelyhes;1
+57;Fekete Vihar;16
+58;Fénylő Csillag;10
+59;Csillagszóró;2
+60;Tűzmadár;10
+61;Holdfényes;16
+62;Villámgyors;13
+63;Szélsebes;19
+64;Fekete Gyöngy;1
+65;Aranyszárny;13
+66;Fényes Csillag;6
+67;Szélroham;9
+68;Fekete Csillag;20
+69;Ezüst Hold;6
+70;Napfényes;12
+71;Hópelyhes;5
+72;Fekete Vihar;6
+73;Fénylő Csillag;15
+74;Csillagszóró;4
+75;Tűzmadár;2
+76;Holdfényes;16
+77;Villámgyors;12
+78;Szélsebes;17
+79;Fekete Gyöngy;7
+80;Aranyszárny;16
+81;Fényes Csillag;8
+82;Szélroham;20
+83;Fekete Csillag;4
+84;Ezüst Hold;15
+85;Napfényes;17
+86;Hópelyhes;2
+87;Fekete Vihar;5
+88;Fénylő Csillag;17
+89;Csillagszóró;1
+90;Tűzmadár;4
+91;Holdfényes;3
+92;Villámgyors;16
+93;Szélsebes;8
+94;Fekete Gyöngy;8
+95;Aranyszárny;15
+96;Fényes Csillag;4
+97;Szélroham;4
+98;Fekete Csillag;11
+99;Ezüst Hold;13
+100;Napfényes;7
+101;Hópelyhes;16
+102;Fekete Vihar;8
+103;Fénylő Csillag;7
+104;Csillagszóró;14
+105;Tűzmadár;2
+106;Holdfényes;13
+107;Villámgyors;4
+108;Szélsebes;7
+109;Fekete Gyöngy;3
+110;Aranyszárny;17
+111;Fényes Csillag;11
+112;Szélroham;13
+113;Fekete Csillag;20
+114;Ezüst Hold;20
+115;Napfényes;18
+116;Hópelyhes;15
+117;Fekete Vihar;1
+118;Fénylő Csillag;19
+119;Csillagszóró;20
+120;Tűzmadár;4
+121;Holdfényes;4
+122;Villámgyors;2
+123;Szélsebes;19
+124;Fekete Gyöngy;4
+125;Aranyszárny;8
+126;Fényes Csillag;16
+127;Szélroham;13
+128;Fekete Csillag;16
+129;Ezüst Hold;18
+130;Napfényes;7
+131;Hópelyhes;13
+132;Fekete Vihar;12
+133;Fénylő Csillag;1
+134;Csillagszóró;3
+135;Tűzmadár;13
+136;Holdfényes;7
+137;Villámgyors;7
+138;Szélsebes;16
+139;Fekete Gyöngy;14
+140;Aranyszárny;14
+141;Fényes Csillag;9
+142;Szélroham;13
+143;Fekete Csillag;18
+144;Ezüst Hold;9
+145;Napfényes;12
+146;Hópelyhes;2
+147;Fekete Vihar;5
+148;Fénylő Csillag;20
+149;Csillagszóró;18
+150;Tűzmadár;7
+151;Holdfényes;12
+152;Villámgyors;13
+153;Szélsebes;16
+154;Fekete Gyöngy;15
+155;Aranyszárny;8
+156;Fényes Csillag;14
+157;Szélroham;2
+158;Fekete Csillag;17
+159;Ezüst Hold;20
+160;Napfényes;5
+161;Hópelyhes;13
+162;Fekete Vihar;5
+163;Fénylő Csillag;14
+164;Csillagszóró;2
+165;Tűzmadár;20
+166;Holdfényes;20
+167;Villámgyors;17
+168;Szélsebes;15
+169;Fekete Gyöngy;2
+170;Aranyszárny;20
+171;Fényes Csillag;18
+172;Szélroham;13
+173;Fekete Csillag;2
+174;Ezüst Hold;16
+175;Napfényes;9
+176;Hópelyhes;16
+177;Fekete Vihar;9
+178;Fénylő Csillag;5
+179;Csillagszóró;16
+180;Tűzmadár;1
+181;Holdfényes;20
+182;Villámgyors;5
+183;Szélsebes;17
+184;Fekete Gyöngy;18
+185;Aranyszárny;9
+186;Fényes Csillag;10
+187;Szélroham;13
+188;Fekete Csillag;17
+189;Ezüst Hold;11
+190;Napfényes;10
+191;Hópelyhes;17
+192;Fekete Vihar;14
+193;Fénylő Csillag;18
+194;Csillagszóró;20
+195;Tűzmadár;2
+196;Holdfényes;6
+197;Villámgyors;20
+198;Szélsebes;1
+199;Fekete Gyöngy;5
+200;Aranyszárny;10
