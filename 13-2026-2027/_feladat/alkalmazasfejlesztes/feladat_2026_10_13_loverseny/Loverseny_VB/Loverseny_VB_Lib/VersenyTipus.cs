@@ -5,9 +5,10 @@
         public int VersenyTipusId { get; set; }
         public string TipusNev { get; set; }
 
-        public VersenyTipus()
+        public VersenyTipus(int versenyTipusId, string tipusNev)
         {
-            
+            VersenyTipusId = versenyTipusId;
+            TipusNev = tipusNev;
         }
     }
 }

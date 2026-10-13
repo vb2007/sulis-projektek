@@ -9,9 +9,14 @@
         public TimeOnly KezdesIdo { get; set; }
         public int OrakSzama { get; set; }
 
-        public Verseny()
+        public Verseny(int versenyId, int loId, int helyszinId, DateOnly datum, TimeOnly kezdesIdo, int orakSzama)
         {
-            
+            VersenyId = versenyId;
+            LoId = loId;
+            HelyszinId = helyszinId;
+            Datum = datum;
+            KezdesIdo = kezdesIdo;
+            OrakSzama = orakSzama;
         }
     }
 }

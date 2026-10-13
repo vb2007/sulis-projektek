@@ -8,9 +8,11 @@
 
         public int VersenyzesselToltottIdo { get; }
 
-        public Lo()
+        public Lo(int loId, string nev, int versenyTipusId)
         {
-            
+            LoId = loId;
+            Nev = nev;
+            VersenyTipusId = versenyTipusId;
         }
     }
 }
