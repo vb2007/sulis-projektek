@@ -3,13 +3,13 @@ USE `kassza`;
 -- 4. havi összesítés nézet: év és hónap szerinti blokkértékek
 CREATE OR REPLACE VIEW `havi_osszesites` AS
 SELECT
-  YEAR(b.`vasarlas_ideje`) AS `ev`,
-  MONTH(b.`vasarlas_ideje`) AS `honap`,
-  COUNT(DISTINCT b.`id`) AS `blokkok_szama`,
-  SUM(c.`mennyiseg` * c.`egysegar`) AS `osszertek`
-FROM `blokk` b
-JOIN `cikk` c ON c.`blokk_id` = b.`id`
-GROUP BY YEAR(b.`vasarlas_ideje`), MONTH(b.`vasarlas_ideje`);
+  YEAR(`blokk`.`vasarlas_ideje`) AS `ev`,
+  MONTH(`blokk`.`vasarlas_ideje`) AS `honap`,
+  COUNT(DISTINCT `blokk`.`id`) AS `blokkok_szama`,
+  SUM(`cikk`.`mennyiseg` * `cikk`.`egysegar`) AS `osszertek`
+FROM `blokk`
+JOIN `cikk` ON`cikk`.`blokk_id` = `blokk`.`id`
+GROUP BY YEAR(`blokk`.`vasarlas_ideje`), MONTH(`blokk`.`vasarlas_ideje`);
 
 -- 5. módosítások naplózása
 CREATE TABLE `modositas` (
