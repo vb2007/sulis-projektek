@@ -19,7 +19,7 @@ namespace XmasFair
         public void CreateStandTests()
         {
             Assert.That(new Stand("Bódog bódéja", "étel").Name, Is.EqualTo("Bódog bódéja"), "Ha helyes adatokat adtam meg, létrejön a bódé, lekérdezhető lesz a neve is");
-            Assert.That(new Stand("Bódog boldog bódéja", new List<string> { "ital", "étel" }).Namíe, Is.EqualTo("Bódog boldog bódéja"), "Ha helyes adatokat adtam meg, több terméktípussal, akkor is létrejön a bódé, lekérdezhető lesz a neve is");
+            Assert.That(new Stand("Bódog boldog bódéja", new List<string> { "ital", "étel" }).Name, Is.EqualTo("Bódog boldog bódéja"), "Ha helyes adatokat adtam meg, több terméktípussal, akkor is létrejön a bódé, lekérdezhető lesz a neve is");
             Assert.Throws<ArgumentException>(() => { new Stand("", "valami"); }, "Név nélkül nem jön létre a bódé, exceptiont kell dobjon");
             Assert.Throws<ArgumentException>(() => { new Stand("Üres stand", ""); }, "Üres terméktípussal nem jön létre a stand, exceptiont kell dobjon");
             Assert.Throws<ArgumentException>(() => { new Stand("Üres stand", new List<string> { }); }, "Üres terméktípussal nem jön létre a stand, exceptiont kell dobjon");
