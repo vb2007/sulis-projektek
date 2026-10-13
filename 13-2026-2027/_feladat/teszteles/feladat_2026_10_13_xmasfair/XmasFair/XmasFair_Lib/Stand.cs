@@ -42,5 +42,13 @@ namespace XmasFair_Lib
 
             goods.Add(good);
         }
+
+        public int DailyIncome { get; private set; }
+
+        public void Sell(string name, int quantity)
+        {
+            Good good = goods.First(g => g.Name == name);
+            DailyIncome += good.Value * quantity;
+        }
     }
 }

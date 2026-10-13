@@ -78,18 +78,18 @@ namespace XmasFair
             Assert.That(sut.Income, Is.EqualTo(60000), "3 stand kiadva, így a bevétel 60000");
         }
 
-        //[Test]
-        //public void StandIncomeTests()
-        //{
-        //    Stand sut = new Stand("Böbe bárpultja", "étel");
-        //    Assert.That(sut.DailyIncome, Is.EqualTo(0), "Ma még nem adtak el egy terméket sem");
-        //    sut.Add(new Good("fánk", "étel", 250));
-        //    sut.Add(new Good("zsíros kenyér", "étel", 500));
-        //    sut.Sell("fánk", 3);
-        //    Assert.That(sut.DailyIncome, Is.EqualTo(750), "3 fánk eladása után 750 a bevétel");
-        //    sut.Sell("zsíros kenyér", 1);
-        //    Assert.That(sut.DailyIncome, Is.EqualTo(1250), "1 zsíros kenyér eladása után 1250 a bevétel");
-        //}
+        [Test]
+        public void StandIncomeTests()
+        {
+            Stand sut = new Stand("Böbe bárpultja", "étel");
+            Assert.That(sut.DailyIncome, Is.EqualTo(0), "Ma még nem adtak el egy terméket sem");
+            sut.Add(new Good("fánk", "étel", 250));
+            sut.Add(new Good("zsíros kenyér", "étel", 500));
+            sut.Sell("fánk", 3);
+            Assert.That(sut.DailyIncome, Is.EqualTo(750), "3 fánk eladása után 750 a bevétel");
+            sut.Sell("zsíros kenyér", 1);
+            Assert.That(sut.DailyIncome, Is.EqualTo(1250), "1 zsíros kenyér eladása után 1250 a bevétel");
+        }
 
         //[Test]
         //public void StandSellTests()
