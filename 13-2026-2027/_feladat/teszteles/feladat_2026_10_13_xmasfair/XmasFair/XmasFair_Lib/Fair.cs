@@ -57,6 +57,13 @@ namespace XmasFair_Lib
             return true;
         }
 
+        public int Income => stands.Count * StandPrice;
+
+        public void Add(Stand stand)
+        {
+            stands.Add(stand);
+        }
+
         public bool RemoveStand(string name)
         {
             Stand? stand = stands.FirstOrDefault(s => s.Name == name);
