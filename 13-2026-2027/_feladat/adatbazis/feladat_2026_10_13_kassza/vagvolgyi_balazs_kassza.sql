@@ -14,7 +14,7 @@ CREATE TABLE `blokk` (
   `vasarlas_ideje` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
   `elado_id` int NOT NULL,
   `fizetesi_mod` int NOT NULL
-) ENGINE=InnoD;
+) ENGINE=InnoDB;
 
 CREATE TABLE `cikk` (
   `id` int NOT NULL primary key auto_increment,
