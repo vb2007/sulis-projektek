@@ -42,6 +42,32 @@ namespace XmasFair_Lib
             StandPrice = standPrice;
         }
 
+        private readonly List<Stand> stands = new List<Stand>();
+
+        public int FreePlace => StandCount - stands.Count;
+
+        public bool AddStand(Stand stand)
+        {
+            if (FreePlace <= 0 || stands.Any(s => s.Name == stand.Name))
+            {
+                return false;
+            }
+
+            stands.Add(stand);
+            return true;
+        }
+
+        public bool RemoveStand(string name)
+        {
+            Stand? stand = stands.FirstOrDefault(s => s.Name == name);
+            if (stand == null)
+            {
+                return false;
+            }
+
+            return stands.Remove(stand);
+        }
+
         private static DateTime ParseDate(string value, string paramName)
         {
             if (!DateTime.TryParseExact(value, DateFormat, CultureInfo.InvariantCulture, DateTimeStyles.None, out DateTime date))
