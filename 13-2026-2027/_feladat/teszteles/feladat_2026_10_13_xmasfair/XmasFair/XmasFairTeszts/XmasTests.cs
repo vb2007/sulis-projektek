@@ -102,16 +102,16 @@ namespace XmasFair
             Assert.Throws<ArgumentException>(() => { sut.Sell("kenyér", 1); }, "Nincs ilyen termék, nem lehet eladni");
         }
 
-        //[Test]
-        //public void SellGoodTests()
-        //{
-        //    Stand sut = new Stand("Böbe bárpultja", "étel");
-        //    Assert.That(sut.DailyIncome, Is.EqualTo(0), "Ma még nem adtak el egy terméket sem");
-        //    sut.Add(new Good("fánk", "étel", 250));
-        //    sut.Add(new Good("zsíros kenyér", "étel", 500));
-        //    Assert.That(sut.Sell("fánk", 2), Is.True, "Van ilyen termék, el lehet adni");
-        //    Assert.That(sut.Sell("fánk", 0), Is.False, "0 darabot nem lehet eladni");
-        //    Assert.That(sut.Sell("fánk", -2), Is.False, "-2 darabot nem lehet eladni");
-        //}
+        [Test]
+        public void SellGoodTests()
+        {
+            Stand sut = new Stand("Böbe bárpultja", "étel");
+            Assert.That(sut.DailyIncome, Is.EqualTo(0), "Ma még nem adtak el egy terméket sem");
+            sut.Add(new Good("fánk", "étel", 250));
+            sut.Add(new Good("zsíros kenyér", "étel", 500));
+            Assert.That(sut.Sell("fánk", 2), Is.True, "Van ilyen termék, el lehet adni");
+            Assert.That(sut.Sell("fánk", 0), Is.False, "0 darabot nem lehet eladni");
+            Assert.That(sut.Sell("fánk", -2), Is.False, "-2 darabot nem lehet eladni");
+        }
     }
 }

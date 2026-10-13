@@ -45,7 +45,7 @@ namespace XmasFair_Lib
 
         public int DailyIncome { get; private set; }
 
-        public void Sell(string name, int quantity)
+        public bool Sell(string name, int quantity)
         {
             Good? good = goods.FirstOrDefault(g => g.Name == name);
             if (good == null)
@@ -53,7 +53,13 @@ namespace XmasFair_Lib
                 throw new ArgumentException("A bódé nem árul ilyen nevű terméket.", nameof(name));
             }
 
+            if (quantity <= 0)
+            {
+                return false;
+            }
+
             DailyIncome += good.Value * quantity;
+            return true;
         }
     }
 }
