@@ -13,7 +13,10 @@ return new class extends Migration
     {
         Schema::create('guests', function (Blueprint $table) {
             $table->id();
-            $table->timestamps();
+            $table->string('name', 30);
+            $table->date('date_of_birth');
+            $table->boolean('regular')->default(false);
+            $table->softDeletes();
         });
     }
 
