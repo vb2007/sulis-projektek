@@ -1,0 +1,27 @@
+// Vendégek
+
+John Billionaire; 1985-04-12; true
+Emma Ellison; 1992-09-23; false
+Michael Zuckerberg; 1978-01-30; true
+Yi Long Ma; 1968-06-15; false
+
+// Autók
+
+2; BMW; M4; 2024; Blue; 110000; 2026-10-13 08:00:00; 2026-10-15 20:00:00; CD-EF-202
+1; Mercedes-Benz; S 500; 2023; Black; 95000; 2026-10-10 10:00:00; 2026-10-12 18:00:00; AA-BB-101
+4; Tesla; Cybertruck; 2026; Black; 99990; 2026-10-20 12:00:00; 2026-10-22 12:00:00; KL-MN-404
+3; Porsche; 911 Carrera; 2022; Red; 145000; 2026-10-16 09:00:00; 2026-10-18 17:00:00; GH-IJ-303
+
+// Helikopterek
+
+4; Robinson; R44; 2019; Red; 4; 240; 560; 210000; false; 2026-10-21 10:00:00; 2026-10-21 17:00:00
+2; Bell; 429; 2023; White; 7; 278; 761; 480000; true; 2026-10-14 09:00:00; 2026-10-14 18:00:00
+3; Leonardo; AW109; 2020; Grey; 7; 311; 932; 520000; true; 2026-10-17 07:00:00; 2026-10-17 16:00:00
+1; Airbus; H125; 2021; Black; 6; 287; 630; 350000; false; 2026-10-11 08:00:00; 2026-10-11 15:00:00
+
+// Yachtok
+
+3; Azimut; Grande 27; false; 2024; White; 980000; 2026-10-20 09:00:00; 2026-10-24 20:00:00; Royal Wave
+1; Sunseeker; Predator 74; false; 2022; White; 750000; 2026-10-10 12:00:00; 2026-10-14 12:00:00; Ocean Dream
+4; Jeanneau; Sun Odyssey 440; true; 2020; White; 390000; 2026-10-25 08:00:00; 2026-10-28 18:00:00; Sea Breeze
+2; Beneteau; Oceanis 46; true; 2021; Blue; 420000; 2026-10-15 10:00:00; 2026-10-19 18:00:00; Blue Horizon

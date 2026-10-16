@@ -1,0 +1,771 @@
+openapi: "3.1.0"
+info:
+  title: Hotel API
+  version: 1.0.0
+  description: 'Ez az API egy Luxus hotel garázs adatait kezeli.'
+servers:
+  - url: http://backend.vm1.test
+    description: VM1 backend
+  - url: http://backend.vm2.test
+    description: VM2 backend
+  - url: http://backend.vm3.test
+    description: VM3 backend
+  - url: http://backend.vm4.test
+    description: VM4 backend
+  - url: http://backend.vm5.test
+    description: VM5 backend
+  - url: http://backend.vm6.test
+    description: VM6 backend
+tags:
+  - name: Vendégek
+    description: Vendégadatok lekérdezése.
+  - name: Autók
+    description: Autóadatok és a legdrágább autó tulajdonosának lekérdezése.
+  - name: Jachtok
+    description: Jachtadatok és vitorlás jachtok tulajdonosainak lekérdezése.
+  - name: Helikopterek
+    description: Helikopteradatok lekérdezése és hatótávszűrés.
+paths:
+  /api/hotel/guests:
+    get:
+      operationId: guests.index
+      summary: Az összes vendég lekérdezése
+      tags:
+        - Vendégek
+      description: A tábla összes rekordja a data tömbben. Nincs query paraméter, alapértelmezett szűrés vagy előírt
+        rendezés. A példa a forrásfájl sorrendjét követi.
+      parameters: []
+      responses:
+        '200':
+          description: Sikeres lekérdezés.
+          content:
+            application/json:
+              schema:
+                type: object
+                required:
+                  - data
+                properties:
+                  data:
+                    type: array
+                    items:
+                      $ref: '#/components/schemas/Guest'
+              examples:
+                response:
+                  summary: Teljes, az adatfájlból számított válasz.
+                  value: {"data":[{"id":1,"name":"John Billionaire","date_of_birth":"1985-04-12","regular":true,"deleted_at":null},{"id":2,"name":"Emma Ellison","date_of_birth":"1992-09-23","regular":false,"deleted_at":null},{"id":3,"name":"Michael Zuckerberg","date_of_birth":"1978-01-30","regular":true,"deleted_at":null},{"id":4,"name":"Yi Long Ma","date_of_birth":"1968-06-15","regular":false,"deleted_at":null}]}
+  /api/hotel/guests/{guest}:
+    get:
+      operationId: guests.show
+      summary: Egy rekord lekérdezése azonosító alapján
+      tags:
+        - Vendégek
+      description: A megadott azonosítóhoz tartozó teljes rekord a data objektumban. A 0 vagy negatív azonosító
+        500-as hibát eredményez. 
+      parameters:
+        - name: guest
+          in: path
+          required: true
+          description: A rekord pozitív egész azonosítója; 0 vagy negatív érték esetén 500-as hiba.
+          schema:
+            type: integer
+            minimum: 1
+          example: 1
+      responses:
+        '200':
+          description: Sikeres lekérdezés.
+          content:
+            application/json:
+              schema:
+                type: object
+                required:
+                  - data
+                properties:
+                  data:
+                    $ref: '#/components/schemas/Guest'
+              examples:
+                response:
+                  summary: Teljes, az adatfájlból számított válasz.
+                  value: {"data":{"id":1,"name":"John Billionaire","date_of_birth":"1985-04-12","regular":true,"deleted_at":null}}
+        '500':
+          description: A megadott azonosító 0 vagy negatív. A feladatlap nem határozza meg a konkrét hibaüzenetet.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+              examples:
+                response:
+                  summary: Érvénytelen azonosító. A hibaüzenet dokumentációs példaszöveg.
+                  value: {"message":"Az azonosítónak 0-nál nagyobbnak kell lennie."}
+  /api/hotel/cars:
+    get:
+      operationId: cars.index
+      summary: Az összes autó lekérdezése
+      tags:
+        - Autók
+      description: A tábla összes rekordja a data tömbben. Nincs query paraméter, alapértelmezett szűrés vagy előírt
+        rendezés. A példa a forrásfájl sorrendjét követi.
+      parameters: []
+      responses:
+        '200':
+          description: Sikeres lekérdezés.
+          content:
+            application/json:
+              schema:
+                type: object
+                required:
+                  - data
+                properties:
+                  data:
+                    type: array
+                    items:
+                      $ref: '#/components/schemas/Car'
+              examples:
+                response:
+                  summary: Teljes, az adatfájlból számított válasz.
+                  value: {"data":[{"id":1,"guest_id":2,"manufacturer":"BMW","model":"M4","year":2024,"color":"Blue","price":110000,"from":"2026-10-13 08:00:00","to":"2026-10-15 20:00:00","license_plate":"CD-EF-202","deleted_at":null},{"id":2,"guest_id":1,"manufacturer":"Mercedes-Benz","model":"S 500","year":2023,"color":"Black","price":95000,"from":"2026-10-10 10:00:00","to":"2026-10-12 18:00:00","license_plate":"AA-BB-101","deleted_at":null},{"id":3,"guest_id":4,"manufacturer":"Tesla","model":"Cybertruck","year":2026,"color":"Black","price":99990,"from":"2026-10-20 12:00:00","to":"2026-10-22 12:00:00","license_plate":"KL-MN-404","deleted_at":null},{"id":4,"guest_id":3,"manufacturer":"Porsche","model":"911 Carrera","year":2022,"color":"Red","price":145000,"from":"2026-10-16 09:00:00","to":"2026-10-18 17:00:00","license_plate":"GH-IJ-303","deleted_at":null}]}
+  /api/hotel/cars/{car}:
+    get:
+      operationId: cars.show
+      summary: Egy rekord lekérdezése azonosító alapján
+      tags:
+        - Autók
+      description: A megadott azonosítóhoz tartozó teljes rekord a data objektumban. A 0 vagy negatív azonosító
+        500-as hibát eredményez. 
+      parameters:
+        - name: car
+          in: path
+          required: true
+          description: A rekord pozitív egész azonosítója; 0 vagy negatív érték esetén 500-as hiba.
+          schema:
+            type: integer
+            minimum: 1
+          example: 1
+      responses:
+        '200':
+          description: Sikeres lekérdezés.
+          content:
+            application/json:
+              schema:
+                type: object
+                required:
+                  - data
+                properties:
+                  data:
+                    $ref: '#/components/schemas/Car'
+              examples:
+                response:
+                  summary: Teljes, az adatfájlból számított válasz.
+                  value: {"data":{"id":1,"guest_id":2,"manufacturer":"BMW","model":"M4","year":2024,"color":"Blue","price":110000,"from":"2026-10-13 08:00:00","to":"2026-10-15 20:00:00","license_plate":"CD-EF-202","deleted_at":null}}
+        '500':
+          description: A megadott azonosító 0 vagy negatív. A feladatlap nem határozza meg a konkrét hibaüzenetet.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+              examples:
+                response:
+                  summary: Érvénytelen azonosító. A hibaüzenet dokumentációs példaszöveg.
+                  value: {"message":"Az azonosítónak 0-nál nagyobbnak kell lennie."}
+  /api/hotel/yachts:
+    get:
+      operationId: yachts.index
+      summary: Az összes jacht lekérdezése
+      tags:
+        - Jachtok
+      description: A tábla összes rekordja a data tömbben. Nincs query paraméter, alapértelmezett szűrés vagy előírt
+        rendezés. A példa a forrásfájl sorrendjét követi.
+      parameters: []
+      responses:
+        '200':
+          description: Sikeres lekérdezés.
+          content:
+            application/json:
+              schema:
+                type: object
+                required:
+                  - data
+                properties:
+                  data:
+                    type: array
+                    items:
+                      $ref: '#/components/schemas/Yacht'
+              examples:
+                response:
+                  summary: Teljes, az adatfájlból számított válasz.
+                  value: {"data":[{"id":1,"guest_id":3,"manufacturer":"Azimut","model":"Grande 27","sailing":false,"year":2024,"color":"White","price":980000,"from":"2026-10-20 09:00:00","to":"2026-10-24 20:00:00","name":"Royal Wave","deleted_at":null},{"id":2,"guest_id":1,"manufacturer":"Sunseeker","model":"Predator 74","sailing":false,"year":2022,"color":"White","price":750000,"from":"2026-10-10 12:00:00","to":"2026-10-14 12:00:00","name":"Ocean Dream","deleted_at":null},{"id":3,"guest_id":4,"manufacturer":"Jeanneau","model":"Sun Odyssey 440","sailing":true,"year":2020,"color":"White","price":390000,"from":"2026-10-25 08:00:00","to":"2026-10-28 18:00:00","name":"Sea Breeze","deleted_at":null},{"id":4,"guest_id":2,"manufacturer":"Beneteau","model":"Oceanis 46","sailing":true,"year":2021,"color":"Blue","price":420000,"from":"2026-10-15 10:00:00","to":"2026-10-19 18:00:00","name":"Blue Horizon","deleted_at":null}]}
+  /api/hotel/yachts/{yacht}:
+    get:
+      operationId: yachts.show
+      summary: Egy rekord lekérdezése azonosító alapján
+      tags:
+        - Jachtok
+      description: A megadott azonosítóhoz tartozó teljes rekord a data objektumban. A 0 vagy negatív azonosító
+        500-as hibát eredményez. A feladatlap nem határozza meg a hiányzó pozitív azonosító kezelését, ezért külön
+        404-es válasz nincs előírva.
+      parameters:
+        - name: yacht
+          in: path
+          required: true
+          description: A rekord pozitív egész azonosítója; 0 vagy negatív érték esetén 500-as hiba.
+          schema:
+            type: integer
+            minimum: 1
+          example: 1
+      responses:
+        '200':
+          description: Sikeres lekérdezés.
+          content:
+            application/json:
+              schema:
+                type: object
+                required:
+                  - data
+                properties:
+                  data:
+                    $ref: '#/components/schemas/Yacht'
+              examples:
+                response:
+                  summary: Teljes, az adatfájlból számított válasz.
+                  value: {"data":{"id":1,"guest_id":3,"manufacturer":"Azimut","model":"Grande 27","sailing":false,"year":2024,"color":"White","price":980000,"from":"2026-10-20 09:00:00","to":"2026-10-24 20:00:00","name":"Royal Wave","deleted_at":null}}
+        '500':
+          description: A megadott azonosító 0 vagy negatív. A feladatlap nem határozza meg a konkrét hibaüzenetet.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+              examples:
+                response:
+                  summary: Érvénytelen azonosító. A hibaüzenet dokumentációs példaszöveg.
+                  value: {"message":"Az azonosítónak 0-nál nagyobbnak kell lennie."}
+  /api/hotel/helicopters:
+    get:
+      operationId: helicopters.index
+      summary: Az összes helikopter lekérdezése
+      tags:
+        - Helikopterek
+      description: A tábla összes rekordja a data tömbben. Nincs query paraméter, alapértelmezett szűrés vagy előírt
+        rendezés. A példa a forrásfájl sorrendjét követi.
+      parameters: []
+      responses:
+        '200':
+          description: Sikeres lekérdezés.
+          content:
+            application/json:
+              schema:
+                type: object
+                required:
+                  - data
+                properties:
+                  data:
+                    type: array
+                    items:
+                      $ref: '#/components/schemas/Helicopter'
+              examples:
+                response:
+                  summary: Teljes, az adatfájlból számított válasz.
+                  value: {"data":[{"id":1,"guest_id":4,"manufacturer":"Robinson","model":"R44","year":2019,"color":"Red","passenger_capacity":4,"max_velocity":240,"range":560,"price":210000,"twin_engine":false,"from":"2026-10-21 10:00:00","to":"2026-10-21 17:00:00","deleted_at":null},{"id":2,"guest_id":2,"manufacturer":"Bell","model":"429","year":2023,"color":"White","passenger_capacity":7,"max_velocity":278,"range":761,"price":480000,"twin_engine":true,"from":"2026-10-14 09:00:00","to":"2026-10-14 18:00:00","deleted_at":null},{"id":3,"guest_id":3,"manufacturer":"Leonardo","model":"AW109","year":2020,"color":"Grey","passenger_capacity":7,"max_velocity":311,"range":932,"price":520000,"twin_engine":true,"from":"2026-10-17 07:00:00","to":"2026-10-17 16:00:00","deleted_at":null},{"id":4,"guest_id":1,"manufacturer":"Airbus","model":"H125","year":2021,"color":"Black","passenger_capacity":6,"max_velocity":287,"range":630,"price":350000,"twin_engine":false,"from":"2026-10-11 08:00:00","to":"2026-10-11 15:00:00","deleted_at":null}]}
+  /api/hotel/helicopters/{helicopter}:
+    get:
+      operationId: helicopters.show
+      summary: Egy rekord lekérdezése azonosító alapján
+      tags:
+        - Helikopterek
+      description: A megadott azonosítóhoz tartozó teljes rekord a data objektumban. A 0 vagy negatív azonosító
+        500-as hibát eredményez.
+      parameters:
+        - name: helicopter
+          in: path
+          required: true
+          description: A rekord pozitív egész azonosítója; 0 vagy negatív érték esetén 500-as hiba.
+          schema:
+            type: integer
+            minimum: 1
+          example: 1
+      responses:
+        '200':
+          description: Sikeres lekérdezés.
+          content:
+            application/json:
+              schema:
+                type: object
+                required:
+                  - data
+                properties:
+                  data:
+                    $ref: '#/components/schemas/Helicopter'
+              examples:
+                response:
+                  summary: Teljes, az adatfájlból számított válasz.
+                  value: {"data":{"id":1,"guest_id":4,"manufacturer":"Robinson","model":"R44","year":2019,"color":"Red","passenger_capacity":4,"max_velocity":240,"range":560,"price":210000,"twin_engine":false,"from":"2026-10-21 10:00:00","to":"2026-10-21 17:00:00","deleted_at":null}}
+        '500':
+          description: A megadott azonosító 0 vagy negatív. A feladatlap nem határozza meg a konkrét hibaüzenetet.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+              examples:
+                response:
+                  summary: Érvénytelen azonosító. A hibaüzenet dokumentációs példaszöveg.
+                  value: {"message":"Az azonosítónak 0-nál nagyobbnak kell lennie."}
+  /api/hotel/cars/most_expensive:
+    get:
+      operationId: cars.most_expensive
+      summary: A legdrágább autó és tulajdonosának lekérdezése
+      tags:
+        - Autók
+      description: 'A legnagyobb price értékű autó teljes rekordja és a tulajdonos adatai.Nincs query paraméter.'
+      parameters: []
+      responses:
+        '200':
+          description: Sikeres lekérdezés.
+          content:
+            application/json:
+              schema:
+                type: object
+                required:
+                  - data
+                properties:
+                  data:
+                    $ref: '#/components/schemas/CarWithGuest'
+              examples:
+                response:
+                  summary: Teljes, az adatfájlból számított válasz.
+                  value: {"data":{"id":4,"guest_id":3,"manufacturer":"Porsche","model":"911 Carrera","year":2022,"color":"Red","price":145000,"from":"2026-10-16 09:00:00","to":"2026-10-18 17:00:00","license_plate":"GH-IJ-303","deleted_at":null,"guest":{"id":3,"name":"Michael Zuckerberg","date_of_birth":"1978-01-30","regular":true,"deleted_at":null}}}
+  /api/hotel/yachts/sailing:
+    get:
+      operationId: yachts.sailing
+      summary: Az összes vitorlás jacht és tulajdonosának lekérdezése
+      tags:
+        - Jachtok
+      description: Az összes sailing=true értékű jacht teljes rekordja a tulajdonosával. A tulajdonos a guest objektumban
+        szerepel, jelölt dokumentációs konvencióként. Nincs query paraméter vagy előírt rendezés; a példa a forrásfájl
+        sorrendjét követi.
+      parameters: []
+      responses:
+        '200':
+          description: Sikeres lekérdezés.
+          content:
+            application/json:
+              schema:
+                type: object
+                required:
+                  - data
+                properties:
+                  data:
+                    type: array
+                    items:
+                      $ref: '#/components/schemas/YachtWithGuest'
+              examples:
+                response:
+                  summary: Teljes, az adatfájlból számított válasz.
+                  value: {"data":[{"id":3,"guest_id":4,"manufacturer":"Jeanneau","model":"Sun Odyssey 440","sailing":true,"year":2020,"color":"White","price":390000,"from":"2026-10-25 08:00:00","to":"2026-10-28 18:00:00","name":"Sea Breeze","deleted_at":null,"guest":{"id":4,"name":"Yi Long Ma","date_of_birth":"1968-06-15","regular":false,"deleted_at":null}},{"id":4,"guest_id":2,"manufacturer":"Beneteau","model":"Oceanis 46","sailing":true,"year":2021,"color":"Blue","price":420000,"from":"2026-10-15 10:00:00","to":"2026-10-19 18:00:00","name":"Blue Horizon","deleted_at":null,"guest":{"id":2,"name":"Emma Ellison","date_of_birth":"1992-09-23","regular":false,"deleted_at":null}}]}
+  /api/hotel/helicopters/{min}/{max}:
+    get:
+      operationId: helicopters.range
+      summary: Helikopterek szűrése hatótávolság alapján
+      tags:
+        - Helikopterek
+      description: 'Szigorú intervallumszűrés: range > min ÉS range < max; a határértékek kizárva. min < 1 vagy
+        max > 1000 esetén 500-as hiba. A feladatlap nem ír elő min <= max ellenőrzést, további korlátozást vagy
+        rendezést. Nincs alapértelmezett paraméterérték: a teljes példa min=600 és max=900 esetén mutatja az eredményt,
+        a forrás sorrendjében. A data tömbös válaszburkolat a többi listázó action formátumát követő dokumentációs
+        konvenció, mert ennél az actionnél a burkolat nincs külön rögzítve.'
+      parameters:
+        - name: min
+          in: path
+          required: true
+          description: Kizárt alsó hatótávhatár km-ben. Kötelező, alapérték nélkül. 1-nél kisebb értéknél 500-as
+            hiba.
+          schema:
+            type: integer
+            minimum: 1
+          example: 600
+        - name: max
+          in: path
+          required: true
+          description: Kizárt felső hatótávhatár km-ben. Kötelező, alapérték nélkül. 1000-nél nagyobb értéknél 500-as
+            hiba.
+          schema:
+            type: integer
+            maximum: 1000
+          example: 900
+      responses:
+        '200':
+          description: Az összes, a szigorú intervallumba eső helikopter. Ha nincs találat, a data üres tömb.
+          content:
+            application/json:
+              schema:
+                type: object
+                required:
+                  - data
+                properties:
+                  data:
+                    type: array
+                    items:
+                      $ref: '#/components/schemas/Helicopter'
+              examples:
+                response:
+                  summary: Teljes, az adatfájlból számított válasz.
+                  value: {"data":[{"id":2,"guest_id":2,"manufacturer":"Bell","model":"429","year":2023,"color":"White","passenger_capacity":7,"max_velocity":278,"range":761,"price":480000,"twin_engine":true,"from":"2026-10-14 09:00:00","to":"2026-10-14 18:00:00","deleted_at":null},{"id":4,"guest_id":1,"manufacturer":"Airbus","model":"H125","year":2021,"color":"Black","passenger_capacity":6,"max_velocity":287,"range":630,"price":350000,"twin_engine":false,"from":"2026-10-11 08:00:00","to":"2026-10-11 15:00:00","deleted_at":null}]}
+        '500':
+          description: A minimum 1-nél kisebb, vagy a maximum 1000-nél nagyobb. A feladatlap nem határozza meg a
+            konkrét hibaüzenetet.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+              examples:
+                response:
+                  summary: 'min=0: túl kicsi minimum. A hibaüzenet dokumentációs példaszöveg.'
+                  value: {"message":"A minimum hatótávolságnak legalább 1-nek kell lennie."}
+                maximum:
+                  summary: 'max=1001: túl nagy maximum. A hibaüzenet dokumentációs példaszöveg.'
+                  value: {"message":"A maximum hatótávolság legfeljebb 1000 lehet."}
+components:
+  schemas:
+    Guest:
+      type: object
+      description: A guests tábla teljes rekordja, created_at és updated_at mezők nélkül.
+      required:
+        - id
+        - name
+        - date_of_birth
+        - regular
+        - deleted_at
+      properties:
+        id:
+          type: integer
+          description: Automatikusan növekvő elsődleges kulcs.
+          format: int64
+          examples:
+            - 1
+        name:
+          type: string
+          description: A vendég neve.
+          maxLength: 30
+          examples:
+            - John Billionaire
+        date_of_birth:
+          type: string
+          description: A vendég születési dátuma.
+          format: date
+          examples:
+            - '1985-04-12'
+        regular:
+          type: boolean
+          description: Törzsvendég-e; az adatfájl logikai true/false értékeivel.
+          examples:
+            - true
+        deleted_at:
+          type:
+            - string
+            - 'null'
+          description: Törlés időpontja; a diagram szerint nullable. A forrásban nincs törölt rekord, ezért a példákban
+            null.
+          pattern: ^\d{4}-\d{2}-\d{2} \d{2}:\d{2}:\d{2}$
+          examples:
+            - null
+    Car:
+      type: object
+      description: A cars tábla teljes rekordja, created_at és updated_at mezők nélkül.
+      required:
+        - id
+        - guest_id
+        - manufacturer
+        - model
+        - year
+        - color
+        - price
+        - from
+        - to
+        - license_plate
+        - deleted_at
+      properties:
+        id:
+          type: integer
+          description: Automatikusan növekvő elsődleges kulcs.
+          format: int64
+          examples:
+            - 1
+        guest_id:
+          type: integer
+          description: A tulajdonos vendég azonosítója; idegen kulcs a guests.id mezőre.
+          format: int64
+          examples:
+            - 2
+        manufacturer:
+          type: string
+          description: A jármű gyártója.
+          maxLength: 30
+          examples:
+            - BMW
+        model:
+          type: string
+          description: A jármű modellje.
+          maxLength: 30
+          examples:
+            - M4
+        year:
+          type: integer
+          description: A jármű gyártási éve.
+          examples:
+            - 2024
+        color:
+          type: string
+          description: A jármű színe.
+          maxLength: 30
+          examples:
+            - Blue
+        price:
+          type: integer
+          description: A jármű becsült értéke egész számban; a forrás nem ad meg pénznemet.
+          examples:
+            - 110000
+        from:
+          type: string
+          description: Érkezési idő, az adatfájl szerinti YYYY-MM-DD HH:mm:ss alakban. Időzóna nincs megadva.
+          pattern: ^\d{4}-\d{2}-\d{2} \d{2}:\d{2}:\d{2}$
+          examples:
+            - '2026-10-13 08:00:00'
+        to:
+          type: string
+          description: Távozási idő, az adatfájl szerinti YYYY-MM-DD HH:mm:ss alakban. Időzóna nincs megadva.
+          pattern: ^\d{4}-\d{2}-\d{2} \d{2}:\d{2}:\d{2}$
+          examples:
+            - '2026-10-15 20:00:00'
+        license_plate:
+          type: string
+          description: Egyedi rendszám; adatbázis-szintű egyediség, legfeljebb 12 karakter.
+          maxLength: 12
+          examples:
+            - CD-EF-202
+        deleted_at:
+          type:
+            - string
+            - 'null'
+          description: Törlés időpontja; a diagram szerint nullable. A forrásban nincs törölt rekord, ezért a példákban
+            null.
+          pattern: ^\d{4}-\d{2}-\d{2} \d{2}:\d{2}:\d{2}$
+          examples:
+            - null
+    Yacht:
+      type: object
+      description: A yachts tábla teljes rekordja, created_at és updated_at mezők nélkül.
+      required:
+        - id
+        - guest_id
+        - manufacturer
+        - model
+        - sailing
+        - year
+        - color
+        - price
+        - from
+        - to
+        - name
+        - deleted_at
+      properties:
+        id:
+          type: integer
+          description: Automatikusan növekvő elsődleges kulcs.
+          format: int64
+          examples:
+            - 1
+        guest_id:
+          type: integer
+          description: A tulajdonos vendég azonosítója; idegen kulcs a guests.id mezőre.
+          format: int64
+          examples:
+            - 3
+        manufacturer:
+          type: string
+          description: A jármű gyártója.
+          maxLength: 30
+          examples:
+            - Azimut
+        model:
+          type: string
+          description: A jármű modellje.
+          maxLength: 30
+          examples:
+            - Grande 27
+        sailing:
+          type: boolean
+          description: Vitorlás jacht-e; az adatfájl logikai true/false értékeivel.
+          examples:
+            - false
+        year:
+          type: integer
+          description: A jármű gyártási éve.
+          examples:
+            - 2024
+        color:
+          type: string
+          description: A jármű színe.
+          maxLength: 30
+          examples:
+            - White
+        price:
+          type: integer
+          description: A jármű becsült értéke egész számban; a forrás nem ad meg pénznemet.
+          examples:
+            - 980000
+        from:
+          type: string
+          description: Érkezési idő, az adatfájl szerinti YYYY-MM-DD HH:mm:ss alakban. Időzóna nincs megadva.
+          pattern: ^\d{4}-\d{2}-\d{2} \d{2}:\d{2}:\d{2}$
+          examples:
+            - '2026-10-20 09:00:00'
+        to:
+          type: string
+          description: Távozási idő, az adatfájl szerinti YYYY-MM-DD HH:mm:ss alakban. Időzóna nincs megadva.
+          pattern: ^\d{4}-\d{2}-\d{2} \d{2}:\d{2}:\d{2}$
+          examples:
+            - '2026-10-24 20:00:00'
+        name:
+          type: string
+          description: A jacht neve.
+          maxLength: 255
+          examples:
+            - Royal Wave
+        deleted_at:
+          type:
+            - string
+            - 'null'
+          description: Törlés időpontja; a diagram szerint nullable. A forrásban nincs törölt rekord, ezért a példákban
+            null.
+          pattern: ^\d{4}-\d{2}-\d{2} \d{2}:\d{2}:\d{2}$
+          examples:
+            - null
+    Helicopter:
+      type: object
+      description: A helicopters tábla teljes rekordja, created_at és updated_at mezők nélkül.
+      required:
+        - id
+        - guest_id
+        - manufacturer
+        - model
+        - year
+        - color
+        - passenger_capacity
+        - max_velocity
+        - range
+        - price
+        - twin_engine
+        - from
+        - to
+        - deleted_at
+      properties:
+        id:
+          type: integer
+          description: Automatikusan növekvő elsődleges kulcs.
+          format: int64
+          examples:
+            - 1
+        guest_id:
+          type: integer
+          description: A tulajdonos vendég azonosítója; idegen kulcs a guests.id mezőre.
+          format: int64
+          examples:
+            - 4
+        manufacturer:
+          type: string
+          description: A jármű gyártója.
+          maxLength: 30
+          examples:
+            - Robinson
+        model:
+          type: string
+          description: A jármű modellje.
+          maxLength: 30
+          examples:
+            - R44
+        year:
+          type: integer
+          description: A jármű gyártási éve.
+          examples:
+            - 2019
+        color:
+          type: string
+          description: A jármű színe.
+          maxLength: 30
+          examples:
+            - Red
+        passenger_capacity:
+          type: integer
+          description: A helikopter maximális utasszáma.
+          examples:
+            - 4
+        max_velocity:
+          type: integer
+          description: A helikopter maximális légi sebessége km/h-ban.
+          examples:
+            - 240
+        range:
+          type: integer
+          description: A helikopter hatótávolsága km-ben.
+          examples:
+            - 560
+        price:
+          type: integer
+          description: A jármű becsült értéke egész számban; a forrás nem ad meg pénznemet.
+          examples:
+            - 210000
+        twin_engine:
+          type: boolean
+          description: Az adatfájl logikai twin_engine jelzője. A feladatlap dupla rotorosként írja le; a mezőnév
+            és az adatértékek változatlanok.
+          examples:
+            - false
+        from:
+          type: string
+          description: Érkezési idő, az adatfájl szerinti YYYY-MM-DD HH:mm:ss alakban. Időzóna nincs megadva.
+          pattern: ^\d{4}-\d{2}-\d{2} \d{2}:\d{2}:\d{2}$
+          examples:
+            - '2026-10-21 10:00:00'
+        to:
+          type: string
+          description: Távozási idő, az adatfájl szerinti YYYY-MM-DD HH:mm:ss alakban. Időzóna nincs megadva.
+          pattern: ^\d{4}-\d{2}-\d{2} \d{2}:\d{2}:\d{2}$
+          examples:
+            - '2026-10-21 17:00:00'
+        deleted_at:
+          type:
+            - string
+            - 'null'
+          description: Törlés időpontja; a diagram szerint nullable. A forrásban nincs törölt rekord, ezért a példákban
+            null.
+          pattern: ^\d{4}-\d{2}-\d{2} \d{2}:\d{2}:\d{2}$
+          examples:
+            - null
+    CarWithGuest:
+      description: 'A jármű teljes rekordja és a tulajdonos teljes vendégrekordja. Dokumentációs konvenció: a tulajdonos
+        a guest objektumban szerepel; a feladatlap nem rögzíti a tulajdonosadatok pontos JSON-elrendezését.'
+      allOf:
+        - $ref: '#/components/schemas/Car'
+        - type: object
+          required:
+            - guest
+          properties:
+            guest:
+              $ref: '#/components/schemas/Guest'
+    YachtWithGuest:
+      description: 'A jármű teljes rekordja és a tulajdonos teljes vendégrekordja. Dokumentációs konvenció: a tulajdonos
+        a guest objektumban szerepel; a feladatlap nem rögzíti a tulajdonosadatok pontos JSON-elrendezését.'
+      allOf:
+        - $ref: '#/components/schemas/Yacht'
+        - type: object
+          required:
+            - guest
+          properties:
+            guest:
+              $ref: '#/components/schemas/Guest'
+    Error:
+      type: object
+      description: 'Dokumentációs konvenció: a figyelmeztetést a message mező tartalmazza.'
+      required:
+        - message
+      properties:
+        message:
+          type: string
+          description: Felhasználót figyelmeztető hibaüzenet. A feladatlap nem ad meg konkrét szöveget.
