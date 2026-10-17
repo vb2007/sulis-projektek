@@ -1,0 +1,17 @@
+{
+    "timestamps": false,
+    "wrapper": true,
+    "wrapperKey": "data",
+    "relationships": [
+        {
+            "source": "posts",
+            "destination": "comments",
+            "type": "hasMany"
+        },
+        {
+            "source": "comments",
+            "destination": "posts",
+            "type": "belongsTo"
+        }
+    ]
+}

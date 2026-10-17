@@ -1,0 +1,107 @@
+-- 2. feladat
+CREATE DATABASE kondibelepok
+CHARACTER SET utf8mb4
+COLLATE utf8mb4_hungarian_ci;
+
+USE kondibelepok;
+
+-- 4. feladat
+SELECT DISTINCT COUNT(megnevezes) AS db
+FROM belepok;
+
+-- 5. feladat
+SELECT COUNT(*) AS noi_letszam
+FROM tagok
+WHERE nem = "nő";
+
+-- 6. feladat
+SELECT COUNT(*) AS nyugdijas_db
+FROM tagok
+WHERE YEAR(NOW()) - YEAR(szuletett) >= 65;
+
+-- 7. feladat
+SELECT ROUND(AVG(YEAR(NOW()) - YEAR(szuletett)), 2) AS ferfi_atlag
+FROM tagok
+WHERE nem = "férfi";
+
+-- 8. feladat
+SELECT SUM(belepok.ar) AS noi_bev_30
+FROM eladasok
+    JOIN belepok
+        ON belepok.id = eladasok.belepo_id
+    JOIN tagok
+        ON tagok.id = eladasok.tag_id
+WHERE tagok.nem = "nő"
+    AND TIMESTAMPDIFF(YEAR, tagok.szuletett, CURDATE()) < 30;
+
+-- 9. feladat
+SELECT COUNT(*) AS visaberlet
+FROM eladasok
+    JOIN tagok
+        ON tagok.id = eladasok.tag_id
+    JOIN belepok
+        ON belepok.id = eladasok.belepo_id
+WHERE tagok.kartya_tipusa = "Visa"
+    AND belepok.megnevezes
+        LIKE "%bérlet%";
+
+-- 10. feladat
+SELECT DISTINCT
+    CONCAT(
+        tagok.vnev, " ", tagok.knev
+    ) AS nev,
+    CONCAT(
+        tagok.irsz, " ",
+        tagok.telepules, " ,",
+        tagok.cim
+    ) AS teljes_cim
+FROM eladasok
+    JOIN belepok
+        ON belepok.id = eladasok.belepo_id
+    JOIN tagok
+        ON tagok.id = eladasok.tag_id
+WHERE tagok.megye = "Vas"
+    AND belepok.megnevezes
+        LIKE "%TRX%";
+
+-- 11. feladat
+SELECT tagok.vnev, tagok.knev, tagok.cim
+FROM tagok
+WHERE tagok.telepules != "Budapest"
+    AND tagok.nem = "nő"
+    AND tagok.cim LIKE "%krt%"
+ORDER BY tagok.vnev, tagok.knev;
+
+-- 12. feladat
+SELECT vnev, knev, telefon
+FROM tagok
+WHERE nem = "nő"
+    AND TIMESTAMPDIFF(YEAR, tagok.szuletett, CURDATE()) > 30
+    AND telefon LIKE "%(20)%"
+    OR telefon LIKE "%(30)%"
+    OR telefon LIKE "%(70)%"
+ORDER BY vnev, knev;
+
+-- 13. feladat
+
+-- 14. feladat
+
+-- 15. feladat
+
+-- 16. feladat
+
+-- 17. feladat
+
+-- 18. feladat
+
+-- 19. feladat
+
+-- 20. feladat
+
+-- 21. feladat
+
+-- 22. feladat
+
+-- 23. feladat
+
+-- 24. feladat
