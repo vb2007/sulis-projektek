@@ -1,0 +1,12 @@
+Darabszam;Filterek
+20;gy1
+20;gy3
+20;gy6
+24;gy4
+24;gy100
+20;z3
+20;z1
+24;gy1;gy3;gy4
+24;gy6;gyy9;gy7
+24;z1;z2;z3
+24;z6
