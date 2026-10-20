@@ -6,8 +6,6 @@ namespace AktivaloKod_VB_Console
     {
         static void Main(string[] args)
         {
-            var validator = new CodeValidator();
-
             string[] samples =
             {
                 "KGCW-5321-JUAH",
@@ -24,13 +22,13 @@ namespace AktivaloKod_VB_Console
 
             foreach (string sample in samples)
             {
-                Console.WriteLine($"{sample,-20} -> {(validator.CheckCodeValidity(sample) ? "jó kód" : "rossz kód")}");
+                Console.WriteLine($"{sample,-20} -> {(CodeValidator.CheckCodeValidity(sample) ? "jó kód" : "rossz kód")}");
             }
 
             Console.WriteLine();
             Console.Write("Adj meg egy kódot: ");
             string? input = Console.ReadLine();
-            Console.WriteLine(validator.CheckCodeValidity(input!) ? "jó kód" : "rossz kód");
+            Console.WriteLine(CodeValidator.CheckCodeValidity(input!) ? "jó kód" : "rossz kód");
         }
     }
 }
