@@ -9,13 +9,25 @@ namespace AktivaloKod_VB_Console
         {
             foreach (string sample in SampleCodes.sampleCodeList)
             {
-                Console.WriteLine($"{sample,-20} -> {(CodeValidator.CheckCodeValidity(sample) ? "jó kód" : "rossz kód")}");
+                PrintResult(sample);
             }
 
             Console.WriteLine();
             Console.Write("Adj meg egy kódot: ");
             string? input = Console.ReadLine();
-            Console.WriteLine(CodeValidator.CheckCodeValidity(input!) ? "jó kód" : "rossz kód");
+            PrintResult(input!);
+        }
+
+        private static void PrintResult(string code)
+        {
+            bool valid = CodeValidator.CheckCodeValidityWithErrorHandling(code, out List<string> errors);
+
+            Console.WriteLine($"\"{code}\": {(valid ? "jó kód" : "rossz kód")}");
+
+            foreach (string error in errors)
+            {
+                Console.WriteLine($"\t- {error}");
+            }
         }
     }
 }
