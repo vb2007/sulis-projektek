@@ -1,4 +1,5 @@
-﻿using System.Text.RegularExpressions;
+using AktivaloKod_VB_Lib.Data;
+using System.Text.RegularExpressions;
 
 namespace AktivaloKod_VB_Lib
 {
@@ -17,6 +18,46 @@ namespace AktivaloKod_VB_Lib
             string normalized = code.Replace("-", "").ToUpperInvariant();
 
             return HasRequiredLetters(normalized) && HasDigit(normalized);
+        }
+
+        public static bool CheckCodeValidityWithErrorHandling(string code, out List<string> errors)
+        {
+            errors = new List<string>();
+
+            if (code == null)
+            {
+                errors.Add(ErrorMessages.ErrorNull);
+                return false;
+            }
+
+            if (!HasValidFormat(code))
+            {
+                errors.Add(ErrorMessages.ErrorFormat);
+            }
+
+            string normalized = code.Replace("-", "").ToUpperInvariant();
+
+            if (!normalized.Contains('G'))
+            {
+                errors.Add(ErrorMessages.ErrorMissingG);
+            }
+
+            if (!normalized.Contains('C'))
+            {
+                errors.Add(ErrorMessages.ErrorMissingC);
+            }
+
+            if (normalized.Count(c => c == 'J') != 1)
+            {
+                errors.Add(ErrorMessages.ErrorJCount);
+            }
+
+            if (!HasDigit(normalized))
+            {
+                errors.Add(ErrorMessages.ErrorMissingDigit);
+            }
+
+            return errors.Count == 0;
         }
 
         private static bool HasValidFormat(string code)
