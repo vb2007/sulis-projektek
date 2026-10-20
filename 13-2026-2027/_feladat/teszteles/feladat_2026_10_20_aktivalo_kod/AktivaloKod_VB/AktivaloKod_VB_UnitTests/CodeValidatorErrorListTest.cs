@@ -9,7 +9,7 @@ namespace AktivaloKod_VB_UnitTests
         [TestCase("KGCW-5321-JUAH")]
         [TestCase("AAAA-BBBB-JCG1")]
         [TestCase("CAJAVALA789G")]
-        public void ValidCode_ReturnsTrueAndEmptyErrorList(string code)
+        public void ValidReturnsTrueAndEmptyErrorList(string code)
         {
             bool result = CodeValidator.CheckCodeValidityWithErrorHandling(code, out List<string> errors);
 
@@ -18,16 +18,16 @@ namespace AktivaloKod_VB_UnitTests
         }
 
         [Test]
-        public void Null_ReturnsNullError()
+        public void NullReturnsNullError()
         {
-            bool result = CodeValidator.CheckCodeValidityWithErrorHandling(null, out List<string> errors);
+            bool result = CodeValidator.CheckCodeValidityWithErrorHandling(null!, out List<string> errors);
 
             Assert.That(result, Is.False);
             Assert.That(errors, Is.EqualTo(new[] { ErrorMessages.ErrorNull }));
         }
 
         [Test]
-        public void MissingChars_ReturnsMissingGCAndJAndDigit()
+        public void MissingCharsReturnsMissingGCAndJAndDigit()
         {
             bool result = CodeValidator.CheckCodeValidityWithErrorHandling(SampleCodes.invalidMissingChars, out List<string> errors);
 
@@ -41,7 +41,7 @@ namespace AktivaloKod_VB_UnitTests
         }
 
         [Test]
-        public void MisplacedDashes_ReturnsFormatAndJCountErrors()
+        public void WrongDashesReturnsFormatAndJCountErrors()
         {
             bool result = CodeValidator.CheckCodeValidityWithErrorHandling(SampleCodes.invalidDashPlacement, out List<string> errors);
 
@@ -54,7 +54,7 @@ namespace AktivaloKod_VB_UnitTests
         }
 
         [Test]
-        public void TooManyJ_ReturnsOnlyJCountError()
+        public void ManyJReturnsOnlyJCountError()
         {
             bool result = CodeValidator.CheckCodeValidityWithErrorHandling(SampleCodes.invalidTooManyJ, out List<string> errors);
 
@@ -63,7 +63,7 @@ namespace AktivaloKod_VB_UnitTests
         }
 
         [Test]
-        public void TooManyDashes_ReturnsOnlyFormatError()
+        public void ManyDashesReturnsOnlyFormatError()
         {
             bool result = CodeValidator.CheckCodeValidityWithErrorHandling(SampleCodes.invalidTooManyDashes, out List<string> errors);
 
@@ -72,7 +72,7 @@ namespace AktivaloKod_VB_UnitTests
         }
 
         [Test]
-        public void TooShort_ReturnsOnlyFormatError()
+        public void ShortReturnsOnlyFormatError()
         {
             bool result = CodeValidator.CheckCodeValidityWithErrorHandling(SampleCodes.invalidTooShort, out List<string> errors);
 
@@ -81,7 +81,7 @@ namespace AktivaloKod_VB_UnitTests
         }
 
         [Test]
-        public void TooLong_ReturnsOnlyFormatError()
+        public void LongReturnsOnlyFormatError()
         {
             bool result = CodeValidator.CheckCodeValidityWithErrorHandling(SampleCodes.invalidTooLong, out List<string> errors);
 
@@ -90,7 +90,7 @@ namespace AktivaloKod_VB_UnitTests
         }
 
         [Test]
-        public void BadSplit_ReturnsOnlyFormatError()
+        public void WrongSplitReturnsOnlyFormatError()
         {
             bool result = CodeValidator.CheckCodeValidityWithErrorHandling(SampleCodes.invalidBadSplit, out List<string> errors);
 
@@ -99,7 +99,7 @@ namespace AktivaloKod_VB_UnitTests
         }
 
         [Test]
-        public void ErrorListResult_MatchesSingleParameterVersion()
+        public void ErrorListMatchesSample()
         {
             foreach (string code in SampleCodes.sampleCodeList)
             {
