@@ -4,7 +4,7 @@
     {
         public static string valid1 = "KGCW-5321-JUAH";
         public static string valid2 = "AAAA-BBBB-JCG1";
-        public static string valid3 = "CAJAVALA78G";
+        public static string valid3 = "CAJAVALA78G1";
         public static string invalidMissingChars = "AAAA-BBBB-CCCC";
         public static string invalidDashPlacement = "--GGJJCCCC1234";
         public static string invalidTooManyJ = "ggjj-cccc-1234";
