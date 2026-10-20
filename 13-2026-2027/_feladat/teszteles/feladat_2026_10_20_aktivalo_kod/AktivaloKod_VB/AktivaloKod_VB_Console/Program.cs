@@ -1,4 +1,5 @@
 ﻿using AktivaloKod_VB_Lib;
+using AktivaloKod_VB_Lib.Data;
 
 namespace AktivaloKod_VB_Console
 {
@@ -6,21 +7,7 @@ namespace AktivaloKod_VB_Console
     {
         static void Main(string[] args)
         {
-            string[] samples =
-            {
-                "KGCW-5321-JUAH",
-                "AAAA-BBBB-JCG1",
-                "AAAA-BBBB-CCCC",
-                "--GGJJCCCC1234",
-                "ggjj-cccc-1234",
-                "CAJAVALA78G",
-                "AA-AA-GC-GG-5J-T0",
-                "CAJAVA78G",
-                "JACA-UU1G-1MOP1",
-                "JACA-UU1G1MOP1",
-            };
-
-            foreach (string sample in samples)
+            foreach (string sample in SampleCodes.sampleCodeList)
             {
                 Console.WriteLine($"{sample,-20} -> {(CodeValidator.CheckCodeValidity(sample) ? "jó kód" : "rossz kód")}");
             }
