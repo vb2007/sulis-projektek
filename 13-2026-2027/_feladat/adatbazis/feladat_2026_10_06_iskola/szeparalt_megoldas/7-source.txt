@@ -1,0 +1,1 @@
+SOURCE /sql/6-tantargyak-table.sql;
