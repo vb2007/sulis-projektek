@@ -1,0 +1,24 @@
+Azonosito;Tipus;Megnevezes;Osszetevok
+p1;p;vaníliás mézes puszedli
+p2;p;kakaós mézes puszedli
+p3;p;fahéjas mézes puszedli
+p1g;p;gluténmentes vaníliás mézes puszedli
+p2g;p;gluténmentes kakaós mézes puszedli
+p3g;p;gluténmentes fahéjas mézes puszedli
+d1;d1;cukorszórásos díszítés
+d2;d2;cukorhabos rajzolt díszítés
+d3;d3;gyümölcsdarabos díszítés
+p1c;f;cukorszórásos vaníliás mézes puszedli;p1;d1
+p2c;f;cukorszórásos kakaós mézes puszedli;p1;d1
+p3c;f;cukorszórásos fahéjas mézes puszedli;p1;d1
+m1;m;karácsonyi mézeskalács
+m1g;m;gluténmentes karácsonyi mézeskalács
+m1h;f;cukorhabbal díszített karácsonyi mézeskalács;m1;d2;d1
+m1gh;f;cukorhabbal díszített gluténmentes karácsonyi mézeskalács;m1g;d2;d1
+b1;b;diós bejgli
+b2;b;mákos bejgli
+b3;b;gesztenyés bejgli
+k1;k;karácsonyi kuglóf
+k2;k;kakaós karácsonyi kuglóf
+k1g;f;karácsonyi kuglóf gyümölcsdarabos díszítéssel;k1;d3
+k2g;f;kakaós karácsonyi kuglóf gyümölcsdarabos díszítéssel;k2;d3
