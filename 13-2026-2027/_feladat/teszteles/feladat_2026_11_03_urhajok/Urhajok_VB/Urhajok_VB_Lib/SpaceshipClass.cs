@@ -6,7 +6,11 @@ public class SpaceshipClass
 
     public SpaceshipClass(string name)
     {
-        ArgumentException.ThrowIfNullOrWhiteSpace(name);
+        if (string.IsNullOrWhiteSpace(name))
+        {
+            throw new ArgumentException("Az osztály nevének megadása kötelező.", nameof(name));
+        }
+
         Name = name;
     }
 }
