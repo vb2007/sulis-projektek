@@ -20,4 +20,8 @@
         <Using Include="NUnit.Framework"/>
     </ItemGroup>
 
+    <ItemGroup>
+      <ProjectReference Include="..\Urhajok_VB_Lib\Urhajok_VB_Lib.csproj" />
+    </ItemGroup>
+
 </Project>
