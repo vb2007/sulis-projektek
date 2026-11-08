@@ -8,11 +8,11 @@ public class Spaceship
     public int? ManufacturedOnYear { get; set; }
     public int? Capacity { get; set; }
 
-    public Spaceship(string name, string type, string _class, int manufacturedOnYear, int capacity)
+    public Spaceship(string name, string type, string @class, int manufacturedOnYear, int capacity)
     {
         Name = name;
         Type = type;
-        Class = _class;
+        Class = @class;
         ManufacturedOnYear = manufacturedOnYear;
         Capacity = capacity;
     }
