@@ -1,3 +1,5 @@
 <Solution>
   <Project Path="Urhajok_VB_Console/Urhajok_VB_Console.csproj" />
+  <Project Path="Urhajok_VB_Lib/Urhajok_VB_Lib.csproj" />
+  <Project Path="Urhajok_VB_Tests/Urhajok_VB_Tests.csproj" />
 </Solution>
