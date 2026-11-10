@@ -1,0 +1,1243 @@
+ID;Név;Érték;Év;Kategória
+1;bajuszos denevér;50000;1901;emlősök
+2;barna hosszúfülű-denevér;50000;1901;emlősök
+3;Brandt-denevér;50000;1901;emlősök
+4;csonkafülű denevér;100000;1901;emlősök
+5;durvavitorlájú törpedenevér;25000;1901;emlősök
+6;erdei cickány;25000;1901;emlősök
+7;északi késeidenevér;25000;1901;emlősök
+8;fehértorkú denevér;50000;1901;emlősök
+9;hegyesorrú denevér;50000;1901;emlősök
+10;horgasszőrű denevér;50000;1901;emlősök
+11;hosszúszárnyú denevér;250000;1901;emlősök
+12;keleti cickány;25000;1901;emlősök
+13;keleti sün;25000;1901;emlősök
+14;kereknyergű patkósdenevér;250000;1901;emlősök
+15;kis patkósdenevér;50000;1901;emlősök
+16;közönséges denevér;50000;1901;emlősök
+17;közönséges késeidenevér;25000;1901;emlősök
+18;közönséges törpedenevér;25000;1901;emlősök
+19;mezei cickány;25000;1901;emlősök
+20;nagy patkósdenevér;100000;1901;emlősök
+21;nagyfülű denevér;100000;1901;emlősök
+22;nimfadenevér;50000;1901;emlősök
+23;nyugati piszedenevér;100000;1901;emlősök
+24;óriás-koraidenevér;500000;1901;emlősök
+25;rőt koraidenevér;25000;1901;emlősök
+26;szoprán törpedenevér;25000;1901;emlősök
+27;szőrőskarú koraidenevér;50000;1901;emlősök
+28;szürke hosszúfülű-denevér;50000;1901;emlősök
+29;tavi denevér;100000;1901;emlősök
+30;törpecickány;25000;1901;emlősök
+31;vakond;25000;1901;emlősök
+32;vízi denevér;50000;1901;emlősök
+33;aranylile;25000;1901;madarak
+34;bajszos sármány;100000;1901;madarak
+35;barátcinege;25000;1901;madarak
+36;barátposzáta;25000;1901;madarak
+37;barázdabillegető;25000;1901;madarak
+38;barkóscinege;50000;1901;madarak
+39;berki tücsökmadár;50000;1901;madarak
+40;bíbic;50000;1901;madarak
+41;búbos cinege;25000;1901;madarak
+42;búbos pacsirta;50000;1901;madarak
+43;búbosbanka;50000;1901;madarak
+44;cigánycsuk;25000;1901;madarak
+45;citromsármány;25000;1901;madarak
+46;cserregő nádiposzáta;25000;1901;madarak
+47;csicsörke;25000;1901;madarak
+48;csíkosfejű nádiposzáta;1000000;1901;madarak
+49;csilpcsalpfüzike;25000;1901;madarak
+50;csíz;25000;1901;madarak
+51;csóka;50000;1901;madarak
+52;csuszka;25000;1901;madarak
+53;dankasirály;50000;1901;madarak
+54;énekes nádiposzáta;25000;1901;madarak
+55;énekes rigó;25000;1901;madarak
+56;erdei fülesbagoly;50000;1901;madarak
+57;erdei pacsirta;50000;1901;madarak
+58;erdei pinty;25000;1901;madarak
+59;erdei pityer;25000;1901;madarak
+60;erdei szürkebegy;25000;1901;madarak
+61;ezüstlile;25000;1901;madarak
+62;fattyúszerkő;100000;1901;madarak
+63;fehérhátú fakopáncs;250000;1901;madarak
+64;fehérszárnyú szerkő;250000;1901;madarak
+65;fekete harkály;50000;1901;madarak
+66;fekete rigó;25000;1901;madarak
+67;feketeszárnyú székicsér;500000;1901;madarak
+68;fenyőpinty;25000;1901;madarak
+69;fenyvescinege;25000;1901;madarak
+70;fitiszfüzike;25000;1901;madarak
+71;foltos nádiposzáta;25000;1901;madarak
+72;függőcinege;50000;1901;madarak
+73;fülemüle;25000;1901;madarak
+74;fülemülesitke;50000;1901;madarak
+75;füleskuvik;100000;1901;madarak
+76;füsti fecske;50000;1901;madarak
+77;gatyáskuvik;50000;1901;madarak
+78;gyöngybagoly;100000;1901;madarak
+79;hajnalmadár;50000;1901;madarak
+80;hamvas küllő;50000;1901;madarak
+81;hantmadár;50000;1901;madarak
+82;havasi fülespacsirta;50000;1901;madarak
+83;havasi lile;50000;1901;madarak
+84;havasi pityer;25000;1901;madarak
+85;havasi szürkebegy;25000;1901;madarak
+86;havasipinty;25000;1901;madarak
+87;házi rozsdafarkú;25000;1901;madarak
+88;hegyi billegető;50000;1901;madarak
+89;hegyi fakusz;25000;1901;madarak
+90;hósármány;25000;1901;madarak
+91;kakukk;50000;1901;madarak
+92;karvalyposzáta;50000;1901;madarak
+93;kék cinege;25000;1901;madarak
+94;kékbegy;50000;1901;madarak
+95;kenderike;25000;1901;madarak
+96;kerti geze;25000;1901;madarak
+97;kerti rozsdafarkú;50000;1901;madarak
+98;kerti sármány;500000;1901;madarak
+99;kis fakopáncs;50000;1901;madarak
+100;kis légykapó;100000;1901;madarak
+101;kis lile;50000;1901;madarak
+102;kis poszáta;25000;1901;madarak
+103;kormos légykapó;25000;1901;madarak
+104;kormos szerkő;250000;1901;madarak
+105;kormosfejű cinege;25000;1901;madarak
+106;kövirigó;500000;1901;madarak
+107;közép fakopáncs;50000;1901;madarak
+108;kuvik;100000;1901;madarak
+109;lappantyú;50000;1901;madarak
+110;léprigó;50000;1901;madarak
+111;mezei pacsirta;25000;1901;madarak
+112;mezei poszáta;25000;1901;madarak
+113;molnárfecske;50000;1901;madarak
+114;nádi sármány;25000;1901;madarak
+115;nádi tücsökmadár;50000;1901;madarak
+116;nádirigó;25000;1901;madarak
+117;nagy fakopáncs;25000;1901;madarak
+118;nagy fülemüle;100000;1901;madarak
+119;nyaktekercs;50000;1901;madarak
+120;ökörszem;25000;1901;madarak
+121;örvös légykapó;25000;1901;madarak
+122;örvös rigó;25000;1901;madarak
+123;őszapó;25000;1901;madarak
+124;parlagi pityer;50000;1901;madarak
+125;parti lile;25000;1901;madarak
+126;partifecske;50000;1901;madarak
+127;pásztormadár;50000;1901;madarak
+128;réti fülesbagoly;250000;1901;madarak
+129;réti pityer;25000;1901;madarak
+130;réti tücsökmadár;50000;1901;madarak
+131;rövidkarmú fakusz;25000;1901;madarak
+132;rozsdás csuk;25000;1901;madarak
+133;rozsdástorkú pityer;25000;1901;madarak
+134;sárga billegető;25000;1901;madarak
+135;sárgafejű királyka;25000;1901;madarak
+136;sárgarigó;25000;1901;madarak
+137;sarkantyús sármány;25000;1901;madarak
+138;sarlósfecske;25000;1901;madarak
+139;seregély;25000;1901;madarak
+140;sisegő füzike;25000;1901;madarak
+141;sordély;25000;1901;madarak
+142;süvöltő;25000;1901;madarak
+143;szalakóta;500000;1901;madarak
+144;széki lile;1000000;1901;madarak
+145;székicsér;500000;1901;madarak
+146;széncinege;25000;1901;madarak
+147;szőlőrigó;25000;1901;madarak
+148;szürke légykapó;50000;1901;madarak
+149;tengelic;25000;1901;madarak
+150;törpekuvik;50000;1901;madarak
+151;tüzesfejű királyka;25000;1901;madarak
+152;ugartyúk;500000;1901;madarak
+153;vörösbegy;25000;1901;madarak
+154;zöld küllő;50000;1901;madarak
+155;zöldike;25000;1901;madarak
+156;zsezse;25000;1901;madarak
+157;vízirigó;500000;1904;madarak
+158;fehér gólya;100000;1906;madarak
+159;fehérkarmú vércse;500000;1906;madarak
+160;fekete gólya;500000;1906;madarak
+161;kék vércse;500000;1906;madarak
+162;vörös vércse;50000;1906;madarak
+163;batla;500000;1912;madarak
+164;kanalasgém;500000;1912;madarak
+165;kis kócsag;250000;1912;madarak
+166;nagy kócsag;100000;1912;madarak
+167;üstökösgém;500000;1912;madarak
+168;alka;25000;1954;madarak
+169;apácahantmadár;25000;1954;madarak
+170;apró partfutó;25000;1954;madarak
+171;bakcsó;100000;1954;madarak
+172;balkáni fakopáncs;25000;1954;madarak
+173;barátkeselyű;250000;1954;madarak
+174;barnahasú pusztaityúk;25000;1954;madarak
+175;békászó sas;1000000;1954;madarak
+176;billegetőcankó;50000;1954;madarak
+177;bölömbika;100000;1954;madarak
+178;borzas gödény;500000;1954;madarak
+179;búbos vöcsök;50000;1954;madarak
+180;bütykös hattyú;25000;1954;madarak
+181;császármadár;500000;1954;madarak
+182;csigaforgató;25000;1954;madarak
+183;csonttollú;25000;1954;madarak
+184;csüllő;25000;1954;madarak
+185;darázsölyv;100000;1954;madarak
+186;daru;50000;1954;madarak
+187;déli hantmadár;25000;1954;madarak
+188;dögkeselyű;250000;1954;madarak
+189;egerészölyv;25000;1954;madarak
+190;ékfarkú halfarkas;25000;1954;madarak
+191;énekes hattyú;50000;1954;madarak
+192;erdei cankó;25000;1954;madarak
+193;ezüstsirály;25000;1954;madarak
+194;fakó keselyű;250000;1954;madarak
+195;fakó rétihéja;250000;1954;madarak
+196;fecskesirály;25000;1954;madarak
+197;fekete sas;500000;1954;madarak
+198;feketenyakú vöcsök;100000;1954;madarak
+199;fenyérfutó;25000;1954;madarak
+200;fenyőrigó;25000;1954;madarak
+201;fenyőszajkó;25000;1954;madarak
+202;füles vöcsök;50000;1954;madarak
+203;füstös cankó;25000;1954;madarak
+204;gatyás ölyv;50000;1954;madarak
+205;gólyatöcs;250000;1954;madarak
+206;gulipán;250000;1954;madarak
+207;guvat;50000;1954;madarak
+208;gyurgyalag;100000;1954;madarak
+209;halászsas;500000;1954;madarak
+210;halvány geze;50000;1954;madarak
+211;hamvas rétihéja;500000;1954;madarak
+212;havasi csóka;25000;1954;madarak
+213;havasi partfutó;25000;1954;madarak
+214;havasi varjú;25000;1954;madarak
+215;héjasas;250000;1954;madarak
+216;heringsirály;50000;1954;madarak
+217;hóbagoly;100000;1954;madarak
+218;holló;50000;1954;madarak
+219;jeges búvár;25000;1954;madarak
+220;jeges sirály;25000;1954;madarak
+221;jégmadár;50000;1954;madarak
+222;kabasólyom;50000;1954;madarak
+223;kacagócsér;50000;1954;madarak
+224;kalandrapacsirta;25000;1954;madarak
+225;karvalybagoly;50000;1954;madarak
+226;kékcsőrű réce;500000;1954;madarak
+227;kenti csér;25000;1954;madarak
+228;kerecsensólyom;1000000;1954;madarak
+229;keresztcsőrű;25000;1954;madarak
+230;kerti poszáta;50000;1954;madarak
+231;kígyászölyv;1000000;1954;madarak
+232;kis csér;500000;1954;madarak
+233;kis goda;25000;1954;madarak
+234;kis hattyú;50000;1954;madarak
+235;kis héja;500000;1954;madarak
+236;kis kárókatona;100000;1954;madarak
+237;kis őrgébics;50000;1954;madarak
+238;kis póling;50000;1954;madarak
+239;kis sirály;25000;1954;madarak
+240;kis sólyom;50000;1954;madarak
+241;kis vízicsibe;50000;1954;madarak
+242;kis vöcsök;50000;1954;madarak
+243;kőforgató;25000;1954;madarak
+244;kormos varjú;25000;1954;madarak
+245;küszvágó csér;100000;1954;madarak
+246;laposcsőrű víztaposó;25000;1954;madarak
+247;lilebíbic;500000;1954;madarak
+248;lócsér;50000;1954;madarak
+249;lunda;25000;1954;madarak
+250;macskabagoly;50000;1954;madarak
+251;meggyvágó;25000;1954;madarak
+252;nagy goda;500000;1954;madarak
+253;nagy halfarkas;25000;1954;madarak
+254;nagy kárókatona;25000;1954;madarak
+255;nagy őrgébics;50000;1954;madarak
+256;nagy pirók;25000;1954;madarak
+257;nagy póling;500000;1954;madarak
+258;Naumann-rigó;25000;1954;madarak
+259;nyílfarkú halfarkas;25000;1954;madarak
+260;nyírfajd;50000;1954;madarak
+261;pajzsoscankó;50000;1954;madarak
+262;parlagi sas;1000000;1954;madarak
+263;pártásdaru;50000;1954;madarak
+264;pásztorgém;25000;1954;madarak
+265;pettyes vízicsibe;50000;1954;madarak
+266;piroslábú cankó;250000;1954;madarak
+267;pusztai ölyv;100000;1954;madarak
+268;pusztai sas;250000;1954;madarak
+269;réti cankó;25000;1954;madarak
+270;rétisas;1000000;1954;madarak
+271;reznek;500000;1954;madarak
+272;rózsás flamingó;50000;1954;madarak
+273;rózsás gödény;250000;1954;madarak
+274;rózsás pirók;25000;1954;madarak
+275;sárgacsőrű kenderike;25000;1954;madarak
+276;sárjáró;25000;1954;madarak
+277;sarki partfutó;25000;1954;madarak
+278;sarki sirály;25000;1954;madarak
+279;sarlós partfutó;25000;1954;madarak
+280;siketfajd;50000;1954;madarak
+281;sövénysármány;50000;1954;madarak
+282;szélesfarkú halfarkas;25000;1954;madarak
+283;szerecsensirály;100000;1954;madarak
+284;sziki pacsirta;500000;1954;madarak
+285;szirti sas;500000;1954;madarak
+286;szürke cankó;25000;1954;madarak
+287;szürke zsezse;25000;1954;madarak
+288;talpastyúk;25000;1954;madarak
+289;tavi cankó;250000;1954;madarak
+290;Temminck-partfutó;25000;1954;madarak
+291;tengeri partfutó;25000;1954;madarak
+292;terekcankó;25000;1954;madarak
+293;törpegém;100000;1954;madarak
+294;törpesas;500000;1954;madarak
+295;törpevízicsibe;500000;1954;madarak
+296;tövisszúró gébics;25000;1954;madarak
+297;uhu;500000;1954;madarak
+298;urali bagoly;100000;1954;madarak
+299;vándorsólyom;500000;1954;madarak
+300;vékonycsőrű póling;1000000;1954;madarak
+301;vékonycsőrű víztaposó;25000;1954;madarak
+302;viharsirály;25000;1954;madarak
+303;vízityúk;25000;1954;madarak
+304;vörös gém;250000;1954;madarak
+305;vörös kánya;500000;1954;madarak
+306;vörösfejű gébics;50000;1954;madarak
+307;vörösnyakú vöcsök;250000;1954;madarak
+308;csíkos szöcskeegér;1000000;1964;emlősök
+309;közönséges vízicickány;50000;1964;emlősök
+310;Miller-vízicickány;50000;1964;emlősök
+311;elevenszülő gyík;100000;1964;hüllők
+312;erdei sikló;50000;1964;hüllők
+313;fali gyík;25000;1964;hüllők
+314;fürge gyík;25000;1964;hüllők
+315;haragos sikló;500000;1964;hüllők
+316;homoki gyík;50000;1964;hüllők
+317;lábatlan gyík;25000;1964;hüllők
+318;mocsári teknős;50000;1964;hüllők
+319;pannon gyík (magyar gyík);250000;1964;hüllők
+320;rézsikló;50000;1964;hüllők
+321;zöld gyík;25000;1964;hüllők
+322;bársonyos poszméh;10000;1964;ízeltlábúak
+323;bogáncsposzméh;5000;1964;ízeltlábúak
+324;délvidéki poszméh;50000;1964;ízeltlábúak
+325;erdei poszméh;5000;1964;ízeltlábúak
+326;erdei vöröshangya;50000;1964;ízeltlábúak
+327;ligeti poszméh;5000;1964;ízeltlábúak
+328;óriásposzméh;100000;1964;ízeltlábúak
+329;ritka gatyásméh;5000;1964;ízeltlábúak
+330;ritka poszméh;10000;1964;ízeltlábúak
+331;rövidszőrű poszméh;5000;1964;ízeltlábúak
+332;rozsdássárga poszméh;10000;1964;ízeltlábúak
+333;sárga poszméh;10000;1964;ízeltlábúak
+334;változékony poszméh;5000;1964;ízeltlábúak
+335;vörhenyes poszméh;10000;1964;ízeltlábúak
+336;alpesi gőte;100000;1964;kétéltűek
+337;alpesi tarajosgőte;50000;1964;kétéltűek
+338;barna ásóbéka;10000;1964;kétéltűek
+339;barna varangy;10000;1964;kétéltűek
+340;dunai tarajosgőte;50000;1964;kétéltűek
+341;erdei béka;10000;1964;kétéltűek
+342;foltos szalamandra;50000;1964;kétéltűek
+343;gyepi béka;50000;1964;kétéltűek
+344;kacagó béka (tavibéka);10000;1964;kétéltűek
+345;kecskebéka;10000;1964;kétéltűek
+346;kis tavibéka;10000;1964;kétéltűek
+347;közönséges tarajosgőte;50000;1964;kétéltűek
+348;mocsári béka;50000;1964;kétéltűek
+349;pettyes gőte;10000;1964;kétéltűek
+350;sárgahasú unka;50000;1964;kétéltűek
+351;vöröshasú unka;10000;1964;kétéltűek
+352;zöld levelibéka;10000;1964;kétéltűek
+353;zöld varangy;10000;1964;kétéltűek
+354;apácalúd;25000;1971;madarak
+355;barna kánya;500000;1971;madarak
+356;barna rétihéja;50000;1971;madarak
+357;bütykös ásólúd;50000;1971;madarak
+358;cifra pehelyréce;25000;1971;madarak
+359;cigányréce;500000;1971;madarak
+360;Eleonóra-sólyom;250000;1971;madarak
+361;északi búvár;25000;1971;madarak
+362;fekete réce;50000;1971;madarak
+363;fürj;50000;1971;madarak
+364;füstös réce;250000;1971;madarak
+365;haris;500000;1971;madarak
+366;hegyi réce;50000;1971;madarak
+367;héja;50000;1971;madarak
+368;indiai lúd;25000;1971;madarak
+369;jegesréce;250000;1971;madarak
+370;kanalas réce;50000;1971;madarak
+371;karvaly;50000;1971;madarak
+372;kék fú;25000;1971;madarak
+373;kék galamb;50000;1971;madarak
+374;kékes rétihéja;50000;1971;madarak
+375;kendermagos réce;50000;1971;madarak
+376;kerceréce;50000;1971;madarak
+377;kis bukó;50000;1971;madarak
+378;kis sárszalonka;25000;1971;madarak
+379;kontyos réce;50000;1971;madarak
+380;márványos réce;250000;1971;madarak
+381;nagy bukó;50000;1971;madarak
+382;nagy sárszalonka;250000;1971;madarak
+383;nyílfarkú réce;50000;1971;madarak
+384;örvös bukó;50000;1971;madarak
+385;örvös lúd;50000;1971;madarak
+386;pehelyréce;50000;1971;madarak
+387;rövidcsőrű lúd;25000;1971;madarak
+388;sárgalábú cankó;25000;1971;madarak
+389;sarki búvár;25000;1971;madarak
+390;szürke gém;50000;1971;madarak
+391;túzok;1000000;1971;madarak
+392;üstökösréce;50000;1971;madarak
+393;vadgerle;50000;1971;madarak
+394;vörös ásólúd;25000;1971;madarak
+395;vörösnyakú lúd;1000000;1971;madarak
+396;csalitjáró pocok;25000;1974;emlősök
+397;erdei pele;100000;1974;emlősök
+398;északi pocok;500000;1974;emlősök
+399;hermelin;50000;1974;emlősök
+400;menyét;25000;1974;emlősök
+401;mogyorós pele;50000;1974;emlősök
+402;mókus;25000;1974;emlősök
+403;molnárgörény;50000;1974;emlősök
+404;nagy pele;50000;1974;emlősök
+405;nyugati földikutya;1000000;1974;emlősök
+406;nyuszt;50000;1974;emlősök
+407;vadmacska;250000;1974;emlősök
+408;vidra;250000;1974;emlősök
+409;dunai galóca;100000;1974;halak
+410;felpillantó küllő;100000;1974;halak
+411;halványfoltú küllő;10000;1974;halak
+412;kövi csík;10000;1974;halak
+413;lápi póc;250000;1974;halak
+414;magyar bucó;100000;1974;halak
+415;német bucó;100000;1974;halak
+416;Petényi-márna (magyar márna);100000;1974;halak
+417;réti csík;10000;1974;halak
+418;selymes durbincs;50000;1974;halak
+419;sujtásos küsz;10000;1974;halak
+420;törpecsík (kőfúró csík);10000;1974;halak
+421;vágó csík;10000;1974;halak
+422;vaskos csabak;10000;1974;halak
+423;keresztes vipera;250000;1974;hüllők
+424;kockás sikló;25000;1974;hüllők
+425;parlagi vipera;1000000;1974;hüllők
+426;vízisikló;25000;1974;hüllők
+427;dunai ingola;100000;1975;körszájúak
+428;tiszai ingola;250000;1975;körszájúak
+429;ürge;250000;1982;emlősök
+430;ácscincér;50000;1982;ízeltlábúak
+431;alhavasi futrinka;10000;1982;ízeltlábúak
+432;Anker-araszoló;100000;1982;ízeltlábúak
+433;aranyfoltos púposszövő;10000;1982;ízeltlábúak
+434;aranyos bábrabló;5000;1982;ízeltlábúak
+435;aranyos futrinka;10000;1982;ízeltlábúak
+436;aranypettyes bábrabló;5000;1982;ízeltlábúak
+437;aranypettyes futrinka;5000;1982;ízeltlábúak
+438;Arias-díszbogár;10000;1982;ízeltlábúak
+439;atalantalepke;5000;1982;ízeltlábúak
+440;ázsiai szegfűbagoly;10000;1982;ízeltlábúak
+441;balkáni futrinka;10000;1982;ízeltlábúak
+442;bíborcincér;5000;1982;ízeltlábúak
+443;bőrfutrinka;5000;1982;ízeltlábúak
+444;borókacincér;5000;1982;ízeltlábúak
+445;buckabagoly;5000;1982;ízeltlábúak
+446;bükki szerecsenboglárka;50000;1982;ízeltlábúak
+447;c-betűs aranybagoly;50000;1982;ízeltlábúak
+448;csarabbagoly;50000;1982;ízeltlábúak
+449;csíkos boglárka;100000;1982;ízeltlábúak
+450;csőröslepke;5000;1982;ízeltlábúak
+451;csüngőaraszoló;100000;1982;ízeltlábúak
+452;diófacincér;5000;1982;ízeltlábúak
+453;díszes medvelepke;10000;1982;ízeltlábúak
+454;domború futrinka;5000;1982;ízeltlábúak
+455;erdei hangyaleső;10000;1982;ízeltlábúak
+456;érdes futrinka;5000;1982;ízeltlábúak
+457;ezerjófűbagoly;50000;1982;ízeltlábúak
+458;ezüstsávos szénalepke;250000;1982;ízeltlábúak
+459;farkasalmalepke;50000;1982;ízeltlábúak
+460;fecskefarkú lepke;10000;1982;ízeltlábúak
+461;fehérszárnyú aranyaraszoló;10000;1982;ízeltlábúak
+462;fekete cirpelőfutó;5000;1982;ízeltlábúak
+463;fenyvesdíszbogár;5000;1982;ízeltlábúak
+464;fóti boglárka;100000;1982;ízeltlábúak
+465;fűrészlábú szöcske;50000;1982;ízeltlábúak
+466;füstös ősziaraszoló;100000;1982;ízeltlábúak
+467;gólyaorr-boglárka;10000;1982;ízeltlábúak
+468;gyászcincér;50000;1982;ízeltlábúak
+469;gyászlepke;50000;1982;ízeltlábúak
+470;halálfejes lepke;10000;1982;ízeltlábúak
+471;hangyabogáncs-törpearaszoló;5000;1982;ízeltlábúak
+472;havasi cincér;50000;1982;ízeltlábúak
+473;havasi sziklaaraszoló;10000;1982;ízeltlábúak
+474;havasi tűzlepke;50000;1982;ízeltlábúak
+475;hegyi fehérlepke;50000;1982;ízeltlábúak
+476;hegyi törpeboglárka;50000;1982;ízeltlábúak
+477;hengeres szalmacincér;5000;1982;ízeltlábúak
+478;hosszúcsápú szalmacincér;5000;1982;ízeltlábúak
+479;hosszúcsápú vércincér;10000;1982;ízeltlábúak
+480;imádkozó sáska;5000;1982;ízeltlábúak
+481;jámbor galacsinhajtó;10000;1982;ízeltlábúak
+482;kardoslepke;10000;1982;ízeltlábúak
+483;kárpáti vízifutrinka;100000;1982;ízeltlábúak
+484;katonás hőscincér;50000;1982;ízeltlábúak
+485;keleti gyöngyházlepke;50000;1982;ízeltlábúak
+486;keleti kékfutrinka;5000;1982;ízeltlábúak
+487;keleti lápibagoly;250000;1982;ízeltlábúak
+488;keleti rablópille;100000;1982;ízeltlábúak
+489;kétszínű fogólábú-fátyolka;50000;1982;ízeltlábúak
+490;kétszínű nyárfacincér;5000;1982;ízeltlábúak
+491;kis apollólepke;50000;1982;ízeltlábúak
+492;kis szarvasbogár;5000;1982;ízeltlábúak
+493;kis színjátszólepke;10000;1982;ízeltlábúak
+494;kövi rák;50000;1982;ízeltlábúak
+495;közepes pávaszem;50000;1982;ízeltlábúak
+496;láncos futrinka;10000;1982;ízeltlábúak
+497;lángszínű nádibagoly;50000;1982;ízeltlábúak
+498;láperdei karcsúbagoly;5000;1982;ízeltlábúak
+499;lápi gyöngyházlepke;50000;1982;ízeltlábúak
+500;lápi tarkalepke;50000;1982;ízeltlábúak
+501;lapos kékfutrinka;5000;1982;ízeltlábúak
+502;ligeti futrinka;5000;1982;ízeltlábúak
+503;Linné-futrinka;10000;1982;ízeltlábúak
+504;magyar boglárka;250000;1982;ízeltlábúak
+505;magyar darázscincér;5000;1982;ízeltlábúak
+506;magyar facincér;10000;1982;ízeltlábúak
+507;magyar fehérlepke;50000;1982;ízeltlábúak
+508;magyar futrinka;100000;1982;ízeltlábúak
+509;magyar gyászbogár;10000;1982;ízeltlábúak
+510;magyar gyopárbagoly;250000;1982;ízeltlábúak
+511;magyar ősziaraszoló;100000;1982;ízeltlábúak
+512;magyar színjátszólepke;100000;1982;ízeltlábúak
+513;magyar virágdíszbogár;10000;1982;ízeltlábúak
+514;magyarföldi ganéjtúró;10000;1982;ízeltlábúak
+515;mandulacincér;10000;1982;ízeltlábúak
+516;mészkő-sziklaaraszoló;5000;1982;ízeltlábúak
+517;Metelka-medvelepke;250000;1982;ízeltlábúak
+518;mezei futrinka;5000;1982;ízeltlábúak
+519;nagy daliáscincér;5000;1982;ízeltlábúak
+520;nagy fürkészcincér;50000;1982;ízeltlábúak
+521;nagy hőscincér;50000;1982;ízeltlábúak
+522;nagy nyárfalepke;100000;1982;ízeltlábúak
+523;nagy szarvasbogár;10000;1982;ízeltlábúak
+524;nagy szikibagoly;250000;1982;ízeltlábúak
+525;nagy színjátszólepke;50000;1982;ízeltlábúak
+526;nagy tűzlepke;50000;1982;ízeltlábúak
+527;nagyfoltú bagoly;250000;1982;ízeltlábúak
+528;nappali pávaszem;5000;1982;ízeltlábúak
+529;narancsszínű kéneslepke (narancslepke);100000;1982;ízeltlábúak
+530;nyírfa-púposszövő;5000;1982;ízeltlábúak
+531;óriás-csíkbogár;50000;1982;ízeltlábúak
+532;óriás-galacsinhajtó;10000;1982;ízeltlábúak
+533;óriás-medvelepke;100000;1982;ízeltlábúak
+534;orrszarvúbogár;50000;1982;ízeltlábúak
+535;pettyes molyszövő;10000;1982;ízeltlábúak
+536;pompás aranybagoly;50000;1982;ízeltlábúak
+537;pompás futrinka;10000;1982;ízeltlábúak
+538;pompás virágbogár;5000;1982;ízeltlábúak
+539;pusztai gyalogcincér;100000;1982;ízeltlábúak
+540;pusztai gyászbogár;10000;1982;ízeltlábúak
+541;pusztai hangyaleső;10000;1982;ízeltlábúak
+542;ragyás futrinka;5000;1982;ízeltlábúak
+543;remetebogár;250000;1982;ízeltlábúak
+544;rezes futrinka;5000;1982;ízeltlábúak
+545;sárga gyapjasszövő;50000;1982;ízeltlábúak
+546;sárgaholdas púposszövő (sárgaholdas púposszövő);10000;1982;ízeltlábúak
+547;sárgalábú cirpelőfutó;5000;1982;ízeltlábúak
+548;selymes futrinka;5000;1982;ízeltlábúak
+549;sisakos sáska;50000;1982;ízeltlábúak
+550;sokszínű futrinka;10000;1982;ízeltlábúak
+551;sötét hangyaboglárka (zanótboglárka);50000;1982;ízeltlábúak
+552;szárnyas futrinka;10000;1982;ízeltlábúak
+553;szarvas álganéjtúró;50000;1982;ízeltlábúak
+554;szegélyes futrinka;50000;1982;ízeltlábúak
+555;szélesszárnyú aranybagoly;50000;1982;ízeltlábúak
+556;sziklai fehérlepke;50000;1982;ízeltlábúak
+557;szilfacincér;10000;1982;ízeltlábúak
+558;sztyeplepke;250000;1982;ízeltlábúak
+559;tarka sziklaaraszoló;50000;1982;ízeltlábúak
+560;tölgy-darázscincér;10000;1982;ízeltlábúak
+561;tölgyfa-őszibagoly;5000;1982;ízeltlábúak
+562;törpeszender;50000;1982;ízeltlábúak
+563;változó futrinka;10000;1982;ízeltlábúak
+564;változó sziklaaraszoló;50000;1982;ízeltlábúak
+565;vörös rókalepke;50000;1982;ízeltlábúak
+566;zempléni futrinka;100000;1982;ízeltlábúak
+567;zöldes gyöngyházlepke;5000;1982;ízeltlábúak
+568;kis lilik;1000000;1982;madarak
+569;kucsmás poszáta;25000;1982;madarak
+570;rozsdás nádiposzáta;25000;1982;madarak
+571;fekete bödöncsiga;100000;1982;puhatestűek
+572;kék meztelencsiga;5000;1982;puhatestűek
+573;nyugati ajtóscsiga;10000;1982;puhatestűek
+574;tornai patakcsiga;10000;1982;puhatestűek
+575;eurázsiai hód;50000;1988;emlősök
+576;havasi cickány;50000;1988;emlősök
+577;hiúz;500000;1988;emlősök
+578;zerge;50000;1988;emlősök
+579;botos kölönte;50000;1988;halak
+580;homoki küllő;100000;1988;halak
+581;kurta baing;10000;1988;halak
+582;nyúldomolykó;10000;1988;halak
+583;sima tok (színtok);50000;1988;halak
+584;vágó tok;50000;1988;halak
+585;viza;50000;1988;halak
+586;balkáni gyökérrágólepke;10000;1988;ízeltlábúak
+587;beregi futrinka;100000;1988;ízeltlábúak
+588;budai szakállasmoly;100000;1988;ízeltlábúak
+589;bükki hegyiaraszoló;100000;1988;ízeltlábúak
+590;fehérjegyű törpebagoly;50000;1988;ízeltlábúak
+591;füstös övesbagoly;10000;1988;ízeltlábúak
+592;Guérin-karcsúdíszbogár;10000;1988;ízeltlábúak
+593;hálós rétiaraszoló;50000;1988;ízeltlábúak
+594;magyar tölgymakkmoly;10000;1988;ízeltlábúak
+595;nagy smaragdfémdarázs;10000;1988;ízeltlábúak
+596;óriás-tőrösdarázs;50000;1988;ízeltlábúak
+597;platina-dudvabagoly;10000;1988;ízeltlábúak
+598;pompás fémdarázs;5000;1988;ízeltlábúak
+599;pusztai karimásbogár;10000;1988;ízeltlábúak
+600;ráncos gyászbogár;100000;1988;ízeltlábúak
+601;sápadt éjicincér;5000;1988;ízeltlábúak
+602;szalmasárga búzabagoly;10000;1988;ízeltlábúak
+603;szigonyos földibagoly;10000;1988;ízeltlábúak
+604;szirti törpebagoly;10000;1988;ízeltlábúak
+605;Türk-virágdíszbogár;10000;1988;ízeltlábúak
+606;villányi télibagoly (magyar tarkabagoly);100000;1988;ízeltlábúak
+607;dolmányos sirály;25000;1988;madarak
+608;ékfarkú lile;25000;1988;madarak
+609;fehérfarkú lilebíbic;25000;1988;madarak
+610;fenyősármány;25000;1988;madarak
+611;karmazsinpirók;25000;1988;madarak
+612;keleti gerle;25000;1988;madarak
+613;vándorpartfutó;25000;1988;madarak
+614;keleti ajtóscsiga;50000;1988;puhatestűek
+615;alpesi denevér;50000;1993;emlősök
+616;barna medve;250000;1993;emlősök
+617;farkas;250000;1993;emlősök
+618;fürge cselle;10000;1993;halak
+619;pénzes pér;5000;1993;halak
+620;sőregtok;50000;1993;halak
+621;széles durbincs;50000;1993;halak
+622;alföldi virágcincér;5000;1993;ízeltlábúak
+623;álolaszsáska;100000;1993;ízeltlábúak
+624;apáca-púposszövő;5000;1993;ízeltlábúak
+625;aranyszőrű fürkészcincér;50000;1993;ízeltlábúak
+626;aranyvessző-csuklyásbagoly;50000;1993;ízeltlábúak
+627;árgusszemű cincér;10000;1993;ízeltlábúak
+628;árvácska-gyöngyházlepke;5000;1993;ízeltlábúak
+629;atracélcincér;100000;1993;ízeltlábúak
+630;áttelelő sáska;5000;1993;ízeltlábúak
+631;balkáni pálcástegzes;10000;1993;ízeltlábúak
+632;barátka-púposszövő;10000;1993;ízeltlábúak
+633;barbársáska;5000;1993;ízeltlábúak
+634;barnáspiros földibagoly;5000;1993;ízeltlábúak
+635;békabogyó-araszoló;10000;1993;ízeltlábúak
+636;boglárkacincér;5000;1993;ízeltlábúak
+637;bundás boglárka;10000;1993;ízeltlábúak
+638;cifra fényilonca;5000;1993;ízeltlábúak
+639;csermelyszitakötő;5000;1993;ízeltlábúak
+640;csillogó boglárka;10000;1993;ízeltlábúak
+641;csonkaszárnyú medvelepke;50000;1993;ízeltlábúak
+642;csücskös sziklaaraszoló;5000;1993;ízeltlábúak
+643;csupasz medvelepke;10000;1993;ízeltlábúak
+644;déli kurta-tevenyakú;5000;1993;ízeltlábúak
+645;délvidéki szitkár;5000;1993;ízeltlábúak
+646;díszes csuklyásbagoly;100000;1993;ízeltlábúak
+647;díszes légivadász;10000;1993;ízeltlábúak
+648;díszes nünüke;50000;1993;ízeltlábúak
+649;díszes tarkalepke;50000;1993;ízeltlábúak
+650;dolomit-kéneslepke;100000;1993;ízeltlábúak
+651;dongószender;10000;1993;ízeltlábúak
+652;drávai tegzes;100000;1993;ízeltlábúak
+653;dunántúli vízifutrinka;100000;1993;ízeltlábúak
+654;elegáns mocsáritegzes;10000;1993;ízeltlábúak
+655;erdei szitakötő;50000;1993;ízeltlábúak
+656;erdélyi avarszöcske;50000;1993;ízeltlábúak
+657;eurázsiai rétisáska;50000;1993;ízeltlábúak
+658;ezüstös földibagoly;10000;1993;ízeltlábúak
+659;fagyal-faaraszoló;5000;1993;ízeltlábúak
+660;fakó gyöngyházlepke;10000;1993;ízeltlábúak
+661;farkos lombszöcske;5000;1993;ízeltlábúak
+662;fehérfoltos kormosmoly;10000;1993;ízeltlábúak
+663;fehérsávos földibagoly;5000;1993;ízeltlábúak
+664;feketelábú szitakötő;5000;1993;ízeltlábúak
+665;feketemintás gesztcincér;10000;1993;ízeltlábúak
+666;Fuss-pókszöcske;10000;1993;ízeltlábúak
+667;gyapjaslepke-fürkész;5000;1993;ízeltlábúak
+668;gyászos medvelepke;50000;1993;ízeltlábúak
+669;hamvas csuklyásbagoly;10000;1993;ízeltlábúak
+670;harangvirág-bogáncscincér;5000;1993;ízeltlábúak
+671;harangvirág-csuklyásbagoly;50000;1993;ízeltlábúak
+672;havasi lápiaraszoló;5000;1993;ízeltlábúak
+673;hegyi szitakötő;100000;1993;ízeltlábúak
+674;hegyi törpebagoly;50000;1993;ízeltlábúak
+675;holdkék szitakötő;5000;1993;ízeltlábúak
+676;homoki gyalogcincér;5000;1993;ízeltlábúak
+677;homoki ökörszemlepke;50000;1993;ízeltlábúak
+678;hullámvonalas araszoló;5000;1993;ízeltlábúak
+679;ibolyás tűzlepke;10000;1993;ízeltlábúak
+680;illír tarsza;10000;1993;ízeltlábúak
+681;kárpáti forrástegzes;5000;1993;ízeltlábúak
+682;kárpáti tarsza;10000;1993;ízeltlábúak
+683;karsztforrástegzes;10000;1993;ízeltlábúak
+684;kék lonclepke;50000;1993;ízeltlábúak
+685;kékeszöld facincér;10000;1993;ízeltlábúak
+686;keleti földibagoly;10000;1993;ízeltlábúak
+687;keleti kormosmoly;50000;1993;ízeltlábúak
+688;keleti mustárlepke;50000;1993;ízeltlábúak
+689;keleti pókszöcske;10000;1993;ízeltlábúak
+690;keleti vándorsáska;10000;1993;ízeltlábúak
+691;kerekpajzsú vércincér;10000;1993;ízeltlábúak
+692;keserűgyökér-nappalibagoly;5000;1993;ízeltlábúak
+693;keskeny luccincér;10000;1993;ízeltlábúak
+694;keskeny tölgycincér;10000;1993;ízeltlábúak
+695;kétcsíkos hegyiszitakötő (ritka hegyiszitakötő);100000;1993;ízeltlábúak
+696;kétfoltú szitakötő;5000;1993;ízeltlábúak
+697;kis fehérsávoslepke;10000;1993;ízeltlábúak
+698;kis lonclepke;10000;1993;ízeltlábúak
+699;kis nappaliaraszoló (kis tavasziaraszoló);5000;1993;ízeltlábúak
+700;kis tűzlepke;10000;1993;ízeltlábúak
+701;kisasszony-szitakötő;5000;1993;ízeltlábúak
+702;kökörcsinvirág-földibagoly;50000;1993;ízeltlábúak
+703;L-betűs rókalepke;50000;1993;ízeltlábúak
+704;lándzsás karimáspoloska;5000;1993;ízeltlábúak
+705;lándzsás légivadász;5000;1993;ízeltlábúak
+706;lápi acsa;5000;1993;ízeltlábúak
+707;lápi busalepke (nyugati törpebusalepke);10000;1993;ízeltlábúak
+708;lápi szitakötő;100000;1993;ízeltlábúak
+709;lassú szitakötő;5000;1993;ízeltlábúak
+710;lilásszürke csuklyásbagoly;50000;1993;ízeltlábúak
+711;lomha lápipozdorján;50000;1993;ízeltlábúak
+712;macskaherecincér;10000;1993;ízeltlábúak
+713;magyar egytollúmoly;10000;1993;ízeltlábúak
+714;magyar kutyatejcincér;5000;1993;ízeltlábúak
+715;magyar nünüke;50000;1993;ízeltlábúak
+716;magyar szitkár;5000;1993;ízeltlábúak
+717;magyar tarkalepke;50000;1993;ízeltlábúak
+718;magyar tarsza;100000;1993;ízeltlábúak
+719;magyar tavaszi-fésűsbagoly;100000;1993;ízeltlábúak
+720;magyar zsákosmoly;5000;1993;ízeltlábúak
+721;magyar zsályacincér;5000;1993;ízeltlábúak
+722;májmoha-medvelepke;10000;1993;ízeltlábúak
+723;mannakabóca;5000;1993;ízeltlábúak
+724;márványos örvénytegzes;5000;1993;ízeltlábúak
+725;mocsári szitakötő;5000;1993;ízeltlábúak
+726;mocsári tűzmoly;5000;1993;ízeltlábúak
+727;molyhostölgy-levélaraszoló;5000;1993;ízeltlábúak
+728;nagy fehérsávoslepke;10000;1993;ízeltlábúak
+729;nagy mályvaaraszoló;5000;1993;ízeltlábúak
+730;nagy molnárpoloska;5000;1993;ízeltlábúak
+731;nagy pávaszem;50000;1993;ízeltlábúak
+732;nagy rókalepke;10000;1993;ízeltlábúak
+733;nagy szenderfürkész;10000;1993;ízeltlábúak
+734;nagyfoltú hangyaboglárka;50000;1993;ízeltlábúak
+735;nyárfarontólepke;10000;1993;ízeltlábúak
+736;nyugati csüngőlepke;10000;1993;ízeltlábúak
+737;nyugati őszitegzes;100000;1993;ízeltlábúak
+738;nyúlparéj-nappalibagoly;5000;1993;ízeltlábúak
+739;önbeásó sáska;5000;1993;ízeltlábúak
+740;óriás-énekeskabóca;5000;1993;ízeltlábúak
+741;óriás-fenyőfürkész;5000;1993;ízeltlábúak
+742;őszi nünüke;50000;1993;ízeltlábúak
+743;öves szkolopendra;10000;1993;ízeltlábúak
+744;pannon sáska;5000;1993;ízeltlábúak
+745;páratlan alpesitegzes;50000;1993;ízeltlábúak
+746;párducfoltos darázscincér;5000;1993;ízeltlábúak
+747;pataki szitakötő;5000;1993;ízeltlábúak
+748;pitypangszövő;10000;1993;ízeltlábúak
+749;pompás lépiaraszoló (lápi tarkaaraszoló);10000;1993;ízeltlábúak
+750;pompás útonállódarázs;5000;1993;ízeltlábúak
+751;pöszörszender;10000;1993;ízeltlábúak
+752;pusztai tarsza;10000;1993;ízeltlábúak
+753;réti rabló;5000;1993;ízeltlábúak
+754;ritka fémlepke;5000;1993;ízeltlábúak
+755;ritka légivadász;5000;1993;ízeltlábúak
+756;ritka púposszövő (kormos púposszövő);10000;1993;ízeltlábúak
+757;rövidszárnyú hegyisáska;10000;1993;ízeltlábúak
+758;sápadt szemeslepke;100000;1993;ízeltlábúak
+759;sárgafoltos szitakötő;5000;1993;ízeltlábúak
+760;sárgapajzsú hanyattúszó-poloska;5000;1993;ízeltlábúak
+761;sárgás szitakötő;50000;1993;ízeltlábúak
+762;sarlófűcincér;10000;1993;ízeltlábúak
+763;sávos pohók;10000;1993;ízeltlábúak
+764;selymes cserjecincér;10000;1993;ízeltlábúak
+765;selymes földibagoly;10000;1993;ízeltlábúak
+766;szarkalábbagoly;10000;1993;ízeltlábúak
+767;szegélyes földibagoly;10000;1993;ízeltlábúak
+768;szép hegyisáska;10000;1993;ízeltlábúak
+769;sziki ürömbagoly;50000;1993;ízeltlábúak
+770;sziklaüröm-araszoló;5000;1993;ízeltlábúak
+771;szilfa-csücsköslepke;10000;1993;ízeltlábúak
+772;szilfa-púposszövő;5000;1993;ízeltlábúak
+773;szöcskeölő darázs;5000;1993;ízeltlábúak
+774;szőrös pajzsospoloska;5000;1993;ízeltlábúak
+775;szürke hosszúcsápú-tegzes;10000;1993;ízeltlábúak
+776;szürkés hangyaboglárka;50000;1993;ízeltlábúak
+777;Tallós-dudvabagoly;5000;1993;ízeltlábúak
+778;tarka hegyisáska;10000;1993;ízeltlábúak
+779;tarka szemeslepke;50000;1993;ízeltlábúak
+780;tarkaszövő;5000;1993;ízeltlábúak
+781;tiszavirág;10000;1993;ízeltlábúak
+782;tisztesfű-busalepke;50000;1993;ízeltlábúak
+783;tócsaszitakötő;100000;1993;ízeltlábúak
+784;tölgyfa-csücsköslepke;10000;1993;ízeltlábúak
+785;törékeny lápibagoly;5000;1993;ízeltlábúak
+786;tőrös szöcske;5000;1993;ízeltlábúak
+787;tőzegáfonya-araszoló;10000;1993;ízeltlábúak
+788;útifű-medvelepke;10000;1993;ízeltlábúak
+789;változó sáska;5000;1993;ízeltlábúak
+790;varjútöviscincér;10000;1993;ízeltlábúak
+791;vasvirág-csuklyásbagoly;10000;1993;ízeltlábúak
+792;vérfű-hangyaboglárka;50000;1993;ízeltlábúak
+793;vértesi csuklyásbagoly;100000;1993;ízeltlábúak
+794;vonalkás hegyiaraszoló;10000;1993;ízeltlábúak
+795;vörös csüngőlepke;100000;1993;ízeltlábúak
+796;vöröscombú facincér;10000;1993;ízeltlábúak
+797;vöröslábú hegyisáska;10000;1993;ízeltlábúak
+798;zöld acsa;100000;1993;ízeltlábúak
+799;zörgőbagoly;10000;1993;ízeltlábúak
+800;Bonelli-füzike;25000;1993;madarak
+801;citrombillegető;25000;1993;madarak
+802;fütyülő réce;50000;1993;madarak
+803;gyűrűscsőrű sirály;25000;1993;madarak
+804;halászsirály;25000;1993;madarak
+805;prérisirály;25000;1993;madarak
+806;sarki csér;25000;1993;madarak
+807;sárszalonka;100000;1993;madarak
+808;sivatagi hantmadár;25000;1993;madarak
+809;sivatagi lile;25000;1993;madarak
+810;szalagos keresztcsőrű;25000;1993;madarak
+811;vándorfüzike;25000;1993;madarak
+812;vékonycsőrű sirály;25000;1993;madarak
+813;bánáti csiga;50000;1993;puhatestűek
+814;barna korongcsiga;5000;1993;puhatestűek
+815;dobozi pikkelyescsiga;100000;1993;puhatestűek
+816;észak-kárpáti csiga;5000;1993;puhatestűek
+817;éti csiga;2000;1993;puhatestűek
+818;folyamcsiga;5000;1993;puhatestűek
+819;gyűrűs üvegcsiga;10000;1993;puhatestűek
+820;hegyi csavarcsiga;5000;1993;puhatestűek
+821;kúpos kerekszájúcsiga;5000;1993;puhatestűek
+822;Lubomirski-csiga;5000;1993;puhatestűek
+823;magyar vakcsiga;10000;1993;puhatestűek
+824;nagy kétfogúcsiga;5000;1993;puhatestűek
+825;nagy szőrőscsiga;5000;1993;puhatestűek
+826;pagodacsiga;5000;1993;puhatestűek
+827;pettyes folyamcsiga;5000;1993;puhatestűek
+828;rajzos bödöncsiga;10000;1993;puhatestűek
+829;sávos bödöncsiga;50000;1993;puhatestűek
+830;tömzsi orsócsiga;5000;1993;puhatestűek
+831;fehérszélű törpedenevér;50000;1996;emlősök
+832;szongáriai cselőpók;5000;1996;ízeltlábúak
+833;cankópartfutó;50000;1996;madarak
+834;északi sólyom;100000;1996;madarak
+835;Feldegg-sólyom;100000;1996;madarak
+836;hosszúcsőrű cankógoda;25000;1996;madarak
+837;kucsmás sármány;25000;1996;madarak
+838;sarkantyús pityer;25000;1996;madarak
+839;tüskés bíbic;25000;1996;madarak
+840;aranyos díszbogár;10000;2001;ízeltlábúak
+841;bakonyi ormányosbogár;10000;2001;ízeltlábúak
+842;balatoni hínárbogár;50000;2001;ízeltlábúak
+843;bordás holttettetős-ormányos;10000;2001;ízeltlábúak
+844;bújkáló avarszöcske;10000;2001;ízeltlábúak
+845;bütyköshátú ormányos;50000;2001;ízeltlábúak
+846;búvárpók;5000;2001;ízeltlábúak
+847;dárdahere-zsákhordóbogár;5000;2001;ízeltlábúak
+848;deres bikapók;5000;2001;ízeltlábúak
+849;dunántúli kékfutrinka;5000;2001;ízeltlábúak
+850;dunavirág;10000;2001;ízeltlábúak
+851;erdélyi virágszöcske;10000;2001;ízeltlábúak
+852;északi boglárka;10000;2001;ízeltlábúak
+853;északi gyökérrágólepke;10000;2001;ízeltlábúak
+854;farkos állaspók;5000;2001;ízeltlábúak
+855;fogasfarkú szöcske;5000;2001;ízeltlábúak
+856;Gebhardt-vakfutrinka;50000;2001;ízeltlábúak
+857;görög fémlepke;5000;2001;ízeltlábúak
+858;gyászos árnyékbogár;50000;2001;ízeltlábúak
+859;hangyabogáncs-tollasmoly;5000;2001;ízeltlábúak
+860;hatcsíkú földibagoly;10000;2001;ízeltlábúak
+861;homoki zömökdíszbogár;5000;2001;ízeltlábúak
+862;hortobágyi gyászfutó;50000;2001;ízeltlábúak
+863;karéjos keresztespók;5000;2001;ízeltlábúak
+864;kék pattanó;100000;2001;ízeltlábúak
+865;kéköves bagoly;5000;2001;ízeltlábúak
+866;keskenyfedős élősdibogár;10000;2001;ízeltlábúak
+867;kis aknásfutó;10000;2001;ízeltlábúak
+868;kis bíborbogár;5000;2001;ízeltlábúak
+869;kis erdei-vöröshangya;50000;2001;ízeltlábúak
+870;kis hólyaghúzó;5000;2001;ízeltlábúak
+871;kis nyomottfejű-hangya;50000;2001;ízeltlábúak
+872;kis pávaszem;10000;2001;ízeltlábúak
+873;kis rókalepke;50000;2001;ízeltlábúak
+874;kökény-tükrösdíszbogár;5000;2001;ízeltlábúak
+875;kőrisfa-övesbagoly;10000;2001;ízeltlábúak
+876;kövi torzpók;5000;2001;ízeltlábúak
+877;közönséges holdszarvú-ganéjtúró;5000;2001;ízeltlábúak
+878;lapos sárkánybogár;50000;2001;ízeltlábúak
+879;laposorrú ormányos;10000;2001;ízeltlábúak
+880;lengyel bíborpajzstetű;5000;2001;ízeltlábúak
+881;magyar aknászpók;10000;2001;ízeltlábúak
+882;magyar faaraszoló;5000;2001;ízeltlábúak
+883;magyar őszi-fésűsbagoly (Kovács-bundásbagoly);100000;2001;ízeltlábúak
+884;magyar vakfutrinka;50000;2001;ízeltlábúak
+885;magyar virágbogár;10000;2001;ízeltlábúak
+886;mocsári szitkár;5000;2001;ízeltlábúak
+887;molyhos hőscincér;50000;2001;ízeltlábúak
+888;nádi állaspók;5000;2001;ízeltlábúak
+889;nagy foltosrabló;10000;2001;ízeltlábúak
+890;nagy karmosbogár;50000;2001;ízeltlábúak
+891;nagy nyomottfejű-hangya;50000;2001;ízeltlábúak
+892;nagy tölgyfa-övesbagoly;10000;2001;ízeltlábúak
+893;nagyfejű futó;10000;2001;ízeltlábúak
+894;napvirágszitkár;5000;2001;ízeltlábúak
+895;négyfoltos pattanó;50000;2001;ízeltlábúak
+896;négypúpú karmosbogár;50000;2001;ízeltlábúak
+897;nyílfoltos tarkaaraszoló;10000;2001;ízeltlábúak
+898;nyolcpettyes virágbogár;50000;2001;ízeltlábúak
+899;óriás-keresztespók;5000;2001;ízeltlábúak
+900;pannon hólyaghúzó;5000;2001;ízeltlábúak
+901;pannon karcsúbagoly (lápi karcsúbagoly);50000;2001;ízeltlábúak
+902;párducfoltos hangyaleső;50000;2001;ízeltlábúak
+903;parti vidrapók;5000;2001;ízeltlábúak
+904;pézsmacincér;5000;2001;ízeltlábúak
+905;pirosfejű vöröshangya;50000;2001;ízeltlábúak
+906;platina-vacakbagoly (ezüstös apróbagoly);5000;2001;ízeltlábúak
+907;pokoli cselőpók;5000;2001;ízeltlábúak
+908;pusztai földibagoly;10000;2001;ízeltlábúak
+909;rajnai denevérszárnyú-kérész;10000;2001;ízeltlábúak
+910;rejtett állaspók;5000;2001;ízeltlábúak
+911;réti vöröshangya;50000;2001;ízeltlábúak
+912;sarkantyús fészekbogár;50000;2001;ízeltlábúak
+913;Schmidt-pókszöcske;10000;2001;ízeltlábúak
+914;sisakvirág-aranybagoly;10000;2001;ízeltlábúak
+915;skarlátbogár;5000;2001;ízeltlábúak
+916;Steven-turzásfutó;10000;2001;ízeltlábúak
+917;Stys-tarsza;100000;2001;ízeltlábúak
+918;szalagos karcsúcincér;5000;2001;ízeltlábúak
+919;szarvas gyászbogár;10000;2001;ízeltlábúak
+920;szegélyes vidrapók;5000;2001;ízeltlábúak
+921;széles tavicsíkbogár;100000;2001;ízeltlábúak
+922;szomorú bűzfutó;50000;2001;ízeltlábúak
+923;szürke darázsbogár;50000;2001;ízeltlábúak
+924;szurkos torzpók;5000;2001;ízeltlábúak
+925;tavaszi gyapjasszövő;10000;2001;ízeltlábúak
+926;téli zuzmóbogár;50000;2001;ízeltlábúak
+927;tölgyestorzpók;5000;2001;ízeltlábúak
+928;tölgyfa-díszbogár;100000;2001;ízeltlábúak
+929;tölgyfaszender;10000;2001;ízeltlábúak
+930;tülkös szarvasbogár;10000;2001;ízeltlábúak
+931;vájárfutó;10000;2001;ízeltlábúak
+932;vöröslő szívnyakúfutó;10000;2001;ízeltlábúak
+933;álarcos réce;25000;2001;madarak
+934;amerikai pettyeslile;25000;2001;madarak
+935;amuri vércse;25000;2001;madarak
+936;ázsiai pettyeslile;25000;2001;madarak
+937;Baird-partfutó;25000;2001;madarak
+938;barna füzike;25000;2001;madarak
+939;berki nádiposzáta;25000;2001;madarak
+940;berki poszáta;25000;2001;madarak
+941;berki veréb;25000;2001;madarak
+942;Bonaparte-partfutó;25000;2001;madarak
+943;búbos réce;25000;2001;madarak
+944;déli geze;25000;2001;madarak
+945;feketetorkú rigó;25000;2001;madarak
+946;halvány sarlósfecske;25000;2001;madarak
+947;havasi sarlósfecske;25000;2001;madarak
+948;házi veréb;25000;2001;madarak
+949;hegyesfarkú partfutó;25000;2001;madarak
+950;himalájai füzike;25000;2001;madarak
+951;hosszúfarkú cankó;25000;2001;madarak
+952;kékszárnyú réce;25000;2001;madarak
+953;kínai üstökösgém;25000;2001;madarak
+954;királyfüzike;25000;2001;madarak
+955;kis geze;25000;2001;madarak
+956;kis partfutó;25000;2001;madarak
+957;mezei veréb;25000;2001;madarak
+958;örvös réce;25000;2001;madarak
+959;pusztai hantmadár;25000;2001;madarak
+960;sárgalábú sirály;25000;2001;madarak
+961;sarki lúd;25000;2001;madarak
+962;Steller-pehelyréce;250000;2001;madarak
+963;szirtifecske;25000;2001;madarak
+964;sztyeppi lile;25000;2001;madarak
+965;sztyeppi sirály;25000;2001;madarak
+966;töcspartfutó;25000;2001;madarak
+967;törpesármány;25000;2001;madarak
+968;vastagcsőrű füzike;25000;2001;madarak
+969;vetési varjú;50000;2001;madarak
+970;vörhenyes fecske;25000;2001;madarak
+971;vörhenyes sármány;25000;2001;madarak
+972;Wilson-víztaposó;25000;2001;madarak
+973;zátonykócsag;25000;2001;madarak
+974;zöld gyurgyalag;25000;2001;madarak
+975;egyfogú szőrőscsiga;10000;2001;puhatestűek
+976;erdélyi pikkelyescsiga;10000;2001;puhatestűek
+977;fehérínyű csiga;5000;2001;puhatestűek
+978;harántfogú törpecsiga;5000;2001;puhatestűek
+979;háromfogú csiga;10000;2001;puhatestűek
+980;hasas törpecsiga;5000;2001;puhatestűek
+981;hordócsiga;5000;2001;puhatestűek
+982;karcsú orsócsiga;5000;2001;puhatestűek
+983;kárpáti orsócsiga;10000;2001;puhatestűek
+984;keleti kristálycsiga;5000;2001;puhatestűek
+985;kerti csiga;5000;2001;puhatestűek
+986;kis kétfogúcsiga;5000;2001;puhatestűek
+987;lapos kristálycsiga;5000;2001;puhatestűek
+988;lapos tavikagyló;5000;2001;puhatestűek
+989;ligeti csiga;5000;2001;puhatestűek
+990;selymes orsócsiga;10000;2001;puhatestűek
+991;sima orsócsiga;10000;2001;puhatestűek
+992;szávai szurokcsiga;10000;2001;puhatestűek
+993;tompa folyamkagyló;10000;2001;puhatestűek
+994;ugarcsiga;5000;2001;puhatestűek
+995;dunai küllő;10000;2002;halak
+996;dunai nagyhering;5000;2002;halak
+997;gyöngyös koncér;5000;2002;halak
+998;leánykoncér;10000;2002;halak
+999;szivárványos ökle;5000;2002;halak
+1000;tiszai küllő;10000;2002;halak
+1001;hörcsög (mezei);25000;2008;emlősök
+1002;Brunner-pókszöcske;100000;2008;ízeltlábúak
+1003;C-betűs lepke;5000;2008;ízeltlábúak
+1004;csíkos medvelepke;5000;2008;ízeltlábúak
+1005;európai ál-kalózpók;10000;2008;ízeltlábúak
+1006;európai nyelesszemű-légy;10000;2008;ízeltlábúak
+1007;Hacker-virágdíszbogár;10000;2008;ízeltlábúak
+1008;hársfa-tarkadíszbogár;10000;2008;ízeltlábúak
+1009;hullámos díszbogár;50000;2008;ízeltlábúak
+1010;ibolya-gyöngyházlepke;10000;2008;ízeltlábúak
+1011;kerekvállú állasbogár;10000;2008;ízeltlábúak
+1012;kis bábrabló;5000;2008;ízeltlábúak
+1013;nagyfoltú aranybagoly;50000;2008;ízeltlábúak
+1014;nyírfa-tarkadíszbogár;10000;2008;ízeltlábúak
+1015;pienini tarsza;50000;2008;ízeltlábúak
+1016;szalagos díszbogár;10000;2008;ízeltlábúak
+1017;szilfa-tarkadíszbogár;10000;2008;ízeltlábúak
+1018;törpebusalepke;10000;2008;ízeltlábúak
+1019;tükrös busalepke;10000;2008;ízeltlábúak
+1020;vérfű-aranybagoly (nemes aranybagoly);50000;2008;ízeltlábúak
+1021;barátréce;50000;2008;madarak
+1022;böjti réce;100000;2008;madarak
+1023;apró fillércsiga (kis lemezcsiga);5000;2008;puhatestűek
+1024;folyami rák;50000;2009;ízeltlábúak
+1025;kecskerák;50000;2009;ízeltlábúak
+1026;törpeegér;25000;2012;emlősök
+1027;alföldi gyászbogár;50000;2012;ízeltlábúak
+1028;alföldi homokfutrinka;10000;2012;ízeltlábúak
+1029;apró boglárka;10000;2012;ízeltlábúak
+1030;aranyfoltú aranybagoly;10000;2012;ízeltlábúak
+1031;azúr bűzfutó;10000;2012;ízeltlábúak
+1032;barna gyalogcincér;5000;2012;ízeltlábúak
+1033;barna szemeslepke;10000;2012;ízeltlábúak
+1034;barnás tarkalepke;10000;2012;ízeltlábúak
+1035;békabogyó-törpearaszoló;10000;2012;ízeltlábúak
+1036;Brauer-álkérész;5000;2012;ízeltlábúak
+1037;bükkfa-díszbogár;10000;2012;ízeltlábúak
+1038;citromlepke;5000;2012;ízeltlábúak
+1039;cseresznyefa-virágdíszbogár;10000;2012;ízeltlábúak
+1040;cserlevélpohók;10000;2012;ízeltlábúak
+1041;csíkos busalepke;10000;2012;ízeltlábúak
+1042;csipkés iszalagaraszoló;10000;2012;ízeltlábúak
+1043;déli bűzbogár;10000;2012;ízeltlábúak
+1044;déli holdszarvú-ganéjtúró;50000;2012;ízeltlábúak
+1045;déli homlokjegyestücsök;5000;2012;ízeltlábúak
+1046;déli nünüke;10000;2012;ízeltlábúak
+1047;díszes bűzfutó;10000;2012;ízeltlábúak
+1048;díszes nagyálkérész;5000;2012;ízeltlábúak
+1049;díszes nyárfacincér;10000;2012;ízeltlábúak
+1050;dolomit-földibagoly;50000;2012;ízeltlábúak
+1051;dombvidéki álkérész;5000;2012;ízeltlábúak
+1052;éger-bíborbogár;50000;2012;ízeltlábúak
+1053;égerfa-díszbogár;10000;2012;ízeltlábúak
+1054;erdei homokfutrinka;10000;2012;ízeltlábúak
+1055;erdei ökörszemlepke;50000;2012;ízeltlábúak
+1056;erdei tücsök;5000;2012;ízeltlábúak
+1057;érdes nünüke;5000;2012;ízeltlábúak
+1058;északi hangyaleső;50000;2012;ízeltlábúak
+1059;európai fogasállúbogár;50000;2012;ízeltlábúak
+1060;ezüstfoltos csuklyásbagoly;10000;2012;ízeltlábúak
+1061;fakó boglárka;5000;2012;ízeltlábúak
+1062;fakó csuklyásbagoly;5000;2012;ízeltlábúak
+1063;fakó nyárfabagoly;10000;2012;ízeltlábúak
+1064;fehércsíkú szerecsenlepke;10000;2012;ízeltlábúak
+1065;fehérfoltú kérész;5000;2012;ízeltlábúak
+1066;fekete araszoló;10000;2012;ízeltlábúak
+1067;feketejegyű rétibagoly;10000;2012;ízeltlábúak
+1068;fénylő boglárka;5000;2012;ízeltlábúak
+1069;fogastorkú lisztbogár;10000;2012;ízeltlábúak
+1070;fogasvállú állasbogár;10000;2012;ízeltlábúak
+1071;foltosszárnyú partifátyolka;10000;2012;ízeltlábúak
+1072;folyólakó nagyálkérész;5000;2012;ízeltlábúak
+1073;Frivaldszky-álkérész;10000;2012;ízeltlábúak
+1074;füstös álkérész;5000;2012;ízeltlábúak
+1075;füstös medvelepke;50000;2012;ízeltlábúak
+1076;füstösszárnyú fogólábú-fátyolka;10000;2012;ízeltlábúak
+1077;fűzfapattanó;50000;2012;ízeltlábúak
+1078;galajszender;5000;2012;ízeltlábúak
+1079;gödörkés nünüke;50000;2012;ízeltlábúak
+1080;Gozmány-csuklyásbagoly;10000;2012;ízeltlábúak
+1081;gyászbagoly;5000;2012;ízeltlábúak
+1082;gyöngypettyes bagoly;10000;2012;ízeltlábúak
+1083;Hagen-csőrösrovar;50000;2012;ízeltlábúak
+1084;hálózatos sóskabagoly;5000;2012;ízeltlábúak
+1085;halványzöld csipkésbagoly;10000;2012;ízeltlábúak
+1086;hamvas tölgybagoly;10000;2012;ízeltlábúak
+1087;Hayward-sárgafűbagoly;10000;2012;ízeltlábúak
+1088;hegyi busalepke;10000;2012;ízeltlábúak
+1089;hegyi púposszövő;10000;2012;ízeltlábúak
+1090;hengeres szúfarkas;50000;2012;ízeltlábúak
+1091;homályos busalepke;10000;2012;ízeltlábúak
+1092;homokásó álkérész;5000;2012;ízeltlábúak
+1093;homoki bársonyfutó;10000;2012;ízeltlábúak
+1094;homoki hangyaleső;5000;2012;ízeltlábúak
+1095;homoki szemeslepke;10000;2012;ízeltlábúak
+1096;homoki zöldaraszoló;10000;2012;ízeltlábúak
+1097;homoki zöldbagoly;10000;2012;ízeltlábúak
+1098;homoki-csuklyásbagoly;10000;2012;ízeltlábúak
+1099;hosszúlábú csőrösrovar;10000;2012;ízeltlábúak
+1100;i-betűs aranybagoly;10000;2012;ízeltlábúak
+1101;ibolyaszín boglárka;10000;2012;ízeltlábúak
+1102;jakabfű-lepke;5000;2012;ízeltlábúak
+1103;karéliai kérész;100000;2012;ízeltlábúak
+1104;kecskefűzcincér;50000;2012;ízeltlábúak
+1105;Keffermüller-denevérszárnyú-kérész;10000;2012;ízeltlábúak
+1106;kékes laposfutó;50000;2012;ízeltlábúak
+1107;keskenyszárnyú csüdfűbagoly;50000;2012;ízeltlábúak
+1108;keskenyszárnyú fabagoly;5000;2012;ízeltlábúak
+1109;kétfoltos hangyaleső;5000;2012;ízeltlábúak
+1110;kétfoltos pöfögőfutó;10000;2012;ízeltlábúak
+1111;kétsávos földicincér;5000;2012;ízeltlábúak
+1112;kis fémesszarvasbogár;5000;2012;ízeltlábúak
+1113;kis hangyaleső;10000;2012;ízeltlábúak
+1114;kis hőscincér;5000;2012;ízeltlábúak
+1115;kis ökörszemlepke;10000;2012;ízeltlábúak
+1116;kis tarkalepke;5000;2012;ízeltlábúak
+1117;kockás tarkalepke;10000;2012;ízeltlábúak
+1118;kökény-csücsköslepke;10000;2012;ízeltlábúak
+1119;körtebagoly;10000;2012;ízeltlábúak
+1120;közönséges szemeslepke;5000;2012;ízeltlábúak
+1121;közönséges szerecsenlepke;50000;2012;ízeltlábúak
+1122;kunsági hangyafarkas;10000;2012;ízeltlábúak
+1123;létracincér;10000;2012;ízeltlábúak
+1124;ligeti sávosaraszoló;10000;2012;ízeltlábúak
+1125;málna-gyöngyházlepke;5000;2012;ízeltlábúak
+1126;márványos virágbogár;5000;2012;ízeltlábúak
+1127;mediterrán fogólábú-fátyolka;10000;2012;ízeltlábúak
+1128;mezei homokfutrinka;5000;2012;ízeltlábúak
+1129;Mocsáry-álkérész;100000;2012;ízeltlábúak
+1130;nagy aknásfutó;10000;2012;ízeltlábúak
+1131;nagy fémesszarvasbogár;5000;2012;ízeltlábúak
+1132;nagy gyöngyházlepke;5000;2012;ízeltlábúak
+1133;nagy nappaliaraszoló;10000;2012;ízeltlábúak
+1134;nagy vízibagoly;5000;2012;ízeltlábúak
+1135;nagyfejű csajkó;10000;2012;ízeltlábúak
+1136;nagyszemes boglárka;5000;2012;ízeltlábúak
+1137;négyfoltos hangyaleső;5000;2012;ízeltlábúak
+1138;nyárfa-díszbogár;10000;2012;ízeltlábúak
+1139;nyírfa-csücsköslepke;5000;2012;ízeltlábúak
+1140;nyírfa-díszbogár;50000;2012;ízeltlábúak
+1141;nyolcpontos cincér;10000;2012;ízeltlábúak
+1142;nyugati homokfutrinka;10000;2012;ízeltlábúak
+1143;ördögszem-apróbagoly;50000;2012;ízeltlábúak
+1144;óriás-szürkebagoly;10000;2012;ízeltlábúak
+1145;óriás-télibagoly;5000;2012;ízeltlábúak
+1146;óriásnünüke;10000;2012;ízeltlábúak
+1147;őszirózsa-csuklyásbagoly;5000;2012;ízeltlábúak
+1148;öves homokfutrinka;10000;2012;ízeltlábúak
+1149;palakék boglárka;5000;2012;ízeltlábúak
+1150;palakék törpebagoly;10000;2012;ízeltlábúak
+1151;parlagi homokfutrinka;5000;2012;ízeltlábúak
+1152;parti homokfutrinka;10000;2012;ízeltlábúak
+1153;pettyes fehéraraszoló;50000;2012;ízeltlábúak
+1154;pettyes szilcincér;10000;2012;ízeltlábúak
+1155;pompás nünüke;50000;2012;ízeltlábúak
+1156;porfírbagoly;10000;2012;ízeltlábúak
+1157;rábai kérész;10000;2012;ízeltlábúak
+1158;ráncos nünüke;5000;2012;ízeltlábúak
+1159;recés tarkalepke;10000;2012;ízeltlábúak
+1160;redős virágdíszbogár;10000;2012;ízeltlábúak
+1161;réti törpebagoly;10000;2012;ízeltlábúak
+1162;rezes virágbogár;50000;2012;ízeltlábúak
+1163;rézfényű földibagoly;10000;2012;ízeltlábúak
+1164;rezgőnyár-araszoló;50000;2012;ízeltlábúak
+1165;ritka fahéjbagoly;10000;2012;ízeltlábúak
+1166;rőt gyapjaslepke;10000;2012;ízeltlábúak
+1167;Roubal-gyalogormányos;50000;2012;ízeltlábúak
+1168;rövidhátú paránykérész;5000;2012;ízeltlábúak
+1169;rózsaszínű törpebagoly;50000;2012;ízeltlábúak
+1170;rozsdás hangyaleső;5000;2012;ízeltlábúak
+1171;rozsdaszínű gyöngyházlepke;5000;2012;ízeltlábúak
+1172;sápadt denevérszárnyú-kérész;5000;2012;ízeltlábúak
+1173;sárgafoltos zömökdíszbogár;5000;2012;ízeltlábúak
+1174;sárgafoltú kuszabagoly;5000;2012;ízeltlábúak
+1175;sárgásszürke törpearaszoló;5000;2012;ízeltlábúak
+1176;sávos zuzmóaraszoló;10000;2012;ízeltlábúak
+1177;Schönemund-álkérész;5000;2012;ízeltlábúak
+1178;selymes alkonycincér;10000;2012;ízeltlábúak
+1179;seprősüröm-csuklyásbagoly;10000;2012;ízeltlábúak
+1180;sima gyászbogár;50000;2012;ízeltlábúak
+1181;sima holttettetős-ormányos;10000;2012;ízeltlábúak
+1182;smaragdzöld virágbogár;10000;2012;ízeltlábúak
+1183;sötét őszibagoly;5000;2012;ízeltlábúak
+1184;sötétfoltos araszoló;50000;2012;ízeltlábúak
+1185;székfű-csuklyásbagoly;5000;2012;ízeltlábúak
+1186;szélessávú aranybagoly;50000;2012;ízeltlábúak
+1187;szemes boglárka;5000;2012;ízeltlábúak
+1188;szemvidító araszoló;10000;2012;ízeltlábúak
+1189;szerecsenboglárka;5000;2012;ízeltlábúak
+1190;sziki homokfutrinka;10000;2012;ízeltlábúak
+1191;sziklalakó csalánbagoly;10000;2012;ízeltlábúak
+1192;szilfaaraszoló;10000;2012;ízeltlábúak
+1193;szilvafa-csücsköslepke;5000;2012;ízeltlábúak
+1194;szőrös szarvasbogár;5000;2012;ízeltlábúak
+1195;szürke hegyiaraszoló;10000;2012;ízeltlábúak
+1196;szürkés zanótaraszoló;10000;2012;ízeltlábúak
+1197;t-betűs pávaszem;5000;2012;ízeltlábúak
+1198;tar nünüke;10000;2012;ízeltlábúak
+1199;tarka pikkelyespattanó;10000;2012;ízeltlábúak
+1200;tavaszi szerecsenlepke;5000;2012;ízeltlábúak
+1201;tavaszigörvélyfű-csuklyásbagoly;5000;2012;ízeltlábúak
+1202;tölgyfalepke;5000;2012;ízeltlábúak
+1203;uráli nünüke;50000;2012;ízeltlábúak
+1204;vágotthasú kérész;5000;2012;ízeltlábúak
+1205;vaskos tövisnyakúbogár;50000;2012;ízeltlábúak
+1206;vastagkarmú kérész;10000;2012;ízeltlábúak
+1207;vonalkás csuklyásbagoly;5000;2012;ízeltlábúak
+1208;vörhenyes csorvány;10000;2012;ízeltlábúak
+1209;vörhenyes gyapjasszövő;10000;2012;ízeltlábúak
+1210;vörhenyes nappaliaraszoló;5000;2012;ízeltlábúak
+1211;vöröses zanótaraszoló;10000;2012;ízeltlábúak
+1212;vöröshasú nünüke;50000;2012;ízeltlábúak
+1213;zöld aranybagoly;10000;2012;ízeltlábúak
+1214;bajszos poszáta;25000;2012;madarak
+1215;csörgő réce;50000;2012;madarak
+1216;erdei sármány;25000;2012;madarak
+1217;kék kövirigó;25000;2012;madarak
+1218;kékfarkú;25000;2012;madarak
+1219;korallsirály;50000;2012;madarak
+1220;kuhi;50000;2012;madarak
+1221;pettyes kakukk;25000;2012;madarak
+1222;szuharbújó;25000;2012;madarak
+1223;csinos fátyolka;10000;2015;ízeltlábúak
+1224;fekete vízifátyolka;50000;2015;ízeltlábúak
+1225;sárgafejű bikapók;5000;2015;ízeltlábúak
+1226;skarlát bikapók;5000;2015;ízeltlábúak
+1227;szeplős díszbogár;10000;2015;ízeltlábúak
+1228;sziklai tevenyakú;50000;2015;ízeltlábúak
+1229;tengeri pisztráng;10000;2022;halak
+1230;aggteleki ugróvillás;25000;2022;ízeltlábúak
+1231;alvilági százlábú;25000;2022;ízeltlábúak
+1232;barlangi keresztespók;5000;2022;ízeltlábúak
+1233;Bokor-szövőezerlábú;25000;2022;ízeltlábúak
+1234;Forró-vakbolharák;50000;2022;ízeltlábúak
+1235;hárs- tavasziaraszoló;10000;2022;ízeltlábúak
+1236;magyar ősászka;50000;2022;ízeltlábúak
+1237;magyar szálfarkú;50000;2022;ízeltlábúak
+1238;rácsos zsákhordólepke;10000;2022;ízeltlábúak
+1239;szemercsés vakászka;10000;2022;ízeltlábúak
+1240;szibériai csilpcsalpfüzike;25000;2022;madarak
+1241;trombitás sivatagipinty;25000;2022;madarak
+1242;kácsi patakcsiga;10000;2022;puhatestűek
