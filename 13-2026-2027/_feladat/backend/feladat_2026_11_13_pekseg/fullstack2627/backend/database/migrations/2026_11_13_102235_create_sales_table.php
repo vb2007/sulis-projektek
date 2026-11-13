@@ -13,7 +13,10 @@ return new class extends Migration
     {
         Schema::create('sales', function (Blueprint $table) {
             $table->id();
-            $table->timestamps();
+            $table->date("date");
+            $table->foreignId("location_id")->constrained("locations", "id");
+            $table->decimal("revenue")->nullable();
+            // $table->timestamps();
         });
     }
 
