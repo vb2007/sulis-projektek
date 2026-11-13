@@ -13,6 +13,10 @@ return new class extends Migration
     {
         Schema::create('locations', function (Blueprint $table) {
             $table->id();
+            $table->string("address", 200);
+            $table->time("opening_time")->nullable(true);
+            $table->time("closing_time")->nullable(true);
+            $table->string("image", 50);
             $table->timestamps();
         });
     }
