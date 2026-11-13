@@ -1,0 +1,273 @@
+openapi: "3.1.0"
+info:
+  title: Pufi Pékség API
+  version: 1.0.0
+  description: Készítse el az API-t a feladat leírása és az alábbi dokumentáció alapján!
+servers:
+  - url: http://backend.vm1.test
+    description: VM1
+  - url: http://backend.vm2.test
+    description: VM2
+  - url: http://backend.vm3.test
+    description: VM3
+  - url: http://backend.vm4.test
+    description: VM4
+  - url: http://backend.vm5.test
+    description: VM5
+  - url: http://backend.vm6.test
+    description: VM6
+
+paths:
+  /api/products:
+    get:
+      tags:
+        - Product
+      summary: Árucikkek listájának lekérése
+      description: |
+        Az `index` action adja vissza az összes árucikk adatát!
+        
+        Opcionálisan lehessen szűrni a query string-ben a termék neve alapján, ebben az esetben azokat a termékeket jelenítse meg, amelyek neve tartalmazza a kapott értéket!
+      parameters:
+        - name: name
+          in: query
+          description: Az árucikk nevének részlete
+          schema:
+            type: string
+            maxLength: 30
+      operationId: products.index
+      responses:
+        '200':
+          description: Árucikkek listája
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  data:
+                    type: array
+                    items:
+                      $ref: '#/components/schemas/ProductResource'
+                example: {"data":[{"id":1,"name":"Keny\u00e9r","price":899,"unit":"kg","image":"http:\/\/backend.vm1.test\/images\/products\/bread.png"},{"id":2,"name":"Csokol\u00e1d\u00e9s muffin","price":499,"unit":"piece","image":"http:\/\/backend.vm1.test\/images\/products\/chocolate-cupcake.png"},{"id":3,"name":"Croissant","price":399,"unit":"piece","image":"http:\/\/backend.vm1.test\/images\/products\/croissant.png"},{"id":4,"name":"F\u00e9lbarna keny\u00e9r","price":799,"unit":"kg","image":"http:\/\/backend.vm1.test\/images\/products\/hard-dough-bread.png"},{"id":5,"name":"Vizes zsemle","price":89,"unit":"piece","image":"http:\/\/backend.vm1.test\/images\/products\/hard-dough-roll.png"},{"id":6,"name":"Hot dog kifli","price":149,"unit":"piece","image":"http:\/\/backend.vm1.test\/images\/products\/hot-dog-bun.png"},{"id":7,"name":"Hossz\u00fak\u00e1s kifli","price":129,"unit":"piece","image":"http:\/\/backend.vm1.test\/images\/products\/long-hard-dough-roll.png"},{"id":8,"name":"Mini fah\u00e9jas csiga","price":599,"unit":"pack","image":"http:\/\/backend.vm1.test\/images\/products\/mini-cinnamon-rolls.png"},{"id":9,"name":"Pain au chocolat","price":499,"unit":"piece","image":"http:\/\/backend.vm1.test\/images\/products\/pain-au-chocolat.png"},{"id":10,"name":"Zsemle","price":79,"unit":"piece","image":"http:\/\/backend.vm1.test\/images\/products\/roll.png"},{"id":11,"name":"Szard\u00edni\u00e1s keny\u00e9r","price":699,"unit":"piece","image":"http:\/\/backend.vm1.test\/images\/products\/sardine-bread.png"}]}
+  /api/products/{id}:
+    get:
+      tags:
+        - Product
+      summary: Egy adott árucikk lekérése
+      description: |
+        A `show` action adja vissza az adott azonosítójú árucikk adatait!
+      operationId: products.show
+      parameters:
+        - name: id
+          in: path
+          required: true
+          description: Az árucikk azonosítója
+          schema:
+            type: integer
+            default: 1
+      responses:
+        '200':
+          description: Egy adott árucikk adatai
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  data:
+                    $ref: '#/components/schemas/ProductResource'
+                example: {"data":{"id":1,"name":"Keny\u00e9r","price":899,"unit":"kg","image":"http:\/\/backend.vm1.test\/images\/products\/bread.png"}}
+        '404':
+          description: Nem található ilyen azonosítójú árucikk
+  /api/locations:
+    get:
+      tags:
+        - Location
+      summary: Üzletek listájának lekérése
+      description: |
+        Az `index` action adja vissza az összes üzlet adatát!
+        
+        Opcionálisan lehessen szűrni a query string-ben az üzlet városa alapján, ebben az esetben azokat az üzleteket jelenítse meg, amelyek városa tartalmazza a kapott értéket!
+      parameters:
+        - name: city
+          in: query
+          description: Egy adott város neve
+          schema:
+            type: string
+      operationId: locations.index
+      responses:
+        '200':
+          description: Üzletek listája
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  data:
+                    type: array
+                    items:
+                      $ref: '#/components/schemas/LocationResource'
+                example: {"data":[{"id":1,"address":"Szombathely, Balogh k\u00f6r\u00fat 4.","opening_time":"09:00:00","closing_time":"19:00:00","image":"http:\/\/backend.vm1.test\/images\/locations\/bakery-9.jpeg"},{"id":2,"address":"Budapest, Fodor k\u00f6z 52.","opening_time":"09:00:00","closing_time":"19:00:00","image":"http:\/\/backend.vm1.test\/images\/locations\/bakery-8.jpeg"},{"id":3,"address":"Kom\u00e1rom, Szandra \u00f6sv\u00e9ny 24.","opening_time":"05:00:00","closing_time":"18:00:00","image":"http:\/\/backend.vm1.test\/images\/locations\/bakery-7.jpeg"},{"id":4,"address":"Ny\u00edregyh\u00e1za, M\u00e1t\u00e9 s\u00e9ta\u00fat 31.","opening_time":"09:00:00","closing_time":"20:00:00","image":"http:\/\/backend.vm1.test\/images\/locations\/bakery-6.jpeg"},{"id":5,"address":"Budapest, Patr\u00edcia l\u00e9pcs\u0151 43.","opening_time":"06:00:00","closing_time":"19:00:00","image":"http:\/\/backend.vm1.test\/images\/locations\/bakery-4.jpeg"},{"id":6,"address":"Szombathely, Nikoletta udvar 30.","opening_time":"08:00:00","closing_time":"21:00:00","image":"http:\/\/backend.vm1.test\/images\/locations\/bakery-9.jpeg"},{"id":7,"address":"Budapest, Attila d\u0171l\u0151\u00fat 13.","opening_time":"06:00:00","closing_time":"19:00:00","image":"http:\/\/backend.vm1.test\/images\/locations\/bakery-1.jpeg"},{"id":8,"address":"Duna\u00fajv\u00e1ros, Kocsis \u00fatja 96.","opening_time":"06:00:00","closing_time":"19:00:00","image":"http:\/\/backend.vm1.test\/images\/locations\/bakery-3.jpeg"},{"id":9,"address":"Budapest, Panna kert 842.","opening_time":"05:00:00","closing_time":"19:00:00","image":"http:\/\/backend.vm1.test\/images\/locations\/bakery-6.jpeg"},{"id":10,"address":"Salg\u00f3tarj\u00e1n, Patr\u00edcia l\u00e9pcs\u0151 9.","opening_time":"07:00:00","closing_time":"18:00:00","image":"http:\/\/backend.vm1.test\/images\/locations\/bakery-1.jpeg"},{"id":11,"address":"Budapest, Alexa \u00e1tj\u00e1r\u00f3 8.","opening_time":"09:00:00","closing_time":"21:00:00","image":"http:\/\/backend.vm1.test\/images\/locations\/bakery-6.jpeg"},{"id":12,"address":"Budapest, Bakos d\u0171l\u0151\u00fat 375.","opening_time":"06:00:00","closing_time":"18:00:00","image":"http:\/\/backend.vm1.test\/images\/locations\/bakery-5.jpeg"},{"id":13,"address":"\u00c9rd, Bor\u00f3ka s\u00e9ta\u00fat 70.","opening_time":"09:00:00","closing_time":"20:00:00","image":"http:\/\/backend.vm1.test\/images\/locations\/bakery-9.jpeg"},{"id":14,"address":"Sz\u00e9kesfeh\u00e9rv\u00e1r, Vincze pincesor 41.","opening_time":"09:00:00","closing_time":"20:00:00","image":"http:\/\/backend.vm1.test\/images\/locations\/bakery-7.jpeg"},{"id":15,"address":"J\u00e1szber\u00e9ny, Heged\u0171s lej\u00e1r\u00f3 6.","opening_time":"05:00:00","closing_time":"19:00:00","image":"http:\/\/backend.vm1.test\/images\/locations\/bakery-8.jpeg"},{"id":16,"address":"Szeged, Balogh k\u00f6r\u00fat 819.","opening_time":"05:00:00","closing_time":"21:00:00","image":"http:\/\/backend.vm1.test\/images\/locations\/bakery-2.jpeg"},{"id":17,"address":"Budapest, Ol\u00edvia utca 79.","opening_time":"07:00:00","closing_time":"20:00:00","image":"http:\/\/backend.vm1.test\/images\/locations\/bakery-3.jpeg"},{"id":18,"address":"Salg\u00f3tarj\u00e1n, Andrea \u00e1rok 277.","opening_time":"05:00:00","closing_time":"21:00:00","image":"http:\/\/backend.vm1.test\/images\/locations\/bakery-2.jpeg"},{"id":19,"address":"Sopron, Heged\u00fcs part 995.","opening_time":"05:00:00","closing_time":"18:00:00","image":"http:\/\/backend.vm1.test\/images\/locations\/bakery-8.jpeg"},{"id":20,"address":"Budapest, Zolt\u00e1n hat\u00e1r\u00fat 3.","opening_time":"07:00:00","closing_time":"18:00:00","image":"http:\/\/backend.vm1.test\/images\/locations\/bakery-6.jpeg"},{"id":21,"address":"B\u00e9k\u00e9scsaba, Antal \u00f6sv\u00e9ny 15.","opening_time":"08:00:00","closing_time":"18:00:00","image":"http:\/\/backend.vm1.test\/images\/locations\/bakery-3.jpeg"},{"id":22,"address":"Budapest, Tak\u00e1cs k\u00f6rt\u00e9r 9.","opening_time":"05:00:00","closing_time":"19:00:00","image":"http:\/\/backend.vm1.test\/images\/locations\/bakery-4.jpeg"},{"id":23,"address":"Budapest, \u00c1rmin \u00f6sv\u00e9ny 1.","opening_time":"04:00:00","closing_time":"20:00:00","image":"http:\/\/backend.vm1.test\/images\/locations\/bakery-7.jpeg"},{"id":24,"address":"Budapest, \u00c1d\u00e1m hat\u00e1rsor 19.","opening_time":"06:00:00","closing_time":"18:00:00","image":"http:\/\/backend.vm1.test\/images\/locations\/bakery-3.jpeg"},{"id":25,"address":"H\u00f3dmez\u0151v\u00e1s\u00e1rhely, Gr\u00e9ta utca 13.","opening_time":"06:00:00","closing_time":"21:00:00","image":"http:\/\/backend.vm1.test\/images\/locations\/bakery-2.jpeg"},{"id":26,"address":"Budapest, Orosz k\u00f6rt\u00e9r 6.","opening_time":"09:00:00","closing_time":"20:00:00","image":"http:\/\/backend.vm1.test\/images\/locations\/bakery-6.jpeg"},{"id":27,"address":"Gy\u0151r, Gabriella fordul\u00f3 91.","opening_time":"05:00:00","closing_time":"19:00:00","image":"http:\/\/backend.vm1.test\/images\/locations\/bakery-1.jpeg"},{"id":28,"address":"Tatab\u00e1nya, \u00c1ron orsz\u00e1g\u00fat 2.","opening_time":"07:00:00","closing_time":"21:00:00","image":"http:\/\/backend.vm1.test\/images\/locations\/bakery-8.jpeg"},{"id":29,"address":"Gy\u0151r, Antal erd\u0151sor 27.","opening_time":"05:00:00","closing_time":"19:00:00","image":"http:\/\/backend.vm1.test\/images\/locations\/bakery-8.jpeg"},{"id":30,"address":"Budapest, Bogd\u00e1n \u00e1rok 21.","opening_time":"06:00:00","closing_time":"21:00:00","image":"http:\/\/backend.vm1.test\/images\/locations\/bakery-0.jpeg"}]}
+  /api/locations/{id}:
+    get:
+      tags:
+        - Location
+      summary: Egy adott üzlet lekérése
+      description: |
+        A `show` action adja vissza az adott azonosítójú üzlet adatait!
+      operationId: locations.show
+      parameters:
+        - name: id
+          in: path
+          required: true
+          description: az üzlet azonosítója
+          schema:
+            type: integer
+            default: 1
+      responses:
+        '200':
+          description: Egy adott üzlet adatai
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  data:
+                    $ref: '#/components/schemas/LocationResource'
+                example: {"data":{"id":1,"address":"Szombathely, Balogh k\u00f6r\u00fat 4.","opening_time":"09:00:00","closing_time":"19:00:00","image":"http:\/\/backend.vm1.test\/images\/locations\/bakery-9.jpeg"}}
+        '404':
+          description: Nem található ilyen azonosítójú üzlet
+  /api/sales:
+    get:
+      tags:
+        - Sale
+      summary: Eladások listájának lekérése
+      description: |
+        Az `index` action adja vissza az összes eladás adatát!
+      operationId: sales.index
+      responses:
+        '200':
+          description: Eladások listája
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  data:
+                    type: array
+                    items:
+                      $ref: '#/components/schemas/SaleResource'
+                example: {"data":[{"id":1,"date":"2026-10-22","location_id":29,"revenue":"46149.00"},{"id":2,"date":"2026-10-07","location_id":8,"revenue":"42548.00"},{"id":3,"date":"2026-10-04","location_id":22,"revenue":"36783.00"},{"id":4,"date":"2026-10-07","location_id":24,"revenue":"39582.00"},{"id":5,"date":"2026-10-10","location_id":23,"revenue":"38461.00"},{"id":6,"date":"2026-10-12","location_id":5,"revenue":"31841.00"},{"id":7,"date":"2026-10-25","location_id":24,"revenue":"42650.00"},{"id":8,"date":"2026-10-13","location_id":14,"revenue":"36644.00"},{"id":9,"date":"2026-10-01","location_id":7,"revenue":"31184.00"},{"id":10,"date":"2026-10-07","location_id":8,"revenue":"38142.00"},{"id":11,"date":"2026-11-02","location_id":20,"revenue":"40784.00"},{"id":12,"date":"2026-11-03","location_id":8,"revenue":"46992.00"},{"id":13,"date":"2026-10-23","location_id":2,"revenue":"32134.00"},{"id":14,"date":"2026-10-06","location_id":27,"revenue":"45354.00"},{"id":15,"date":"2026-10-12","location_id":17,"revenue":"47517.00"},{"id":16,"date":"2026-11-03","location_id":11,"revenue":"39107.00"},{"id":17,"date":"2026-10-28","location_id":27,"revenue":"38683.00"},{"id":18,"date":"2026-10-13","location_id":11,"revenue":"47714.00"},{"id":19,"date":"2026-10-10","location_id":8,"revenue":"39261.00"},{"id":20,"date":"2026-10-04","location_id":27,"revenue":"44472.00"},{"id":21,"date":"2026-10-21","location_id":13,"revenue":"36790.00"},{"id":22,"date":"2026-10-13","location_id":20,"revenue":"40490.00"},{"id":23,"date":"2026-10-07","location_id":11,"revenue":"47005.00"},{"id":24,"date":"2026-10-13","location_id":10,"revenue":"42316.00"},{"id":25,"date":"2026-10-10","location_id":24,"revenue":"46453.00"},{"id":26,"date":"2026-10-20","location_id":30,"revenue":"35045.00"},{"id":27,"date":"2026-10-02","location_id":11,"revenue":"48493.00"},{"id":28,"date":"2026-10-07","location_id":11,"revenue":"35838.00"},{"id":29,"date":"2026-10-13","location_id":5,"revenue":"44987.00"},{"id":30,"date":"2026-10-05","location_id":21,"revenue":"49168.00"},{"id":31,"date":"2026-10-17","location_id":15,"revenue":"35564.00"},{"id":32,"date":"2026-11-01","location_id":29,"revenue":"44295.00"},{"id":33,"date":"2026-10-25","location_id":19,"revenue":"31737.00"},{"id":34,"date":"2026-10-02","location_id":26,"revenue":"47770.00"},{"id":35,"date":"2026-10-16","location_id":15,"revenue":"30235.00"},{"id":36,"date":"2026-11-04","location_id":15,"revenue":"49964.00"},{"id":37,"date":"2026-11-01","location_id":21,"revenue":"37921.00"},{"id":38,"date":"2026-10-26","location_id":26,"revenue":"37716.00"},{"id":39,"date":"2026-10-26","location_id":18,"revenue":"40014.00"},{"id":40,"date":"2026-10-11","location_id":2,"revenue":"44069.00"},{"id":41,"date":"2026-10-30","location_id":4,"revenue":"39291.00"},{"id":42,"date":"2026-11-04","location_id":12,"revenue":"43031.00"},{"id":43,"date":"2026-10-30","location_id":17,"revenue":"30949.00"},{"id":44,"date":"2026-10-07","location_id":30,"revenue":"45151.00"},{"id":45,"date":"2026-11-04","location_id":6,"revenue":"40420.00"},{"id":46,"date":"2026-10-20","location_id":9,"revenue":"36636.00"},{"id":47,"date":"2026-10-06","location_id":26,"revenue":"36002.00"},{"id":48,"date":"2026-10-28","location_id":9,"revenue":"47888.00"},{"id":49,"date":"2026-10-27","location_id":1,"revenue":"36834.00"},{"id":50,"date":"2026-10-06","location_id":22,"revenue":"47484.00"},{"id":51,"date":"2026-10-20","location_id":10,"revenue":"37956.00"},{"id":52,"date":"2026-10-28","location_id":13,"revenue":"45042.00"},{"id":53,"date":"2026-10-12","location_id":13,"revenue":"41189.00"},{"id":54,"date":"2026-10-02","location_id":3,"revenue":"36314.00"},{"id":55,"date":"2026-10-07","location_id":27,"revenue":"34530.00"},{"id":56,"date":"2026-10-12","location_id":9,"revenue":"34516.00"},{"id":57,"date":"2026-10-13","location_id":1,"revenue":"42703.00"},{"id":58,"date":"2026-10-12","location_id":9,"revenue":"49066.00"},{"id":59,"date":"2026-10-30","location_id":3,"revenue":"35632.00"},{"id":60,"date":"2026-10-09","location_id":24,"revenue":"39382.00"},{"id":61,"date":"2026-10-25","location_id":24,"revenue":"34667.00"},{"id":62,"date":"2026-10-03","location_id":2,"revenue":"45363.00"},{"id":63,"date":"2026-10-01","location_id":22,"revenue":"48639.00"},{"id":64,"date":"2026-10-15","location_id":29,"revenue":"38724.00"},{"id":65,"date":"2026-10-19","location_id":9,"revenue":"39957.00"},{"id":66,"date":"2026-10-03","location_id":20,"revenue":"43406.00"},{"id":67,"date":"2026-10-09","location_id":7,"revenue":"36402.00"},{"id":68,"date":"2026-10-12","location_id":5,"revenue":"49176.00"},{"id":69,"date":"2026-10-28","location_id":19,"revenue":"45103.00"},{"id":70,"date":"2026-10-07","location_id":10,"revenue":"43959.00"},{"id":71,"date":"2026-10-27","location_id":4,"revenue":"38540.00"},{"id":72,"date":"2026-10-14","location_id":23,"revenue":"39030.00"},{"id":73,"date":"2026-10-15","location_id":21,"revenue":"42335.00"},{"id":74,"date":"2026-10-30","location_id":1,"revenue":"44785.00"},{"id":75,"date":"2026-11-03","location_id":4,"revenue":"47841.00"},{"id":76,"date":"2026-10-25","location_id":7,"revenue":"48376.00"},{"id":77,"date":"2026-10-19","location_id":14,"revenue":"37258.00"},{"id":78,"date":"2026-10-06","location_id":20,"revenue":"36579.00"},{"id":79,"date":"2026-10-29","location_id":14,"revenue":"47799.00"},{"id":80,"date":"2026-10-13","location_id":4,"revenue":"40955.00"},{"id":81,"date":"2026-10-02","location_id":16,"revenue":"39591.00"},{"id":82,"date":"2026-10-26","location_id":30,"revenue":"33321.00"},{"id":83,"date":"2026-10-09","location_id":17,"revenue":"45944.00"},{"id":84,"date":"2026-10-23","location_id":17,"revenue":"47836.00"},{"id":85,"date":"2026-10-13","location_id":24,"revenue":"49995.00"},{"id":86,"date":"2026-10-28","location_id":28,"revenue":"47286.00"},{"id":87,"date":"2026-10-26","location_id":9,"revenue":"48272.00"},{"id":88,"date":"2026-10-24","location_id":14,"revenue":"31515.00"},{"id":89,"date":"2026-10-12","location_id":18,"revenue":"33056.00"},{"id":90,"date":"2026-10-21","location_id":13,"revenue":"47726.00"},{"id":91,"date":"2026-10-22","location_id":21,"revenue":"43628.00"},{"id":92,"date":"2026-10-09","location_id":15,"revenue":"33766.00"},{"id":93,"date":"2026-10-06","location_id":16,"revenue":"30597.00"},{"id":94,"date":"2026-10-21","location_id":16,"revenue":"46425.00"},{"id":95,"date":"2026-10-03","location_id":26,"revenue":"34838.00"},{"id":96,"date":"2026-10-13","location_id":17,"revenue":"41142.00"},{"id":97,"date":"2026-10-07","location_id":21,"revenue":"45824.00"},{"id":98,"date":"2026-10-21","location_id":5,"revenue":"45742.00"},{"id":99,"date":"2026-10-21","location_id":30,"revenue":"38200.00"},{"id":100,"date":"2026-10-24","location_id":10,"revenue":"37937.00"},{"id":101,"date":"2026-10-11","location_id":11,"revenue":"34025.00"},{"id":102,"date":"2026-10-15","location_id":4,"revenue":"30075.00"},{"id":103,"date":"2026-10-30","location_id":21,"revenue":"31898.00"},{"id":104,"date":"2026-10-25","location_id":1,"revenue":"41608.00"},{"id":105,"date":"2026-10-13","location_id":19,"revenue":"42882.00"},{"id":106,"date":"2026-10-23","location_id":23,"revenue":"45018.00"},{"id":107,"date":"2026-10-27","location_id":11,"revenue":"40374.00"},{"id":108,"date":"2026-10-20","location_id":22,"revenue":"37082.00"},{"id":109,"date":"2026-10-01","location_id":17,"revenue":"31988.00"},{"id":110,"date":"2026-10-13","location_id":13,"revenue":"45207.00"},{"id":111,"date":"2026-10-06","location_id":18,"revenue":"41472.00"},{"id":112,"date":"2026-10-12","location_id":14,"revenue":"34751.00"},{"id":113,"date":"2026-10-20","location_id":5,"revenue":"38517.00"},{"id":114,"date":"2026-10-17","location_id":17,"revenue":"34339.00"},{"id":115,"date":"2026-10-27","location_id":9,"revenue":"38058.00"},{"id":116,"date":"2026-10-02","location_id":22,"revenue":"40004.00"},{"id":117,"date":"2026-10-26","location_id":22,"revenue":"33134.00"},{"id":118,"date":"2026-10-22","location_id":26,"revenue":"35884.00"},{"id":119,"date":"2026-10-29","location_id":2,"revenue":"30885.00"},{"id":120,"date":"2026-11-03","location_id":18,"revenue":"33058.00"},{"id":121,"date":"2026-10-28","location_id":10,"revenue":"46628.00"},{"id":122,"date":"2026-10-23","location_id":25,"revenue":"48949.00"},{"id":123,"date":"2026-10-16","location_id":20,"revenue":"42356.00"},{"id":124,"date":"2026-10-06","location_id":16,"revenue":"48061.00"},{"id":125,"date":"2026-10-25","location_id":14,"revenue":"39030.00"},{"id":126,"date":"2026-10-01","location_id":28,"revenue":"32928.00"},{"id":127,"date":"2026-10-03","location_id":4,"revenue":"33651.00"},{"id":128,"date":"2026-10-03","location_id":22,"revenue":"34222.00"},{"id":129,"date":"2026-10-20","location_id":21,"revenue":"47569.00"},{"id":130,"date":"2026-10-23","location_id":14,"revenue":"42412.00"},{"id":131,"date":"2026-10-15","location_id":13,"revenue":"39091.00"},{"id":132,"date":"2026-10-30","location_id":1,"revenue":"44264.00"},{"id":133,"date":"2026-10-21","location_id":17,"revenue":"32231.00"},{"id":134,"date":"2026-10-03","location_id":4,"revenue":"44820.00"},{"id":135,"date":"2026-10-26","location_id":23,"revenue":"34414.00"},{"id":136,"date":"2026-10-22","location_id":9,"revenue":"32743.00"},{"id":137,"date":"2026-10-12","location_id":23,"revenue":"46553.00"},{"id":138,"date":"2026-10-14","location_id":27,"revenue":"38144.00"},{"id":139,"date":"2026-10-02","location_id":11,"revenue":"31214.00"},{"id":140,"date":"2026-10-13","location_id":19,"revenue":"30142.00"},{"id":141,"date":"2026-10-04","location_id":25,"revenue":"37305.00"},{"id":142,"date":"2026-10-28","location_id":4,"revenue":"36359.00"},{"id":143,"date":"2026-10-15","location_id":4,"revenue":"32116.00"},{"id":144,"date":"2026-10-06","location_id":4,"revenue":"38606.00"},{"id":145,"date":"2026-10-15","location_id":29,"revenue":"45867.00"},{"id":146,"date":"2026-10-20","location_id":6,"revenue":"33858.00"},{"id":147,"date":"2026-10-26","location_id":16,"revenue":"43341.00"},{"id":148,"date":"2026-10-12","location_id":20,"revenue":"39055.00"},{"id":149,"date":"2026-10-04","location_id":10,"revenue":"31285.00"},{"id":150,"date":"2026-10-06","location_id":8,"revenue":"42658.00"},{"id":151,"date":"2026-10-08","location_id":18,"revenue":"45941.00"},{"id":152,"date":"2026-10-28","location_id":19,"revenue":"44780.00"},{"id":153,"date":"2026-10-31","location_id":19,"revenue":"45354.00"},{"id":154,"date":"2026-10-30","location_id":30,"revenue":"45874.00"},{"id":155,"date":"2026-10-17","location_id":7,"revenue":"31489.00"},{"id":156,"date":"2026-10-07","location_id":27,"revenue":"41245.00"},{"id":157,"date":"2026-10-30","location_id":26,"revenue":"35856.00"},{"id":158,"date":"2026-10-15","location_id":7,"revenue":"33405.00"},{"id":159,"date":"2026-10-28","location_id":25,"revenue":"34752.00"},{"id":160,"date":"2026-10-22","location_id":10,"revenue":"38163.00"},{"id":161,"date":"2026-10-09","location_id":24,"revenue":"32588.00"},{"id":162,"date":"2026-10-31","location_id":3,"revenue":"41128.00"},{"id":163,"date":"2026-10-07","location_id":1,"revenue":"47347.00"},{"id":164,"date":"2026-10-15","location_id":30,"revenue":"33255.00"},{"id":165,"date":"2026-10-14","location_id":6,"revenue":"31341.00"},{"id":166,"date":"2026-10-24","location_id":29,"revenue":"35741.00"},{"id":167,"date":"2026-10-18","location_id":21,"revenue":"48869.00"},{"id":168,"date":"2026-10-23","location_id":23,"revenue":"38246.00"},{"id":169,"date":"2026-10-18","location_id":29,"revenue":"33448.00"},{"id":170,"date":"2026-10-05","location_id":12,"revenue":"41444.00"},{"id":171,"date":"2026-11-02","location_id":2,"revenue":"40332.00"},{"id":172,"date":"2026-10-03","location_id":26,"revenue":"46579.00"},{"id":173,"date":"2026-10-16","location_id":5,"revenue":"30280.00"},{"id":174,"date":"2026-10-18","location_id":20,"revenue":"37730.00"},{"id":175,"date":"2026-11-03","location_id":29,"revenue":"40534.00"},{"id":176,"date":"2026-10-29","location_id":14,"revenue":"41947.00"},{"id":177,"date":"2026-10-13","location_id":15,"revenue":"34029.00"},{"id":178,"date":"2026-10-03","location_id":16,"revenue":"39797.00"},{"id":179,"date":"2026-10-24","location_id":1,"revenue":"31675.00"},{"id":180,"date":"2026-10-09","location_id":3,"revenue":"39542.00"},{"id":181,"date":"2026-11-01","location_id":10,"revenue":"48627.00"},{"id":182,"date":"2026-11-04","location_id":8,"revenue":"45198.00"},{"id":183,"date":"2026-10-21","location_id":7,"revenue":"34378.00"},{"id":184,"date":"2026-10-03","location_id":5,"revenue":"39874.00"},{"id":185,"date":"2026-10-07","location_id":13,"revenue":"30970.00"},{"id":186,"date":"2026-10-02","location_id":9,"revenue":"34152.00"},{"id":187,"date":"2026-10-27","location_id":6,"revenue":"36621.00"},{"id":188,"date":"2026-10-12","location_id":15,"revenue":"35070.00"},{"id":189,"date":"2026-11-01","location_id":1,"revenue":"38028.00"},{"id":190,"date":"2026-10-10","location_id":4,"revenue":"33945.00"},{"id":191,"date":"2026-10-15","location_id":6,"revenue":"31784.00"},{"id":192,"date":"2026-11-01","location_id":11,"revenue":"30106.00"},{"id":193,"date":"2026-11-01","location_id":25,"revenue":"40474.00"},{"id":194,"date":"2026-10-21","location_id":15,"revenue":"31904.00"},{"id":195,"date":"2026-10-10","location_id":15,"revenue":"31318.00"},{"id":196,"date":"2026-10-30","location_id":25,"revenue":"39090.00"},{"id":197,"date":"2026-10-27","location_id":4,"revenue":"43422.00"},{"id":198,"date":"2026-10-08","location_id":29,"revenue":"41166.00"},{"id":199,"date":"2026-10-18","location_id":7,"revenue":"44719.00"},{"id":200,"date":"2026-10-13","location_id":12,"revenue":"47898.00"},{"id":201,"date":"2026-10-20","location_id":19,"revenue":null},{"id":202,"date":"2026-11-02","location_id":5,"revenue":null},{"id":203,"date":"2026-11-01","location_id":16,"revenue":null},{"id":204,"date":"2026-10-21","location_id":4,"revenue":null},{"id":205,"date":"2026-10-16","location_id":20,"revenue":null},{"id":206,"date":"2026-10-10","location_id":15,"revenue":null},{"id":207,"date":"2026-10-04","location_id":5,"revenue":null},{"id":208,"date":"2026-10-23","location_id":13,"revenue":null},{"id":209,"date":"2026-10-04","location_id":3,"revenue":null},{"id":210,"date":"2026-10-12","location_id":30,"revenue":null},{"id":211,"date":"2026-10-11","location_id":13,"revenue":null},{"id":212,"date":"2026-10-22","location_id":22,"revenue":null},{"id":213,"date":"2026-10-25","location_id":6,"revenue":null},{"id":214,"date":"2026-11-01","location_id":21,"revenue":null},{"id":215,"date":"2026-10-21","location_id":16,"revenue":null},{"id":216,"date":"2026-10-31","location_id":9,"revenue":null},{"id":217,"date":"2026-10-27","location_id":12,"revenue":null},{"id":218,"date":"2026-11-03","location_id":9,"revenue":null},{"id":219,"date":"2026-10-22","location_id":23,"revenue":null},{"id":220,"date":"2026-10-27","location_id":25,"revenue":null},{"id":221,"date":"2026-10-20","location_id":13,"revenue":null},{"id":222,"date":"2026-10-28","location_id":17,"revenue":null},{"id":223,"date":"2026-10-24","location_id":9,"revenue":null},{"id":224,"date":"2026-10-30","location_id":25,"revenue":null},{"id":225,"date":"2026-10-09","location_id":27,"revenue":null},{"id":226,"date":"2026-10-09","location_id":17,"revenue":null},{"id":227,"date":"2026-10-21","location_id":18,"revenue":null},{"id":228,"date":"2026-10-04","location_id":4,"revenue":null},{"id":229,"date":"2026-10-18","location_id":2,"revenue":null},{"id":230,"date":"2026-10-19","location_id":11,"revenue":null},{"id":231,"date":"2026-10-02","location_id":9,"revenue":null},{"id":232,"date":"2026-10-05","location_id":12,"revenue":null},{"id":233,"date":"2026-11-03","location_id":19,"revenue":null},{"id":234,"date":"2026-10-27","location_id":30,"revenue":null},{"id":235,"date":"2026-10-09","location_id":19,"revenue":null},{"id":236,"date":"2026-10-12","location_id":16,"revenue":null},{"id":237,"date":"2026-10-23","location_id":24,"revenue":null},{"id":238,"date":"2026-10-31","location_id":9,"revenue":null},{"id":239,"date":"2026-11-02","location_id":25,"revenue":null},{"id":240,"date":"2026-10-09","location_id":25,"revenue":null},{"id":241,"date":"2026-10-18","location_id":24,"revenue":null},{"id":242,"date":"2026-10-08","location_id":19,"revenue":null},{"id":243,"date":"2026-10-26","location_id":30,"revenue":null},{"id":244,"date":"2026-10-13","location_id":22,"revenue":null},{"id":245,"date":"2026-10-10","location_id":4,"revenue":null},{"id":246,"date":"2026-10-14","location_id":25,"revenue":null},{"id":247,"date":"2026-10-15","location_id":25,"revenue":null},{"id":248,"date":"2026-10-21","location_id":1,"revenue":null},{"id":249,"date":"2026-11-01","location_id":25,"revenue":null},{"id":250,"date":"2026-10-27","location_id":10,"revenue":null}]}
+  /api/sales/{id}:
+    get:
+      tags:
+        - Sale
+      summary: Egy adott eladás lekérése
+      description: |
+        A `show` action adja vissza az adott azonosítójú eladás adatait!
+      operationId: sales.show
+      parameters:
+        - name: id
+          in: path
+          required: true
+          description: Az eladás azonosítója
+          schema:
+            type: integer
+            default: 1
+      responses:
+        '200':
+          description: Egy adott eladás adatai
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  data:
+                    $ref: '#/components/schemas/SaleResource'
+                example: {"data":{"id":1,"date":"2026-10-22","location_id":29,"revenue":"46149.00"}}
+        '404':
+          description: Nem található ilyen azonosítójú eladás
+  /api/sales/sum:
+    get:
+      tags:
+        - Sale
+      summary: Összbevétel lekérése
+      description: |
+        A `sum` action adja vissza az összbevételt!
+
+        Opcionálisan lehessen szűrni a query string-ben a dátumra és az üzlet azonosítójára, ezek bármelyikének megadása esetén az eredmény csak a szűrt adatokat tartalmazza!
+      parameters:
+        - name: date
+          in: query
+          description: Egy adott dátum
+          schema:
+            type: string
+            format: date
+            pattern: '^2026\-((10\-(1[0-9]|2[0-9]|3[01]))|(11\-0[1-5]))$'
+        - name: location_id
+          in: query
+          description: Egy adott üzlet azonosítója
+          schema:
+            type: integer
+      operationId: sales.sum
+      responses:
+        '200':
+          description: Összbevétel
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  data:
+                    type: number
+                    format: float
+                example: 
+                  data: 7935009.00
+
+components:
+  schemas:
+    ProductResource:
+      type: object
+      properties:
+        id:
+          type: integer
+        name:
+          type: string
+          maxLength: 30
+        price:
+          type: number
+          format: float
+        unit:
+          type: string
+          enum: [piece, kg, gram, pack, slice]
+        image:
+          type: string
+    LocationResource:
+      type: object
+      properties:
+        id:
+          type: integer
+        name:
+          type: address
+          maxLength: 200
+        opening_time:
+          type: string
+          format: time
+          pattern: '^(0[4-9]|10)\:00\:00$'
+        closing_time:
+          type: string
+          format: time
+          pattern: '^(1[8-9]|2[0-2])\:00\:00$'
+        image:
+          type: string
+    SaleResource:
+      type: object
+      properties:
+        id:
+          type: integer
+        date:
+          type: string
+          format: date
+          pattern: '^2026\-((10\-(1[0-9]|2[0-9]|3[01]))|(11\-0[1-5]))$'
+        revenue:
+          type: number
+          format: float
+          
