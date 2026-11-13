@@ -1,0 +1,8 @@
+Azonosito;Tipus;ElkeszitesiIdo
+p;mézes puszedli;25
+m;mézeskalács;30
+b;bejgli;60
+k;kuglóf;120
+d1;diszítés;5
+d2;diszítés;30
+d3;diszítés;10
