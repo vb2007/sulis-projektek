@@ -2,17 +2,17 @@ mysql verzio lekerese
 docker images | grep "mysql"
 
 konténer inditas
-docker run --name mici -e MYSQL_ROOT_PASSWORD=maci -v "$(pwd)/sql:/sql" -d mysql:9.7.1
+docker run --name nigga -e MYSQL_ROOT_PASSWORD=nigger -v "$(pwd)/sql:/sql" -d mysql:9.7.1
 
 bashbe lépés
-docker exec -it mici bash(/sh/mysql)
+docker exec -it nigga bash
 
 mysql
 (#acces denied)
 
 mysql -u(user) -p(password)
 
-mysql -uroot -pmaci
+mysql -u root -p nigger
 
 megmutatja a letezo adatbazisaidat
 show databases;
