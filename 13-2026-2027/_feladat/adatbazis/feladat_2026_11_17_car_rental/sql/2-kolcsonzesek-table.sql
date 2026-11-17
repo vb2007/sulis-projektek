@@ -6,4 +6,4 @@ CREATE TABLE `kolcsonzesek` (
     `kolcsonzes_vege` DATETIME,
 
     FOREIGN KEY (`auto_id`) REFERENCES `autok`(`id`)
-)
+);
