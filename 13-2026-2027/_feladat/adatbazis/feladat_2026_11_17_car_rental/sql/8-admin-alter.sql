@@ -3,8 +3,6 @@
 
 USE `autokolcsonzo`;
 
-SELECT `id` FROM `autok` WHERE `rendszam` = 'AA-BB-111';
-
-INSERT INTO `kolcsonzesek` (`auto_id`, `ugyfel`, `kolcsonzes_kezdete`, `kolcsonzes_vege`)
-VALUES
-    (1, 'Benjamin Netanyahu', '2024-12-11 12:35:00', NOW());
+UPDATE `kolcsonzesek`
+SET `kolcsonzes_kezdete` = '2024-12-31 16:55:00'
+WHERE `id` = 1;
