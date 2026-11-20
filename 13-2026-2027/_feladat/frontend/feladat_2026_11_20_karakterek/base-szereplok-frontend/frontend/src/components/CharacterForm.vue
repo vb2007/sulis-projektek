@@ -6,6 +6,15 @@ import Select from '@components/Select.vue';
 import Button from '@components/Button.vue';
 import { api } from '@utils/http.mjs';
 
+const data = ref({
+    name: '',
+    type: null,
+    occupation: '',
+    description: '',
+    image: null,
+    organization_id: null,
+});
+
 const organizations = ref([]);
 
 const images = ref([]);
