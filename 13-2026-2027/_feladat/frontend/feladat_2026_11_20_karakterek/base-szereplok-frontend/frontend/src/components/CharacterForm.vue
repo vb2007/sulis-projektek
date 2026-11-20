@@ -20,6 +20,11 @@ async function getOrganizations() {
     const response = await api.get('/organizations');
     organizations.value = response.data.data;
 }
+
+async function getImages() {
+    const response = await api.get('/images');
+    images.value = response.data.data;
+}
 </script>
 
 <template>
