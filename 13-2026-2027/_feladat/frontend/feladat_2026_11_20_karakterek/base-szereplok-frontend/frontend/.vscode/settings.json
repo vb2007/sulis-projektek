@@ -1,0 +1,17 @@
+{
+    "explorer.compactFolders": false,
+    "[vue]": {
+        "editor.defaultFormatter": "Vue.volar"
+    },
+    "emmet.includeLanguages": {
+        "blade": "html",
+        "blade.php": "html"
+    },
+    "telemetry.telemetryLevel": "off",
+    "github.copilot.enable": {
+        "*": false,
+        "plaintext": false,
+        "markdown": false,
+        "scminput": false
+    },
+}
