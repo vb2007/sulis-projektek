@@ -25,6 +25,11 @@ async function getImages() {
     const response = await api.get('/images');
     images.value = response.data.data;
 }
+
+onMounted(() => {
+    getOrganizations();
+    getImages();
+});
 </script>
 
 <template>
