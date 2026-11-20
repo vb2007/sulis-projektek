@@ -1,9 +1,18 @@
 <script setup>
 import BaseLayout from '@layouts/BaseLayout.vue';
 import { useErrorToast } from '@/composables/useErrorToast';
+import { api } from '@utils/http.mjs';
 
 const errorToast = useErrorToast();
 
+async function createCharacter(data) {
+    try {
+        await api.post('/characters', data);
+        return true;
+    } catch {
+        return false;
+    }
+}
 </script>
 
 <template>
