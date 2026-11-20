@@ -1,5 +1,6 @@
 <script setup>
 import BaseLayout from '@layouts/BaseLayout.vue';
+import CharacterForm from '@components/CharacterForm.vue';
 import { useErrorToast } from '@/composables/useErrorToast';
 import { useRouter } from 'vue-router';
 import { api } from '@utils/http.mjs';
@@ -30,6 +31,7 @@ async function handleSubmit(data) {
 <template>
     <BaseLayout>
         <h1 class="text-4xl font-bold font-poppins mb-4">Új karakter létrehozása</h1>
+        <CharacterForm @submit="handleSubmit" />
     </BaseLayout>
 </template>
 
