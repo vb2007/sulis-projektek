@@ -43,12 +43,30 @@ onMounted(() => {
 
 <template>
     <form class="grid md:grid-cols-6 gap-4 px-6 pt-6 pb-8 rounded bg-gray-900">
-        <Input label="Név" type="text" name="name" required :maxlength="50" class="md:col-span-3" />
-        <Select label="Szervezet" name="organization" :items="organizationsMapped" required class="md:col-span-3" />
-        <TextArea label="Leírás" name="description" required :maxlength="60000" :rows="4" class="col-span-full" />
-        <Select label="Típus" name="type" :items="types" required class="md:col-span-2" />
-        <Input label="Foglalkozása" type="text" name="occupation" required :maxlength="20" class="md:col-span-2" />
-        <Select label="Kép" name="image" :items="imagesMapped" required class="md:col-span-2" />
+        <Input v-model="data.name"
+            label="Név" type="text" name="name" required
+            :maxlength="50" class="md:col-span-3" />
+
+        <Select v-model="data.organization_id"
+            label="Szervezet" name="organization"
+            :items="organizationsMapped" required class="md:col-span-3" />
+
+        <TextArea v-model="data.description"
+            label="Leírás" name="description" required
+            :maxlength="60000" :rows="4" class="col-span-full" />
+
+        <Select v-model="data.type"
+            label="Típus" name="type"
+            :items="types" required class="md:col-span-2" />
+
+        <Input v-model="data.occupation"
+            label="Foglalkozása" type="text" name="occupation" required
+            :maxlength="20" class="md:col-span-2" />
+
+        <Select v-model="data.image"
+            label="Kép" name="image"
+            :items="imagesMapped" required class="md:col-span-2" />
+
         <Button type="submit" class="col-span-full justify-self-end">Létrehozás</Button>
     </form>
 </template>
