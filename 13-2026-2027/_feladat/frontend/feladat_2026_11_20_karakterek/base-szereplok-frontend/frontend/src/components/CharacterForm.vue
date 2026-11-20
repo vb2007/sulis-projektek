@@ -37,6 +37,10 @@ async function getImages() {
     images.value = response.data.data;
 }
 
+function handleSubmit() {
+    emit('submit', data.value);
+}
+
 onMounted(() => {
     getOrganizations();
     getImages();
@@ -44,7 +48,7 @@ onMounted(() => {
 </script>
 
 <template>
-    <form @submit.prevent="emit('submit', data)"
+    <form @submit.prevent="handleSubmit"
         class="grid md:grid-cols-6 gap-4 px-6 pt-6 pb-8 rounded bg-gray-900"
         >
         <Input v-model="data.name"
