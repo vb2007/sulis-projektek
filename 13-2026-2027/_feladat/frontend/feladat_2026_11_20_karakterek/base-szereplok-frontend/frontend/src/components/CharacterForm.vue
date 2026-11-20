@@ -6,6 +6,8 @@ import Select from '@components/Select.vue';
 import Button from '@components/Button.vue';
 import { api } from '@utils/http.mjs';
 
+const emit = defineEmits(['submit']);
+
 const data = ref({
     name: '',
     type: null,
@@ -42,7 +44,9 @@ onMounted(() => {
 </script>
 
 <template>
-    <form class="grid md:grid-cols-6 gap-4 px-6 pt-6 pb-8 rounded bg-gray-900">
+    <form @submit.prevent="emit('submit', data)"
+        class="grid md:grid-cols-6 gap-4 px-6 pt-6 pb-8 rounded bg-gray-900"
+        >
         <Input v-model="data.name"
             label="Név" type="text" name="name" required
             :maxlength="50" class="md:col-span-3" />
