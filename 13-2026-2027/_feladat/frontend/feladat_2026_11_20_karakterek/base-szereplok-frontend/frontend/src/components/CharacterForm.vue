@@ -4,6 +4,7 @@ import Input from '@components/Input.vue';
 import TextArea from '@components/TextArea.vue';
 import Select from '@components/Select.vue';
 import Button from '@components/Button.vue';
+import { api } from '@utils/http.mjs';
 
 const organizations = ref([]);
 
@@ -14,6 +15,11 @@ const types = ref([{value: 'mellékszereplő', label: 'Mellékszereplő'}, {valu
 const organizationsMapped = computed(() => organizations.value.map(x => ({value: x.id, label: `${x.name} (${x.area})`})));
 
 const imagesMapped = computed(() => images.value.map(x => ({value: x, label: x})));
+
+async function getOrganizations() {
+    const response = await api.get('/organizations');
+    organizations.value = response.data.data;
+}
 </script>
 
 <template>
