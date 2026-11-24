@@ -26,4 +26,17 @@ public class FakeApiTests
         bodyContent.Description.Should().NotBeNull();
         bodyContent.Title.Should().NotBeNull();
     }
+
+    [Test]
+    public void UpdateABook()
+    {
+        RestResponse response = request.PutFakeApiRequest(15);
+        response.StatusCode.Should().Be(HttpStatusCode.OK);
+        response.Content.Should().NotBeNull();
+        var bodyContent = JsonSerializer.Deserialize<FakeApiEntities>(response.Content);
+        bodyContent!.Id.Should().NotBeNull();
+        bodyContent.Id.Should().Be(15);
+        bodyContent.Description.Should().NotBeNull();
+        bodyContent.Title.Should().NotBeNull();
+    }
 }
