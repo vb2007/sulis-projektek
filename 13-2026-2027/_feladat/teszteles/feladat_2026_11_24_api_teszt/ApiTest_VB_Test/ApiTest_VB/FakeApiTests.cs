@@ -1,6 +1,6 @@
 ﻿namespace ApiTest_VB
 {
-    public class Tests
+    public class FakeApiTests
     {
         [SetUp]
         public void Setup()
