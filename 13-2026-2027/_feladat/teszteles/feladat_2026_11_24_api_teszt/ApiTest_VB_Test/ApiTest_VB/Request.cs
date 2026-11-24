@@ -53,4 +53,16 @@ public class Request
 
         return restResponse;
     }
+
+    public RestResponse DeleteFakeApiRequest(int id)
+    {
+        RestClient client = new RestClient(baseUrl);
+        var body = BuildBodyRequest(id);
+        RestRequest restRequest = new RestRequest($"{baseUrl}/{id}", Method.Delete);
+        restRequest.AddBody(body, ContentType.Json);
+
+        RestResponse restResponse = client.Execute(restRequest);
+
+        return restResponse;
+    }
 }

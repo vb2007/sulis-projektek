@@ -39,4 +39,12 @@ public class FakeApiTests
         bodyContent.Description.Should().NotBeNull();
         bodyContent.Title.Should().NotBeNull();
     }
+
+    [Test]
+    public void DeleteABook()
+    {
+        RestResponse response = request.DeleteFakeApiRequest(15);
+        response.StatusCode.Should().Be(HttpStatusCode.OK);
+        response.Content.Should().NotBeNull();
+    }
 }
