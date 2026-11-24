@@ -4,7 +4,6 @@ namespace ApiTest_VB_Test;
 
 public class Request
 {
-
     string baseUrl = "https://fakerestapi.azurewebsites.net/api/v1/Books";
 
     public RestResponse GetFakeApiRequest()
