@@ -1,5 +1,6 @@
 ﻿using RestSharp;
 
+namespace ApiTest_VB_Test;
 
 public class Request
 {

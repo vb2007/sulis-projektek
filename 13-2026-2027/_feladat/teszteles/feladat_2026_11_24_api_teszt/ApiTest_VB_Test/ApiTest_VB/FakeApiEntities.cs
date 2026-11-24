@@ -1,5 +1,7 @@
 ﻿using System.Text.Json.Serialization;
 
+namespace ApiTest_VB_Test;
+
 public class FakeApiEntities
 {
     [JsonPropertyName("id")]

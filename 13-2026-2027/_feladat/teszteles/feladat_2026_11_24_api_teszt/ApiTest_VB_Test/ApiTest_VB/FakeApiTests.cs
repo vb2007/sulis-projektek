@@ -3,6 +3,8 @@ using System.Text.Json;
 using FluentAssertions;
 using RestSharp;
 
+namespace ApiTest_VB_Test;
+
 public class FakeApiTests
 {
     Request request = new Request();
