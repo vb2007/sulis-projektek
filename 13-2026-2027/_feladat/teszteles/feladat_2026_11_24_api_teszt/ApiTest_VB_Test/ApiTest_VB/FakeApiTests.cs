@@ -3,24 +3,15 @@ using System.Text.Json;
 using FluentAssertions;
 using RestSharp;
 
-namespace ApiTest_VB
+public class FakeApiTests
 {
-    public class FakeApiTests
+    Request request = new Request();
+
+    [Test]
+    public void SearchBooks()
     {
-        private const string _baseUrl = "https://fakerestapi.azurewebsites.net/api/v1/Books";
-        private RestClient _client;
-
-        [SetUp]
-        public void Setup()
-        {
-
-        }
-
-        [Test]
-        [Description("Searches a random book.")]
-        public void SearchBooks()
-        {
-            
-        }
+        RestResponse restResponse = request.GetFakeApiRequest();
+        restResponse.Should().NotBeNull();
+        restResponse.StatusCode.Should().Be(HttpStatusCode.OK);
     }
 }
