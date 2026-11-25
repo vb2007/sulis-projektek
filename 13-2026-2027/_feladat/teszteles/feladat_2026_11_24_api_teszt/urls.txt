@@ -1,0 +1,2 @@
+Tutorial: https://dev.to/m4rri4nne/nunit-and-c-tutorial-to-automate-your-api-tests-from-scratch-24nf
+Tested API: https://fakerestapi.azurewebsites.net/api/v1/Books
