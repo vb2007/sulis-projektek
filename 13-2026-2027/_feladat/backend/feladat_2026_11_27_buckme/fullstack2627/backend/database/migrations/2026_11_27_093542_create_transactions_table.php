@@ -13,7 +13,11 @@ return new class extends Migration
     {
         Schema::create('transactions', function (Blueprint $table) {
             $table->id();
-            $table->timestamps();
+            $table->dateTime("transaction_at");
+            $table->string("note", 255)->nullable();
+            $table->decimal("amount");
+            $table->foreignId("sender_account_id")->nullable()->constrained("accounts", "id");
+            $table->foreignId("recipient_account_id")->nullable()->constrained("accounts", "id");
         });
     }
 
