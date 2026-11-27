@@ -9,4 +9,19 @@ class Account extends Model
 {
     /** @use HasFactory<\Database\Factories\AccountFactory> */
     use HasFactory;
+
+    public function client()
+    {
+
+    }
+
+    public function sentTransactions()
+    {
+
+    }
+
+    public function receivedTransactions()
+    {
+
+    }
 }
