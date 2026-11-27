@@ -1,0 +1,541 @@
+openapi: "3.1.0"
+info:
+  title: BuckMe API
+  version: 1.0.0
+  description: |
+    A `ClientController` kezeli az ügyfelek, az `AccountController` a bankszámlák,
+    míg a `TransactionController` a tranzakciók adatait.
+    A controllereket ezen API leírás alapján valósítsa meg!
+
+servers:
+  - url: http://backend.vm1.test
+    description: VM1 backend
+  - url: http://backend.vm2.test
+    description: VM2 backend
+  - url: http://backend.vm3.test
+    description: VM3 backend
+  - url: http://backend.vm4.test
+    description: VM4 backend
+  - url: http://backend.vm5.test
+    description: VM5 backend
+
+paths:
+  /api/clients:
+    get:
+      tags:
+        - Client
+      summary: Ügyfelek listájának lekérése
+      description: Az `index` action jelenítse meg az összes ügyfelet a hozzájuk tartozó bankszámlákkal együtt!
+      operationId: clients.index
+      responses:
+        "200":
+          description: Ügyfelek listája
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  data:
+                    type: array
+                    items:
+                      $ref: "#/components/schemas/ClientResource"
+              example: {"data":[{"id":1,"name":"Lucia Caminos","birth_date":"1997-08-14","birth_place":"Vice City, Leonida","ssn_last_4_digits":"4829","accounts":[{"id":1,"type":"checking","name":"Primary Checking","balance":"1373.75"},{"id":2,"type":"family savings","name":"Joint Savings","balance":"28477.00"}]},{"id":2,"name":"Jason Duval","birth_date":"1994-03-22","birth_place":"Port Gellhorn, Leonida","ssn_last_4_digits":"7104","accounts":[{"id":3,"type":"checking","name":"Everyday Account","balance":"980.20"},{"id":4,"type":"traditional savings","name":"Emergency Fund","balance":"19250.50"}]},{"id":3,"name":"Stefanie Morales","birth_date":"1982-11-05","birth_place":"Hamlet, Leonida","ssn_last_4_digits":"3391","accounts":[{"id":5,"type":"checking","name":null,"balance":"4210.00"},{"id":6,"type":"traditional savings","name":"Retirement Savings","balance":"35600.00"}]},{"id":4,"name":"Carlos Mendoza","birth_date":"1988-06-19","birth_place":"Vice Beach, Leonida","ssn_last_4_digits":"9052","accounts":[{"id":7,"type":"checking","name":"Personal Checking","balance":"12450.80"}]},{"id":5,"name":"Tamara Vance","birth_date":"1999-02-11","birth_place":"Starfish Island, Leonida","ssn_last_4_digits":"1648","accounts":[{"id":8,"type":"checking","name":"Main Checking","balance":"89300.00"},{"id":9,"type":"traditional savings","name":"Long-Term Savings","balance":"145000.00"}]},{"id":6,"name":"Boobie Ike","birth_date":"1985-09-30","birth_place":"Cottonmouth, Leonida","ssn_last_4_digits":"8473","accounts":[{"id":10,"type":"checking","name":"Business Checking","balance":"64200.40"},{"id":11,"type":"family savings","name":"Family Reserve","balance":"210000.00"}]},{"id":7,"name":"Darnell Jackson","birth_date":"1991-12-03","birth_place":"Little Haiti, Vice City","ssn_last_4_digits":"5219","accounts":[{"id":12,"type":"checking","name":"Checking Account","balance":"3150.00"}]},{"id":8,"name":"Mateo Rivera","birth_date":"1996-04-27","birth_place":"Little Havana, Vice City","ssn_last_4_digits":"6730","accounts":[{"id":13,"type":"checking","name":null,"balance":"2890.65"},{"id":14,"type":"family savings","name":"Home Downpayment","balance":"14800.00"}]},{"id":9,"name":"Billy Ray Clemons","birth_date":"1976-07-08","birth_place":"Grassrivers, Leonida","ssn_last_4_digits":"2984","accounts":[{"id":15,"type":"checking","name":"Daily Expenses","balance":"5430.10"},{"id":16,"type":"traditional savings","name":"Savings Account","balance":"18900.00"}]},{"id":10,"name":"Valeria Gomez","birth_date":"2000-01-15","birth_place":"Ocean Beach, Vice City","ssn_last_4_digits":"9411","accounts":[{"id":17,"type":"checking","name":"Standard Checking","balance":"7640.90"}]},{"id":11,"name":"Marcus Sterling","birth_date":"1979-10-21","birth_place":"Ambrosia, Leonida","ssn_last_4_digits":"3805","accounts":[{"id":18,"type":"checking","name":"Operating Account","balance":"22100.00"},{"id":19,"type":"traditional savings","name":null,"balance":"54000.00"}]},{"id":12,"name":"Elena Rostova","birth_date":"1993-05-12","birth_place":"Viceport, Leonida","ssn_last_4_digits":"7562","accounts":[{"id":20,"type":"checking","name":"Direct Deposit","balance":"41800.25"}]},{"id":13,"name":"Cletus Boone","birth_date":"1984-08-29","birth_place":"Kelly County, Leonida","ssn_last_4_digits":"1190","accounts":[{"id":21,"type":"checking","name":"Basic Checking","balance":"640.00"}]},{"id":14,"name":"Desiree Washington","birth_date":"1995-11-18","birth_place":"Washington Beach, Vice City","ssn_last_4_digits":"6047","accounts":[{"id":22,"type":"checking","name":"Bills & Rent","balance":"9320.50"},{"id":23,"type":"family savings","name":"College Fund","balance":"27500.00"}]},{"id":15,"name":"Hector Delgado","birth_date":"1981-03-04","birth_place":"Leonard County, Leonida","ssn_last_4_digits":"8823","accounts":[{"id":24,"type":"checking","name":"Primary Account","balance":"78900.00"},{"id":25,"type":"traditional savings","name":"High-Yield Savings","balance":"320000.00"}]}]}
+
+    post:
+      tags:
+        - Client
+      summary: Új ügyfél létrehozása
+      description: |
+        A `store` action végezzen validálást, majd hozza létre az új ügyfelet
+        az adatbázisban, végül adja vissza a bankszámláival együtt!
+
+        - Amennyiben a validálás nem sikerül, úgy a hibáról/hibákról tájékoztassa a felhasználót!
+      operationId: clients.store
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/ClientRequest"
+            example: {"name":"John Pork","birth_date":"1992-09-12","birth_place":"Ohio","ssn_last_4_digits":"6767"}
+      responses:
+        "201":
+          description: Ügyfél létrehozva
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  data:
+                    $ref: "#/components/schemas/ClientResource"
+              example: {"data":{"id":16,"name":"John Pork","birth_date":"1992-09-12","birth_place":"Ohio","ssn_last_4_digits":"6767","accounts":[]}}
+        "422":
+          description: Érvénytelen adatok
+
+  /api/clients/{client}:
+    get:
+      tags:
+        - Client
+      summary: Egy adott ügyfél lekérése
+      description: A `show` action jelenítse meg a kiválasztott ügyfél adatait a bankszámláival együtt!
+      operationId: clients.show
+      parameters:
+        - name: client
+          in: path
+          required: true
+          schema:
+            type: integer
+            default: 1
+      responses:
+        "200":
+          description: Egy adott ügyfél
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  data:
+                    $ref: "#/components/schemas/ClientResource"
+              example: {"data":{"id":1,"name":"Lucia Caminos","birth_date":"1997-08-14","birth_place":"Vice City, Leonida","ssn_last_4_digits":"4829","accounts":[{"id":1,"type":"checking","name":"Primary Checking","balance":"1373.75"},{"id":2,"type":"family savings","name":"Joint Savings","balance":"28477.00"}]}}
+        "404":
+          description: Nem található
+
+    put:
+      tags:
+        - Client
+      summary: Egy adott ügyfél frissítése
+      description: |
+        Az `update` action végezzen validálást, majd frissítse a kiválasztott
+        ügyfél adatait az adatbázisban, végül adja vissza a bankszámláival együtt!
+
+        - Amennyiben a validálás nem sikerül, úgy a hibáról/hibákról tájékoztassa a felhasználót!
+      operationId: clients.update
+      parameters:
+        - name: client
+          in: path
+          required: true
+          schema:
+            type: integer
+            default: 1
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/ClientRequest"
+            example: {"name":"Sir John Pork","birth_date":"1992-09-12","birth_place":"Ohio","ssn_last_4_digits":"6767"}
+      responses:
+        "200":
+          description: A frissített ügyfél
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  data:
+                    $ref: "#/components/schemas/ClientResource"
+              example: {"data":{"id":16,"name":"Sir John Pork","birth_date":"1992-09-12","birth_place":"Ohio","ssn_last_4_digits":"6767","accounts":[]}}
+        "404":
+          description: Nem található
+        "422":
+          description: Érvénytelen adatok
+
+    delete:
+      tags:
+        - Client
+      summary: Egy adott ügyfél törlése
+      description: |
+        A `destroy` action törölje a kiválasztott ügyfelet az adatbázisból!
+
+        - Amennyiben nem sikerül a törlés, úgy a hibáról/hibákról tájékoztassa a felhasználót!
+      operationId: clients.destroy
+      parameters:
+        - name: client
+          in: path
+          required: true
+          schema:
+            type: integer
+            default: 1
+      responses:
+        "204":
+          description: Az ügyfél törölve
+        "404":
+          description: Nem található
+        "500":
+          description: Belső hiba
+
+  /api/accounts:
+    get:
+      tags:
+        - Account
+      summary: Bankszámlák listájának lekérése
+      description: |
+        Az `index` action jelenítse meg az összes bankszámlát az alábbi kapcsolódó adatokkal együtt:
+        - A bankszámla tulajdonosa és annak adatai!
+        - A számláról indított tranzakciók, azok fogadó számlájával és annak tulajdonosával együtt!
+        - A számlára érkezett tranzakciók, azok küldő számlájával és annak tulajdonosával együtt!
+      operationId: accounts.index
+      responses:
+        "200":
+          description: Bankszámlák listája
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  data:
+                    type: array
+                    items:
+                      $ref: "#/components/schemas/AccountResource"
+              example:
+                data: {"data":[{"id":1,"type":"checking","name":"Primary Checking","balance":"1373.75","client":{"id":1,"name":"Lucia Caminos","birth_date":"1997-08-14","birth_place":"Vice City, Leonida","ssn_last_4_digits":"4829"},"sent_transactions":[{"id":1,"transaction_at":"2026-10-02 09:15:00","note":"Monthly savings transfer","amount":"500.00","recipient_account":{"id":2,"type":"family savings","name":"Joint Savings","balance":"28477.00","client":{"id":1,"name":"Lucia Caminos","birth_date":"1997-08-14","birth_place":"Vice City, Leonida","ssn_last_4_digits":"4829"}}},{"id":20,"transaction_at":"2026-11-18 18:40:00","note":"Weekend trip groceries","amount":"132.80","recipient_account":{"id":3,"type":"checking","name":"Everyday Account","balance":"980.20","client":{"id":2,"name":"Jason Duval","birth_date":"1994-03-22","birth_place":"Port Gellhorn, Leonida","ssn_last_4_digits":"7104"}}},{"id":21,"transaction_at":"2026-04-01 10:00:00","note":null,"amount":"10.00","recipient_account":{"id":2,"type":"family savings","name":"Joint Savings","balance":"28477.00","client":{"id":1,"name":"Lucia Caminos","birth_date":"1997-08-14","birth_place":"Vice City, Leonida","ssn_last_4_digits":"4829"}}},{"id":22,"transaction_at":"2026-11-26 19:52:31","note":null,"amount":"67.00","recipient_account":{"id":2,"type":"family savings","name":"Joint Savings","balance":"28477.00","client":{"id":1,"name":"Lucia Caminos","birth_date":"1997-08-14","birth_place":"Vice City, Leonida","ssn_last_4_digits":"4829"}}}],"received_transactions":[{"id":2,"transaction_at":"2026-10-04 14:22:10","note":"Split dinner bill","amount":"45.50","sender_account":{"id":3,"type":"checking","name":"Everyday Account","balance":"980.20","client":{"id":2,"name":"Jason Duval","birth_date":"1994-03-22","birth_place":"Port Gellhorn, Leonida","ssn_last_4_digits":"7104"}}},{"id":17,"transaction_at":"2026-11-05 16:12:30","note":null,"amount":"75.00","sender_account":{"id":17,"type":"checking","name":"Standard Checking","balance":"7640.90","client":{"id":10,"name":"Valeria Gomez","birth_date":"2000-01-15","birth_place":"Ocean Beach, Vice City","ssn_last_4_digits":"9411"}}}]},{"id":2,"type":"family savings","name":"Joint Savings","balance":"28477.00","client":{"id":1,"name":"Lucia Caminos","birth_date":"1997-08-14","birth_place":"Vice City, Leonida","ssn_last_4_digits":"4829"},"sent_transactions":[],"received_transactions":[{"id":1,"transaction_at":"2026-10-02 09:15:00","note":"Monthly savings transfer","amount":"500.00","sender_account":{"id":1,"type":"checking","name":"Primary Checking","balance":"1373.75","client":{"id":1,"name":"Lucia Caminos","birth_date":"1997-08-14","birth_place":"Vice City, Leonida","ssn_last_4_digits":"4829"}}},{"id":21,"transaction_at":"2026-04-01 10:00:00","note":null,"amount":"10.00","sender_account":{"id":1,"type":"checking","name":"Primary Checking","balance":"1373.75","client":{"id":1,"name":"Lucia Caminos","birth_date":"1997-08-14","birth_place":"Vice City, Leonida","ssn_last_4_digits":"4829"}}},{"id":22,"transaction_at":"2026-11-26 19:52:31","note":null,"amount":"67.00","sender_account":{"id":1,"type":"checking","name":"Primary Checking","balance":"1373.75","client":{"id":1,"name":"Lucia Caminos","birth_date":"1997-08-14","birth_place":"Vice City, Leonida","ssn_last_4_digits":"4829"}}}]},{"id":3,"type":"checking","name":"Everyday Account","balance":"980.20","client":{"id":2,"name":"Jason Duval","birth_date":"1994-03-22","birth_place":"Port Gellhorn, Leonida","ssn_last_4_digits":"7104"},"sent_transactions":[{"id":2,"transaction_at":"2026-10-04 14:22:10","note":"Split dinner bill","amount":"45.50","recipient_account":{"id":1,"type":"checking","name":"Primary Checking","balance":"1373.75","client":{"id":1,"name":"Lucia Caminos","birth_date":"1997-08-14","birth_place":"Vice City, Leonida","ssn_last_4_digits":"4829"}}},{"id":3,"transaction_at":"2026-10-05 18:05:45","note":"Emergency fund top-up","amount":"1200.00","recipient_account":{"id":4,"type":"traditional savings","name":"Emergency Fund","balance":"19250.50","client":{"id":2,"name":"Jason Duval","birth_date":"1994-03-22","birth_place":"Port Gellhorn, Leonida","ssn_last_4_digits":"7104"}}}],"received_transactions":[{"id":20,"transaction_at":"2026-11-18 18:40:00","note":"Weekend trip groceries","amount":"132.80","sender_account":{"id":1,"type":"checking","name":"Primary Checking","balance":"1373.75","client":{"id":1,"name":"Lucia Caminos","birth_date":"1997-08-14","birth_place":"Vice City, Leonida","ssn_last_4_digits":"4829"}}}]},{"id":4,"type":"traditional savings","name":"Emergency Fund","balance":"19250.50","client":{"id":2,"name":"Jason Duval","birth_date":"1994-03-22","birth_place":"Port Gellhorn, Leonida","ssn_last_4_digits":"7104"},"sent_transactions":[],"received_transactions":[{"id":3,"transaction_at":"2026-10-05 18:05:45","note":"Emergency fund top-up","amount":"1200.00","sender_account":{"id":3,"type":"checking","name":"Everyday Account","balance":"980.20","client":{"id":2,"name":"Jason Duval","birth_date":"1994-03-22","birth_place":"Port Gellhorn, Leonida","ssn_last_4_digits":"7104"}}}]},{"id":5,"type":"checking","name":null,"balance":"4210.00","client":{"id":3,"name":"Stefanie Morales","birth_date":"1982-11-05","birth_place":"Hamlet, Leonida","ssn_last_4_digits":"3391"},"sent_transactions":[{"id":4,"transaction_at":"2026-10-07 11:30:00","note":null,"amount":"250.00","recipient_account":{"id":7,"type":"checking","name":"Personal Checking","balance":"12450.80","client":{"id":4,"name":"Carlos Mendoza","birth_date":"1988-06-19","birth_place":"Vice Beach, Leonida","ssn_last_4_digits":"9052"}}},{"id":18,"transaction_at":"2026-11-08 09:30:00","note":"Pension top-up","amount":"1100.00","recipient_account":{"id":6,"type":"traditional savings","name":"Retirement Savings","balance":"35600.00","client":{"id":3,"name":"Stefanie Morales","birth_date":"1982-11-05","birth_place":"Hamlet, Leonida","ssn_last_4_digits":"3391"}}}],"received_transactions":[]},{"id":6,"type":"traditional savings","name":"Retirement Savings","balance":"35600.00","client":{"id":3,"name":"Stefanie Morales","birth_date":"1982-11-05","birth_place":"Hamlet, Leonida","ssn_last_4_digits":"3391"},"sent_transactions":[],"received_transactions":[{"id":18,"transaction_at":"2026-11-08 09:30:00","note":"Pension top-up","amount":"1100.00","sender_account":{"id":5,"type":"checking","name":null,"balance":"4210.00","client":{"id":3,"name":"Stefanie Morales","birth_date":"1982-11-05","birth_place":"Hamlet, Leonida","ssn_last_4_digits":"3391"}}}]},{"id":7,"type":"checking","name":"Personal Checking","balance":"12450.80","client":{"id":4,"name":"Carlos Mendoza","birth_date":"1988-06-19","birth_place":"Vice Beach, Leonida","ssn_last_4_digits":"9052"},"sent_transactions":[],"received_transactions":[{"id":4,"transaction_at":"2026-10-07 11:30:00","note":null,"amount":"250.00","sender_account":{"id":5,"type":"checking","name":null,"balance":"4210.00","client":{"id":3,"name":"Stefanie Morales","birth_date":"1982-11-05","birth_place":"Hamlet, Leonida","ssn_last_4_digits":"3391"}}}]},{"id":8,"type":"checking","name":"Main Checking","balance":"89300.00","client":{"id":5,"name":"Tamara Vance","birth_date":"1999-02-11","birth_place":"Starfish Island, Leonida","ssn_last_4_digits":"1648"},"sent_transactions":[{"id":6,"transaction_at":"2026-10-10 08:50:00","note":"Transfer to long-term savings","amount":"5000.00","recipient_account":{"id":9,"type":"traditional savings","name":"Long-Term Savings","balance":"145000.00","client":{"id":5,"name":"Tamara Vance","birth_date":"1999-02-11","birth_place":"Starfish Island, Leonida","ssn_last_4_digits":"1648"}}}],"received_transactions":[{"id":5,"transaction_at":"2026-10-09 16:40:12","note":"Consulting invoice #104","amount":"3400.00","sender_account":{"id":10,"type":"checking","name":"Business Checking","balance":"64200.40","client":{"id":6,"name":"Boobie Ike","birth_date":"1985-09-30","birth_place":"Cottonmouth, Leonida","ssn_last_4_digits":"8473"}}}]},{"id":9,"type":"traditional savings","name":"Long-Term Savings","balance":"145000.00","client":{"id":5,"name":"Tamara Vance","birth_date":"1999-02-11","birth_place":"Starfish Island, Leonida","ssn_last_4_digits":"1648"},"sent_transactions":[],"received_transactions":[{"id":6,"transaction_at":"2026-10-10 08:50:00","note":"Transfer to long-term savings","amount":"5000.00","sender_account":{"id":8,"type":"checking","name":"Main Checking","balance":"89300.00","client":{"id":5,"name":"Tamara Vance","birth_date":"1999-02-11","birth_place":"Starfish Island, Leonida","ssn_last_4_digits":"1648"}}}]},{"id":10,"type":"checking","name":"Business Checking","balance":"64200.40","client":{"id":6,"name":"Boobie Ike","birth_date":"1985-09-30","birth_place":"Cottonmouth, Leonida","ssn_last_4_digits":"8473"},"sent_transactions":[{"id":5,"transaction_at":"2026-10-09 16:40:12","note":"Consulting invoice #104","amount":"3400.00","recipient_account":{"id":8,"type":"checking","name":"Main Checking","balance":"89300.00","client":{"id":5,"name":"Tamara Vance","birth_date":"1999-02-11","birth_place":"Starfish Island, Leonida","ssn_last_4_digits":"1648"}}},{"id":13,"transaction_at":"2026-10-25 12:18:00","note":"Family reserve allocation","amount":"10000.00","recipient_account":{"id":11,"type":"family savings","name":"Family Reserve","balance":"210000.00","client":{"id":6,"name":"Boobie Ike","birth_date":"1985-09-30","birth_place":"Cottonmouth, Leonida","ssn_last_4_digits":"8473"}}}],"received_transactions":[]},{"id":11,"type":"family savings","name":"Family Reserve","balance":"210000.00","client":{"id":6,"name":"Boobie Ike","birth_date":"1985-09-30","birth_place":"Cottonmouth, Leonida","ssn_last_4_digits":"8473"},"sent_transactions":[],"received_transactions":[{"id":13,"transaction_at":"2026-10-25 12:18:00","note":"Family reserve allocation","amount":"10000.00","sender_account":{"id":10,"type":"checking","name":"Business Checking","balance":"64200.40","client":{"id":6,"name":"Boobie Ike","birth_date":"1985-09-30","birth_place":"Cottonmouth, Leonida","ssn_last_4_digits":"8473"}}}]},{"id":12,"type":"checking","name":"Checking Account","balance":"3150.00","client":{"id":7,"name":"Darnell Jackson","birth_date":"1991-12-03","birth_place":"Little Haiti, Vice City","ssn_last_4_digits":"5219"},"sent_transactions":[{"id":7,"transaction_at":"2026-10-12 20:15:33","note":"Concert tickets","amount":"180.00","recipient_account":{"id":17,"type":"checking","name":"Standard Checking","balance":"7640.90","client":{"id":10,"name":"Valeria Gomez","birth_date":"2000-01-15","birth_place":"Ocean Beach, Vice City","ssn_last_4_digits":"9411"}}}],"received_transactions":[]},{"id":13,"type":"checking","name":null,"balance":"2890.65","client":{"id":8,"name":"Mateo Rivera","birth_date":"1996-04-27","birth_place":"Little Havana, Vice City","ssn_last_4_digits":"6730"},"sent_transactions":[{"id":8,"transaction_at":"2026-10-14 13:10:05","note":"Rent share October","amount":"950.00","recipient_account":{"id":22,"type":"checking","name":"Bills & Rent","balance":"9320.50","client":{"id":14,"name":"Desiree Washington","birth_date":"1995-11-18","birth_place":"Washington Beach, Vice City","ssn_last_4_digits":"6047"}}},{"id":9,"transaction_at":"2026-10-15 10:00:00","note":"House fund deposit","amount":"800.00","recipient_account":{"id":14,"type":"family savings","name":"Home Downpayment","balance":"14800.00","client":{"id":8,"name":"Mateo Rivera","birth_date":"1996-04-27","birth_place":"Little Havana, Vice City","ssn_last_4_digits":"6730"}}}],"received_transactions":[]},{"id":14,"type":"family savings","name":"Home Downpayment","balance":"14800.00","client":{"id":8,"name":"Mateo Rivera","birth_date":"1996-04-27","birth_place":"Little Havana, Vice City","ssn_last_4_digits":"6730"},"sent_transactions":[],"received_transactions":[{"id":9,"transaction_at":"2026-10-15 10:00:00","note":"House fund deposit","amount":"800.00","sender_account":{"id":13,"type":"checking","name":null,"balance":"2890.65","client":{"id":8,"name":"Mateo Rivera","birth_date":"1996-04-27","birth_place":"Little Havana, Vice City","ssn_last_4_digits":"6730"}}}]},{"id":15,"type":"checking","name":"Daily Expenses","balance":"5430.10","client":{"id":9,"name":"Billy Ray Clemons","birth_date":"1976-07-08","birth_place":"Grassrivers, Leonida","ssn_last_4_digits":"2984"},"sent_transactions":[{"id":10,"transaction_at":"2026-10-18 15:45:20","note":"Equipment rental","amount":"420.75","recipient_account":{"id":18,"type":"checking","name":"Operating Account","balance":"22100.00","client":{"id":11,"name":"Marcus Sterling","birth_date":"1979-10-21","birth_place":"Ambrosia, Leonida","ssn_last_4_digits":"3805"}}}],"received_transactions":[{"id":14,"transaction_at":"2026-10-27 19:22:50","note":"Car repair reimbursement","amount":"310.00","sender_account":{"id":21,"type":"checking","name":"Basic Checking","balance":"640.00","client":{"id":13,"name":"Cletus Boone","birth_date":"1984-08-29","birth_place":"Kelly County, Leonida","ssn_last_4_digits":"1190"}}}]},{"id":16,"type":"traditional savings","name":"Savings Account","balance":"18900.00","client":{"id":9,"name":"Billy Ray Clemons","birth_date":"1976-07-08","birth_place":"Grassrivers, Leonida","ssn_last_4_digits":"2984"},"sent_transactions":[],"received_transactions":[]},{"id":17,"type":"checking","name":"Standard Checking","balance":"7640.90","client":{"id":10,"name":"Valeria Gomez","birth_date":"2000-01-15","birth_place":"Ocean Beach, Vice City","ssn_last_4_digits":"9411"},"sent_transactions":[{"id":17,"transaction_at":"2026-11-05 16:12:30","note":null,"amount":"75.00","recipient_account":{"id":1,"type":"checking","name":"Primary Checking","balance":"1373.75","client":{"id":1,"name":"Lucia Caminos","birth_date":"1997-08-14","birth_place":"Vice City, Leonida","ssn_last_4_digits":"4829"}}}],"received_transactions":[{"id":7,"transaction_at":"2026-10-12 20:15:33","note":"Concert tickets","amount":"180.00","sender_account":{"id":12,"type":"checking","name":"Checking Account","balance":"3150.00","client":{"id":7,"name":"Darnell Jackson","birth_date":"1991-12-03","birth_place":"Little Haiti, Vice City","ssn_last_4_digits":"5219"}}}]},{"id":18,"type":"checking","name":"Operating Account","balance":"22100.00","client":{"id":11,"name":"Marcus Sterling","birth_date":"1979-10-21","birth_place":"Ambrosia, Leonida","ssn_last_4_digits":"3805"},"sent_transactions":[{"id":11,"transaction_at":"2026-10-20 09:05:11","note":null,"amount":"1500.00","recipient_account":{"id":19,"type":"traditional savings","name":null,"balance":"54000.00","client":{"id":11,"name":"Marcus Sterling","birth_date":"1979-10-21","birth_place":"Ambrosia, Leonida","ssn_last_4_digits":"3805"}}}],"received_transactions":[{"id":10,"transaction_at":"2026-10-18 15:45:20","note":"Equipment rental","amount":"420.75","sender_account":{"id":15,"type":"checking","name":"Daily Expenses","balance":"5430.10","client":{"id":9,"name":"Billy Ray Clemons","birth_date":"1976-07-08","birth_place":"Grassrivers, Leonida","ssn_last_4_digits":"2984"}}}]},{"id":19,"type":"traditional savings","name":null,"balance":"54000.00","client":{"id":11,"name":"Marcus Sterling","birth_date":"1979-10-21","birth_place":"Ambrosia, Leonida","ssn_last_4_digits":"3805"},"sent_transactions":[],"received_transactions":[{"id":11,"transaction_at":"2026-10-20 09:05:11","note":null,"amount":"1500.00","sender_account":{"id":18,"type":"checking","name":"Operating Account","balance":"22100.00","client":{"id":11,"name":"Marcus Sterling","birth_date":"1979-10-21","birth_place":"Ambrosia, Leonida","ssn_last_4_digits":"3805"}}}]},{"id":20,"type":"checking","name":"Direct Deposit","balance":"41800.25","client":{"id":12,"name":"Elena Rostova","birth_date":"1993-05-12","birth_place":"Viceport, Leonida","ssn_last_4_digits":"7562"},"sent_transactions":[{"id":12,"transaction_at":"2026-10-22 17:30:40","note":"Logistics service payment","amount":"6250.00","recipient_account":{"id":24,"type":"checking","name":"Primary Account","balance":"78900.00","client":{"id":15,"name":"Hector Delgado","birth_date":"1981-03-04","birth_place":"Leonard County, Leonida","ssn_last_4_digits":"8823"}}}],"received_transactions":[{"id":19,"transaction_at":"2026-11-12 11:55:22","note":"Supplier settlement","amount":"2850.40","sender_account":{"id":24,"type":"checking","name":"Primary Account","balance":"78900.00","client":{"id":15,"name":"Hector Delgado","birth_date":"1981-03-04","birth_place":"Leonard County, Leonida","ssn_last_4_digits":"8823"}}}]},{"id":21,"type":"checking","name":"Basic Checking","balance":"640.00","client":{"id":13,"name":"Cletus Boone","birth_date":"1984-08-29","birth_place":"Kelly County, Leonida","ssn_last_4_digits":"1190"},"sent_transactions":[{"id":14,"transaction_at":"2026-10-27 19:22:50","note":"Car repair reimbursement","amount":"310.00","recipient_account":{"id":15,"type":"checking","name":"Daily Expenses","balance":"5430.10","client":{"id":9,"name":"Billy Ray Clemons","birth_date":"1976-07-08","birth_place":"Grassrivers, Leonida","ssn_last_4_digits":"2984"}}}],"received_transactions":[]},{"id":22,"type":"checking","name":"Bills & Rent","balance":"9320.50","client":{"id":14,"name":"Desiree Washington","birth_date":"1995-11-18","birth_place":"Washington Beach, Vice City","ssn_last_4_digits":"6047"},"sent_transactions":[{"id":15,"transaction_at":"2026-10-30 14:00:00","note":"College fund contribution","amount":"600.00","recipient_account":{"id":23,"type":"family savings","name":"College Fund","balance":"27500.00","client":{"id":14,"name":"Desiree Washington","birth_date":"1995-11-18","birth_place":"Washington Beach, Vice City","ssn_last_4_digits":"6047"}}}],"received_transactions":[{"id":8,"transaction_at":"2026-10-14 13:10:05","note":"Rent share October","amount":"950.00","sender_account":{"id":13,"type":"checking","name":null,"balance":"2890.65","client":{"id":8,"name":"Mateo Rivera","birth_date":"1996-04-27","birth_place":"Little Havana, Vice City","ssn_last_4_digits":"6730"}}}]},{"id":23,"type":"family savings","name":"College Fund","balance":"27500.00","client":{"id":14,"name":"Desiree Washington","birth_date":"1995-11-18","birth_place":"Washington Beach, Vice City","ssn_last_4_digits":"6047"},"sent_transactions":[],"received_transactions":[{"id":15,"transaction_at":"2026-10-30 14:00:00","note":"College fund contribution","amount":"600.00","sender_account":{"id":22,"type":"checking","name":"Bills & Rent","balance":"9320.50","client":{"id":14,"name":"Desiree Washington","birth_date":"1995-11-18","birth_place":"Washington Beach, Vice City","ssn_last_4_digits":"6047"}}}]},{"id":24,"type":"checking","name":"Primary Account","balance":"78900.00","client":{"id":15,"name":"Hector Delgado","birth_date":"1981-03-04","birth_place":"Leonard County, Leonida","ssn_last_4_digits":"8823"},"sent_transactions":[{"id":16,"transaction_at":"2026-11-02 10:45:15","note":"Quarterly savings sweep","amount":"15000.00","recipient_account":{"id":25,"type":"traditional savings","name":"High-Yield Savings","balance":"320000.00","client":{"id":15,"name":"Hector Delgado","birth_date":"1981-03-04","birth_place":"Leonard County, Leonida","ssn_last_4_digits":"8823"}}},{"id":19,"transaction_at":"2026-11-12 11:55:22","note":"Supplier settlement","amount":"2850.40","recipient_account":{"id":20,"type":"checking","name":"Direct Deposit","balance":"41800.25","client":{"id":12,"name":"Elena Rostova","birth_date":"1993-05-12","birth_place":"Viceport, Leonida","ssn_last_4_digits":"7562"}}}],"received_transactions":[{"id":12,"transaction_at":"2026-10-22 17:30:40","note":"Logistics service payment","amount":"6250.00","sender_account":{"id":20,"type":"checking","name":"Direct Deposit","balance":"41800.25","client":{"id":12,"name":"Elena Rostova","birth_date":"1993-05-12","birth_place":"Viceport, Leonida","ssn_last_4_digits":"7562"}}}]},{"id":25,"type":"traditional savings","name":"High-Yield Savings","balance":"320000.00","client":{"id":15,"name":"Hector Delgado","birth_date":"1981-03-04","birth_place":"Leonard County, Leonida","ssn_last_4_digits":"8823"},"sent_transactions":[],"received_transactions":[{"id":16,"transaction_at":"2026-11-02 10:45:15","note":"Quarterly savings sweep","amount":"15000.00","sender_account":{"id":24,"type":"checking","name":"Primary Account","balance":"78900.00","client":{"id":15,"name":"Hector Delgado","birth_date":"1981-03-04","birth_place":"Leonard County, Leonida","ssn_last_4_digits":"8823"}}}]}]}
+
+    post:
+      tags:
+        - Account
+      summary: Új bankszámla létrehozása
+      description: |
+        A `store` action végezzen validálást, majd hozza létre az új bankszámlát
+        az adatbázisban, végül adja vissza a kapcsolódó adatokkal együtt!
+
+        - Amennyiben a validálás nem sikerül, úgy a hibáról/hibákról tájékoztassa a felhasználót!
+      operationId: accounts.store
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/AccountRequest"
+            example: {"type":"checking","name":"New Checking",'client_id': 1}
+      responses:
+        "201":
+          description: Bankszámla létrehozva
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  data:
+                    $ref: "#/components/schemas/AccountResource"
+              example: {"id":26,"type":"checking","name":"New Checking","balance":"0","client":{"id":1,"name":"Lucia Caminos","birth_date":"1997-08-14","birth_place":"Vice City, Leonida","ssn_last_4_digits":"4829"}}
+        "422":
+          description: Érvénytelen adatok
+
+  /api/accounts/{account}:
+    get:
+      tags:
+        - Account
+      summary: Egy adott bankszámla lekérése
+      description: A `show` action jelenítse meg a kiválasztott bankszámlát a kapcsolódó adatokkal együtt!
+      operationId: accounts.show
+      parameters:
+        - name: account
+          in: path
+          required: true
+          schema:
+            type: integer
+            default: 1
+      responses:
+        "200":
+          description: Egy adott bankszámla
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  data:
+                    $ref: "#/components/schemas/AccountResource"
+              example: {"data":{"id":1,"type":"checking","name":"Primary Checking","balance":"1373.75","client":{"id":1,"name":"Lucia Caminos","birth_date":"1997-08-14","birth_place":"Vice City, Leonida","ssn_last_4_digits":"4829"},"sent_transactions":[{"id":1,"transaction_at":"2026-10-02 09:15:00","note":"Monthly savings transfer","amount":"500.00","recipient_account":{"id":2,"type":"family savings","name":"Joint Savings","balance":"28477.00","client":{"id":1,"name":"Lucia Caminos","birth_date":"1997-08-14","birth_place":"Vice City, Leonida","ssn_last_4_digits":"4829"}}},{"id":20,"transaction_at":"2026-11-18 18:40:00","note":"Weekend trip groceries","amount":"132.80","recipient_account":{"id":3,"type":"checking","name":"Everyday Account","balance":"980.20","client":{"id":2,"name":"Jason Duval","birth_date":"1994-03-22","birth_place":"Port Gellhorn, Leonida","ssn_last_4_digits":"7104"}}},{"id":21,"transaction_at":"2026-04-01 10:00:00","note":null,"amount":"10.00","recipient_account":{"id":2,"type":"family savings","name":"Joint Savings","balance":"28477.00","client":{"id":1,"name":"Lucia Caminos","birth_date":"1997-08-14","birth_place":"Vice City, Leonida","ssn_last_4_digits":"4829"}}},{"id":22,"transaction_at":"2026-11-26 19:52:31","note":null,"amount":"67.00","recipient_account":{"id":2,"type":"family savings","name":"Joint Savings","balance":"28477.00","client":{"id":1,"name":"Lucia Caminos","birth_date":"1997-08-14","birth_place":"Vice City, Leonida","ssn_last_4_digits":"4829"}}}],"received_transactions":[{"id":2,"transaction_at":"2026-10-04 14:22:10","note":"Split dinner bill","amount":"45.50","sender_account":{"id":3,"type":"checking","name":"Everyday Account","balance":"980.20","client":{"id":2,"name":"Jason Duval","birth_date":"1994-03-22","birth_place":"Port Gellhorn, Leonida","ssn_last_4_digits":"7104"}}},{"id":17,"transaction_at":"2026-11-05 16:12:30","note":null,"amount":"75.00","sender_account":{"id":17,"type":"checking","name":"Standard Checking","balance":"7640.90","client":{"id":10,"name":"Valeria Gomez","birth_date":"2000-01-15","birth_place":"Ocean Beach, Vice City","ssn_last_4_digits":"9411"}}}]}}
+        "404":
+          description: Nem található
+
+    put:
+      tags:
+        - Account
+      summary: Egy adott bankszámla frissítése
+      description: |
+        Az `update` action végezzen validálást, majd frissítse a kiválasztott
+        bankszámlát az adatbázisban, végül adja vissza a kapcsolódó adatokkal együtt!
+
+        - Amennyiben a validálás nem sikerül, úgy a hibáról/hibákról tájékoztassa a felhasználót!
+      operationId: accounts.update
+      parameters:
+        - name: account
+          in: path
+          required: true
+          schema:
+            type: integer
+            default: 1
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/AccountRequest"
+            example: {"type":"checking","name":"Regulrt Checking","client_id":1}
+      responses:
+        "200":
+          description: A frissített bankszámla
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  data:
+                    $ref: "#/components/schemas/AccountResource"
+              example:
+                data: {"id":1,"type":"checking","name":"Regular Checking","balance":"0","client":{"id":1,"name":"Lucia Caminos","birth_date":"1997-08-14","birth_place":"Vice City, Leonida","ssn_last_4_digits":"4829"}}
+        "404":
+          description: Nem található
+        "422":
+          description: Érvénytelen adatok
+
+    delete:
+      tags:
+        - Account
+      summary: Egy adott bankszámla törlése
+      description: |
+        A `destroy` action törölje a kiválasztott bankszámlát az adatbázisból!
+
+        - Amennyiben nem sikerül a törlés, úgy a hibáról/hibákról tájékoztassa a felhasználót!
+      operationId: accounts.destroy
+      parameters:
+        - name: account
+          in: path
+          required: true
+          schema:
+            type: integer
+            default: 1
+      responses:
+        "204":
+          description: A bankszámla törölve
+        "404":
+          description: Nem található
+        "500":
+          description: Belső hiba
+
+  /api/transactions:
+    get:
+      tags:
+        - Transaction
+      summary: Tranzakciók listájának lekérése
+      description: |
+        Az `index` action jelenítse meg az összes tranzakciót,
+        a küldő és fogadó bankszámla, valamint azok tulajdonosainak adataival együtt!
+      operationId: transactions.index
+      responses:
+        "200":
+          description: Tranzakciók listája
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  data:
+                    type: array
+                    items:
+                      $ref: "#/components/schemas/TransactionResource"
+              example: {"data":[{"id":1,"transaction_at":"2026-10-02 09:15:00","note":"Monthly savings transfer","amount":"500.00","sender_account":{"id":1,"type":"checking","name":"Primary Checking","balance":"1373.75","client":{"id":1,"name":"Lucia Caminos","birth_date":"1997-08-14","birth_place":"Vice City, Leonida","ssn_last_4_digits":"4829"}},"recipient_account":{"id":2,"type":"family savings","name":"Joint Savings","balance":"28477.00","client":{"id":1,"name":"Lucia Caminos","birth_date":"1997-08-14","birth_place":"Vice City, Leonida","ssn_last_4_digits":"4829"}}},{"id":2,"transaction_at":"2026-10-04 14:22:10","note":"Split dinner bill","amount":"45.50","sender_account":{"id":3,"type":"checking","name":"Everyday Account","balance":"980.20","client":{"id":2,"name":"Jason Duval","birth_date":"1994-03-22","birth_place":"Port Gellhorn, Leonida","ssn_last_4_digits":"7104"}},"recipient_account":{"id":1,"type":"checking","name":"Primary Checking","balance":"1373.75","client":{"id":1,"name":"Lucia Caminos","birth_date":"1997-08-14","birth_place":"Vice City, Leonida","ssn_last_4_digits":"4829"}}},{"id":3,"transaction_at":"2026-10-05 18:05:45","note":"Emergency fund top-up","amount":"1200.00","sender_account":{"id":3,"type":"checking","name":"Everyday Account","balance":"980.20","client":{"id":2,"name":"Jason Duval","birth_date":"1994-03-22","birth_place":"Port Gellhorn, Leonida","ssn_last_4_digits":"7104"}},"recipient_account":{"id":4,"type":"traditional savings","name":"Emergency Fund","balance":"19250.50","client":{"id":2,"name":"Jason Duval","birth_date":"1994-03-22","birth_place":"Port Gellhorn, Leonida","ssn_last_4_digits":"7104"}}},{"id":4,"transaction_at":"2026-10-07 11:30:00","note":null,"amount":"250.00","sender_account":{"id":5,"type":"checking","name":null,"balance":"4210.00","client":{"id":3,"name":"Stefanie Morales","birth_date":"1982-11-05","birth_place":"Hamlet, Leonida","ssn_last_4_digits":"3391"}},"recipient_account":{"id":7,"type":"checking","name":"Personal Checking","balance":"12450.80","client":{"id":4,"name":"Carlos Mendoza","birth_date":"1988-06-19","birth_place":"Vice Beach, Leonida","ssn_last_4_digits":"9052"}}},{"id":5,"transaction_at":"2026-10-09 16:40:12","note":"Consulting invoice #104","amount":"3400.00","sender_account":{"id":10,"type":"checking","name":"Business Checking","balance":"64200.40","client":{"id":6,"name":"Boobie Ike","birth_date":"1985-09-30","birth_place":"Cottonmouth, Leonida","ssn_last_4_digits":"8473"}},"recipient_account":{"id":8,"type":"checking","name":"Main Checking","balance":"89300.00","client":{"id":5,"name":"Tamara Vance","birth_date":"1999-02-11","birth_place":"Starfish Island, Leonida","ssn_last_4_digits":"1648"}}},{"id":6,"transaction_at":"2026-10-10 08:50:00","note":"Transfer to long-term savings","amount":"5000.00","sender_account":{"id":8,"type":"checking","name":"Main Checking","balance":"89300.00","client":{"id":5,"name":"Tamara Vance","birth_date":"1999-02-11","birth_place":"Starfish Island, Leonida","ssn_last_4_digits":"1648"}},"recipient_account":{"id":9,"type":"traditional savings","name":"Long-Term Savings","balance":"145000.00","client":{"id":5,"name":"Tamara Vance","birth_date":"1999-02-11","birth_place":"Starfish Island, Leonida","ssn_last_4_digits":"1648"}}},{"id":7,"transaction_at":"2026-10-12 20:15:33","note":"Concert tickets","amount":"180.00","sender_account":{"id":12,"type":"checking","name":"Checking Account","balance":"3150.00","client":{"id":7,"name":"Darnell Jackson","birth_date":"1991-12-03","birth_place":"Little Haiti, Vice City","ssn_last_4_digits":"5219"}},"recipient_account":{"id":17,"type":"checking","name":"Standard Checking","balance":"7640.90","client":{"id":10,"name":"Valeria Gomez","birth_date":"2000-01-15","birth_place":"Ocean Beach, Vice City","ssn_last_4_digits":"9411"}}},{"id":8,"transaction_at":"2026-10-14 13:10:05","note":"Rent share October","amount":"950.00","sender_account":{"id":13,"type":"checking","name":null,"balance":"2890.65","client":{"id":8,"name":"Mateo Rivera","birth_date":"1996-04-27","birth_place":"Little Havana, Vice City","ssn_last_4_digits":"6730"}},"recipient_account":{"id":22,"type":"checking","name":"Bills & Rent","balance":"9320.50","client":{"id":14,"name":"Desiree Washington","birth_date":"1995-11-18","birth_place":"Washington Beach, Vice City","ssn_last_4_digits":"6047"}}},{"id":9,"transaction_at":"2026-10-15 10:00:00","note":"House fund deposit","amount":"800.00","sender_account":{"id":13,"type":"checking","name":null,"balance":"2890.65","client":{"id":8,"name":"Mateo Rivera","birth_date":"1996-04-27","birth_place":"Little Havana, Vice City","ssn_last_4_digits":"6730"}},"recipient_account":{"id":14,"type":"family savings","name":"Home Downpayment","balance":"14800.00","client":{"id":8,"name":"Mateo Rivera","birth_date":"1996-04-27","birth_place":"Little Havana, Vice City","ssn_last_4_digits":"6730"}}},{"id":10,"transaction_at":"2026-10-18 15:45:20","note":"Equipment rental","amount":"420.75","sender_account":{"id":15,"type":"checking","name":"Daily Expenses","balance":"5430.10","client":{"id":9,"name":"Billy Ray Clemons","birth_date":"1976-07-08","birth_place":"Grassrivers, Leonida","ssn_last_4_digits":"2984"}},"recipient_account":{"id":18,"type":"checking","name":"Operating Account","balance":"22100.00","client":{"id":11,"name":"Marcus Sterling","birth_date":"1979-10-21","birth_place":"Ambrosia, Leonida","ssn_last_4_digits":"3805"}}},{"id":11,"transaction_at":"2026-10-20 09:05:11","note":null,"amount":"1500.00","sender_account":{"id":18,"type":"checking","name":"Operating Account","balance":"22100.00","client":{"id":11,"name":"Marcus Sterling","birth_date":"1979-10-21","birth_place":"Ambrosia, Leonida","ssn_last_4_digits":"3805"}},"recipient_account":{"id":19,"type":"traditional savings","name":null,"balance":"54000.00","client":{"id":11,"name":"Marcus Sterling","birth_date":"1979-10-21","birth_place":"Ambrosia, Leonida","ssn_last_4_digits":"3805"}}},{"id":12,"transaction_at":"2026-10-22 17:30:40","note":"Logistics service payment","amount":"6250.00","sender_account":{"id":20,"type":"checking","name":"Direct Deposit","balance":"41800.25","client":{"id":12,"name":"Elena Rostova","birth_date":"1993-05-12","birth_place":"Viceport, Leonida","ssn_last_4_digits":"7562"}},"recipient_account":{"id":24,"type":"checking","name":"Primary Account","balance":"78900.00","client":{"id":15,"name":"Hector Delgado","birth_date":"1981-03-04","birth_place":"Leonard County, Leonida","ssn_last_4_digits":"8823"}}},{"id":13,"transaction_at":"2026-10-25 12:18:00","note":"Family reserve allocation","amount":"10000.00","sender_account":{"id":10,"type":"checking","name":"Business Checking","balance":"64200.40","client":{"id":6,"name":"Boobie Ike","birth_date":"1985-09-30","birth_place":"Cottonmouth, Leonida","ssn_last_4_digits":"8473"}},"recipient_account":{"id":11,"type":"family savings","name":"Family Reserve","balance":"210000.00","client":{"id":6,"name":"Boobie Ike","birth_date":"1985-09-30","birth_place":"Cottonmouth, Leonida","ssn_last_4_digits":"8473"}}},{"id":14,"transaction_at":"2026-10-27 19:22:50","note":"Car repair reimbursement","amount":"310.00","sender_account":{"id":21,"type":"checking","name":"Basic Checking","balance":"640.00","client":{"id":13,"name":"Cletus Boone","birth_date":"1984-08-29","birth_place":"Kelly County, Leonida","ssn_last_4_digits":"1190"}},"recipient_account":{"id":15,"type":"checking","name":"Daily Expenses","balance":"5430.10","client":{"id":9,"name":"Billy Ray Clemons","birth_date":"1976-07-08","birth_place":"Grassrivers, Leonida","ssn_last_4_digits":"2984"}}},{"id":15,"transaction_at":"2026-10-30 14:00:00","note":"College fund contribution","amount":"600.00","sender_account":{"id":22,"type":"checking","name":"Bills & Rent","balance":"9320.50","client":{"id":14,"name":"Desiree Washington","birth_date":"1995-11-18","birth_place":"Washington Beach, Vice City","ssn_last_4_digits":"6047"}},"recipient_account":{"id":23,"type":"family savings","name":"College Fund","balance":"27500.00","client":{"id":14,"name":"Desiree Washington","birth_date":"1995-11-18","birth_place":"Washington Beach, Vice City","ssn_last_4_digits":"6047"}}},{"id":16,"transaction_at":"2026-11-02 10:45:15","note":"Quarterly savings sweep","amount":"15000.00","sender_account":{"id":24,"type":"checking","name":"Primary Account","balance":"78900.00","client":{"id":15,"name":"Hector Delgado","birth_date":"1981-03-04","birth_place":"Leonard County, Leonida","ssn_last_4_digits":"8823"}},"recipient_account":{"id":25,"type":"traditional savings","name":"High-Yield Savings","balance":"320000.00","client":{"id":15,"name":"Hector Delgado","birth_date":"1981-03-04","birth_place":"Leonard County, Leonida","ssn_last_4_digits":"8823"}}},{"id":17,"transaction_at":"2026-11-05 16:12:30","note":null,"amount":"75.00","sender_account":{"id":17,"type":"checking","name":"Standard Checking","balance":"7640.90","client":{"id":10,"name":"Valeria Gomez","birth_date":"2000-01-15","birth_place":"Ocean Beach, Vice City","ssn_last_4_digits":"9411"}},"recipient_account":{"id":1,"type":"checking","name":"Primary Checking","balance":"1373.75","client":{"id":1,"name":"Lucia Caminos","birth_date":"1997-08-14","birth_place":"Vice City, Leonida","ssn_last_4_digits":"4829"}}},{"id":18,"transaction_at":"2026-11-08 09:30:00","note":"Pension top-up","amount":"1100.00","sender_account":{"id":5,"type":"checking","name":null,"balance":"4210.00","client":{"id":3,"name":"Stefanie Morales","birth_date":"1982-11-05","birth_place":"Hamlet, Leonida","ssn_last_4_digits":"3391"}},"recipient_account":{"id":6,"type":"traditional savings","name":"Retirement Savings","balance":"35600.00","client":{"id":3,"name":"Stefanie Morales","birth_date":"1982-11-05","birth_place":"Hamlet, Leonida","ssn_last_4_digits":"3391"}}},{"id":19,"transaction_at":"2026-11-12 11:55:22","note":"Supplier settlement","amount":"2850.40","sender_account":{"id":24,"type":"checking","name":"Primary Account","balance":"78900.00","client":{"id":15,"name":"Hector Delgado","birth_date":"1981-03-04","birth_place":"Leonard County, Leonida","ssn_last_4_digits":"8823"}},"recipient_account":{"id":20,"type":"checking","name":"Direct Deposit","balance":"41800.25","client":{"id":12,"name":"Elena Rostova","birth_date":"1993-05-12","birth_place":"Viceport, Leonida","ssn_last_4_digits":"7562"}}},{"id":20,"transaction_at":"2026-11-18 18:40:00","note":"Weekend trip groceries","amount":"132.80","sender_account":{"id":1,"type":"checking","name":"Primary Checking","balance":"1373.75","client":{"id":1,"name":"Lucia Caminos","birth_date":"1997-08-14","birth_place":"Vice City, Leonida","ssn_last_4_digits":"4829"}},"recipient_account":{"id":3,"type":"checking","name":"Everyday Account","balance":"980.20","client":{"id":2,"name":"Jason Duval","birth_date":"1994-03-22","birth_place":"Port Gellhorn, Leonida","ssn_last_4_digits":"7104"}}},{"id":21,"transaction_at":"2026-04-01 10:00:00","note":null,"amount":"10.00","sender_account":{"id":1,"type":"checking","name":"Primary Checking","balance":"1373.75","client":{"id":1,"name":"Lucia Caminos","birth_date":"1997-08-14","birth_place":"Vice City, Leonida","ssn_last_4_digits":"4829"}},"recipient_account":{"id":2,"type":"family savings","name":"Joint Savings","balance":"28477.00","client":{"id":1,"name":"Lucia Caminos","birth_date":"1997-08-14","birth_place":"Vice City, Leonida","ssn_last_4_digits":"4829"}}},{"id":22,"transaction_at":"2026-11-26 19:52:31","note":null,"amount":"67.00","sender_account":{"id":1,"type":"checking","name":"Primary Checking","balance":"1373.75","client":{"id":1,"name":"Lucia Caminos","birth_date":"1997-08-14","birth_place":"Vice City, Leonida","ssn_last_4_digits":"4829"}},"recipient_account":{"id":2,"type":"family savings","name":"Joint Savings","balance":"28477.00","client":{"id":1,"name":"Lucia Caminos","birth_date":"1997-08-14","birth_place":"Vice City, Leonida","ssn_last_4_digits":"4829"}}}]}
+
+    post:
+      tags:
+        - Transaction
+      summary: Új tranzakció létrehozása
+      description: |
+        A `store` action végezzen validálást, majd hajtsa végre az új tranzakciót!
+
+        - A tranzakció időpontját automatikusan állítsa be az aktuális dátumra és időre!
+        - Ellenőrizze, hogy a küldő bankszámla rendelkezik-e elegendő egyenleggel!
+        - Amennyiben nincs elegendő fedezet, a tranzakciót ne hajtsa végre!
+        - Sikeres tranzakció esetén vonja le az összeget a küldő számláról, és írja jóvá a fogadó számlán!
+        - A tranzakció létrehozását és az egyenlegek módosítását egyetlen adatbázis-tranzakció keretében végezze el!
+        - Gondoskodjon az érintett bankszámlák megfelelő zárolásáról a párhuzamos tranzakciók okozta problémák elkerülése érdekében!
+        - Sikeres tranzakció esetén adja vissza a tranzakciót a kapcsolódó bankszámlák és ügyfelek adataival együtt!
+      operationId: transactions.store
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/TransactionRequest"
+            example: {"amount": 67,"sender_account_id": 1,"recipient_account_id": 2}
+      responses:
+        "201":
+          description: Tranzakció sikeresen végrehajtva
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  data:
+                    $ref: "#/components/schemas/TransactionResource"
+              example: {  "data": {    "id": 21,    "transaction_at": "2026-11-26T19:52:31.039629Z",    "note": null,    "amount": 67,    "sender_account": {      "id": 1,      "type": "checking",      "name": "Primary Checking",      "balance": "1373.75",      "client": {        "id": 1,        "name": "Lucia Caminos",        "birth_date": "1997-08-14",        "birth_place": "Vice City, Leonida",        "ssn_last_4_digits": "4829"      }    },    "recipient_account": {      "id": 2,      "type": "family savings",      "name": "Joint Savings",      "balance": "28477.00",      "client": {        "id": 1,        "name": "Lucia Caminos",        "birth_date": "1997-08-14",        "birth_place": "Vice City, Leonida",        "ssn_last_4_digits": "4829"      }    }  }}
+        "422":
+          description: Érvénytelen adatok vagy elégtelen egyenleg
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ValidationError"
+
+  /api/transactions/{transaction}:
+    get:
+      tags:
+        - Transaction
+      summary: Egy adott tranzakció lekérése
+      description: |
+        A `show` action jelenítse meg a kiválasztott tranzakciót
+        a küldő és fogadó bankszámla, valamint azok tulajdonosainak adataival együtt!
+      operationId: transactions.show
+      parameters:
+        - name: transaction
+          in: path
+          required: true
+          schema:
+            type: integer
+            default: 1
+      responses:
+        "200":
+          description: Egy adott tranzakció
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  data:
+                    $ref: "#/components/schemas/TransactionResource"
+              example: {"data":{"id":1,"transaction_at":"2026-10-02 09:15:00","note":"Monthly savings transfer","amount":"500.00","sender_account":{"id":1,"type":"checking","name":"Primary Checking","balance":"1373.75","client":{"id":1,"name":"Lucia Caminos","birth_date":"1997-08-14","birth_place":"Vice City, Leonida","ssn_last_4_digits":"4829"}},"recipient_account":{"id":2,"type":"family savings","name":"Joint Savings","balance":"28477.00","client":{"id":1,"name":"Lucia Caminos","birth_date":"1997-08-14","birth_place":"Vice City, Leonida","ssn_last_4_digits":"4829"}}}}
+        "404":
+          description: Nem található
+
+components:
+  schemas:
+    ClientRequest:
+      type: object
+      required:
+        - name
+        - birth_date
+        - birth_place
+        - ssn_last_4_digits
+      properties:
+        name:
+          type: string
+          maxLength: 50
+        birth_date:
+          type: string
+          format: date
+        birth_place:
+          type: string
+          maxLength: 50
+        ssn_last_4_digits:
+          type: string
+          minLength: 4
+          maxLength: 4
+
+    ClientResource:
+      type: object
+      properties:
+        id:
+          type: integer
+        name:
+          type: string
+        birth_date:
+          type: string
+          format: date
+        birth_place:
+          type: string
+        ssn_last_4_digits:
+          type: string
+        accounts:
+          type: array
+          items:
+            $ref: "#/components/schemas/AccountResource"
+
+    AccountRequest:
+      type: object
+      required:
+        - type
+        - name
+        - client_id
+      properties:
+        type:
+          type: string
+          enum:
+            - checking
+            - traditional savings
+            - family savings
+        name:
+          type: string
+          maxLength: 25
+        client_id:
+          type: integer
+
+    AccountResource:
+      type: object
+      properties:
+        id:
+          type: integer
+        type:
+          type: string
+          enum:
+            - checking
+            - traditional savings
+            - family savings
+        name:
+          type:
+            - string
+            - "null"
+        balance:
+          type: number
+        client:
+          $ref: "#/components/schemas/ClientResource"
+        sent_transactions:
+          type: array
+          items:
+            $ref: "#/components/schemas/TransactionResource"
+        received_transactions:
+          type: array
+          items:
+            $ref: "#/components/schemas/TransactionResource"
+
+
+    TransactionRequest:
+      type: object
+      required:
+        - amount
+        - sender_account_id
+        - recipient_account_id
+      properties:
+        note:
+          type:
+            - string
+            - "null"
+          maxLength: 255
+        amount:
+          type: number
+          minimum: 0
+        sender_account_id:
+          type: integer
+        recipient_account_id:
+          type: integer
+          not:
+            type: integer
+            description: Nem egyezhet meg a sender_account_id értékével.
+
+    TransactionResource:
+      type: object
+      properties:
+        id:
+          type: integer
+        transaction_at:
+          type: string
+          format: date-time
+        note:
+          type:
+            - string
+            - "null"
+        amount:
+          type: number
+        sender_account:
+          $ref: "#/components/schemas/AccountResource"
+        recipient_account:
+          $ref: "#/components/schemas/AccountResource"
