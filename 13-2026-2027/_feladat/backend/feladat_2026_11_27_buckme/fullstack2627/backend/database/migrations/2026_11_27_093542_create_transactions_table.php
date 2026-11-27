@@ -16,8 +16,8 @@ return new class extends Migration
             $table->dateTime("transaction_at");
             $table->string("note", 255)->nullable();
             $table->decimal("amount");
-            $table->foreignId("sender_account_id")->nullable()->constrained("accounts", "id");
-            $table->foreignId("recipient_account_id")->nullable()->constrained("accounts", "id");
+            $table->foreignId("sender_account_id")->constrained("accounts", "id");
+            $table->foreignId("recipient_account_id")->constrained("accounts", "id");
         });
     }
 

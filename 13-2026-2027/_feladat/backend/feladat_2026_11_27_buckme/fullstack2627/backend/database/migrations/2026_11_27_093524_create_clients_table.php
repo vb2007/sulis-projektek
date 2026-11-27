@@ -14,7 +14,7 @@ return new class extends Migration
         Schema::create('clients', function (Blueprint $table) {
             $table->id();
             $table->string("name", 50);
-            $table->date("birt_date");
+            $table->date("birth_date");
             $table->string("birth_place", 50);
             $table->string("ssn_last_4_digits", 4);
             $table->timestamps();

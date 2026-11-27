@@ -14,10 +14,9 @@ return new class extends Migration
         Schema::create('accounts', function (Blueprint $table) {
             $table->id();
             $table->enum("type", ["checking", "traditional savings", "family savings"]);
-            $table->string("name", 25);
+            $table->string("name", 25)->nullable();
             $table->decimal("balance")->default(0);
-            $table->foreignId("client")->constrained();
-                    // ->constrained("clients", "id");
+            $table->foreignId("client_id")->constrained();
             $table->timestamps();
         });
     }
