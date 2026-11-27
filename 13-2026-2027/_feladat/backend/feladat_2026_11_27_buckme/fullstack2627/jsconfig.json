@@ -1,0 +1,13 @@
+{
+  "compilerOptions": {
+    "paths": {
+      "@assets/*": ["./frontend/src/assets/*"],
+      "@components/*": ["./frontend/src/components/*"],
+      "@layouts/*": ["./frontend/src/layouts/*"],
+      "@locales/*": ["./frontend/src/locales/*"],
+      "@pages/*": ["./frontend/src/pages/*"],
+      "@stores/*": ["./frontend/src/stores/*"],
+      "@utils/*": ["./frontend/src/utils/*"],
+    }
+  }
+}
