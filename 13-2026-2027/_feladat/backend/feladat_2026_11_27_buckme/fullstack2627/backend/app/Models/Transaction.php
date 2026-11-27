@@ -11,13 +11,13 @@ class Transaction extends Model
     /** @use HasFactory<\Database\Factories\TransactionFactory> */
     use HasFactory;
 
-    public function senderAccount() : BelongsTo
+    public function senderAccount(): BelongsTo
     {
-        return $this->belongsTo(Account::class);
+        return $this->belongsTo(Account::class, 'sender_account_id');
     }
 
-    public function recipientAccount()
+    public function recipientAccount(): BelongsTo
     {
-        return $this->belongsTo(Account::class);
+        return $this->belongsTo(Account::class, 'recipient_account_id');
     }
 }
