@@ -13,7 +13,7 @@ class ClientController extends Controller
      */
     public function index()
     {
-        //
+        return Client::with('accounts')->get();
     }
 
     /**
@@ -21,7 +21,7 @@ class ClientController extends Controller
      */
     public function store(StoreClientRequest $request)
     {
-        //
+        return Client::create($request->validated())->load('accounts');
     }
 
     /**
@@ -29,7 +29,7 @@ class ClientController extends Controller
      */
     public function show(Client $client)
     {
-        //
+        return $client->load('accounts');
     }
 
     /**
@@ -37,7 +37,9 @@ class ClientController extends Controller
      */
     public function update(UpdateClientRequest $request, Client $client)
     {
-        //
+        $client->update($request->validated());
+
+        return $client->load('accounts');
     }
 
     /**
@@ -45,6 +47,12 @@ class ClientController extends Controller
      */
     public function destroy(Client $client)
     {
-        //
+        try {
+            $client->delete();
+        } catch (\Throwable $e) {
+            return response()->json(['message' => $e->getMessage()], 409);
+        }
+
+        return response()->noContent();
     }
 }
