@@ -12,7 +12,7 @@ class UpdateAccountRequest extends FormRequest
      */
     public function authorize(): bool
     {
-        return false;
+        return true;
     }
 
     /**
@@ -23,7 +23,9 @@ class UpdateAccountRequest extends FormRequest
     public function rules(): array
     {
         return [
-            //
+            "type" => ["required", "string", "in:checking,traditional savings,family savings"],
+            "name" => ["nullable", "string", "max:25"],
+            "client_id" => ["required", "exists:clients,id"],
         ];
     }
 }
