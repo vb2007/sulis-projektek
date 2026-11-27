@@ -13,7 +13,7 @@ class AccountController extends Controller
      */
     public function index()
     {
-        //
+        return Account::withDetails()->get();
     }
 
     /**
@@ -21,7 +21,7 @@ class AccountController extends Controller
      */
     public function store(StoreAccountRequest $request)
     {
-        //
+        return Account::create($request->validated())->loadDetails();
     }
 
     /**
@@ -29,7 +29,7 @@ class AccountController extends Controller
      */
     public function show(Account $account)
     {
-        //
+        return $account->loadDetails();
     }
 
     /**
@@ -37,7 +37,9 @@ class AccountController extends Controller
      */
     public function update(UpdateAccountRequest $request, Account $account)
     {
-        //
+        $account->update($request->validated());
+
+        return $account->loadDetails();
     }
 
     /**
@@ -45,6 +47,12 @@ class AccountController extends Controller
      */
     public function destroy(Account $account)
     {
-        //
+        try {
+            $account->delete();
+        } catch (\Throwable $e) {
+            return response()->json(['message' => $e->getMessage()], 409);
+        }
+
+        return response()->noContent();
     }
 }
