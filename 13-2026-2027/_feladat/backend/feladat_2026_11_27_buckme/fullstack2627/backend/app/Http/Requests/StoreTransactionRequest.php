@@ -23,9 +23,10 @@ class StoreTransactionRequest extends FormRequest
     public function rules(): array
     {
         return [
-            "note" => [""],
-            "amount" => [""],
-                        
+            "note" => ["nullable", "string", "max:255"],
+            "amount" => ["required", "numeric", "min:0"],
+            "sender_account_id" => ["required", "exists:accounts,id"],
+            "recipient_account_id" => ["required", "exists:accounts,id", "different:sender_account_id"]
         ];
     }
 }
