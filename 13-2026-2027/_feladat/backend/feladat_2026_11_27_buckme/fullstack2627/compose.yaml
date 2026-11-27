@@ -58,6 +58,7 @@ services:
       - fullstack
 
   backend:
+    env_file: .env
     image: rcsnjszg/backend:2627
     labels:
       - "traefik.enable=false"
@@ -67,7 +68,6 @@ services:
     volumes:
       - ./backend/php.ini:/usr/local/etc/php/conf.d/php.ini:ro
       - ./backend:/www:rw
-      - ./.env:/www/.env:rw
       - shared_composer:/home/phpdocker/.composer
     environment:
       - COMPOSER_FUND=0
