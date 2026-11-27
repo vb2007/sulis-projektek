@@ -2,10 +2,14 @@
 
 namespace App\Models;
 
+use Illuminate\Database\Eloquent\Attributes\Fillable;
+use Illuminate\Database\Eloquent\Attributes\Table;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 
+#[Table(name: "transactions")]
+#[Fillable("note", "amount", "sender_account_id", "recipient_account_id")]
 class Transaction extends Model
 {
     /** @use HasFactory<\Database\Factories\TransactionFactory> */
